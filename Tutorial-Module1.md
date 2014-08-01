@@ -12,8 +12,10 @@ You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid h
 
 ENVIRONMENT
 Create a working directory and set the 'RNA_HOME' environment variable
-`mkdir -p ~/workspace/rnaseq/
-export RNA_HOME=~/workspace/rnaseq`
+`
+mkdir -p ~/workspace/rnaseq/
+export RNA_HOME=~/workspace/rnaseq
+`
 
 Make sure whatever the working dir is, that it is set and is valid
 `echo $RNA_HOME`
