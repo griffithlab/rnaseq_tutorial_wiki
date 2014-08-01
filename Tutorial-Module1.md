@@ -18,7 +18,9 @@ export RNA_HOME=~/workspace/rnaseq
 `
 
 Make sure whatever the working dir is, that it is set and is valid
-`echo $RNA_HOME`
+`
+echo $RNA_HOME
+`
 
 INSTALLATION
 1.) Installation.  Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat.
@@ -26,27 +28,33 @@ In the following installation example the installs are local and will work wheth
 However, if root is available some binaries can/will be copies to system-wide locations (e.g., /usr/bin/)
 
 Set up tool installation location
-`cd $RNA_HOME
+`
+cd $RNA_HOME
 mkdir tools
-cd tools`
+cd tools
+`
 
 If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
-`curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
+`
+curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
 tar -xzvf wget-1.13.4.tar.gz
 cd wget-1.13.4
 ./configure --with-ssl=openssl
 make
-make install`
+make install
+`
 
 Intall SamTools
 Documentation and download: http://sourceforge.net/projects/samtools/
-`cd $RNA_HOME/tools/
+`
+cd $RNA_HOME/tools/
 wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
 bunzip2 samtools-0.1.19.tar.bz2 
 tar -xvf samtools-0.1.19.tar
 cd samtools-0.1.19
 make
-./samtools`
+./samtools
+`
 
 #Install bam-readcount
 #Documentation and download: https://github.com/genome/bam-readcount
