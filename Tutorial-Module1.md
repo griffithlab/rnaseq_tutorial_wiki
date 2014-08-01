@@ -89,22 +89,26 @@ cd bowtie2-2.1.0
 ./bowtie2-build
 ```
 
-#Install Tophat2
-#Documentation and download: http://tophat.cbcb.umd.edu/
+Install Tophat2
+Documentation and download: http://tophat.cbcb.umd.edu/
+```
 cd $RNA_HOME/tools/
 wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.8b.Linux_x86_64.tar.gz
 tar -zxvf tophat-2.0.8b.Linux_x86_64.tar.gz
 cd tophat-2.0.8b.Linux_x86_64
 ./tophat2
+```
 
-#OPTIONAL
-#Install STAR (alternative to Tophat2)
-#Documentation: https://code.google.com/p/rna-star/
-#Download: https://code.google.com/p/rna-star/downloads/list
+OPTIONAL
+Install STAR (alternative to Tophat2)
+Documentation: https://code.google.com/p/rna-star/
+Download: https://code.google.com/p/rna-star/downloads/list
+```
 cd $RNA_HOME/tools/
 wget http://rna-star.googlecode.com/files/STAR_2.3.0e.Linux_x86_64_static.tgz
 tar -zxvf STAR_2.3.0e.Linux_x86_64_static.tgz
 file STAR_2.3.0e.Linux_x86_64_static/STAR
+```
 
 #Install Cufflinks2
 #Documentation and download: http://cufflinks.cbcb.umd.edu/
