@@ -20,9 +20,9 @@ export RNA_HOME=~/workspace/rnaseq
 
 Make sure whatever the working dir is, that it is set and is valid
 
-`
+```
 echo $RNA_HOME
-`
+```
 
 INSTALLATION
 1.) Installation.  Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat.
@@ -31,27 +31,27 @@ However, if root is available some binaries can/will be copies to system-wide lo
 
 Set up tool installation location
 
-`
+```
 cd $RNA_HOME
 mkdir tools
 cd tools
-`
+```
 
 If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
 
-`
+```
 curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
 tar -xzvf wget-1.13.4.tar.gz
 cd wget-1.13.4
 ./configure --with-ssl=openssl
 make
 make install
-`
+```
 
 Intall SamTools
 Documentation and download: http://sourceforge.net/projects/samtools/
 
-`
+```
 cd $RNA_HOME/tools/
 wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
 bunzip2 samtools-0.1.19.tar.bz2 
@@ -59,12 +59,12 @@ tar -xvf samtools-0.1.19.tar
 cd samtools-0.1.19
 make
 ./samtools
-`
+```
 
 Install bam-readcount
 Documentation and download: https://github.com/genome/bam-readcount
 
-`
+```
 cd $RNA_HOME/tools/
 mkdir git
 cd git
@@ -76,16 +76,18 @@ export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-0.1.19
 cmake $RNA_HOME/tools/git/bam-readcount
 make
 ./bin/bam-readcount
-`
+```
 
-#Intall Bowtie2
-#Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+Intall Bowtie2
+Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+```
 cd $RNA_HOME/tools/
 wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.1.0/bowtie2-2.1.0-linux-x86_64.zip
 unzip bowtie2-2.1.0-linux-x86_64.zip
 cd bowtie2-2.1.0
 ./bowtie2
 ./bowtie2-build
+```
 
 #Install Tophat2
 #Documentation and download: http://tophat.cbcb.umd.edu/
