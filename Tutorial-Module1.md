@@ -28,16 +28,16 @@ Set up tool installation location
 mkdir tools
 cd tools`
 
-#If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
-#curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
-#tar -xzvf wget-1.13.4.tar.gz
-#cd wget-1.13.4
-#./configure --with-ssl=openssl
-#make
-#make install
+If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
+`curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
+tar -xzvf wget-1.13.4.tar.gz
+cd wget-1.13.4
+./configure --with-ssl=openssl
+make
+make install`
 
-#Intall SamTools
-#Documentation and download: http://sourceforge.net/projects/samtools/
+Intall SamTools
+Documentation and download: http://sourceforge.net/projects/samtools/
 `cd $RNA_HOME/tools/
 wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
 bunzip2 samtools-0.1.19.tar.bz2 
