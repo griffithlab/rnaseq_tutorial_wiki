@@ -12,12 +12,14 @@ You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid h
 
 ENVIRONMENT
 Create a working directory and set the 'RNA_HOME' environment variable
+
 `
 mkdir -p ~/workspace/rnaseq/
 export RNA_HOME=~/workspace/rnaseq
 `
 
 Make sure whatever the working dir is, that it is set and is valid
+
 `
 echo $RNA_HOME
 `
@@ -28,6 +30,7 @@ In the following installation example the installs are local and will work wheth
 However, if root is available some binaries can/will be copies to system-wide locations (e.g., /usr/bin/)
 
 Set up tool installation location
+
 `
 cd $RNA_HOME
 mkdir tools
@@ -35,6 +38,7 @@ cd tools
 `
 
 If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
+
 `
 curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
 tar -xzvf wget-1.13.4.tar.gz
@@ -46,6 +50,7 @@ make install
 
 Intall SamTools
 Documentation and download: http://sourceforge.net/projects/samtools/
+
 `
 cd $RNA_HOME/tools/
 wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
@@ -56,8 +61,10 @@ make
 ./samtools
 `
 
-#Install bam-readcount
-#Documentation and download: https://github.com/genome/bam-readcount
+Install bam-readcount
+Documentation and download: https://github.com/genome/bam-readcount
+
+`
 cd $RNA_HOME/tools/
 mkdir git
 cd git
@@ -69,6 +76,7 @@ export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-0.1.19
 cmake $RNA_HOME/tools/git/bam-readcount
 make
 ./bin/bam-readcount
+`
 
 #Intall Bowtie2
 #Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
