@@ -47,6 +47,7 @@ make install
 
 ##Intall SamTools
 Documentation and download: http://sourceforge.net/projects/samtools/
+
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
 	bunzip2 samtools-0.1.19.tar.bz2 
@@ -56,7 +57,8 @@ Documentation and download: http://sourceforge.net/projects/samtools/
 	./samtools
 	
 ##Install bam-readcount
-          #Documentation and download: https://github.com/genome/bam-readcount
+Documentation and download: https://github.com/genome/bam-readcount
+
 	cd $RNA_HOME/tools/
 	mkdir git
 	cd git
@@ -70,7 +72,8 @@ Documentation and download: http://sourceforge.net/projects/samtools/
 	./bin/bam-readcount
 	
 ##Intall Bowtie2
-         #Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.1.0/bowtie2-2.1.0-linux-x86_64.zip
 	unzip bowtie2-2.1.0-linux-x86_64.zip
@@ -79,33 +82,36 @@ Documentation and download: http://sourceforge.net/projects/samtools/
 	./bowtie2-build
 	
 ##Install Tophat2
-          #Documentation and download: http://tophat.cbcb.umd.edu/
+Documentation and download: http://tophat.cbcb.umd.edu/
+
 	cd $RNA_HOME/tools/
 	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.8b.Linux_x86_64.tar.gz
 	tar -zxvf tophat-2.0.8b.Linux_x86_64.tar.gz
 	cd tophat-2.0.8b.Linux_x86_64
 	./tophat2
 	
-OPTIONAL
-##Install STAR (alternative to Tophat2)
-######Documentation: https://code.google.com/p/rna-star/
-######Download: https://code.google.com/p/rna-star/downloads/list
+## **OPTIONAL** Install STAR (alternative to Tophat2)
+Documentation: https://code.google.com/p/rna-star/
+Download: https://code.google.com/p/rna-star/downloads/list
+
 	cd $RNA_HOME/tools/
 	wget http://rna-star.googlecode.com/files/STAR_2.3.0e.Linux_x86_64_static.tgz
 	tar -zxvf STAR_2.3.0e.Linux_x86_64_static.tgz
 	file STAR_2.3.0e.Linux_x86_64_static/STAR
 	
-######Install Cufflinks2
-######Documentation and download: http://cufflinks.cbcb.umd.edu/
+##Install Cufflinks2
+Documentation and download: http://cufflinks.cbcb.umd.edu/
+
 	cd $RNA_HOME/tools/
 	wget http://cufflinks.cbcb.umd.edu/downloads/cufflinks-2.1.1.Linux_x86_64.tar.gz
 	tar -zxvf cufflinks-2.1.1.Linux_x86_64.tar.gz
 	cd cufflinks-2.1.1.Linux_x86_64
 	./cufflinks
 	
-######Install htseq-count
-######Documentation: http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
-######Download: https://pypi.python.org/packages/source/H/HTSeq/
+##Install htseq-count
+Documentation: http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
+Download: https://pypi.python.org/packages/source/H/HTSeq/
+
 	cd $RNA_HOME/tools/
 	wget https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
 	tar -zxvf HTSeq-0.6.1p1.tar.gz
@@ -114,74 +120,87 @@ OPTIONAL
 	chmod +x scripts/htseq-count
 	./scripts/htseq-count
 	
-######Install R
-######This install takes a while so check if you have R installed already by typing 'which R'
-######It is already installed on the Cloud, but for completeness, here is how it was done.
-######cd $RNA_HOME/tools/
-######export R_LIBS=
-######wget http://cran.r-project.org/src/base/R-3/R-3.1.0.tar.gz
-######tar -zxvf R-3.1.0.tar.gz
-######cd R-3.1.0
-######Note, X11 libraries are not available on Amazon cloud so you need use '--with-x=no' during config, on a regular linux system you would not use this option:
-######./configure --with-x=no --prefix=$RNA_HOME/tools/R-3.1.0/
-######make
-######make install
-######./bin/Rscript
-	
-######Install R add-on libraries: 'gplots' and 'ggplot2'
-######launch R (enter "R" at command prompt) and type the following at R prompt
-######cd $RNA_HOME/tools/
-######./R-3.1.0/bin/R
-######install.packages("gplots")
-######install.packages("ggplot2")
-######quit()
-	
-######Install R bioconductor libraries: 'cummeRbund' and 'edgeR'
-######launch R (enter "R" at command prompt) and type the following at R prompt
-######cd $RNA_HOME/tools/
-######./R-3.1.0/bin/R
-######source("http://bioconductor.org/biocLite.R")
-######biocLite("cummeRbund")
-######biocLite("edgeR")
-######If prompted, type "a" to update all old packages
-######quit()
-	
-######Install fastqc
-######Note, the linux installation below will not work without X11 libraries (as on Amazon cloud)
-######For the course we will instead install on student laptops
-######Download from http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-######For completeness, here is how it would be installed on a linux system with X11 libraries
-######cd $RNA_HOME/tools/
-######wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip
-######unzip fastqc_v0.10.1.zip
-######cd FastQC/
-######chmod 755 fastqc
-######./fastqc --help
-	
-######Install Picard tools
-######Documentation: http://picard.sourceforge.net/command-line-overview.shtml
-######Download: 
+##Install R
+This install takes a while so check if you have R installed already by typing 'which R'
+It is already installed on the Cloud, but for completeness, here is how it was done.
+```
+cd $RNA_HOME/tools/
+export R_LIBS=
+wget http://cran.r-project.org/src/base/R-3/R-3.1.0.tar.gz
+tar -zxvf R-3.1.0.tar.gz
+cd R-3.1.0
+```
+Note, X11 libraries are not available on Amazon cloud so you need use '--with-x=no' during config, on a regular linux system you would not use this option:
+```
+./configure --with-x=no --prefix=$RNA_HOME/tools/R-3.1.0/
+make
+make install
+./bin/Rscript
+```	
+##Install R add-on libraries: 'gplots' and 'ggplot2'
+launch R (enter "R" at command prompt) and type the following at R prompt
+```
+cd $RNA_HOME/tools/
+./R-3.1.0/bin/R
+install.packages("gplots")
+install.packages("ggplot2")
+quit()
+```
+
+##Install R bioconductor libraries: 'cummeRbund' and 'edgeR'
+launch R (enter "R" at command prompt) and type the following at R prompt
+```
+cd $RNA_HOME/tools/
+./R-3.1.0/bin/R
+source("http://bioconductor.org/biocLite.R")
+biocLite("cummeRbund")
+biocLite("edgeR")
+#If prompted, type "a" to update all old packages
+quit()
+```	
+
+##Install fastqc
+Note, the linux installation below will not work without X11 libraries (as on Amazon cloud)
+For the course we will instead install on student laptops
+Download from http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+For completeness, here is how it would be installed on a linux system with X11 libraries
+```
+cd $RNA_HOME/tools/
+wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip
+unzip fastqc_v0.10.1.zip
+cd FastQC/
+chmod 755 fastqc
+./fastqc --help
+```
+
+##Install Picard tools
+Documentation: http://picard.sourceforge.net/command-line-overview.shtml
+Download:
+
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/picard/files/picard-tools/1.114/picard-tools-1.114.zip
 	unzip picard-tools-1.114.zip
 	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/MergeSamFiles.jar --help
 	
-######Install samstat
-######cd $RNA_HOME/tools/
-######wget http://sourceforge.net/projects/samstat/files/latest/download -O samstat.tgz
-######tar -xzvf samstat.tgz
-######cd samstat/src
-######make
-	
-######Note: for some reason samstat will not compile on our Amazon instances. 
-######We were able to compile offline on ubuntu and archlinux
-######Therefore the instructions above should work in your home lab
-######For now you can copy a pre-compiled version to your tools dir
+##Install samstat
+```
+cd $RNA_HOME/tools/
+wget http://sourceforge.net/projects/samstat/files/latest/download -O samstat.tgz
+tar -xzvf samstat.tgz
+cd samstat/src
+make
+```
+
+Note: for some reason samstat will not compile on our Amazon instances.
+We were able to compile offline on ubuntu and archlinux
+Therefore the instructions above should work in your home lab
+For now you can copy a pre-compiled version to your tools dir
+
 	cd $RNA_HOME/tools/
 	mkdir samstat
 	cp /media/cbwdata/CourseData/RNA_data/samstat $RNA_HOME/tools/samstat/
 	$RNA_HOME/tools/samstat/samstat
-######If you get a permissions error, try the following
+        #If you get a permissions error, try the following
 	chmod +x $RNA_HOME/tools/samstat/samstat
 	
 ######Add locally installed tools to your PATH
