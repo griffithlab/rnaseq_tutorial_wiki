@@ -1,45 +1,47 @@
-######Tutorial_Module1_Linux.txt
+Tutorial Module1 Linux
+======================
 	
-######Malachi Griffith, mgriffit[AT]genome.wustl.edu
-######Obi Griffith, ogriffit[AT]genome.wustl.edu
-######The Genome Institute, Washington University School of Medicine
+*Malachi Griffith, mgriffit[AT]genome.wustl.edu
+*Obi Griffith, ogriffit[AT]genome.wustl.edu
+*Jason Walker, jwalker[AT]genome.wustl.edu
+The Genome Institute, Washington University School of Medicine
 	
-######This document assumes a Linux computer with an 'x86_64' architecture
-######The rest of the tutorial should be conducted in a linux Terminal session
+This document assumes a Linux computer with an 'x86_64' architecture
+The rest of the tutorial should be conducted in a linux Terminal session
 	
-######All lines starting with a '#' are comments and will not be executed.
-######Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'
-######Log into a server and SET THIS BEFORE RUNNING EVERYTHING.  
-######You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it
+All lines starting with a '#' are comments and will not be executed.
+Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'
+Log into a server and SET THIS BEFORE RUNNING EVERYTHING.  
+You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it
 	
-######ENVIRONMENT
-######Create a working directory and set the 'RNA_HOME' environment variable
+#ENVIRONMENT
+        #Create a working directory and set the 'RNA_HOME' environment variable
 	mkdir -p ~/workspace/rnaseq/
 	export RNA_HOME=~/workspace/rnaseq
 	
-######Make sure whatever the working dir is, that it is set and is valid
+        #Make sure whatever the working dir is, that it is set and is valid
 	echo $RNA_HOME
 	
-######INSTALLATION
-######1.) Installation.  Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat.
-######In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not
-######However, if root is available some binaries can/will be copies to system-wide locations (e.g., /usr/bin/)
+#INSTALLATION
+1) Installation.  Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat.
+In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not
+However, if root is available some binaries can/will be copies to system-wide locations (e.g., /usr/bin/)
 	
-######Set up tool installation location
+        #Set up tool installation location
 	cd $RNA_HOME
 	mkdir tools
 	cd tools
 	
-######If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
-######curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
-######tar -xzvf wget-1.13.4.tar.gz
-######cd wget-1.13.4
-######./configure --with-ssl=openssl
-######make
-######make install
+If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows (NOTE: remove '#' to execute):
+   #curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
+   #tar -xzvf wget-1.13.4.tar.gz
+   #cd wget-1.13.4
+   #./configure --with-ssl=openssl
+   #make
+   #make install
 	
-######Intall SamTools
-######Documentation and download: http://sourceforge.net/projects/samtools/
+##Intall SamTools
+         #Documentation and download: http://sourceforge.net/projects/samtools/
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
 	bunzip2 samtools-0.1.19.tar.bz2 
@@ -48,8 +50,8 @@
 	make
 	./samtools
 	
-######Install bam-readcount
-######Documentation and download: https://github.com/genome/bam-readcount
+##Install bam-readcount
+          #Documentation and download: https://github.com/genome/bam-readcount
 	cd $RNA_HOME/tools/
 	mkdir git
 	cd git
@@ -62,8 +64,8 @@
 	make
 	./bin/bam-readcount
 	
-######Intall Bowtie2
-######Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+##Intall Bowtie2
+         #Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.1.0/bowtie2-2.1.0-linux-x86_64.zip
 	unzip bowtie2-2.1.0-linux-x86_64.zip
@@ -71,16 +73,16 @@
 	./bowtie2
 	./bowtie2-build
 	
-######Install Tophat2
-######Documentation and download: http://tophat.cbcb.umd.edu/
+##Install Tophat2
+          #Documentation and download: http://tophat.cbcb.umd.edu/
 	cd $RNA_HOME/tools/
 	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.8b.Linux_x86_64.tar.gz
 	tar -zxvf tophat-2.0.8b.Linux_x86_64.tar.gz
 	cd tophat-2.0.8b.Linux_x86_64
 	./tophat2
 	
-######OPTIONAL
-######Install STAR (alternative to Tophat2)
+OPTIONAL
+##Install STAR (alternative to Tophat2)
 ######Documentation: https://code.google.com/p/rna-star/
 ######Download: https://code.google.com/p/rna-star/downloads/list
 	cd $RNA_HOME/tools/
