@@ -2,17 +2,20 @@ Tutorial Module1 Linux
 ======================
 	
 *Malachi Griffith, mgriffit[AT]genome.wustl.edu
+
 *Obi Griffith, ogriffit[AT]genome.wustl.edu
+
 *Jason Walker, jwalker[AT]genome.wustl.edu
+
 The Genome Institute, Washington University School of Medicine
 	
-This document assumes a Linux computer with an 'x86_64' architecture
-The rest of the tutorial should be conducted in a linux Terminal session
+This document assumes a Linux computer with an 'x86_64' architecture  
+The rest of the tutorial should be conducted in a linux Terminal session  
 	
-All lines starting with a '#' are comments and will not be executed.
-Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'
-Log into a server and SET THIS BEFORE RUNNING EVERYTHING.  
-You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it
+All lines starting with a '#' are comments and will not be executed.  
+Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'  
+Log into a server and SET THIS BEFORE RUNNING EVERYTHING.    
+You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it  
 	
 #ENVIRONMENT
 Create a working directory and set the 'RNA_HOME' environment variable
@@ -32,17 +35,18 @@ Set up tool installation location
 	mkdir tools
 	cd tools
 	
-If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows (NOTE: remove '#' to execute):
+If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
+```
+curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
+tar -xzvf wget-1.13.4.tar.gz
+cd wget-1.13.4
+./configure --with-ssl=openssl
+make
+make install
+```
 
-   #curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
-   #tar -xzvf wget-1.13.4.tar.gz
-   #cd wget-1.13.4
-   #./configure --with-ssl=openssl
-   #make
-   #make install
-	
 ##Intall SamTools
-         #Documentation and download: http://sourceforge.net/projects/samtools/
+Documentation and download: http://sourceforge.net/projects/samtools/
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
 	bunzip2 samtools-0.1.19.tar.bz2 
