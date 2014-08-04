@@ -15,11 +15,11 @@ Log into a server and SET THIS BEFORE RUNNING EVERYTHING.
 You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it
 	
 #ENVIRONMENT
-        #Create a working directory and set the 'RNA_HOME' environment variable
+Create a working directory and set the 'RNA_HOME' environment variable
 	mkdir -p ~/workspace/rnaseq/
 	export RNA_HOME=~/workspace/rnaseq
 	
-        #Make sure whatever the working dir is, that it is set and is valid
+Make sure whatever the working dir is, that it is set and is valid
 	echo $RNA_HOME
 	
 #INSTALLATION
@@ -27,12 +27,13 @@ You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid h
 In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not
 However, if root is available some binaries can/will be copies to system-wide locations (e.g., /usr/bin/)
 	
-        #Set up tool installation location
+Set up tool installation location
 	cd $RNA_HOME
 	mkdir tools
 	cd tools
 	
 If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows (NOTE: remove '#' to execute):
+
    #curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
    #tar -xzvf wget-1.13.4.tar.gz
    #cd wget-1.13.4
