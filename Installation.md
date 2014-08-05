@@ -20,7 +20,8 @@ make
 make install
 ```
 
-##[SamTools](http://sourceforge.net/projects/samtools/)
+##[SAMtools](http://samtools.sourceforge.net/)
+Download : http://sourceforge.net/projects/samtools/
 
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
@@ -53,7 +54,7 @@ make install
 	./bowtie2
 	./bowtie2-build
 	
-##[Tophat2](http://tophat.cbcb.umd.edu/)
+##[TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
 
 	cd $RNA_HOME/tools/
 	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.8b.Linux_x86_64.tar.gz
@@ -87,7 +88,7 @@ Download: https://pypi.python.org/packages/source/H/HTSeq/
 	chmod +x scripts/htseq-count
 	./scripts/htseq-count
 	
-##R
+##[R](http://www.r-project.org/)
 This install takes a while so check if you have R installed already by typing 'which R'
 It is already installed on the Cloud, but for completeness, here is how it was done.
 
@@ -108,7 +109,10 @@ make install
 ./bin/Rscript
 ```	
 
-##R add-on libraries: 'gplots' and 'ggplot2'
+##R Libraries
+For this tutorial we require:
+- [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
+- [ggplot2](http://ggplot2.org/)
 launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
@@ -119,7 +123,10 @@ install.packages("ggplot2")
 quit()
 ```
 
-##R bioconductor libraries: 'cummeRbund' and 'edgeR'
+##[Bioconductor](http://www.bioconductor.org/)
+For this tutorial we require:
+- [cummeRbund](http://compbio.mit.edu/cummeRbund/)
+- [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
