@@ -113,6 +113,7 @@ make install
 For this tutorial we require:
 - [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
 - [ggplot2](http://ggplot2.org/)
+
 launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
@@ -127,6 +128,7 @@ quit()
 For this tutorial we require:
 - [cummeRbund](http://compbio.mit.edu/cummeRbund/)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+
 launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
