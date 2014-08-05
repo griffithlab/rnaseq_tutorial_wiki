@@ -1,244 +1,13 @@
 Tutorial Module1 Linux
 ======================
 	
-*Malachi Griffith, mgriffit[AT]genome.wustl.edu
+ 
+#REFERENCE GENOME
+2. Obtain a reference genome from iGenomes.  In this example analysis we will use the human hg19/NCBI build 37 version of the genome  
+In this tutorial we are actually going to perform the analysis using only a single chromosome (chr22) to make it run faster...
 
-*Obi Griffith, ogriffit[AT]genome.wustl.edu
+Create the necessary working directory
 
-*Jason Walker, jwalker[AT]genome.wustl.edu
-
-The Genome Institute, Washington University School of Medicine
-	
-This document assumes a Linux computer with an 'x86_64' architecture  
-The rest of the tutorial should be conducted in a linux Terminal session  
-	
-All lines starting with a '#' are comments and will not be executed.  
-Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'  
-Log into a server and SET THIS BEFORE RUNNING EVERYTHING.    
-You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it  
-	
-#ENVIRONMENT
-Create a working directory and set the 'RNA_HOME' environment variable
-	mkdir -p ~/workspace/rnaseq/
-	export RNA_HOME=~/workspace/rnaseq
-	
-Make sure whatever the working dir is, that it is set and is valid
-	echo $RNA_HOME
-	
-#INSTALLATION
-1) Installation.  Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat.
-In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not
-However, if root is available some binaries can/will be copies to system-wide locations (e.g., /usr/bin/)
-	
-Set up tool installation location
-	cd $RNA_HOME
-	mkdir tools
-	cd tools
-	
-If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
-```
-curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
-tar -xzvf wget-1.13.4.tar.gz
-cd wget-1.13.4
-./configure --with-ssl=openssl
-make
-make install
-```
-
-##Intall SamTools
-Documentation and download: http://sourceforge.net/projects/samtools/
-
-	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
-	bunzip2 samtools-0.1.19.tar.bz2 
-	tar -xvf samtools-0.1.19.tar
-	cd samtools-0.1.19
-	make
-	./samtools
-	
-##Install bam-readcount
-Documentation and download: https://github.com/genome/bam-readcount
-
-	cd $RNA_HOME/tools/
-	mkdir git
-	cd git
-	git clone --recursive git://github.com/genome/bam-readcount.git
-	cd $RNA_HOME/tools/
-	mkdir bam-readcount
-	cd bam-readcount
-	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-0.1.19
-	cmake $RNA_HOME/tools/git/bam-readcount
-	make
-	./bin/bam-readcount
-	
-##Intall Bowtie2
-Documentation and download: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
-
-	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.1.0/bowtie2-2.1.0-linux-x86_64.zip
-	unzip bowtie2-2.1.0-linux-x86_64.zip
-	cd bowtie2-2.1.0
-	./bowtie2
-	./bowtie2-build
-	
-##Install Tophat2
-Documentation and download: http://tophat.cbcb.umd.edu/
-
-	cd $RNA_HOME/tools/
-	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.8b.Linux_x86_64.tar.gz
-	tar -zxvf tophat-2.0.8b.Linux_x86_64.tar.gz
-	cd tophat-2.0.8b.Linux_x86_64
-	./tophat2
-	
-## **OPTIONAL** Install STAR (alternative to Tophat2)
-Documentation: https://code.google.com/p/rna-star/
-Download: https://code.google.com/p/rna-star/downloads/list
-
-	cd $RNA_HOME/tools/
-	wget http://rna-star.googlecode.com/files/STAR_2.3.0e.Linux_x86_64_static.tgz
-	tar -zxvf STAR_2.3.0e.Linux_x86_64_static.tgz
-	file STAR_2.3.0e.Linux_x86_64_static/STAR
-	
-##Install Cufflinks2
-Documentation and download: http://cufflinks.cbcb.umd.edu/
-
-	cd $RNA_HOME/tools/
-	wget http://cufflinks.cbcb.umd.edu/downloads/cufflinks-2.1.1.Linux_x86_64.tar.gz
-	tar -zxvf cufflinks-2.1.1.Linux_x86_64.tar.gz
-	cd cufflinks-2.1.1.Linux_x86_64
-	./cufflinks
-	
-##Install htseq-count
-Documentation: http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
-Download: https://pypi.python.org/packages/source/H/HTSeq/
-
-	cd $RNA_HOME/tools/
-	wget https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
-	tar -zxvf HTSeq-0.6.1p1.tar.gz
-	cd HTSeq-0.6.1p1/
-	python setup.py install --user
-	chmod +x scripts/htseq-count
-	./scripts/htseq-count
-	
-##Install R
-This install takes a while so check if you have R installed already by typing 'which R'
-It is already installed on the Cloud, but for completeness, here is how it was done.
-```
-cd $RNA_HOME/tools/
-export R_LIBS=
-wget http://cran.r-project.org/src/base/R-3/R-3.1.0.tar.gz
-tar -zxvf R-3.1.0.tar.gz
-cd R-3.1.0
-```
-Note, X11 libraries are not available on Amazon cloud so you need use '--with-x=no' during config, on a regular linux system you would not use this option:
-```
-./configure --with-x=no --prefix=$RNA_HOME/tools/R-3.1.0/
-make
-make install
-./bin/Rscript
-```	
-##Install R add-on libraries: 'gplots' and 'ggplot2'
-launch R (enter "R" at command prompt) and type the following at R prompt
-```
-cd $RNA_HOME/tools/
-./R-3.1.0/bin/R
-install.packages("gplots")
-install.packages("ggplot2")
-quit()
-```
-
-##Install R bioconductor libraries: 'cummeRbund' and 'edgeR'
-launch R (enter "R" at command prompt) and type the following at R prompt
-```
-cd $RNA_HOME/tools/
-./R-3.1.0/bin/R
-source("http://bioconductor.org/biocLite.R")
-biocLite("cummeRbund")
-biocLite("edgeR")
-#If prompted, type "a" to update all old packages
-quit()
-```	
-
-##Install fastqc
-Note, the linux installation below will not work without X11 libraries (as on Amazon cloud)
-For the course we will instead install on student laptops
-Download from http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-For completeness, here is how it would be installed on a linux system with X11 libraries
-```
-cd $RNA_HOME/tools/
-wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip
-unzip fastqc_v0.10.1.zip
-cd FastQC/
-chmod 755 fastqc
-./fastqc --help
-```
-
-##Install Picard tools
-Documentation: http://picard.sourceforge.net/command-line-overview.shtml
-Download:
-
-	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/picard/files/picard-tools/1.114/picard-tools-1.114.zip
-	unzip picard-tools-1.114.zip
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/MergeSamFiles.jar --help
-	
-##Install samstat
-```
-cd $RNA_HOME/tools/
-wget http://sourceforge.net/projects/samstat/files/latest/download -O samstat.tgz
-tar -xzvf samstat.tgz
-cd samstat/src
-make
-```
-
-Note: for some reason samstat will not compile on our Amazon instances.
-We were able to compile offline on ubuntu and archlinux
-Therefore the instructions above should work in your home lab
-For now you can copy a pre-compiled version to your tools dir
-
-	cd $RNA_HOME/tools/
-	mkdir samstat
-	cp /media/cbwdata/CourseData/RNA_data/samstat $RNA_HOME/tools/samstat/
-	$RNA_HOME/tools/samstat/samstat
-        #If you get a permissions error, try the following
-	chmod +x $RNA_HOME/tools/samstat/samstat
-	
-######Add locally installed tools to your PATH
-######To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
-	
-	export RNA_HOME=~/workspace/rnaseq
-	export PATH=$RNA_HOME/tools/samtools-0.1.19:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.1.0:$RNA_HOME/tools/tophat-2.0.8b.Linux_x86_64:$RNA_HOME/tools/STAR_2.3.0e.Linux_x86_64_static:$RNA_HOME/tools/cufflinks-2.1.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.0/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.114:$RNA_HOME/tools/samstat:$PATH
-	echo $PATH
-	
-######You can make these changes permanent by adding the following lines to your .bashrc file
-######use a text editor to open your bashrc file. For example:
-	vi ~/.bashrc
-######Using your cursor, navigate down to the "export PATH" commands at the end of the file.
-######Delete the line starting with PATH using the vi command "dd".
-######Press the "i" key to enter insert mode. Go to an empty line with you cursor and copy paste the new RNA_HOME and PATH commands into the file
-######Press the "esc" key to exit insert mode.
-######press the ":" key to enter command mode.
-######type "wq" to save and quit vi
-	
-######NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
-	cd ~
-	wget -N https://dl.dropboxusercontent.com/u/16769159/.bashrc
-	
-	
-######PRACTICAL EXERCISE
-######Try to install bedtools on your own
-######Make sure you install it in your tools folder
-	cd $RNA_HOME/tools/
-######Now, download, unpack, compile, and test
-######Hint - google "bedtools" to find the source code
-######Hint - there is a README file that will give you hints on how to install
-######Hint - If your install has worked you should be able to run bedtools as follows:
-	$RNA_HOME/tools/bedtools-2.17.0/bin/bedtools
-	
-######REFERENCE GENOME
-######2.) Obtain a reference genome from iGenomes.  In this example analysis we will use the human hg19/NCBI build 37 version of the genome
-######In this tutorial we are actually going to perform the analysis using only a single chromosome (chr22) to make it run faster...
-######Create the necessary working directory
 	cd $RNA_HOME
 	mkdir refs
 	mkdir refs/hg19/
@@ -246,31 +15,36 @@ For now you can copy a pre-compiled version to your tools dir
 	mkdir refs/hg19/fasta/22/
 	cd refs/hg19/fasta/22/
 	
-######Make a copy of chr22 fasta from the CourseData directory to your working directory
-######The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html
-######You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar
-######This has been done for you and that data placed in /media/cbwdata/CourseData/RNA_data/
+Make a copy of chr22 fasta from the CourseData directory to your working directory
+The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html
+You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar
+This has been done for you and that data placed in /media/cbwdata/CourseData/RNA_data/
+
 	cp /media/cbwdata/CourseData/RNA_data/iGenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/22.fa .
 	
-######View the first 10 lines of this file
+View the first 10 lines of this file
+
 	head 22.fa
 	
-######How many lines and characters are in this file? 
+How many lines and characters are in this file?
+
 	wc 22.fa
 	
-######To get all chromosomes instead of just chr22 you could do the following:
-######cd $RNA_HOME
-######mkdir -p refs/hg19/fasta/
-######cd refs/hg19/fasta/
-######cp /media/cbwdata/CourseData/RNA_data/iGenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/* .
-######cat *.fa > hg19.fa
+To get all chromosomes instead of just chr22 you could do the following:
+```
+cd $RNA_HOME
+mkdir -p refs/hg19/fasta/
+cd refs/hg19/fasta/
+cp /media/cbwdata/CourseData/RNA_data/iGenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/* .
+cat *.fa > hg19.fa
+```
+
+Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC  
+e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
+Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files.
 	
-######Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC
-######e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/
-######Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files.
 	
-	
-######ANNOTATION
+#ANNOTATION
 ######3.) Obtain known gene/transcript annotations
 ###### In this tutorial we will use annotations obtained from Illumina's iGenomes for chromosome 22 only
 ###### For time reasons, these have been downloaded for you.
