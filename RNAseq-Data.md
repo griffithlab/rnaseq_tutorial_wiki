@@ -1,4 +1,4 @@
-# RNA-seq Data
+# RNAseq Data
  Obtain RNA-seq test data.  
 The test data consists of colon cancer libraries for a Tumor and matched Normal comparison.  
 Tumor and Normal have 4 replicates each.  
