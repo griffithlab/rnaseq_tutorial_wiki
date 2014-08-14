@@ -10,5 +10,6 @@ Welcome to the RNA-seq Tutorial!
    2. [Reference Genome](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Genome)
    3. [Annotation](https://github.com/griffithlab/rnaseq_tutorial/wiki/Annotation)
    4. [Indexing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Indexing)
-   5. [RNA-seq Data](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNA-seq-Data)
+   5. [RNA-seq Data](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data)
+   6. [PreAlignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)
    

@@ -1,4 +1,4 @@
-# Pre-Alignment QC
+# PreAlignment QC
 
 You can use FastQC to get a sense of your data quality before alignment
 http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
