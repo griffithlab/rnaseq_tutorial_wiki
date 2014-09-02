@@ -1,8 +1,7 @@
-	
-######14. CUFFLINKS DE NOVO MODE
-######Note, to discover novel transcripts with Cufflinks 
-######Using the alignments we generated in the previous modules we will now run Cuffinks in de novo mode
-######To use de novo mode do *not* specify either of the '-G/--GTF' OR '-g/--GTF-guide' options.
+#CUFFLINKS DE NOVO MODE
+Note, to discover novel transcripts with Cufflinks 
+Using the alignments we generated in the previous modules we will now run Cuffinks in de novo mode
+To use de novo mode do *not* specify either of the '-G/--GTF' OR '-g/--GTF-guide' options.
 	
 	cd $RNA_HOME/expression/
 	mkdir -p tophat_cufflinks/de_novo
