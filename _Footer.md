@@ -1,1 +1,1 @@
-[Home](https://github.com/griffithlab/rnaseq_tutorial/wiki) [Next](https://github.com/griffithlab/rnaseq_tutorial/wiki/Syntax)
+[Table of Contents](https://github.com/griffithlab/rnaseq_tutorial/wiki) 
