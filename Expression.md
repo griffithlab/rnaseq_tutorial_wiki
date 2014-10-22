@@ -27,10 +27,10 @@ Extra options specified below
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_cufflinks/ref_only/
 	cd expression/tophat_cufflinks/ref_only/
-	ufflinks -p 8 -o Normal_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA1_lib2/accepted_hits.bam
-	ufflinks -p 8 -o Normal_cDNA2_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits.bam
-	ufflinks -p 8 -o Tumor_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits.bam
-	ufflinks -p 8 -o Tumor_cDNA2_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits.bam
+	cufflinks -p 8 -o Normal_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA1_lib2/accepted_hits.bam
+	cufflinks -p 8 -o Normal_cDNA2_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits.bam
+	cufflinks -p 8 -o Tumor_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits.bam
+	cufflinks -p 8 -o Tumor_cDNA2_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits.bam
 	
 ##OPTIONAL ALTERNATIVE
 Run cufflinks on STAR alignments instead of TopHat alignments
