@@ -1,9 +1,7 @@
 #Authors
 
-- Malachi Griffith, mgriffit[AT]genome.wustl.edu
-
-- Obi Griffith, ogriffit[AT]genome.wustl.edu
-
-- Jason Walker, jwalker[AT]genome.wustl.edu
+- [Malachi Griffith](http://genome.wustl.edu/people/individual/malachi-griffith/), mgriffit[AT]genome.wustl.edu
+- [Obi Griffith](http://genome.wustl.edu/people/individual/obi-griffith/), ogriffit[AT]genome.wustl.edu
+- [Jason Walker](http://genome.wustl.edu/people/individual/jason-walker/), jwalker[AT]genome.wustl.edu
 
 The Genome Institute, Washington University School of Medicine
