@@ -202,6 +202,8 @@ use a text editor to open your bashrc file. For example:
 4. Press the "esc" key to exit insert mode.
 5. Press the ":" key to enter command mode.
 6. Type "wq" to save and quit vi
+
+If you would like to learn how to use vi, try this tutorial/game: [VIM Adventures](http://vim-adventures.com/)
 	
 NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
 
