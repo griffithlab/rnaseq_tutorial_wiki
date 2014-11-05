@@ -13,8 +13,9 @@ Create the necessary working directory
 	
 Make a copy of chr22 fasta from the CourseData directory to your working directory
 The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html
-You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar
-This has been done for you and that data placed in /media/cbwdata/CourseData/RNA_data/
+You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar.
+
+This has been done for you and that data placed on an ftp server
 
 	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/colon_tumor_vs_normal/downsampled_10pc_chr22/22.fa
 	
