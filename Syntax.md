@@ -1,6 +1,6 @@
 #Syntax
 
-In [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown), fenced code blocks are optional where as indented code blocks are required to complete the tutorial.
+In [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown), [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) are optional portions of the tutorials where as [indented code blocks](http://daringfireball.net/projects/markdown/syntax#precode) are required to complete the tutorial.
 
 To make the Markdown files bash/shell compatible, a script will add a comment or '#' character to all lines that are NOT indendented with a TAB character.
 
