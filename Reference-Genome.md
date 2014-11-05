@@ -16,7 +16,7 @@ The complete data from which these files were obtained can be found at: http://c
 You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar
 This has been done for you and that data placed in /media/cbwdata/CourseData/RNA_data/
 
-	cp /media/cbwdata/CourseData/RNA_data/iGenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/22.fa .
+	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/colon_tumor_vs_normal/downsampled_10pc_chr22/22.fa
 	
 View the first 10 lines of this file
 
