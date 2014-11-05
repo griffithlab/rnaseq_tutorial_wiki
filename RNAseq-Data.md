@@ -1,5 +1,5 @@
 # RNAseq Data
- Obtain RNA-seq test data.  
+## Obtain RNA-seq test data.  
 The test data consists of colon cancer libraries for a Tumor and matched Normal comparison.  
 Tumor and Normal have 4 replicates each.  
 Each replicate actually corresponds to a different library preparation method using the same input RNAs.  
@@ -16,17 +16,20 @@ In this tutorial we will just compare the two cDNA capture libraries (lib2) from
 Each data set has a corresponding pair of fastq files (read 1 and read 2 of paired end reads).  
 The reads are paired-end 101-mers generated on an Illumina HiSeq instrument.
 The test data has been pre-filtered for reads that appear to map to chromosome 22
+
 	cd $RNA_HOME/
 	mkdir -p data
 	cd data
 	
 Make a copy of the test data
+
 	cp /media/cbwdata/CourseData/RNA_data/CBW_OvationV2_ds_10pc.tar .
 	
 Unpack the test data.  You should see 12 sets of paired end fastq files
 	tar -xvf CBW_OvationV2_ds_10pc.tar
 	
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
+
 	zcat H_KH-540077-Normal-cDNA-1-lib1_ds_10pc_1.fastq.gz | head -n 8
 	zcat H_KH-540077-Normal-cDNA-1-lib1_ds_10pc_2.fastq.gz | head -n 8
 	
@@ -34,4 +37,5 @@ Identify the following components of each read: read name, read sequence, and qu
 	
 How many reads are there in the first library?
 Decompress file on the fly with 'zcat', pipe into 'grep', search for the read name prefix and pipe into 'wc' to do a word count ('-l' gives lines)
+
 	zcat H_KH-540077-Normal-cDNA-1-lib1_ds_10pc_1.fastq.gz | grep -P "^\@HWI" | wc -l
