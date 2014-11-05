@@ -23,10 +23,10 @@ The test data has been pre-filtered for reads that appear to map to chromosome 2
 	
 Make a copy of the test data
 
-	cp /media/cbwdata/CourseData/RNA_data/CBW_OvationV2_ds_10pc.tar .
+	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/colon_tumor_vs_normal/downsampled_10pc_chr22/OvationV2_ds_10pc.tar
 	
 Unpack the test data.  You should see 12 sets of paired end fastq files
-	tar -xvf CBW_OvationV2_ds_10pc.tar
+	tar -xvf OvationV2_ds_10pc.tar
 	
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
 
