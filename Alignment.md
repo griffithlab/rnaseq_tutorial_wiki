@@ -30,6 +30,7 @@ This parameter tells TopHat where to store it and allows it to be reused in mult
 	echo $TRANS_IDX_DIR
 	
 In my tests, each library took ~1.5 minute to align
+
 	tophat2 -p 8 -r 60 --rg-id=total_cap --rg-sample=H_KH-540077-Normal-cDNA-1-lib2 -o Normal_cDNA1_lib2 -G $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/22/22 $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-1-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-1-lib2_ds_10pc_2.fastq.gz
 	tophat2 -p 8 -r 60 --rg-id=polyA_cap --rg-sample=H_KH-540077-Normal-cDNA-2-lib2 -o Normal_cDNA2_lib2 -G $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/22/22 $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-2-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-2-lib2_ds_10pc_2.fastq.gz
 	
