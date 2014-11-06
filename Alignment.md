@@ -57,12 +57,14 @@ Some further optional parameter might be needed though (see STAR manual: 8.2.3: 
 	STAR --genomeDir $RNA_HOME/refs/hg19/star/22 --readFilesIn $RNA_DATA_DIR/H_KH-540077-Tumor-cDNA-2-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Tumor-cDNA-2-lib2_ds_10pc_2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix Tumor_cDNA2_lib2/ --outSAMstrandField intronMotif
 	
 Convert to bam files (required for cufflinks)
+
 	samtools view -b -S Normal_cDNA1_lib2/Aligned.out.sam > Normal_cDNA1_lib2/Aligned.out.bam
 	samtools view -b -S Normal_cDNA2_lib2/Aligned.out.sam > Normal_cDNA2_lib2/Aligned.out.bam
 	samtools view -b -S Tumor_cDNA1_lib2/Aligned.out.sam > Tumor_cDNA1_lib2/Aligned.out.bam
 	samtools view -b -S Tumor_cDNA2_lib2/Aligned.out.sam > Tumor_cDNA2_lib2/Aligned.out.bam
 	
 Now sort the bam files (also required for cufflinks)
+
 	samtools sort Normal_cDNA1_lib2/Aligned.out.bam Normal_cDNA1_lib2/Aligned.out.sorted
 	samtools sort Normal_cDNA2_lib2/Aligned.out.bam Normal_cDNA2_lib2/Aligned.out.sorted
 	samtools sort Tumor_cDNA1_lib2/Aligned.out.bam Tumor_cDNA1_lib2/Aligned.out.sorted
