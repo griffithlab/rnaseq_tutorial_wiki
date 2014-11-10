@@ -5,8 +5,11 @@ In this tutorial we are actually going to perform the analysis using only a sing
 Create the necessary working directory
 
 	cd $RNA_HOME
-	mkdir -p refs/hg19/fasta/22/
-	cd refs/hg19/fasta/22/
+        mkdir refs
+        mkdir refs/hg19
+        mkdir refs/hg19/fasta
+	mkdir refs/hg19/fasta/chr22_ERCC92/
+	cd refs/hg19/fasta/chr22_ERCC92/
 	
 Make a copy of chr22 fasta from the CourseData directory to your working directory
 The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html
