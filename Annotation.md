@@ -8,14 +8,15 @@ Copy the gene annotation files to the working directory.
 	cd $RNA_HOME/refs/hg19/
 	mkdir genes
 	cd genes
-	cp /media/cbwdata/CourseData/RNA_data/iGenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes_chr22.gtf .
-	less -p start_codon -S genes_chr22.gtf
+	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
+        gunzip genes_chr22_ERCC92.gtf.gz
+	less -p start_codon -S genes_chr22_ERCC92.gtf
 Press 'q' to exit the 'less' display
 	
 How many unique gene IDs are in the .gtf file?
 We can use a perl command-line command to find out:
 
-	perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22.gtf | sort | uniq | wc -l
+	perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22_ERCC92.gtf | sort | uniq | wc -l
 	
 Using perl -ne '' will execute the code between single quotes, on the .gtf file, line-by-line.
 The $_ variable holds the contents of each line
