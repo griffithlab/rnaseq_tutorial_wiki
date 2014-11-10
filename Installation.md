@@ -24,10 +24,10 @@ make install
 Download : http://sourceforge.net/projects/samtools/
 
 	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2/download -O samtools-0.1.19.tar.bz2
-	bunzip2 samtools-0.1.19.tar.bz2 
-	tar -xvf samtools-0.1.19.tar
-	cd samtools-0.1.19
+	wget http://sourceforge.net/projects/samtools/files/samtools/1.1/samtools-1.1.tar.bz2/download -O samtools-1.1.tar.bz2
+	bunzip2 samtools-1.1.tar.bz2 
+	tar -xvf samtools-1.1.tar
+	cd samtools-1.1
 	make
 	./samtools
 	
@@ -40,7 +40,7 @@ Download : http://sourceforge.net/projects/samtools/
 	cd $RNA_HOME/tools/
 	mkdir bam-readcount
 	cd bam-readcount
-	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-0.1.19
+	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.1
 	cmake $RNA_HOME/tools/git/bam-readcount
 	make
 	./bin/bam-readcount
@@ -48,40 +48,42 @@ Download : http://sourceforge.net/projects/samtools/
 ##[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 
 	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.1.0/bowtie2-2.1.0-linux-x86_64.zip
-	unzip bowtie2-2.1.0-linux-x86_64.zip
-	cd bowtie2-2.1.0
+	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.4/bowtie2-2.2.4-linux-x86_64.zip
+	unzip bowtie2-2.2.4-linux-x86_64.zip
+	cd bowtie2-2.2.4
 	./bowtie2
 	./bowtie2-build
 	
 ##[TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
 
 	cd $RNA_HOME/tools/
-	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.8b.Linux_x86_64.tar.gz
-	tar -zxvf tophat-2.0.8b.Linux_x86_64.tar.gz
-	cd tophat-2.0.8b.Linux_x86_64
+	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.13.Linux_x86_64.tar.gz
+	tar -zxvf tophat-2.0.13.Linux_x86_64.tar.gz
+	cd tophat-2.0.13.Linux_x86_64
 	./tophat2
 	
 ##[STAR](https://code.google.com/p/rna-star/)
 
 	cd $RNA_HOME/tools/
-	wget http://rna-star.googlecode.com/files/STAR_2.3.0e.Linux_x86_64_static.tgz
-	tar -zxvf STAR_2.3.0e.Linux_x86_64_static.tgz
-	file STAR_2.3.0e.Linux_x86_64_static/STAR
+        wget https://github.com/alexdobin/STAR/archive/STAR_2.4.0f1.tar.gz -O STAR_2.4.0f1.tar.gz
+        tar -zxvf STAR_2.4.0f1.tar.gz
+	cd STAR-STAR_2.4.0f1/source
+        make STAR
+        file STAR
 	
 ##[Cufflinks2](http://cufflinks.cbcb.umd.edu/)
 
 	cd $RNA_HOME/tools/
-	wget http://cufflinks.cbcb.umd.edu/downloads/cufflinks-2.1.1.Linux_x86_64.tar.gz
-	tar -zxvf cufflinks-2.1.1.Linux_x86_64.tar.gz
-	cd cufflinks-2.1.1.Linux_x86_64
+	wget http://cufflinks.cbcb.umd.edu/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
+	tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
+	cd cufflinks-2.2.1.Linux_x86_64
 	./cufflinks
 	
 ##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
 Download: https://pypi.python.org/packages/source/H/HTSeq/
 
 	cd $RNA_HOME/tools/
-	wget https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
+	wget --no-check-certificate https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
 	tar -zxvf HTSeq-0.6.1p1.tar.gz
 	cd HTSeq-0.6.1p1/
 	python setup.py install --user
@@ -148,8 +150,8 @@ For completeness, here is how it would be installed on a linux system with X11 l
 
 ```
 cd $RNA_HOME/tools/
-wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.10.1.zip
-unzip fastqc_v0.10.1.zip
+wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
+unzip fastqc_v0.11.2.zip
 cd FastQC/
 chmod 755 fastqc
 ./fastqc --help
@@ -158,18 +160,20 @@ chmod 755 fastqc
 ##[Picard](http://picard.sourceforge.net/command-line-overview.shtml)
 
 	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/picard/files/picard-tools/1.114/picard-tools-1.114.zip
-	unzip picard-tools-1.114.zip
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/MergeSamFiles.jar --help
+	wget https://github.com/broadinstitute/picard/releases/download/1.124/picard-tools-1.124.zip -O picard-tools-1.124.zip
+        unzip picard-tools-1.124.zip
+	java -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar
 	
 ##[SAMStat](http://samstat.sourceforge.net/)
 
 ```
 cd $RNA_HOME/tools/
-wget http://sourceforge.net/projects/samstat/files/latest/download -O samstat.tgz
-tar -xzvf samstat.tgz
-cd samstat/src
+wget http://downloads.sourceforge.net/project/samstat/samstat-1.5.tar.gz
+tar -xzvf samstat-1.5.tar.gz
+cd samstat-1.5
+./configure
 make
+./src/samstat
 ```
 
 Note: for some reason samstat will not compile on our Amazon instances.
@@ -188,7 +192,7 @@ For now you can copy a pre-compiled version to your tools dir
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
 	
 	export RNA_HOME=~/workspace/rnaseq
-	export PATH=$RNA_HOME/tools/samtools-0.1.19:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.1.0:$RNA_HOME/tools/tophat-2.0.8b.Linux_x86_64:$RNA_HOME/tools/STAR_2.3.0e.Linux_x86_64_static:$RNA_HOME/tools/cufflinks-2.1.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.0/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.114:$RNA_HOME/tools/samstat:$PATH
+	export PATH=$RNA_HOME/tools/samtools-1.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.4:$RNA_HOME/tools/tophat-2.0.13.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.4.0f1/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.0/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.124:$RNA_HOME/tools/samstat-1.5:$PATH
 	echo $PATH
 	
 You can make these changes permanent by adding the following lines to your .bashrc file
