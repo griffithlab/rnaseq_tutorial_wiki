@@ -1,14 +1,11 @@
 #Reference Genome
 Obtain a reference genome from iGenomes.  In this example analysis we will use the human hg19/NCBI build 37 version of the genome  
-In this tutorial we are actually going to perform the analysis using only a single chromosome (chr22) to make it run faster...
+In this tutorial we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
 
 Create the necessary working directory
 
 	cd $RNA_HOME
-	mkdir refs
-	mkdir refs/hg19/
-	mkdir refs/hg19/fasta/
-	mkdir refs/hg19/fasta/22/
+	mkdir -p refs/hg19/fasta/22/
 	cd refs/hg19/fasta/22/
 	
 Make a copy of chr22 fasta from the CourseData directory to your working directory
@@ -17,15 +14,16 @@ You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (unde
 
 This has been done for you and that data placed on an ftp server. Download it now.
 
-	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/colon_tumor_vs_normal/downsampled_10pc_chr22/22.fa
+     wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/chr22_ERCC92.fa.gz
+     gunzip chr22_ERCC92.fa.gz
 	
 View the first 10 lines of this file
 
-	head 22.fa
+	head chr22_ERCC92.fa
 	
 How many lines and characters are in this file?
 
-	wc 22.fa
+	wc chr22_ERCC92.fa
 	
 To get all chromosomes instead of just chr22 you could do the following:
 
