@@ -161,7 +161,7 @@ chmod 755 fastqc
 
 	cd $RNA_HOME/tools/
 	wget https://github.com/broadinstitute/picard/releases/download/1.124/picard-tools-1.124.zip -O picard-tools-1.124.zip
-        unzip picard-tools-1.124.zip
+	unzip picard-tools-1.124.zip
 	java -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar
 	
 ##[SAMStat](http://samstat.sourceforge.net/)
@@ -185,7 +185,9 @@ For now you can copy a pre-compiled version to your tools dir
 	mkdir samstat
 	cp /media/cbwdata/CourseData/RNA_data/samstat $RNA_HOME/tools/samstat/
 	$RNA_HOME/tools/samstat/samstat
-        #If you get a permissions error, try the following
+
+#If you get a permissions error, try the following:
+
 	chmod +x $RNA_HOME/tools/samstat/samstat
 	
 ##Add locally installed tools to your PATH
