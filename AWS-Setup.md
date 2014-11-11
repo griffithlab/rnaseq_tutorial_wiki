@@ -81,7 +81,7 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ###Current Public AMIs:
 
-* cshl_seqtec_rnaseq_2014_v2 - ??? (US West - Oregon)
+* cshl_seqtec_rnaseq_2014_v2 - ami-e7c08bd7 (US West - Oregon)
 * cshl_seqtec_rnaseq_2014_v2 - ??? (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ??? (US West - N. California)
 
