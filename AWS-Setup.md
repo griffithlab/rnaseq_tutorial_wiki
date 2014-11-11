@@ -24,7 +24,16 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 ```
 * logout and log back in
 
-Pre-install any desired informatics tools (https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation). Note: R in particular is a slow install. This should be installed globally with sudo.
+###Create setup script to mount a workspace folder on ephemeral storage
+```
+cd ~
+mkdir workspace
+bash preinstall.sh
+```
+
+###Install any desired informatics tools
+* See https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation 
+* Note: R in particular is a slow install. This should be installed globally with sudo.
 
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
