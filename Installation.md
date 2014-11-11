@@ -12,9 +12,9 @@ Set up tool installation location
 If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
 
 ```
-curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
-tar -xzvf wget-1.13.4.tar.gz
-cd wget-1.13.4
+curl -O http://ftp.gnu.org/gnu/wget/wget-1.16.tar.gz
+tar -xzvf wget-1.16.tar.gz
+cd wget-1.16
 ./configure --with-ssl=openssl
 make
 make install
