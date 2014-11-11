@@ -88,7 +88,13 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 ###Launch student instances
 1. Go to AWS console.
 2. Launch Instance, search for "cshl_seqtec_rnaseq_2014_v2" in Community AMIs and Select.
-3. 
+3. Choose "m3.xlarge" instance type.
+4. Select number of instances to launch (e.g., one per student and instructor)
+5. Leave options as default until 'Configure Security Group'. Choose existing security group call "SSH_HTTP_IN_ALL_OUT". Review and Launch.
+6. Choose an existing key pair (either CSHLRNA or instructor-key)
+7. View instances and wait for them to finish initiating.
+8. Login to each node `ssh -i [instructor-key].pem ubuntu@[public.ip.address]` and run `bash preinstall.sh`.
+9. Create DNS hostname for each IP address (see below).
 
 ###Dynamic DNS
 
