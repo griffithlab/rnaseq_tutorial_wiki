@@ -29,4 +29,4 @@ Pre-install any desired informatics tools (https://github.com/griffithlab/rnaseq
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
 Current Public AMIs:
-cshl_seqtec_rnaseq_2014_v2 - ami-35baf105 (US West - Oregon)
+* cshl_seqtec_rnaseq_2014_v2 - ami-35baf105 (US West - Oregon)
