@@ -186,7 +186,7 @@ For now you can copy a pre-compiled version to your tools dir
 	cp /media/cbwdata/CourseData/RNA_data/samstat $RNA_HOME/tools/samstat/
 	$RNA_HOME/tools/samstat/samstat
 
-#If you get a permissions error, try the following:
+If you get a permissions error, try the following:
 
 	chmod +x $RNA_HOME/tools/samstat/samstat
 	
