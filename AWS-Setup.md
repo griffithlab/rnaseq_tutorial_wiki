@@ -1,4 +1,7 @@
-##Amazon AWS/AMI setup for AWS use in workshop
+##Amazon AWS/AMI setup for use in workshop
+
+A helpful tutorial can be found here:
+https://github.com/genome/gms/wiki/Developers-guide-to-installing-the-GMS-on-an-AWS-instance
 
 1. Create a new gmail account to use for the course
 2. Use the above email account to set up a new AWS/Amazon user account.
