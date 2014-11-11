@@ -65,8 +65,8 @@ Download : http://sourceforge.net/projects/samtools/
 ##[STAR](https://code.google.com/p/rna-star/)
 
 	cd $RNA_HOME/tools/
-        wget https://github.com/alexdobin/STAR/archive/STAR_2.4.0f1.tar.gz -O STAR_2.4.0f1.tar.gz
-        tar -zxvf STAR_2.4.0f1.tar.gz
+	wget https://github.com/alexdobin/STAR/archive/STAR_2.4.0f1.tar.gz -O STAR_2.4.0f1.tar.gz
+	tar -zxvf STAR_2.4.0f1.tar.gz
 	cd STAR-STAR_2.4.0f1/source
 	make STAR
 	file STAR
