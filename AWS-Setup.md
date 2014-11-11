@@ -85,6 +85,11 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 * cshl_seqtec_rnaseq_2014_v2 - ami-3a67ed52 (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ami-4b2b3d0e (US West - N. California)
 
+###Launch student instances
+1. Go to AWS console.
+2. Launch Instance, search for "cshl_seqtec_rnaseq_2014_v2" in Community AMIs and Select.
+3. 
+
 ###Dynamic DNS
 
 Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like dyn.com to create hostnames like cshl01.dyndns.org, cshl02,dyndns.org, etc that point to each public IP address of student instances.
