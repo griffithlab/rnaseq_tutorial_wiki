@@ -12,7 +12,8 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 1. Select Launch instance. Search Community AMIs for and select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-3d50120d". Choose an instance type of "m3.xlarge". Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
 2. Change permissions on downloaded key pair with `chmod 600 [instructor-key].pem`
-3. Login to instance with ubuntu user: `ssh -i [instructor-key].pem ubuntu@[public.ip.address]`
+3. Login to instance with ubuntu user:
+`ssh -i [instructor-key].pem ubuntu@[public.ip.address]`
 
 ##Basic linux admin setup needed to allow installation of bioinformatics tools:
 ```
