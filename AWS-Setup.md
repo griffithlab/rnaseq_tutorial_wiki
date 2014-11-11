@@ -26,4 +26,4 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 
 Pre-install any desired informatics tools (https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation). Note: R in particular is a slow install. This should be installed globally with sudo.
 
-Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". 
+Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. 
