@@ -77,7 +77,7 @@ sudo service apache2 restart
 
 ###Save public AMI
 
-Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
+Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
 ###Current Public AMIs:
 
