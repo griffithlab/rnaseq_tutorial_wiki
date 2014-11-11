@@ -211,5 +211,5 @@ If you would like to learn how to use vi, try this tutorial/game: [VIM Adventure
 NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
 
 	cd ~
-	wget -N https://dl.dropboxusercontent.com/u/16769159/.bashrc
+	wget -N https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/.bashrc
 	
