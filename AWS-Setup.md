@@ -22,6 +22,8 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 sudo apt-get update
 sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev
 ```
-2. logout and log back in
+* logout and log back in
 
 Pre-install any desired informatics tools (https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation). Note: R in particular is a slow install. This should be installed globally with sudo.
+
+Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". 
