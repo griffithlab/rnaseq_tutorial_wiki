@@ -167,6 +167,7 @@ chmod 755 fastqc
 ##[SAMStat](http://samstat.sourceforge.net/)
 
 ```
+export PATH=$RNA_HOME/tools/samtools-1.1:$PATH
 cd $RNA_HOME/tools/
 wget http://downloads.sourceforge.net/project/samstat/samstat-1.5.tar.gz
 tar -xzvf samstat-1.5.tar.gz
@@ -175,20 +176,6 @@ cd samstat-1.5
 make
 ./src/samstat
 ```
-
-Note: for some reason samstat will not compile on our Amazon instances.
-We were able to compile offline on ubuntu and archlinux
-Therefore the instructions above should work in your home lab
-For now you can copy a pre-compiled version to your tools dir
-
-	cd $RNA_HOME/tools/
-	mkdir samstat
-	cp /media/cbwdata/CourseData/RNA_data/samstat $RNA_HOME/tools/samstat/
-	$RNA_HOME/tools/samstat/samstat
-
-If you get a permissions error, try the following:
-
-	chmod +x $RNA_HOME/tools/samstat/samstat
 	
 ##Add locally installed tools to your PATH
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
@@ -197,7 +184,7 @@ To use the locally installed version of each tool without having to specify comp
 	export PATH=$RNA_HOME/tools/samtools-1.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.4:$RNA_HOME/tools/tophat-2.0.13.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.4.0f1/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.0/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.124:$RNA_HOME/tools/samstat-1.5:$PATH
 	echo $PATH
 	
-You can make these changes permanent by adding the following lines to your .bashrc file
+You can make these changes permanent by adding the above lines to your .bashrc file
 use a text editor to open your bashrc file. For example:
 
 	vi ~/.bashrc
