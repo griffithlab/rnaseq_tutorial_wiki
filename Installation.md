@@ -173,12 +173,25 @@ cd samstat-1.5
 make
 ./src/samstat
 ```
+
+##Practical Exercise
+Try to install bedtools on your own  
+Make sure you install it in your tools folder  
+
+	cd $RNA_HOME/tools/
+
+Now, download, unpack, compile, and test  
+Hint - google "bedtools" to find the source code  
+Hint - there is a README file that will give you hints on how to install  
+Hint - If your install has worked you should be able to run bedtools as follows:
+
+	$RNA_HOME/tools/bedtools-2.17.0/bin/bedtools
 	
 ##Add locally installed tools to your PATH
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
 	
 	export RNA_HOME=~/workspace/rnaseq
-	export PATH=$RNA_HOME/tools/samtools-1.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.4:$RNA_HOME/tools/tophat-2.0.13.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.4.0f1/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.0/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.124:$RNA_HOME/tools/samstat-1.5:$PATH
+	export PATH=$RNA_HOME/tools/samtools-1.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.4:$RNA_HOME/tools/tophat-2.0.13.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.4.0f1/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.2/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.124:$RNA_HOME/tools/samstat-1.5:$PATH
 	echo $PATH
 	
 You can make these changes permanent by adding the above lines to your .bashrc file
@@ -199,18 +212,4 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 
 	cd ~
 	wget -N https://dl.dropboxusercontent.com/u/16769159/.bashrc
-	
-	
-##Practical Exercise
-Try to install bedtools on your own  
-Make sure you install it in your tools folder  
-
-	cd $RNA_HOME/tools/
-
-Now, download, unpack, compile, and test  
-Hint - google "bedtools" to find the source code  
-Hint - there is a README file that will give you hints on how to install  
-Hint - If your install has worked you should be able to run bedtools as follows:
-
-	$RNA_HOME/tools/bedtools-2.17.0/bin/bedtools
 	
