@@ -27,18 +27,20 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 ```
 * logout and log back in
 
-###Create setup script to mount a workspace folder on ephemeral storage
-```
-cd ~
-mkdir workspace
-bash preinstall.sh
-```
-
 ###Install any desired informatics tools
 * See https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation 
 * Note: R in particular is a slow install. This should be installed globally with sudo.
 
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
-Current Public AMIs:
+##When launching student instances:
+We will need to run a setup script to mount a workspace folder on ephemeral storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance.
+```
+mkdir /workspace
+cd ~
+ln -s /workspace workspace
+bash preinstall.sh
+```
+
+##Current Public AMIs:
 * cshl_seqtec_rnaseq_2014_v2 - ami-35baf105 (US West - Oregon)
