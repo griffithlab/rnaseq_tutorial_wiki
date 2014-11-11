@@ -97,19 +97,16 @@ It is already installed on the Cloud, but for completeness, here is how it was d
 ```
 cd $RNA_HOME/tools/
 export R_LIBS=
-wget http://cran.r-project.org/src/base/R-3/R-3.1.0.tar.gz
-tar -zxvf R-3.1.0.tar.gz
-cd R-3.1.0
-```
-
-Note, X11 libraries are not available on Amazon cloud so you need use '--with-x=no' during config, on a regular linux system you would not use this option:
-
-```
-./configure --with-x=no --prefix=$RNA_HOME/tools/R-3.1.0/
+wget http://cran.us.r-project.org/src/base/R-3/R-3.1.2.tar.gz
+tar -zxvf R-3.1.2.tar.gz
+cd R-3.1.2
+./configure --prefix=$RNA_HOME/tools/R-3.1.2/
 make
 make install
 ./bin/Rscript
-```	
+```
+
+Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
 
 ##R Libraries
 For this tutorial we require:
@@ -120,7 +117,7 @@ launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
 cd $RNA_HOME/tools/
-./R-3.1.0/bin/R
+./R-3.1.2/bin/R
 install.packages("gplots")
 install.packages("ggplot2")
 quit()
@@ -135,7 +132,7 @@ launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
 cd $RNA_HOME/tools/
-./R-3.1.0/bin/R
+./R-3.1.2/bin/R
 source("http://bioconductor.org/biocLite.R")
 biocLite("cummeRbund")
 biocLite("edgeR")
