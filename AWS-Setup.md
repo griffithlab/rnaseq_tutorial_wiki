@@ -43,4 +43,6 @@ bash preinstall.sh
 ```
 
 ##Current Public AMIs:
-* cshl_seqtec_rnaseq_2014_v2 - ami-35baf105 (US West - Oregon)
+* cshl_seqtec_rnaseq_2014_v2 - ami-41cb8071 (US West - Oregon)
+* cshl_seqtec_rnaseq_2014_v2 - ami-3a67ed52 (US East - N. Virginia)
+* cshl_seqtec_rnaseq_2014_v2 - ami-4b2b3d0e (US West - N. California)
