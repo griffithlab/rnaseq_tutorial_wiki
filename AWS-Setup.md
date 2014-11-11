@@ -33,13 +33,16 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Save Image". Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
-##When launching student instances:
+##Setting up additional storage for workspace
 We will need to run a setup script to mount a workspace folder on ephemeral storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance.
 ```
 mkdir /workspace
 cd ~
 ln -s /workspace workspace
 ```
+
+##Dynamic DNS
+Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like dyn.com to create hostnames like cshl01.dyndns.org, cshl02,dyndns.org, etc that point to each public IP address of student instances.
 
 ##Current Public AMIs:
 * cshl_seqtec_rnaseq_2014_v2 - ami-41cb8071 (US West - Oregon)
