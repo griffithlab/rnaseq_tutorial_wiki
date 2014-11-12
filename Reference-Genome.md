@@ -25,16 +25,6 @@ How many lines and characters are in this file?
 
 	wc chr22_ERCC92.fa
 	
-To get all chromosomes instead of just chr22 you could do the following:
-
-```
-cd $RNA_HOME
-mkdir -p refs/hg19/fasta/
-cd refs/hg19/fasta/
-cp /media/cbwdata/CourseData/RNA_data/iGenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/* .
-cat *.fa > hg19.fa
-```
-
 Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC  
 e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
 Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files.
