@@ -114,10 +114,10 @@ Create comparable files for the STAR alignments by merging individual bam files 
 	
 	
 ##PRACTICAL EXERCISE
-* Perform some alignments on an additional pair of read data sets
-* Do this in a separate working directory called ‘temp’!
-* In this exercise you will download some publicly available read data in *BAM* format, convert this to FASTQ format and compress it
-* Then you will align the reads using the skills you learned above.  Try using Tophat or STAR or both aligners.
+Perform some alignments on an additional pair of read data sets
+Do this in a separate working directory called ‘temp’!
+In this exercise you will download some publicly available read data in *BAM* format, convert this to FASTQ format and compress it
+Then you will align the reads using the skills you learned above.  Try using Tophat or STAR or both aligners.
 
   cd $RNA_HOME
   mkdir temp
