@@ -1,5 +1,5 @@
 #INDEXING
-##Create a bowtie index of the genome and write it to a 'bwt' sub-directory
+###Create a bowtie index of the genome and write it to a 'bwt' sub-directory
 
 Create a bowtie index for chr22 and the ERCC spike-in only:
 
