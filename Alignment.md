@@ -66,10 +66,12 @@ Some further optional parameter might be needed though (see STAR manual: 8.2.3: 
 
 Convert to bam files (required for cufflinks)
 
-	samtools view -b -S Normal_cDNA1_lib2/Aligned.out.sam > Normal_cDNA1_lib2/Aligned.out.bam
-	samtools view -b -S Normal_cDNA2_lib2/Aligned.out.sam > Normal_cDNA2_lib2/Aligned.out.bam
-	samtools view -b -S Tumor_cDNA1_lib2/Aligned.out.sam > Tumor_cDNA1_lib2/Aligned.out.bam
-	samtools view -b -S Tumor_cDNA2_lib2/Aligned.out.sam > Tumor_cDNA2_lib2/Aligned.out.bam
+	samtools view -b -S HBR_Rep1/Aligned.out.sam > HBR_Rep1/Aligned.out.bam
+	samtools view -b -S HBR_Rep2/Aligned.out.sam > HBR_Rep2/Aligned.out.bam
+	samtools view -b -S HBR_Rep3/Aligned.out.sam > HBR_Rep3/Aligned.out.bam
+	samtools view -b -S UHR_Rep1/Aligned.out.sam > UHR_Rep1/Aligned.out.bam
+	samtools view -b -S UHR_Rep2/Aligned.out.sam > UHR_Rep2/Aligned.out.bam
+	samtools view -b -S UHR_Rep3/Aligned.out.sam > UHR_Rep3/Aligned.out.bam
 	
 Now sort the bam files (also required for cufflinks)
 
