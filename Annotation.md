@@ -9,8 +9,9 @@ Copy the gene annotation files to the working directory.
 	mkdir genes
 	cd genes
 	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
-        gunzip genes_chr22_ERCC92.gtf.gz
+	gunzip genes_chr22_ERCC92.gtf.gz
 	less -p start_codon -S genes_chr22_ERCC92.gtf
+
 Press 'q' to exit the 'less' display
 	
 How many unique gene IDs are in the .gtf file?
