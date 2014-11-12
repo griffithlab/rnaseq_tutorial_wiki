@@ -33,7 +33,8 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 * See https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation 
 * Note: R in particular is a slow install. This should be installed globally with sudo.
 * All other tools can be installed locally (e.g., /home/ubuntu/bin/) in a different location from where students will install tools in their exercises.
-* Paths to pre-installed tools can be added to .bashrc file. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/.bashrc.
+* Paths to pre-installed tools can be added to the .bashrc file. It may also be convenient to add `export RNA_HOME=~/workspace/rnaseq` to the .bashrc file. 
+ * See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/.bashrc.
 
 ###Set up additional storage for workspace
 We will need to run a setup script to mount a workspace folder on ephemeral storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance.
