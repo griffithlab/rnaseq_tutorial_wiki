@@ -133,3 +133,4 @@ Create comparable files for the STAR alignments by merging individual bam files 
 	wc -l hcc1395_tumor_*.fastq
 	gzip *.fastq
 	
+Test
