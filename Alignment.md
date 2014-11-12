@@ -117,12 +117,12 @@ Create comparable files for the STAR alignments by merging individual bam files 
 ##PRACTICAL EXERCISE
 
 Perform some alignments on an additional pair of read data sets.
-* Hint: Do this in a separate working directory called ‘temp’
+* Hint: Do this in a separate working directory called ‘practice’
 * In this exercise you will download an archive of publicly available read data in FASTQ format and unpack it
 ```
 cd $RNA_HOME
-mkdir temp
-cd $RNA_HOME/temp
+mkdir practice
+cd $RNA_HOME/practice
 wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395_1tenth_percent/alignment_practical.tar
 tar -xvf alignment_practical.tar
 ```
