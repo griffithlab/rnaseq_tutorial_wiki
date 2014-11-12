@@ -16,16 +16,16 @@ The test data has been pre-filtered for reads that appear to map to chromosome 2
 	
 Make a copy of the test data
 
-     wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
+	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
 	
 Unpack the test data.  You should see 6 sets of paired end fastq files
 
-       tar -xvf HBR_UHR_ERCC_ds_5pc.tar
+	tar -xvf HBR_UHR_ERCC_ds_5pc.tar
 	
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
 
 	zcat HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
-        zcat HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz | head -n 8
+	zcat HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz | head -n 8
 	
 Identify the following components of each read: read name, read sequence, and quality string
 	
