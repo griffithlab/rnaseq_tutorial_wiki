@@ -5,8 +5,10 @@ Refer to TopHat manual and tutorial for a more detailed explanation:
 http://tophat.cbcb.umd.edu/manual.html
 http://tophat.cbcb.umd.edu/tutorial.html
 	
-TopHat basic usage
+TopHat basic usage:
+```
 tophat [options] <bowtie_index> <lane1_reads1[,lane2_reads1,...]> <lane1_reads2[,lane2_reads2,...]> 
+```
 	
 Extra options specified below:
 
