@@ -28,7 +28,9 @@ ssh -i CSHLRNA.pem ubuntu@cshl##.dyndns.org
 
 * To copy files from a node, use scp in a similar fashion (in this case to copy a file called nice_alignments.bam):
 
- scp -i CSHLRNA.pem ubuntu@cshl##.dyndns.org:workspace/nice_alignments.bam .
+```
+scp -i CSHLRNA.pem ubuntu@cshl##.dyndns.org:workspace/nice_alignments.bam .
+```
 
 * Everything created in your workspace on the cloud is also available by a web server on your cloud instance.  Simply go to the following in your browser:
 
@@ -38,5 +40,5 @@ http://cshl##.dyndns.org/
 
 When you log in, you'll notice that you have two directories: '''bin''' and '''workspace'''.
 
-* The <font color="red">'''bin'''</font> directory contains the tools that you'll need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
-* The <font color="red">'''workspace'''</font> directory is where we will keep our temporary files and analysis results. 
+* The "bin" directory contains the tools that you'll need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
+* The "workspace" directory is where we will keep our temporary files and analysis results. 
