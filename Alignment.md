@@ -9,16 +9,17 @@ TopHat basic usage
 tophat [options] <bowtie_index> <lane1_reads1[,lane2_reads1,...]> <lane1_reads2[,lane2_reads2,...]> 
 	
 Extra options specified below:
-'-p 8' tells TopHat to use eight CPUs for bowtie alignments
-'-r 150' tells TopHat the expected inner distance between the reads of a pair. [fragment size - (2*read length)].  300 - (2*80) = 140 
-'-o' tells TopHat to write the output to a particular directory (one per sample)
-'--rg-id' specifies a read group ID
-'--rg-sample' specified a read group sample ID. This together with rg-id will allow you to determine which reads came from which library in the merged bam later on
-'-G <known transcripts file>' supplies a list of known transcript models.  These will be used to help TopHat measure known exon-exon connections (novel connections will still be predicted)
-Note that the '-G' option for TopHat has a different meaning than the '-G' option of Cufflinks that we will use in step 9 later
-'--transcriptome-index'  TopHat will align to both the transcriptome and genome and figure out the 'best' alignments for you.  
-In order to perform alignments to the transcriptome, an index must be created as we did for the genome.  
-This parameter tells TopHat where to store it and allows it to be reused in multiple TopHat runs. 
+
+* '-p 8' tells TopHat to use eight CPUs for bowtie alignments
+* '-r 150' tells TopHat the expected inner distance between the reads of a pair. [fragment size - (2*read length)].  300 - (2*80) = 140 
+* '-o' tells TopHat to write the output to a particular directory (one per sample)
+* '--rg-id' specifies a read group ID
+* '--rg-sample' specified a read group sample ID. This together with rg-id will allow you to determine which reads came from which library in the merged bam later on
+* '-G <known transcripts file>' supplies a list of known transcript models.  These will be used to help TopHat measure known exon-exon connections (novel connections will still be predicted)
+ * Note that the '-G' option for TopHat has a different meaning than the '-G' option of Cufflinks that we will use in step 9 later
+* '--transcriptome-index'  TopHat will align to both the transcriptome and genome and figure out the 'best' alignments for you.  
+ * In order to perform alignments to the transcriptome, an index must be created as we did for the genome.  
+ * This parameter tells TopHat where to store it and allows it to be reused in multiple TopHat runs. 
 
 ##TopHat alignment
 	
@@ -47,9 +48,7 @@ To combine multiple lanes, you would provide all the read1 files as a comma sepa
 You can also use samtools merge to combine bam files after alignment. This is the approach we will take.
 	
 ##OPTIONAL STAR alignment
-perform alignments with STAR
-STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis
-Some further optional parameter might be needed though (see STAR manual: 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
+Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see STAR manual: 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
 	
 	cd $RNA_HOME/
 	mkdir -p alignments/star
