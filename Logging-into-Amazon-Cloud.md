@@ -38,7 +38,7 @@ http://cshl##.dyndns.org/
 
 ##File system layout
 
-When you log in, you'll notice that you have two directories: '''bin''' and '''workspace'''.
+When you log in, you'll notice that you have two directories: "bin" and "workspace".
 
 * The "bin" directory contains the tools that you'll need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
 * The "workspace" directory is where we will keep our temporary files and analysis results. 
