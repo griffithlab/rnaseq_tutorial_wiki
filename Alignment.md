@@ -86,17 +86,17 @@ Now sort the bam files (also required for cufflinks)
 Make one glorious BAM combining all Tumor data and another for all Normal data
 Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information
 
-Normal
+HBR
 
 	cd $RNA_HOME/alignments/tophat
-	mkdir Normal_ALL
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/MergeSamFiles.jar OUTPUT=Normal_ALL/accepted_hits.bam INPUT=Normal_cDNA1_lib2/accepted_hits.bam INPUT=Normal_cDNA2_lib2/accepted_hits.bam
+	mkdir HBR_ERCC-Mix2_ALL
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/accepted_hits.bam INPUT=HBR_Rep1_ERCC-Mix2/accepted_hits.bam INPUT=HBR_Rep2_ERCC-Mix2/accepted_hits.bam INPUT=HBR_Rep3_ERCC-Mix2/accepted_hits.bam
 	
-Tumor
+UHR
 
-	mkdir Tumor_ALL
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/MergeSamFiles.jar OUTPUT=Tumor_ALL/accepted_hits.bam INPUT=Tumor_cDNA1_lib2/accepted_hits.bam INPUT=Tumor_cDNA2_lib2/accepted_hits.bam
-	
+	mkdir UHR_ERCC-Mix1_ALL
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/accepted_hits.bam INPUT=UHR_Rep1_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep2_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+
 Count the alignment (BAM) files to make sure all were created successfully (you should have 6 total)
 
 	ls -l */accepted_hits.bam | wc -l
