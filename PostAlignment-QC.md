@@ -1,7 +1,7 @@
 #POST-ALIGNMENT QC
 Use samtools, samstat, and FastQC to evaluate the alignments
 Use 'samtools view' to see the format of a SAM/BAM alignment file
-	cd $RNA_HOME/alignments/tophat/Normal_ALL
+	cd $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL
 	samtools view -H accepted_hits.bam
 	samtools view accepted_hits.bam | head
 	
@@ -22,18 +22,18 @@ How many reads meet this criteria? Why?
 Use 'samtools flagstat' to get a basic summary of an alignment
 What percent of reads are mapped? Is this realistic? Why?
 	cd $RNA_HOME/alignments/tophat/
-	samtools flagstat Normal_cDNA1_lib2/accepted_hits.bam
-	samtools flagstat Normal_cDNA2_lib2/accepted_hits.bam
+	samtools flagstat UHR_Rep1_ERCC-Mix1/accepted_hits.bam
+	samtools flagstat UHR_Rep1_ERCC-Mix1//accepted_hits.bam
 	
-Run samstat on Tumor/Normal BAMs
+Run samstat on UHR/HBR BAMs
 	cd $RNA_HOME/alignments/tophat/
-	samstat Normal_ALL/accepted_hits.bam
-	samstat Tumor_ALL/accepted_hits.bam
+	samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
+	samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
 View the samstat summary file in a web browser
 Note, you must replace cbw** with your own amazon instance number (e.g., "cbw01"))
- http://cbw##.ssh01.com/rnaseq/alignments/tophat/Normal_ALL/accepted_hits.bam.html
- http://cbw##.ssh01.com/rnaseq/alignments/tophat/Tumor_ALL/accepted_hits.bam.html
+ http://cbw##.ssh01.com/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html
+ http://cbw##.ssh01.com/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html
 	
 Details of the SAM/BAM format can be found here
  http://samtools.sourceforge.net/SAM1.pdf
