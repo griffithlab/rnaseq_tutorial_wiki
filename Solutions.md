@@ -17,3 +17,17 @@ make
 ```
 
 ##Practical Exercise 2 - Alignment
+
+```
+cd $RNA_HOME/practice/
+export RNA_DATA_DIR=$RNA_HOME/practice/
+echo $RNA_DATA_DIR
+
+mkdir -p alignments/tophat/trans_idx
+cd alignments/tophat
+export TRANS_IDX_DIR=$RNA_HOME/alignments/tophat/trans_idx/
+echo $TRANS_IDX_DIR
+
+tophat2 -p 8 -r 60 --rg-id=HBR_Rep1 --rg-sample=HBR_Rep1_ERCC-Mix2 -o HBR_Rep1_ERCC-Mix2 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
+
+```
