@@ -1,19 +1,16 @@
 #Reference Genome
-Obtain a reference genome from iGenomes.  In this example analysis we will use the human hg19/NCBI build 37 version of the genome  
-In this tutorial we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
+Obtain a reference genome from iGenomes. In this example analysis we will use the human hg19/NCBI build 37 version of the genome. Furthermore, we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
 
 Create the necessary working directory
 
 	cd $RNA_HOME
-        mkdir refs
-        mkdir refs/hg19
-        mkdir refs/hg19/fasta
+	mkdir refs
+	mkdir refs/hg19	
+	mkdir refs/hg19/fasta
 	mkdir refs/hg19/fasta/chr22_ERCC92/
 	cd refs/hg19/fasta/chr22_ERCC92/
 	
-Make a copy of chr22 fasta from the CourseData directory to your working directory
-The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html
-You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar.
+Make a copy of chr22 fasta in your working directory. The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html. You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar.
 
 This has been done for you and that data placed on an ftp server. Download it now.
 
