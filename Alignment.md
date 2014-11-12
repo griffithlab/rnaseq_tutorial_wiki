@@ -54,13 +54,13 @@ Some further optional parameter might be needed though (see STAR manual: 8.2.3: 
 	cd $RNA_HOME/
 	mkdir -p alignments/star
 	cd alignments/star
-	mkdir Normal_cDNA1_lib2 Normal_cDNA2_lib2 Tumor_cDNA1_lib2 Tumor_cDNA2_lib2
+	mkdir HBR_Rep1 HBR_Rep2 HBR_Rep3 UHR_Rep1 UHR_Rep2 UHR_Rep3
 	
-	STAR --genomeDir $RNA_HOME/refs/hg19/star/22 --readFilesIn $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-1-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-1-lib2_ds_10pc_2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix Normal_cDNA1_lib2/ --outSAMstrandField intronMotif
-	STAR --genomeDir $RNA_HOME/refs/hg19/star/22 --readFilesIn $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-2-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Normal-cDNA-2-lib2_ds_10pc_2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix Normal_cDNA2_lib2/ --outSAMstrandField intronMotif
-	STAR --genomeDir $RNA_HOME/refs/hg19/star/22 --readFilesIn $RNA_DATA_DIR/H_KH-540077-Tumor-cDNA-1-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Tumor-cDNA-1-lib2_ds_10pc_2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix Tumor_cDNA1_lib2/ --outSAMstrandField intronMotif
-	STAR --genomeDir $RNA_HOME/refs/hg19/star/22 --readFilesIn $RNA_DATA_DIR/H_KH-540077-Tumor-cDNA-2-lib2_ds_10pc_1.fastq.gz $RNA_DATA_DIR/H_KH-540077-Tumor-cDNA-2-lib2_ds_10pc_2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix Tumor_cDNA2_lib2/ --outSAMstrandField intronMotif
-	
+	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep1_ERCC-Mix2/ --outSAMstrandField intronMotif
+	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep2_ERCC-Mix2/ --outSAMstrandField intronMotif
+	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep3_ERCC-Mix2/ --outSAMstrandField intronMotif
+
+
 Convert to bam files (required for cufflinks)
 
 	samtools view -b -S Normal_cDNA1_lib2/Aligned.out.sam > Normal_cDNA1_lib2/Aligned.out.bam
