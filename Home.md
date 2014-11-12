@@ -28,3 +28,6 @@ Welcome to the RNA-seq Tutorial!
    3. [Transcript Assembly Merge](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Merge)
    4. [Differential Splicing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Differential-Splicing)
    5. [Transcript Assembly Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Visualization)
+6. Appendix
+   1. [AWS Setup](https://github.com/griffithlab/rnaseq_tutorial/wiki/AWS-Setup)
+   2. [Assignment Solutions][https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions]
