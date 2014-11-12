@@ -75,10 +75,12 @@ Convert to bam files (required for cufflinks)
 	
 Now sort the bam files (also required for cufflinks)
 
-	samtools sort Normal_cDNA1_lib2/Aligned.out.bam Normal_cDNA1_lib2/Aligned.out.sorted
-	samtools sort Normal_cDNA2_lib2/Aligned.out.bam Normal_cDNA2_lib2/Aligned.out.sorted
-	samtools sort Tumor_cDNA1_lib2/Aligned.out.bam Tumor_cDNA1_lib2/Aligned.out.sorted
-	samtools sort Tumor_cDNA2_lib2/Aligned.out.bam Tumor_cDNA2_lib2/Aligned.out.sorted
+	samtools sort HBR_Rep1/Aligned.out.bam HBR_Rep1/Aligned.out.sorted
+	samtools sort HBR_Rep2/Aligned.out.bam HBR_Rep2/Aligned.out.sorted
+	samtools sort HBR_Rep3/Aligned.out.bam HBR_Rep3/Aligned.out.sorted
+	samtools sort UHR_Rep1/Aligned.out.bam UHR_Rep1/Aligned.out.sorted
+	samtools sort UHR_Rep2/Aligned.out.bam UHR_Rep2/Aligned.out.sorted
+	samtools sort UHR_Rep3/Aligned.out.bam UHR_Rep3/Aligned.out.sorted
 
 ##Merge TopHat bam files	
 Make one glorious BAM combining all Tumor data and another for all Normal data
