@@ -2,7 +2,7 @@
 
 * This will ONLY occur once we are in the classroom as it costs to have these servers running. Instructions will be provided in class.
 * We have set up ~30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. 
- * If you plan on using Linux or Mac OS X, please download this [[CBWRNA.pem|CBWRNA.pem]]. 
+ * You will be provided with a key file called: "CBWRNA.pem". 
 
 * We have set up DNS shortcuts to the Amazon nodes so that we don't have to remember long hostnames like ec2-50-19-168-121.compute-1.amazonaws.com. Instead, we'll use the following hostnames: cshl#.dyndns.org where # is your assigned student number (01 - 30).
 
