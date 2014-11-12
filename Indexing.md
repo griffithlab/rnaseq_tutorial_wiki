@@ -20,9 +20,9 @@ mv $RNA_HOME/refs/hg19/fasta/hg19.fa $RNA_HOME/refs/hg19/bwt/
 ##OPTIONAL
 Create genome files for use with STAR
 
-       cd $RNA_HOME/refs/hg19/
-       mkdir -p star/chr22_ERCC92
-       STAR --runMode genomeGenerate --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --genomeFastaFiles $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa --runThreadN 8 --sjdbGTFfile $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --sjdbOverhang 100
+	cd $RNA_HOME/refs/hg19/
+	mkdir -p star/chr22_ERCC92
+	STAR --runMode genomeGenerate --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --genomeFastaFiles $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa --runThreadN 8 --sjdbGTFfile $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --sjdbOverhang 100
 
 
 	
