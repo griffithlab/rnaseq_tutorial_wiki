@@ -184,6 +184,8 @@ Hint - there is a README file that will give you hints on how to install
 Hint - If your install has worked you should be able to run bedtools as follows:
 
 	$RNA_HOME/tools/bedtools-2.17.0/bin/bedtools
+
+When you are ready you can check our approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-1---software-installation)
 	
 ##Add locally installed tools to your PATH
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
