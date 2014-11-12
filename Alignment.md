@@ -60,6 +60,9 @@ Some further optional parameter might be needed though (see STAR manual: 8.2.3: 
 	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep2_ERCC-Mix2/ --outSAMstrandField intronMotif
 	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep3_ERCC-Mix2/ --outSAMstrandField intronMotif
 
+	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix UHR_Rep1_ERCC-Mix1/ --outSAMstrandField intronMotif
+	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix UHR_Rep2_ERCC-Mix1/ --outSAMstrandField intronMotif
+	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix UHR_Rep3_ERCC-Mix1/ --outSAMstrandField intronMotif
 
 Convert to bam files (required for cufflinks)
 
