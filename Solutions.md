@@ -5,7 +5,7 @@ To install bedtools:
 * Google "bedtools" and find 
  * software page: https://github.com/arq5x/bedtools2
  * documentation page: http://bedtools.readthedocs.org/en/latest/
- * Note: if you find the old bedtools page (https://code.google.com/p/bedtools/) it will redirect you to above
+ * Note: if you find the old bedtools page (https://code.google.com/p/bedtools/) it will point you to above
 * Go to Downloads, click on latest version (BEDTools.v2.17.0.tar.gz), right-click and save url
 * Go to tools directory and download the archive, then unpack
 ```
