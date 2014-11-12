@@ -174,7 +174,7 @@ make
 ./src/samstat
 ```
 
-##Practical Exercise
+##Practical Exercise 1
 Try to install bedtools on your own  
 Make sure you install it in your tools folder  
 
