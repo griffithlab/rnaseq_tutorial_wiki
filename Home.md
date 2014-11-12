@@ -30,4 +30,4 @@ Welcome to the RNA-seq Tutorial!
    5. [Transcript Assembly Visualization](https://github.com/griffithlab/rnaseq_tutorial/wiki/Transcript-Assembly-Visualization)
 6. Appendix
    1. [AWS Setup](https://github.com/griffithlab/rnaseq_tutorial/wiki/AWS-Setup)
-   2. [Assignment Solutions][https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions]
+   2. [Assignment Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions)
