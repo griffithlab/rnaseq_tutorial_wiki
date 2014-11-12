@@ -8,7 +8,7 @@
 
 * On the cloud, we're going to use the default username: '''ubuntu'''
 
-=== Logging in with ssh (Mac/Linux) ===
+##Logging in with ssh (Mac/Linux)
 
 <font color="red">'''Logging in'''</font>
 
@@ -34,13 +34,9 @@ chmod 600 CSHLRNA.pem
 
  <nowiki>http://cshl##.dyndns.org/</nowiki>
 
-## File system layout
+##File system layout
 
 When you log in, you'll notice that you have two directories: '''bin''' and '''workspace'''.
 
 * The <font color="red">'''bin'''</font> directory contains the tools that you'll need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
-
 * The <font color="red">'''workspace'''</font> directory is where we will keep our temporary files and analysis results. 
-
-<br>
-<hr>
