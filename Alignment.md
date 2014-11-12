@@ -124,11 +124,11 @@ Then you will align the reads using the skills you learned above.  Try using Top
      cd $RNA_HOME/temp
      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395_1tenth_percent/gerald_C2DBEACXX_3.bam
      mv gerald_C2DBEACXX_3.bam hcc1395_normal.bam
-     java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/SamToFastq.jar INPUT=hcc1395_normal.bam FASTQ=hcc1395_normal_1.fastq SECOND_END_FASTQ=hcc1395_normal_2.fastq
+     java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar SamToFastq INPUT=hcc1395_normal.bam FASTQ=hcc1395_normal_1.fastq SECOND_END_FASTQ=hcc1395_normal_2.fastq
      wc -l hcc1395_normal_*.fastq
      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395_1tenth_percent/gerald_C1TD1ACXX_8_ACAGTG.bam
      mv gerald_C1TD1ACXX_8_ACAGTG.bam hcc1395_tumor.bam
-     java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.114/SamToFastq.jar INPUT=hcc1395_tumor.bam FASTQ=hcc1395_tumor_1.fastq SECOND_END_FASTQ=hcc1395_tumor_2.fastq
+     java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar SamToFastq INPUT=hcc1395_tumor.bam FASTQ=hcc1395_tumor_1.fastq SECOND_END_FASTQ=hcc1395_tumor_2.fastq
      wc -l hcc1395_tumor_*.fastq
      gzip *.fastq
 
