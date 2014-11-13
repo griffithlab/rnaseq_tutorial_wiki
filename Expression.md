@@ -31,16 +31,21 @@ Extra options specified below:
 	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 	
-##OPTIONAL ALTERNATIVE
+---
+###OPTIONAL ALTERNATIVE
 Run cufflinks on STAR alignments instead of TopHat alignments:
 
 	cd $RNA_HOME/
 	mkdir -p expression/star_cufflinks/ref_only/
 	cd expression/star_cufflinks/ref_only/
-	cufflinks -p 8 -o Normal_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/Normal_cDNA1_lib2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o Normal_cDNA2_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/Normal_cDNA2_lib2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o Tumor_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/Tumor_cDNA1_lib2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o Tumor_cDNA2_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/Tumor_cDNA2_lib2/Aligned.out.sorted.bam
+	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep1_ERCC-Mix2/Aligned.out.sorted.bam
+	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep2_ERCC-Mix2/Aligned.out.sorted.bam
+	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep3_ERCC-Mix2/Aligned.out.sorted.bam
+
+	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep1_ERCC-Mix1/Aligned.out.sorted.bam
+	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep2_ERCC-Mix1/Aligned.out.sorted.bam
+	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep3_ERCC-Mix1/Aligned.out.sorted.bam
+---
 	
 What does the raw output from Cufflinks look like?
 	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/Tumor_cDNA1_lib2/
