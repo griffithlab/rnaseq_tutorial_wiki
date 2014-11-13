@@ -32,9 +32,9 @@ Extra options specified below:
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 	
 ##OPTIONAL ALTERNATIVE
-Run cufflinks on STAR alignments instead of TopHat alignments
+Run cufflinks on STAR alignments instead of TopHat alignments:
 
-  cd $RNA_HOME/
+	cd $RNA_HOME/
 	mkdir -p expression/star_cufflinks/ref_only/
 	cd expression/star_cufflinks/ref_only/
 	cufflinks -p 8 -o Normal_cDNA1_lib2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/Normal_cDNA1_lib2/Aligned.out.sorted.bam
