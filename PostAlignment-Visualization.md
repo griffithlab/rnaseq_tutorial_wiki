@@ -90,13 +90,13 @@ Create the bed file
 	
 Run bam-readcount on this list for the tumor and normal merged bam files
 
-    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Normal_ALL/accepted_hits.bam 2>/dev/null
-    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Tumor_ALL/accepted_hits.bam 2>/dev/null
+    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null
+    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null
 	
 Now, run again, but ignore stderr and redirect stdout to file:
 
-     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Normal_ALL/accepted_hits.bam 2>/dev/null 1>normal_bam-readcounts.txt
-     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Tumor_ALL/accepted_hits.bam 2>/dev/null 1>tumor_bam-readcounts.txt
+     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null 1>HBR_bam-readcounts.txt
+     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null 1>UHR_bam-readcounts.txt
 	
 From this output you could parse the read counts for each base
 
