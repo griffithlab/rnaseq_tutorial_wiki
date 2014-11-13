@@ -42,7 +42,7 @@ Now load the STAR alignments. How do the STAR and TopHat alignments compare?
 * http://cbw##.ssh01.com/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam (Normal STAR)
 * http://cbw##.ssh01.com/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam (Tumor STAR)
 ---
-	
+
 Try to find a variant position in the RNAseq data:  
 HINT: DDX17 is a highly expressed gene with several variants in its 3' UTR.  
 Other highly expressed genes you might explore are: NUP50, CYB5R3, and EIF3L (all have at least one transcribed variant).  
