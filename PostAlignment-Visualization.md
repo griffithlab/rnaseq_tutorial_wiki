@@ -14,8 +14,9 @@ You could copy and paste these commands to run them, or repeat the find command 
 Now run the index commands
 
     find $RNA_ALIGN_DIR*/accepted_hits.bam -exec samtools index {} \;
-	
-##OPTIONAL
+
+---
+###OPTIONAL ALTERNATIVE
 Create comparable files for the STAR alignments
 
        cd $RNA_HOME
@@ -23,21 +24,17 @@ Create comparable files for the STAR alignments
        echo $STAR_ALIGN_DIR
        cd $STAR_ALIGN_DIR
        find $STAR_ALIGN_DIR*/Aligned.out.sorted.bam -exec samtools index {} \;
-	
-Start IGV on your laptop
-Load the Normal_ALL & Tumor_ALL, BAM files (accepted_hits.bam) in igv
-You can load the necessary files in IGV directly from your web accessible amazon workspace (see below)
-'File' -> 'Load from URL'
-You may wish to customize the track names as you load them in to keep them straight
-Do this by right-clicking on the alignment track and choosing 'Rename Track'
-Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01"))
-http://cbw##.ssh01.com/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam (Normal Tophat)
-http://cbw##.ssh01.com/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam (Tumor Tophat)
+---
 
-Go to an example gene locus on chr22:
- e.g. EIF3L, NDUFA6, RBX1 have nice coverage
- e.g. MMP11 and TST are differentially expressed. Are they up-regulated or down-regulated in the tumor?
- Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from
+##Visualize alignments
+Start IGV on your laptop. Load the Normal_ALL & Tumor_ALL, BAM files (accepted_hits.bam) in igv. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
+* http://cbw##.ssh01.com/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam (UHR Tophat)
+* http://cbw##.ssh01.com/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam (HBR Tophat)
+
+Go to an example gene locus on chr22:  
+e.g. EIF3L, NDUFA6, RBX1 have nice coverage  
+e.g. MMP11 and TST are differentially expressed. Are they up-regulated or down-regulated in the tumor?  
+Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from  
 	
 ##OPTIONAL
 Now load the STAR alignments
