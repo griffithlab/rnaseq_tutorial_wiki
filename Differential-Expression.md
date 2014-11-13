@@ -22,13 +22,15 @@ Merge all 6 cufflinks results so that they will have the same set of transcripts
 	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/
 	ls -1 *Rep*ERCC*/transcripts.gtf > assembly_GTF_list.txt
 	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
-	
-##OPTIONAL ALTERNATIVE
-perform the merge step for STAR-alignment-based cufflinks output
+
+---	
+###OPTIONAL ALTERNATIVE
+Perform the merge step for STAR-alignment-based cufflinks output:
+
 	cd $RNA_HOME/expression/star_cufflinks/ref_only/
-	ls -1 *cDNA*lib*/transcripts.gtf > assembly_GTF_list.txt
-	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22.gtf -s $RNA_HOME/refs/hg19/bwt/22/ assembly_GTF_list.txt
-	
+	ls -1 *Rep*ERCC*/transcripts.gtf > assembly_GTF_list.txt
+	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
+---	
 	
  Cuffdiff basic usage
  cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... sampleN_hits.sam]
