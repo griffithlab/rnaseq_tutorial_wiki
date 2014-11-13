@@ -1,6 +1,8 @@
 #POST-ALIGNMENT QC
-Use samtools, samstat, and FastQC to evaluate the alignments
-Use 'samtools view' to see the format of a SAM/BAM alignment file
+##Use samtools, samstat, and FastQC to evaluate the alignments
+
+###Use 'samtools view' to see the format of a SAM/BAM alignment file
+
 	cd $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL
 	samtools view -H accepted_hits.bam
 	samtools view accepted_hits.bam | head
