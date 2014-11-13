@@ -87,20 +87,22 @@ First, we need name-sorted bam files (we could use either the tophat or STAR ali
 	samtools sort -n HBR_Rep2_ERCC-Mix2/accepted_hits.bam HBR_Rep2_ERCC-Mix2/accepted_hits_namesorted
 	samtools sort -n HBR_Rep3_ERCC-Mix2/accepted_hits.bam HBR_Rep3_ERCC-Mix2/accepted_hits_namesorted
 	
-Next use samtools to pipe sam-format from these bam files to htseq-count:
+Next use samtools to pipe sam-format from these bam files to htseq-count and calculate gene-level counts:
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_counts
 	cd expression/tophat_counts
 	mkdir UHR_Rep1_ERCC-Mix1 UHR_Rep2_ERCC-Mix1 UHR_Rep3_ERCC-Mix1 HBR_Rep1_ERCC-Mix2 HBR_Rep2_ERCC-Mix2 HBR_Rep3_ERCC-Mix2
-	
-Calculate gene-level counts:
 
-	samtools view -h $RNA_HOME/alignments/tophat/Normal_cDNA1_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Normal_cDNA1_lib2/gene_read_counts_table.tsv 
-	samtools view -h $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Normal_cDNA2_lib2/gene_read_counts_table.tsv 
-	samtools view -h $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Tumor_cDNA1_lib2/gene_read_counts_table.tsv 
-	samtools view -h $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Tumor_cDNA2_lib2/gene_read_counts_table.tsv 
+	samtools view -h $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv
+	samtools view -h $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv
+	samtools view -h $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv
+
+	samtools view -h $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv
+	samtools view -h $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv
+	samtools view -h $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
+
 	
 Merge results files into a single matrix for use in edgeR:
 
-	join <(join Normal_cDNA1_lib2/gene_read_counts_table.tsv Normal_cDNA2_lib2/gene_read_counts_table.tsv) <(join Tumor_cDNA1_lib2/gene_read_counts_table.tsv Tumor_cDNA2_lib2/gene_read_counts_table.tsv) > gene_read_counts_table_all.tsv
+	join <(join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv) <(join HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv) > gene_read_counts_table_all.tsv
