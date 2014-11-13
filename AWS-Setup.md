@@ -82,9 +82,9 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ###Current Public AMIs:
 
-* cshl_seqtec_rnaseq_2014_v2 - ami-e7c08bd7 (US West - Oregon)
-* cshl_seqtec_rnaseq_2014_v2 - ami-3c0e8454 (US East - N. Virginia)
-* cshl_seqtec_rnaseq_2014_v2 - ami-7dd4c238 (US West - N. California)
+* cshl_seqtec_rnaseq_2014_v2 - ami-7ff4bf4f (US West - Oregon)
+* cshl_seqtec_rnaseq_2014_v2 - ??? (US East - N. Virginia)
+* cshl_seqtec_rnaseq_2014_v2 - ??? (US West - N. California)
 
 ###Launch student instances
 1. Go to AWS console.
