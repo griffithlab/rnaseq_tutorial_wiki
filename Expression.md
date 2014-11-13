@@ -105,7 +105,5 @@ Next use samtools to pipe sam-format from these bam files to htseq-count and cal
 	
 Merge results files into a single matrix for use in edgeR:
 
-	join <(join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv) <(join HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv) > gene_read_counts_table_all.tsv
-
-join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv | join - UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv | join - HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
+	join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv | join - UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv | join - HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv > gene_read_counts_table_all.tsv
 
