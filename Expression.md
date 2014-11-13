@@ -17,9 +17,9 @@ cufflinks [options] <hits.sam>
 	
 Extra options specified below:
 
-* '-p 8' tells Cufflinks to use eight CPUs
-* '-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)
-* '-o' tells Cufflinks to write output to a particular directory (one per sample)
+'-p 8' tells Cufflinks to use eight CPUs  
+'-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)  
+'-o' tells Cufflinks to write output to a particular directory (one per sample)  
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_cufflinks/ref_only/
