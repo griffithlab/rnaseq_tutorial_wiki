@@ -1,8 +1,7 @@
 # RNAseq Data
 ## Obtain RNA-seq test data. 
  
-The test data consists of two commercially available RNA samples: Universal Human Reference (UHR) and Human Brain Reference (HBR).  In addition, a spike-in control was used called ERCC ExFold 
-Mix1 and Mix2 have 3 replicates each. 
+The test data consists of two commercially available RNA samples: Universal Human Reference (UHR) and Human Brain Reference (HBR).  In addition, a spike-in control was used called ERCC ExFold. Mix1 and Mix2 have 3 replicates each. 
 
 ADD MORE EXPERIMENTAL DESIGN BACKGROUND
 	
@@ -24,11 +23,11 @@ Unpack the test data.  You should see 6 sets of paired end fastq files
 	
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
 
-	zcat HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
+	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
 	
 Identify the following components of each read: read name, read sequence, and quality string
 	
 How many reads are there in the first library?
 Decompress file on the fly with 'zcat', pipe into 'grep', search for the read name prefix and pipe into 'wc' to do a word count ('-l' gives lines)
 
-	zcat HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "^\@HWI" | wc -l
+	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "^\@HWI" | wc -l
