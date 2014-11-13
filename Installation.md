@@ -111,10 +111,9 @@ For this tutorial we require:
 - [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
 - [ggplot2](http://ggplot2.org/)
 
-launch R (enter "R" at command prompt) and type the following at R prompt
+launch R (enter `R` at linux command prompt) and type the following at R command prompt
 
 ```
-R
 install.packages("gplots")
 install.packages("ggplot2")
 quit()
