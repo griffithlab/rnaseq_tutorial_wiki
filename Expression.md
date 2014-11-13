@@ -16,9 +16,9 @@ cufflinks [options] <hits.sam>
 ```
 	
 Extra options specified below:  
-'-p 8' tells Cufflinks to use eight CPUs  
-'-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)  
-'-o' tells Cufflinks to write output to a particular directory (one per sample)  
+* '-p 8' tells Cufflinks to use eight CPUs
+* '-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)
+* '-o' tells Cufflinks to write output to a particular directory (one per sample)
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_cufflinks/ref_only/
@@ -76,8 +76,7 @@ Extra options specified below:
 * '--idattr' The feature ID used to identity the counts in the output table. The default, suitable for RNA-SEq and Ensembl GTF files, is gene_id.
 * NOTE: Instead of supplying the SAM file to htseq-count, we specify "-" to tell it to accept a stream from stdout
 	
-First, we need name-sorted bam files (we could use either the tophat or STAR alignments)
-We have chosen to use tophat alignments here:
+First, we need name-sorted bam files (we could use either the tophat or STAR alignments). We have chosen to use tophat alignments here:
 
 	cd $RNA_HOME/alignments/tophat
 	samtools sort -n UHR_Rep1_ERCC-Mix1/accepted_hits.bam UHR_Rep1_ERCC-Mix1/accepted_hits_namesorted
