@@ -89,7 +89,7 @@ Download: https://pypi.python.org/packages/source/H/HTSeq/
 	./scripts/htseq-count
 	
 ##[R](http://www.r-project.org/)
-This install takes a while so check if you have R installed already by typing 'which R'
+This install takes a while so check if you have R installed already by typing `which R`
 It is already installed on the Cloud, but for completeness, here is how it was done.
 
 ```
