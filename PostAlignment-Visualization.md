@@ -27,14 +27,16 @@ Create comparable files for the STAR alignments
 ---
 
 ##Visualize alignments
-Start IGV on your laptop. Load the Normal_ALL & Tumor_ALL, BAM files (accepted_hits.bam) in igv. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
+Start IGV on your laptop. Load the UHR_ERCC-Mix1_ALL & HBR_ERCC-Mix2_ALL BAM files (accepted_hits.bam) in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
 * http://cbw##.ssh01.com/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam (UHR Tophat)
 * http://cbw##.ssh01.com/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam (HBR Tophat)
 
-Go to an example gene locus on chr22:  
-e.g. EIF3L, NDUFA6, RBX1 have nice coverage  
-e.g. MMP11 and TST are differentially expressed. Are they up-regulated or down-regulated in the tumor?  
-Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from  
+
+
+Go to an example gene locus on chr22:
+ e.g. EIF3L, NDUFA6, RBX1 have nice coverage
+ e.g. MMP11 and TST are differentially expressed. Are they up-regulated or down-regulated in the tumor?
+ Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from.
 	
 ##OPTIONAL
 Now load the STAR alignments
@@ -87,15 +89,15 @@ Create the bed file
 	
 Run bam-readcount on this list for the tumor and normal merged bam files
 
-    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null
     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null
-	
+    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null
+
 Now, run again, but ignore stderr and redirect stdout to file:
 
-     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null 1>HBR_bam-readcounts.txt
      bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null 1>UHR_bam-readcounts.txt
+     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null 1>HBR_bam-readcounts.txt
 	
 From this output you could parse the read counts for each base
 
-     cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", $data[5]); @Cdata=split(":", $data[6]); @Gdata=split(":", $data[7]); @Tdata=split(":", $data[8]); print "$data[0]\t$data[1]\tA: $Adata[1]\tC: $Cdata[1]\tT: $Tdata[1]\tG: $Gdata[1]\n";'
      cat UHR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", $data[5]); @Cdata=split(":", $data[6]); @Gdata=split(":", $data[7]); @Tdata=split(":", $data[8]); print "$data[0]\t$data[1]\tA: $Adata[1]\tC: $Cdata[1]\tT: $Tdata[1]\tG: $Gdata[1]\n";'
+     cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", $data[5]); @Cdata=split(":", $data[6]); @Gdata=split(":", $data[7]); @Tdata=split(":", $data[8]); print "$data[0]\t$data[1]\tA: $Adata[1]\tC: $Cdata[1]\tT: $Tdata[1]\tG: $Gdata[1]\n";'
