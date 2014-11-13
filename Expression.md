@@ -15,12 +15,12 @@ Cufflinks basic usage:
 cufflinks [options] <hits.sam>
 ```
 	
-Extra options specified below:  
+Extra options specified below:
+
 * '-p 8' tells Cufflinks to use eight CPUs
 * '-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)
 * '-o' tells Cufflinks to write output to a particular directory (one per sample)
 
-	
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_cufflinks/ref_only/
 	cd expression/tophat_cufflinks/ref_only/
@@ -31,7 +31,7 @@ Extra options specified below:
 	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam
 	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
-	
+
 ---
 ###OPTIONAL ALTERNATIVE
 Run cufflinks on STAR alignments instead of TopHat alignments:
