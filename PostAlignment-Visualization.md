@@ -31,27 +31,26 @@ Start IGV on your laptop. Load the UHR_ERCC-Mix1_ALL & HBR_ERCC-Mix2_ALL BAM fil
 * http://cbw##.ssh01.com/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam (UHR Tophat)
 * http://cbw##.ssh01.com/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam (HBR Tophat)
 
-
-
 Go to an example gene locus on chr22:
  e.g. EIF3L, NDUFA6, RBX1 have nice coverage
  e.g. MMP11 and TST are differentially expressed. Are they up-regulated or down-regulated in the tumor?
  Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from.
+
+---
+###OPTIONAL ALTERNATIVE
+Now load the STAR alignments. How do the STAR and TopHat alignments compare?
+* http://cbw##.ssh01.com/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam (Normal STAR)
+* http://cbw##.ssh01.com/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam (Tumor STAR)
+---
 	
-##OPTIONAL
-Now load the STAR alignments
-How do the STAR and TopHat alignments compare?
- http://cbw##.ssh01.com/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam (Normal STAR)
- http://cbw##.ssh01.com/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam (Tumor STAR)
-	
-Try to find a variant position in the RNAseq data
-HINT: DDX17 is a highly expressed gene with several variants in its 3' UTR
-Other highly expressed genes you might explore are: NUP50, CYB5R3, and EIF3L (all have at least one transcribed variant)`
-Are these variants previously known (e.g., present in dbSNP)?
-Homozygous or heterozygous?
-Germline or somatic?
-Do they display allele-specific expression?
-Take note of the genomic position of your variant. We will need this later.
+Try to find a variant position in the RNAseq data:  
+HINT: DDX17 is a highly expressed gene with several variants in its 3' UTR.  
+Other highly expressed genes you might explore are: NUP50, CYB5R3, and EIF3L (all have at least one transcribed variant).  
+Are these variants previously known (e.g., present in dbSNP)?  
+Homozygous or heterozygous?  
+Germline or somatic?  
+Do they display allele-specific expression?  
+Take note of the genomic position of your variant. We will need this later.  
 	
 ##BAM READ COUNTING
 Using one of the variant positions identified above, count the number of supporting reference and variant reads
