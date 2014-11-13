@@ -8,7 +8,7 @@ Cuffmerge basic usage:
  cuffmerge [options]* <assembly_GTF_list.txt>
 ```
 
- <assembly_GTF_list.txt> is a text file "manifest" with a list (one per line) of GTF files that you'd like to merge together into a single GTF file. 
+* <assembly_GTF_list.txt> is a text file "manifest" with a list (one per line) of GTF files that you'd like to merge together into a single GTF file. 
 
 Extra options specified below:
 
