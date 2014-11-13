@@ -13,7 +13,7 @@ To create an index for all chromosomes instead of just chr22 you would do the fo
 ```
 cd $RNA_HOME/refs/hg19/
 mkdir bwt
-bowtie-build fasta/hg19.fa bwt/hg19
+bowtie2-build fasta/hg19.fa bwt/hg19
 mv $RNA_HOME/refs/hg19/fasta/hg19.fa $RNA_HOME/refs/hg19/bwt/
 ```
 
