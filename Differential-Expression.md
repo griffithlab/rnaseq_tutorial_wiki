@@ -1,11 +1,13 @@
 #DIFFERENTIAL EXPRESSION
-Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions.
-Refer to the Cufflinks manual for a more detailed explanation:
-http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
-http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff
+Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions. Refer to the Cufflinks manual for a more detailed explanation:
+* http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
+* http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff
 	
- Cuffmerge basic usage
- cuffmerge [options]* <assembly_GTF_list.txt> 
+Cuffmerge basic usage:
+```
+ cuffmerge [options]* <assembly_GTF_list.txt>
+```
+
  <assembly_GTF_list.txt> is a text file "manifest" with a list (one per line) of GTF files that you'd like to merge together into a single GTF file. 
 Extra options specified below
  '-p 8' tells cuffmerge to use eight CPUs
@@ -13,10 +15,10 @@ Extra options specified below
  '-g' tells cuffmerge where to find reference gene annotations. It will use these annotations to gracefully merge novel isoforms (for de novo runs) and known isoforms and maximize overall assembly quality.
  '-s' tells cuffmerge where to find the reference genome files
 	
-Merge all 4 cufflinks results so that they will have the same set of transcripts for comparison purposes
+Merge all 6 cufflinks results so that they will have the same set of transcripts for comparison purposes
 	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/
-	ls -1 *cDNA*lib*/transcripts.gtf > assembly_GTF_list.txt
-	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22.gtf -s $RNA_HOME/refs/hg19/bwt/22/ assembly_GTF_list.txt
+	ls -1 *Rep*ERCC*/transcripts.gtf > assembly_GTF_list.txt
+	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
 	
 ##OPTIONAL ALTERNATIVE
 perform the merge step for STAR-alignment-based cufflinks output
