@@ -114,8 +114,7 @@ For this tutorial we require:
 launch R (enter "R" at command prompt) and type the following at R prompt
 
 ```
-cd $RNA_HOME/tools/
-./R-3.1.0/bin/R
+R
 install.packages("gplots")
 install.packages("ggplot2")
 quit()
