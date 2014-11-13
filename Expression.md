@@ -48,23 +48,27 @@ Run cufflinks on STAR alignments instead of TopHat alignments:
 ---
 	
 What does the raw output from Cufflinks look like?
+
 	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/Tumor_cDNA1_lib2/
 	ls -l 
 	head isoforms.fpkm_tracking
 	cut -f 1,4,7-13 isoforms.fpkm_tracking | less
 
 Press 'q' to exit the 'less' display
-	
+
+---
 ##OPTIONAL ALTERNATIVE
 Run htseq-count on alignments instead to produce raw counts instead of FPKM values for differential expression analysis
 	
 Refer to the HTSeq documentation for a more detailed explanation:
-http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
+* http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
 	
- htseq-count basic usage:
- htseq-count [options] <sam_file> <gff_file>
+htseq-count basic usage:
+```
+htseq-count [options] <sam_file> <gff_file>
+```
 	
-Extra options specified below
+Extra options specified below:
  '--mode' determines how to deal with reads that overlap more than one feature. We believe the 'intersection-strict' mode is best.
  '--stranded' specifies whether data is stranded or not. 
  '--minaqual' will skip all reads with alignment quality lower than the given minimum value
@@ -74,23 +78,27 @@ Extra options specified below
 	
 First, we need name-sorted bam files (we could use either the tophat or STAR alignments)
 We have chosen to use tophat alignments here:
+
 	cd $RNA_HOME/alignments/tophat
 	samtools sort -n Normal_cDNA1_lib2/accepted_hits.bam Normal_cDNA1_lib2/accepted_hits_namesorted
 	samtools sort -n Normal_cDNA2_lib2/accepted_hits.bam Normal_cDNA2_lib2/accepted_hits_namesorted
 	samtools sort -n Tumor_cDNA1_lib2/accepted_hits.bam Tumor_cDNA1_lib2/accepted_hits_namesorted
 	samtools sort -n Tumor_cDNA2_lib2/accepted_hits.bam Tumor_cDNA2_lib2/accepted_hits_namesorted
 	
-Next use samtools to pipe sam-format from these bam files to htseq-count
+Next use samtools to pipe sam-format from these bam files to htseq-count:
+
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_counts
 	cd expression/tophat_counts
 	mkdir Normal_cDNA1_lib2 Normal_cDNA2_lib2 Tumor_cDNA1_lib2 Tumor_cDNA2_lib2
 	
-Gene-level counts
+Calculate gene-level counts:
+
 	samtools view -h $RNA_HOME/alignments/tophat/Normal_cDNA1_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Normal_cDNA1_lib2/gene_read_counts_table.tsv 
 	samtools view -h $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Normal_cDNA2_lib2/gene_read_counts_table.tsv 
 	samtools view -h $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Tumor_cDNA1_lib2/gene_read_counts_table.tsv 
 	samtools view -h $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits_namesorted.bam | $RNA_HOME/tools/HTSeq-0.6.1p1/scripts/htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22.gtf > Tumor_cDNA2_lib2/gene_read_counts_table.tsv 
 	
-Merge results files into a single matrix for use in edgeR
+Merge results files into a single matrix for use in edgeR:
+
 	join <(join Normal_cDNA1_lib2/gene_read_counts_table.tsv Normal_cDNA2_lib2/gene_read_counts_table.tsv) <(join Tumor_cDNA1_lib2/gene_read_counts_table.tsv Tumor_cDNA2_lib2/gene_read_counts_table.tsv) > gene_read_counts_table_all.tsv
