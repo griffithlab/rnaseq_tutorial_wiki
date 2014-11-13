@@ -68,11 +68,11 @@ Create list of bam files to process
 	
 Create faidx indexed reference sequence file for use with mpileup
 
-       samtools faidx $RNA_HOME/refs/hg19/fasta/22/22.fa
+       samtools faidx $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa
 	
 Run samtools mpileup on a region of interest
 
-    samtools mpileup -b bamfilelist.txt -f $RNA_HOME/refs/hg19/fasta/22/22.fa -r 22:18905970-18905980
+    samtools mpileup -b bamfilelist.txt -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa -r 22:18905970-18905980
 	
 See samtools pileup/mpileup documentation for explanation of output
  http://samtools.sourceforge.net/pileup.shtml
@@ -90,13 +90,13 @@ Create the bed file
 	
 Run bam-readcount on this list for the tumor and normal merged bam files
 
-    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/22/22.fa $RNA_HOME/alignments/tophat/Normal_ALL/accepted_hits.bam 2>/dev/null
-    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/22/22.fa $RNA_HOME/alignments/tophat/Tumor_ALL/accepted_hits.bam 2>/dev/null
+    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Normal_ALL/accepted_hits.bam 2>/dev/null
+    bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Tumor_ALL/accepted_hits.bam 2>/dev/null
 	
 Now, run again, but ignore stderr and redirect stdout to file:
 
-     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/22/22.fa $RNA_HOME/alignments/tophat/Normal_ALL/accepted_hits.bam 2>/dev/null 1>normal_bam-readcounts.txt
-     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/22/22.fa $RNA_HOME/alignments/tophat/Tumor_ALL/accepted_hits.bam 2>/dev/null 1>tumor_bam-readcounts.txt
+     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Normal_ALL/accepted_hits.bam 2>/dev/null 1>normal_bam-readcounts.txt
+     bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/Tumor_ALL/accepted_hits.bam 2>/dev/null 1>tumor_bam-readcounts.txt
 	
 From this output you could parse the read counts for each base
 
