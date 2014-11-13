@@ -69,12 +69,12 @@ htseq-count [options] <sam_file> <gff_file>
 ```
 	
 Extra options specified below:
- '--mode' determines how to deal with reads that overlap more than one feature. We believe the 'intersection-strict' mode is best.
- '--stranded' specifies whether data is stranded or not. 
- '--minaqual' will skip all reads with alignment quality lower than the given minimum value
- '--type' specifies the feature type (3rd column in GFF file) to be used. (default, suitable for RNA-Seq and Ensembl GTF files: exon)
- '--idattr' The feature ID used to identity the counts in the output table. The default, suitable for RNA-SEq and Ensembl GTF files, is gene_id.
- NOTE: Instead of supplying the SAM file to htseq-count, we specify "-" to tell it to accept a stream from stdout
+* '--mode' determines how to deal with reads that overlap more than one feature. We believe the 'intersection-strict' mode is best.
+* '--stranded' specifies whether data is stranded or not. 
+* '--minaqual' will skip all reads with alignment quality lower than the given minimum value
+* '--type' specifies the feature type (3rd column in GFF file) to be used. (default, suitable for RNA-Seq and Ensembl GTF files: exon)
+* '--idattr' The feature ID used to identity the counts in the output table. The default, suitable for RNA-SEq and Ensembl GTF files, is gene_id.
+* NOTE: Instead of supplying the SAM file to htseq-count, we specify "-" to tell it to accept a stream from stdout
 	
 First, we need name-sorted bam files (we could use either the tophat or STAR alignments)
 We have chosen to use tophat alignments here:
