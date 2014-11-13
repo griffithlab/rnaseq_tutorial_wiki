@@ -49,7 +49,7 @@ Run cufflinks on STAR alignments instead of TopHat alignments:
 	
 What does the raw output from Cufflinks look like?
 
-	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/Tumor_cDNA1_lib2/
+	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/UHR_Rep1_ERCC-Mix1/
 	ls -l 
 	head isoforms.fpkm_tracking
 	cut -f 1,4,7-13 isoforms.fpkm_tracking | less
@@ -80,17 +80,19 @@ First, we need name-sorted bam files (we could use either the tophat or STAR ali
 We have chosen to use tophat alignments here:
 
 	cd $RNA_HOME/alignments/tophat
-	samtools sort -n Normal_cDNA1_lib2/accepted_hits.bam Normal_cDNA1_lib2/accepted_hits_namesorted
-	samtools sort -n Normal_cDNA2_lib2/accepted_hits.bam Normal_cDNA2_lib2/accepted_hits_namesorted
-	samtools sort -n Tumor_cDNA1_lib2/accepted_hits.bam Tumor_cDNA1_lib2/accepted_hits_namesorted
-	samtools sort -n Tumor_cDNA2_lib2/accepted_hits.bam Tumor_cDNA2_lib2/accepted_hits_namesorted
+	samtools sort -n UHR_Rep1_ERCC-Mix1/accepted_hits.bam UHR_Rep1_ERCC-Mix1/accepted_hits_namesorted
+	samtools sort -n UHR_Rep2_ERCC-Mix1/accepted_hits.bam UHR_Rep2_ERCC-Mix1/accepted_hits_namesorted
+	samtools sort -n UHR_Rep3_ERCC-Mix1/accepted_hits.bam UHR_Rep3_ERCC-Mix1/accepted_hits_namesorted
+	samtools sort -n HBR_Rep1_ERCC-Mix2/accepted_hits.bam HBR_Rep1_ERCC-Mix2/accepted_hits_namesorted
+	samtools sort -n HBR_Rep2_ERCC-Mix2/accepted_hits.bam HBR_Rep2_ERCC-Mix2/accepted_hits_namesorted
+	samtools sort -n HBR_Rep3_ERCC-Mix2/accepted_hits.bam HBR_Rep3_ERCC-Mix2/accepted_hits_namesorted
 	
 Next use samtools to pipe sam-format from these bam files to htseq-count:
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_counts
 	cd expression/tophat_counts
-	mkdir Normal_cDNA1_lib2 Normal_cDNA2_lib2 Tumor_cDNA1_lib2 Tumor_cDNA2_lib2
+	mkdir UHR_Rep1_ERCC-Mix1 UHR_Rep2_ERCC-Mix1 UHR_Rep3_ERCC-Mix1 HBR_Rep1_ERCC-Mix2 HBR_Rep2_ERCC-Mix2 HBR_Rep3_ERCC-Mix2
 	
 Calculate gene-level counts:
 
