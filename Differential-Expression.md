@@ -75,7 +75,7 @@ How many genes are there on this chromosome?
 
 	grep -v gene_id gene_exp.diff | wc -l
 	
-How many were detected above 0 in Normal or Tumor (take the sum of expression values for both and check for greater than 0)?
+How many were detected above 0 in UHR or HBR (take the sum of expression values for both and check for greater than 0)?
 
 	grep -v gene_id gene_exp.diff | perl -ne '@line=split("\t", $_); $sum=$line[7]+$line[8]; if ($sum > 0){print "$sum\n";}' | wc -l
 	
