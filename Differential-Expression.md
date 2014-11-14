@@ -51,34 +51,42 @@ Create necessary directories:
 Perform UHR vs. HBR comparison, using all replicates, for known (reference only mode) transcripts:
 
 	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam,UHR_Rep2_ERCC-Mix1/accepted_hits.bam,UHR_Rep3_ERCC-Mix1/accepted_hits.bam HBR_Rep1_ERCC-Mix2/accepted_hits.bam,HBR_Rep2_ERCC-Mix2/accepted_hits.bam,HBR_Rep3_ERCC-Mix2/accepted_hits.bam
-	
-##OPTIONAL ALTERNATIVE
-perform the cuffdiff step for STAR-alignment-based cuffmerge output
+
+---	
+###OPTIONAL ALTERNATIVE
+perform the cuffdiff step for STAR-alignment-based cuffmerge output:
+
 	cd $RNA_HOME/
 	mkdir -p de/star_cufflinks/ref_only
 	cd $RNA_HOME/alignments/star/
 	cuffdiff -p 8 -L Tumor,Normal -o $RNA_HOME/de/star_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf Tumor_cDNA1_lib2/Aligned.out.sorted.bam,Tumor_cDNA2_lib2/Aligned.out.sorted.bam Normal_cDNA1_lib2/Aligned.out.sorted.bam,Normal_cDNA2_lib2/Aligned.out.sorted.bam
 	
 What does the raw output from Cuffdiff look like?
+
 	cd $RNA_HOME/de/tophat_cufflinks/ref_only
 	ls -l
 	head isoform_exp.diff
 	grep -P "gene_id|OK" isoform_exp.diff | cut -f 2-6,8-10,12 | sort -k 9,9 | less -S
+
 Press 'q' to exit the 'less' display
 	
 How many genes are there on this chromosome?
+
 	grep -v gene_id gene_exp.diff | wc -l
 	
 How many were detected above 0 in Normal or Tumor (take the sum of expression values for both and check for greater than 0)?
+
 	grep -v gene_id gene_exp.diff | perl -ne '@line=split("\t", $_); $sum=$line[7]+$line[8]; if ($sum > 0){print "$sum\n";}' | wc -l
 	
 How many differentially expressed genes were found on this chromosome (p-value < 0.05)?
+
 	grep -v gene_id gene_exp.diff | cut -f 12 | perl -ne 'if ($_ < 0.05){print "$_"}' | wc -l
 	
-Display the top 20 DE genes:
-Look at some of those genes in IGV - do they make sense?
+Display the top 20 DE genes. Look at some of those genes in IGV - do they make sense?
+
 	grep -P "OK|gene_id" gene_exp.diff | sort -k 12n,12n | head -n 20 | cut -f 3,5,6,8,9,10,12,13,14
 	
-Save all genes with P<0.05 to a new file
+Save all genes with P<0.05 to a new file.
+
 	grep -P "OK|gene_id" gene_exp.diff | sort -k 12n,12n | cut -f 3,5,6,8,9,10,12,13,14 | perl -ne '@data=split("\t", $_); if ($data[6]<=0.05){print;}' > DE_genes.txt
         
