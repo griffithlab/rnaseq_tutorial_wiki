@@ -41,6 +41,8 @@ cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... 
  * Example: sample1_rep1.sam,sample1_rep2.sam,...sample1_repM.sam
 * '-p 8' tells cuffdiff to use eight CPUs
 * '-L' tells cuffdiff the labels to use for samples
+
+Create necessary directories:
 	
 	cd $RNA_HOME/
 	mkdir -p de/tophat_cufflinks/ref_only
