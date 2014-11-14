@@ -16,6 +16,7 @@ This has been done for you and that data placed on an ftp server. It contains ch
 
      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/chr22_ERCC92.tar.gz
      tar -zxvf chr22_ERCC92.tar.gz
+     rm chr22_ERCC92.tar.gz
 	
 View the first 10 lines of this file
 
