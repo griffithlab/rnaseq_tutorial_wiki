@@ -60,6 +60,7 @@ perform the cuffdiff step for STAR-alignment-based cuffmerge output:
 	mkdir -p de/star_cufflinks/ref_only
 	cd $RNA_HOME/alignments/star/
 	cuffdiff -p 8 -L Tumor,Normal -o $RNA_HOME/de/star_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf Tumor_cDNA1_lib2/Aligned.out.sorted.bam,Tumor_cDNA2_lib2/Aligned.out.sorted.bam Normal_cDNA1_lib2/Aligned.out.sorted.bam,Normal_cDNA2_lib2/Aligned.out.sorted.bam
+---
 	
 What does the raw output from Cuffdiff look like?
 
