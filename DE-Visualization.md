@@ -1,6 +1,8 @@
 #CUMMERBUND R ANALYSIS
 
-See separate R tutorial file for part 2 of the tutorial: 'Tutorial_Module3_Part2_CummeRbund.R'. The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. Occasionally you may wish to reformat and work with cuffdiff output in R manually. The rest of this file outlines an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
+A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module3_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part2_cummeRbund.R). 
+
+The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. Occasionally you may wish to reformat and work with cuffdiff output in R manually. The rest of this file outlines an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
 
 Navigate to the correct directory and then launch R:
 
