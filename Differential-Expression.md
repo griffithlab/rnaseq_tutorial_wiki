@@ -32,18 +32,23 @@ Perform the merge step for STAR-alignment-based cufflinks output:
 	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
 ---	
 	
- Cuffdiff basic usage
- cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... sampleN_hits.sam]
- Supply replicate SAMs as comma separated lists for each condition: sample1_rep1.sam,sample1_rep2.sam,...sample1_repM.sam
- '-p 8' tells cuffdiff to use eight CPUs
- '-L' tells cuffdiff the labels to use for samples
+Cuffdiff basic usage:
+```
+cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... sampleN_hits.sam]
+```
+
+* Supply replicate SAMs as comma separated lists for each condition:
+ * Example: sample1_rep1.sam,sample1_rep2.sam,...sample1_repM.sam
+* '-p 8' tells cuffdiff to use eight CPUs
+* '-L' tells cuffdiff the labels to use for samples
 	
 	cd $RNA_HOME/
 	mkdir -p de/tophat_cufflinks/ref_only
 	cd $RNA_HOME/alignments/tophat/
 	
-Perform Tumor vs. Normal comparison, using all tumor replicates vs all normal replicates, for known (reference only mode) transcripts
-	cuffdiff -p 8 -L Tumor,Normal -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf Tumor_cDNA1_lib2/accepted_hits.bam,Tumor_cDNA2_lib2/accepted_hits.bam Normal_cDNA1_lib2/accepted_hits.bam,Normal_cDNA2_lib2/accepted_hits.bam
+Perform UHR vs. HBR comparison, using all replicates, for known (reference only mode) transcripts:
+
+	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam,UHR_Rep2_ERCC-Mix1/accepted_hits.bam,UHR_Rep3_ERCC-Mix1/accepted_hits.bam HBR_Rep1_ERCC-Mix2/accepted_hits.bam,HBR_Rep2_ERCC-Mix2/accepted_hits.bam,HBR_Rep3_ERCC-Mix2/accepted_hits.bam
 	
 ##OPTIONAL ALTERNATIVE
 perform the cuffdiff step for STAR-alignment-based cuffmerge output
