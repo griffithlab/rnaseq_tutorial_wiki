@@ -173,16 +173,21 @@ make
 Try to install bedtools on your own  
 Make sure you install it in your tools folder  
 
-	cd $RNA_HOME/tools/
+```
+cd $RNA_HOME/tools/
+```
 
 Now, download, unpack, compile, and test  
 Hint - google "bedtools" to find the source code  
 Hint - there is a README file that will give you hints on how to install  
 Hint - If your install has worked you should be able to run bedtools as follows:
 
-	$RNA_HOME/tools/bedtools2/bin/bedtools
+```
+$RNA_HOME/tools/bedtools2/bin/bedtools
+```
 
 When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-1---software-installation)
+
 ---
 	
 ##Add locally installed tools to your PATH
