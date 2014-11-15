@@ -167,6 +167,7 @@ make
 ./src/samstat
 ```
 
+---
 ##Practical Exercise 1
 Try to install bedtools on your own  
 Make sure you install it in your tools folder  
@@ -181,6 +182,7 @@ Hint - If your install has worked you should be able to run bedtools as follows:
 	$RNA_HOME/tools/bedtools2/bin/bedtools
 
 When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-1---software-installation)
+---
 	
 ##Add locally installed tools to your PATH
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
@@ -192,7 +194,11 @@ To use the locally installed version of each tool without having to specify comp
 You can make these changes permanent by adding the above lines to your .bashrc file
 use a text editor to open your bashrc file. For example:
 
-	vi ~/.bashrc
+```
+vi ~/.bashrc
+```
+
+###Vi instructions
 
 1. Using your cursor, navigate down to the "export PATH" commands at the end of the file.
 2. Delete the line starting with PATH using the vi command "dd".
@@ -201,7 +207,7 @@ use a text editor to open your bashrc file. For example:
 5. Press the ":" key to enter command mode.
 6. Type "wq" to save and quit vi
 
-If you would like to learn how to use vi, try this tutorial/game: [VIM Adventures](http://vim-adventures.com/)
+If you would like to learn more about how to use vi, try this tutorial/game: [VIM Adventures](http://vim-adventures.com/)
 	
 NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
 
