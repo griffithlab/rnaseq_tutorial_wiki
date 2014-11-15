@@ -2,45 +2,49 @@
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module3_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part2_cummeRbund.R). 
 
-The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. Occasionally you may wish to reformat and work with cuffdiff output in R manually. The rest of this file outlines an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
+The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. 
 
 Navigate to the correct directory and then launch R:
 
 	cd $RNA_HOME/de/tophat_cufflinks/ref_only/
 	R
 	
-The output files can be viewed in your browser at the following urls. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
+Then, run the R commands detailed in the R script above. The output pdf files can be viewed in your browser at the following urls. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 
 * http://cshl##.dyndns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
 * http://cshl##.dyndns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
 	
 ##SUPPLEMENTARY R ANALYSIS 
+
+Occasionally you may wish to reformat and work with cuffdiff output in R manually. Therefore we provide an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
+
 ###Expression and differential expression files will be read into R.
+
 The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff
+
 	cd $RNA_HOME/
 	mkdir -p final_results/tophat_cufflinks/ref_only
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
 	
-	
-###See separate R tutorial file for part 3 of the tutorial: 'Tutorial_Module3_Part3_Supplementary_R.R'
+###See the separate R file in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
+
 In this tutorial you will:
-Learn basic R usage and commands (common plots, and data manipulation tasks)
-Examine the expression estimates
-Create an MDS plot to visualize the differences between/among replicates, library prep methods and tumor versus normal
-Examine the differential expression estimates
-Visualize the expression estimates and highlight those genes that appear to be differentially expressed
-Generate a list of the top differentially expressed genes
-How reproducible are the technical replicates?  How well do the different library construction methods correlate? 
+* Learn basic R usage and commands (common plots, and data manipulation tasks)
+* Examine the expression estimates
+* Create an MDS plot to visualize the differences between/among replicates, library prep methods and UHR versus HBR
+* Examine the differential expression estimates
+* Visualize the expression estimates and highlight those genes that appear to be differentially expressed
+* Generate a list of the top differentially expressed genes
+* Ask how reproducible technical replicates are
+ 
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
 	R
 	
-The output file can be viewed in your browser at the following url:
-Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01"))
-http://cbw##.ssh01.com/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
-	
-	
+The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
+* http://cshl##.dyndns.org/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
+		
 ###See separate R tutorial file for part 4 of the tutorial: 'Tutorial_Module3_Part4_edgeR.R'
 In this tutorial you will:
 Make use of the raw counts you generate above using htseq-count
