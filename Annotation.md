@@ -20,18 +20,20 @@ We can use a perl command-line command to find out:
 
 	perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22_ERCC92.gtf | sort | uniq | wc -l
 	
-Using perl -ne '' will execute the code between single quotes, on the .gtf file, line-by-line.
-The $_ variable holds the contents of each line
-The 'if ($_ =~//)' is a pattern-matching command which will look for the pattern "gene_id" followed by a space followed by "ENSG" and one or more word characters (indicated by \w+) surrounded by double quotes.
-The pattern to be matched is enclosed in parentheses. This allows us to print it out from the special variable $1.
-The output of this perl command will be a long list of ENSG Ids. By piping to sort, then uniq, then word count we can count the unique number of genes in the file.
+* Using perl -ne '' will execute the code between single quotes, on the .gtf file, line-by-line.
+* The $_ variable holds the contents of each line.
+* The 'if ($_ =~//)' is a pattern-matching command which will look for the pattern "gene_id" followed by a space followed by "ENSG" and one or more word characters (indicated by \w+) surrounded by double quotes.
+* The pattern to be matched is enclosed in parentheses. This allows us to print it out from the special variable $1.
+* The output of this perl command will be a long list of ENSG Ids. 
+* By piping to sort, then uniq, then word count we can count the unique number of genes in the file.
 
 To learn more, see:
 * http://perldoc.perl.org/perlre.html#Regular-Expressions
 * http://www.perl.com/pub/2004/08/09/commandline.html
 	
 	
-Definitions:
+###Definitions:
+
 - Reference genome - The nucleotide sequence of the chromosomes of a species.  Genes are the functional units of a reference genome and gene annotations describe the structure of transcripts expressed from those gene loci.  
 
 - Gene annotations - Descriptions of gene/transcript models for a genome.  A transcript model consists of the *coordinates* of the exons of a transcript on a reference genome.  Additional information such as the strand the transcript is generated from, gene name, coding portion of the transcript, alternate transcript start sites, and other information may be provided.
@@ -41,6 +43,7 @@ http://genome.ucsc.edu/FAQ/FAQformat#format3
 http://genome.ucsc.edu/FAQ/FAQformat#format4
 	
 The purpose of gene annotations (obtained as a .gtf file):
+
 When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annotations are used for several purposes:
 * During the TopHat alignment step, annotations may be provided as a .gtf file using the '-G' option.  TopHat will align reads against the transcriptome first followed by the reference genome.
 * During the TopHat alignment step, a junctions database will be assembled from the transcripts in your .gtf file.  TopHat will align reads that do not map within an exon against this junctions database to identify spliced read alignments.  If an alignment still can not be found it will attempt to determine if the read corresponds to a novel exon-exon junction.
@@ -48,7 +51,8 @@ When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annot
 * During the Cufflinks step, a .gtf file can be used to 'guide' the assembly of novel transcripts (using the '-g' option).  Instead of assuming the known transcript models are correct, they are used as a guide and the resulting expression estimates will correspond to both known and novel/predicted transcripts.
 * During the Cuffdiff step, a .gtf file is used to determine the transcripts that will be examined for differential expression.  These may be known transcripts that you download from a public source or a .gtf of transcripts predicted by Cufflinks from the read data.
 	
-Obtaining gene annotation files formatted for TopHat/Cufflinks/Cuffdiff.
+###Obtaining gene annotation files formatted for TopHat/Cufflinks/Cuffdiff
+
 There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, UCSC, RefSeq, etc.  Three options and related instructions for obtaining the gene annotation files are provided below.
 	
 1. ILLUMINA IGENOMES.  
@@ -80,24 +84,24 @@ How to get a Gene bed file:
   * Change the output file to 'UCSC_Genes.bed', and hit the 'get output' button.
   * Make sure 'Whole Gene' is selected, hit the 'get BED' button, and save the file.
 	
-How to get an Exon bed file:
-i.) Go back one page in your browser and change the output file to 'UCSC_Exons.bed', the hit the 'get output' button again.
-j.) Select 'Exons plus', enter 0 in the adjacent box, hit the 'get BED' button, and save the file.
+How to get an Exon bed file:  
+i.) Go back one page in your browser and change the output file to 'UCSC_Exons.bed', the hit the 'get output' button again.  
+j.) Select 'Exons plus', enter 0 in the adjacent box, hit the 'get BED' button, and save the file.  
 	
-How to get gene symbols and descriptions for all UCSC genes:
-k.) Again go back one page in your browser and change the 'output format' to 'selected fields from primary and related tables'.
-l.) Change the output file to 'UCSC_Names.txt', and hit the 'get output' button.
-m.) Make sure 'chrom' is selected near the top of the page.
-m.) Under 'Linked Tables' make sure 'kgXref' is selected, and then hit 'Allow Selection From Checked Tables'.  This will link the table and give you access to its fields.
-n.) Under 'hg19.kgXref fields' select: 'kgID', 'geneSymbol', 'description'. 
-o.) Hit the 'get output' button and save the file.
+How to get gene symbols and descriptions for all UCSC genes:  
+k.) Again go back one page in your browser and change the 'output format' to 'selected fields from primary and related tables'.  
+l.) Change the output file to 'UCSC_Names.txt', and hit the 'get output' button.  
+m.) Make sure 'chrom' is selected near the top of the page.  
+m.) Under 'Linked Tables' make sure 'kgXref' is selected, and then hit 'Allow Selection From Checked Tables'.  This will link the table and give you access to its fields.  
+n.) Under 'hg19.kgXref fields' select: 'kgID', 'geneSymbol', 'description'.  
+o.) Hit the 'get output' button and save the file.  
 	
 To get annotations for the whole genome, make sure 'genome' is selected beside 'region'.
 By default, the files downloaded above will be compressed.  To decompress, use 'gunzip filename' in linux.
 	
-Important note on chromosome naming conventions:
+Important note on chromosome naming conventions:  
 In order for your TopHat/Cufflinks analysis to work, the chromosome names in you .gtf file *must match* those in your reference genome (i.e. your reference genome fasta file).  If you get a Cufflinks result where all transcripts have an expression value of 0, you may have overlooked this.  Unfortunately, Ensembl, NCBI, and UCSC can not agree on how to name the chromosomes in many species, so this problem may come up often.  You can avoid this by getting a complete reference genome and gene annotation package from the Illumina iGenomes project mentioned above.
 	
-Important note on reference genome builds:
+Important note on reference genome builds:  
 Your annotations must correspond to the same reference genome build as your reference genome fasta file.  e.g. both correspond to UCSC human build 'hg18', NCBI human build '37', etc..  Even if both your reference genome and annotations are from UCSC or Ensembl they could still correspond to different versions of that genome.  This would cause problems in any RNA-seq pipeline.
 	
