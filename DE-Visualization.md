@@ -1,4 +1,4 @@
-#CUMMERBUND R ANALYSIS
+##CUMMERBUND R ANALYSIS
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module3_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part2_cummeRbund.R). 
 
@@ -26,7 +26,7 @@ Expression and differential expression files will be read into R. The R analysis
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
 	
-See the separate R file in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
+A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
 
 In this tutorial you will:
 
@@ -45,33 +45,40 @@ Navigate to the correct directory and then launch R:
 	
 Then, run the R commands detailed in the R script above. The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 * http://cshl##.dyndns.org/workspace/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
-		
-###See separate R tutorial file for part 4 of the tutorial: 'Tutorial_Module3_Part4_edgeR.R'
+
+##edgeR Analysis		
+A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module3_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part4_edgeR.R)
+
 In this tutorial you will:
-Make use of the raw counts you generate above using htseq-count
-edgeR is a bioconductor package designed specifically for differential expression of count-based RNA-seq data
-This is an alternative to using cufflinks/cuffmerge/cuffdiff to find differentially expressed genes
-Create directory for results
+
+* Make use of the raw counts you generate above using htseq-count
+ * edgeR is a bioconductor package designed specifically for differential expression of count-based RNA-seq data
+ * This is an alternative to using cufflinks/cuffmerge/cuffdiff to find differentially expressed genes
+
+First, create a directory for results:
+
 	cd $RNA_HOME/
 	mkdir -p de/tophat_counts
 	cd de/tophat_counts
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/gene* .
 	
-Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols
+
+Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
+
 	cd $RNA_HOME/refs/hg19/genes
 	perl -ne 'if ($_=~/gene_id\s\"(ENSG\d+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";}' genes_chr22.gtf | sort | uniq > ENSG_ID2Name.txt
 	
 	cd $RNA_HOME/de/tophat_counts
 	R
 	
-###Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff
+Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff:
+
 	cat $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt
 	cat $RNA_HOME/de/tophat_counts/DE_genes.txt
 	
-Pull out the gene symbols and visualize overlap with a venn diagram
-This can be done with simple web tools like:
-http://www.cmbi.ru.nl/cdd/biovenn/
-http://bioinfogp.cnb.csic.es/tools/venny/
+Finally, pull out the gene symbols and visualize overlap with a venn diagram. This can be done with simple web tools like:
+* http://www.cmbi.ru.nl/cdd/biovenn/
+* http://bioinfogp.cnb.csic.es/tools/venny/
 	
 	
 	
