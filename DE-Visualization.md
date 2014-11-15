@@ -38,6 +38,8 @@ In this tutorial you will:
 * Generate a list of the top differentially expressed genes
 * Ask how reproducible technical replicates are.
 
+Navigate to the correct directory and then launch R:
+
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
 	R
 	
