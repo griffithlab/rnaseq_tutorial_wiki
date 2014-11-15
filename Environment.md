@@ -3,7 +3,6 @@ This tutorial assumes use of a Linux computer with an 'x86_64' architecture.  Th
 
 Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'  
 Log into a server and SET THIS BEFORE RUNNING EVERYTHING.    
-You can then PLACE IT IN YOUR .bashrc and then logout and login again to avoid having to worry about it 
 
 Create a working directory and set the 'RNA_HOME' environment variable
 
@@ -13,4 +12,5 @@ Create a working directory and set the 'RNA_HOME' environment variable
 Make sure whatever the working dir is, that it is set and is valid
 
 	echo $RNA_HOME
-        
+
+You can PLACE THE RNA_HOME VARIABLE IN YOUR .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.  
