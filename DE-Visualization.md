@@ -11,8 +11,8 @@ Navigate to the correct directory and then launch R:
 	
 Then, run the R commands detailed in the R script above. The output pdf files can be viewed in your browser at the following urls. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 
-* http://cshl##.dyndns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
-* http://cshl##.dyndns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
+* http://cshl##.dyndns.org/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
+* http://cshl##.dyndns.org/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
 	
 ##SUPPLEMENTARY R ANALYSIS 
 
@@ -44,7 +44,7 @@ Navigate to the correct directory and then launch R:
 	R
 	
 Then, run the R commands detailed in the R script above. The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
-* http://cshl##.dyndns.org/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
+* http://cshl##.dyndns.org/workspace/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 		
 ###See separate R tutorial file for part 4 of the tutorial: 'Tutorial_Module3_Part4_edgeR.R'
 In this tutorial you will:
