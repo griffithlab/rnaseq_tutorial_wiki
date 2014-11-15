@@ -18,7 +18,7 @@ Then, run the R commands detailed in the R script above. The output pdf files ca
 
 Occasionally you may wish to reformat and work with cuffdiff output in R manually. Therefore we provide an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
 
-Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff
+Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Copy the necessary files to a new directory.
 
 	cd $RNA_HOME/
 	mkdir -p final_results/tophat_cufflinks/ref_only
@@ -43,7 +43,7 @@ Navigate to the correct directory and then launch R:
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
 	R
 	
-The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
+Then, run the R commands detailed in the R script above. The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 * http://cshl##.dyndns.org/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 		
 ###See separate R tutorial file for part 4 of the tutorial: 'Tutorial_Module3_Part4_edgeR.R'
