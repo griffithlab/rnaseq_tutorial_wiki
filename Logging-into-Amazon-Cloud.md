@@ -22,7 +22,7 @@ chmod 600 CSHLRNA.pem
 ssh -i CSHLRNA.pem ubuntu@cshl##.dyndns.org
 ```
 
-(where # is your assigned student number. Your student number is the number on the participant list. If your number less than 10, please add 0 in front of it.)
+(where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
 
 ##Copying files to your computer
 
