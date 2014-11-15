@@ -86,16 +86,16 @@ How to get a Gene bed file:
   * Make sure 'Whole Gene' is selected, hit the 'get BED' button, and save the file.
 	
 How to get an Exon bed file:  
-i.) Go back one page in your browser and change the output file to 'UCSC_Exons.bed', the hit the 'get output' button again.  
-j.) Select 'Exons plus', enter 0 in the adjacent box, hit the 'get BED' button, and save the file.  
+  * Go back one page in your browser and change the output file to 'UCSC_Exons.bed', the hit the 'get output' button again.  
+  * Select 'Exons plus', enter 0 in the adjacent box, hit the 'get BED' button, and save the file.  
 	
 How to get gene symbols and descriptions for all UCSC genes:  
-k.) Again go back one page in your browser and change the 'output format' to 'selected fields from primary and related tables'.  
-l.) Change the output file to 'UCSC_Names.txt', and hit the 'get output' button.  
-m.) Make sure 'chrom' is selected near the top of the page.  
-m.) Under 'Linked Tables' make sure 'kgXref' is selected, and then hit 'Allow Selection From Checked Tables'.  This will link the table and give you access to its fields.  
-n.) Under 'hg19.kgXref fields' select: 'kgID', 'geneSymbol', 'description'.  
-o.) Hit the 'get output' button and save the file.  
+  * Again go back one page in your browser and change the 'output format' to 'selected fields from primary and related tables'.  
+  * Change the output file to 'UCSC_Names.txt', and hit the 'get output' button.  
+  * Make sure 'chrom' is selected near the top of the page.  
+  * Under 'Linked Tables' make sure 'kgXref' is selected, and then hit 'Allow Selection From Checked Tables'.  This will link the table and give you access to its fields.  
+  * Under 'hg19.kgXref fields' select: 'kgID', 'geneSymbol', 'description'.  
+  * Hit the 'get output' button and save the file.  
 	
 To get annotations for the whole genome, make sure 'genome' is selected beside 'region'.
 By default, the files downloaded above will be compressed.  To decompress, use 'gunzip filename' in linux.
