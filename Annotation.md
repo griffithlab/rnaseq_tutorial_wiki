@@ -1,8 +1,8 @@
 #ANNOTATION
-Obtain known gene/transcript annotations
-In this tutorial we will use annotations obtained from Illumina's iGenomes for chromosome 22 only
-For time reasons, these have been downloaded for you.
-But you should get familiar with sources of gene annotations for RNA-seq analysis
+###Obtain known gene/transcript annotations
+
+In this tutorial we will use annotations obtained from Illumina's iGenomes for chromosome 22 only. For time reasons, these have been downloaded for you. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
+
 Copy the gene annotation files to the working directory. 
 	
 	cd $RNA_HOME/refs/hg19/
@@ -15,6 +15,7 @@ Copy the gene annotation files to the working directory.
 Press 'q' to exit the 'less' display
 	
 How many unique gene IDs are in the .gtf file?
+
 We can use a perl command-line command to find out:
 
 	perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22_ERCC92.gtf | sort | uniq | wc -l
@@ -23,10 +24,11 @@ Using perl -ne '' will execute the code between single quotes, on the .gtf file,
 The $_ variable holds the contents of each line
 The 'if ($_ =~//)' is a pattern-matching command which will look for the pattern "gene_id" followed by a space followed by "ENSG" and one or more word characters (indicated by \w+) surrounded by double quotes.
 The pattern to be matched is enclosed in parentheses. This allows us to print it out from the special variable $1.
-The output of this perl command will be a long list of ENSG Ids. By piping to sort, then uniq, then word count we can count the unique number of genes in the file
+The output of this perl command will be a long list of ENSG Ids. By piping to sort, then uniq, then word count we can count the unique number of genes in the file.
+
 To learn more, see:
-http://perldoc.perl.org/perlre.html#Regular-Expressions
-http://www.perl.com/pub/2004/08/09/commandline.html
+* http://perldoc.perl.org/perlre.html#Regular-Expressions
+* http://www.perl.com/pub/2004/08/09/commandline.html
 	
 	
 Definitions:
