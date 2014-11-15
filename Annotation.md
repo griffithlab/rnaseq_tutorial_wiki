@@ -10,9 +10,10 @@ Copy the gene annotation files to the working directory.
 	cd genes
 	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
 	gunzip genes_chr22_ERCC92.gtf.gz
-	less -p start_codon -S genes_chr22_ERCC92.gtf
 
-Press 'q' to exit the 'less' display
+Take a look at the contents of the gtf file. Press 'q' to exit the 'less' display.
+
+	less -p start_codon -S genes_chr22_ERCC92.gtf
 	
 How many unique gene IDs are in the .gtf file?
 
@@ -42,7 +43,7 @@ To learn more, see:
 http://genome.ucsc.edu/FAQ/FAQformat#format3
 http://genome.ucsc.edu/FAQ/FAQformat#format4
 	
-The purpose of gene annotations (obtained as a .gtf file):
+###The purpose of gene annotations (gtf file)
 
 When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annotations are used for several purposes:
 * During the TopHat alignment step, annotations may be provided as a .gtf file using the '-G' option.  TopHat will align reads against the transcriptome first followed by the reference genome.
@@ -51,7 +52,7 @@ When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annot
 * During the Cufflinks step, a .gtf file can be used to 'guide' the assembly of novel transcripts (using the '-g' option).  Instead of assuming the known transcript models are correct, they are used as a guide and the resulting expression estimates will correspond to both known and novel/predicted transcripts.
 * During the Cuffdiff step, a .gtf file is used to determine the transcripts that will be examined for differential expression.  These may be known transcripts that you download from a public source or a .gtf of transcripts predicted by Cufflinks from the read data.
 	
-###Obtaining gene annotation files formatted for TopHat/Cufflinks/Cuffdiff
+###Sources for obtaining gene annotation files formatted for TopHat/Cufflinks/Cuffdiff
 
 There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, UCSC, RefSeq, etc.  Three options and related instructions for obtaining the gene annotation files are provided below.
 	
