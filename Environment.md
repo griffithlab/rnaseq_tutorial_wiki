@@ -13,4 +13,4 @@ Make sure whatever the working dir is, that it is set and is valid
 
 	echo $RNA_HOME
 
-You can PLACE THE RNA_HOME VARIABLE IN YOUR .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.  
+You can place the RNA_HOME variable in your .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.  
