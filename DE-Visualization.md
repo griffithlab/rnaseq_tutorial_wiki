@@ -18,9 +18,7 @@ Then, run the R commands detailed in the R script above. The output pdf files ca
 
 Occasionally you may wish to reformat and work with cuffdiff output in R manually. Therefore we provide an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
 
-###Expression and differential expression files will be read into R.
-
-The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff
+Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff
 
 	cd $RNA_HOME/
 	mkdir -p final_results/tophat_cufflinks/ref_only
@@ -28,7 +26,7 @@ The R analysis will make use of the transcript-level expression and differential
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
 	
-###See the separate R file in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
+See the separate R file in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
 
 In this tutorial you will:
 * Learn basic R usage and commands (common plots, and data manipulation tasks)
