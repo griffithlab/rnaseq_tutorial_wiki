@@ -1,7 +1,7 @@
 #INDEXING
-###Create a bowtie index of the genome and write it to a 'bwt' sub-directory
+###Create a bowtie index
 
-Create a bowtie index for chr22 and the ERCC spike-in only:
+Create a bowtie index for chr22 and the ERCC spike-in sequences and write it to a 'bwt' sub-directory:
 
 	cd $RNA_HOME/refs/hg19/
 	mkdir -p bwt/chr22_ERCC92
@@ -19,7 +19,7 @@ mv $RNA_HOME/refs/hg19/fasta/hg19.fa $RNA_HOME/refs/hg19/bwt/
 
 ---
 ###OPTIONAL ALTERNATIVE
-Create genome files for use with STAR
+Create index files for use with STAR
 
 	cd $RNA_HOME/refs/hg19/
 	mkdir -p star/chr22_ERCC92
