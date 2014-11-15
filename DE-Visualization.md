@@ -29,14 +29,15 @@ Expression and differential expression files will be read into R. The R analysis
 See the separate R file in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
 
 In this tutorial you will:
+
 * Learn basic R usage and commands (common plots, and data manipulation tasks)
 * Examine the expression estimates
 * Create an MDS plot to visualize the differences between/among replicates, library prep methods and UHR versus HBR
 * Examine the differential expression estimates
 * Visualize the expression estimates and highlight those genes that appear to be differentially expressed
 * Generate a list of the top differentially expressed genes
-* Ask how reproducible technical replicates are
- 
+* Ask how reproducible technical replicates are.
+
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
 	R
 	
