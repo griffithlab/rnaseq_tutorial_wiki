@@ -6,7 +6,6 @@ To make the Markdown files bash/shell compatible, a script will add a comment or
 
 In text form, all lines starting with a '#' are comments and will not be executed.  Therefore, [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) will be ignored when converted to a bash script.
 
-
-
-
- 
+| [[Previous Section|Authors |                             | [[Next Section|Syntax]] |
+|:--------------------------:|:---------------------------:|:-----------------------:|
+| [[Authors|Authors]]        | [[Table of Contents|Home]]  | [[Syntax|Syntax]]       |
