@@ -37,3 +37,8 @@ Extra options specified below
 	cufflinks -p 8 -o Normal_cDNA2_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits.bam
 	cufflinks -p 8 -o Tumor_cDNA1_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits.bam
 	cufflinks -p 8 -o Tumor_cDNA2_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits.bam
+
+
+| [[Previous Section|DE-Visualization]] | [[This Section|Reference-Guided-Transcript-Assembly]] | [[Next Section|de-novo-Transcript-Assembly]] |
+|:-------------------------------------:|:-----------------------------------------------------:|:--------------------------------------------:|
+| [[DE Visualization|DE-Visualization]] | [[Ref Guided|Reference-Guided-Transcript-Assembly]]   | [[de novo|de-novo-Transcript-Assembly]]      |
