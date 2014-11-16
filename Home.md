@@ -3,12 +3,12 @@ Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all
 #Table of Contents
 1. Introduction
    1. [[Authors|Authors]]
-   2. [Syntax](https://github.com/griffithlab/rnaseq_tutorial/wiki/Syntax)
-   3. [Logging into Amazon Cloud](https://github.com/griffithlab/rnaseq_tutorial/wiki/Logging-into-Amazon-Cloud)
-   4. [Environment](https://github.com/griffithlab/rnaseq_tutorial/wiki/Environment)
-   5. [Resources](https://github.com/griffithlab/rnaseq_tutorial/wiki/Resources)
+   2. [[Syntax]|Syntax]]
+   3. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
+   4. [[Environment|Environment]]
+   5. [[Resources|Resources]]
 2. Module 1
-   1. [Installation](https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation)
+   1. [[Installation|Installation]]
    2. [Reference Genome](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reference-Genome)
    3. [Annotation](https://github.com/griffithlab/rnaseq_tutorial/wiki/Annotation)
    4. [Indexing](https://github.com/griffithlab/rnaseq_tutorial/wiki/Indexing)
