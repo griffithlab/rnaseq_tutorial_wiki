@@ -2,7 +2,7 @@
 
 ##4-iii. CummeRbund R Analysis
 
-A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module3_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part2_cummeRbund.R). 
+A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part2_cummeRbund.R). 
 
 The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. 
 
@@ -28,7 +28,7 @@ Expression and differential expression files will be read into R. The R analysis
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
 	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
 	
-A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module3_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part3_Supplementary_R.R)
+A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part3_Supplementary_R.R)
 
 In this tutorial you will:
 
@@ -46,10 +46,10 @@ Navigate to the correct directory and then launch R:
 	R
 	
 Then, run the R commands detailed in the R script above. The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
-* http://cshl##.dyndns.org/workspace/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
+* http://cshl##.dyndns.org/workspace/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
 
 ##edgeR Analysis		
-A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module3_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part4_edgeR.R)
+A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part4_edgeR.R)
 
 In this tutorial you will:
 
