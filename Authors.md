@@ -10,3 +10,17 @@
 <sup>2</sup> The Department of Genetics, Washington University School of Medicine<br>
 <sup>3</sup> The Department of Medicine, Washington University School of Medicine<br>
 <sup>4</sup> The Siteman Cancer Center, a National Cancer Institute Comprehensive Cancer Center, Barnes Jewish Hospital and Washington University School of Medicine<br>
+
+#### Further acknowledgements
+We are grateful to the following people for past and ongoing contributions to this work:
+- Francis Ouellette (Ontario Institute for Cancer Research)
+- Michelle Brazas (Ontario Institute for Cancer Research)
+- Fouad Yousif (Ontario Institute for Cancer Research) 
+- Zhibin Lu (Ontario Institute for Cancer Research)
+- Rodrigo Goya (British Columbia Cancer Agency)
+- Vincent Magrini (The Genome Institute, Washington University School of Medicine)
+- Sean McGrath (The Genome Institute, Washington University School of Medicine) 
+- Richard K Wilson (The Genome Institute, Washington University School of Medicine) 
+- Elaine R Mardis (The Genome Institute, Washington University School of Medicine)
+- All of the students that have taken our RNA-seq courses through [CBW](http://bioinformatics.ca/workshops/current) or [CSHL](http://meetings.cshl.edu/courses.html)
+
