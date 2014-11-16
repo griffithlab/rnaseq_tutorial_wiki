@@ -14,7 +14,7 @@ Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all
    4. [[Indexing|Indexing]]
    5. [[RNA-seq Data|RNAseq-Data]]
    6. [[PreAlignment QC|PreAlignment-QC]]
-2. **Module 3 - RNA-seq alignment and visualization**
+2. **Module 3 - RNA-seq Alignment and Visualization**
    1. [[Alignment|Alignment]]
    2. [[PostAlignment Visualization|PostAlignment-Visualization]]
    3. [[PostAlignment QC|PostAlignment-QC]]
@@ -22,7 +22,7 @@ Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all
    1. [[Expression|Expression]]
    2. [[Differential Expression|Differential-Expression]]
    3. [[DE Visualization|DE-Visualization]]
-4. **Module 5 - Isoform discovery and alternative expression**
+4. **Module 5 - Isoform Discovery and Alternative Expression**
    1. [[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]
    2. [[de novo Transcript Assembly|de-novo-Transcript-Assembly]]
    3. [[Transcript Assembly Merge|Transcript-Assembly-Merge]]
