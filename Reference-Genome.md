@@ -31,3 +31,7 @@ How many lines and characters are in this file?
 Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC  
 e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
 Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files.
+
+| [[Previous Section|Installation]] |                             | [[Next Section|Annotation]] |
+|:---------------------------------:|:---------------------------:|:---------------------------:|
+| [[Installation|Installation]]     | [[Table of Contents|Home]]  | [[Annotation|Annotation]]   |
