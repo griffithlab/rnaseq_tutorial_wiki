@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-# RNAseq Data
+#2-v. RNAseq Data
 ## Obtain RNA-seq test data. 
  
 The test data consists of two commercially available RNA samples: Universal Human Reference (UHR) and Human Brain Reference (HBR).  In addition, a spike-in control was used called ERCC ExFold. Mix1 and Mix2 have 3 replicates each. 
