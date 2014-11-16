@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart1.png)
+
 # RNAseq Data
 ## Obtain RNA-seq test data. 
  

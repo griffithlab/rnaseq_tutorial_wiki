@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
+
 ##CUMMERBUND R ANALYSIS
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module3_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module3_Part2_cummeRbund.R). 

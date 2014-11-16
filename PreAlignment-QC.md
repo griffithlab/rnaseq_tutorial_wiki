@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart1.png)
+
 # PreAlignment QC
 
 You can use FastQC to get a sense of your data quality before alignment:

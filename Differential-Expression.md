@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
+
 #DIFFERENTIAL EXPRESSION
 Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions. Refer to the Cufflinks manual for a more detailed explanation:
 * http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
@@ -8,7 +10,7 @@ Cuffmerge basic usage:
  cuffmerge [options]* <assembly_GTF_list.txt>
 ```
 
-* "assembly_GTF_list.txt" is a text file "manifest" with a list (one per line) of GTF files that you'd like to merge together into a single GTF file. 
+* "assembly_GTF_list.txt" is a text file "manifest" with a list (one per line) of GTF files that you would like to merge together into a single GTF file. 
 
 Extra options specified below:
 

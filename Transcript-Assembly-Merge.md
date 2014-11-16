@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+
 #CUFFMERGE
 Use Cuffmerge to merge predicted transcripts from all libraries into a unified transcriptome
 Refer to the Cufflinks manual for a more detailed explanation:
@@ -5,7 +7,7 @@ http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
 	
  Cuffmerge basic usage
  cuffmerge [options]* <assembly_GTF_list.txt> 
- <assembly_GTF_list.txt> is a text file "manifest" with a list (one per line) of GTF files that you'd like to merge together into a single GTF file. 
+ <assembly_GTF_list.txt> is a text file "manifest" with a list (one per line) of GTF files that you would like to merge together into a single GTF file. 
 Extra options specified below
  '-p 8' tells cuffmerge to use eight CPUs
  '-o' tells cuffmerge to write output to a particular directory

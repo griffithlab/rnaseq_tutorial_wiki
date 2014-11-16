@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+
 #CUFFLINKS DE NOVO MODE
 Note, to discover novel transcripts with Cufflinks 
 Using the alignments we generated in the previous modules we will now run Cuffinks in de novo mode

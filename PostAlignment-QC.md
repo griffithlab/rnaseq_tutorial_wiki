@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
+
 #POST-ALIGNMENT QC
 ##Use samtools, samstat, and FastQC to evaluate the alignments
 

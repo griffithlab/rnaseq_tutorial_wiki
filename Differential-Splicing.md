@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+
 #DIFFERENTIAL SPLICING
 Use Cuffdiff to compare the tumor and normal conditions.
 Refer to the Cufflinks manual for a more detailed explanation:

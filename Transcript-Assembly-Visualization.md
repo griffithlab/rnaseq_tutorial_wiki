@@ -1,3 +1,5 @@
+![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+
 #VISUALIZING RESULTS AT THE COMMAND LINE
 	
 View the junctions.bed files created by TopHat
