@@ -4,7 +4,9 @@
 * We have set up ~30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. 
  * You will be provided with a key file called: "CSHLRNA.pem". 
 
-* We have set up DNS shortcuts to the Amazon nodes so that we don't have to remember long hostnames like ec2-50-19-168-121.compute-1.amazonaws.com. Instead, we'll use the following hostnames: cshl#.dyndns.org where # is your assigned student number (01 - 30).
+* We have set up DNS shortcuts to the Amazon nodes so that we don't have to remember long hostnames like `ec2-50-19-168-121.compute-1.amazonaws.com`. Instead, we'll use the following hostnames: `cshl#.dyndns.org` where # is your assigned student number (01 - 30).
+
+* It is very important that you use only your own student number when logging in!  If two people log into the same Amazon machine they may have collisions as they try to write files to the same places and this will cause errors and confusion.
 
 * On the cloud, we're going to use the default username: "ubuntu"
 
