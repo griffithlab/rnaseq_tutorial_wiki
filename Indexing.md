@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-#INDEXING
+#2-iv. INDEXING
 ###Create a bowtie index
 
 Create a bowtie index for chr22 and the ERCC spike-in sequences and write it to a 'bwt' sub-directory:
