@@ -13,8 +13,8 @@
 
 - [ENCODE RNA-seq Standards] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ERCC.pdf)
-- [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (HBR.pdf)
-- [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (UHR.pdf)
+- [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/HBR.pdf)
+- [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/UHR.pdf)
 
 
 
