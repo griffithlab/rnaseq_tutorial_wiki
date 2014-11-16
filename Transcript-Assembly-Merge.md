@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#CUFFMERGE
+#5-iii. CUFFMERGE
 Use Cuffmerge to merge predicted transcripts from all libraries into a unified transcriptome
 Refer to the Cufflinks manual for a more detailed explanation:
 http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
