@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-#Reference Genome
+#2-ii. Reference Genome
 Obtain a reference genome from iGenomes. In this example analysis we will use the human hg19/NCBI build 37 version of the genome. Furthermore, we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
 
 Create the necessary working directory
