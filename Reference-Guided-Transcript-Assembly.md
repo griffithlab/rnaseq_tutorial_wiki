@@ -41,4 +41,4 @@ Extra options specified below
 
 | [[Previous Section|DE-Visualization]] | [[This Section|Reference-Guided-Transcript-Assembly]] | [[Next Section|de-novo-Transcript-Assembly]] |
 |:-------------------------------------:|:-----------------------------------------------------:|:--------------------------------------------:|
-| [[DE Visualization|DE-Visualization]] | [[Ref Guided|Reference-Guided-Transcript-Assembly]]   | [[de novo|de-novo-Transcript-Assembly]]      |
+| [[DE Visualization|DE-Visualization]] | [[Ref Guided|Reference-Guided-Transcript-Assembly]]   | [[De novo|de-novo-Transcript-Assembly]]      |
