@@ -1,4 +1,4 @@
-#Installation
+#2-1. Installation
 Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
 	
 Set up tool installation location:
