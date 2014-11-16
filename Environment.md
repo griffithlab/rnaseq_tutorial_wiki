@@ -13,4 +13,8 @@ Make sure whatever the working dir is, that it is set and is valid
 
 	echo $RNA_HOME
 
-You can place the RNA_HOME variable in your .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.  
+You can place the RNA_HOME variable in your .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.
+
+| [[Previous Section|Logging-into-Amazon-Cloud]]          |                             | [[Next Section|Resources]] |
+|:-------------------------------------------------------:|:---------------------------:|:---------------------:|
+| [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]] | [[Table of Contents|Home]]  | [[Resources|Resources]]         |
