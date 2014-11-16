@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
 Note on de novo transcript discovery and differential expression using Cufflinks and Cuffdiff
 In the previous module we ran Cufflinks in 'reference only' mode using the '-G/--GTF' Cufflinks option.
