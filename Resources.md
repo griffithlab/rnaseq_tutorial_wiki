@@ -21,9 +21,9 @@
 - [Getting started with Amazon EC2 Linux instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
 
 #### 5. Supplementary Materials Relating to the Hands On Tutorials of this Course
-- [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ERCC.pdf)
-- [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/HBR.pdf)
-- [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/UHR.pdf)
+- [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Resources/ERCC.pdf)
+- [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Resources/HBR.pdf)
+- [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Resources/UHR.pdf)
 
 #### 6. Recommended Tools for RNA-seq analysis
 - [A recent trimming tool 'skewer' with comparison to many other read trimmers](http://www.biomedcentral.com/1471-2105/15/182/abstract)
@@ -31,7 +31,7 @@
 
 #### 7. Useful RNA-seq and Bioinformatics resources
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
-- [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ENCODE_RNA-seq_standards_v1.0.pdf)
+- [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/Resources/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
 
