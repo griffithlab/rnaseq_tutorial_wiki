@@ -1,7 +1,9 @@
+![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart1.png)
+
 #ANNOTATION
 ###Obtain known gene/transcript annotations
 
-In this tutorial we will use annotations obtained from Illumina's iGenomes for chromosome 22 only. For time reasons, these have been downloaded for you. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
+In this tutorial we will use annotations obtained from Illuminas iGenomes for chromosome 22 only. For time reasons, these have been downloaded for you. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
 
 Copy the gene annotation files to the working directory. 
 	
