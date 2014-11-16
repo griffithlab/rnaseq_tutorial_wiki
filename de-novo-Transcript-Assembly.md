@@ -12,3 +12,7 @@ To use de novo mode do *not* specify either of the '-G/--GTF' OR '-g/--GTF-guide
 	cufflinks -p 8 -o Normal_cDNA2_lib2 --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits.bam
 	cufflinks -p 8 -o Tumor_cDNA1_lib2 --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits.bam
 	cufflinks -p 8 -o Tumor_cDNA2_lib2 --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits.bam
+
+| [[Previous Section|Reference-Guided-Transcript-Assembly]] | [[This Section|de-novo-Transcript-Assembly]] | [[Next Section|Transcript-Assembly-Merge]]   |
+|:---------------------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|
+| [[Ref Guided|Reference-Guided-Transcript-Assembly]]       | [[De novo|de-novo-Transcript-Assembly]]      | [[Merging|Transcript-Assembly-Merge]] |
