@@ -49,10 +49,20 @@ Create necessary directories:
 	cd $RNA_HOME/
 	mkdir -p de/tophat_cufflinks/ref_only
 	cd $RNA_HOME/alignments/tophat/
-	
+
+Generate the cuffquant binary format files for cuffdiff
+
+         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep1_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam
+         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep2_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep2_ERCC-Mix1/accepted_hits.bam
+         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep3_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+
+         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep1_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep1_ERCC-Mix1/accepted_hits.bam
+         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep2_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep2_ERCC-Mix1/accepted_hits.bam
+         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep3_ERCC-Mix1/accepted_hits.bam
+        
 Perform UHR vs. HBR comparison, using all replicates, for known (reference only mode) transcripts:
 
-	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam,UHR_Rep2_ERCC-Mix1/accepted_hits.bam,UHR_Rep3_ERCC-Mix1/accepted_hits.bam HBR_Rep1_ERCC-Mix2/accepted_hits.bam,HBR_Rep2_ERCC-Mix2/accepted_hits.bam,HBR_Rep3_ERCC-Mix2/accepted_hits.bam
+	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --library-type fr-firststrand--frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/abundances.cxb,UHR_Rep2_ERCC-Mix1/abundances.cxb,UHR_Rep3_ERCC-Mix1/abundances.cxb HBR_Rep1_ERCC-Mix2/abundances.cxb,HBR_Rep2_ERCC-Mix2/abundances.cxb,HBR_Rep3_ERCC-Mix2/abundances.cxb
 
 ---	
 ###OPTIONAL ALTERNATIVE
