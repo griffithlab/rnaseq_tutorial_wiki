@@ -24,6 +24,6 @@ We are grateful to the following people for past and ongoing contributions to th
 - Elaine R Mardis (The Genome Institute, Washington University School of Medicine)
 - All of the students that have taken our RNA-seq courses through [CBW](http://bioinformatics.ca/workshops/current) or [CSHL](http://meetings.cshl.edu/courses.html)
 
-| Previous Section        |                             | [[Next Section|Syntax]] |
+| Previous Section        | This Section                | [[Next Section|Syntax]] |
 |:-----------------------:|:---------------------------:|:-----------------------:|
-|                         | [[Table of Contents|Home]]  | [[Syntax|Syntax]]       |
+|                         | [[Authors|Authors]]         | [[Syntax|Syntax]]       |
