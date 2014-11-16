@@ -17,4 +17,4 @@ Go to the following url in your browser:
 
 | [[Previous Section|RNAseq-Data]] | [[This Section|PreAlignment-QC]]    | [[Next Section|Alignment]] |
 |:--------------------------------:|:-----------------------------------:|:--------------------------:|
-| [[RNA-seq Data|RNAseq-Data]]     | [[PreAlignment QC|Alignment-QC]]    | [[Alignment|Alignment]]    |
+| [[RNA-seq Data|RNAseq-Data]]     | [[Alignment QC|PreAlignment-QC]]    | [[Alignment|Alignment]]    |
