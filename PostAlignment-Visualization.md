@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#3-ii. POST-ALIGNMENT VISUALIZATION
+#3-ii. Post-Alignment Visualization
 Index BAM files to allow viewing in IGV (using samtools index)
 
       cd $RNA_HOME
