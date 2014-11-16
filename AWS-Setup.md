@@ -1,4 +1,4 @@
-##Amazon AWS/AMI setup for use in workshop
+##6-i. Amazon AWS/AMI setup for use in workshop
 
 ###Create AWS account
 
