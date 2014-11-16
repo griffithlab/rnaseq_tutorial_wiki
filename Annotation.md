@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-#2-iii. ANNOTATION
+#2-iii. Annotation
 ###Obtain known gene/transcript annotations
 
 In this tutorial we will use annotations obtained from Illuminas iGenomes for chromosome 22 only. For time reasons, these have been downloaded for you. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
