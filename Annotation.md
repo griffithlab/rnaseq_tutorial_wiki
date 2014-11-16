@@ -108,3 +108,6 @@ In order for your TopHat/Cufflinks analysis to work, the chromosome names in you
 Important note on reference genome builds:  
 Your annotations must correspond to the same reference genome build as your reference genome fasta file.  e.g. both correspond to UCSC human build 'hg18', NCBI human build '37', etc..  Even if both your reference genome and annotations are from UCSC or Ensembl they could still correspond to different versions of that genome.  This would cause problems in any RNA-seq pipeline.
 	
+| [[Previous Section|Reference-Genome]] |                             | [[Next Section|Indexing]] |
+|:-------------------------------------:|:---------------------------:|:-------------------------:|
+| [[Reference Genome|Reference-Genome]] | [[Table of Contents|Home]]  | [[Indexing|Indexing]]     |
