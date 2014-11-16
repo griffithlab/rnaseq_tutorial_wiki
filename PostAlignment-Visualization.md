@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
+![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 #POST-ALIGNMENT VISUALIZATION
 Index BAM files to allow viewing in IGV (using samtools index)
