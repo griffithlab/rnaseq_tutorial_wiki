@@ -20,34 +20,35 @@ cufflinks [options] <hits.sam>
 Extra options specified below:
 
 '-p 8' tells Cufflinks to use eight CPUs  
-'-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)  
+'-G/--GTF <known transcripts file>' Forces cufflinks to calculate expression values for just known transcripts (we call this "reference only" mode)
+'--library-type fr-firststrand' Tells Cufflinks we are analyzing a strand-specific library protocol but is not required since TopHat provides the XS BAM tag.
 '-o' tells Cufflinks to write output to a particular directory (one per sample)  
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_cufflinks/ref_only/
 	cd expression/tophat_cufflinks/ref_only/
-	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam
-	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam
-	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam
+	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam
+	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam
+	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam
 
-	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam
-	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
-	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam
+	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
+	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
 ---
 ###OPTIONAL ALTERNATIVE
-Run cufflinks on STAR alignments instead of TopHat alignments:
+Run cufflinks on STAR alignments instead of TopHat alignments.  Note, the library type is now required since STAR does not produce the appropriate XS tags for strand-specific RNA-seq protocols:
 
 	cd $RNA_HOME/
 	mkdir -p expression/star_cufflinks/ref_only/
 	cd expression/star_cufflinks/ref_only/
-	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep1/Aligned.out.sorted.bam
-	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep3/Aligned.out.sorted.bam
+	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep1/Aligned.out.sorted.bam
+	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep2/Aligned.out.sorted.bam
+	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep3/Aligned.out.sorted.bam
 
-	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep1/Aligned.out.sorted.bam
-	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep3/Aligned.out.sorted.bam
+	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep1/Aligned.out.sorted.bam
+	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep2/Aligned.out.sorted.bam
+	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep3/Aligned.out.sorted.bam
 ---
 	
 What does the raw output from Cufflinks look like?
