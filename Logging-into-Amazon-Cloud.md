@@ -45,6 +45,6 @@ When you log in, you'll notice that you have two directories: "bin" and "workspa
 * The "bin" directory contains the tools that you'll need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
 * The "workspace" directory is where we will keep our temporary files and analysis results. 
 
-| [[Previous Section|Logging-into-Amazon-Cloud]]          |    | [[Next Section|Environment]] |
-|:-------------------------------------------------------:|:--:|:----------------------------:|
-| [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]     | [[Table of Contents|Home]]  | [[Environment|Environment]]       |
+| [[Previous Section|Syntax]]          |                             | [[Next Section|Environment]] |
+|:------------------------------------:|:---------------------------:|:----------------------------:|
+| [[Syntax|Syntax]]                    | [[Table of Contents|Home]]  | [[Environment|Environment]]  |
