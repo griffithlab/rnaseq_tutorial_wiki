@@ -22,7 +22,7 @@ http://cufflinks.cbcb.umd.edu/manual.html
  Cufflinks basic usage:
  cufflinks [options] <hits.sam>
 	
-#Cufflinks Reference Guided Mode
+###Running Cufflinks in Reference Guided Mode
 Using the alignments we generated in the previous modules we will now run Cuffinks in reference guided mode using the '-g/--GTF-guide' option
 Extra options specified below
  '-p 8' tells Cufflinks to use eight CPUs
