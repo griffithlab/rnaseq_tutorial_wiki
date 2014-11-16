@@ -1,4 +1,4 @@
-#ENVIRONMENT
+#i-iv. ENVIRONMENT
 This tutorial assumes use of a Linux computer with an 'x86_64' architecture.  The rest of the tutorial should be conducted in a linux Terminal session.
 
 Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'  
