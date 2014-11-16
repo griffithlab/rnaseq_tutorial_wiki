@@ -29,6 +29,6 @@ Create index files for use with STAR
 	STAR --runMode genomeGenerate --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --genomeFastaFiles $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa --runThreadN 8 --sjdbGTFfile $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --sjdbOverhang 100
 ---
 	
-| [[Previous Section|Annotation]] |                             | [[Next Section|RNAseq-Data]] |
+| [[Previous Section|Annotation]] | [[This Section|Indexing]]   | [[Next Section|RNAseq-Data]] |
 |:-------------------------------:|:---------------------------:|:----------------------------:|
-| [[Annotation|Annotation]]       | [[Table of Contents|Home]]  | [[RNA-seq Data|RNAseq-Data]] |
+| [[Annotation|Annotation]]       | [[Indexing|Indexing]]       | [[Data|RNAseq-Data]]         |
