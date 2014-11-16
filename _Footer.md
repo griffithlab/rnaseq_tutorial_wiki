@@ -1,4 +1,4 @@
-[**Table of Contents**](https://github.com/griffithlab/rnaseq_tutorial/wiki)<br>
+**[Table of Contents](https://github.com/griffithlab/rnaseq_tutorial/wiki)**<br>
 1. Introduction: [[Authors|Authors]] | [[Syntax|Syntax]] | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]] | [[Environment|Environment]] | [[Resources|Resources]]<br>
 2. Module 1: [[Installation|Installation]] | [[References|Reference-Genome]] | [[Annotations|Annotation]] | [[Indexing|Indexing]] | [[Data|RNAseq-Data]] | [[Data QC|PreAlignment-QC]]<br>
 3. Module 2: [[Alignment|Alignment]] | [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]]<br>
