@@ -83,4 +83,6 @@ Finally, pull out the gene symbols and visualize overlap with a venn diagram. Th
 * http://bioinfogp.cnb.csic.es/tools/venny/
 	
 	
-	
+| [[Previous Section|Differential-Expression]]        | [[This Section|DE-Visualization]]     | [[Next Section|Reference-Guided-Transcript-Assembly]] |
+|:---------------------------------------------------:|:------------------------------------ :|:-------------------------------------------------------------------|
+| [[Differential Expression|Differential-Expression]] | [[DE Visualization|DE-Visualization]] | [[Ref Guided|Reference-Guided-Transcript-Assembly]]  |
