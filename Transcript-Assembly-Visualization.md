@@ -32,7 +32,7 @@ How many genes have at least one *novel* transcript assembled?
 	grep "j" merged.gtf | perl -ne 'if ($_ =~ /gene_name\s\"(\w+)\"/){print "$1\n"}' | sort | uniq | wc -l
 	
 	
-##VISUALIZING RESULTS IN THE IGV BROWSER
+##Visualizing Results in the IGV Browser
 	
  junctions.bed files:
  View the tophat junctions.bed file generated all the way back in Module 2
