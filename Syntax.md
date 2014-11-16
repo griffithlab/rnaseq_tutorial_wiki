@@ -10,9 +10,9 @@ tree -I tools
 ```
 
 An indented code block
-test1
-test2
-test3
+	test1
+	test2
+	test3
 
 To make the Markdown files bash/shell compatible, a script will add a comment or '#' character to all lines that are NOT indented with a TAB character.
 
