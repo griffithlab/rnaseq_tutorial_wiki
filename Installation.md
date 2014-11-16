@@ -222,6 +222,6 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 	wget -N https://dl.dropboxusercontent.com/u/16769159/CSHL/.bashrc
 
 
-| [[Previous Section|Resources]] |                             | [[Next Section|Reference-Genome]]     |
-|:------------------------------:|:---------------------------:|:-------------------------------------:|
-| [[Resources|Resources]]        | [[Table of Contents|Home]]  | [[Reference Genome|Reference-Genome]] |
+| [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
+|:------------------------------:|:-----------------------------:|:-------------------------------------:|
+| [[Resources|Resources]]        | [[Installation|Installation]] | [[Reference Genome|Reference-Genome]] |
