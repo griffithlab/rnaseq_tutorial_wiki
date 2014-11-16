@@ -1,6 +1,8 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#5-v. Visualizing Results at the Command Line
+#5-v. Transcript Assembly Visualization (Splicing Visualization) 
+
+## Visualizing Results at the Command Line
 	
 View the junctions.bed files created by TopHat
 	cd $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/
