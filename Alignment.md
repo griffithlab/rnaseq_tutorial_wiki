@@ -87,11 +87,12 @@ Now sort the bam files (also required for cufflinks)
 	samtools sort HBR_Rep3/Aligned.out.bam HBR_Rep3/Aligned.out.sorted
 ---
 
-##Merge TopHat bam files	
-Make one glorious BAM combining all Tumor data and another for all Normal data. Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information.
+##Merge TopHat BAM files	
+Make one glorious BAM combining all UHR data and another for all HBR data. Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information.
 	
 UHR
 
+	cd $RNA_HOME/alignments/tophat      
 	mkdir UHR_ERCC-Mix1_ALL
 	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/accepted_hits.bam INPUT=UHR_Rep1_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep2_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
