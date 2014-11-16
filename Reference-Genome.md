@@ -34,4 +34,4 @@ Wherever you get them from, the names of your reference sequences (chromosomes) 
 
 | [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
 |:---------------------------------:|:--------------------------------------:|:---------------------------:|
-| [[Installation|Installation]]     | [[References|Reference-Genome]]        | [[Annotation|Annotation]]   |
+| [[Installation|Installation]]     | [[Reference Genomes|Reference-Genome]] | [[Annotations|Annotation]]   |
