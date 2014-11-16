@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
 #CUFFMERGE
 Use Cuffmerge to merge predicted transcripts from all libraries into a unified transcriptome
