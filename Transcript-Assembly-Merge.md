@@ -30,4 +30,4 @@ Merge all 4 cufflinks results so that they will have the same set of transcripts
 	
 | [[Previous Section|de-novo-Transcript-Assembly]] | [[This Section|Transcript-Assembly-Merge]] | [[Next Section|Differential-Splicing]]    |
 |:------------------------------------------------:|:------------------------------------------:|:----------------------------------------------------:|
-| [[De novo|de-novo-Transcript-Assembly]]          | [[Merging|Transcript-Assembly-Merge]]      | [[Splicing|Differential-Splicing]] |
+| [[De novo|de-novo-Transcript-Assembly]]          | [[Merging|Transcript-Assembly-Merge]]      | [[Differential Splicing|Differential-Splicing]] |
