@@ -72,37 +72,29 @@ htseq-count [options] <sam_file> <gff_file>
 ```
 	
 Extra options specified below:
+* '--format' specify the input file format one of BAM or SAM. Since we have BAM format files, select 'bam' for this option.
+* '--order' provide the expected sort order of the input file.  Previously we egnerated position sorted BAM files so use 'pos'.
 * '--mode' determines how to deal with reads that overlap more than one feature. We believe the 'intersection-strict' mode is best.
-* '--stranded' specifies whether data is stranded or not. 
+* '--stranded' specifies whether data is stranded or not.  The TruSeq strand-specific RNA libraries suggest the 'reverse' option for this parameter. 
 * '--minaqual' will skip all reads with alignment quality lower than the given minimum value
 * '--type' specifies the feature type (3rd column in GFF file) to be used. (default, suitable for RNA-Seq and Ensembl GTF files: exon)
 * '--idattr' The feature ID used to identity the counts in the output table. The default, suitable for RNA-SEq and Ensembl GTF files, is gene_id.
-* NOTE: Instead of supplying the SAM file to htseq-count, we specify "-" to tell it to accept a stream from stdout
-	
-First, we need name-sorted bam files (we could use either the tophat or STAR alignments). We have chosen to use tophat alignments here:
 
-	cd $RNA_HOME/alignments/tophat
-	samtools sort -n UHR_Rep1_ERCC-Mix1/accepted_hits.bam UHR_Rep1_ERCC-Mix1/accepted_hits_namesorted
-	samtools sort -n UHR_Rep2_ERCC-Mix1/accepted_hits.bam UHR_Rep2_ERCC-Mix1/accepted_hits_namesorted
-	samtools sort -n UHR_Rep3_ERCC-Mix1/accepted_hits.bam UHR_Rep3_ERCC-Mix1/accepted_hits_namesorted
-	samtools sort -n HBR_Rep1_ERCC-Mix2/accepted_hits.bam HBR_Rep1_ERCC-Mix2/accepted_hits_namesorted
-	samtools sort -n HBR_Rep2_ERCC-Mix2/accepted_hits.bam HBR_Rep2_ERCC-Mix2/accepted_hits_namesorted
-	samtools sort -n HBR_Rep3_ERCC-Mix2/accepted_hits.bam HBR_Rep3_ERCC-Mix2/accepted_hits_namesorted
 	
-Next use samtools to pipe sam-format from these bam files to htseq-count and calculate gene-level counts:
+We could use either the tophat or STAR alignments. We have chosen to use tophat alignments here.  Run htseq-count and calculate gene-level counts:
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_counts
 	cd expression/tophat_counts
 	mkdir UHR_Rep1_ERCC-Mix1 UHR_Rep2_ERCC-Mix1 UHR_Rep3_ERCC-Mix1 HBR_Rep1_ERCC-Mix2 HBR_Rep2_ERCC-Mix2 HBR_Rep3_ERCC-Mix2
 
-	samtools view -h $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv
-	samtools view -h $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv
-	samtools view -h $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv
+        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv
+	htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv
+        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv
 
-	samtools view -h $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv
-	samtools view -h $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv
-	samtools view -h $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits_namesorted.bam | htseq-count --mode intersection-strict --stranded no --minaqual 1 --type exon --idattr gene_id - $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
+	 htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv
+         htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv
+         htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
 
 	
 Merge results files into a single matrix for use in edgeR:
