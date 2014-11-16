@@ -31,4 +31,4 @@ Create index files for use with STAR
 	
 | [[Previous Section|Annotation]] | [[This Section|Indexing]]   | [[Next Section|RNAseq-Data]] |
 |:-------------------------------:|:---------------------------:|:----------------------------:|
-| [[Annotation|Annotation]]       | [[Indexing|Indexing]]       | [[Data|RNAseq-Data]]         |
+| [[Annotations|Annotation]]       | [[Indexing|Indexing]]       | [[Data|RNAseq-Data]]         |
