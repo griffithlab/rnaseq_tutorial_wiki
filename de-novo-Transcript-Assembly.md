@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
 #CUFFLINKS DE NOVO MODE
 Note, to discover novel transcripts with Cufflinks 
