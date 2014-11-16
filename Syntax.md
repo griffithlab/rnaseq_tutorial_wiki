@@ -2,12 +2,18 @@
 
 In this tutorial, created using [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown), [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) are optional portions of the tutorials whereas [indented code blocks](http://daringfireball.net/projects/markdown/syntax#precode) are required to complete the tutorial.
 
-A fenced code block will look like t
+A fenced code block will look like this:
 ```bash
 sudo apt-get install tree
 cd ~
 tree -I tools 
 ```
+
+An indented code block will look very similar in the wiki but will be interpreted differently when this tutorial is parsed:
+
+    sudo apt-get install tree
+    cd ~
+    tree -I tools 
 
 To make the Markdown files bash/shell compatible, a script will add a comment or '#' character to all lines that are NOT indented with a TAB character.
 
