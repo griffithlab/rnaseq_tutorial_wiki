@@ -2,7 +2,7 @@ Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all
 
 #Table of Contents
 1. Introduction
-   1. [Authors](https://github.com/griffithlab/rnaseq_tutorial/wiki/Authors)
+   1. [[Authors|Authors]]
    2. [Syntax](https://github.com/griffithlab/rnaseq_tutorial/wiki/Syntax)
    3. [Logging into Amazon Cloud](https://github.com/griffithlab/rnaseq_tutorial/wiki/Logging-into-Amazon-Cloud)
    4. [Environment](https://github.com/griffithlab/rnaseq_tutorial/wiki/Environment)
