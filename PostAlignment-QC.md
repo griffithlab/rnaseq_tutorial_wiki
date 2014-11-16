@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#POST-ALIGNMENT QC
+#3-iii. POST-ALIGNMENT QC
 ##Use samtools, samstat, and FastQC to evaluate the alignments
 
 Use 'samtools view' to see the format of a SAM/BAM alignment file
