@@ -32,6 +32,6 @@ Note: Instead of the above, you might consider getting reference genomes and ass
 e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
 Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files.
 
-| [[Previous Section|Installation]] |                             | [[Next Section|Annotation]] |
-|:---------------------------------:|:---------------------------:|:---------------------------:|
-| [[Installation|Installation]]     | [[Table of Contents|Home]]  | [[Annotation|Annotation]]   |
+| [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
+|:---------------------------------:|:--------------------------------------:|:---------------------------:|
+| [[Installation|Installation]]     | [[Reference Genomes|Reference-Genome]] | [[Annotation|Annotation]]   |
