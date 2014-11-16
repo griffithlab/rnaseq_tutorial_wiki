@@ -224,4 +224,4 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 
 | [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
 |:------------------------------:|:-----------------------------:|:-------------------------------------:|
-| [[Resources|Resources]]        | [[Installation|Installation]] | [[Reference Genome|Reference-Genome]] |
+| [[Resources|Resources]]        | [[Installation|Installation]] | [[Reference Genomes|Reference-Genome]] |
