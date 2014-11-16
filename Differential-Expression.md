@@ -71,7 +71,16 @@ perform the cuffdiff step for STAR-alignment-based cuffmerge output:
 	cd $RNA_HOME/
 	mkdir -p de/star_cufflinks/ref_only
 	cd $RNA_HOME/alignments/star/
-	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/star_cufflinks/ref_only/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/Aligned.out.sorted.bam,UHR_Rep2/Aligned.out.sorted.bam,UHR_Rep3/Aligned.out.sorted.bam HBR_Rep1/Aligned.out.sorted.bam,HBR_Rep2/Aligned.out.sorted.bam,HBR_Rep3/Aligned.out.sorted.bam
+
+        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep1 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/Aligned.out.sorted.bam
+        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep2 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep2/Aligned.out.sorted.bam
+        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep3/Aligned.out.sorted.bam
+
+        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep1 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep1/Aligned.out.sorted.bam
+        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep2 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep2/Aligned.out.sorted.bam
+        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep3/Aligned.out.sorted.bam
+        
+	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/star_cufflinks/ref_only/ --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/abundances.cxb,UHR_Rep2/abundances.cxb,UHR_Rep3/abundances.cxb HBR_Rep1/abundances.cxb,HBR_Rep2/abundances.cxb,HBR_Rep3/abundances.cxb
 ---
 	
 What does the raw output from Cuffdiff look like?
