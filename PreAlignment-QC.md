@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-# PreAlignment QC
+#2-vi. PreAlignment QC
 
 You can use FastQC to get a sense of your data quality before alignment:
 * http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
