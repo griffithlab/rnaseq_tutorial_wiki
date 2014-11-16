@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
+![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
 ##CUMMERBUND R ANALYSIS
 
