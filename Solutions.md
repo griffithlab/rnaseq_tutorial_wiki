@@ -33,3 +33,9 @@ tophat2 -p 8 -r 60 --rg-id=HCC1395_normal --rg-sample=HCC1395_normal -o HCC1395_
 tophat2 -p 8 -r 60 --rg-id=HCC1395_tumor --rg-sample=HCC1395_tumor -o HCC1395_tumor -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/hcc1395_tumor_1.fastq.gz $RNA_DATA_DIR/hcc1395_tumor_2.fastq.gz
 
 ```
+
+
+| [[Previous Section|AWS-Setup]]  | [[This Section|Solutions]]         | [[Next Section|NEXT]] |
+|:-------------------------------:|:----------------------------------:|:---------------------:|
+| [[AWS Setup|AWS-Setup]]         | [[Assignment Solutions|Solutions]] |                       |
+
