@@ -1,13 +1,13 @@
 Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents.
 
 #Table of Contents
-0. **Introduction**
+**Introduction**
    1. [[Authors|Authors]]
    2. [[Syntax|Syntax]]
    3. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
    4. [[Environment|Environment]]
    5. [[Resources|Resources]]
-1. **Module 1**
+2. **Module 1**
    1. [[Installation|Installation]]
    2. [[Reference Genome|Reference-Genome]]
    3. [[Annotation|Annotation]]
