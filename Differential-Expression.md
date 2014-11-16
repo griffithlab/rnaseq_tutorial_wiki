@@ -62,7 +62,7 @@ Generate the cuffquant binary format files for cuffdiff
         
 Perform UHR vs. HBR comparison, using all replicates, for known (reference only mode) transcripts:
 
-	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --library-type fr-firststrand--frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/abundances.cxb,UHR_Rep2_ERCC-Mix1/abundances.cxb,UHR_Rep3_ERCC-Mix1/abundances.cxb HBR_Rep1_ERCC-Mix2/abundances.cxb,HBR_Rep2_ERCC-Mix2/abundances.cxb,HBR_Rep3_ERCC-Mix2/abundances.cxb
+	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/abundances.cxb,UHR_Rep2_ERCC-Mix1/abundances.cxb,UHR_Rep3_ERCC-Mix1/abundances.cxb HBR_Rep1_ERCC-Mix2/abundances.cxb,HBR_Rep2_ERCC-Mix2/abundances.cxb,HBR_Rep3_ERCC-Mix2/abundances.cxb
 
 ---	
 ###OPTIONAL ALTERNATIVE
