@@ -3,8 +3,16 @@
 #2-v. RNA-seq Data
 ## Obtain RNA-seq test data. 
  
-The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf) and [Human Brain Reference (HBR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf).  In addition, a [spike-in control](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf) was used called the ERCC RNA Spike-In Control Mixes. Mix1 was added to the UHR sample and Mix2 was added to the HBR sample.  We have 3 complete experimental replicates for each sample.
+The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf) and [Human Brain Reference (HBR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf).  The UHR is total RNA isolated from a diverse set of 10 cancer cell lines.  The HBR is total RNA isolated from the brains of 23 Caucasians, male and female, of varying age but mostly 60-80 years old.
 
+In addition, a spike-in control was used called the [ERCC ExFold RNA Spike-In Control Mixes](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf). The spike-in consists of 92 transcripts that are present in known concentrations across a wide range (from very few copies to many copies).  There are two 'mixes' of these transcripts to allow an assessment of differential expression output if you put one mix in each of your two comparisons.  In our case, Mix1 was added to the UHR sample, and Mix2 was added to the HBR sample.  We also have 3 complete experimental replicates for each sample. So to summarize we have:
+- UHR + ERCC Spike-In Mix1, Replicate 1
+- UHR + ERCC Spike-In Mix1, Replicate 2
+- UHR + ERCC Spike-In Mix1, Replicate 3
+- HBR + ERCC Spike-In Mix2, Replicate 1
+- HBR + ERCC Spike-In Mix2, Replicate 2
+- HBR + ERCC Spike-In Mix2, Replicate 3
+ 
 ADD MORE EXPERIMENTAL DESIGN BACKGROUND
 	
 Each data set has a corresponding pair of fastq files (read 1 and read 2 of paired end reads).  
