@@ -66,7 +66,6 @@ Set up tool installation location:
 	./cufflinks
 	
 ##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
-Download: https://pypi.python.org/packages/source/H/HTSeq/
 
 	cd $RNA_HOME/tools/
 	wget --no-check-certificate https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
