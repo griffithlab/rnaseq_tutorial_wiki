@@ -3,7 +3,7 @@
 #2-v. RNA-seq Data
 ## Obtain RNA-seq test data. 
  
-The test data consists of two commercially available RNA samples: Universal Human Reference (UHR) and Human Brain Reference (HBR).  In addition, a spike-in control was used called ERCC ExFold. Mix1 and Mix2 have 3 replicates each. 
+The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf) and [Human Brain Reference (HBR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf).  In addition, a [spike-in control](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf) was used called the ERCC RNA Spike-In Control Mixes. Mix1 was added to the UHR sample and Mix2 was added to the HBR sample.  We have 3 complete experimental replicates for each sample.
 
 ADD MORE EXPERIMENTAL DESIGN BACKGROUND
 	
