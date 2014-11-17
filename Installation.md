@@ -7,19 +7,7 @@ Set up tool installation location:
 	mkdir tools
 	cd tools
 	
-If for some strange reason, 'wget' is not installed on your Linux or Mac system but curl is.  You can install it as follows:
-
-```
-curl -O http://ftp.gnu.org/gnu/wget/wget-1.16.tar.gz
-tar -xzvf wget-1.16.tar.gz
-cd wget-1.16
-./configure --with-ssl=openssl
-make
-make install
-```
-
 ##[SAMtools](http://samtools.sourceforge.net/)
-Download : http://sourceforge.net/projects/samtools/
 
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/samtools/files/samtools/1.1/samtools-1.1.tar.bz2/download -O samtools-1.1.tar.bz2
@@ -78,7 +66,6 @@ Download : http://sourceforge.net/projects/samtools/
 	./cufflinks
 	
 ##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
-Download: https://pypi.python.org/packages/source/H/HTSeq/
 
 	cd $RNA_HOME/tools/
 	wget --no-check-certificate https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
