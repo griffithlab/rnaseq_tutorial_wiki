@@ -47,6 +47,17 @@ Navigate to the correct directory and then launch R:
 Then, run the R commands detailed in the R script above. The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 * http://cshl##.dyndns.org/workspace/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
 
+##ERCC DE Analysis
+This section will demonstrate the DE between the ERCC spike-in:
+
+     cd $RNA_HOME/de/tophat_cufflinks/ref_only
+     wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_DE.R
+     chmod +x Tutorial_Module4_ERCC_DE.R
+     ./Tutorial_Module4_ERCC_DE.R $RNA_HOME/refs/ERCC/ERCC_Controls_Analysis.txt $RNA_HOME/de/tophat_cufflinks/ref_only/gene_exp.diff
+
+View the results here:
+* http://cshl##.dyndns.org/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
+
 ##edgeR Analysis		
 A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part4_edgeR.R)
 
