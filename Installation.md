@@ -98,7 +98,7 @@ For this tutorial we require:
 - [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
 - [ggplot2](http://ggplot2.org/)
 
-launch R (enter `R` at linux command prompt) and type the following at R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
+launch R (enter `R` at linux command prompt) and type the following at an R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
 ```
 install.packages("gplots")
@@ -111,7 +111,7 @@ For this tutorial we require:
 - [cummeRbund](http://compbio.mit.edu/cummeRbund/)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 
-launch R (enter `R` at linux command prompt) and type the following at R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
+launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
 ```
 source("http://bioconductor.org/biocLite.R")
