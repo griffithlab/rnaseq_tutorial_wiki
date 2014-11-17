@@ -30,7 +30,8 @@ Make a copy of the test data
 Unpack the test data.  You should see 6 sets of paired end fastq files
 
 	tar -xvf HBR_UHR_ERCC_ds_5pc.tar
-	
+	ls
+
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
 
 	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
