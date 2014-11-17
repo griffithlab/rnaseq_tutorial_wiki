@@ -17,7 +17,7 @@ So to summarize we have:
  	
 Each data set has a corresponding pair of fastq files (read 1 and read 2 of paired end reads).  
 The reads are paired-end 101-mers generated on an Illumina HiSeq instrument.
-The test data has been pre-filtered for reads that appear to map to chromosome 22
+The test data has been pre-filtered for reads that appear to map to chromosome 22.  Lets get that raw input data onto our cloud instance.
 
 	cd $RNA_HOME/
 	mkdir -p data
