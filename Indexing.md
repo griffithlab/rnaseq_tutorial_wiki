@@ -14,10 +14,10 @@ Create a bowtie index for chr22 and the ERCC spike-in sequences and write it to 
 	
 To create an index for all chromosomes instead of just chr22 you would do the following:
 ```
-cd $RNA_HOME/refs/hg19/
-mkdir bwt
-bowtie2-build fasta/hg19.fa bwt/hg19
-mv $RNA_HOME/refs/hg19/fasta/hg19.fa $RNA_HOME/refs/hg19/bwt/
+#cd $RNA_HOME/refs/hg19/
+#mkdir bwt
+#bowtie2-build fasta/hg19.fa bwt/hg19
+#mv $RNA_HOME/refs/hg19/fasta/hg19.fa $RNA_HOME/refs/hg19/bwt/
 ```
 
 ---
