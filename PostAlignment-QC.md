@@ -47,6 +47,8 @@ http://samtools.sourceforge.net/SAM1.pdf
 
 ##Using FastQC
 You can use FastQC to perform basic QC of your accepted_hits.bam file (See [Pre-Alignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)). This will give you output very similar to when you ran FastQC on your fastq files.  
-	
-	
+
+| [[Previous Section|PostAlignment-Visualization]]        | [[This Section|PostAlignment-QC]] | [[Next Section|Expression]]      |
+|:-------------------------------------------------------:|:---------------------------------:|:---------------------------------------------:|
+| [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]] | [[Expression|Expression]] |
 	

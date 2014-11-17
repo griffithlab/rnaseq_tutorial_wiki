@@ -33,3 +33,8 @@ How many reads are there in the first library?
 Decompress file on the fly with 'zcat', pipe into 'grep', search for the read name prefix and pipe into 'wc' to do a word count ('-l' gives lines)
 
 	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "^\@HWI" | wc -l
+
+
+| [[Previous Section|Indexing]] | [[This Section|RNAseq-Data]] | [[Next Section|PreAlignment-QC]]    |
+|:-----------------------------:|:----------------------------:|:-----------------------------------:|
+| [[Indexing|Indexing]]         | [[Data|RNAseq-Data]]         | [[Data QC|PreAlignment-QC]]         |

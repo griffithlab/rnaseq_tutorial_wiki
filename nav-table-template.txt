@@ -1,9 +1,9 @@
 
 
 
-| [[Previous Section|PREVIOUS]] |                             | [[Next Section|NEXT]] |
-|:-----------------------------:|:---------------------------:|:---------------------:|
-| [[PREVIOUS|PREVIOUS]]         | [[Table of Contents|Home]]  | [[NEXT|NEXT]]         |
+| [[Previous Section|PREVIOUS]] | [[This Section|CURRENT]] | [[Next Section|NEXT]] |
+|:-----------------------------:|:------------------------:|:---------------------:|
+| [[PREVIOUS|PREVIOUS]]         | [[CURRENT|CURRENT]]      | [[NEXT|NEXT]]         |
 
 
 

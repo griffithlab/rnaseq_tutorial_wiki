@@ -41,6 +41,6 @@
 - [Biostar - A forum for the bioinformatics community](http://www.biostars.org/)
 - [SEQanswers - A forum for the next generation sequencing community](http://seqanswers.com/)
 
-| [[Previous Section|Environment]] |                             | [[Next Section|Installation]] |
+| [[Previous Section|Environment]] | [[This Section|Resources]]  | [[Next Section|Installation]] |
 |:--------------------------------:|:---------------------------:|:-----------------------------:|
-| [[Environment|Environment]]      | [[Table of Contents|Home]]  | [[Installation|Installation]] |
+| [[Environment|Environment]]      | [[Resources|Resources]]     | [[Installation|Installation]] |

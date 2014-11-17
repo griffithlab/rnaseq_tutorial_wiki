@@ -1,6 +1,8 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#5-v. Visualizing Results at the Command Line
+#5-v. Transcript Assembly Visualization (Splicing Visualization) 
+
+## Visualizing Results at the Command Line
 	
 View the junctions.bed files created by TopHat
 	cd $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/
@@ -68,3 +70,6 @@ NOTE: We have just scratched the surface exploring these output files!!!
  To unpack this archive at a terminal session on your own Linux or Mac computer you can do the following:
 	tar -xzvf rnaseq_tutorial.tar.gz
 	
+| [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|AWS-Setup]]         |
+|:-----------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------:|
+| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]      | [[AWS Setup|AWS-Setup]]          |

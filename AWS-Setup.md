@@ -1,5 +1,7 @@
 ##6-i. Amazon AWS/AMI setup for use in workshop
 
+This tutorial explains how Amazon cloud instances were configured for the course.  This exercise is not to be completed by the students but is provided as a reference for future course developers that wish to conduct their hands on exercises on Amazon AWS.
+
 ###Create AWS account
 
 A helpful tutorial can be found here:
@@ -76,7 +78,7 @@ DocumentRoot /home/ubuntu
 sudo service apache2 restart
 ```
 
-###Save public AMI
+###Save a public AMI
 
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
@@ -97,6 +99,10 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 8. Login to each node `ssh -i [instructor-key].pem ubuntu@[public.ip.address]` and run `bash preinstall.sh`.
 9. Create DNS hostname for each IP address (see below).
 
-###Dynamic DNS
+###Set up a dynamic DNS service
 
 Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com to create hostnames like cshl01.dyndns.org, cshl02,dyndns.org, etc that point to each public IP address of student instances.
+
+| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|AWS-Setup]] | [[Next Section|Solutions]]   |
+|:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
+| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[AWS Setup|AWS-Setup]]    | [[Assignment Solutions|Solutions]] |

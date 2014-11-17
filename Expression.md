@@ -102,3 +102,6 @@ Merge results files into a single matrix for use in edgeR:
 
 	join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv | join - UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv | join - HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv > gene_read_counts_table_all.tsv
 
+| [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |
+|:-------------------------------------:|:---------------------------:|:--------------------------------------------------------:|
+| [[Alignment QC|PostAlignment-QC]]     | [[Expression|Expression]]   | [[Differential Expression|Differential-Expression]] |

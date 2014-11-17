@@ -4,7 +4,7 @@
 * We have set up ~30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. 
  * You will be provided with a key file called: "CSHLRNA.pem". 
 
-* We have set up DNS shortcuts to the Amazon nodes so that we don't have to remember long hostnames like `ec2-50-19-168-121.compute-1.amazonaws.com`. Instead, we'll use the following hostnames: `cshl#.dyndns.org` where # is your assigned student number (01 - 30).
+* We have set up DNS shortcuts to the Amazon nodes so that we don't have to remember long hostnames like `ec2-50-19-168-121.compute-1.amazonaws.com`. Instead, we'll use the following hostnames: `cshl##.dyndns.org` where ## is your assigned student number (01 - 30).
 
 * It is very important that you use only your own student number when logging in!  If two people log into the same Amazon machine they may have collisions as they try to write files to the same places and this will cause errors and confusion.
 
@@ -24,7 +24,7 @@ chmod 600 CSHLRNA.pem
 ssh -i CSHLRNA.pem ubuntu@cshl##.dyndns.org
 ```
 
-(where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
+`##` is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.  `-i` selects a file from which the public key authentication is read.  `ubuntu` is the name of a user on the system you are logging into (a default user of the Ubuntu operating system). `cshl##.dyndns.org` is the address of the linux system on Amazon that you are logging into.   
 
 ##Copying files to your computer
 
@@ -45,6 +45,6 @@ When you log in, you'll notice that you have two directories: "bin" and "workspa
 * The "bin" directory contains the tools that you'll need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
 * The "workspace" directory is where we will keep our temporary files and analysis results. 
 
-| [[Previous Section|Syntax]]          |                             | [[Next Section|Environment]] |
-|:------------------------------------:|:---------------------------:|:----------------------------:|
-| [[Syntax|Syntax]]                    | [[Table of Contents|Home]]  | [[Environment|Environment]]  |
+| [[Previous Section|Syntax]] | [[This Section|Logging-into-Amazon-Cloud]]               | [[Next Section|Environment]]        |
+|:---------------------------:|:--------------------------------------------------------:|:-----------------------------------------------------:|
+| [[Syntax|Syntax]]           | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  | [[Environment|Environment]]  |

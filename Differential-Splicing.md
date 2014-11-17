@@ -27,3 +27,6 @@ Perform Tumor vs. Normal comparison, using just the capture libraries, for known
 Perform Tumor vs. Normal comparison, using just the capture libraries, for known/novel (de novo mode) transcripts
 	cuffdiff -p 8 -L Normal,Tumor -o $RNA_HOME/de/tophat_cufflinks/de_novo/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/de_novo/merged/merged.gtf Normal_cDNA1_lib2/accepted_hits.bam,Normal_cDNA2_lib2/accepted_hits.bam Tumor_cDNA1_lib2/accepted_hits.bam,Tumor_cDNA2_lib2/accepted_hits.bam
         
+| [[Previous Section|Transcript-Assembly-Merge]] | [[This Section|Differential-Splicing]]          | [[Next Section|Transcript-Assembly-Visualization]]        |
+|:----------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------------------------:|
+| [[Merging|Transcript-Assembly-Merge]]          | [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]  |

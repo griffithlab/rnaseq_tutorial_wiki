@@ -220,3 +220,8 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 
 	cd ~
 	wget -N https://dl.dropboxusercontent.com/u/16769159/CSHL/.bashrc
+
+
+| [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
+|:------------------------------:|:-----------------------------:|:-------------------------------------:|
+| [[Resources|Resources]]        | [[Installation|Installation]] | [[Reference Genomes|Reference-Genome]] |
