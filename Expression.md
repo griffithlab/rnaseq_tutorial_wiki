@@ -102,6 +102,28 @@ Merge results files into a single matrix for use in edgeR:
 
 	join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv | join - UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv | join - HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv > gene_read_counts_table_all.tsv
 
+Based on the above read counts, plot the linearity of the ERCC spike-in read counts versus the known concentration of the ERCC spike-in Mix:
+
+      mkdir $RNA_HOME/refs/ERCC
+      cd $RNA_HOME/refs/ERCC
+      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
+      cat ERCC_Controls_Analysis.txt
+
+      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.pl
+      chmod +x Tutorial_Module4_ERCC_expression.pl
+      ./Tutorial_Module4_ERCC_expression.pl
+      cat $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
+      
+      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.R
+      chmod +x Tutorial_Module4_ERCC_expression.R
+      ./Tutorial_Module4_ERCC_expression.R $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
+
+To view the resulting figure, navigate to the below URL replacing ## with your class assigned number:
+* http://cshl##.dyndns.org/workspace/rnaseq/refs/ERCC/Tutorial_Module4_ERCC_expression.pdf
+         
+
+        
+
 | [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |
 |:-------------------------------------:|:---------------------------:|:--------------------------------------------------------:|
 | [[Alignment QC|PostAlignment-QC]]     | [[Expression|Expression]]   | [[Differential Expression|Differential-Expression]] |
