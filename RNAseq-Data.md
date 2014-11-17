@@ -3,13 +3,21 @@
 #2-v. RNA-seq Data
 ## Obtain RNA-seq test data. 
  
-The test data consists of two commercially available RNA samples: Universal Human Reference (UHR) and Human Brain Reference (HBR).  In addition, a spike-in control was used called ERCC ExFold. Mix1 and Mix2 have 3 replicates each. 
+The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf) and [Human Brain Reference (HBR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf).  The UHR is total RNA isolated from a diverse set of 10 cancer cell lines.  The HBR is total RNA isolated from the brains of 23 Caucasians, male and female, of varying age but mostly 60-80 years old.
 
-ADD MORE EXPERIMENTAL DESIGN BACKGROUND
-	
+In addition, a spike-in control was used called the [ERCC ExFold RNA Spike-In Control Mixes](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf). The spike-in consists of 92 transcripts that are present in known concentrations across a wide abundance range (from very few copies to many copies).  This range allows us to test the degree to which the RNA-seq assay (including all laboratory and analysis steps) accurately reflects the relative abundance of transcript species *within* a sample. There are also two 'mixes' of these transcripts to allow an assessment of differential expression output *between* samples if you put one mix in each of your two comparisons.  In our case, Mix1 was added to the UHR sample, and Mix2 was added to the HBR sample.  We also have 3 complete experimental replicates for each sample. This allows us to assess the technical variability of our overall process of producing RNA-seq data in the lab.
+
+So to summarize we have:
+- UHR + ERCC Spike-In Mix1, Replicate 1
+- UHR + ERCC Spike-In Mix1, Replicate 2
+- UHR + ERCC Spike-In Mix1, Replicate 3
+- HBR + ERCC Spike-In Mix2, Replicate 1
+- HBR + ERCC Spike-In Mix2, Replicate 2
+- HBR + ERCC Spike-In Mix2, Replicate 3
+ 	
 Each data set has a corresponding pair of fastq files (read 1 and read 2 of paired end reads).  
 The reads are paired-end 101-mers generated on an Illumina HiSeq instrument.
-The test data has been pre-filtered for reads that appear to map to chromosome 22
+The test data has been pre-filtered for reads that appear to map to chromosome 22.  Lets get that raw input data onto our cloud instance.
 
 	cd $RNA_HOME/
 	mkdir -p data
@@ -19,10 +27,11 @@ Make a copy of the test data
 
 	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
 	
-Unpack the test data.  You should see 6 sets of paired end fastq files
+Unpack the test data.  You should see 6 sets of paired end fastq files.  One for each of our sample replicates above. We have 6 pairs (12 files) because in fastq format, read 1 and read 2 of a each read pair (fragment) are stored in separate files.
 
 	tar -xvf HBR_UHR_ERCC_ds_5pc.tar
-	
+	ls
+
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
 
 	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
