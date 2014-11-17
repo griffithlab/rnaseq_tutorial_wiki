@@ -8,7 +8,6 @@ Set up tool installation location:
 	cd tools
 	
 ##[SAMtools](http://samtools.sourceforge.net/)
-Download : http://sourceforge.net/projects/samtools/
 
 	cd $RNA_HOME/tools/
 	wget http://sourceforge.net/projects/samtools/files/samtools/1.1/samtools-1.1.tar.bz2/download -O samtools-1.1.tar.bz2
