@@ -2,8 +2,6 @@
 
 ##4-iii. CummeRbund R Analysis
 
-A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part2_cummeRbund.R). 
-
 The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. 
 
 Navigate to the correct directory and then launch R:
@@ -11,7 +9,8 @@ Navigate to the correct directory and then launch R:
 	cd $RNA_HOME/de/tophat_cufflinks/ref_only/
 	R
 	
-Then, run the R commands detailed in the R script above. The output pdf files can be viewed in your browser at the following urls. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
+
+A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part2_cummeRbund.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 
 * http://cshl##.dyndns.org/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
 * http://cshl##.dyndns.org/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
