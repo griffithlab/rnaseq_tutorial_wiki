@@ -24,7 +24,7 @@ chmod 600 CSHLRNA.pem
 ssh -i CSHLRNA.pem ubuntu@cshl##.dyndns.org
 ```
 
-(where # is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.)
+`##` is your assigned student number. Your student number is the number on the participant list. If your number is less than 10, please add 0 in front of it.  `-i` selects a file from which the public key authentication is read.  `ubuntu` is the name of a user on the system you are logging into (a default user of the Ubuntu operating system). `cshl##.dyndns.org` is the address of the linux system on Amazon that you are logging into.   
 
 ##Copying files to your computer
 
