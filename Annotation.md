@@ -31,7 +31,7 @@ We can use a perl command-line command to find out:
 * By piping to sort, then uniq, then word count we can count the unique number of genes in the file.
 
 
-Now view the structure of a single transcript in GTF format
+Now view the structure of a single transcript in GTF format. Press 'q' to exit the 'less' display when you are done.
 
 	grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p exon -S
 
