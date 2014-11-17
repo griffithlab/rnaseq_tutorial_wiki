@@ -30,6 +30,11 @@ We can use a perl command-line command to find out:
 * The output of this perl command will be a long list of ENSG Ids. 
 * By piping to sort, then uniq, then word count we can count the unique number of genes in the file.
 
+
+Now view the structure of a single transcript in GTF format
+
+grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p exon -S
+
 To learn more, see:
 * http://perldoc.perl.org/perlre.html#Regular-Expressions
 * http://www.perl.com/pub/2004/08/09/commandline.html
