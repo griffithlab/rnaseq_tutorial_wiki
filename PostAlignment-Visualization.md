@@ -46,8 +46,11 @@ Go to an example gene locus on chr22:
 ###OPTIONAL ALTERNATIVE
 Now load the STAR alignments. How do the STAR and TopHat alignments compare?
 
-* http://cshl##.dyndns.org/workspace/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam (Normal STAR)
-* http://cshl##.dyndns.org/workspace/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam (Tumor STAR)
+**UHR STAR alignment**
+http://cshl##.dyndns.org/workspace/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam
+
+**HBR STAR alignment**
+http://cshl##.dyndns.org/workspace/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam
 
 ---
 
