@@ -11,7 +11,7 @@ cuffmerge [options]* <assembly_GTF_list.txt>
 ```
 
 Options specified below:
-* <assembly_GTF_list.txt> is a text file "manifest" with a list (one per line) of GTF files that you would like to merge together into a single GTF file. 
+* "assembly_GTF_list.txt" is a text file "manifest" with a list (one per line) of GTF files that you would like to merge together into a single GTF file. 
 * '-p 8' tells cuffmerge to use eight CPUs
 * '-o' tells cuffmerge to write output to a particular directory
 * '-g' tells cuffmerge where to find reference gene annotations. It will use these annotations to gracefully merge novel isoforms (for de novo runs) and known isoforms and maximize overall assembly quality.
