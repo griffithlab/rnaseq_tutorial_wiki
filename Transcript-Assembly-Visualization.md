@@ -54,6 +54,12 @@ How many genes have at least one *novel* transcript assembled?
  * http://cshl##.dyndns.org/workspace/rnaseq/expression/tophat_cufflinks/ref_guided/merged/merged.gtf
  * http://cshl##.dyndns.org/workspace/rnaseq/expression/tophat_cufflinks/de_novo/merged/merged.gtf
 
+Load the BAM files at the same time as the junctions.bed and merged.gtf files:
+* The following can be loaded directly in IGV by url
+ * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam
+ * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam
+
+
 Go to the following regions:
 * 22:45730787-45736825 
 * 
@@ -61,10 +67,6 @@ Go to the following regions:
 Do you see the evidence for any novel exons/transcript that are found in 'de_novo' or 'ref_guided' modes but NOT found in 'ref_only' mode?
 
 Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
-	
-Load a BAM file at the same time as the junctions.bed and merged.gtf files:
-* The following can be loaded directly in IGV by url
- * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam
 	
 NOTE: We have just scratched the surface exploring these output files!!!
 	
