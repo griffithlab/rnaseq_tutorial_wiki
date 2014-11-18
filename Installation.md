@@ -75,50 +75,6 @@ Set up tool installation location:
 	chmod +x scripts/htseq-count
 	./scripts/htseq-count
 	
-##[R](http://www.r-project.org/)
-This install takes a while so check if you have R installed already by typing `which R`
-It is already installed on the Cloud, but for completeness, here is how it was done.
-
-```
-cd $RNA_HOME/tools/
-export R_LIBS=
-wget http://cran.us.r-project.org/src/base/R-3/R-3.1.0.tar.gz
-tar -zxvf R-3.1.0.tar.gz
-cd R-3.1.0
-./configure --prefix=$RNA_HOME/tools/R-3.1.0/
-make
-make install
-./bin/Rscript
-```
-
-Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
-
-##R Libraries
-For this tutorial we require:
-- [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
-- [ggplot2](http://ggplot2.org/)
-
-launch R (enter `R` at linux command prompt) and type the following at an R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
-
-```
-install.packages("gplots")
-install.packages("ggplot2")
-quit()
-```
-
-##[Bioconductor](http://www.bioconductor.org/)
-For this tutorial we require:
-- [cummeRbund](http://compbio.mit.edu/cummeRbund/)
-- [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
-
-launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
-
-```
-source("http://bioconductor.org/biocLite.R")
-biocLite("cummeRbund")
-biocLite("edgeR")
-quit()
-```	
 
 ##[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 Note, the linux installation below will not work without X11 libraries (as on Amazon cloud)
@@ -153,6 +109,53 @@ cd samstat-1.5
 make
 ./src/samstat
 ```
+
+
+##[R](http://www.r-project.org/)
+This install takes a while so check if you have R installed already by typing `which R`.
+It is already installed on the Cloud, but for completeness, here is how it was done. Please skip all R installation!
+
+```
+#cd $RNA_HOME/tools/
+#export R_LIBS=
+#wget http://cran.us.r-project.org/src/base/R-3/R-3.1.0.tar.gz
+#tar -zxvf R-3.1.0.tar.gz
+#cd R-3.1.0
+#./configure --prefix=$RNA_HOME/tools/R-3.1.0/
+#make
+#make install
+#./bin/Rscript
+```
+
+Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
+
+##R Libraries
+For this tutorial we require:
+- [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
+- [ggplot2](http://ggplot2.org/)
+
+launch R (enter `R` at linux command prompt) and type the following at an R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
+
+```
+#install.packages("gplots")
+#install.packages("ggplot2")
+#quit()
+```
+
+##[Bioconductor](http://www.bioconductor.org/)
+For this tutorial we require:
+- [cummeRbund](http://compbio.mit.edu/cummeRbund/)
+- [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+
+launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
+
+```
+#source("http://bioconductor.org/biocLite.R")
+#biocLite("cummeRbund")
+#biocLite("edgeR")
+#quit()
+```	
+
 
 ---
 ##Practical Exercise 1
