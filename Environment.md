@@ -1,4 +1,4 @@
-#i-iv. ENVIRONMENT
+#i-iv. Environment
 This tutorial assumes use of a Linux computer with an 'x86_64' architecture.  The rest of the tutorial should be conducted in a linux Terminal session.  In other words you must already be logged into the Amazon EC2 instance as described in the previous section.
 
 Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'  

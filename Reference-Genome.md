@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-#2-ii. Reference Genome
+#2-ii. Reference Genomes
 Obtain a reference genome from iGenomes. In this example analysis we will use the human hg19/NCBI build 37 version of the genome. Furthermore, we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
 
 Create the necessary working directory
@@ -27,10 +27,13 @@ View the first 10 lines of this file
 How many lines and characters are in this file?
 
 	wc chr22_ERCC92.fa
+
+View 10 lines from approximately the middle of this file
+
+	head -n 425000 chr22_ERCC92.fa | tail
 	
-Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC  
-e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
-Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files.
+Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
+Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files (described in the next section).
 
 | [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
 |:---------------------------------:|:--------------------------------------:|:---------------------------:|

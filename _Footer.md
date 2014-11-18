@@ -4,5 +4,5 @@ Module 2: [[Installation|Installation]] | [[Reference Genomes|Reference-Genome]]
 Module 3: [[Alignment|Alignment]] | [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]]<br>
 Module 4: [[Expression|Expression]] | [[Differential Expression|Differential-Expression]] | [[DE Visualization|DE-Visualization]]<br>
 Module 5: [[Ref Guided|Reference-Guided-Transcript-Assembly]] | [[De novo|de-novo-Transcript-Assembly]] | [[Merging|Transcript-Assembly-Merge]] | [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]<br>
-Appendix: [[AWS Setup|AWS-Setup]] | [[Assignment Solutions|Solutions]]<br>
+Appendix: [[Lectures|Lectures]] | [[Assignment Solutions|Solutions]] | [[Proposed Improvements|Proposed-Improvements]] | [[AWS Setup|AWS-Setup]]<br>
 

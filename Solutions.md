@@ -35,7 +35,7 @@ tophat2 -p 8 -r 60 --rg-id=HCC1395_tumor --rg-sample=HCC1395_tumor -o HCC1395_tu
 ```
 
 
-| [[Previous Section|AWS-Setup]]  | [[This Section|Solutions]]         | Next Section          |
+| [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Proposed-Improvements]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
-| [[AWS Setup|AWS-Setup]]         | [[Assignment Solutions|Solutions]] |                       |
+| [[Lectures|Lectures]]         | [[Assignment Solutions|Solutions]] |  [[Proposed Improvements|Proposed-Improvements]] |
 

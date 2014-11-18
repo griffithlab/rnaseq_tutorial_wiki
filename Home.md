@@ -29,5 +29,7 @@ Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all
    4. [[Differential Splicing|Differential-Splicing]]
    5. [[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]
 5. **Appendix**
-   1. [[AWS Setup|AWS-Setup]]
+   1. [[Lectures|Lectures]]
    2. [[Assignment Solutions|Solutions]]
+   3. [[Proposed Improvements|Proposed-Improvements]]
+   4. [[AWS Setup|AWS-Setup]]

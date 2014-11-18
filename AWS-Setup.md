@@ -27,7 +27,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 * To allow installation of bioinformatics tools some basic dependencies must be installed first.
 ```
 sudo apt-get update
-sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2
+sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip
 ```
 * logout and log back in
 
@@ -101,8 +101,8 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ###Set up a dynamic DNS service
 
-Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com to create hostnames like cshl01.dyndns.org, cshl02,dyndns.org, etc that point to each public IP address of student instances.
+Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com to create hostnames like rna01.dyndns.org, rna02.dyndns.org, etc that point to each public IP address of student instances.
 
-| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|AWS-Setup]] | [[Next Section|Solutions]]   |
+| [[Proposed Improvements|Proposed-Improvements]]       | [[This Section|AWS-Setup]] | Next Section   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[AWS Setup|AWS-Setup]]    | [[Assignment Solutions|Solutions]] |
+| [[Proposed Improvements|Proposed-Improvements]] | [[AWS Setup|AWS-Setup]]    |  |
