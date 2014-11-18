@@ -39,8 +39,8 @@ This caused a segfault, may need to debug or make optional
 	samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
 View the `samstat` summary file in a web browser. Note, you must replace ## with your own amazon instance number (e.g., "01")):  
-* http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html  
-* http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html  
+* http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.samstat.html  
+* http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.samstat.html  
 	
 Details of the SAM/BAM format can be found here:  
 http://samtools.sourceforge.net/SAM1.pdf
