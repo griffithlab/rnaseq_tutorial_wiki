@@ -54,7 +54,11 @@ How many genes have at least one *novel* transcript assembled?
  * http://cshl##.dyndns.org/workspace/rnaseq/expression/tophat_cufflinks/ref_guided/merged/merged.gtf
  * http://cshl##.dyndns.org/workspace/rnaseq/expression/tophat_cufflinks/de_novo/merged/merged.gtf
 
-Go to this region: '22:44823240-44916000'. Do you see the evidence for a novel single exon transcript that is found in 'de_novo' and 'ref_guided' modes but is NOT found in 'ref_only' mode?
+Go to the following regions:
+* 22:45730787-45736825 
+* 
+
+Do you see the evidence for any novel exons/transcript that are found in 'de_novo' or 'ref_guided' modes but NOT found in 'ref_only' mode?
 
 Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
 	
