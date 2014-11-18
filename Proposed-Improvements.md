@@ -12,7 +12,9 @@ sudo ln -s /bin/bash /bin/sh
 Pre-install the `tree` command in the Amazon AMI so that it is ready for students to use
 
 ### Install 'pip' command into the AMI
-In order for htseq-count to use bam files directly it needs pysam. This can be installed with pip but that is not available by default. On AMI:
+In order for htseq-count to use bam files directly it needs pysam. This can be installed with pip but that is not available by default. Remove the install method of pysam from [[Expression|Expression]] page.
+
+Then, On AMI install and test htseq-count with bam files:
 ```
 sudo apt-get install python-pip
 sudo pip install pysam
