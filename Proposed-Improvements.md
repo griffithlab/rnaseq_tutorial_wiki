@@ -8,7 +8,7 @@ sudo mv /bin/sh /bin/sh.orig
 sudo ln -s /bin/bash /bin/sh
 ```
 
-### Install `tree` into the AMI
+### Install 'tree' command into the AMI
 Pre-install the `tree` command in the Amazon AMI so that it is ready for students to use
 
 ### Create a trimming section 
