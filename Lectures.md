@@ -13,4 +13,4 @@ Presentations:
 * [[Module 5 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2014/RNASeq_Module5_Tutorial.pdf]]
 
 
-Lecture Videos (courtesy of bioinformatics.ca)
+Lecture Videos (courtesy of [bioinformatics.ca](http://www.bioinformatics.ca))
