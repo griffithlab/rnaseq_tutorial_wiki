@@ -15,7 +15,7 @@ Try filtering the BAM file to require or exclude certain flags. This can be done
  -F INT   filtering flag  
 
 Google "samtools flags explained"
-* http://picard.sourceforge.net/explain-flags.html
+* http://broadinstitute.github.io/picard/explain-flags.html
 
 Try requiring that alignments are 'paired' and 'mapped in a proper pair' (=3). ALso filter out alignments that are 'unmapped', the 'mate is unmapped', and 'not primary alignment' (=268)
 
