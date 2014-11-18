@@ -60,12 +60,12 @@ Pay attention to how the predicted transcripts line up with known transcripts. T
 	
 Load a BAM file at the same time as the junctions.bed and merged.gtf files:
 * The following can be loaded directly in IGV by url
- * http://cbw##.ssh01.com/rnaseq/alignments/tophat/Tumor_ALL/accepted_hits.bam
+ * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam
 	
 NOTE: We have just scratched the surface exploring these output files!!!
 	
 	
- ##SAVING A COPY OF YOUR RESULTS TO TAKE HOME WITH YOU
+##SAVING A COPY OF YOUR RESULTS TO TAKE HOME WITH YOU
 If you are performing this tutorial on a cloud instance, everything will be deleted when the instance is destroyed! To package and download everything used or created during the tutorials you can do the following from your cloud terminal session.
 
 First package and compress all of the directories and files in the ‘rnaseq’ directory
