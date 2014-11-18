@@ -29,7 +29,7 @@ Use `samtools flagstat` to get a basic summary of an alignment.  What percent of
 
 	cd $RNA_HOME/alignments/tophat/
 	samtools flagstat UHR_Rep1_ERCC-Mix1/accepted_hits.bam
-	samtools flagstat UHR_Rep1_ERCC-Mix1//accepted_hits.bam
+	samtools flagstat UHR_Rep1_ERCC-Mix1/accepted_hits.bam
 	
 Run `samstat` on UHR/HBR BAMs
 
