@@ -9,7 +9,7 @@ http://tophat.cbcb.umd.edu/tutorial.html
 	
 TopHat2 basic usage:
 ```
-tophat2 [options] <bowtie_index> <lane1_reads1[,lane2_reads1,...]> <lane1_reads2[,lane2_reads2,...]> 
+#tophat2 [options] <bowtie_index> <lane1_reads1[,lane2_reads1,...]> <lane1_reads2[,lane2_reads2,...]> 
 ```
 	
 Extra options specified below:
