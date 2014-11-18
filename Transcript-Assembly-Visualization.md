@@ -41,7 +41,7 @@ How many genes have at least one *novel* transcript assembled?
 ##Visualizing Results in the IGV Browser
 	
 junctions.bed files:
-* View the tophat junctions.bed file generated all the way back in Module 2
+* Load the tophat junctions.bed file (generated all the way back in Module 3) in IGV
 * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_Rep1_ERCC-Mix1/junctions.bed
 * Go to the gene 'CYTH4'
 * Do you see the evidence for a novel exon?
