@@ -33,7 +33,7 @@ We can use a perl command-line command to find out:
 
 Now view the structure of a single transcript in GTF format. Press 'q' to exit the 'less' display when you are done.
 
-	grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p exon -S
+	grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p "exon\s" -S
 
 To learn more, see:
 * http://perldoc.perl.org/perlre.html#Regular-Expressions
