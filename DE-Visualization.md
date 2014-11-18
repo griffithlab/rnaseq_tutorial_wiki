@@ -19,16 +19,6 @@ A separate R tutorial file has been provided in the github repo for part 2 of th
 
 Occasionally you may wish to reformat and work with cuffdiff output in R manually. Therefore we provide an optional/advanced tutorial on how to format your results for R and perform "old school" (non-cummeRbund analysis) on your data.
 
-Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Copy the necessary files to a new directory.
-
-	cd $RNA_HOME/
-	mkdir -p final_results/tophat_cufflinks/ref_only
-	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
-	
-A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part3_Supplementary_R.R)
-
 In this tutorial you will:
 
 * Learn basic R usage and commands (common plots, and data manipulation tasks)
@@ -39,12 +29,22 @@ In this tutorial you will:
 * Generate a list of the top differentially expressed genes
 * Ask how reproducible technical replicates are.
 
+Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Copy the necessary files to a new directory.
+
+	cd $RNA_HOME/
+	mkdir -p final_results/tophat_cufflinks/ref_only
+	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only
+	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
+	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
+
 Navigate to the correct directory and then launch R:
 
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
 	R
-	
-Then, run the R commands detailed in the R script above. The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
+
+A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
+
+The output file can be viewed in your browser at the following url. Note, you must replace cshl## with your own amazon instance number (e.g., "cshl01")).
 * http://cshl##.dyndns.org/workspace/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
 
 ##ERCC DE Analysis
