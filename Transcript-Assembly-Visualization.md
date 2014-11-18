@@ -9,7 +9,7 @@ View the junctions.bed files created by TopHat
 	cd $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/
 	head junctions.bed
 	
-View the merged GTF file from the 'de_novo' mode.  Remember this merged GTF file combines both UHR and HBR (GTFs for each were also produced),
+View the merged GTF file from the 'de_novo' mode.  Remember this merged GTF file combines both UHR and HBR (GTFs for each individually were also produced earlier).
 
 	cd $RNA_HOME/expression/tophat_cufflinks/de_novo/merged/
 	head merged.gtf
