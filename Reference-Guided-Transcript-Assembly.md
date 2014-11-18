@@ -33,11 +33,13 @@ Extra options specified below
 	mkdir -p tophat_cufflinks/ref_guided
 	cd tophat_cufflinks/ref_guided
 	
-	cufflinks -p 8 -o Normal_cDNA1_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA1_lib2/accepted_hits.bam
-	cufflinks -p 8 -o Normal_cDNA2_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Normal_cDNA2_lib2/accepted_hits.bam
-	cufflinks -p 8 -o Tumor_cDNA1_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA1_lib2/accepted_hits.bam
-	cufflinks -p 8 -o Tumor_cDNA2_lib2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/Tumor_cDNA2_lib2/accepted_hits.bam
+	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam
+	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam
+	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam
 
+	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam
+	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
+	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
 | [[Previous Section|DE-Visualization]] | [[This Section|Reference-Guided-Transcript-Assembly]] | [[Next Section|de-novo-Transcript-Assembly]] |
 |:-------------------------------------:|:-----------------------------------------------------:|:--------------------------------------------:|
