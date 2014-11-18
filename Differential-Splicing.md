@@ -27,7 +27,7 @@ Perform UHR vs. HBR comparison, for known/novel (reference guided mode) transcri
 Perform UHR vs. HBR comparison, using just the capture libraries, for known/novel (de novo mode) transcripts:
 
 	cd $RNA_HOME/
-	mkdir de/tophat_cufflinks/de_novo/
+	mkdir -p de/tophat_cufflinks/de_novo/
 	cd $RNA_HOME/alignments/tophat/
 	
 	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/de_novo/ --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/de_novo/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam,UHR_Rep2_ERCC-Mix1/accepted_hits.bam,UHR_Rep3_ERCC-Mix1/accepted_hits.bam HBR_Rep1_ERCC-Mix2/accepted_hits.bam,HBR_Rep2_ERCC-Mix2/accepted_hits.bam,HBR_Rep3_ERCC-Mix2/accepted_hits.bam
