@@ -58,10 +58,8 @@ http://cshl##.dyndns.org/workspace/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Alig
 Try to find a variant position in the RNAseq data:  
 - HINT: *DDX17* is a highly expressed gene with several variants in its 3' UTR.  
 - Other highly expressed genes you might explore are: *NUP50*, *CYB5R3*, and *EIF3L* (all have at least one transcribed variant).  
-- Are these variants previously known (e.g., present in dbSNP)?  
-- Homozygous or heterozygous?  
-- Germline or somatic?  
-- Do they display allele-specific expression?  
+- Are these variants previously known (e.g., present in dbSNP)?    
+- How should we interpret the allele frequency of each variant?  Remember that we have rather unusual samples here in that they are actually pooled RNAs corresponding to multiple individuals (genotypes).
 - Take note of the genomic position of your variant. We will need this later.  
 	
 ##BAM READ COUNTING
