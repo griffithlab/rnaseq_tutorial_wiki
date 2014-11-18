@@ -32,11 +32,18 @@ Use `samtools flagstat` to get a basic summary of an alignment.  What percent of
 	samtools flagstat UHR_Rep1_ERCC-Mix1//accepted_hits.bam
 	
 Run `samstat` on UHR/HBR BAMs
-This caused a segfault, may need to debug or make optional
 
 	cd $RNA_HOME/alignments/tophat/
 	samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
 	samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
+
+This may cause a segfault and produce incomplete results. If so you can try downloading an older version of the samstat software:
+
+	cd ~/bin
+	wget https://dl.dropboxusercontent.com/u/16769159/samstat
+	cd $RNA_HOME/alignments/tophat/
+	~/bin/samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
+	~/bin/samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
 View the `samstat` summary file in a web browser. Note, you must replace ## with your own amazon instance number (e.g., "01")):  
 * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.samstat.html  
