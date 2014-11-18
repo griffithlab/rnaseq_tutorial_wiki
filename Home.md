@@ -31,3 +31,4 @@ Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all
 5. **Appendix**
    1. [[AWS Setup|AWS-Setup]]
    2. [[Assignment Solutions|Solutions]]
+   3. [[Proposed Improvements|Proposed-Improvements]]
