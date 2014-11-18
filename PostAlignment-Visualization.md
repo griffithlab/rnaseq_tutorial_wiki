@@ -86,8 +86,9 @@ See samtools pileup/mpileup documentation for explanation of output
  http://samtools.sourceforge.net/pileup.shtml
  http://samtools.sourceforge.net/mpileup.shtml
 	
-Now, use bam-readcount to count reference and variant bases at a specific position
-First, create a bed file with some positions of interest (We will create a file called snvs.bed using the echo command)
+Now, use bam-readcount to count reference and variant bases at a specific position. 
+First, create a bed file with some positions of interest (We will create a file called snvs.bed using the echo command). 
+
 It will contains a single line specify a variant position on chr22 and position 18905977.  i.e.:
 22	38879688	38879688
 	
