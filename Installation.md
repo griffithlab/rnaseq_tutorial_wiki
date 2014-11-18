@@ -214,10 +214,10 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 ## Installing tools from official ubuntu packages
 Some useful tools are available as official ubuntu packages.  These can be installed using the linux package management system `apt`.  Most bioinformatic tools (especially the latest versions) are not available as official packages.  Nevertheless, here is how you would update your `apt` library, upgrade existing packages, and install an Ubuntu tool called `tree`.
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install tree
-
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install tree
+	tree
 
 | [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
 |:------------------------------:|:-----------------------------:|:-------------------------------------:|
