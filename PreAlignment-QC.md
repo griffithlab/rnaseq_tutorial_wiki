@@ -11,7 +11,7 @@ Video Tutorial here:
 Try to run FastQC on one of your fastq files
 
 Go to the following url in your browser:
-* http://cshl**.dyndns.org/workspace/rnaseq/data/
+* http://cshl##.dyndns.org/workspace/rnaseq/data/
 * right-click to save a fastq file to your laptop
 * Note, you must replace cshl** with your own amazon instance number (e.g., "cshl01"))
 
