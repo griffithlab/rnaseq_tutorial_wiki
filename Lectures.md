@@ -1,4 +1,4 @@
-This page contains links to current versions of lecture and tutorial presentations.
+##Current versions of lecture and tutorial presentations.
 
 ###CSHL Advanced Sequencing Technologies and Applications (2014)
 
