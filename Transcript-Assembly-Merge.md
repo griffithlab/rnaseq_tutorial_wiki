@@ -22,14 +22,14 @@ Merge all 4 cufflinks results so that they will have the same set of transcripts
  For reference guided mode:
 
 	cd $RNA_HOME/expression/tophat_cufflinks/ref_guided/
-	ls -1 *cDNA*lib*/transcripts.gtf > assembly_GTF_list.txt
+	ls -1 *Rep*_ERCC*/transcripts.gtf > assembly_GTF_list.txt
 	cat assembly_GTF_list.txt
 	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/22/ assembly_GTF_list.txt
 	
  For de novo mode:
 
 	cd $RNA_HOME/expression/tophat_cufflinks/de_novo/
-	ls -1 *cDNA*lib*/transcripts.gtf > assembly_GTF_list.txt
+	ls -1 *Rep*_ERCC*/transcripts.gtf > assembly_GTF_list.txt
 	cat assembly_GTF_list.txt
 	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/22/ assembly_GTF_list.txt
 	
