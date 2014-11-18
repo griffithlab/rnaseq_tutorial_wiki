@@ -86,7 +86,7 @@ See samtools pileup/mpileup documentation for explanation of output
  http://samtools.sourceforge.net/mpileup.shtml
 	
 Now, use bam-readcount to count reference and variant bases at a specific position. 
-First, create a bed file with some positions of interest (We will create a file called snvs.bed using the echo command). 
+First, create a bed file with some positions of interest (we will create a file called snvs.bed using the echo command). 
 
 It will contain a single line specifying a variant position on chr22 e.g.:
 22	38879688	38879688
@@ -101,7 +101,7 @@ Run bam-readcount on this list for the tumor and normal merged bam files
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null
 
-Now, run again, but ignore stderr and redirect stdout to file:
+Now, run again, but ignore stderr and redirect stdout to a file:
 
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null 1>UHR_bam-readcounts.txt
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null 1>HBR_bam-readcounts.txt
