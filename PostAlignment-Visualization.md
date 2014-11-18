@@ -36,7 +36,7 @@ http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/ac
 **HBR Tophat alignment**
 http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam
 
-**UPDATE THESE EXAMPLES ... **
+**UPDATE THESE EXAMPLES**
 Go to an example gene locus on chr22:
  e.g. *EIF3L*, *NDUFA6*, *RBX1* have nice coverage
  e.g. MMP11 and TST are differentially expressed. Are they up-regulated or down-regulated in the tumor?
