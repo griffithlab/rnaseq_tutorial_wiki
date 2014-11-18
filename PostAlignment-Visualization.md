@@ -1,15 +1,14 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 #3-ii. Post-Alignment Visualization
-Index BAM files to allow viewing in IGV (using samtools index)
+Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose.
 
       cd $RNA_HOME
       export RNA_ALIGN_DIR=$RNA_HOME/alignments/tophat/
       echo $RNA_ALIGN_DIR
       cd $RNA_ALIGN_DIR
 	
-Display samtools index commands to be run (i.e. 'echo' the command that will be executed by unix find)
-You could copy and paste these commands to run them, or repeat the find command without the 'echo' as below
+First lets display the samtools index commands to be run (i.e. 'echo' the command that will be executed by unix find). You could copy and paste these commands to run them, or repeat the find command without the 'echo' as below
 
     find $RNA_ALIGN_DIR*/accepted_hits.bam -exec echo samtools index {} \;
 	        
