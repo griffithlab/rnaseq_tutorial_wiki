@@ -101,7 +101,7 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ###Set up a dynamic DNS service
 
-Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com to create hostnames like cshl01.dyndns.org, cshl02,dyndns.org, etc that point to each public IP address of student instances.
+Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com to create hostnames like rna01.dyndns.org, rna02.dyndns.org, etc that point to each public IP address of student instances.
 
 | [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|AWS-Setup]] | [[Next Section|Solutions]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
