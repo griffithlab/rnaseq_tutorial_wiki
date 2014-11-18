@@ -23,3 +23,4 @@ The shell is the interface between the kernel and the user.
 * Provides shortcuts for usability (tab completion)
 * Stores a history of all commands run. Try `history` or press the up arrow in the terminal
 
+![Kernel Example - Module 2](Images/unix_kernel_example.jpg)
