@@ -59,7 +59,6 @@ View the results here:
 * http://cshl##.dyndns.org/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ##edgeR Analysis		
-A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part4_edgeR.R)
 
 In this tutorial you will:
 
@@ -79,10 +78,14 @@ Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
 
 	cd $RNA_HOME/refs/hg19/genes
 	perl -ne 'if ($_=~/gene_id\s\"(ENSG\d+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";}' genes_chr22_ERCC92.gtf | sort | uniq > ENSG_ID2Name.txt
+
+Navigate to the correct directory and then launch R:
 	
 	cd $RNA_HOME/de/tophat_counts
 	R
 	
+A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
+
 Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff:
 
 	cat $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt
