@@ -26,6 +26,8 @@ Extra options specified below
 * '-p 8' tells Cufflinks to use eight CPUs
 * '-g/--GTF-guide <known transcripts file>' Tells Cufflinks to consider known transcript annotations during the assembly process
 * '-o' tells Cufflinks to write output to a particular directory (one per sample)
+
+First, create an output directory. 
 	
 	cd $RNA_HOME/expression/
 	mkdir -p tophat_cufflinks/ref_guided
