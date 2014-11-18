@@ -54,27 +54,30 @@ How many genes have at least one *novel* transcript assembled?
  * http://cshl##.dyndns.org/workspace/rnaseq/expression/tophat_cufflinks/ref_guided/merged/merged.gtf
  * http://cshl##.dyndns.org/workspace/rnaseq/expression/tophat_cufflinks/de_novo/merged/merged.gtf
 
- Go to this region: '22:44823240-44916000'
- Do you see the evidence for a novel single exon transcript that is found in 'de_novo' and 'ref_guided' modes but is NOT found in 'ref_only' mode?
- Pay attention to how the predicted transcripts line up with known transcripts.  Try loading the Ensembl transcripts track (File -> Load from Server)
+Go to this region: '22:44823240-44916000'. Do you see the evidence for a novel single exon transcript that is found in 'de_novo' and 'ref_guided' modes but is NOT found in 'ref_only' mode?
+
+Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
 	
 Load a BAM file at the same time as the junctions.bed and merged.gtf files:
-	http://cbw##.ssh01.com/rnaseq/alignments/tophat/Tumor_ALL/accepted_hits.bam
+* The following can be loaded directly in IGV by url
+ * http://cbw##.ssh01.com/rnaseq/alignments/tophat/Tumor_ALL/accepted_hits.bam
 	
 NOTE: We have just scratched the surface exploring these output files!!!
 	
 	
  ##SAVING A COPY OF YOUR RESULTS TO TAKE HOME WITH YOU
- If you are performing this tutorial on a cloud instance, everything will be deleted when the instance is destroyed!
- To package and download everything used or created during the tutorials you can do the following from your cloud terminal session.
- First package and compress all of the directories and files in the ‘rnaseq’ directory
+If you are performing this tutorial on a cloud instance, everything will be deleted when the instance is destroyed! To package and download everything used or created during the tutorials you can do the following from your cloud terminal session.
+
+First package and compress all of the directories and files in the ‘rnaseq’ directory
+
 	cd /home/ubuntu/workspace/
 	tar -czvf rnaseq_tutorial.tar.gz rnaseq/
 	
  Now you can download this to your own computer from here:
- http://cbw##.ssh01.com/rnaseq_tutorial.tar.gz
+ * http://cshl##.dyndns.org/rnaseq_tutorial.tar.gz
 	
  To unpack this archive at a terminal session on your own Linux or Mac computer you can do the following:
+
 	tar -xzvf rnaseq_tutorial.tar.gz
 	
 | [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|AWS-Setup]]         |
