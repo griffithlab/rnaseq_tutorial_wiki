@@ -40,7 +40,7 @@ http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/ac
 Go to an example gene locus on chr22:
  e.g. *EIF3L*, *NDUFA6*, *RBX1* have nice coverage
  e.g. *SULT4A1* and *GTSE1* are differentially expressed. Are they up-regulated or down-regulated in the brain (HBR) compared to cancer cell lines (UHR)?
- Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from.
+ Mouse over some reads and use the read group (RG) flag to determine which replicate the reads come from. What other details can you learn about each read and its alignment to the reference genome.
 
 ---
 ###OPTIONAL ALTERNATIVE
