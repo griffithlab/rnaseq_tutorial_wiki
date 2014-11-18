@@ -89,6 +89,7 @@ Now, use `bam-readcount` to count reference and variant bases at a specific posi
 First, create a bed file with some positions of interest (we will create a file called snvs.bed using the echo command). 
 
 It will contain a single line specifying a variant position on chr22 e.g.:
+
 22	38879688	38879688
 	
 Create the bed file
