@@ -17,4 +17,4 @@ Create a wiki section and exercise that summarizes read trimming concepts. Start
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[AWS Setup|AWS-Setup]] | [[AWS Setup|AWS-Setup]]    | [[Assignment Solutions|Solutions]] |
+| [[Solutions|Solutions]] | [[Proposed Improvements|Proposed-Improvements]]    | [[AWS Setup|AWS-Setup]] |
