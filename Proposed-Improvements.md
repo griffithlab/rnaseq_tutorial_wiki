@@ -14,3 +14,7 @@ Pre-install the `tree` command in the Amazon AMI so that it is ready for student
 ### Create a trimming section 
 Create a wiki section and exercise that summarizes read trimming concepts. Start with some raw data, including aligned reads.  Align these reads without any trimming and assess alignment statistics using Picard, FastQC, etc.  Now take these same reads and perform both adaptor trimming and quality trimming.  Re-align the trimmed reads and assess the effect of trimming on alignment metrics.
 
+
+| [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
+|:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
+| [[AWS Setup|AWS-Setup]] | [[AWS Setup|AWS-Setup]]    | [[Assignment Solutions|Solutions]] |
