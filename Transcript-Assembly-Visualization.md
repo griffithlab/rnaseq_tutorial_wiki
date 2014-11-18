@@ -74,7 +74,7 @@ First package and compress all of the directories and files in the ‘rnaseq’ 
 	tar -czvf rnaseq_tutorial.tar.gz rnaseq/
 	
  Now you can download this to your own computer from here:
- * http://cshl##.dyndns.org/rnaseq_tutorial.tar.gz
+ * http://cshl##.dyndns.org/workspace/rnaseq_tutorial.tar.gz
 	
  To unpack this archive at a terminal session on your own Linux or Mac computer you can do the following:
 
