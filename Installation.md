@@ -206,7 +206,7 @@ If you would like to learn more about how to use vi, try this tutorial/game: [VI
 NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
 
 	cd ~
-	wget -N https://dl.dropboxusercontent.com/u/16769159/CSHL/.bashrc
+	wget -N https://github.com/griffithlab/rnaseq_tutorial/wiki/config/.bashrc
 
 
 | [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
