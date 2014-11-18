@@ -39,7 +39,7 @@ http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/ac
 **UPDATE THESE EXAMPLES**<br>
 Go to an example gene locus on chr22:
  e.g. *EIF3L*, *NDUFA6*, *RBX1* have nice coverage
- e.g. *MMP11* and *TST* are differentially expressed. Are they up-regulated or down-regulated in the tumor?
+ e.g. *SULT4A1* and *GTSE1* are differentially expressed. Are they up-regulated or down-regulated in the brain (HBR) compared to cancer cell lines (UHR)?
  Mouse over some reads and use the read group (RG) flag to determine which protocol the reads come from.
 
 ---
@@ -54,14 +54,15 @@ http://cshl##.dyndns.org/workspace/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Alig
 
 ---
 
+### Exercise
 Try to find a variant position in the RNAseq data:  
-HINT: *DDX17* is a highly expressed gene with several variants in its 3' UTR.  
-Other highly expressed genes you might explore are: *NUP50*, *CYB5R3*, and *EIF3L* (all have at least one transcribed variant).  
-Are these variants previously known (e.g., present in dbSNP)?  
-Homozygous or heterozygous?  
-Germline or somatic?  
-Do they display allele-specific expression?  
-Take note of the genomic position of your variant. We will need this later.  
+- HINT: *DDX17* is a highly expressed gene with several variants in its 3' UTR.  
+- Other highly expressed genes you might explore are: *NUP50*, *CYB5R3*, and *EIF3L* (all have at least one transcribed variant).  
+- Are these variants previously known (e.g., present in dbSNP)?  
+- Homozygous or heterozygous?  
+- Germline or somatic?  
+- Do they display allele-specific expression?  
+- Take note of the genomic position of your variant. We will need this later.  
 	
 ##BAM READ COUNTING
 Using one of the variant positions identified above, count the number of supporting reference and variant reads
