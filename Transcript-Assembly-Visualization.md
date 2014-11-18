@@ -44,6 +44,8 @@ How many genes have at least one *novel* transcript assembled?
 * View the tophat junctions.bed file (generated all the way back in Module 3)
 * The following can be loaded directly in IGV by url
  * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/UHR_Rep1_ERCC-Mix1/junctions.bed
+ * http://cshl##.dyndns.org/workspace/rnaseq/alignments/tophat/HBR_Rep1_ERCC-Mix2/junctions.bed
+
 * Go to the gene 'RAC2'
 * Do you see the evidence for any novel exons?
 	
