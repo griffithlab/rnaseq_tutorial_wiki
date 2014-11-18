@@ -27,6 +27,10 @@ View the first 10 lines of this file
 How many lines and characters are in this file?
 
 	wc chr22_ERCC92.fa
+
+View 10 lines from approximately the middle of this file
+
+head -n 425000 chr22_ERCC92.fa | tail
 	
 Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC  
 e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
