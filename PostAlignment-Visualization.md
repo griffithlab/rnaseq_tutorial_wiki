@@ -62,8 +62,8 @@ Try to find a variant position in the RNAseq data:
 - Take note of the genomic position of your variant. We will need this later.  
 	
 ##BAM READ COUNTING
-Using one of the variant positions identified above, count the number of supporting reference and variant reads
-First, use samtools mpileup to visualize a region of alignment with a variant.
+Using one of the variant positions identified above, count the number of supporting reference and variant reads. 
+First, use `samtools mpileup` to visualize a region of alignment with a variant.
 
 	cd $RNA_HOME
 	mkdir bam_readcount
@@ -77,7 +77,7 @@ Create faidx indexed reference sequence file for use with mpileup
 
 	samtools faidx $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa
 	
-Run samtools mpileup on a region of interest
+Run `samtools mpileup` on a region of interest
 
 	samtools mpileup -b bamfilelist.txt -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa -r 22:18905970-18905980
 	
@@ -85,7 +85,7 @@ See samtools pileup/mpileup documentation for explanation of output
  http://samtools.sourceforge.net/pileup.shtml
  http://samtools.sourceforge.net/mpileup.shtml
 	
-Now, use bam-readcount to count reference and variant bases at a specific position. 
+Now, use `bam-readcount` to count reference and variant bases at a specific position. 
 First, create a bed file with some positions of interest (we will create a file called snvs.bed using the echo command). 
 
 It will contain a single line specifying a variant position on chr22 e.g.:
@@ -96,7 +96,7 @@ Create the bed file
 	echo "22 38879688 38879688"
 	echo "22 38879688 38879688" > snvs.bed
 	
-Run bam-readcount on this list for the tumor and normal merged bam files
+Run `bam-readcount` on this list for the tumor and normal merged bam files
 
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null
