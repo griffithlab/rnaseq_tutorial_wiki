@@ -5,6 +5,7 @@
 - [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ExpressionAnalysis_Cufflinks_Trapnell_2012.pdf)
 - [Differential analysis of gene regulation at transcript resolution with RNA-seq] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/DifferentialExpressionAnalysis_CuffDiff2_Trapnell_2013.pdf)
 - [Methods to study splicing from high-throughput RNA sequencing data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/SplicingAnalysisMethods_2014.pdf)
+- [Focus on RNA sequencing quality control (SEQC)] (http://www.nature.com/nbt/journal/v32/n9/full/nbt.3025.html)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
