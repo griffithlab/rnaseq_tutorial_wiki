@@ -81,8 +81,16 @@ Extra options specified below:
 * '--type' specifies the feature type (3rd column in GFF file) to be used. (default, suitable for RNA-Seq and Ensembl GTF files: exon)
 * '--idattr' The feature ID used to identity the counts in the output table. The default, suitable for RNA-SEq and Ensembl GTF files, is gene_id.
 
+NOTE: a necessary package is missing for HTSeq. Install it now as follows:
+
+	cd ~/bin/
+	wget https://pysam.googlecode.com/files/pysam-0.7.5.tar.gz
+	tar -zxvf pysam-0.7.5.tar.gz
+	cd pysam-0.7.5/
+	python setup.py build
+	sudo python setup.py install
 	
-We could use either the tophat or STAR alignments. We have chosen to use tophat alignments here.  Run htseq-count and calculate gene-level counts:
+We could use either the tophat or STAR alignments. We have chosen to use tophat alignments here. Run htseq-count and calculate gene-level counts:
 
 	cd $RNA_HOME/
 	mkdir -p expression/tophat_counts
