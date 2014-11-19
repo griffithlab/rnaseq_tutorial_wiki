@@ -37,6 +37,7 @@
 - [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
+- [A list of Genome Analysis Platforms like Galaxy, BaseSpace, etc.](https://docs.google.com/spreadsheets/d/1o8iYwYUy0V7IECmu21Und3XALwQihioj23WGv-w0itk/pubhtml)
 
 #### 8. Getting More Help
 - [Biostar - A forum for the bioinformatics community](http://www.biostars.org/)
