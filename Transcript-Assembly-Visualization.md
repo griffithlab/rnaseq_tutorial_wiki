@@ -88,4 +88,4 @@ First package and compress all of the directories and files in the ‘rnaseq’ 
 	
 | [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|AWS-Setup]]         |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------:|
-| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]      | [[AWS Setup|AWS-Setup]]          |
+| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]      | [[Lectures|Lectures]]          |
