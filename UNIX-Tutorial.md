@@ -26,10 +26,13 @@ The shell is the interface between the kernel and the user.
 ![Kernel Example - Module 2](Images/unix_kernel_example.jpg)
 
 #Commands
+To get started open a terminal.
 ##Navigating the filesystem
+Let's start by learning how to get around in unix. Before we get started there are a few things that you need to know. This first is your home directory. Your home directory is where you start when you open a new terminal. I is a folder that has the same name as your username. This is where you will store all your files on the system. There are a few other places that you need to know. One in / (yes, slash), this is the root directory for your system and is where you would go to find any system-wide files. 
+###pwd
+`pwd` stands for print working directory. Entering `pwd` should print your home directory to your screen because that is where you start out
 ###ls
 ###cd
-###pwd
 ### . syntax
 ### .. syntax
 ### ~ syntax
@@ -49,5 +52,4 @@ The shell is the interface between the kernel and the user.
 ## Finding things
 ## Input output
 ## Sorting
-
 
