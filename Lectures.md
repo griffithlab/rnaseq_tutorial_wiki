@@ -11,7 +11,7 @@ Presentations:
 * [[Module 4 - Expression and differential expression (tutorial)|LectureFiles/cshl/2014/RNASeq_Module4_Tutorial.pdf]]
 * [[Module 5 - Isoform discovery and alternative expression (lecture)|LectureFiles/cshl/2014/RNASeq_Module5_Lecture.pdf]]
 * [[Module 5 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2014/RNASeq_Module5_Tutorial.pdf]]
-
+* [[Introduction to Genome Analysis Platforms|LectureFiles/cshl/2014/GenomeAnalysisPlatforms.pdf]]
 
 Lecture Videos (courtesy of [bioinformatics.ca](http://www.bioinformatics.ca))
 
