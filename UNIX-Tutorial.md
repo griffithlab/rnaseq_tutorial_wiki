@@ -44,6 +44,7 @@ The `.` in UNIX is useful because it provides a relative location to where you a
 ### mkdir
 `mkdir` stands for make directory. Entering this command will create a new directory. Let's make a playground folder in our home directory. To do this enter `cd` to take you home, then enter `mkdir playground` to create a playground folder. Change into your playground folder by `cd playground`.
 ### touch
+The `touch` command creates an empty file. Let's create one, enter `touch file1`. then enter `ls` to see your file
 ### rm
 ### cp
 ### mv
