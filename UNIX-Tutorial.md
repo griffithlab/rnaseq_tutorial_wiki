@@ -32,7 +32,9 @@ Let's start by learning how to get around in unix. Before we get started there a
 ###pwd
 `pwd` stands for print working directory. Entering `pwd` should print your home directory to your screen because that is where you start out
 ###ls
+`ls` stands for list. `ls` will list all of the files in your current directory.
 ###cd
+`cd` stands for change directory. Entering `cd` with no arguments will always take you home if you get lost. `cd Documents` will change your current working directory into your Documents folder.
 ### . syntax
 ### .. syntax
 ### ~ syntax
