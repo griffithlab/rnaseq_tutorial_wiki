@@ -27,6 +27,9 @@ Create a wiki section and exercise that summarizes read trimming concepts. Start
 ### Add integrated assignment content to the wiki
 Get the integrated wiki from CBW and incorporate that here.
 
+### Create a batch effect section
+We should add a section about batch effects.  Both detecting the presence of batch effects as well as correcting for them during analysis.
+
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
