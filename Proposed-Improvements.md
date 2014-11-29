@@ -23,7 +23,8 @@ sudo pip install pysam
 
 An alternative install procedure that has been tested and worked is as follows. The above procedure is preferred and should be tried first.
 
-```cd ~/bin/
+```
+cd ~/bin/
 wget https://pysam.googlecode.com/files/pysam-0.7.5.tar.gz
 tar -zxvf pysam-0.7.5.tar.gz
 cd pysam-0.7.5/
