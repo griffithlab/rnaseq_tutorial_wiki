@@ -18,6 +18,7 @@
 - [The official R intro manual](http://cran.r-project.org/doc/manuals/r-release/R-intro.html)
 - [Rseek, a search engine for R related questions](http://rseek.org/)
 - [A detailed BioStars thread describing resources for learning R](https://www.biostars.org/p/539/)
+- [Data Camp - R Tutorials and Data Analysis Courses](https://www.datacamp.com/courses)
 
 #### 4. Cloud Tutorials
 - [Setting up Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
@@ -33,6 +34,7 @@
 - [HTS Mappers - A list of read mappers](http://wwwdev.ebi.ac.uk/fg/hts_mappers/)
 
 #### 7. Useful RNA-seq and Bioinformatics resources
+- [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
 - [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
