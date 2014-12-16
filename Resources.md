@@ -1,6 +1,7 @@
 #i-v. Resources
 
 #### 1. Recommended Reading
+- [RNA-seqlopedia](http://rnaseq.uoregon.edu/)
 - [Integrative Genomics Viewer (IGV): high-performance genomics data visualization and exploration] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/IGV_2012.pdf)
 - [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ExpressionAnalysis_Cufflinks_Trapnell_2012.pdf)
 - [Differential analysis of gene regulation at transcript resolution with RNA-seq] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/DifferentialExpressionAnalysis_CuffDiff2_Trapnell_2013.pdf)
