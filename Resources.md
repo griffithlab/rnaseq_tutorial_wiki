@@ -7,6 +7,7 @@
 - [Differential analysis of gene regulation at transcript resolution with RNA-seq] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/DifferentialExpressionAnalysis_CuffDiff2_Trapnell_2013.pdf)
 - [Methods to study splicing from high-throughput RNA sequencing data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/SplicingAnalysisMethods_2014.pdf)
 - [Focus on RNA sequencing quality control (SEQC)] (http://www.nature.com/nbt/journal/v32/n9/full/nbt.3025.html)
+- [RNA-seq Data: Challenges in and Recommendations for Experimental Design and Analysis](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1113s83/full)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
@@ -34,6 +35,7 @@
 #### 6. Recommended Tools for RNA-seq analysis
 - [A recent trimming tool 'skewer' with comparison to many other read trimmers](http://www.biomedcentral.com/1471-2105/15/182/abstract)
 - [HTS Mappers - A list of read mappers](http://wwwdev.ebi.ac.uk/fg/hts_mappers/)
+- [Assessing technical performance in differential gene expression experiments with external spike-in RNA control ratio mixtures](http://www.nature.com/ncomms/2014/140925/ncomms6125/full/ncomms6125.html)
 
 #### 7. Useful RNA-seq and Bioinformatics resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
