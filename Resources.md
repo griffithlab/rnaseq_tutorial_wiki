@@ -37,7 +37,12 @@
 - [HTS Mappers - A list of read mappers](http://wwwdev.ebi.ac.uk/fg/hts_mappers/)
 - [Assessing technical performance in differential gene expression experiments with external spike-in RNA control ratio mixtures](http://www.nature.com/ncomms/2014/140925/ncomms6125/full/ncomms6125.html)
 
-#### 7. Useful RNA-seq and Bioinformatics resources
+
+#### 7. Resources to help find RNA-seq data sets
+- [GEO: The Gene Expression Omnibus](http://www.ncbi.nlm.nih.gov/geo/)
+- [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://ocean.compbio.cs.cmu.edu/sharq/)
+
+#### 8. Useful RNA-seq and Bioinformatics resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
 - [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
@@ -45,7 +50,7 @@
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
 - [A list of Genome Analysis Platforms like Galaxy, BaseSpace, etc.](https://docs.google.com/spreadsheets/d/1o8iYwYUy0V7IECmu21Und3XALwQihioj23WGv-w0itk/pubhtml)
 
-#### 8. Getting More Help
+#### 9. Getting More Help
 - [Biostar - A forum for the bioinformatics community](http://www.biostars.org/)
 - [SEQanswers - A forum for the next generation sequencing community](http://seqanswers.com/)
 
