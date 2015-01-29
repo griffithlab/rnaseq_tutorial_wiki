@@ -2,6 +2,7 @@
 
 #### 1. Recommended Reading and RNA-seq Resources
 - [RNA-seqlopedia](http://rnaseq.uoregon.edu/)
+- [Comparative analysis of RNA sequencing methods](http://www.nature.com/nmeth/journal/v10/n7/full/nmeth.2483.html)
 - [RNA-seq Data: Challenges in and Recommendations for Experimental Design and Analysis](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1113s83/full)
 - [RNA Bioinformatics (a 25 chapter book)](http://link.springer.com/book/10.1007%2F978-1-4939-2291-8)
 - [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ExpressionAnalysis_Cufflinks_Trapnell_2012.pdf)
