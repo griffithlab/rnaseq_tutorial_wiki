@@ -9,7 +9,7 @@
 - [Methods to study splicing from high-throughput RNA sequencing data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/SplicingAnalysisMethods_2014.pdf)
 - [A comprehensive assessment of RNA-seq accuracy, reproducibility and information content by the Sequencing Quality Control Consortium (SEQC)] (http://www.nature.com/nbt/journal/v32/n9/full/nbt.2957.html)
 - [RNA-seq Data: Challenges in and Recommendations for Experimental Design and Analysis](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1113s83/full)
-- [RNA Bioinformatics](http://link.springer.com/book/10.1007%2F978-1-4939-2291-8)
+- [RNA Bioinformatics (a 25 chapter book)](http://link.springer.com/book/10.1007%2F978-1-4939-2291-8)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
