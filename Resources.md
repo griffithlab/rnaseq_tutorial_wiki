@@ -1,6 +1,6 @@
 #i-v. Resources
 
-#### 1. Recommended Reading
+#### 1. Recommended Reading and RNA-seq Resources
 - [RNA-seqlopedia](http://rnaseq.uoregon.edu/)
 - [RNA-seq Data: Challenges in and Recommendations for Experimental Design and Analysis](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1113s83/abstract)
 - [Integrative Genomics Viewer (IGV): high-performance genomics data visualization and exploration] (https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/IGV_2012.pdf)
@@ -10,6 +10,8 @@
 - [A comprehensive assessment of RNA-seq accuracy, reproducibility and information content by the Sequencing Quality Control Consortium (SEQC)] (http://www.nature.com/nbt/journal/v32/n9/full/nbt.2957.html)
 - [RNA-seq Data: Challenges in and Recommendations for Experimental Design and Analysis](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1113s83/full)
 - [RNA Bioinformatics (a 25 chapter book)](http://link.springer.com/book/10.1007%2F978-1-4939-2291-8)
+- [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
+- [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
@@ -39,15 +41,12 @@
 - [HTS Mappers - A list of read mappers](http://wwwdev.ebi.ac.uk/fg/hts_mappers/)
 - [Assessing technical performance in differential gene expression experiments with external spike-in RNA control ratio mixtures](http://www.nature.com/ncomms/2014/140925/ncomms6125/full/ncomms6125.html)
 
-
 #### 7. Resources to help find RNA-seq Data Sets
 - [GEO: The Gene Expression Omnibus](http://www.ncbi.nlm.nih.gov/geo/)
 - [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://ocean.compbio.cs.cmu.edu/sharq/)
 
-#### 8. Useful RNA-seq and Bioinformatics Resources
+#### 8. General Bioinformatics Resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
-- [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
-- [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
 - [A list of Genome Analysis Platforms like Galaxy, BaseSpace, etc.](https://docs.google.com/spreadsheets/d/1o8iYwYUy0V7IECmu21Und3XALwQihioj23WGv-w0itk/pubhtml)
