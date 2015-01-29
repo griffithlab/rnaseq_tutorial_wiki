@@ -34,17 +34,17 @@
 - [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf)
 - [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf)
 
-#### 6. Recommended Tools for RNA-seq analysis
+#### 6. Recommended Tools for RNA-seq Analysis
 - [A recent trimming tool 'skewer' with comparison to many other read trimmers](http://www.biomedcentral.com/1471-2105/15/182/abstract)
 - [HTS Mappers - A list of read mappers](http://wwwdev.ebi.ac.uk/fg/hts_mappers/)
 - [Assessing technical performance in differential gene expression experiments with external spike-in RNA control ratio mixtures](http://www.nature.com/ncomms/2014/140925/ncomms6125/full/ncomms6125.html)
 
 
-#### 7. Resources to help find RNA-seq data sets
+#### 7. Resources to help find RNA-seq Data Sets
 - [GEO: The Gene Expression Omnibus](http://www.ncbi.nlm.nih.gov/geo/)
 - [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://ocean.compbio.cs.cmu.edu/sharq/)
 
-#### 8. Useful RNA-seq and Bioinformatics resources
+#### 8. Useful RNA-seq and Bioinformatics Resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
 - [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
