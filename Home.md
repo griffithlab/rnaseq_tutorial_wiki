@@ -1,4 +1,4 @@
-Welcome to the RNA-seq Tutorial!  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents.
+Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents.
 
 #Table of Contents
 1. **Module 1 - Introduction and Cloud Computing**
