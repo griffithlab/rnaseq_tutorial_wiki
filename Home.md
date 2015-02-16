@@ -1,3 +1,6 @@
+###Informatics for RNA-seq: A web resource for analysis on the cloud  
+===================
+
 Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents.
 
 #Table of Contents
