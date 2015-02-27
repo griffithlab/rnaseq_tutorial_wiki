@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#3-ii. Alignment Visualization
+#3-iii. Alignment Visualization
 Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose.
 
 	cd $RNA_HOME

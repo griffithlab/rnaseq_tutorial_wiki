@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#3-i. Alignment
+#3-ii. Alignment
 Use Bowtie2/Tophat2 to align all pairs of read files to the genome.  The output of this step will be a SAM/BAM files for each data set.
 
 Refer to TopHat manual and tutorial for a more detailed explanation:
@@ -135,6 +135,6 @@ tar -xvf alignment_practical.tar
 
 Assignment: Align the reads using the skills you learned above. Try using Tophat or STAR aligners. When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---alignment)
 
-| [[Previous Section|PreAlignment-QC]] | [[This Section|Alignment]] | [[Next Section|PostAlignment-Visualization]] |
+| [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|PostAlignment-Visualization]] |
 |:------------------------------------:|:--------------------------:|:--------------------------------------------:|
-| [[Data QC|PreAlignment-QC]]          | [[Alignment|Alignment]]    | [[Alignment Visualization|PostAlignment-Visualization]]         |
+| [[Adapter Trim|Adapter-Trim]]          | [[Alignment|Alignment]]    | [[Alignment Visualization|PostAlignment-Visualization]]         |

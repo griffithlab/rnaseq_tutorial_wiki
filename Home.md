@@ -19,9 +19,10 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
    5. [[RNA-seq Data|RNAseq-Data]]
    6. [[PreAlignment QC|PreAlignment-QC]]
 2. **Module 3 - RNA-seq Alignment and Visualization**
-   1. [[Alignment|Alignment]]
-   2. [[PostAlignment Visualization|PostAlignment-Visualization]]
-   3. [[PostAlignment QC|PostAlignment-QC]]
+   1. [[Adapter Trim|Adapter-Trim]]
+   2. [[Alignment|Alignment]]
+   3. [[PostAlignment Visualization|PostAlignment-Visualization]]
+   4. [[PostAlignment QC|PostAlignment-QC]]
 3. **Module 4 - Expression and Differential Expression**
    1. [[Expression|Expression]]
    2. [[Differential Expression|Differential-Expression]]
