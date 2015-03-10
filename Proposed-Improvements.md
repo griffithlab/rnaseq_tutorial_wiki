@@ -50,6 +50,8 @@ We previously had a fusion detection module but it was difficult to complete in 
 ### Improve alignment QC section
 In particular we should add use of `Picard CollectRnaSeqMetrics` (https://broadinstitute.github.io/picard/command-line-overview.html) and `RNA-SeQC` (http://www.broadinstitute.org/cancer/cga/rna-seqc).  It would also be good to include use of splicing metrics calculated from the TopHat junctions files.  A standalone version of the TGI tool that does this would need to be created for this purpose.
 
+### Identify more interesting data sets to use for the alternative splicing module
+[GSE63953](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63953)
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
