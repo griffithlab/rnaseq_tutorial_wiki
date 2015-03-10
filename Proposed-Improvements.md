@@ -51,7 +51,14 @@ We previously had a fusion detection module but it was difficult to complete in 
 In particular we should add use of `Picard CollectRnaSeqMetrics` (https://broadinstitute.github.io/picard/command-line-overview.html) and `RNA-SeQC` (http://www.broadinstitute.org/cancer/cga/rna-seqc).  It would also be good to include use of splicing metrics calculated from the TopHat junctions files.  A standalone version of the TGI tool that does this would need to be created for this purpose.
 
 ### Identify more interesting data sets to use for the alternative splicing module
+http://www.ncbi.nlm.nih.gov/gds/?term=rna-seq+splicing
 [GSE63953](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63953)
+[GSE63375](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63375)
+[GSE63569](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63569)
+[GSE45119](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE45119)
+[GSE48263](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE48263)
+[GSE44402](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44402)
+
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
