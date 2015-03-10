@@ -52,12 +52,12 @@ In particular we should add use of `Picard CollectRnaSeqMetrics` (https://broadi
 
 ### Identify more interesting data sets to use for the alternative splicing module
 http://www.ncbi.nlm.nih.gov/gds/?term=rna-seq+splicing
-[GSE63953](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63953)
-[GSE63375](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63375)
-[GSE63569](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63569)
-[GSE45119](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE45119)
-[GSE48263](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE48263)
-[GSE44402](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44402)
+- [GSE63953](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63953)
+- [GSE63375](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63375)
+- [GSE63569](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63569)
+- [GSE45119](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE45119)
+- [GSE48263](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE48263)
+- [GSE44402](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44402)
 
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
