@@ -48,7 +48,7 @@ Have students actually spin up their own instances using IAM accounts (with one 
 We previously had a fusion detection module but it was difficult to complete in time frames appropriate for a workshop.  Further optimization is required.  Another challenge is the lack of well engineered fusion detection software.  This publication [State-of-the-art fusion-finder algorithms sensitivity and specificity](http://www.ncbi.nlm.nih.gov/pubmed/23555082) does a decent job of summarizing the current options available.  Another caveat of this topic is that is mostly of interest to cancer researchers so it might only be included where there are sufficient students with this interest.
 
 ### Improve alignment QC section
-In particular we should add use of `Picard CollectRnaSeqMetrics`.  It would also be good to include use of splicing metrics calculated from the TopHat junctions files.  A standalone version of the TGI tool that does this would need to be created for this purpose.
+In particular we should add use of `Picard CollectRnaSeqMetrics` (https://broadinstitute.github.io/picard/command-line-overview.html) and `RNA-SeQC` (http://www.broadinstitute.org/cancer/cga/rna-seqc).  It would also be good to include use of splicing metrics calculated from the TopHat junctions files.  A standalone version of the TGI tool that does this would need to be created for this purpose.
 
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
