@@ -26,6 +26,7 @@
 - [A detailed BioStars thread describing resources for learning R](https://www.biostars.org/p/539/)
 - [Data Camp - R Tutorials and Data Analysis Courses](https://www.datacamp.com/courses)
 - [Swirl - Learn R, in R.](http://www.swirlstats.com/)
+- [Quick and Dirty Guide to R](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R_revised_080715.txt)
 
 #### 4. Cloud Tutorials
 - [Setting up Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
