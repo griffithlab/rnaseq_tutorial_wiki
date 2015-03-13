@@ -59,6 +59,11 @@ http://www.ncbi.nlm.nih.gov/gds/?term=rna-seq+splicing
 - [GSE48263](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE48263)
 - [GSE44402](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44402)
 
+### Update the tutorial to take into account recent developments in RNA-seq analysis methods, best practices, and new tools
+- [HISAT](http://www.ncbi.nlm.nih.gov/pubmed/25751142)
+- [StringTie](http://www.nature.com/nbt/journal/v33/n3/full/nbt.3122.html )
+- [Ballbown](http://www.ncbi.nlm.nih.gov/pubmed/25748911)
+
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
