@@ -1,4 +1,4 @@
-## 6-iii. Proposed improvements
+## 6-iv. Proposed improvements
 
 ### Update the AMI to use bash instead of dash as default shell
 The STAR aligner currently throws errors when run on an ubuntu system because `/bin/sh` is linked to `/bin/dash` and not to `/bin/bash`.
