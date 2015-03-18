@@ -7,6 +7,6 @@ Add integrated assignment content here...
 ###Subtitle 2 ...
 
 
-| [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
+| [[Previous Section|Solutions]]       | [[This Section|Integrated-Assignment]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Integrated Assignment|Integrated-Assignment]] | [[Proposed Improvements|Proposed-Improvements]]    | [[AWS Setup|AWS-Setup]] |
+| [[Practical Exercise Solutions|Solutions]] | [[Integrated Assignment|Integrated-Assignment]]    | [[AWS Setup|AWS-Setup]] |
