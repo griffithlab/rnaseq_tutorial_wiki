@@ -2,7 +2,7 @@
 
 This page presents solutions to exercises/assignments from throughout the workshop
 
-##Practical Exercise 1 - Software installation
+###Practical Exercise 1 - Software installation
 To install bedtools:
 * Google "bedtools" and find 
  * software page: https://github.com/arq5x/bedtools2
@@ -18,7 +18,7 @@ cd bedtools2/
 make
 ```
 
-##Practical Exercise 2 - Alignment
+###Practical Exercise 2 - Alignment
 
 ```
 export RNA_HOME=~/workspace/rnaseq
