@@ -1,6 +1,6 @@
 ###Integrated assignment
 
-
+Add integrated assignment content here...
 
 
 | [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
