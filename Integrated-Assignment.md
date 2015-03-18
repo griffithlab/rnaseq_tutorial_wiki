@@ -1,6 +1,10 @@
-###Integrated assignment
+##Integrated assignment
+
+###Subtitle 1 ...
 
 Add integrated assignment content here...
+
+###Subtitle 2 ...
 
 
 | [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
