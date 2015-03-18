@@ -60,9 +60,9 @@ http://www.ncbi.nlm.nih.gov/gds/?term=rna-seq+splicing
 - [GSE44402](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44402)
 
 Gray lab breast cancer cell line dataset:
-http://www.ncbi.nlm.nih.gov/pubmed/24176112
-https://www.biostars.org/p/111040/ (biostars tutorial on downloading data)
-https://github.com/genome/gms/wiki/Guide-to-Importing-and-Analyzing-External-Data (another guide on downloading and reformatting this data)
+- http://www.ncbi.nlm.nih.gov/pubmed/24176112
+- https://www.biostars.org/p/111040/ (biostars tutorial on downloading data)
+- https://github.com/genome/gms/wiki/Guide-to-Importing-and-Analyzing-External-Data (another guide on downloading and reformatting this data)
 
 ### Update the tutorial to take into account recent developments in RNA-seq analysis methods, best practices, and new tools
 - [HISAT](http://www.ncbi.nlm.nih.gov/pubmed/25751142)
