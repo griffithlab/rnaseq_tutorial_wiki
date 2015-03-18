@@ -67,4 +67,4 @@ http://www.ncbi.nlm.nih.gov/gds/?term=rna-seq+splicing
 
 | [[Previous Section|Solutions]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Solutions|Solutions]] | [[Proposed Improvements|Proposed-Improvements]]    | [[AWS Setup|AWS-Setup]] |
+| [[Integrated Assignment|Integrated-Assignment]] | [[Proposed Improvements|Proposed-Improvements]]    | [[AWS Setup|AWS-Setup]] |
