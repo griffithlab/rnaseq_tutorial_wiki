@@ -35,7 +35,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
    5. [[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]
 5. **Appendix**
    1. [[Lectures|Lectures]]
-   2. [[Assignment Solutions|Solutions]]
+   2. [[Practical Exercise Solutions|Solutions]]
    3. [[Integrated Assignment|Integrated-Assignment]]
    4. [[Proposed Improvements|Proposed-Improvements]]
    5. [[AWS Setup|AWS-Setup]]
