@@ -37,5 +37,5 @@ tophat2 -p 8 -r 60 --rg-id=HCC1395_tumor --rg-sample=HCC1395_tumor -o HCC1395_tu
 
 | [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Proposed-Improvements]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
-| [[Lectures|Lectures]]         | [[Assignment Solutions|Solutions]] |  [[Proposed Improvements|Proposed-Improvements]] |
+| [[Lectures|Lectures]]         | [[Practical Exercise Solutions|Solutions]] |  [[Proposed Improvements|Proposed-Improvements]] |
 
