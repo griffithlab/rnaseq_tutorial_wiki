@@ -17,7 +17,12 @@ This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/
 [[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]]<br>
 [[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]]<br>
 [[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]]<br>
-
+[[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1.md]]<br>
+[[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2.md]]<br>
+[[Supplementary Table 3 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_3.md]]<br>
+[[Supplementary Table 4 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_4.md]]<br>
+[[Supplementary Table 5 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md]]<br>
+[[Supplementary Table 6 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_6.md]]<br>
 
 | [[Previous Section|Authors]]  | [[This Section|Citation]]   | [[Next Section|Syntax]] |
 |:-----------------------------:|:---------------------------:|:-----------------------:|
