@@ -9,6 +9,8 @@ E-mail: mgriffit[AT]genome.wustl.edu (MG), ogriffit[AT]genome.wustl.edu (OLG)
 
 All materials associated with this publication, including high resolution and original figure files, supplementary tables, etc. are available here: https://github.com/griffithlab/rnaseq_tutorial
 
+This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/figures]] and [[supplementary tables|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/supplementary_tables]].
+
 
 | [[Previous Section|Authors]]  | [[This Section|Citation]]   | [[Next Section|Syntax]] |
 |:-----------------------------:|:---------------------------:|:-----------------------:|
