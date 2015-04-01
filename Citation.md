@@ -13,7 +13,7 @@ This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/
 
 [[Figure 1|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure1.pdf]], 
 [[Figure 2|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure2.pdf]], 
-[[Figure 3|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure3.pdf]], 
+[[Figure 3|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure3.pdf]]<br>
 [[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]], 
 [[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]], 
 [[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]]<br>
