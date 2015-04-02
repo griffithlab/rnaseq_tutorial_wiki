@@ -20,6 +20,9 @@ AWS home:
 AWS log in:
 ![AWS-Login](Images/AWS/AWS-Login.png)
 
+List of AWS services (select EC2 for this tutorial):
+![AWS-Services](Images/AWS/AWS-Services.png)
+
 ###What is a Region?
 
 
