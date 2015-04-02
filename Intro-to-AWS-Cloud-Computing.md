@@ -9,7 +9,11 @@ In order to use AWS the first time, you will have to create an account. In order
 ###Logging into the AWS console
 To log into AWS, go to the [aws.amazon.com](http://aws.amazon.com/) and hit the [Sign In to the Console](https://console.aws.amazon.com/console/home) button as shown below.
 
+AWS home:
 ![AWS-Home](Images/AWS/AWS-Home.png)
+
+AWS log in:
+![AWS-Login](Images/AWS/AWS-Login.png)
 
 ###How much does it cost?
 
