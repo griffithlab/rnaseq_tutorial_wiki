@@ -13,7 +13,7 @@ AWS home:
 ![AWS-Home](Images/AWS/AWS-Home.png)
 
 AWS log in:
-![AWS-Login](Images/AWS/AWS-Login.png)
+![AWS-Login](Images/AWS/AWS-Home.png)
 
 ###How much does it cost?
 
