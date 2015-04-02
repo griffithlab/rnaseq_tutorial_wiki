@@ -4,7 +4,7 @@
 Cloud computing allows users to quickly access an arbitrary amount of compute resources from a distance without the need to buy or maintain hardware themselves. There are many cloud computing services. This tutorial describes the use of Amazon's Web Services ([AWS](http://aws.amazon.com/)) elastic compute (EC2) resource. 
 
 ###Creating an account
-In order to use AWS the first time, you will have to create an account. In order to create and run instances as described in this tutorial, you will need to associate a credit card with that account for billing purposes. 
+In order to use AWS the first time, you will have to create an account. In order to create and run instances as described in this tutorial, you will need to associate a credit card with that account for billing purposes. Refer to the sections below on how billing works, how to estimate costs, and how to ensure that you have properly shut down everything that you could be billed for.
 
 ###Logging into the AWS console
 To log into AWS, go to the [aws.amazon.com](http://aws.amazon.com/) and hit the [Sign In to the Console](https://console.aws.amazon.com/console/home) button as shown below.
@@ -21,7 +21,8 @@ AWS log in:
 ###How does billing work?
 
 
-###What is a region?
+###What is a Region?
+
 
 ###What are Security Groups and how do they work?
 
@@ -32,5 +33,11 @@ AWS log in:
 ###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
 
 
+###How do storage volumes appear within a Linux instance on Amazon EC2?
 
+
+###What is difference between the 'Start', 'Stop', 'Reboot', and 'Terminate' (Instance States)?
+
+
+###Acknowledgements
 Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
