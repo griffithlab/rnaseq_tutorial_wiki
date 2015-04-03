@@ -22,18 +22,14 @@ In order to use AWS the first time, you will have to create an account. In order
 ###Logging into the AWS console
 To log into AWS, go to the [aws.amazon.com](http://aws.amazon.com/) and hit the [Sign In to the Console](https://console.aws.amazon.com/console/home) button as shown below.  Once you are logged in, select `EC2` from the list of Amazon Web Services. This tutorial is entirely focused on `EC2` (with some mention of `S3`) so the `EC2` console will be the starting point for many of the activities described below.   
 
-AWS home:
 ***
+AWS home:
 ![AWS-Home](Images/AWS/AWS-Home.png)
 ***
-
 AWS log in:
-***
 ![AWS-Login](Images/AWS/AWS-Login.png)
 ***
-
 List of AWS services (select EC2 for this tutorial):
-***
 ![AWS-Services](Images/AWS/AWS-Services.png)
 ***
 
@@ -45,8 +41,8 @@ The AWS EC2 dashboard:
 ###What is a Region?
 An AWS `Region` is set of compute resources that Amazon maintains. Each `Region` corresponds to a physical warehouse of compute hardware (computers, storage, networking, etc.). At the time of writing there are 8 regions: `(US East (N.Virginia)`, `US West (Oregon)`, `US West (N. California)`, `EU (Ireland)`, `EU (Frankfurt)`, `Asia Pacific (Singapore)`, `Asia Pacific (Tokyo)`, `Asia Pacific (Sydney)`, and `South America (Sao Paulo)`.  When you are logged into the AWS EC2 console you are always operating in one of these 8 regions. The current region is shown in the upper right corner of the console between the `User` menu and `Support` menu. It is important to pay attention to what region you are using for several reasons. First, when you launch an EC2 instance, this happens in a specific region. If you switch regions later, you will not see this instance. To find info in the console you will have to switch back to the region where that instance was created. The same reasoning applies for EBS volumes, AMIs, and other resources. These are tracked within a region. Second, the cost to use many AWS resources varies by region. Third, since each region is located in a different part of the world, this may influence network performance when you are accessing the instance and especially if you need to transfer large amounts of data in or out. For example, if you are working in the US and you are going to be uploading RNA-seq data to EC2 instances, it probably does not make sense to create those instances in `Asia Pacific (Sydney)`. Generally you should choose a region that is close to you or your users. But cost is also a consideration. It is important to be aware of regions when it comes to billing because if you are using resources in multiple regions it is easy to lose track of what you have running and you might wind up paying for something that you forgot to shut down. We will discuss billing and cost in further detail below.   
 
-The `Region` menu in the EC2 console:
 ***
+The `Region` menu in the EC2 console:
 ![AWS-EC2-Regions](Images/AWS/AWS-EC2-Regions.png)
 ***
 
