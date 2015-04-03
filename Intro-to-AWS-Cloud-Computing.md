@@ -32,9 +32,7 @@ AWS log in:
 List of AWS services (select EC2 for this tutorial):
 ![AWS-Services](Images/AWS/AWS-Services.png)
 ***
-
 The AWS EC2 dashboard:
-***
 ![AWS-EC2-Dashboard](Images/AWS/AWS-EC2-Dashboard.png)
 ***
 
