@@ -86,6 +86,9 @@ In the `Billing and Cost Management` section of the EC2 console you can create b
 ###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
 
 
+###What is the difference between 'EBS' and 'Instance store' option for the `Root device type`
+
+
 ###Logging into an instance
 
 
