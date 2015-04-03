@@ -60,6 +60,8 @@ An example AWS EC2 price list:
 ###How does billing work? (I don't think I'm using anything, why am I getting a monthly bill)?
 Generally you get an accounting of usage and cost on a 30 day cycle. 
 
+###Launching an instance
+
 ###What is an AMI? How do I create a community AMI?
 
 ###What is a snapshot?
@@ -74,14 +76,29 @@ Generally you get an accounting of usage and cost on a 30 day cycle.
 ###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
 
 
+###Logging into an instance
+
+
 ###How do storage volumes appear within a Linux instance on Amazon EC2?
+
+
+###Taking stock of compute resources within an Ubuntu Linux instance
+
+
+###Basic setup and administration of an Ubuntu Linux instance
 
 
 ###What is difference between the 'Start', 'Stop', 'Reboot', and 'Terminate' (Instance States)?
 
 
-
 ###How do I create my own AMI? 
+
+
+###Tidying up and shutting down AWS resources
+
+
+###Further reading and preparing for more advanced AWS cloud computing concepts
+
 
 ###Acknowledgements
 Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
