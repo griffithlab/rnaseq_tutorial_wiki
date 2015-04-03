@@ -68,17 +68,98 @@ If you choose an instance type with pre-configured storage or you attach EBS vol
 
 In the `Billing and Cost Management` section of the EC2 console you can create billing alerts that will warn you of ongoing costs. If you find that you are being charged a monthly fee but you are not intentionally using any resources, you should follow these steps. Log into the AWS EC2 console. Now, *for each AWS Region*, determine the following: are there any `Running Instances`? `Volumes`? `Elastic IPs`? or `Snapshots`?  If any of these values are greater than 0, in *any one or more regions*, you are likely being billed monthly for resource that Amazon is reserving for until told otherwise. If you terminate or delete all of these items, your monthly bill should return to $0. 
 
-###Launching an instance
+###Necessary steps for launching an Instance
 
-###What is an AMI? How do I create a community AMI?
+***
+**An example AWS EC2 price list:**
+![AWS-EC2-LaunchInstance](Images/AWS/AWS-EC2-LaunchInstance.png)
+***
 
-###What is a snapshot?
+###Step 1. Choosing an AMI 
+An AMI is ...
 
+***
+**Step 1. Choose an Amazon Machine Image (AMI):**
+![AWS-EC2-ChooseAnAMI](Images/AWS/AWS-EC2-ChooseAnAMI.png)
+***
+
+
+###Step 2. Choosing an Instance Type
+
+***
+**Step 2. Choose an Instance Type:**
+![AWS-EC2-ChooseAnInstanceType](Images/AWS/AWS-EC2-ChooseAnInstanceType.png)
+***
+
+
+###Step 3. Configuring Instance Details
+
+***
+**Step 3. Configure Instance Details:**
+![AWS-EC2-ConfigureInstanceDetails](Images/AWS/AWS-EC2-ConfigureInstanceDetails.png)
+***
+
+
+###Step 4. Adding Storage
+
+***
+**Step 4a. Add Storage:**
+![AWS-EC2-AddStorage1](Images/AWS/AWS-EC2-AddStorage1.png)
+***
+
+**Step 4b. Add additional Storage:**
+![AWS-EC2-AddStorage2](Images/AWS/AWS-EC2-AddStorage2.png)
+***
+
+###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
+
+
+###What is the difference between `EBS` and `Instance store` option for the `Root device type`
+
+
+###Step 5. Tagging the Instance
+
+***
+**Step 5. Tag Instance:**
+![AWS-EC2-TagInstance](Images/AWS/AWS-EC2-TagInstance.png)
+***
+
+
+###Step 6. Configuring a Security Group:
+
+***
+**Step 6. Configure Security Group:**
+![AWS-EC2-ConfigureSecurityGroup](Images/AWS/AWS-EC2-ConfigureSecurityGroup.png)
+***
 
 ###What are Security Groups and how do they work?
 
 
+###Step 7. Reviewing the Instance before Launch
+
+***
+**Step 7. Review Instance Launch:**
+![AWS-EC2-ReviewInstanceLaunch](Images/AWS/AWS-EC2-ReviewInstanceLaunch.png)
+***
+
+
+###Step 8. Assigning a Key Pair
+
+***
+**Step 8. Select an existing Key Pair or create a new Key Pair:**
+![AWS-EC2-CreateKeyPair](Images/AWS/AWS-EC2-CreateKeyPair.png)
+***
+
 ###What is a Key Pair and how does it work?
+
+
+###Step 9. Reviewing launch status
+
+***
+**Step 9. Review launch status:**
+![AWS-EC2-LaunchStatus](Images/AWS/AWS-EC2-LaunchStatus.png)
+***
+
 
 ```
 mkdir ~/AWS-Tutorial
@@ -88,13 +169,37 @@ chmod 600 AWS-Tutorial.pem
 ls
 ```
 
-###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
+###Step 10. Examining a new Instance in the EC2 Console
+
+***
+**Step 10. EC2 Console view of a new Instance:**
+![AWS-EC2-Console](Images/AWS/AWS-EC2-Console.png)
+***
+
+**The EC2 dashboard should now show a running Instance, Volumes, etc.:**
+![AWS-EC2-Dashboard2](Images/AWS/AWS-EC2-Dashboard2.png)
+***
+
+**Review new Volumes:**
+![AWS-EC2-Volumes](Images/AWS/AWS-EC2-Volumes.png)
+***
+
+**Review new Security Groups:**
+![AWS-EC2-SecurityGroups](Images/AWS/AWS-EC2-SecurityGroups.png)
+***
+
+**Review new Key Pairs:**
+![AWS-EC2-KeyPairs](Images/AWS/AWS-EC2-KeyPairs.png)
+***
 
 
-###What is the difference between `EBS` and `Instance store` option for the `Root device type`
+###Step 11. Logging into an instance
 
+***
+**Step 11. Log into Instance:**
+![AWS-EC2-Login](Images/AWS/AWS-EC2-Login.png)
+***
 
-###Logging into an instance
 
 
 ###I can not log into my EC2 instance, what might have gone wrong?
@@ -112,6 +217,12 @@ ls
 
 
 ###How do I create my own AMI? 
+
+
+###How do I publish my AMI to create a community AMI?
+
+
+###What is a snapshot?
 
 
 ###Tidying up and shutting down AWS resources
