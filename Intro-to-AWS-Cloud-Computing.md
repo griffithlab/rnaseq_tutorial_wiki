@@ -82,6 +82,13 @@ In the `Billing and Cost Management` section of the EC2 console you can create b
 
 ###What is a Key Pair and how does it work?
 
+```
+mkdir ~/AWS-Tutorial
+mv ~/Downloads/AWS-Tutorial.pem ~/AWS-Tutorial
+cd ~/AWS-Tutorial
+chmod 600 AWS-Tutorial.pem 
+ls
+```
 
 ###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
 
@@ -91,6 +98,8 @@ In the `Billing and Cost Management` section of the EC2 console you can create b
 
 ###Logging into an instance
 
+
+###I can not log into my EC2 instance, what might have gone wrong?
 
 ###How do storage volumes appear within a Linux instance on Amazon EC2?
 
