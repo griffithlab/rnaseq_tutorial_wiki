@@ -57,7 +57,9 @@ An example AWS EC2 price list:
 ###How does billing work? (I don't think I'm using anything, why am I getting a monthly bill)?
 Generally you get an accounting of usage and cost on a 30 day cycle. 
 
-###What is an AMI 
+###What is an AMI? How do I create a community AMI?
+
+###What is a snapshot?
 
 
 ###What are Security Groups and how do they work?
