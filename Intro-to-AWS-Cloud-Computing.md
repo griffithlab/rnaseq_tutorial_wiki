@@ -79,6 +79,15 @@ In the following sections we are going to launch an example instance, configure 
 ###Step 1. Choosing an AMI 
 An [AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) or `Amazon Machine Instance` is a template for launching an instance.  The AMI includes a template for a pre-configured root volume that contains an operating system (e.g. Ubuntu Linux, Windows, etc.).  The AMI also includes basic configuration of storage volumes that will be available within an instance. 
 
+The first step to launching an instance is to select an AMI. Refer to the screenshot below. There are four main options when selecting an AMI: `Quick Start`, `My AMIs`, `AWS Marketplace`, and `Community AMIs`. In the `Quick Start` list we will select an Ubuntu AMI as our starting point. The `Quick Start` AMIs is a relatively short list of basic systems that have been chosen by Amazon and common starting points. These have some degree of "official" support and testing by AWS. The `My AMIs` section contains AMIs that you have yourself created, perhaps using a `Quick Start` or `Community AMI` as a starting point. For example, you might start with an Ubuntu AMI and install all of the bioinformatics software and other infrastructure you need to run an analysis pipeline. You could then save this configured machine as an AMI to save this work, to allow you to share it, and to allow you to fire up a cluster of instances with identical configuration. The `AWS Marketplace` contains AMIs where a company (often a software company) has configured a machine for certain applications. You can browse through this section to get an idea what kinds applications are available. Finally, the `Community AMI` section contains thousands of AMIs created by users around the world. These AMIs are specific to each `Region` so if someone tells you about an AMI they want to share, be sure to search for it in the correct region.  If you create you own AMI and you want to share it with others, you can 'publish' it to the community. It will still appear in you `My AMIs` section, but it will also then appear and be searchable in the `Community AMIs` section.
+
+For this tutorial we will select the following AMI from the `Quick Start` list: `ami-9a562df2`. 
+
+Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-9a562df2
+Ubuntu Server 14.04 LTS (HVM), EBS General Purpose (SSD) Volume Type. Support available from Canonical (http://www.ubuntu.com/cloud/services). 
+ Root device type: ebs Virtualization type: hvm 
+  
+
 ***
 **Step 1. Choose an Amazon Machine Image (AMI):**
 ![AWS-EC2-ChooseAnAMI](Images/AWS/AWS-EC2-ChooseAnAMI.png)
