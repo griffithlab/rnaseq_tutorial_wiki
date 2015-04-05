@@ -69,14 +69,15 @@ If you choose an instance type with pre-configured storage or you attach EBS vol
 In the `Billing and Cost Management` section of the EC2 console you can create billing alerts that will warn you of ongoing costs. If you find that you are being charged a monthly fee but you are not intentionally using any resources, you should follow these steps. Log into the AWS EC2 console. Now, *for each AWS Region*, determine the following: are there any `Running Instances`? `Volumes`? `Elastic IPs`? or `Snapshots`?  If any of these values are greater than 0, in *any one or more regions*, you are likely being billed monthly for resource that Amazon is reserving for until told otherwise. If you terminate or delete all of these items, your monthly bill should return to $0. 
 
 ###Necessary steps for launching an Instance
+In the following sections we are going to launch an example instance, configure it in the AWS EC2 console, discuss some of the important concepts of this configuration and log into the instance once it is running. In each case, screenshots from an example instance will be shown and discussed. To get started, make sure you are logged into AWS and go to the `EC2 dashboard`. To start using EC2 we will launch a virtual server running the latest stable version of the Ubuntu operating system. We will decide on the basic hardware for this server, configure storage that will be available on it, configure its security, and so on. Once it is running we will log into this server and perform some additional exercises and configuration. To get started press the blue `Launch Instance` button. Remember that you are launching this instance in a particular `Region`.  In the following example we launched an instance in `US East (N. Virginia)`.
 
 ***
-**An example AWS EC2 price list:**
+**Launching an instance:**
 ![AWS-EC2-LaunchInstance](Images/AWS/AWS-EC2-LaunchInstance.png)
 ***
 
 ###Step 1. Choosing an AMI 
-An AMI is ...
+An [AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) or `Amazon Machine Instance` is a template for launching an instance.  The AMI includes a template for a pre-configured root volume that contains an operating system (e.g. Ubuntu Linux, Windows, etc.).  The AMI also includes basic configuration of storage volumes that will be available within an instance. 
 
 ***
 **Step 1. Choose an Amazon Machine Image (AMI):**
