@@ -181,15 +181,7 @@ If this is not your first instance and you have already created a key pair, and 
 ![AWS-EC2-CreateKeyPair](Images/AWS/AWS-EC2-CreateKeyPair.png)
 ***
 
-
-
-###Step 9. Reviewing launch status
-
-***
-**Step 9. Review launch status:**
-![AWS-EC2-LaunchStatus](Images/AWS/AWS-EC2-LaunchStatus.png)
-***
-
+To prepare for logging into our instance, lets create a directory on our own `local` computer (i.e. the one you are sitting at) and store the key file there. Later we will use this file to log onto the AWS instance. We are using a mac system. To create a directory and move the key file we downloaded into that directory we can down the following in a Terminal session:
 
 ```
 mkdir ~/AWS-Tutorial
@@ -198,6 +190,14 @@ cd ~/AWS-Tutorial
 chmod 600 AWS-Tutorial.pem 
 ls
 ```
+
+###Step 9. Reviewing launch status
+Once you have launched your instance you will be presented with yet another review page. When you are ready, proceed to the next step by hitting the `View Instances` button.  
+
+***
+**Step 9. Review launch status:**
+![AWS-EC2-LaunchStatus](Images/AWS/AWS-EC2-LaunchStatus.png)
+***
 
 ###Step 10. Examining a new Instance in the EC2 Console
 
