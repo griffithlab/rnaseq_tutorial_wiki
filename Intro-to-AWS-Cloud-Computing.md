@@ -183,7 +183,7 @@ If this is not your first instance and you have already created a key pair, and 
 
 To prepare for logging into our instance, lets create a directory on our own `local` computer (i.e. the one you are sitting at) and store the key file there. Later we will use this file to log onto the AWS instance. We are using a mac system. To create a directory and move the key file we downloaded into that directory we can down the following in a Terminal session:
 
-```
+```bash
 mkdir ~/AWS-Tutorial
 mv ~/Downloads/AWS-Tutorial.pem ~/AWS-Tutorial
 cd ~/AWS-Tutorial
@@ -231,13 +231,13 @@ To modify an instance in the EC2 console you can select that instance (or a seri
 We are finally ready to log into our instance. To do this, open a terminal session on your local computer. Change directories to the location where you stored your key file `AWS-Tutorial.pem`.  Now at the same time, view your instance in the EC2 console. Make sure that the `Key pair name` for this instance matches the `.pem` key file. Also, get the `Public IP` value from the console and use it instead of the example one below. Note that you could use the `Public DNS` value instead if you want. Finally log in as follows:
 
 
-```
+```bash
 cd ~/AWS-Tutorial
 chmod 600 AWS-Tutorial.pem
 ssh -i AWS-Tutorial.pem ubuntu@52.5.92.87
 ```
 
-In this example, I open a terminal command line session on my local computer. I moved to the location of my `.pem` key file. I then made sure the permissions of this file were set correctly using a `chmod` command. You only need to do this step once but there is no harm in doing it again. Then I executed an SSH command to remotely log into my AWS instance using the `Public IP` 52.5.92.87. My SSH command included an option to use my .pem file to identify me as the owner of the instance. I logged into the instance as a user called `ubuntu` because that is a user that I know will be defined by default on all ubuntu systems. Once logged in you can create new users if you wish.
+In this example, I open a terminal command line session on my local computer. I moved to the location of my `.pem` key file. I then made sure the permissions of this file were set correctly using a `chmod` command. You only need to do this step once but there is no harm in doing it again. Then I executed an SSH command to remotely log into my AWS instance using the `Public IP` 52.5.92.87. My SSH command included an option to use my .pem file to identify me as the owner of the instance. I logged into the instance as a user called `ubuntu` because that is a user that I know will be defined by default on all ubuntu systems. Once logged in you can create new users if you wish. If your log in is successful, you should see something like that below.
 
 ***
 **Step 11. Log into Instance:**
@@ -255,17 +255,37 @@ If you tried the above and it did not work there are several possible explanatio
 - Seventh, did you specify the correct IP address for the instance you want to log into. The value after `ubuntu@` must match the `Public DNS` or `Public IP` value that is shown in the AWS EC2 Console.  Note that there are also `private` version of these two values. Only the `Public` version will work from your computer.
 - Eighth, does the `Security Group` used for the instance allow Incoming SSH Access? Make sure your `Security Group` has an entry for type `SSH`, protocol `TCP`, port `80`, from source `Anywhere`. If you have to change the `Security Group` settings allow access, you will have to reboot the instance before they take effect.  
 
-
 ###How do storage volumes appear within a Linux instance on Amazon EC2?
+Now that you are logged in, you can investigate how the storage options you choose when creating the instance manifest inside an AWS Ubuntu instance. First try using the command `df -h` to view existing storage devices that are mounted. If you created a system exactly as decsribed above, you should see two devices (`/dev/xvda1` of 7.8G mounted as `/`) and (`/dev/xvdb` of 30G mounted as `/mnt`). These are the `EBS` root device volume and the ephemeral 30G `Instance Store` volume that come with the `m3.large` instance type we chose. Remember that we also added another `EBS` volume that was 500 GiB in size. Where is that device? It is not currently mounted. To view all devices the system knows about you can do something like this command: `ls /dev/` or `ls -1 /dev/ | grep xvd`. You should now see three devices: `xvda`, `xvdb`, and `xvdc`.  Lets format and mount `xvdc` to a new directory `data` as follows:
 
+```bash
+cd /
+sudo mkdir data
+sudo mkfs /dev/xvdc
+sudo mount /dev/xvdc /data
+sudo chown -R ubuntu:ubuntu /data
+df -h
+```
+
+Now the same `df -h` command should show a new volume `/dev/xvdc` mounted at `data` of size 493G. Note that in order to make this new mount persist when we reboot the machine we will have to add a mount line like this to the `/etc/fstab` file (e.g. by `sudo vim /etc/fstab`):
+```
+/dev/xvdc /data  auto  defaults,nobootwait 0 2
+```
 
 ###Taking stock of compute resources within an Ubuntu Linux instance
+To examine other resources within the Ubuntu instance you should familiarize yourself with the command `top` (press `1` to show CPUs and `q` to exit). You can also learn about the system by examining `cat /proc/meminfo`, `cat /proc/cpuinfo`, and `lsb_release -a`.  
 
 
 ###Basic setup and administration of an Ubuntu Linux instance
-
+To update your Ubuntu OS to use the latest security patches etc. you can do the following:
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo reboot
+```
 
 ###What is difference between the 'Start', 'Stop', 'Reboot', and 'Terminate' (Instance States)?
+From the AWS EC2 console, you change the state of each of your instances.  The `Start` command will boot a system that has been powered down. The `Stop` command will power down the instance and is similar to performing `sudo shutdown` from within the instance (if you have configured your instance that way during creation!). Do not forget that if you stop an instance with ephemeral `Instance Store` volumes, the contents of these volumes will be lost. The `Reboot` command will simply reboot the machine. This is equivalent to using a `sudo reboot` command from within the instance. The `Terminate` command will destroy the instance and any ephemeral `Instance Store` volumes associated with it. If the root device is an EBS volume it may or may not be destroyed depending on how you configured the instance during creation.  If there were additional EBS volumes association with the instance and you `Terminate` the instance these may also be destroyed if you selected that option when they were being created. Before terminating an instance you should think carefully about whether there is data you want to save and if so, how the volumes will behave on termination. Similarly, if you want to destroy all components of an instance, including all associated volumes, you may need to terminate the instance and then separately destroy certain volumes. 
 
 
 ###How do I create my own AMI? 
