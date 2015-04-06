@@ -191,6 +191,8 @@ chmod 600 AWS-Tutorial.pem
 ls
 ```
 
+The `chmod 600 AWS-Tutorial.pem` command changes the permissions of your key file so that only you can read it. This is an important security setting. If you attempt to log into your instance using a key file with inappropriate permissions, the log in command may fail. So you should always perform this command on any new key file (or copy of such a file) before attempting to use it to log into an instance. 
+
 ###Step 9. Reviewing launch status
 Once you have launched your instance you will be presented with yet another review page. When you are ready, proceed to the next step by hitting the `View Instances` button.  
 
@@ -200,6 +202,9 @@ Once you have launched your instance you will be presented with yet another revi
 ***
 
 ###Step 10. Examining a new Instance in the EC2 Console
+You should now see the EC2 Console view for a new instance. This view shows a table of all Instances you have created in the current `Region`. When an instance is terminated it will remain visible in this table for a brief time and then will be automatically removed. You should see a single entry that when selected looks much like the example below. After a few minutes, your instance should achieve an `Instance State` of `running`.  Note the incredible wealth of information available both in the table and in the `Description` view below. Much of the configuration we described above will be summarized here. To work effectively with your instances you will need to become familiar with certain features of this EC2 console view. For example, the `Name`, `Instance Type`, `AMI ID`, `Root device type`, `Root device`, and `Block devices` will help to remind you what kind of instance you configured. In order to remotely log into the instance in order to use it, the following items in the console will be relevant: `Instance State`, `Key Pair Name`, `Security Groups`, and `Public IP` (or `Public DNS`). Try to familiarize yourself with each of these features and how to find them in the console for each instance you have have running. 
+
+To modify an instance in the EC2 console you can select that instance (or a series instances) using the blue check boxes at the left. You can then perform various tasks using the `Actions` menu.  You can also right click on a single instance to obtain a similar menu. Before logging into this instance lets take a momemt to examine various important sections of the EC2 console in particular the `EC2 Dashboard`, `Volumes`, `Security Groups`, and `Key Pairs`. In each of these view you should see new entities that correspond to the instance we just created.
 
 ***
 **Step 10. EC2 Console view of a new Instance:**
@@ -222,17 +227,34 @@ Once you have launched your instance you will be presented with yet another revi
 ![AWS-EC2-KeyPairs](Images/AWS/AWS-EC2-KeyPairs.png)
 ***
 
-
 ###Step 11. Logging into an instance
+We are finally ready to log into our instance. To do this, open a terminal session on your local computer. Change directories to the location where you stored your key file `AWS-Tutorial.pem`.  Now at the same time, view your instance in the EC2 console. Make sure that the `Key pair name` for this instance matches the `.pem` key file. Also, get the `Public IP` value from the console and use it instead of the example one below. Note that you could use the `Public DNS` value instead if you want. Finally log in as follows:
+
+
+```
+cd ~/AWS-Tutorial
+chmod 600 AWS-Tutorial.pem
+ssh -i AWS-Tutorial.pem ubuntu@52.5.92.87
+```
+
+In this example, I open a terminal command line session on my local computer. I moved to the location of my `.pem` key file. I then made sure the permissions of this file were set correctly using a `chmod` command. You only need to do this step once but there is no harm in doing it again. Then I executed an SSH command to remotely log into my AWS instance using the `Public IP` 52.5.92.87. My SSH command included an option to use my .pem file to identify me as the owner of the instance. I logged into the instance as a user called `ubuntu` because that is a user that I know will be defined by default on all ubuntu systems. Once logged in you can create new users if you wish.
 
 ***
 **Step 11. Log into Instance:**
 ![AWS-EC2-Login](Images/AWS/AWS-EC2-Login.png)
 ***
 
-
-
 ###I can not log into my EC2 instance, what might have gone wrong?
+If you tried the above and it did not work there are several possible explanations. 
+- First, check the `Instance State` of your instance in the EC2 console. Is it `running`? When you first start an instance it takes a few minutes to boot up. Similarly, if you reboot the instance for some reason, you will not be able to log into it until it comes back online. 
+- Second, are you in a terminal session in the directory where you stored your `.pem` key file? 
+- Third, is this the right key file? Each instance is associated with a single `Key Pair` and you must have the key file that was created when that `Key Pair` was created. If you delete a key file and later generate a new one, it will not work with instances that used an older `Key Pair` even if you name the file the same thing. 
+- Fourth, have you set the permissions for your `.pem` key file correctly. Do not forget to run `chmod 600 *.pem` on your key file. 
+- Fifth, did you remember to include the `-i key_file_name.pem` in your SSH command? 
+- Sixth, did you remember to specify what user you want to log into the system as? You must include the `ubuntu@` (or other valid user name) before the IP address to log into an Ubuntu system by SSH. 
+- Seventh, did you specify the correct IP address for the instance you want to log into. The value after `ubuntu@` must match the `Public DNS` or `Public IP` value that is shown in the AWS EC2 Console.  Note that there are also `private` version of these two values. Only the `Public` version will work from your computer.
+- Eighth, does the `Security Group` used for the instance allow Incoming SSH Access? Make sure your `Security Group` has an entry for type `SSH`, protocol `TCP`, port `80`, from source `Anywhere`. If you have to change the `Security Group` settings allow access, you will have to reboot the instance before they take effect.  
+
 
 ###How do storage volumes appear within a Linux instance on Amazon EC2?
 
