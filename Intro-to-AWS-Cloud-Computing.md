@@ -130,30 +130,57 @@ As you start to have a large number of instances running or saved you may want t
 ***
 
 ###Step 6. Configuring a Security Group:
-A `Security Group` controls how services and users can access your instance. When you launch a new instance you can choose to configure a new Security Group and use it or select one that you created previously. You can also select a `default` security group. The general purpose of Security Settings is to determine what Inbound and Outbound network traffic will be allowed on the instance. Since Inbound traffic could be coming from anyone (including those with malicious intentions) it is highly recommended that most incoming traffic be blocked and only certain incoming services be allowed on an as needed basis. In the example below we created a Security Group called `AWS-Tutorial` that only allows incoming traffic of two types: `SSH` (over port 22) and `HTTP` (over port 80). The first rule, will allow us to log into our instance remotely using the SSH protocol. The second rule, will allow us to set up a web server on the instance and access web content remotely using a web browser. Both of these rules could be made significantly more secure by limiting access to only certain IP addresses. For example, if you will access your AWS instances only from your university you could limit access to your universities IP address. You can reconfigure the `Security Group` settings at any time, but they will not take effect until the instance has been rebooted.    
+A `Security Group` controls how services and users can access your instance. When you launch a new instance you can choose to configure a new Security Group and use it or select one that you created previously. You can also select a `default` security group. The general purpose of Security Settings is to determine what Inbound and Outbound network traffic will be allowed on the instance. Since Inbound traffic could be coming from anyone (including those with malicious intentions) it is highly recommended that most incoming traffic be blocked and only certain incoming services be allowed on an as needed basis. In the example below we created a Security Group called `AWS-Tutorial` that only allows incoming traffic of two types: `SSH` (over port 22) and `HTTP` (over port 80). The first rule, will allow us to log into our instance remotely using the SSH protocol. The second rule, will allow us to set up a web server on the instance and access web content remotely using a web browser. Both of these rules could be made significantly more secure by limiting access to only certain IP addresses. For example, if you will access your AWS instances only from your university you could limit access to your universities IP address. You can reconfigure the `Security Group` settings at any time, but they will not take effect until the instance has been rebooted. Once you are ready, proceed to the next step by pressing the `Review and Launch` button. 
 
 ***
 **Step 6. Configure Security Group:**
 ![AWS-EC2-ConfigureSecurityGroup](Images/AWS/AWS-EC2-ConfigureSecurityGroup.png)
 ***
 
-
 ###Step 7. Reviewing the Instance before Launch
+At this stage you will be presented with a final summary describing the configuration of your instance. At this stage, some warnings may appear. A conservative security warning is often presented here if you have allowed any broad access to the instance. Once you are ready, proceed to the next step by pressing the `Launch` button.
 
 ***
 **Step 7. Review Instance Launch:**
 ![AWS-EC2-ReviewInstanceLaunch](Images/AWS/AWS-EC2-ReviewInstanceLaunch.png)
 ***
 
-
 ###Step 8. Assigning a Key Pair
+You will now be presented with a final, but very important configuration step, assignment of a `Key Pair`. A Key Pair consists of two keys, a `public key` and a `private key`. The `public key` will be stored in AWS. The `private key` will will be presented to you on creation and it must be saved by you to allow you to log into your instance. If this is your first instance you will have to `Create a new key pair`. In the example below we have chosen to create a new key pair called `AWS-Tutorial`.  Once the name is chose, press the `Download Key Pair` button. You will download a simple text file called `AWS-Tutorial.pem`.  Store this file somewhere on your computer (e.g. your home directory) and remember the location. The contents of this file will contain an RSA key that should look something like this:
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAhEpF18lIUouMH8qia/BSB70vrQVq/mTTkiRbsACB78rzy3XGRMfvwUseIsGY
+H6SDOAFrRlmTrAArH5A0t2TZ8PKrq7b9FtEAvMCeE7rWEiqBblAWiER0k1pbnIqyKJJCo1YRSUs0
+oNMdvjB4CUylYraSsSNFYJG5gRwcNhBENLDVnDS79geQcPLu/JeEiJ9V+w+CCYAG40f7li/TuULr
+rSy6Oq6jgn2Gy7rrHU7XHU5hcEvxuSeoLb8h/bH1N+cN/H7x3ipEjIDdA2ScCkRXum1V6/kTFQFq
+vDG0lqoTlmTNKgDGpb+rdzJgOg/3QX4RSrX/c0W6aFkV9Ib/jQxT+wIDAQABAoIBADAvWXc6wpQG
+bjiaN0T3mPlmqHnuEkWs9f8yLQ9TcACmvNwr/tbIuISAVu6z8zP7WSxKIAfU0twAh7SMcxclrdh8
+m5kFIvRvlkQqKKnpENY3E0PZ+gsSXB/b9qhzQGdUtt8Fl3BJ61Z07016HA7PEyJ8e7v3q+p7ycTE
+N2Zd0GocRIX8zxdRo9GS8ouS0QcFgNF8KblzlJ6Vs0gI7o7mIRZIm9vWkuR9Lp9uEPD2flUIvN3z
+yRmY/FE/R1yc76Uq+g8eywifRAh+GFyyO8PmFoYRni4Ki6+tEIFaq5JauT0JJF66EZeZP8ZKoWm9
+1K30Ucti2D5l8t+CpbBM5JxhmjECgYEAxz1ET42F1sBGYqNn5hmfjrRp+YF3EYz2awRSibOeerpJ
+Bh1QZeB7/QD3wcB00XFiMu/3haP9xs4eesjSSug+1F59nyzDplNsybz1sYpUQwP9LjX0loUCIb8r
+3O2VdLJ5ZJ9dfNgpStC/wi7kkr8xjK5XiHgP6DLk6+H1Lr2d+kMCgYEAqfpUseZ/sm1vYt80LlWI
+r8ozsUmzuISRspGVUppyDD47Iyj/1mkiWnsFDDl07oBcFIUFIEd1rkJNB3gXKSr76kcY0X4lav7a
+0dvse2T9PC/pLSFkax9UjVnydCN8ElyNoXI2wT5HuLDjjCmHBD/4E9ZOO201JICSbRxaykl17+kC
+gYEAxRiWuxwFiqwq9Okxny856LIRJAIvB+2q17Mu84n8/OvL0YCuSBoKjf6nGcSJy6eevUUmV84i
+/sho3o5Lek7F2NCg9RYTdjaRKAEGDNwK/0Cy9UPq8fwiX7/+ZE+jyg3EiQYeNaKhNqHLEQ3SkFkT
+a1gMv7QGCG5QiAi/w71QyoECgYARcn+VDyrWXsNLK8wIYYE5QhESRpVrADiQUr84DmBcf1rEniW8
+lWgQT4ZSHeexv300If9Hs+4RZ/7OIHaIJEBdaNTUVBV1KRm+5sscU15m+if+GOpc0Id2RuBLKYVH
+wTZMdxPFvCXSgF2q+mxAdGx7ZMj88pW83HGrP3jWQLoZWQKBgQCX5jxy3QXlPpwDppqwKKBQ8cGn
+YDDQHCeD5LhrVCUqo5DCobswzmGKU/xEqYsqlk/Mz1Zkvg4FbJwJDgQGkSyAu071NLi0O6w27dm+
+UHuvF5mCDdAHWirFUBSiebxOpEQnkZ9IPXUUCSC6IQvPFbdGN8G3WjoER6Lw121Q4rJxGA==
+-----END RSA PRIVATE KEY-----
+```
+
+If this is not your first instance and you have already created a key pair, and you still have that key file, you can choose to use this existing key. 
 
 ***
 **Step 8. Select an existing Key Pair or create a new Key Pair:**
 ![AWS-EC2-CreateKeyPair](Images/AWS/AWS-EC2-CreateKeyPair.png)
 ***
 
-###What is a Key Pair and how does it work?
 
 
 ###Step 9. Reviewing launch status
