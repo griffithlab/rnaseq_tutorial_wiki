@@ -284,24 +284,52 @@ sudo apt-get upgrade
 sudo reboot
 ```
 
+###Setting up an Apache web server
+If you want easily retrieve or share data created on your instance, one option is to create an Apache web service on the instance so that you can browse the contents of certain directories remotely in a web browser. Note that when launching the instance our security group was configured to allow http access via port 80 so that this would work.
+
+* Edit config to allow files to be served from outside /usr/share and /var/www
+```
+sudo vim /etc/apache2/apache2.conf
+```
+
+* Add the following content to apache2.conf
+```
+<Directory /home/ubuntu/>
+       Options Indexes FollowSymLinks
+       AllowOverride None
+       Require all granted
+</Directory>
+```
+
+* Edit vhost file
+```
+sudo vim /etc/apache2/sites-available/000-default.conf
+```
+
+* Change document root in 000-default.conf
+```
+DocumentRoot /home/ubuntu
+```
+
+* Restart apache
+```
+sudo service apache2 restart
+```
+
+You should now be able to enter the `Public IP` or `Public DNS` in a web browser on your local computer and browse the contents of the `/home/ubuntu` directory on your AWS instance. 
+
 ###What is difference between the 'Start', 'Stop', 'Reboot', and 'Terminate' (Instance States)?
 From the AWS EC2 console, you change the state of each of your instances.  The `Start` command will boot a system that has been powered down. The `Stop` command will power down the instance and is similar to performing `sudo shutdown` from within the instance (if you have configured your instance that way during creation!). Do not forget that if you stop an instance with ephemeral `Instance Store` volumes, the contents of these volumes will be lost. The `Reboot` command will simply reboot the machine. This is equivalent to using a `sudo reboot` command from within the instance. The `Terminate` command will destroy the instance and any ephemeral `Instance Store` volumes associated with it. If the root device is an EBS volume it may or may not be destroyed depending on how you configured the instance during creation.  If there were additional EBS volumes association with the instance and you `Terminate` the instance these may also be destroyed if you selected that option when they were being created. Before terminating an instance you should think carefully about whether there is data you want to save and if so, how the volumes will behave on termination. Similarly, if you want to destroy all components of an instance, including all associated volumes, you may need to terminate the instance and then separately destroy certain volumes. 
 
-
-###How do I create my own AMI? 
-
-
-###How do I publish my AMI to create a community AMI?
-
-
-###What is a snapshot?
-
+###How do I create my own AMI? How do I publish my AMI to create a community AMI? What is a Snapshot? 
+If you have configured an existing AMI for your own purposes and you would like to save this work, one option is to create your own custom AMI. You can save an existing instance as a new AMI in the EC2 console by right clicking the instance and selection `Create Image`. Enter an appropriate name and description and then save. You can monitor the creation of you AMI in the `AMIs` section of `IMAGES` in the EC2 console.  Once complete, your new AMI will appear in the `My AMIs` section when you create new instances. If you would like your AMI to be listed in the `Community AMIs` where it can be shared with others you can change the permissions of the AMI to `public`. Remember that AMIs are region specific and you need to copy the AMI to any additional regions where you would like it to appear in Community AMI searches. Each AMI you create will be associated with a `Snapshot` stored on an EBS volume. You will be charged to store these. If the AMI was large and you make it available in multiple regions, these costs could add up.
 
 ###Tidying up and shutting down AWS resources
-
+Once you are done with this tutorial you should terminate or otherwise delete all resources that were created to ensure you are not charged. Specifically you should remove: `Instances`, `Volumes` and `Snapshots`. You may also decide to remove other entities that were created for demonstration purposes include: `Tags`, `AMIs`, `Security Groups`, and `Key Pairs`. All of this can be done in the AWS EC2 console. When you are done, the `EC2 Dashboard` should show `0` for all resource types except `Security Groups` where the default security configuration will remain.  
 
 ###Further reading and preparing for more advanced AWS cloud computing concepts
 
 
 ###Acknowledgements
 Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
+
