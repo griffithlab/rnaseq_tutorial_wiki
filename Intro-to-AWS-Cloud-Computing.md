@@ -328,7 +328,13 @@ If you have configured an existing AMI for your own purposes and you would like 
 Once you are done with this tutorial you should terminate or otherwise delete all resources that were created to ensure you are not charged. Specifically you should remove: `Instances`, `Volumes` and `Snapshots`. You may also decide to remove other entities that were created for demonstration purposes include: `Tags`, `AMIs`, `Security Groups`, and `Key Pairs`. All of this can be done in the AWS EC2 console. When you are done, the `EC2 Dashboard` should show `0` for all resource types except `Security Groups` where the default security configuration will remain.  
 
 ###Further reading and preparing for more advanced AWS cloud computing concepts
-
+This is a basic introduction to AWS cloud computing that assumes all configuration of the instance will occur within the AWS EC2 console of your web browser and all configuration of the Ubuntu Linux system will occur by the user manually executing commands and perhaps saving the outcome as a cusom AMI. For large scale computing and complex deployments of compute infrastructure on the cloud these methods will not be sustainable. Here is a list of more advanced topics for discussion on how to move beyond the console and automate configuration of your system:
+- Use of the [AWS command line interface (CLI)](http://aws.amazon.com/cli/)
+- Use of the [AWS EC2 API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/Welcome.html)a
+- Use of [AWS SDKs](http://aws.amazon.com/tools/#SDKs)
+- Use of [S3](http://aws.amazon.com/s3/) and [glacier](http://aws.amazon.com/glacier/)
+- Use of [vagrant](https://www.vagrantup.com/) to launch AWS instances
+- Use of [puppet](https://puppetlabs.com/puppet/what-is-puppet) to configure Linux systems
 
 ###Acknowledgements
 Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
