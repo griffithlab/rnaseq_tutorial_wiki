@@ -20,9 +20,9 @@ To complete this tutorial, you will need a computer with access to the internet,
 ![Image of a data center](Images/AWS/DataCenter.jpg)
 ***
 
-There are two types of knowledge you will be exposed to in this tutorial.  First, use of the Amazon AWS EC2 web console. AWS documentation has a lot of specific jargon and technical concepts. Becoming proficient in AWS EC2 usage is like becoming a very particular kind of system administrator. Everything we do in a web browser using the EC2 console can also be accomplished at the command line using the [Amazon EC2 API tools](https://aws.amazon.com/developertools/Amazon-EC2/351). That is a subject for a more advanced tutorial.
+There are two types of knowledge you will be exposed to in this tutorial. First, use of the Amazon AWS EC2 web console. AWS documentation has a lot of jargon and technical concepts. Becoming proficient in AWS EC2 usage is akin to becoming a very particular type of system administrator. Everything we will do below in a web browser using the EC2 console can also be accomplished at the command line using the [Amazon EC2 API tools](https://aws.amazon.com/developertools/Amazon-EC2/351). That is a subject for a more advanced tutorial.
 
-Second, since we are going to create an Amazon instance that is running a Linux you will need to learn the basics of working at a Linux command line.  You will also need to become familiar with basic fundamentals of Linux system administration.
+Second, since we are going to create an Amazon instance that is running a Linux operating system you will need to learn the basics of working at a Linux command line. You will also need to become familiar with basic fundamentals of Linux system administration. Refer to the [[Resources|Resources]] section for a list of reference materials to help you learn the basics of Linux/Unix.
  
 ###Creating an account
 In order to use AWS the first time, you will have to create an account. In order to create and run instances as described in this tutorial, you will need to associate a credit card with that account for billing purposes. Refer to the sections below on how billing works, how to estimate costs, and how to ensure that you have properly shut down everything that you could be billed for.
