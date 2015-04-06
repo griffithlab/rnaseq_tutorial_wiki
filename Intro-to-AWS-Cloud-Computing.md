@@ -104,8 +104,8 @@ Once an instance type is selected the next step is to configure the instance det
 ![AWS-EC2-ConfigureInstanceDetails](Images/AWS/AWS-EC2-ConfigureInstanceDetails.png)
 ***
 
-
 ###Step 4. Adding Storage
+The next step is to configure the disk/storage that will be available in the instance. The starting point of this page depends on what instance type we selected in Step 2. Remember that we selected an instance type with an EBS root volume (during AMI selection) and an additional 1 x 32 GiB SSD drive. These two volumes are summarized in the `Add Storage` view. The first volume is 8 GiB.  This is the root volume where the operating system will exist. It is set to be deleted on termination of the instance but we could chose to keep it as well. The second row of the table shows as `instance store 0`. This is the 32 GiB SSD drive. Our two volumes are projected to be attached to the instance as `/dev/sda` and `/dev/sdb`. Sometimes this does not exactly match what we see inside the instance because this behavior depends on the operating system. Since the second is an `Instance Store` device, it is akin to a drive physically attached to the computer we are renting. This should ensure high performance, but it is important to remember that such volumes are `ephemeral` and the contents will not persist is the instance is stopped or destroyed. To demonstrate the difference, lets use the `Add New Volume` button to add a third volume to our instance (see Step 4b screenshot below). Choose the EBS volume, set the device to `/dev/sdc` give it a size of 500 GiB, and set the volume type to `General Purpose (SSD)`. Now when we log into the instance we will expect to find three distinct physical volumes.  Once you are ready, proceed to the next step by pressing the `Next: Tag Instance` button.
 
 ***
 **Step 4a. Add Storage:**
@@ -116,11 +116,10 @@ Once an instance type is selected the next step is to configure the instance det
 ![AWS-EC2-AddStorage2](Images/AWS/AWS-EC2-AddStorage2.png)
 ***
 
-###Storage volumes. What is ephemeral storage? What is EBS backed storage? What is S3 storage?
+###Storage volumes. What is ephemeral or `Instance Store` storage? What is `EBS` storage? Which is a better option for the `Root device type`?
+An `EBS` ([elastic block storage](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)) volume can be linked to single instance.  `EBS` volumes can be set to persist even if the instance is destroyed. They could therefore later be reassigned to a different instance. In the context of bioinformatics analysis, you might decide to write your analysis results to an EBS volume. Once analysis was complete you could then shut down the instance to save money but keep your results indefinitely on the EBS volume. The [Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) volumes are considered 'ephemeral' or transient. Therefore, you must be careful when storing data to these volumes because if the machine is stopped or terminated the data will be unrecoverable. Instance store volumes are created from disks that are physically attached to the host computer while EBS volumes are created from disk arrays in the same `Availability Zone` but are not physically attached to the host computer. Instead the host computer accesses EBS volumes over a network. EBS volumes can be added a will to an existing instance. On the other hand, Instance Store volumes can only be added or configured when the instance is created.
 
-
-###What is the difference between `EBS` and `Instance store` option for the `Root device type`
-
+The `Root device type` refers to the type of volume used to store the operating system itself. This is usually a small volume (often 8 GiB) that can be either `EBS` or `Instance Store`. This option can be selected during the choice of AMI or when configuring storage during setup of the AMI. Once you launch the AMI though you can not change the `Root device type`.  There are [pro and cons](http://stackoverflow.com/questions/3630506/benefits-of-ebs-vs-instance-store-and-vice-versa) to both `EBS` and `Instance Store` for the root device type. The `Instance Store` type may have a performance advantage but the `EBS` type is more flexible and safer from the perspective of accidental data loss. For a beginniner just starting to use AWS we recommend `EBS`. A bioinformatics analysis instance might use an `EBS` volume for `Root device type`, might use an `Instance Store` volume for `/tmp` where all temporary files and staging of data will occur, and a third `EBS` volume to store the final results. You can examine the types of volumes for an existing instance in the EC2 dashboard by selecting a running instance and examining the `Root device type` value. 
 
 ###Step 5. Tagging the Instance
 
