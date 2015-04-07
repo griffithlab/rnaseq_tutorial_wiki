@@ -345,3 +345,6 @@ This is a basic introduction to AWS cloud computing that assumes all configurati
 ###Acknowledgements
 Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
 
+| [[Previous Section|Syntax]] | [[This Section|Intro-to-AWS-Cloud-Computing]]               | [[Next Section|Logging-into-Amazon-Cloud]]        |
+|:---------------------------:|:--------------------------------------------------------:|:-----------------------------------------------------:|
+| [[Syntax|Syntax]]           | [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]  | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  |
