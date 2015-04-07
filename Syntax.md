@@ -1,4 +1,4 @@
-#1-ii. Syntax
+#1-iii. Syntax
 
 In this tutorial, created using [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown), [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) are optional portions of the tutorials whereas [indented code blocks](http://daringfireball.net/projects/markdown/syntax#precode) are required to complete the tutorial.
 
