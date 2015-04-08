@@ -14,16 +14,19 @@
    2. [[Step 2. Choosing an instance type|Intro-to-AWS-Cloud-Computing#step-2-choosing-an-instance-type]]
    3. [[Step 3. Configuring instance details|Intro-to-AWS-Cloud-Computing#step-3-configuring-instance-details]]
    4. [[Step 4. Adding storage|Intro-to-AWS-Cloud-Computing#step-4-adding-storage]]
+      1. [[Storage volume options|Intro-to-AWS-Cloud-Computing#storage-volume-options]]
+   5. [[Step 5. Tagging the instance|Intro-to-AWS-Cloud-Computing#step-5-tagging-the-instance]]
+   6. [[Step 6. Configuring a security group|Intro-to-AWS-Cloud-Computing#step-6-configuring-a-security-group]]
+   7. [[Step 7. Reviewing the instance before launch|Intro-to-AWS-Cloud-Computing#step-7-reviewing-the-instance-before-launch]]
+   8. [[Step 8. Assigning a key pair|Intro-to-AWS-Cloud-Computing#step-8-assigning-a-key-pair]]
+   9. [[Step 9. Reviewing launch status|Intro-to-AWS-Cloud-Computing#step-9-reviewing-launch-status]]
+   10. [[Step 10. Examining a new instance in the ec2 console|Intro-to-AWS-Cloud-Computing#step-10-examining-a-new-instance-in-the-ec2-console]]
+   11. [[Step 11. Logging into an instance|Intro-to-AWS-Cloud-Computing#step-11-logging-into-an-instance]]
 7. [[|Intro-to-AWS-Cloud-Computing#]]
 7. [[|Intro-to-AWS-Cloud-Computing#]]
 7. [[|Intro-to-AWS-Cloud-Computing#]]
 7. [[|Intro-to-AWS-Cloud-Computing#]]
 7. [[|Intro-to-AWS-Cloud-Computing#]]
-7. [[|Intro-to-AWS-Cloud-Computing#]]
-7. [[|Intro-to-AWS-Cloud-Computing#]]
-7. [[|Intro-to-AWS-Cloud-Computing#]]
-7. [[|Intro-to-AWS-Cloud-Computing#]]
-
 
 
 ###Preamble
