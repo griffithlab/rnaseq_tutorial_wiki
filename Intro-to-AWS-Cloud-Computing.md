@@ -1,6 +1,6 @@
 #1-iv. Introduction to AWS Cloud Computing
 
-#Table of Contents
+##Table of Contents
 1. [[Preamble|Intro-to-AWS-Cloud-Computing#preamble]]
 1. [[Acknowledgements|Intro-to-AWS-Cloud-Computing#acknowledgements]]
 2. [[Glossary and abbreviations|Intro-to-AWS-Cloud-Computing#glossary-and-abbreviations]]
