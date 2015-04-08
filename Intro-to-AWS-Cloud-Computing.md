@@ -6,8 +6,24 @@
 3. [[What do I need to perform this tutorial|Intro-to-AWS-Cloud-Computing#what-do-i-need-to-perform-this-tutorial]]
    1. [[Creating an account|Intro-to-AWS-Cloud-Computing#creating-an-account]]
    2. [[Logging into the AWS console|Intro-to-AWS-Cloud-Computing#logging-into-the-aws-console]]
-6. [[What is a Region?|Intro-to-AWS-Cloud-Computing#what-is-a-region]]
-7. [[How much does it cost to use AWS EC2 resources?|Intro-to-AWS-Cloud-Computing#how-much-does-it-cost-to-use-aws-ec2-resources]]
+4. [[What is a Region?|Intro-to-AWS-Cloud-Computing#what-is-a-region]]
+5. [[How much does it cost to use AWS EC2 resources?|Intro-to-AWS-Cloud-Computing#how-much-does-it-cost-to-use-aws-ec2-resources]]
+   1. [[How does billing work?|Intro-to-AWS-Cloud-Computing#how-does-billing-work-i-do-not-think-i-am-using-anything-why-am-i-still-getting-a-monthly-bill]]
+6. [[Necessary steps for launching an instance|Intro-to-AWS-Cloud-Computing#necessary-steps-for-launching-an-instance]]
+   1. [[Step 1. Choosing an AMI|Intro-to-AWS-Cloud-Computing#step-1-choosing-an-ami]]
+   2. [[Step 2. Choosing an instance type|Intro-to-AWS-Cloud-Computing#step-2-choosing-an-instance-type]]
+   3. [[Step 3. Configuring instance details|Intro-to-AWS-Cloud-Computing#step-3-configuring-instance-details]]
+   4. [[Step 4. Adding storage|Intro-to-AWS-Cloud-Computing#step-4-adding-storage]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+7. [[|Intro-to-AWS-Cloud-Computing#]]
+
 
 
 ###Preamble
