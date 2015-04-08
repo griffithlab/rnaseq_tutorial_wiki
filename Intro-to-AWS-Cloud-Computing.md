@@ -2,12 +2,13 @@
 
 #Table of Contents
 1. [[Preamble|Intro-to-AWS-Cloud-Computing#preamble]]
-2. [[Citation|Citation]]
-3. [[Syntax|Syntax]]
-4. [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]
-5. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
-6. [[Environment|Environment]]
-7. [[Resources|Resources]]
+2. [[Glossary and abbreviations|Intro-to-AWS-Cloud-Computing#glossary-and-abbreviations]]
+3. [[What do I need to perform this tutorial|Intro-to-AWS-Cloud-Computing#what-do-i-need-to-perform-this-tutorial]]
+   1. [[Creating an account|Intro-to-AWS-Cloud-Computing#creating-an-account]]
+   2. [[Logging into the AWS console|Intro-to-AWS-Cloud-Computing#logging-into-the-aws-console]]
+6. [[What is a Region?|Intro-to-AWS-Cloud-Computing#what-is-a-region]]
+7. [[How much does it cost to use AWS EC2 resources?|Intro-to-AWS-Cloud-Computing#how-much-does-it-cost-to-use-aws-ec2-resources]]
+
 
 ###Preamble
 Cloud computing allows users to quickly access an arbitrary amount of compute resources from a distance without the need to buy or maintain hardware themselves. There are many cloud computing services. This tutorial describes the use of the Amazon Web Services ([AWS](http://aws.amazon.com/)) elastic compute ([EC2](http://aws.amazon.com/ec2/)) resource. However, the fundamental concepts covered here will generally apply to other cloud computing services such as [Google Cloud](https://cloud.google.com/), [Digital Ocean](https://www.digitalocean.com/), [etc.](http://cloud-computing.softwareinsider.com/), though with substantial differences in jargon used by each provider.
