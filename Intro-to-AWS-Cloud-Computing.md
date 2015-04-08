@@ -280,6 +280,8 @@ In this example, we open a terminal command line session on our local computer. 
 ![AWS-EC2-Login](Images/AWS/AWS-EC2-Login.png)
 ***
 
+###Trouble-shooting and advanced topics
+
 ###I can not log into my EC2 instance, what might have gone wrong?
 If you tried the above and it did not work there are several possible explanations. 
 - First, check the `Instance State` of your instance in the EC2 console. Is it `running`? When you first start an instance it takes a few minutes to boot up. Similarly, if you reboot the instance for some reason, you will not be able to log into it until it comes back online. 
