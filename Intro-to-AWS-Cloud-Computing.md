@@ -1,13 +1,13 @@
 #1-iv. Introduction to AWS Cloud Computing
 
 #Table of Contents
-[[Preamble|Intro-to-AWS-Cloud-Computing#preamble]]
-[[Citation|Citation]]
-[[Syntax|Syntax]]
-[[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]
-[[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
-[[Environment|Environment]]
-[[Resources|Resources]]
+1. [[Preamble|Intro-to-AWS-Cloud-Computing#preamble]]
+2. [[Citation|Citation]]
+3. [[Syntax|Syntax]]
+4. [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]
+5. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
+6. [[Environment|Environment]]
+7. [[Resources|Resources]]
 
 ###Preamble
 Cloud computing allows users to quickly access an arbitrary amount of compute resources from a distance without the need to buy or maintain hardware themselves. There are many cloud computing services. This tutorial describes the use of the Amazon Web Services ([AWS](http://aws.amazon.com/)) elastic compute ([EC2](http://aws.amazon.com/ec2/)) resource. However, the fundamental concepts covered here will generally apply to other cloud computing services such as [Google Cloud](https://cloud.google.com/), [Digital Ocean](https://www.digitalocean.com/), [etc.](http://cloud-computing.softwareinsider.com/), though with substantial differences in jargon used by each provider.
