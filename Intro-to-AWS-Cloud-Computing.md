@@ -147,7 +147,7 @@ The next step is to configure the disk/storage that will be available in the ins
 ![AWS-EC2-AddStorage2](Images/AWS/AWS-EC2-AddStorage2.png)
 ***
 
-###Storage volume options. 
+###Storage volume options 
 
 ####What is ephemeral or `Instance Store` storage? What is `EBS` storage? Which is the better option for `Root device type`?
 An `EBS` ([elastic block storage](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)) volume can be linked to single instance. `EBS` volumes can be set to persist even if the instance is destroyed. They could therefore later be reassigned to a different instance. In the context of bioinformatics analysis, you might decide to write your analysis results to an EBS volume. Once analysis was complete you could then shut down the instance to save money but keep your results indefinitely on the EBS volume. The [Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) volumes are considered 'ephemeral' or transient. Therefore, you must be careful when storing data to these volumes because if the machine is stopped or terminated, the data will be unrecoverable. Instance store volumes are created from disks that are physically attached to the host computer while EBS volumes are created from disk arrays in the same `Availability Zone` but are not physically attached to the host computer. Instead the host computer accesses EBS volumes over a network. EBS volumes can be added at will to an existing instance. On the other hand, Instance Store volumes can only be added or configured when the instance is created.
