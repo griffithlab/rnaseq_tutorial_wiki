@@ -2,6 +2,7 @@
 
 #Table of Contents
 1. [[Preamble|Intro-to-AWS-Cloud-Computing#preamble]]
+1. [[Acknowledgements|Intro-to-AWS-Cloud-Computing#acknowledgements]]
 2. [[Glossary and abbreviations|Intro-to-AWS-Cloud-Computing#glossary-and-abbreviations]]
 3. [[What do I need to perform this tutorial|Intro-to-AWS-Cloud-Computing#what-do-i-need-to-perform-this-tutorial]]
    1. [[Creating an account|Intro-to-AWS-Cloud-Computing#creating-an-account]]
@@ -24,17 +25,20 @@
    11. [[Step 11. Logging into an instance|Intro-to-AWS-Cloud-Computing#step-11-logging-into-an-instance]]
 7. [[Trouble-shooting and advanced topics|Intro-to-AWS-Cloud-Computing#trouble-shooting-and-advanced-topics]]
    1. [[Can't login to EC2 instance - what might have gone wrong?|Intro-to-AWS-Cloud-Computing#i-can-not-log-into-my-ec2-instance-what-might-have-gone-wrong]]
-   2. [[How do storage volumes appear within a linux instance on amazon EC2|Intro-to-AWS-Cloud-Computing#how-do-storage-volumes-appear-within-a-linux-instance-on-amazon-ec2]]
+   2. [[How do storage volumes appear within a linux instance on amazon EC2?|Intro-to-AWS-Cloud-Computing#how-do-storage-volumes-appear-within-a-linux-instance-on-amazon-ec2]]
    3. [[Taking stock of compute resources within an ubuntu linux instance|Intro-to-AWS-Cloud-Computing#taking-stock-of-compute-resources-within-an-ubuntu-linux-instance]]
    4. [[Basic setup and administration of an ubuntu linux instance|Intro-to-AWS-Cloud-Computing#basic-setup-and-administration-of-an-ubuntu-linux-instance]]
    5. [[Setting up an Apache web server|Intro-to-AWS-Cloud-Computing#setting-up-an-apache-web-server]]
-   6. [[What is difference between the start, stop, reboot and terminate instance states|Intro-to-AWS-Cloud-Computing#what-is-difference-between-the-start-stop-reboot-and-terminate-instance-states]]
+   6. [[What is difference between the start, stop, reboot and terminate instance states?|Intro-to-AWS-Cloud-Computing#what-is-difference-between-the-start-stop-reboot-and-terminate-instance-states]]
    7. [[How do I create my own AMI, publish as a Community AMI, and what is a snapshot?|Intro-to-AWS-Cloud-Computing#how-do-i-create-my-own-ami-how-do-i-publish-my-ami-to-create-a-community-ami-what-is-a-snapshot]]
    8. [[Tidying up and shutting down AWS resources|Intro-to-AWS-Cloud-Computing#tidying-up-and-shutting-down-aws-resources]]
    9. [[Further reading and preparing for more advanced AWS cloud computing concepts|Intro-to-AWS-Cloud-Computing#further-reading-and-preparing-for-more-advanced-aws-cloud-computing-concepts]]
 
 ###Preamble
 Cloud computing allows users to quickly access an arbitrary amount of compute resources from a distance without the need to buy or maintain hardware themselves. There are many cloud computing services. This tutorial describes the use of the Amazon Web Services ([AWS](http://aws.amazon.com/)) elastic compute ([EC2](http://aws.amazon.com/ec2/)) resource. However, the fundamental concepts covered here will generally apply to other cloud computing services such as [Google Cloud](https://cloud.google.com/), [Digital Ocean](https://www.digitalocean.com/), [etc.](http://cloud-computing.softwareinsider.com/), though with substantial differences in jargon used by each provider.
+
+###Acknowledgements
+Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
 
 ###Glossary and abbreviations
 * [AWS](http://aws.amazon.com/) - Amazon Web Services. A collection of cloud computing services provided by Amazon. 
@@ -378,9 +382,6 @@ This is a basic introduction to AWS cloud computing that assumes all configurati
 - Use of [S3](http://aws.amazon.com/s3/) and [glacier](http://aws.amazon.com/glacier/)
 - Use of [vagrant](https://www.vagrantup.com/) to launch AWS instances
 - Use of [puppet](https://puppetlabs.com/puppet/what-is-puppet) to configure Linux systems
-
-###Acknowledgements
-Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
 
 | [[Previous Section|Syntax]] | [[This Section|Intro-to-AWS-Cloud-Computing]]               | [[Next Section|Logging-into-Amazon-Cloud]]        |
 |:---------------------------:|:--------------------------------------------------------:|:-----------------------------------------------------:|
