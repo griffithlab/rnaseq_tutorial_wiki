@@ -28,31 +28,22 @@
 - [Swirl - Learn R, in R.](http://www.swirlstats.com/)
 - [Quick and Dirty Guide to R](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R_revised_080715.txt)
 
-#### 4. Cloud Tutorials
-- [Setting up Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
-- [Getting started with Amazon EC2 Linux instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
-
-#### 5. Supplementary Materials Relating to the Hands On Tutorials of this Course
+#### 4. Supplementary Materials Relating to the Hands On Tutorials of this Course
 - [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf)
 - [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf)
 - [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf)
 
-#### 6. Recommended Tools for RNA-seq Analysis
-- [A recent trimming tool 'skewer' with comparison to many other read trimmers](http://www.biomedcentral.com/1471-2105/15/182/abstract)
-- [HTS Mappers - A list of read mappers](http://wwwdev.ebi.ac.uk/fg/hts_mappers/)
-- [Assessing technical performance in differential gene expression experiments with external spike-in RNA control ratio mixtures](http://www.nature.com/ncomms/2014/140925/ncomms6125/full/ncomms6125.html)
-
-#### 7. Resources to help find RNA-seq Data Sets
+#### 5. Resources to help find RNA-seq Data Sets
 - [GEO: The Gene Expression Omnibus](http://www.ncbi.nlm.nih.gov/geo/)
 - [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://ocean.compbio.cs.cmu.edu/sharq/)
 
-#### 8. General Bioinformatics Resources
+#### 6. General Bioinformatics Resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
 - [A list of Genome Analysis Platforms like Galaxy, BaseSpace, etc.](https://docs.google.com/spreadsheets/d/1o8iYwYUy0V7IECmu21Und3XALwQihioj23WGv-w0itk/pubhtml)
 
-#### 9. Getting More Help
+#### 7. Getting More Help
 - [Biostar - A forum for the bioinformatics community](http://www.biostars.org/)
 - [SEQanswers - A forum for the next generation sequencing community](http://seqanswers.com/)
 
