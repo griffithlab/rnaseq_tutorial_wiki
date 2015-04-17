@@ -1,5 +1,18 @@
 ## 6-i. Lectures
 
+###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (2015)
+
+Presentations:
+
+* [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module1_Lecture.pptx]]
+* [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module1_Tutorial.pptx]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module2_Lecture.pptx]]
+* [[Module 2 - RNA-seq alignment and visualization (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module2_Tutorial.pptx]]
+* [[Module 3 - Expression and differential expression (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module3_Lecture.pptx]]
+* [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module3_Tutorial.pptx]]
+* [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Lecture.pptx]]
+* [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Tutorial.pptx]]
+
 ###CSHL Advanced Sequencing Technologies and Applications (2014)
 
 Presentations:
