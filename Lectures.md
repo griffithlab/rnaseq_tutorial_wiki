@@ -1,4 +1,4 @@
-# 6-i. Lectures
+# 6-ii. Lectures
 
 ###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (2015)
 
