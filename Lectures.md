@@ -32,6 +32,6 @@ Lecture Videos (courtesy of [bioinformatics.ca](http://www.bioinformatics.ca))
 
 * [CBW Informatics for RNA-seq Analysis 2014, Montreal](http://bioinformatics.ca/workshops/2014/informatics-rna-sequence-analysis-qc-2014)
 
-| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Lectures]] | [[Next Section|Solutions]]   |
+| [[Previous Section|Abbreviations]]       | [[This Section|Lectures]] | [[Next Section|Solutions]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Lectures|Lectures]]    | [[Assignment Solutions|Solutions]] |
+| [[Abbreviations|Abbreviations]] | [[Lectures|Lectures]]    | [[Assignment Solutions|Solutions]] |
