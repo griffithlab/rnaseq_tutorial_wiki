@@ -1,4 +1,4 @@
-##6-ii. Practical exercise solutions
+#6-ii. Practical exercise solutions
 
 This page presents solutions to exercises/assignments from throughout the workshop
 

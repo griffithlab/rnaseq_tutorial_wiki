@@ -1,4 +1,4 @@
-##6-iii. Integrated assignment answers
+#6-iii. Integrated assignment answers
 
 ###Subtitle 1 ...
 
