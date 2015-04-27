@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
-#4-ii. Differential Expression
+#3-ii. Differential Expression
 Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions. Refer to the Cufflinks manual for a more detailed explanation:
 * http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
 * http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff
