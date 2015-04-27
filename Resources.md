@@ -1,4 +1,4 @@
-#1-vii. Resources
+#0-vii. Resources
 
 #### 1. Recommended Reading and RNA-seq Resources
 - [RNA-seqlopedia](http://rnaseq.uoregon.edu/) (Includes a very comprehensive review of library construction concepts)
