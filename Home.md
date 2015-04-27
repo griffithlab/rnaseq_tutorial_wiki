@@ -5,15 +5,13 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
 
 #Table of Contents
 **Module 0 - Introduction and Cloud Computing**
-<Blockquote>
-   i. [[Authors|Authors]]
-   ii. [[Citation|Citation]]
-   iii. [[Syntax|Syntax]]
-   iv. [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]
-   v. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
-   vi. [[Environment|Environment]]
-   vii. [[Resources|Resources]]
-</Blockquote>
+&#160 i. [[Authors|Authors]]
+&#160 ii. [[Citation|Citation]]
+&#160 iii. [[Syntax|Syntax]]
+&#160 iv. [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]
+&#160 v. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
+&#160 vi. [[Environment|Environment]]
+&#160 vii. [[Resources|Resources]]
 
 1. **Module 2 - Introduction to RNA sequencing**
    1. [[Installation|Installation]]
