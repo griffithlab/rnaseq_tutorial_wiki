@@ -3,6 +3,12 @@
 
 Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents.
 
+<ol start="0">
+  <li>Item 0</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+
 #Table of Contents
 **Module 0 - Introduction and Cloud Computing**
 &#160 i. [[Authors|Authors]]
