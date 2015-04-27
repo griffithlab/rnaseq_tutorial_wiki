@@ -118,7 +118,7 @@ Based on the above read counts, plot the linearity of the ERCC spike-in read cou
       ./Tutorial_Module4_ERCC_expression.R $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
 
 To view the resulting figure, navigate to the below URL replacing ## with your class assigned number:
-* http://cshl##.dyndns.org/workspace/rnaseq/refs/ERCC/Tutorial_Module4_ERCC_expression.pdf
+* http://cbw##.dyndns.org/workspace/rnaseq/refs/ERCC/Tutorial_Module4_ERCC_expression.pdf
          
 
         
