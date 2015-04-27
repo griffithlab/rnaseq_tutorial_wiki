@@ -33,26 +33,26 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
     <li>[[PostAlignment QC|PostAlignment-QC]]</li>
 
-   <li>**Module 3 - Expression and Differential Expression**
+   <li>**Module 3 - Expression and Differential Expression**</li>
    <ol start="i">  
-   1. [[Expression|Expression]]
-   2. [[Differential Expression|Differential-Expression]]
-   3. [[DE Visualization|DE-Visualization]]
+   1. [[Expression|Expression]]</li>
+   2. [[Differential Expression|Differential-Expression]]</li>
+   3. [[DE Visualization|DE-Visualization]]</li>
   
-  <li>**Module 4 - Isoform Discovery and Alternative Expression**
+  <li>**Module 4 - Isoform Discovery and Alternative Expression**</li>
   <ol start="i">  
-   1. [[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]
-   2. [[de novo Transcript Assembly|de-novo-Transcript-Assembly]]
-   3. [[Transcript Assembly Merge|Transcript-Assembly-Merge]]
-   4. [[Differential Splicing|Differential-Splicing]]
-   5. [[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]
+   1. [[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]</li>
+   2. [[de novo Transcript Assembly|de-novo-Transcript-Assembly]]</li>
+   3. [[Transcript Assembly Merge|Transcript-Assembly-Merge]]</li>
+   4. [[Differential Splicing|Differential-Splicing]]</li>
+   5. [[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
   
-  **Appendix**
+  **Appendix**</li>
   <ol start="i">  
-  1. [[Abbreviations|Abbreviations]]
-  2. [[Lectures|Lectures]]
-  3. [[Practical Exercise Solutions|Solutions]]
-   4. [[Integrated Assignment|Integrated-Assignment]]
-   5. [[Proposed Improvements|Proposed-Improvements]]
-   6. [[AWS Setup|AWS-Setup]]
+  1. [[Abbreviations|Abbreviations]]</li>
+  2. [[Lectures|Lectures]]</li>
+  3. [[Practical Exercise Solutions|Solutions]]</li>
+   4. [[Integrated Assignment|Integrated-Assignment]]</li>
+   5. [[Proposed Improvements|Proposed-Improvements]]</li>
+   6. [[AWS Setup|AWS-Setup]]</li>
 </ol>
