@@ -5,6 +5,10 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
 
 <ol start="0">
   <li>Item 0</li>
+  <ol start="i">
+    <li>Item i</li>
+    <li>Item ii</li>
+  </ol>
   <li>Item 1</li>
   <li>Item 2</li>
 </ol>
