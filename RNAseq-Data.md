@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-#2-v. RNA-seq Data
+#1-v. RNA-seq Data
 ## Obtain RNA-seq test data. 
  
 The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf) and [Human Brain Reference (HBR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf).  The UHR is total RNA isolated from a diverse set of 10 cancer cell lines.  The HBR is total RNA isolated from the brains of 23 Caucasians, male and female, of varying age but mostly 60-80 years old.
