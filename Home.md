@@ -16,7 +16,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Resources|Resources]]</li>
   </ol>
 
-  <li>**Module 2 - Introduction to RNA sequencing**</li>
+  <li>**Module 1 - Introduction to RNA sequencing**</li>
   <ol start="i">
     <li>[[Installation|Installation]]</li>
     <li>[[Reference Genome|Reference-Genome]]</li>
@@ -26,20 +26,20 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[PreAlignment QC|PreAlignment-QC]]</li>
   </ol>
   
-  <li>**Module 3 - RNA-seq Alignment and Visualization**
+  <li>**Module 2 - RNA-seq Alignment and Visualization**
   <ol start="i">
     <li>[[Adapter Trim|Adapter-Trim]]</li>
     <li>[[Alignment|Alignment]]</li>
     <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
     <li>[[PostAlignment QC|PostAlignment-QC]]</li>
 
-   <li>**Module 4 - Expression and Differential Expression**
+   <li>**Module 3 - Expression and Differential Expression**
    <ol start="i">  
    1. [[Expression|Expression]]
    2. [[Differential Expression|Differential-Expression]]
    3. [[DE Visualization|DE-Visualization]]
   
-  <li>**Module 5 - Isoform Discovery and Alternative Expression**
+  <li>**Module 4 - Isoform Discovery and Alternative Expression**
   <ol start="i">  
    1. [[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]
    2. [[de novo Transcript Assembly|de-novo-Transcript-Assembly]]
