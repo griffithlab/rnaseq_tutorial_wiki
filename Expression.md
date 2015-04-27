@@ -14,7 +14,7 @@ In this module, we will run Cufflinks in 'reference only' mode. For simplicity a
 	
 Cufflinks basic usage:  
 ```
-cufflinks [options] <hits.sam>
+#cufflinks [options] <hits.sam>
 ```
 	
 Extra options specified below:
