@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#5-iv. Differential Splicing
+#4-iv. Differential Splicing
 
 Use Cuffdiff to compare the UHR and HBR conditions.
 
