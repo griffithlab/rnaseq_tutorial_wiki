@@ -30,11 +30,13 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Alignment|Alignment]]</li>
     <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
     <li>[[PostAlignment QC|PostAlignment-QC]]</li>
+  </ol>
   <li><strong>Module 3 - Expression and Differential Expression</strong></li>
   <ol start="i">  
     <li>[[Expression|Expression]]</li>
     <li>[[Differential Expression|Differential-Expression]]</li>
     <li>[[DE Visualization|DE-Visualization]]</li>
+  </ol>
   <li><strong>Module 4 - Isoform Discovery and Alternative Expression</strong></li>
   <ol start="i">  
     <li>[[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]</li>
@@ -42,6 +44,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Transcript Assembly Merge|Transcript-Assembly-Merge]]</li>
     <li>[[Differential Splicing|Differential-Splicing]]</li>
     <li>[[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
+  </ol>
   <li><strong>Appendix</strong></li>
   <ol start="i">  
     <li>[[Abbreviations|Abbreviations]]</li>
@@ -50,4 +53,5 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Integrated Assignment|Integrated-Assignment]]</li>
     <li>[[Proposed Improvements|Proposed-Improvements]]</li>
     <li>[[AWS Setup|AWS-Setup]]</li>
+  </ol>
 </ol>
