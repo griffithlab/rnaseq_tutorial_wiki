@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#3-i. Adapter Trim
+#2-i. Adapter Trim
 [OPTIONAL]
 Use Flexbar to trim sequence adapter from the read FASTQ files.  The output of this step will be trimmed FASTQ files for each data set.
 
