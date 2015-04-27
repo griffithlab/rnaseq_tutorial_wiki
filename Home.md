@@ -5,7 +5,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
 
 #Table of Contents
 **Module 0 - Introduction and Cloud Computing**
-
+<pre>
    i. [[Authors|Authors]]
    ii. [[Citation|Citation]]
    iii. [[Syntax|Syntax]]
@@ -13,6 +13,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
    v. [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]
    vi. [[Environment|Environment]]
    vii. [[Resources|Resources]]
+</pre>
 1. **Module 2 - Introduction to RNA sequencing**
    1. [[Installation|Installation]]
    2. [[Reference Genome|Reference-Genome]]
