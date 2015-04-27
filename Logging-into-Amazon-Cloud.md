@@ -1,4 +1,4 @@
-#1-v. Logging into the Amazon cloud
+#0-v. Logging into the Amazon cloud
 
 * This will ONLY occur once we are in the classroom as it costs to have these servers running. Instructions will be provided in class.
 * We have set up ~30 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. 
