@@ -1,13 +1,8 @@
 #6-iii. Integrated assignment answers
 
-###Subtitle 1 ...
+[Answers [Word version]](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw-cshl-nygc/2015/assignment_questions_with_answers.doc)
 
-Add integrated assignment content here...
-
-###Subtitle 2 ...
-
-Add integrated assignment content here...
-
+[Answers [PDF version]](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw-cshl-nygc/2015/assignment_questions_with_answers.pdf)
 
 | [[Previous Section|Solutions]]       | [[This Section|Integrated-Assignment]] | [[Next Section|Proposed-Improvements]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
