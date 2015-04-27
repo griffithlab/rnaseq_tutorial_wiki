@@ -4,7 +4,7 @@
 Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents.
 
 #Table of Contents
-0. **Module 1 - Introduction and Cloud Computing**
+**Module 1 - Introduction and Cloud Computing**
    1. [[Authors|Authors]]
    2. [[Citation|Citation]]
    3. [[Syntax|Syntax]]
