@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
-#2-iv. Indexing
+#1-iv. Indexing
 
 ###Create a bowtie2 index
 
