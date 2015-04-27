@@ -86,6 +86,6 @@ First package and compress all of the directories and files in the ‘rnaseq’ 
 
 	tar -xzvf rnaseq_tutorial.tar.gz
 	
-| [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|AWS-Setup]]         |
+| [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|Abbreviations]]         |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------:|
-| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]      | [[Lectures|Lectures]]          |
+| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]      | [[Abbreviations|Abbreviations]]          |
