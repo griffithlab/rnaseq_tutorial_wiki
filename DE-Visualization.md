@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
-#4-iii. CummeRbund R Analysis
+#3-iii. CummeRbund R Analysis
 
 The output of cuffdiff can be directly loaded into the R/BioConductor package to produce a sophisticated set of analysis results and visualizations. 
 
