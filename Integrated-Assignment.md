@@ -3,13 +3,12 @@
 http://www.ncbi.nlm.nih.gov/pubmed/21571633 [download] 
 
 
-###Subtitle 1 ....
+###Assignment Questions
+[Assignment [download word version]](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw-cshl-nygc/2015/assignment_questions_only.doc)
 
-Add integrated assignment content here...
+[Assignment [download PDF version]](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw-cshl-nygc/2015/assignment_questions_only.pdf)
+###Assignment Questions with Answers (will be posted at the end of the day Thursday)
 
-###Subtitle 2 ...
-
-Add integrated assignment content here...
 
 
 | [[Previous Section|Solutions]]       | [[This Section|Integrated-Assignment]] | [[Next Section|Proposed-Improvements]]   |
