@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#5-ii. Cufflinks De Novo Mode
+#4-ii. Cufflinks De Novo Mode
 Note, to discover novel transcripts with Cufflinks 
 Using the alignments we generated in the previous modules we will now run Cuffinks in de novo mode
 To use de novo mode do *not* specify either of the '-G/--GTF' OR '-g/--GTF-guide' options.
