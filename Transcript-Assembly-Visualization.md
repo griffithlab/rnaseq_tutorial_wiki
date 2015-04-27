@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#5-v. Transcript Assembly Visualization (Splicing Visualization) 
+#4-v. Transcript Assembly Visualization (Splicing Visualization) 
 
 ## Visualizing Results at the Command Line
 	
