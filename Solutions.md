@@ -16,6 +16,7 @@ wget https://github.com/arq5x/bedtools2/releases/download/v2.23.0/bedtools-2.23.
 tar -zxvf bedtools-2.23.0.tar.gz
 cd bedtools2/
 make
+./bin/bedtools
 ```
 
 ###Practical Exercise 2 - Alignment
