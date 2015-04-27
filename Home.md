@@ -15,8 +15,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Environment|Environment]]</li>
     <li>[[Resources|Resources]]</li>
   </ol>
-
-  <li>**Module 1 - Introduction to RNA sequencing**</li>
+  <li><strong>Module 1 - Introduction to RNA sequencing</strong></li>
   <ol start="i">
     <li>[[Installation|Installation]]</li>
     <li>[[Reference Genome|Reference-Genome]]</li>
@@ -25,34 +24,30 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[RNA-seq Data|RNAseq-Data]]</li>
     <li>[[PreAlignment QC|PreAlignment-QC]]</li>
   </ol>
-  
-  <li>**Module 2 - RNA-seq Alignment and Visualization**
+  <li><strong>Module 2 - RNA-seq Alignment and Visualization</strong></li>
   <ol start="i">
     <li>[[Adapter Trim|Adapter-Trim]]</li>
     <li>[[Alignment|Alignment]]</li>
     <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
     <li>[[PostAlignment QC|PostAlignment-QC]]</li>
-
-   <li>**Module 3 - Expression and Differential Expression**</li>
-   <ol start="i">  
-   1. [[Expression|Expression]]</li>
-   2. [[Differential Expression|Differential-Expression]]</li>
-   3. [[DE Visualization|DE-Visualization]]</li>
-  
-  <li>**Module 4 - Isoform Discovery and Alternative Expression**</li>
+  <li><strong>Module 3 - Expression and Differential Expression</strong></li>
   <ol start="i">  
-   1. [[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]</li>
-   2. [[de novo Transcript Assembly|de-novo-Transcript-Assembly]]</li>
-   3. [[Transcript Assembly Merge|Transcript-Assembly-Merge]]</li>
-   4. [[Differential Splicing|Differential-Splicing]]</li>
-   5. [[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
-  
-  **Appendix**</li>
+    <li>[[Expression|Expression]]</li>
+    <li>[[Differential Expression|Differential-Expression]]</li>
+    <li>[[DE Visualization|DE-Visualization]]</li>
+  <li><strong>Module 4 - Isoform Discovery and Alternative Expression</strong></li>
   <ol start="i">  
-  1. [[Abbreviations|Abbreviations]]</li>
-  2. [[Lectures|Lectures]]</li>
-  3. [[Practical Exercise Solutions|Solutions]]</li>
-   4. [[Integrated Assignment|Integrated-Assignment]]</li>
-   5. [[Proposed Improvements|Proposed-Improvements]]</li>
-   6. [[AWS Setup|AWS-Setup]]</li>
+    <li>[[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]</li>
+    <li>[[de novo Transcript Assembly|de-novo-Transcript-Assembly]]</li>
+    <li>[[Transcript Assembly Merge|Transcript-Assembly-Merge]]</li>
+    <li>[[Differential Splicing|Differential-Splicing]]</li>
+    <li>[[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
+  <li><strong>Appendix</strong></li>
+  <ol start="i">  
+    <li>[[Abbreviations|Abbreviations]]</li>
+    <li>[[Lectures|Lectures]]</li>
+    <li>[[Practical Exercise Solutions|Solutions]]</li>
+    <li>[[Integrated Assignment|Integrated-Assignment]]</li>
+    <li>[[Proposed Improvements|Proposed-Improvements]]</li>
+    <li>[[AWS Setup|AWS-Setup]]</li>
 </ol>
