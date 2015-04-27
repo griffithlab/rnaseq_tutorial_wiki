@@ -10,7 +10,7 @@ Refer to the Flexbar project and manual for a more detailed explanation:
 
 Flexbar basic usage:
 ```
-flexbar -r reads [-t target] [-b barcodes] [-a adapters] [options]
+#flexbar -r reads [-t target] [-b barcodes] [-a adapters] [options]
 ```
 	
 Extra options specified below:
