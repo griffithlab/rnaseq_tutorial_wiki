@@ -32,7 +32,7 @@ First, set up some directories for output
 
 ```
 cd $RNA_HOME/
-export RNA_DATA_DIR=$RNA_HOME/data/
+export RNA_DATA_DIR=$RNA_HOME/data
 echo $RNA_DATA_DIR
 
 mkdir -p $RNA_DATA_DIR/trimmed
