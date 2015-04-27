@@ -6,8 +6,8 @@ Log into a server and SET THIS BEFORE RUNNING EVERYTHING.
 
 Create a working directory and set the 'RNA_HOME' environment variable
 
-	mkdir -p ~/rnaseq/
-	export RNA_HOME=~/rnaseq
+	mkdir -p ~/workspace/rnaseq/
+	export RNA_HOME=~/workspace/rnaseq
 	
 Make sure whatever the working dir is, that it is set and is valid
 
