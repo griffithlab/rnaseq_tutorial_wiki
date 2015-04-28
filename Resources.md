@@ -42,6 +42,8 @@
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
 - [A list of Genome Analysis Platforms like Galaxy, BaseSpace, etc.](https://docs.google.com/spreadsheets/d/1o8iYwYUy0V7IECmu21Und3XALwQihioj23WGv-w0itk/pubhtml)
+- [BioLinux - An Ubuntu Linux system with many Bioinformatics tools pre-installed](http://environmentalomics.org/bio-linux/)
+- [CloudBioLinux - A cloud ready version of BioLinux](http://cloudbiolinux.org/)
 
 #### 7. Getting More Help
 - [Biostar - A forum for the bioinformatics community](http://www.biostars.org/)
