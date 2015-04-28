@@ -46,7 +46,7 @@
 - [CloudBioLinux - A cloud ready version of BioLinux](http://cloudbiolinux.org/)
 
 #### 7. Getting More Help
-- [Biostar - A forum for the bioinformatics community](http://www.biostars.org/)
+- [Biostars - A forum for the bioinformatics community](http://www.biostars.org/)
 - [SEQanswers - A forum for the next generation sequencing community](http://seqanswers.com/)
 
 | [[Previous Section|Environment]] | [[This Section|Resources]]  | [[Next Section|Installation]] |
