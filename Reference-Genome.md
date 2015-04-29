@@ -12,7 +12,7 @@ Create the necessary working directory
 	mkdir refs/hg19/fasta/chr22_ERCC92/
 	cd refs/hg19/fasta/chr22_ERCC92/
 	
-Make a copy of chr22 + ERCC fasta in your working directory. The complete data from which these files were obtained can be found at: http://cufflinks.cbcb.umd.edu/igenomes.html. You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar.
+Make a copy of chr22 + ERCC fasta in your working directory. The complete data from which these files were obtained can be found at: http://cole-trapnell-lab.github.io/cufflinks/igenome_table/index.html. You could use wget to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file (under Homo sapiens -> Ensembl -> GRCh37), then unzip/untar.
 
 This has been done for you and that data placed on an ftp server. It contains chr22 and ERCC transcript fasta files in both a single combined file and individual files. Download them now.
 
