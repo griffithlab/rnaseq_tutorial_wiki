@@ -98,7 +98,8 @@ Goals:
 - Familiarize yourself with Cufflinks options
 - Run Cufflinks to obtain expression values
 - Obtain expression values for the gene PCA3
-
+    
+#setup the expression directory
     cd $RNA_HOME
     mkdir expression
     cd expression
@@ -122,13 +123,14 @@ Goals:
 - Perform differential analysis between tumor and normal samples
 - Check if PCA3 is differentially expressed
 
-     cd $RNA_HOME/expression
-     ls -l */transcripts.gtf > assembly_GTF_list.txt
-     cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr9.gtf -s $RNA_HOME/refs/hg19/bwt/9/assembly_GTF_list.txt
-    cd $RNA_HOME/
-    mkdir de
-    mkdir de/reference_only
-    cd $RNA_HOME/alignments/tophat
+#run the following commands
+      cd $RNA_HOME/expression;
+      ls -l */transcripts.gtf > assembly_GTF_list.txt;
+      cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr9.gtf -s $RNA_HOME/refs/hg19/bwt/9/assembly_GTF_list.txt
+      cd $RNA_HOME/
+      mkdir de
+      mkdir de/reference_only
+      cd $RNA_HOME/alignments/tophat
 
 #run cuffdiff to perform comparison
 
