@@ -31,7 +31,7 @@ ssh -Y -i CBWNY.pem ubuntu@cbw##.entrydns.org
 * To copy files from a node, use scp in a similar fashion (in this case to copy a file called nice_alignments.bam):
 
 ```
-scp -i CBWNY.pem ubuntu@cbw##.entrydns.org:workspace/nice_alignments.bam .
+scp -i CBWNY.pem ubuntu@cbw##.entrydns.org:nice_alignments.bam .
 ```
 
 * Everything created in your workspace on the cloud is also available by a web server on your cloud instance.  Simply go to the following in your browser:

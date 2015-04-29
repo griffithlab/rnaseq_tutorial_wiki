@@ -47,12 +47,12 @@ This may cause a segfault and produce incomplete results. If so you can try down
 	~/bin/samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
 View the `samstat` summary file in a web browser. Note, you must replace ## with your own amazon instance number (e.g., "01")):  
-* http://cbw##.entrydns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.samstat.html  
-* http://cbw##.entrydns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.samstat.html  
+* http://cbw##.entrydns.org/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.samstat.html  
+* http://cbw##.entrydns.org/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.samstat.html  
 
 Or, for older samstat software:
-* http://cbw##.entrydns.org/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html  
-* http://cbw##.entrydns.org/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html  
+* http://cbw##.entrydns.org/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html  
+* http://cbw##.entrydns.org/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html  
 
 	
 Details of the SAM/BAM format can be found here:  
