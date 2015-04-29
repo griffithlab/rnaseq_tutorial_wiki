@@ -25,6 +25,9 @@ Extra options specified below:
 * '--reads ' define the path to the read 1 FASTQ file of reads
 * '--reads2 ' define the path to the read 2 FASTQ file of reads
 * '--target ' a base path for the output files.  The value will _1.fastq.gz and _2.fastq.gz for read 1 and read 2 respectively
+* '--pre-trim-left' trim a fixed number of bases at left read end. For example, to trim 5 bases at the left side of reads: --pre-trim-left 5
+* '--pre-trim-right' trim a fixed number of bases at right read end. For example, to trim 5 bases at the right side of reads: --pre-trim-right 5
+* '--pre-trim-phred' trim based on phred quality value to deal with higher error rates towards the end of reads. For example, to trim the 3' end until quality offset value 30 or higher is reached, specify: --pre-trim-phred 30
 
 ##Flexbar trim
 
