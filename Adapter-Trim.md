@@ -50,7 +50,7 @@ cd $RNA_HOME/refs
 wget https://xfer.genome.wustl.edu/gxfer1/project/gms/rnaseq/trim/illumina_multiplex.fa
 ```
 
-In our tests, each sample took ~30 seconds to trim
+Use flexbar to remove illumina adaptor sequences (if any) and trim first 13 bases of each read. In our tests, each sample took ~30 seconds to trim
 ```
 cd $RNA_HOME
 ~/workspace/rnaseq/tools/flexbar_v2.4_linux64/flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22
@@ -64,7 +64,16 @@ cd $RNA_HOME
 ~/workspace/rnaseq/tools/flexbar_v2.4_linux64/flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22	
 ```
 
+Optional exercise: Compare the FastQC reports for fastq files before and after trimming. All fastqc reports can be generated on the commandline.
 
+```
+fastqc ~/workspace/rnaseq/data/*.fastq.gz
+fastqc ~/workspace/rnaseq/data/trimmed/*.fastq.gz
+```
+
+The resulting html reports can be viewed by navigating to:
+http://cbw##.entrydns.org/rnaseq/data/
+http://cbw##.entrydns.org/rnaseq/data/trimmed/
 
 | [[Previous Section|PreAlignment-QC]] | [[This Section|Adapter Trim]] | [[Next Section|Alignment]] |
 |:------------------------------------:|:--------------------------:|:--------------------------------------------:|
