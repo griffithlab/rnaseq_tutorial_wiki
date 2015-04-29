@@ -126,7 +126,7 @@ Goals:
 #run the following commands
       cd $RNA_HOME/expression;
       ls -l */transcripts.gtf > assembly_GTF_list.txt;
-      cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr9.gtf -s $RNA_HOME/refs/hg19/bwt/9/assembly_GTF_list.txt
+      cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr9.gtf -s $RNA_HOME/refs/hg19/bwt/9/ assembly_GTF_list.txt
       cd $RNA_HOME/
       mkdir de
       mkdir de/reference_only
