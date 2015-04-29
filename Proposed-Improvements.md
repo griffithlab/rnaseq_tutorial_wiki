@@ -35,6 +35,10 @@ sudo python setup.py install
 ### Create a trimming section 
 Create a wiki section and exercise that summarizes read trimming concepts. Start with some raw data, including aligned reads.  Align these reads without any trimming and assess alignment statistics using Picard, FastQC, etc.  Now take these same reads and perform both adaptor trimming and quality trimming.  Re-align the trimmed reads and assess the effect of trimming on alignment metrics.
 
+### Add RSeQC to tutorial
+Add installation and running of RSeQC 
+This could possible replace Samstat which never works very well
+
 ### Add integrated assignment content to the wiki
 Get the integrated wiki from CBW and incorporate that here.
 
