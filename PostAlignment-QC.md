@@ -28,8 +28,8 @@ Now require that the alignments be only for 'PCR or optical duplicate'. How many
 Use `samtools flagstat` to get a basic summary of an alignment.  What percent of reads are mapped? Is this realistic? Why?
 
 	cd $RNA_HOME/alignments/tophat/
-	samtools flagstat UHR_Rep1_ERCC-Mix1/accepted_hits.bam
-	samtools flagstat UHR_Rep1_ERCC-Mix1/accepted_hits.bam
+	samtools flagstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
+	samtools flagstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
 Run `samstat` on UHR/HBR BAMs
 
