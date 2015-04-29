@@ -72,8 +72,8 @@ fastqc ~/workspace/rnaseq/data/trimmed/*.fastq.gz
 ```
 
 The resulting html reports can be viewed by navigating to:
-http://cbw##.entrydns.org/rnaseq/data/
-http://cbw##.entrydns.org/rnaseq/data/trimmed/
+* http://cbw##.entrydns.org/rnaseq/data/
+* http://cbw##.entrydns.org/rnaseq/data/trimmed/
 
 | [[Previous Section|PreAlignment-QC]] | [[This Section|Adapter Trim]] | [[Next Section|Alignment]] |
 |:------------------------------------:|:--------------------------:|:--------------------------------------------:|
