@@ -16,7 +16,7 @@ View the merged GTF file from the 'de_novo' mode.  Remember this merged GTF file
 	
 For details on the format of these files, refer to the following links:
 * http://cole-trapnell-lab.github.io/cufflinks/cuffmerge/index.html
-* http://cufflinks.cbcb.umd.edu/manual.html#class_codes
+* http://cole-trapnell-lab.github.io/cufflinks/cuffcompare/index.html#transfrag-class-codes
 	
 View the differential splicing, differential promoter usage and differential CDS results files. For each results file, we sort the results by the p-value and view the top 10 isoforms, ignoring entries classified as 'LOWDATA'.
 
