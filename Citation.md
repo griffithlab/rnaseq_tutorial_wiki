@@ -11,18 +11,18 @@ All materials associated with this publication, including high resolution and or
 
 This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/figures]] and [[supplementary tables|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/supplementary_tables]].
 
-[[Figure 1|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure1.pdf]], 
-[[Figure 2|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure2.pdf]], 
-[[Figure 3|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure3.pdf]], 
-[[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]], 
-[[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]], 
-[[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]]<br>
-[[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1.md]], 
-[[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2.md]], 
-[[Supplementary Table 3 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_3.md]]<br>
-[[Supplementary Table 4 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_4.md]], 
-[[Supplementary Table 5 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md]], 
-[[Supplementary Table 6 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_6.md]]<br>
+- [[Figure 1|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure1.pdf]] 
+- [[Figure 2|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure2.pdf]] 
+- [[Figure 3|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure3.pdf]] 
+- [[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]] 
+- [[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]] 
+- [[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]]
+- [[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1.md]] - Tools for RNA-seq analysis
+- [[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2.md]]
+- [[Supplementary Table 3 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_3.md]]
+- [[Supplementary Table 4 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_4.md]]
+- [[Supplementary Table 5 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md]]
+- [[Supplementary Table 6 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_6.md]]
 
 | [[Previous Section|Authors]]  | [[This Section|Citation]]   | [[Next Section|Syntax]] |
 |:-----------------------------:|:---------------------------:|:-----------------------:|
