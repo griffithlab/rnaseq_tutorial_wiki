@@ -90,6 +90,17 @@ _**NOTE: Take a minute and try to figure out what each parameter means and how w
 
     tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C06 -o carcinoma_C06 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C06_read1.fasta $RNA_DATA_DIR/carcinoma_C06_read2.fasta
 
+#NOTE: Here is an example of a simple tophat command:
+    tophat2 -p 8 \
+    --rg-id=condition \ 
+    --rg-sample=SampleName \
+    -o OutputfolderName \
+    -G YourGTFfile \
+    --transcriptom-index LocationToStoreGTFIndex \
+    YourBWTFastaReferenceFolder \
+    read1.fastq read2.fastq \ (if your data is single end, then only provide one fastq file)
+
+
 Q7) How would you obtain summary statistics for each aligned file?
 
 # PART 3: Expression Estimation
