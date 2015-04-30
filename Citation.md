@@ -17,8 +17,8 @@ This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/
 - [[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]] - RNA-seq library enrichment strategies that influence interpretation and analysis
 - [[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]] - RNA-seq analysis flow-chart
 - [[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]] - Comparison of stranded and unstranded RNA-seq library methods and their influence on interpretation and analysis
-- [[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1_urls.md]] - Tools for RNA-seq analysis
-- [[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2_urls.md]] - RNA-seq analysis techniques
+- [[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1_urls.md]] - RNA-seq analysis techniques
+- [[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2_urls.md]] - Tools for RNA-seq analysis
 - [[Supplementary Table 3 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_3.md]] - Concepts in sample preparation and library construction that can influence study design, analysis and interpretation
 - [[Supplementary Table 4 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_4.md]] - Strand related settings for RNA-seq tools that must be adjusted to account for library construction strategy
 - [[Supplementary Table 5 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md]] - Standard file formats and tool-specific files used in RNA-seq analysis
