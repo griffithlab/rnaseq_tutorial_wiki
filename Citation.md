@@ -11,12 +11,12 @@ All materials associated with this publication, including high resolution and or
 
 This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/figures]] and [[supplementary tables|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/supplementary_tables]].
 
-- [[Figure 1|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure1.pdf]] 
-- [[Figure 2|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure2.pdf]] 
-- [[Figure 3|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure3.pdf]] 
-- [[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]] 
-- [[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]] 
-- [[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]]
+- [[Figure 1|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure1.pdf]] - An overview of the central dogma of molecular biology
+- [[Figure 2|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure2.pdf]] - RNA-seq data generation
+- [[Figure 3|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure3.pdf]] - RNA-seq library fragmentation and size selection strategies that influence interpretation and analysis
+- [[Figure 4|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure4.pdf]] - RNA-seq library enrichment strategies that influence interpretation and analysis
+- [[Figure 5|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure5.pdf]] - RNA-seq analysis flow-chart
+- [[Figure 6|https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/figures/Figure6.pdf]] - Comparison of stranded and unstranded RNA-seq library methods and their influence on interpretation and analysis
 - [[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1.md]] - Tools for RNA-seq analysis
 - [[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2.md]] - RNA-seq analysis techniques
 - [[Supplementary Table 3 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_3.md]] - Concepts in sample preparation and library construction that can influence study design, analysis and interpretation
