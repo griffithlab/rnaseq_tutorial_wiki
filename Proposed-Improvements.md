@@ -1,5 +1,8 @@
 # 5-v. Proposed improvements
 
+### Update ftp links
+Update all wget commands to download from new ftp folder locations instead of subfolders in GMS project
+
 ### Update the AMI to use bash instead of dash as default shell
 The STAR aligner currently throws errors when run on an ubuntu system because `/bin/sh` is linked to `/bin/dash` and not to `/bin/bash`.
 
