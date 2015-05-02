@@ -51,7 +51,7 @@ The output file can be viewed in your browser at the following url. Note, you mu
 This section will demonstrate the DE between the ERCC spike-in:
 
      cd $RNA_HOME/de/tophat_cufflinks/ref_only
-     wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_DE.R
+     wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.R
      chmod +x Tutorial_Module4_ERCC_DE.R
      ./Tutorial_Module4_ERCC_DE.R $RNA_HOME/refs/ERCC/ERCC_Controls_Analysis.txt $RNA_HOME/de/tophat_cufflinks/ref_only/gene_exp.diff
 
