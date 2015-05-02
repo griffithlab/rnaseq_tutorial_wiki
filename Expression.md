@@ -105,15 +105,15 @@ Based on the above read counts, plot the linearity of the ERCC spike-in read cou
 
       mkdir $RNA_HOME/refs/ERCC
       cd $RNA_HOME/refs/ERCC
-      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
+      wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
       cat ERCC_Controls_Analysis.txt
 
-      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.pl
+      wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.pl
       chmod +x Tutorial_Module4_ERCC_expression.pl
       ./Tutorial_Module4_ERCC_expression.pl
       cat $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
       
-      wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.R
+      wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.R
       chmod +x Tutorial_Module4_ERCC_expression.R
       ./Tutorial_Module4_ERCC_expression.R $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
 
