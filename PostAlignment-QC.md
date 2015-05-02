@@ -40,7 +40,7 @@ Run `samstat` on UHR/HBR BAMs
 This may cause a segfault and produce incomplete results. If so you can try downloading an older version of the samstat software:
 
 	cd ~/bin
-	wget https://dl.dropboxusercontent.com/u/16769159/samstat
+	wget ftp://genome.wustl.edu/pub/rnaseq/tools/bin/samstat
 	chmod +x samstat
 	cd $RNA_HOME/alignments/tophat/
 	~/bin/samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
