@@ -106,8 +106,9 @@ Rather than handing out ip addresses for each student instance to each student y
 ###Host necessary files for the course
 
 Currently, all miscellaneous data files, annotations, etc are hosted on an ftp server at the Genome Institute. 
-Files copied to: /gscmnt/sata102/info/ftp-staging/pub/rnaseq/
-Appear here: ftp://genome.wustl.edu/pub/rnaseq/
+
+* Files copied to: /gscmnt/sata102/info/ftp-staging/pub/rnaseq/
+* Appear here: ftp://genome.wustl.edu/pub/rnaseq/
 
 
 | [[Proposed Improvements|Proposed-Improvements]]       | [[This Section|AWS-Setup]] | Next Section   |
