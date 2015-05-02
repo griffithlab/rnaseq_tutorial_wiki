@@ -101,8 +101,14 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ###Set up a dynamic DNS service
 
-p
 Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com or (http://entrydns.net) to create hostnames like rna01.dyndns.org, rna02.dyndns.org, etc that point to each public IP address of student instances.
+
+###Host necessary files for the course
+
+Currently, all miscellaneous data files, annotations, etc are hosted on an ftp server at the Genome Institute. 
+Files copied to: /gscmnt/sata102/info/ftp-staging/pub/rnaseq/
+Appear here: ftp://genome.wustl.edu/pub/rnaseq/
+
 
 | [[Proposed Improvements|Proposed-Improvements]]       | [[This Section|AWS-Setup]] | Next Section   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
