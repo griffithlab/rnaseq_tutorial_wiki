@@ -47,7 +47,7 @@ Download necessary Illumina adaptor sequence files.
 
 ```
 cd $RNA_HOME/refs
-wget https://xfer.genome.wustl.edu/gxfer1/project/gms/rnaseq/trim/illumina_multiplex.fa
+wget ftp://genome.wustl.edu/pub/rnaseq/trim/illumina_multiplex.fa
 ```
 
 Use flexbar to remove illumina adaptor sequences (if any) and trim first 13 bases of each read. In our tests, each sample took ~30 seconds to trim
