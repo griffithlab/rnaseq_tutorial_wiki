@@ -63,7 +63,7 @@ When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annot
 
 There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, UCSC, RefSeq, etc.  Three options and related instructions for obtaining the gene annotation files are provided below.
 	
-1. ILLUMINA IGENOMES.  
+####I. ILLUMINA IGENOMES.  
 Formatted specifically for use with TopHat Cuffinks.  Based on UCSC, Refseq/NCBI, or Ensembl annotations.  Available for many species.  Bowtie indexed reference genome files are pre-computed for your convenience.  Download here:
 http://cufflinks.cbcb.umd.edu/igenomes.html
   * Use wget (or similar) to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file 
@@ -87,11 +87,11 @@ Then, the files you would need for the workflow presented in this tutorial would
 * Reference genome (individual): Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/*.fa
 * Bowtie2 index: Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.*
 	
-2. ENSEMBL FTP SITE  
+####II. ENSEMBL FTP SITE  
 Based on Ensembl annotations only.  Available for many species.
 http://useast.ensembl.org/info/data/ftp/index.html
 	
-3. UCSC TABLE BROWSER  
+####III. UCSC TABLE BROWSER  
 Based on UCSC annotations or several other possible annotation sources collected by UCSC. You might chose this option if you want to have a lot of flexibility in the annotations you obtain.  e.g. to grab only the transcripts from chromosome 22 as in the following example:
   * Open the following in your browser: http://genome.ucsc.edu/
   * Click 'Tables' at the top of the page.
