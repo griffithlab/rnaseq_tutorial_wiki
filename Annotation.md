@@ -71,6 +71,21 @@ http://cufflinks.cbcb.umd.edu/igenomes.html
   * unzip/untar
   * Individual chromosome fasta sequence files can be in Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/
   * GTF file can be found in Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+
+Note, the Igenomes file is huge and contains many files (including archived versions) that you likely do not need. After download of the tar file, one space-saving solution is to perform only a selective unarchive. For example:
+
+```
+cd /workspace/rnaseq/refs/hg19/
+wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
+tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
+```
+
+Then, the files you would need for the workflow presented in this tutorial would be:
+The files you will need are:
+1. GTF file: Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+2.1 Reference genome (combined): Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta/genome.fa
+2.2 Reference genome (individual): Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/*.fa
+3. Bowtie2 index: Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.*
 	
 2. ENSEMBL FTP SITE  
 Based on Ensembl annotations only.  Available for many species.
