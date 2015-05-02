@@ -10,7 +10,7 @@ Copy the gene annotation files to the working directory.
 	cd $RNA_HOME/refs/hg19/
 	mkdir genes
 	cd genes
-	wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
+	wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
 	gunzip genes_chr22_ERCC92.gtf.gz
 
 Take a look at the contents of the gtf file. Press 'q' to exit the 'less' display.
