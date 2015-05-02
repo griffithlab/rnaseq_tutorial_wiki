@@ -82,10 +82,10 @@ tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --
 
 Then, the files you would need for the workflow presented in this tutorial would be:
 
-1. GTF file: Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
-2.1 Reference genome (combined): Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta/genome.fa
-2.2 Reference genome (individual): Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/*.fa
-3. Bowtie2 index: Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.*
+* GTF file: Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+* Reference genome (combined): Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta/genome.fa
+* Reference genome (individual): Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/*.fa
+* Bowtie2 index: Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.*
 	
 2. ENSEMBL FTP SITE  
 Based on Ensembl annotations only.  Available for many species.
