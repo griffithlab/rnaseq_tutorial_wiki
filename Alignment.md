@@ -129,7 +129,7 @@ Perform some alignments on an additional pair of read data sets.
 cd $RNA_HOME
 mkdir -p practice/data
 cd $RNA_HOME/practice/data
-wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395_1tenth_percent/alignment_practical.tar
+wget ftp://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
 tar -xvf alignment_practical.tar
 ```
 
