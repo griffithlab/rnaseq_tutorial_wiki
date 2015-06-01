@@ -1,6 +1,6 @@
 # 5-ii. Lectures
 
-###CBW Informatics for RNA-seq analysis
+###CBW Informatics for RNA-seq analysis (June 8-9)
 
 Presentations:
 
@@ -16,9 +16,9 @@ Presentations:
 
 Lecture Videos:
 
-###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (2015)
+###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (April 29-30, 2015)
 
-Presentations:
+####Presentations:
 
 * [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module1_Lecture.pptx]]
 * [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module1_Tutorial.pptx]]
@@ -29,12 +29,12 @@ Presentations:
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Lecture.pptx]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Tutorial.pptx]]
 
-Lecture Videos:
+####Lecture Videos:
+Coming soon...
 
+###CSHL Advanced Sequencing Technologies and Applications (November 11-23, 2014)
 
-###CSHL Advanced Sequencing Technologies and Applications (2014)
-
-Presentations:
+####Presentations:
 
 * [[Module 1 - Introduction to cloud computing (Lecture/Tutorial)|LectureFiles/cshl/2014/RNASeq_Module1_AmazonPreTutorial.pdf]]
 * [[Module 2 - Introduction to RNA sequencing (lecture)|LectureFiles/cshl/2014/RNASeq_Module2_Lecture.pdf]]
