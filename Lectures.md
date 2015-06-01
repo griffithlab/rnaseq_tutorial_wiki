@@ -1,8 +1,8 @@
 # 5-ii. Lectures
 
-###CBW Informatics for RNA-seq analysis (June 8-9)
+###CBW Informatics for RNA-seq analysis (June 8-9, 2015)
 
-Presentations:
+####Presentations:
 
 * [[Module 0 - Introduction to cloud computing (Lecture/Tutorial)|LectureFiles/cbw/2014/RNASeq_Module1_AmazonPreTutorial.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw/2015/RNASeq_Module2_Lecture.pdf]]
@@ -14,7 +14,9 @@ Presentations:
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw/2015/RNASeq_Module5_Lecture.pdf]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw/2015/RNASeq_Module5_Tutorial.pdf]]
 
-Lecture Videos:
+####Lecture Videos:
+
+Coming soon...
 
 ###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (April 29-30, 2015)
 
