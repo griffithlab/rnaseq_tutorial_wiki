@@ -4,7 +4,7 @@
 
 **Presentations:**
 
-* [[Module 0 - Introduction to cloud computing (Lecture/Tutorial)|LectureFiles/cbw/2014/RNASeq_Module1_AmazonPreTutorial.pdf]]
+* [[Module 0 - Introduction to cloud computing (Lecture/Tutorial)|LectureFiles/cbw/2015/RNASeq_Module1_AmazonPreTutorial.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw/2015/RNASeq_Module2_Lecture.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cbw/2015/RNASeq_Module2_Tutorial.pdf]]
 * [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cbw/2015/RNASeq_Module3_Lecture.pdf]]
