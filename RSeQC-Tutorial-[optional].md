@@ -34,7 +34,7 @@ Note: You should now see the bam, index, and RefSeq bed files listed
      read_distribution.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
      read_duplication.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
      read_GC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     module load RSeQC; read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+     read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
      read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
 
 #Go through the generated PDFs
