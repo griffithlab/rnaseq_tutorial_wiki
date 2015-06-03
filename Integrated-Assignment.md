@@ -34,13 +34,13 @@ Goals:
 
 #set your working directory
       mkdir -p ~/workspace/rnaseq/integrated_assignment/
-      export RNA_HOME=~/workspace/rnaseq/integrated_assignment
+      export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment
 #copy the necessary reference and annotation files
 Note: when initiating an environment variable, we don't need the $; however, everytime we call the variable, it needs to be preceeded by a $.
 
-     echo $RNA_HOME
-     cp -r ~/CourseData/RNA_data/integrated_assignment_files/* $RNA_HOME
-     cd $RNA_HOME
+     echo $RNA_ASSIGNMENT
+     cp -r ~/CourseData/RNA_data/integrated_assignment_files/* $RNA_ASSIGNMENT
+     cd $RNA_ASSIGNMENT
 
 
 Q1) How many directories are there under the “refs” directory? 
@@ -68,8 +68,8 @@ Q5) What is the value of --mate-inner-dist? What calculation did you do to get t
 
 Q6) Considering that the read length in this exercise is 36bp, what should you set the --segment-length to (default is 25bp)?
 
-    cd $RNA_HOME/
-    export RNA_DATA_DIR=$RNA_HOME/data/
+    cd $RNA_ASSIGNMENT/
+    export RNA_DATA_DIR=$RNA_ASSIGNMENT/data/
     echo $RNA_DATA_DIR
     mkdir -p alignments/tophat/trans_idx
     cd alignments/tophat
@@ -78,17 +78,17 @@ Q6) Considering that the read length in this exercise is 36bp, what should you s
 
 _**NOTE: Take a minute and try to figure out what each parameter means and how we go the numbers. **_
 
-    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N02 -o normal_N02 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N02_read1.fasta $RNA_DATA_DIR/normal_N02_read2.fasta
+    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N02 -o normal_N02 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N02_read1.fasta $RNA_DATA_DIR/normal_N02_read2.fasta
 
-    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N03 -o normal_N03 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N03_read1.fasta $RNA_DATA_DIR/normal_N03_read2.fasta
+    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N03 -o normal_N03 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N03_read1.fasta $RNA_DATA_DIR/normal_N03_read2.fasta
 
-    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N06 -o normal_N06 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N06_read1.fasta $RNA_DATA_DIR/normal_N06_read2.fasta
+    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N06 -o normal_N06 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N06_read1.fasta $RNA_DATA_DIR/normal_N06_read2.fasta
 
-    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C02 -o carcinoma_C02 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C02_read1.fasta $RNA_DATA_DIR/carcinoma_C02_read2.fasta
+    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C02 -o carcinoma_C02 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C02_read1.fasta $RNA_DATA_DIR/carcinoma_C02_read2.fasta
 
-    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C03 -o carcinoma_C03 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C03_read1.fasta $RNA_DATA_DIR/carcinoma_C03_read2.fasta
+    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C03 -o carcinoma_C03 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C03_read1.fasta $RNA_DATA_DIR/carcinoma_C03_read2.fasta
 
-    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C06 -o carcinoma_C06 -G $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C06_read1.fasta $RNA_DATA_DIR/carcinoma_C06_read2.fasta
+    tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C06 -o carcinoma_C06 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C06_read1.fasta $RNA_DATA_DIR/carcinoma_C06_read2.fasta
 
 #NOTE: Here is an example of a simple tophat command:
     tophat2 -p 8 \
@@ -111,19 +111,19 @@ Goals:
 - Obtain expression values for the gene PCA3
     
 #setup the expression directory
-    cd $RNA_HOME
+    cd $RNA_ASSIGNMENT
     mkdir expression
     cd expression
 
 _**example (how to run cufflinks for one sample):**_
 
-    cufflinks -p 8 -o normal_N02 --GTF $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_HOME/alignments/tophat/normal_N02/accepted_hits.bam 
-    cufflinks -p 8 -o normal_N03 --GTF $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_HOME/alignments/tophat/normal_N03/accepted_hits.bam 
-    cufflinks -p 8 -o normal_N06 --GTF $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_HOME/alignments/tophat/normal_N06/accepted_hits.bam 
+    cufflinks -p 8 -o normal_N02 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/normal_N02/accepted_hits.bam 
+    cufflinks -p 8 -o normal_N03 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/normal_N03/accepted_hits.bam 
+    cufflinks -p 8 -o normal_N06 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/normal_N06/accepted_hits.bam 
 
-    cufflinks -p 8 -o carcinoma_C02 --GTF $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_HOME/alignments/tophat/carcinoma_C02/accepted_hits.bam 
-    cufflinks -p 8 -o carcinoma_C03 --GTF $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_HOME/alignments/tophat/carcinoma_C03/accepted_hits.bam 
-    cufflinks -p 8 -o carcinoma_C06 --GTF $RNA_HOME/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_HOME/alignments/tophat/carcinoma_C06/accepted_hits.bam 
+    cufflinks -p 8 -o carcinoma_C02 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/carcinoma_C02/accepted_hits.bam 
+    cufflinks -p 8 -o carcinoma_C03 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/carcinoma_C03/accepted_hits.bam 
+    cufflinks -p 8 -o carcinoma_C06 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/carcinoma_C06/accepted_hits.bam 
 
 Q8) How do you get the expression of PCA3 across the normal and carcinoma samples?
 
@@ -135,28 +135,28 @@ Goals:
 - Check if PCA3 is differentially expressed
 
 #run the following commands
-      cd $RNA_HOME/expression;
+      cd $RNA_ASSIGNMENT/expression;
       ls -1 */transcripts.gtf > assembly_GTF_list.txt;
-      cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr9.gtf -s $RNA_HOME/refs/hg19/bwt/9/ assembly_GTF_list.txt
-      cd $RNA_HOME/
+      cuffmerge -p 8 -o merged -g $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf -s $RNA_ASSIGNMENT/refs/hg19/bwt/9/ assembly_GTF_list.txt
+      cd $RNA_ASSIGNMENT/
       mkdir de
       mkdir de/reference_only
-      cd $RNA_HOME/alignments/tophat
+      cd $RNA_ASSIGNMENT/alignments/tophat
 
 #run cuffdiff to perform comparison
 
-    cuffdiff -p 8 -L Normal,Carcinoma -o $RNA_HOME/de/reference_only/ --no-update-check $RNA_HOME/expression/merged/merged.gtf normal_N02/accepted_hits.bam,normal_N03/accepted_hits.bam,normal_N06/accepted_hits.bam carcinoma_C02/accepted_hits.bam,carcinoma_C03/accepted_hits.bam,carcinoma_C06/accepted_hits.bam
+    cuffdiff -p 8 -L Normal,Carcinoma -o $RNA_ASSIGNMENT/de/reference_only/ --no-update-check $RNA_ASSIGNMENT/expression/merged/merged.gtf normal_N02/accepted_hits.bam,normal_N03/accepted_hits.bam,normal_N06/accepted_hits.bam carcinoma_C02/accepted_hits.bam,carcinoma_C03/accepted_hits.bam,carcinoma_C06/accepted_hits.bam
 
 Q9) any significant genes that are differentially expressed? what about PCA3? 
 
 _**NOTE: Make a copy of the data to use in generateCummerbund plots generation**_
 
-    cd $RNA_HOME/
+    cd $RNA_ASSIGNMENT/
     mkdir final_results
-    cd $RNA_HOME/final_results
+    cd $RNA_ASSIGNMENT/final_results
     mkdir reference_only
-    cp $RNA_HOME/de/reference_only/isoform* reference_only/
-    cp $RNA_HOME/de/reference_only/read_groups.info reference_only/
+    cp $RNA_ASSIGNMENT/de/reference_only/isoform* reference_only/
+    cp $RNA_ASSIGNMENT/de/reference_only/read_groups.info reference_only/
 
 _**NOTE: Rerun Obi's CummerBund Script focusing on PCA3 genes.**_
 
