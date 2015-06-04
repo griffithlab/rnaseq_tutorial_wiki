@@ -74,7 +74,8 @@ Files needed:
 - Index file for the aligned bam.
 - A RefSeq bed file.
 
-#Copy RSeQC Data
+Copy RSeQC Data  
+
 
 set your working directory and copy the necessary files
 
@@ -82,12 +83,14 @@ set your working directory and copy the necessary files
       cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/
       cd ~/workspace/rnaseq/
 
-#Unzip the RSeQC file
+Unzip the RSeQC file:    
+
       unzip RSeQC.zip
       cd RSeQC/
 Note: You should now see the bam, index, and RefSeq bed files listed
 
-#Run RSeQC commands:
+Run RSeQC commands:    
+
      bam_stat.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
      clipping_profile.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
      geneBody_coverage.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
@@ -101,7 +104,8 @@ Note: You should now see the bam, index, and RefSeq bed files listed
      read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
      read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
 
-#Go through the generated PDFs
+Go through the generated PDFs:    
+
      ls *.pdf
 
 
