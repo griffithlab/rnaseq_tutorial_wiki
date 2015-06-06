@@ -20,11 +20,12 @@ This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/
 - [[Supplementary Table 1 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_1_urls.md]] - RNA-seq analysis techniques
 - [[Supplementary Table 2 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_2_urls.md]] - Tools for RNA-seq analysis
 - [[Supplementary Table 3 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_3.md]] - Concepts in sample preparation and library construction that can influence study design, analysis and interpretation
-- [[Supplementary Table 4 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_4.md]] - Strand related settings for RNA-seq tools that must be adjusted to account for library construction strategy
-- [[Supplementary Table 5 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md]] - Standard file formats and tool-specific files used in RNA-seq analysis
-- [[Supplementary Table 6 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_6.md]] - Common RNA-seq questions and their answers
-- [[Supplementary Table 7 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_7.md]] - Resources for RNA-seq analysis
-- [[Supplementary Table 8 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_8.md]] - RNA-seq workshops and online tutorials
+- [[Supplementary Table 4 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_4.md]] - Description of RNA-seq library enrichment strategies
+- [[Supplementary Table 5 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md]] - Strand related settings for RNA-seq tools that must be adjusted to account for library construction strategy
+- [[Supplementary Table 6 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_6.md]] - Standard file formats and tool-specific files used in RNA-seq analysis
+- [[Supplementary Table 7 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_7.md]] - Common RNA-seq questions and their answers
+- [[Supplementary Table 8 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_8.md]] - Resources for RNA-seq analysis
+- [[Supplementary Table 9 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_9.md]] - RNA-seq workshops and online tutorials
 
 
 | [[Previous Section|Authors]]  | [[This Section|Citation]]   | [[Next Section|Syntax]] |
