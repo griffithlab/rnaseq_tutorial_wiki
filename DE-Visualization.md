@@ -12,8 +12,8 @@ Navigate to the correct directory and then launch R:
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part2_cummeRbund.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
 
-* http://cbw##.entrydns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
-* http://cbw##.entrydns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
+* http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
+* http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
 	
 ##SUPPLEMENTARY R ANALYSIS 
 
@@ -45,7 +45,7 @@ Navigate to the correct directory and then launch R:
 A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
 
 The output file can be viewed in your browser at the following url. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
-* http://cbw##.entrydns.org/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
+* http://cbw##.dyndns.info/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
 
 ##ERCC DE Analysis
 This section will demonstrate the DE between the ERCC spike-in:
@@ -56,7 +56,7 @@ This section will demonstrate the DE between the ERCC spike-in:
      ./Tutorial_Module4_ERCC_DE.R $RNA_HOME/refs/ERCC/ERCC_Controls_Analysis.txt $RNA_HOME/de/tophat_cufflinks/ref_only/gene_exp.diff
 
 View the results here:
-* http://cbw##.entrydns.org/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ##edgeR Analysis		
 
