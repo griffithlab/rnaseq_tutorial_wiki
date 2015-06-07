@@ -13,6 +13,7 @@
 - [A comprehensive assessment of RNA-seq accuracy, reproducibility and information content by the Sequencing Quality Control Consortium (SEQC)] (http://www.nature.com/nbt/journal/v32/n9/full/nbt.2957.html)
 - [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
+- [Proportionality: A Valid Alternative to Correlation for Relative Data](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361748/)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
