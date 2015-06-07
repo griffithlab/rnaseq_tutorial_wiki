@@ -1,6 +1,6 @@
 #0-ii. Citation and description of published materials
 
-This tutorial is accompanied by a publication.  If you find the materials here or in that paper useful please cite the following:
+This tutorial is accompanied by a publication.  If you find the materials here or in that paper useful, please cite the following:
 
 Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, Obi L. Griffith\*. *Informatics for RNA-seq: A web resource for analysis on the cloud*. In preparation.
 
