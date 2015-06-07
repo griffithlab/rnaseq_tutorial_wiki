@@ -65,7 +65,8 @@ There are many possible sources of .gtf gene/transcript annotation files.  For e
 	
 ####I. ILLUMINA IGENOMES.  
 Formatted specifically for use with TopHat Cuffinks.  Based on UCSC, Refseq/NCBI, or Ensembl annotations.  Available for many species.  Bowtie indexed reference genome files are pre-computed for your convenience.  Download here:
-http://cufflinks.cbcb.umd.edu/igenomes.html
+http://cole-trapnell-lab.github.io/cufflinks//igenome_table/index.html
+
   * Use wget (or similar) to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file 
   * This is found under Homo sapiens -> Ensembl -> GRCh37
   * unzip/untar

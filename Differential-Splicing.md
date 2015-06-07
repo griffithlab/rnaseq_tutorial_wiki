@@ -5,8 +5,8 @@
 Use Cuffdiff to compare the UHR and HBR conditions.
 
 Refer to the Cufflinks manual for a more detailed explanation:
-http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff
-	
+http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html
+
 Cuffdiff basic usage:
 ```
 cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... sampleN_hits.sam]

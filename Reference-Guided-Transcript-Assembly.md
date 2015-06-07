@@ -14,7 +14,7 @@ To run Cufflinks in 'reference guided' mode: use the '-g/--GTF-guide' option
 To run Cufflinks in 'de novo' mode do *not* specify either of the '-G/--GTF' OR '-g/--GTF-guide' options. 
 	
 Refer to the Cufflinks manual for a more detailed explanation:
-http://cufflinks.cbcb.umd.edu/manual.html
+http://cole-trapnell-lab.github.io/cufflinks/manual/
 	
  Cufflinks basic usage:
  cufflinks [options] <hits.sam>

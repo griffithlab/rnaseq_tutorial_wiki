@@ -3,7 +3,7 @@
 #4-iii. CUFFMERGE
 Use Cuffmerge to merge predicted transcripts from all libraries into a unified transcriptome. Refer to the Cufflinks manual for a more detailed explanation:
 
-http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
+http://cole-trapnell-lab.github.io/cufflinks/cuffmerge/index.html
 	
 Cuffmerge basic usage
 ```

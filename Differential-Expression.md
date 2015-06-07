@@ -2,8 +2,8 @@
 
 #3-ii. Differential Expression
 Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions. Refer to the Cufflinks manual for a more detailed explanation:
-* http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge
-* http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff
+* http://cole-trapnell-lab.github.io/cufflinks/cuffmerge/index.html
+* http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html
 	
 Cuffmerge basic usage:
 ```

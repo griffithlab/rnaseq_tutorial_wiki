@@ -10,7 +10,7 @@ In this module, we will run Cufflinks in 'reference only' mode. For simplicity a
  * Once you have a merged GTF file you can run Cuffdiff with this instead of the known transcripts GTF file we used above
 * Cufflinks also provides 'cuffcompare' to compare predicted transcripts to known transcripts
 * Refer to the Cufflinks manual for a more detailed explanation:
- * http://cufflinks.cbcb.umd.edu/manual.html
+ * http://cole-trapnell-lab.github.io/cufflinks/manual/
 	
 Cufflinks basic usage:  
 ```

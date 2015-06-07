@@ -57,7 +57,7 @@ Set up tool installation location:
 	make STAR
 	file STAR
 	
-##[Cufflinks2](http://cufflinks.cbcb.umd.edu/)
+##[Cufflinks2](http://cole-trapnell-lab.github.io/cufflinks/manual/)
 
 	cd $RNA_HOME/tools/
 	wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
