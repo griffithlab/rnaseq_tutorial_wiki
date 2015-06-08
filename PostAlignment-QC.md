@@ -53,7 +53,7 @@ You can use FastQC to perform basic QC of your accepted_hits.bam file (See [Pre-
 
 ## RSeQC [optional]
 
-**Background**: RSeQC is a tool that can be used to generate QC reports for RNA-seq. For more information, please check: [Tool Homepage](rseqc.sourceforge.net/)
+**Background**: RSeQC is a tool that can be used to generate QC reports for RNA-seq. For more information, please check: [RSeQC Tool Homepage](http://rseqc.sourceforge.net/)
 
 Objectives: In this section, we will try to generate a QC report for a data set downloaded from RSeQC website. 
 
