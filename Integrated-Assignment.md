@@ -73,7 +73,7 @@ Q6) Considering that the read length in this exercise is 36bp, what should you s
     echo $RNA_DATA_DIR
     mkdir -p alignments/tophat/trans_idx
     cd alignments/tophat
-    export TRANS_IDX_DIR=$RNA_HOME/alignments/tophat/trans_idx/
+    export TRANS_IDX_DIR=$RNA_ASSIGNMENT/alignments/tophat/trans_idx/
     echo $TRANS_IDX_DIR
 
 _**NOTE: Take a minute and try to figure out what each parameter means and how we go the numbers. **_
