@@ -91,10 +91,11 @@ Run RSeQC commands:
      read_GC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
      read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
      read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-
-Go through the generated PDFs:    
-
      ls *.pdf
+
+Go through the generated PDFs by browsing through the following directory in a web browser:    
+
+* http://cbw##.dyndns.info/rnaseq/tools/RSeQC/
 
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc1.png)    
 
@@ -109,8 +110,6 @@ Go through the generated PDFs:
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc6.png)    
 
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc7.png)     
-
-
 
 
 
