@@ -110,6 +110,9 @@ The pattern we see here at the beginning of the reads may be caused by biases ca
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc3.png)     
 
 -------
+**Junction Saturation:**
+
+This module checks for saturation by resampling 5%, 10%, 15%, ..., 95% of total alignments from BAM or SAM file, and then detects splice junctions from each subset and compares them to reference gene models.
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc4.png)    
 
 -------
