@@ -68,9 +68,8 @@ Copy RSeQC Data
 
 set your working directory and copy the necessary files
 
-      mkdir -p ~/workspace/rnaseq/
-      cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/
-      cd ~/workspace/rnaseq/
+      cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/tools/
+      cd ~/workspace/rnaseq/tools/
 
 Unzip the RSeQC file:    
 
