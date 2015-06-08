@@ -112,10 +112,11 @@ The pattern we see here at the beginning of the reads may be caused by biases ca
 -------
 **Junction Saturation:**
 
-This module checks for saturation of junction discovery by resampling 5%, 10%, 15%, ..., 95% of total alignments from BAM or SAM file.  The number of junctions discovered at each level of downsampling is plotted.  If we are exhausting the junction information in our library, the line will plateau as the amount of data increases.
+This module checks for saturation of junction discovery by resampling 5%, 10%, 15%, ..., 95% of total alignments from the BAM or SAM file.  The number of junctions discovered at each level of downsampling is plotted.  If we are exhausting the junction information in our library, the line will plateau as the amount of data increases.
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc4.png)    
 
 -------
+**Distribution of observed inner distances in fragments:**
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc5.png)    
 
 -------
