@@ -82,8 +82,9 @@ Run `samtools mpileup` on a region of interest
 	samtools mpileup -b bamfilelist.txt -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa -r 22:18905970-18905980
 	
 See samtools pileup/mpileup documentation for explanation of output
- http://samtools.sourceforge.net/pileup.shtml
- http://samtools.sourceforge.net/mpileup.shtml
+
+* http://samtools.sourceforge.net/pileup.shtml
+* http://samtools.sourceforge.net/mpileup.shtml
 	
 Now, use `bam-readcount` to count reference and variant bases at a specific position. 
 First, create a bed file with some positions of interest (we will create a file called snvs.bed using the echo command). 
