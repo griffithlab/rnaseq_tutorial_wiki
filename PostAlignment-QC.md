@@ -66,7 +66,7 @@ Files needed:
 Copy RSeQC Data  
 
 
-set your working directory and copy the necessary files
+Set your working directory and copy the necessary files
 
       cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/tools/
       cd ~/workspace/rnaseq/tools/
@@ -75,7 +75,7 @@ Unzip the RSeQC file:
 
       unzip RSeQC.zip
       cd RSeQC/
-Note: You should now see the bam, index, and RefSeq bed files listed
+Note: You should now see the bam, index, and RefSeq bed files listed.  The bam file here is an pair-end non-strand specific example dataset from the RSeQC website.
 
 Run RSeQC commands:    
 
