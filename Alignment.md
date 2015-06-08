@@ -4,8 +4,9 @@
 Use Bowtie2/Tophat2 to align all pairs of read files to the genome.  The output of this step will be a SAM/BAM files for each data set.
 
 Refer to TopHat manual and tutorial for a more detailed explanation:
-http://tophat.cbcb.umd.edu/manual.html
-http://tophat.cbcb.umd.edu/tutorial.html
+
+* https://ccb.jhu.edu/software/tophat/manual.shtml
+* https://ccb.jhu.edu/software/tophat/tutorial.shtml
 	
 TopHat2 basic usage:
 ```
