@@ -70,7 +70,7 @@ Perform alignments with STAR. STAR alignment results can be used for Cufflinks a
 	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep2/
 	STAR --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --readFilesIn $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --runThreadN 8 --readFilesCommand zcat --outFileNamePrefix HBR_Rep3/
 
-Convert to bam files (required for cufflinks)
+Convert STAR sam files to bam files (required for cufflinks)
 
 	samtools view -b -S UHR_Rep1/Aligned.out.sam > UHR_Rep1/Aligned.out.bam
 	samtools view -b -S UHR_Rep2/Aligned.out.sam > UHR_Rep2/Aligned.out.bam
@@ -79,7 +79,7 @@ Convert to bam files (required for cufflinks)
 	samtools view -b -S HBR_Rep2/Aligned.out.sam > HBR_Rep2/Aligned.out.bam
 	samtools view -b -S HBR_Rep3/Aligned.out.sam > HBR_Rep3/Aligned.out.bam
 	
-Now sort the bam files (also required for cufflinks)
+Now sort STAR bam files (also required for cufflinks)
 
 	samtools sort UHR_Rep1/Aligned.out.bam UHR_Rep1/Aligned.out.sorted
 	samtools sort UHR_Rep2/Aligned.out.bam UHR_Rep2/Aligned.out.sorted
