@@ -124,6 +124,12 @@ This module checks for saturation of junction discovery by resampling 5%, 10%, 1
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc6.png)    
 
 -------
+**Read duplication:**
+
+"Two strategies were used to determine reads duplication rate: * Sequence based: reads with identical sequence are regarded as duplicated reads. * Mapping based: reads mapped to the exactly same genomic location are regarded as duplicated reads. For splice reads, reads mapped to the same starting position and splice the same way are regarded as duplicated reads."
+
+On the y-axis are number of distinct reads (log10 scale) plotted against amount of read duplicates.  At the left of this plot we see that there are a large number of reads that appear only once.  As we move to the right there are a smaller number of reads that appear many times in duplicate.
+
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc7.png)     
 
 
