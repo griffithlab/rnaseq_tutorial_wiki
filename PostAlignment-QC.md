@@ -97,8 +97,10 @@ Go through the generated PDFs by browsing through the following directory in a w
 
 * http://cbw##.dyndns.info/rnaseq/tools/RSeQC/
 
+-------
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc1.png)    
 
+-------
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc2.png)    
 
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc3.png)     
