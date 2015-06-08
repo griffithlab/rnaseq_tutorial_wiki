@@ -120,6 +120,7 @@ This module checks for saturation of junction discovery by resampling 5%, 10%, 1
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc5.png)    
 
 -------
+**Distribution of read GC content (%):**
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc6.png)    
 
 -------
