@@ -87,6 +87,8 @@ Now sort the bam files (also required for cufflinks)
 	samtools sort HBR_Rep1/Aligned.out.bam HBR_Rep1/Aligned.out.sorted
 	samtools sort HBR_Rep2/Aligned.out.bam HBR_Rep2/Aligned.out.sorted
 	samtools sort HBR_Rep3/Aligned.out.bam HBR_Rep3/Aligned.out.sorted
+
+####END OF OPTIONAL ALTERNATIVE - STAR alignment
 ---
 
 ##Merge TopHat BAM files	
