@@ -118,6 +118,7 @@ cat $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
 wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.R
 chmod +x Tutorial_Module4_ERCC_expression.R
 ./Tutorial_Module4_ERCC_expression.R $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
+```
 
 To view the resulting figure, navigate to the below URL replacing ## with your class assigned number:
 * http://cbw##.dyndns.info/rnaseq/refs/ERCC/Tutorial_Module4_ERCC_expression.pdf
