@@ -8,12 +8,16 @@ You can use FastQC to get a sense of your data quality before alignment:
 Video Tutorial here: 
 * http://www.youtube.com/watch?v=bz93ReOv87Y
 
-Try to run FastQC on one of your fastq files
+Try to run FastQC on your fastq files:
+```
+cd $RNA_HOME/data
+fastqc *.fastq.gz
+```
 
-Go to the following url in your browser:
+Then, go to the following url in your browser:
 * http://cbw##.dyndns.info/rnaseq/data/
-* right-click to save a fastq file to your laptop
 * Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01"))
+* Click on any of the *_fastqc.html files to view the FastQC report
 
 | [[Previous Section|RNAseq-Data]] | [[This Section|PreAlignment-QC]]    | [[Next Section|Adapter-Trim]] |
 |:--------------------------------:|:-----------------------------------:|:--------------------------:|
