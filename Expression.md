@@ -83,19 +83,20 @@ Extra options specified below:
 	
 We could use either the tophat or STAR alignments. We have chosen to use tophat alignments here. Run htseq-count and calculate gene-level counts:
 
-	cd $RNA_HOME/
-	mkdir -p expression/tophat_counts
-	cd expression/tophat_counts
-	mkdir UHR_Rep1_ERCC-Mix1 UHR_Rep2_ERCC-Mix1 UHR_Rep3_ERCC-Mix1 HBR_Rep1_ERCC-Mix2 HBR_Rep2_ERCC-Mix2 HBR_Rep3_ERCC-Mix2
+```
+cd $RNA_HOME/
+mkdir -p expression/tophat_counts
+cd expression/tophat_counts
+mkdir UHR_Rep1_ERCC-Mix1 UHR_Rep2_ERCC-Mix1 UHR_Rep3_ERCC-Mix1 HBR_Rep1_ERCC-Mix2 HBR_Rep2_ERCC-Mix2 HBR_Rep3_ERCC-Mix2
 
-        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv
-        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv
-        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv
 
-        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv
-        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv
-        htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
-
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
+```
 	
 Merge results files into a single matrix for use in edgeR:
 
