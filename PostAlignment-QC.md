@@ -105,7 +105,7 @@ Go through the generated PDFs by browsing through the following directory in a w
 
 -------
 **Read - Nucleotide vs Cycle**
-The pattern we see here at the beginning of the reads may be caused by biases caused by random hexamer priming that arose when making cDNA from RNA (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896536/).
+The pattern we see here at the beginning of the reads may be caused by biases caused by random hexamer priming that arose when making cDNA from RNA (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896536/ for further discussion).
 ![](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw/2015/rseqc3.png)     
 
 -------
