@@ -192,7 +192,7 @@ When you are ready you can check your approach against the [Solutions](https://g
 
 ---
 	
-##Add locally installed tools to your PATH
+##Add locally installed tools to your PATH [OPTIONAL]
 
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
 	
@@ -223,7 +223,7 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 	#cd ~
 	#wget -N https://github.com/griffithlab/rnaseq_tutorial/wiki/config/.bashrc
 
-## Installing tools from official ubuntu packages
+## Installing tools from official ubuntu packages [OPTIONAL]
 Some useful tools are available as official ubuntu packages.  These can be installed using the linux package management system `apt`.  Most bioinformatic tools (especially the latest versions) are not available as official packages.  Nevertheless, here is how you would update your `apt` library, upgrade existing packages, and install an Ubuntu tool called `tree`.
 
 	#sudo apt-get update
