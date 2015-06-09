@@ -61,7 +61,7 @@ In this tutorial you will:
 First, create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
 
 	cd $RNA_HOME/refs/hg19/genes
-	perl -ne 'if ($_=~/gene_id\s\"(ENSG\d+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";}' genes_chr22_ERCC92.gtf | sort | uniq > ENSG_ID2Name.txt
+	perl -ne 'if ($_=~/gene_id\s\"(ENSG\S+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";} elsif ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' genes_chr22_ERCC92.gtf | sort | uniq > ENSG_ID2Name.txt
 
 Then, create a directory for results and launch R:
 
