@@ -36,7 +36,7 @@ Extra options specified below:
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
 ---
-###OPTIONAL ALTERNATIVE CUFFLINKS ON STAR
+###OPTIONAL ALTERNATIVE - CUFFLINKS ON STAR
 Run cufflinks on STAR alignments instead of TopHat alignments.  Note, the library type is now required since STAR does not produce the appropriate XS tags for strand-specific RNA-seq protocols:
 
 	cd $RNA_HOME/
@@ -51,7 +51,7 @@ Run cufflinks on STAR alignments instead of TopHat alignments.  Note, the librar
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep3/Aligned.out.sorted.bam
 
 
-####END OPTIONAL ALTERNATIVE CUFFLINKS ON STAR
+####END OPTIONAL ALTERNATIVE - CUFFLINKS ON STAR
 ---
 	
 What does the raw output from Cufflinks look like?
