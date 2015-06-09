@@ -123,7 +123,7 @@ chmod +x Tutorial_Module4_ERCC_expression.R
 ```
 
 To view the resulting figure, navigate to the below URL replacing ## with your class assigned number:
-* http://cbw##.dyndns.info/rnaseq/refs/ERCC/Tutorial_Module4_ERCC_expression.pdf
+* http://cbw##.dyndns.info/rnaseq/expression/tophat_counts/Tutorial_Module4_ERCC_expression.pdf
                  
 
 | [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |
