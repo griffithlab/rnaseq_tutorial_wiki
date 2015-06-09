@@ -121,6 +121,8 @@ Create comparable files for the STAR alignments by merging individual bam files 
 
 	mkdir HBR_ERCC-Mix2_ALL
 	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam INPUT=HBR_Rep1/Aligned.out.sorted.bam INPUT=HBR_Rep2/Aligned.out.sorted.bam INPUT=HBR_Rep3/Aligned.out.sorted.bam
+
+####END OPTIONAL ALTERNATIVE - Merge STAR bam files
 ---
 	
 ##PRACTICAL EXERCISE

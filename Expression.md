@@ -36,7 +36,7 @@ Extra options specified below:
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
 ---
-###OPTIONAL ALTERNATIVE CUFFLINKS ON STAR
+###OPTIONAL ALTERNATIVE - Cufflinks on STAR
 Run cufflinks on STAR alignments instead of TopHat alignments.  Note, the library type is now required since STAR does not produce the appropriate XS tags for strand-specific RNA-seq protocols:
 
 	cd $RNA_HOME/
@@ -51,7 +51,7 @@ Run cufflinks on STAR alignments instead of TopHat alignments.  Note, the librar
 	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep3/Aligned.out.sorted.bam
 
 
-####END OPTIONAL ALTERNATIVE CUFFLINKS ON STAR
+####END OF OPTIONAL ALTERNATIVE - Cufflinks on STAR
 ---
 	
 What does the raw output from Cufflinks look like?
@@ -64,7 +64,7 @@ What does the raw output from Cufflinks look like?
 Press 'q' to exit the 'less' display
 
 ---
-##OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - HTSEQ-COUNT
 Run htseq-count on alignments instead to produce raw counts instead of FPKM values for differential expression analysis
 	
 Refer to the HTSeq documentation for a more detailed explanation:
@@ -108,23 +108,22 @@ Merge results files into a single matrix for use in edgeR:
 Based on the above read counts, plot the linearity of the ERCC spike-in read counts versus the known concentration of the ERCC spike-in Mix:
 
 ```
-mkdir $RNA_HOME/refs/ERCC
-cd $RNA_HOME/refs/ERCC
+cd $RNA_HOME/expression/tophat_counts
 wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
 cat ERCC_Controls_Analysis.txt
 
-wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.pl
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.pl
 chmod +x Tutorial_Module4_ERCC_expression.pl
 ./Tutorial_Module4_ERCC_expression.pl
 cat $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
       
-wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_expression.R
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.R
 chmod +x Tutorial_Module4_ERCC_expression.R
-./Tutorial_Module4_ERCC_expression.R $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
+./Tutorial_Module4_ERCC_expression.R ercc_read_counts.tsv
 ```
 
 To view the resulting figure, navigate to the below URL replacing ## with your class assigned number:
-* http://cbw##.dyndns.info/rnaseq/refs/ERCC/Tutorial_Module4_ERCC_expression.pdf
+* http://cbw##.dyndns.info/rnaseq/expression/tophat_counts/Tutorial_Module4_ERCC_expression.pdf
                  
 
 | [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |

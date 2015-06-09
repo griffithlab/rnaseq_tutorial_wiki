@@ -4,9 +4,9 @@ http://www.ncbi.nlm.nih.gov/pubmed/21571633 [download]
 
 
 ###Assignment Questions
-[Assignment [download word version]](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw-cshl-nygc/2015/assignment_questions_only.doc)
+[Assignment [download word version]]
 
-[Assignment [download PDF version]](https://raw.githubusercontent.com/wiki/griffithlab/rnaseq_tutorial/LectureFiles/cbw-cshl-nygc/2015/assignment_questions_only.pdf)
+[Assignment [download PDF version]]
 
 
 **Background: PCA3 gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene's expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that tests the presence of PCA3 in urine.** 

@@ -17,7 +17,7 @@ Now run the index commands
 	find $RNA_ALIGN_DIR*/accepted_hits.bam -exec samtools index {} \;
 
 ---
-###OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - Index STAR BAM files
 Create comparable files for the STAR alignments
 
 	cd $RNA_HOME
@@ -25,6 +25,8 @@ Create comparable files for the STAR alignments
 	echo $STAR_ALIGN_DIR
 	cd $STAR_ALIGN_DIR
 	find $STAR_ALIGN_DIR*/Aligned.out.sorted.bam -exec samtools index {} \;
+
+####END OF OPTIONAL ALTERNATIVE - Index STAR BAM files
 ---
 
 ##Visualize alignments
@@ -42,7 +44,7 @@ Go to an example gene locus on chr22:
 - Mouse over some reads and use the read group (RG) flag to determine which replicate the reads come from. What other details can you learn about each read and its alignment to the reference genome.
 
 ---
-###OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - view STAR alignments in IGV
 Now load the STAR alignments. How do the STAR and TopHat alignments compare?
 
 **UHR STAR alignment**
@@ -51,6 +53,7 @@ http://cbw##.dyndns.info/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.so
 **HBR STAR alignment**
 http://cbw##.dyndns.info/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam
 
+####END OF OPTIONAL ALTERNATIVE - view STAR alignments in IGV
 ---
 
 ### Exercise

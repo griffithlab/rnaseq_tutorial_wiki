@@ -29,31 +29,23 @@ In this tutorial you will:
 * Generate a list of the top differentially expressed genes
 * Ask how reproducible technical replicates are.
 
-Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Copy the necessary files to a new directory.
+Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Navigate to the correct directory and then launch R:
 
-	cd $RNA_HOME/
-	mkdir -p final_results/tophat_cufflinks/ref_only
-	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
-
-Navigate to the correct directory and then launch R:
-
-	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
+	cd $RNA_HOME/de/tophat_cufflinks/ref_only/
 	R
 
 A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
 
 The output file can be viewed in your browser at the following url. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
-* http://cbw##.dyndns.info/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
+* http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 
 ##ERCC DE Analysis
 This section will demonstrate the DE between the ERCC spike-in:
 
      cd $RNA_HOME/de/tophat_cufflinks/ref_only
-     wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/Tutorial_Module4_ERCC_DE.R
+     wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_DE.R
      chmod +x Tutorial_Module4_ERCC_DE.R
-     ./Tutorial_Module4_ERCC_DE.R $RNA_HOME/refs/ERCC/ERCC_Controls_Analysis.txt $RNA_HOME/de/tophat_cufflinks/ref_only/gene_exp.diff
+     ./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/tophat_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/tophat_cufflinks/ref_only/gene_exp.diff
 
 View the results here:
 * http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf

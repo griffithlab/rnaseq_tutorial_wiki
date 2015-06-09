@@ -26,12 +26,14 @@ Merge all 6 cufflinks results so that they will have the same set of transcripts
 	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
 
 ---	
-###OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - Merge Cufflinks GTFs for STAR
 Perform the merge step for STAR-alignment-based cufflinks output:
 
 	cd $RNA_HOME/expression/star_cufflinks/ref_only/
 	ls -1 *Rep*ERCC*/transcripts.gtf > assembly_GTF_list.txt
 	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
+
+####END OF OPTIONAL ALTERNATIVE - Merge Cufflinks GTFs for STAR
 ---	
 	
 Cuffdiff basic usage:
@@ -65,7 +67,7 @@ Perform UHR vs. HBR comparison, using all replicates, for known (reference only 
 	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/tophat_cufflinks/ref_only/ --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/abundances.cxb,UHR_Rep2_ERCC-Mix1/abundances.cxb,UHR_Rep3_ERCC-Mix1/abundances.cxb HBR_Rep1_ERCC-Mix2/abundances.cxb,HBR_Rep2_ERCC-Mix2/abundances.cxb,HBR_Rep3_ERCC-Mix2/abundances.cxb
 
 ---	
-###OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - CuffDiff for STAR results
 perform the cuffdiff step for STAR-alignment-based cuffmerge output:
 
 	cd $RNA_HOME/
@@ -81,6 +83,8 @@ perform the cuffdiff step for STAR-alignment-based cuffmerge output:
         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep3/Aligned.out.sorted.bam
         
 	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/star_cufflinks/ref_only/ --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/abundances.cxb,UHR_Rep2/abundances.cxb,UHR_Rep3/abundances.cxb HBR_Rep1/abundances.cxb,HBR_Rep2/abundances.cxb,HBR_Rep3/abundances.cxb
+
+####END OF OPTIONAL ALTERNATIVE - CuffDiff for STAR results
 ---
 	
 What does the raw output from Cuffdiff look like?
