@@ -68,7 +68,6 @@ Then, create a directory for results and launch R:
 	cd $RNA_HOME/
 	mkdir -p de/tophat_counts
 	cd de/tophat_counts
-	#cp $RNA_HOME/de/tophat_cufflinks/ref_only/gene* . #IS THIS NECESSARY
 	R
 	
 A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
@@ -80,7 +79,7 @@ Once you have run the edgeR tutorial, compare the sigDE genes to those saved ear
 	
 Pull out the gene symbols
 ```
-cd $RNA_HOME/final_results/
+cd $RNA_HOME/de/
 cut -f 1 $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt > tophat_cufflinks_DE_gene_symbols.txt
 cut -f 2 $RNA_HOME/de/tophat_counts/DE_genes.txt > tophat_counts_DE_gene_symbols.txt
 ```
