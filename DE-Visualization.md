@@ -29,17 +29,9 @@ In this tutorial you will:
 * Generate a list of the top differentially expressed genes
 * Ask how reproducible technical replicates are.
 
-Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Copy the necessary files to a new directory.
+Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Navigate to the correct directory and then launch R:
 
-	cd $RNA_HOME/
-	mkdir -p final_results/tophat_cufflinks/ref_only
-	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/isoform* .
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/read_groups.info .
-
-Navigate to the correct directory and then launch R:
-
-	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
+	cd $RNA_HOME/de/tophat_cufflinks/ref_only/
 	R
 
 A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
