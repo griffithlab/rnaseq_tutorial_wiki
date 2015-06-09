@@ -64,7 +64,7 @@ What does the raw output from Cufflinks look like?
 Press 'q' to exit the 'less' display
 
 ---
-##OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - HTSEQ-COUNT
 Run htseq-count on alignments instead to produce raw counts instead of FPKM values for differential expression analysis
 	
 Refer to the HTSeq documentation for a more detailed explanation:
