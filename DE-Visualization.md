@@ -10,7 +10,7 @@ Navigate to the correct directory and then launch R:
 	R
 	
 
-A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part2_cummeRbund.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
+A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part2_cummeRbund.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
 
 * http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
 * http://cbw##.dyndns.info/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
@@ -42,7 +42,7 @@ Navigate to the correct directory and then launch R:
 	cd $RNA_HOME/final_results/tophat_cufflinks/ref_only/
 	R
 
-A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
+A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
 
 The output file can be viewed in your browser at the following url. Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01")).
 * http://cbw##.dyndns.info/rnaseq/final_results/tophat_cufflinks/ref_only/Tutorial_Module4_Part3_Supplementary_R_output.pdf
@@ -84,7 +84,7 @@ Navigate to the correct directory and then launch R:
 	cd $RNA_HOME/de/tophat_counts
 	R
 	
-A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/Rscripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
+A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
 
 Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff:
 
