@@ -17,7 +17,7 @@ Now run the index commands
 	find $RNA_ALIGN_DIR*/accepted_hits.bam -exec samtools index {} \;
 
 ---
-###OPTIONAL ALTERNATIVE
+###OPTIONAL ALTERNATIVE - INDEX STAR BAM FILES
 Create comparable files for the STAR alignments
 
 	cd $RNA_HOME
@@ -25,6 +25,8 @@ Create comparable files for the STAR alignments
 	echo $STAR_ALIGN_DIR
 	cd $STAR_ALIGN_DIR
 	find $STAR_ALIGN_DIR*/Aligned.out.sorted.bam -exec samtools index {} \;
+
+####END OPTIONAL ALTERNATIVE - INDEX STAR BAM FILES
 ---
 
 ##Visualize alignments
