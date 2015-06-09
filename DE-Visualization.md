@@ -63,7 +63,7 @@ First, create a directory for results:
 	cd $RNA_HOME/
 	mkdir -p de/tophat_counts
 	cd de/tophat_counts
-	cp $RNA_HOME/de/tophat_cufflinks/ref_only/gene* .
+	#cp $RNA_HOME/de/tophat_cufflinks/ref_only/gene* . #IS THIS NECESSARY
 	
 
 Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
