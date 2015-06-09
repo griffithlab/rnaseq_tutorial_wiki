@@ -64,7 +64,7 @@ Goals:
 - Obtain alignment summary
 
 Q5) What is the value of --mate-inner-dist? What calculation did you do to get that answer?
-
+*note, I have rounded my answer up.
 
 Q6) Considering that the read length in this exercise is 36bp, what should you set the --segment-length to (default is 25bp)?
 
@@ -77,6 +77,8 @@ Q6) Considering that the read length in this exercise is 36bp, what should you s
     echo $TRANS_IDX_DIR
 
 _**NOTE: Take a minute and try to figure out what each parameter means and how we go the numbers. **_
+
+_**NOTE: mate inner distance is rounded from 78 -> 80 
 
     tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N02 -o normal_N02 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N02_read1.fasta $RNA_DATA_DIR/normal_N02_read2.fasta
 
