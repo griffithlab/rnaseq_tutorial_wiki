@@ -80,8 +80,8 @@ Once you have run the edgeR tutorial, compare the sigDE genes to those saved ear
 Pull out the gene symbols
 ```
 cd $RNA_HOME/de/
-cut -f 1 $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt > tophat_cufflinks_DE_gene_symbols.txt
-cut -f 2 $RNA_HOME/de/tophat_counts/DE_genes.txt > tophat_counts_DE_gene_symbols.txt
+cut -f 1 $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt > tophat_cufflinks_cuffdiff_DE_gene_symbols.txt
+cut -f 2 $RNA_HOME/de/tophat_counts/DE_genes.txt > tophat_counts_edgeR_DE_gene_symbols.txt
 ```
 
 Visualize overlap with a venn diagram. This can be done with simple web tools like:
