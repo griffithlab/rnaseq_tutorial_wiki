@@ -16,7 +16,7 @@
 
 **Lecture Videos:**
 
-Coming soon...
+Coming soon... ([[older version of video lectures|http://bioinformatics.ca/workshops/2014/informatics-rna-sequence-analysis-qc-2014#material]])
 
 ###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (April 29-30, 2015)
 
