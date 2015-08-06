@@ -1,4 +1,4 @@
-###Note
+###Note:
 First, make sure your [[environment|Environment]] is set up correctly.
 
 #1-i. Installation
