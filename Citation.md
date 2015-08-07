@@ -2,7 +2,7 @@
 
 This tutorial is accompanied by a publication.  If you find the materials here or in that paper useful, please cite the following:
 
-[Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, Obi L. Griffith\*. 2015. *Informatics for RNA-seq: A web resource for analysis on the cloud*. 11(8):e1004393.](http://dx.doi.org/10.1371/journal.pcbi.1004393)
+Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, Obi L. Griffith\*. 2015. [*Informatics for RNA-seq: A web resource for analysis on the cloud*. 11(8):e1004393.](http://dx.doi.org/10.1371/journal.pcbi.1004393)
 
 \*To whom correspondence should be addressed: 
 E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
