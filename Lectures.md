@@ -22,8 +22,6 @@
 * [[Module 3 - Expression and Differential Expression (lecture)|http://bioinformatics.ca/rnaseq2015module4mp4]]
 * [[Module 4 - Isoform Discovery and Alternate Expression (lecture)|http://bioinformatics.ca/rnaseq2015module5mp4]]
 
-Coming soon... ([[older version of video lectures|http://bioinformatics.ca/workshops/2014/informatics-rna-sequence-analysis-qc-2014#material]])
-
 ###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (April 29-30, 2015)
 
 **Presentations:**
