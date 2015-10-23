@@ -4,7 +4,7 @@
 
 **Presentations:**
 
-* [[Module 0 - Introduction to cloud computing (Lecture/Tutorial)|LectureFiles/cbw/2015/RNASeq_Module0_AmazonPreTutorial.pdf]]
+* [[Module 0 - Introduction to cloud computing (lecture/tutorial)|LectureFiles/cbw/2015/RNASeq_Module0_AmazonPreTutorial.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw/2015/RNASeq_Module1_Lecture.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cbw/2015/RNASeq_Module1_Tutorial.pdf]]
 * [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cbw/2015/RNASeq_Module2_Lecture.pdf]]
@@ -15,6 +15,12 @@
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw/2015/RNASeq_Module4_Tutorial.pdf]]
 
 **Lecture Videos:**
+
+* [[Module 0 - Introduction to Cloud Computing (lecture)|http://bioinformatics.ca/rnaseq2015module1mp4]]
+* [[Modele 1 - Introduction to RNA sequencing and analysis (lecture)|http://bioinformatics.ca/rnaseq2015module2mp4]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|http://bioinformatics.ca/rnaseq2015module3mp4]]
+* [[Module 3 - Expression and Differential Expression (lecture)|http://bioinformatics.ca/rnaseq2015module4mp4]]
+* [[Module 4 - Isoform Discovery and Alternate Expression (lecture)|http://bioinformatics.ca/rnaseq2015module5mp4]]
 
 Coming soon... ([[older version of video lectures|http://bioinformatics.ca/workshops/2014/informatics-rna-sequence-analysis-qc-2014#material]])
 
@@ -30,9 +36,6 @@ Coming soon... ([[older version of video lectures|http://bioinformatics.ca/works
 * [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module3_Tutorial.pptx]]
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Lecture.pptx]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Tutorial.pptx]]
-
-**Lecture Videos:**
-Coming soon...
 
 ###CSHL Advanced Sequencing Technologies and Applications (November 11-23, 2014)
 
