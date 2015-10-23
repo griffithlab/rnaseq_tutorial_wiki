@@ -17,7 +17,7 @@
 **Lecture Videos:**
 
 * [[Module 0 - Introduction to Cloud Computing (lecture)|http://bioinformatics.ca/rnaseq2015module1mp4]]
-* [[Modele 1 - Introduction to RNA sequencing and analysis (lecture)|http://bioinformatics.ca/rnaseq2015module2mp4]]
+* [[Module 1 - Introduction to RNA sequencing and analysis (lecture)|http://bioinformatics.ca/rnaseq2015module2mp4]]
 * [[Module 2 - RNA-seq alignment and visualization (lecture)|http://bioinformatics.ca/rnaseq2015module3mp4]]
 * [[Module 3 - Expression and Differential Expression (lecture)|http://bioinformatics.ca/rnaseq2015module4mp4]]
 * [[Module 4 - Isoform Discovery and Alternate Expression (lecture)|http://bioinformatics.ca/rnaseq2015module5mp4]]
