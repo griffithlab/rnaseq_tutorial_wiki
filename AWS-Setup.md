@@ -31,6 +31,13 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 ```
 * logout and log back in
 
+###Set up additional storage for workspace
+We will need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance.
+```
+mkdir /workspace
+cd ~
+ln -s /workspace workspace
+```
 ###Install any desired informatics tools
 * See https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation for RNA-seq software
 * Note: R in particular is a slow install. 
@@ -44,14 +51,6 @@ mkdir /home/ubuntu/workspace/data
 cd /home/ubuntu/bin
 wget https://raw.github.com/arq5x/gemini/master/gemini/scripts/gemini_install.py
 sudo python gemini_install.py ~/bin/ ~/workspace/data/
-```
-
-###Set up additional storage for workspace
-We will need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance.
-```
-mkdir /workspace
-cd ~
-ln -s /workspace workspace
 ```
 
 ###Set up Apache web server
