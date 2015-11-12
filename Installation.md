@@ -133,10 +133,10 @@ It is already installed on the Cloud, but for completeness, here is how it was d
 ```
 #cd $RNA_HOME/tools/
 #export R_LIBS=
-#wget http://cran.us.r-project.org/src/base/R-3/R-3.1.0.tar.gz
-#tar -zxvf R-3.1.0.tar.gz
-#cd R-3.1.0
-#./configure --prefix=$RNA_HOME/tools/R-3.1.0/
+#wget https://cran.r-project.org/src/base/R-3/R-3.2.2.tar.gz
+#tar -zxvf R-3.2.2.tar.gz
+#cd R-3.2.2
+#./configure --prefix=$RNA_HOME/tools/R-3.2.2/ --with-x=no
 #make
 #make install
 #./bin/Rscript
