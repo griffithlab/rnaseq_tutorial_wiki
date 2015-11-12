@@ -48,7 +48,7 @@ Set up tool installation location:
 	cd $RNA_HOME/tools/
 	wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.0.Linux_x86_64.tar.gz
 	tar -zxvf tophat-2.1.0.Linux_x86_64.tar.gz
-	cd tophat-2.0.13.Linux_x86_64
+	cd tophat-2.1.0.Linux_x86_64
 	./tophat2
 	
 ##[STAR](https://code.google.com/p/rna-star/)
