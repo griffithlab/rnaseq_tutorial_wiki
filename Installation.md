@@ -13,10 +13,10 @@ Set up tool installation location:
 ##[SAMtools](http://samtools.sourceforge.net/)
 
 	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/samtools/files/samtools/1.1/samtools-1.1.tar.bz2/download -O samtools-1.1.tar.bz2
-	bunzip2 samtools-1.1.tar.bz2 
-	tar -xvf samtools-1.1.tar
-	cd samtools-1.1
+	wget http://downloads.sourceforge.net/project/samtools/samtools/1.2/samtools-1.2.tar.bz2
+	bunzip2 samtools-1.2.tar.bz2 
+	tar -xvf samtools-1.2.tar
+	cd samtools-1.2
 	make
 	./samtools
 	
