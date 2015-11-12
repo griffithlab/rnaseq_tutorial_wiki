@@ -54,9 +54,9 @@ Set up tool installation location:
 ##[STAR](https://code.google.com/p/rna-star/)
 
 	cd $RNA_HOME/tools/
-	wget https://github.com/alexdobin/STAR/archive/STAR_2.4.0f1.tar.gz -O STAR_2.4.0f1.tar.gz
-	tar -zxvf STAR_2.4.0f1.tar.gz
-	cd STAR-STAR_2.4.0f1/source
+	wget https://github.com/alexdobin/STAR/archive/STAR_2.5.0a.tar.gz
+	tar -zxvf STAR_2.5.0a.tar.gz
+	cd STAR-STAR_2.5.0a/source
 	make STAR
 	file STAR
 	
