@@ -86,8 +86,8 @@ For completeness, here is how it would be installed on a linux system with X11 l
 
 ```
 cd $RNA_HOME/tools/
-wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.zip
-unzip fastqc_v0.11.2.zip
+wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.4.zip
+unzip fastqc_v0.11.4.zip
 cd FastQC/
 chmod 755 fastqc
 ./fastqc --help
@@ -96,18 +96,18 @@ chmod 755 fastqc
 ##[Picard](http://picard.sourceforge.net/command-line-overview.shtml)
 
 	cd $RNA_HOME/tools/
-	wget https://github.com/broadinstitute/picard/releases/download/1.124/picard-tools-1.124.zip -O picard-tools-1.124.zip
-	unzip picard-tools-1.124.zip
-	java -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar
+	wget https://github.com/broadinstitute/picard/releases/download/1.140/picard-tools-1.140.zip -O picard-tools-1.140.zip
+	unzip picard-tools-1.140.zip
+	java -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar
 	
 ##[SAMStat](http://samstat.sourceforge.net/)
 
 ```
 export PATH=$RNA_HOME/tools/samtools-1.1:$PATH
 cd $RNA_HOME/tools/
-wget http://downloads.sourceforge.net/project/samstat/samstat-1.5.tar.gz
-tar -xzvf samstat-1.5.tar.gz
-cd samstat-1.5
+wget http://downloads.sourceforge.net/project/samstat/samstat-1.5.1.tar.gz
+tar -xzvf samstat-1.5.1.tar.gz
+cd samstat-1.5.1
 ./configure
 make
 ./src/samstat
