@@ -46,8 +46,8 @@ Set up tool installation location:
 ##[TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
 
 	cd $RNA_HOME/tools/
-	wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.0.13.Linux_x86_64.tar.gz
-	tar -zxvf tophat-2.0.13.Linux_x86_64.tar.gz
+	wget hhttps://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.0.Linux_x86_64.tar.gz
+	tar -zxvf tophat-2.1.0.Linux_x86_64.tar.gz
 	cd tophat-2.0.13.Linux_x86_64
 	./tophat2
 	
