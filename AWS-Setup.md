@@ -38,7 +38,7 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 * Paths to pre-installed tools can be added to the .bashrc file. It may also be convenient to add `export RNA_HOME=~/workspace/rnaseq` to the .bashrc file. 
  * See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/.bashrc.
 
-### Install GEMINI
+#### Install GEMINI
 ```
 mkdir /home/ubuntu/workspace/data
 cd /home/ubuntu/bin
