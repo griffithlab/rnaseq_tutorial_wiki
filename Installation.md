@@ -29,7 +29,7 @@ Set up tool installation location:
 	cd $RNA_HOME/tools/
 	mkdir bam-readcount
 	cd bam-readcount
-	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.1
+	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.2
 	cmake $RNA_HOME/tools/git/bam-readcount
 	make
 	./bin/bam-readcount
@@ -37,9 +37,9 @@ Set up tool installation location:
 ##[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 
 	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.4/bowtie2-2.2.4-linux-x86_64.zip
-	unzip bowtie2-2.2.4-linux-x86_64.zip
-	cd bowtie2-2.2.4
+	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.6/bowtie2-2.2.6-linux-x86_64.zip
+	unzip bowtie2-2.2.6-linux-x86_64.zip
+	cd bowtie2-2.2.6
 	./bowtie2
 	./bowtie2-build
 	
