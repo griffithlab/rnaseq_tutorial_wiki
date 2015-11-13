@@ -1,3 +1,4 @@
+## Table of contents
 1. Introduction
   1. Description of the lab
   2. Requirements
@@ -25,21 +26,24 @@
 
 ## Introduction 
 
-=== Description of the lab ===
+### Description of the lab
 
-Welcome to the lab for '''Genome Visualization'''! This lab will introduce you to the [http://www.broadinstitute.org/igv/home Integrative Genomics Viewer], one of the most popular visualization tools for High Throughput Sequencing (HTS) data.
+Welcome to the lab for **Genome Visualization**! This lab will introduce you to the [Integrative Genomics Viewer](http://www.broadinstitute.org/igv/home), one of the most popular visualization tools for High Throughput Sequencing (HTS) data.
 
 After this lab, you will be able to:
-* visualize a variety of genomic data
-* very quickly navigate around the genome
-* visualize HTS read alignments
-* validate SNP calls and structural re-arrangements by eye
+* Visualize a variety of genomic data
+* Quickly navigate around the genome
+* Visualize read alignments
+* Validate SNP/SNV calls and structural re-arrangements by eye
 
 Things to know before you start:
-* The lab may take between '''1-2 hours''', depending on your familiarity with genome browsing. Don't worry if you don't complete the lab! It will be made available for you to complete later.
-* There are a few thought-provoking '''Questions''' or '''Notes''' pertaining to sections of the lab. These are '''optional''', and may take more time, but are meant to help you better understand the visualizations you are seeing. These questions will be denoted by boxes, as follows:
- '''Question(s):'''
- * Thought-provoking question goes here
+* The lab may take between **1-2 hours**, depending on your familiarity with genome browsing. Do not worry if you do not complete the lab. It will remain available to review later.
+* There are a few thought-provoking **Questions** or **Notes** pertaining to sections of the lab. These are **optional**, and may take more time, but are meant to help you better understand the visualizations you are seeing. These questions will be denoted by boxes, as follows:
+ **Question(s):**
+
+```
+Thought-provoking question goes here
+```
 
 === Requirements ===
 
