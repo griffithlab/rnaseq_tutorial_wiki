@@ -83,6 +83,7 @@ make
 ```
 
 #### Install gkno
+```
 git clone https://github.com/gkno/gkno_launcher.git
 wget http://www.carfab.com/apachesoftware//ant/binaries/apache-ant-1.9.6-bin.zip
 unzip apache-ant-1.9.6-bin.zip
@@ -91,6 +92,7 @@ ANT_HOME=~/bin/apache-ant-1.9.6
 PATH=$PATH:${ANT_HOME}/bin
 cd ../gkno_launcher
 ./gkno build
+```
 
 ###Set up Apache web server
 We will start an apache2 service and serve the contents of the students home directories for convenience. This allows easy download of files to their local hard drives, direct loading in IGV by url, etc. Note that when launching instances a security group will have to be selected/modified that allows http access via port 80.
