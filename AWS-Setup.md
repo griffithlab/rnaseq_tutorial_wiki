@@ -138,7 +138,7 @@ To create a snapshot of the extra workspace volume, navigate to volumes, right-c
 
 ###Save a public AMI
 
-Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
+Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. If desired you may choose at this time to include the workspace snapshot in the AMI to avoid having to explicitly attach it later at launching of AMI instances. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
 ###Current Public AMIs:
 
