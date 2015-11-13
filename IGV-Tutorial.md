@@ -1,4 +1,29 @@
-== Introduction == 
+1 Introduction
+1.1 Description of the lab
+1.2 Requirements
+1.3 Compatibility
+1.4 Data Set for IGV
+1.5 Check the online wiki
+2 Visualization Part 1: Getting familiar with IGV
+2.1 Get familiar with the interface
+2.1.1 Load a Genome and Data Tracks
+2.1.2 Navigation
+2.2 Region Lists
+2.3 Loading Read Alignments
+2.4 Visualizing read alignments
+3 Visualization Part 2: Inspecting SNPs, SNVs, and SVs
+3.1 Neighbouring somatic SNV and germline SNP
+3.2 Homopolymer repeat with indel
+3.3 Coverage by GC
+3.4 Heterozygous SNPs on different alleles
+3.5 Low mapping quality
+3.6 Homozygous deletion
+3.7 Mis-alignment
+3.8 Translocation
+4 Visualization Part 3: Automating Tasks in IGV
+
+
+## Introduction 
 
 === Description of the lab ===
 
