@@ -133,6 +133,9 @@ DocumentRoot /home/ubuntu
 sudo service apache2 restart
 ```
 
+###Save a snapshot of workspace volume
+To create a snapshot of the extra workspace volume, navigate to volumes, right-click, and choose Create Snapshot.
+
 ###Save a public AMI
 
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
