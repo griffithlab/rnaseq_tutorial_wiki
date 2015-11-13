@@ -134,7 +134,7 @@ sudo service apache2 restart
 ```
 
 ###Save a snapshot of workspace volume
-To create a snapshot of the extra workspace volume, navigate to volumes, right-click, and choose Create Snapshot. Take note of the snapshot id for reference later (e.g., snap-3edcfd62)
+To create a snapshot of the extra workspace volume, navigate to volumes, right-click, and choose Create Snapshot. Take note of the snapshot id for reference later (e.g., snap-154dc64c)
 
 ###Save a public AMI
 
