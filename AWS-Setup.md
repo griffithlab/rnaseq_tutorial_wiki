@@ -63,12 +63,23 @@ make
 make install
 ```
 
-### Install MUMmer
+#### Install MUMmer
 ```
 wget http://downloads.sourceforge.net/project/mummer/mummer/3.23/MUMmer3.23.tar.gz
 tar -zxvf MUMmer3.23.tar.gz
+cd MUMmer3.23
 make check
 make install
+```
+
+#### Install TABIX
+```
+wget http://downloads.sourceforge.net/project/samtools/tabix/tabix-0.2.6.tar.bz2
+bunzip2 tabix-0.2.6.tar.bz2
+tar -xvf tabix-0.2.6.tar
+cd tabix-0.2.6
+make
+./tabix
 ```
 
 ###Set up Apache web server
