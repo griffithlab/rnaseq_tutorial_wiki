@@ -27,7 +27,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 * To allow installation of bioinformatics tools some basic dependencies must be installed first.
 ```
 sudo apt-get update
-sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh
+sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full
 ```
 * logout and log back in
 
@@ -81,6 +81,16 @@ cd tabix-0.2.6
 make
 ./tabix
 ```
+
+#### Install gkno
+git clone https://github.com/gkno/gkno_launcher.git
+wget http://www.carfab.com/apachesoftware//ant/binaries/apache-ant-1.9.6-bin.zip
+unzip apache-ant-1.9.6-bin.zip
+cd apache-ant-1.9.6
+ANT_HOME=~/bin/apache-ant-1.9.6
+PATH=$PATH:${ANT_HOME}/bin
+cd ../gkno_launcher
+./gkno build
 
 ###Set up Apache web server
 We will start an apache2 service and serve the contents of the students home directories for convenience. This allows easy download of files to their local hard drives, direct loading in IGV by url, etc. Note that when launching instances a security group will have to be selected/modified that allows http access via port 80.
