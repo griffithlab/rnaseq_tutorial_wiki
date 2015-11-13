@@ -53,6 +53,15 @@ wget https://raw.github.com/arq5x/gemini/master/gemini/scripts/gemini_install.py
 sudo python gemini_install.py ~/bin/ ~/workspace/data/
 ```
 
+#### Install ALLPATHS-LG
+```
+wget ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_code/allpathslg-52488.tar.gz
+tar -zxvf allpathslg-52488.tar.gz
+cd allpathslg-52488/
+./configure --prefix=/home/ubuntu/bin/allpathslg-52488/
+make
+make install
+```
 ###Set up Apache web server
 We will start an apache2 service and serve the contents of the students home directories for convenience. This allows easy download of files to their local hard drives, direct loading in IGV by url, etc. Note that when launching instances a security group will have to be selected/modified that allows http access via port 80.
 
