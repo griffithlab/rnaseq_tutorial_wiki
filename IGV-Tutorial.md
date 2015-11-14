@@ -45,14 +45,15 @@ Things to know before you start:
 Thought-provoking question goes here
 ```
 
-=== Requirements ===
+### Requirements
 
-* [http://www.broadinstitute.org/igv/home Integrative Genomics Viewer]
+* [Integrative Genomics Viewer](http://www.broadinstitute.org/igv/home)
 * Ability to run Java
+* Note that while most tutorials in this course are performed on the cloud, IGV will always be run on your **local** machine
 
-=== Compatibility ===
+### Compatibility
 
-This tutorial was intended for '''IGV v2.3''', which is available on the [http://www.broadinstitute.org/software/igv/download Download] page. It is ''strongly'' recommended that you use this version, as other versions may not be compatible. If you have installed a former version, please uninstall it and install the latest version.
+This tutorial was intended for **IGV v2.3**, which is available on the [http://www.broadinstitute.org/software/igv/download Download] page. It is *strongly* recommended that you use this version.
 
 === Data Set for IGV ===
 
@@ -278,7 +279,9 @@ Now run the file from the Tools menu:
  * This script will navigate automatically to each location in the lab
  * A screenshot will be taken and saved to the screenshots directory specified
 
-'''You're done!''' We hope that you enjoyed the lab and that you continue to enjoy IGV.
+
+Contributors/acknowledgements
+Jim Robinson, Sorana Morrissy, Obi Griffith, Malachi Griffith
 
 
 
