@@ -144,22 +144,23 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 * cshl_seqtec_rnaseq_2014_v2 - ami-7ff4bf4f (US West - Oregon)
 * cshl_seqtec_rnaseq_2014_v2 - ami-eeae3b86 (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ami-9df1e7d8 (US West - N. California)
-* cshl_seqtec_2015_v2 - ami-28130249 (US West - Oregon)
+* cshl_seqtec_2015_v3 - ami-58031239 (US West - Oregon)
 
 ###Create IAM account
 
 From AWS Console select Services -> IAM. Go to Users, Create User, specify a user name, and Create. Download credentials to a safe location for later reference if needed. Select the new user and go to Security Credentials -> Manage Password -> 'Assign a Custom Password'. Go to Groups -> Create a New Group, specify a group name and Next. Attach a policy to the group. In this case we give all EC2 privileges but no other AWS privileges by specifying "AmazonEC2FullAccess". Hit Next, review and then Create Group. Select the Group -> Add Users to Group, select your new user to add it to the new group.
 
-###Launch student instances
-1. Go to AWS console.
-2. Launch Instance, search for "cshl_seqtec_rnaseq_2014_v2" in Community AMIs and Select.
+###Launch student instance
+1. Go to AWS console. Login.
+2. Launch Instance, search for "cshl_seqtec_2015_v3" in Community AMIs and Select.
 3. Choose "m3.2xlarge" instance type.
-4. Select number of instances to launch (e.g., one per student and instructor)
-5. Leave options as default until 'Configure Security Group'. Choose existing security group call "SSH_HTTP_IN_ALL_OUT". Review and Launch.
-6. Choose an existing key pair (either CSHLRNA or instructor-key)
-7. View instances and wait for them to finish initiating.
-8. Login to each node `ssh -i [instructor-key].pem ubuntu@[public.ip.address]` and run `bash preinstall.sh`.
-9. Create DNS hostname for each IP address (see below).
+4. Select one instance to launch (e.g., one per student and instructor)
+5. Select "Protect against accidental termination"
+6. Choose existing security group call "SSH_HTTP_8081_IN_ALL_OUT". Review and Launch.
+7. Choose an existing key pair (either CSHL.pem)
+8. View instances and wait for them to finish initiating.
+9. Login to each node `ssh -i CSHL.pem ubuntu@[public.ip.address]`.
+10. Optional - set up DNS redirects (see below)
 
 ###Set up a dynamic DNS service
 
