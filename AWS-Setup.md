@@ -100,7 +100,6 @@ wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/H
 tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
 ```
 
-
 ###Set up Apache web server
 We will start an apache2 service and serve the contents of the students home directories for convenience. This allows easy download of files to their local hard drives, direct loading in IGV by url, etc. Note that when launching instances a security group will have to be selected/modified that allows http access via port 80.
 
@@ -145,6 +144,11 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 * cshl_seqtec_rnaseq_2014_v2 - ami-7ff4bf4f (US West - Oregon)
 * cshl_seqtec_rnaseq_2014_v2 - ami-eeae3b86 (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ami-9df1e7d8 (US West - N. California)
+* cshl_seqtec_2015_v2 - ami-28130249 (US West - Oregon)
+
+###Create IAM account
+
+From AWS Console select Services -> IAM. Go to Users, Create User, specify a user name, and Create. Download credentials to a safe location for later reference if needed. Select the new user and go to Security Credentials -> Manage Password -> 'Assign a Custom Password'. Go to Groups -> Create a New Group, specify a group name and Next. Attach a policy to the group. In this case we give all EC2 privileges but no other AWS privileges by specifying "AmazonEC2FullAccess". Hit Next, review and then Create Group. Select the Group -> Add Users to Group, select your new user to add it to the new group.
 
 ###Launch student instances
 1. Go to AWS console.
