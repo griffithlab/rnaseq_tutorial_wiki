@@ -92,25 +92,27 @@ You should see listing of chromosomes in this reference genome. Choose ***1***, 
 
 Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking **Go**. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
-**Navigition using Location text field. Sequence track displayed as sequence of colours.**
-![Navigition using Location text field. Sequence track displayed as sequence of colours.](Images/IGV/1.png)
+**Navigition using Location text field. Sequence displayed as sequence of colours.**
+![Navigition using Location text field. Sequence displayed as sequence of colours.](Images/IGV/1.png)
 
 
 IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
 
-You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or BRCA1 if you can't decide. 
+You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or *BRCA1* if you can not decide. 
 
-[[Image:igv-genes.png|thumb|261px|center|Gene model.]]
+**Gene model**
+![Gene model](Images/IGV/genes.png)
 
-Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exotic regions. The arrows indicate the strand on which the gene lies.
+Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the strand on which the gene lies.
 
 When loaded, tracks are stacked on top of each other. You can identify which track is which by consulting the label to the left of each track.
 
-== Region Lists ==
+## Region Lists
 
-Sometimes, it's really useful to save where you are, or to load regions of interest. For this purpose, there is A '''Region Navigator''' in IGV. To access it, click Regions > Region Navigator. While you browse around the genome, you can save some bookmarks by pressing the Add button at any time.
+Sometimes, it is really useful to save where you are, or to load regions of interest. For this purpose, there is a **Region Navigator** in IGV. To access it, click `Regions` > `Region Navigator`. While you browse around the genome, you can save some bookmarks by pressing the `Add` button at any time.
 
-[[Image:igv-bookmarks.png|thumb|407px|center|Bookmarks in IGV.]]
+**Bookmarks in IGV**
+![Bookmarks in IGV](Images/IGV/bookmarks.png)
 
 == Loading Read Alignments ==
 We will be using the breast cancer cell line HCC1143 to visualize alignments.  For speed, only a small portion of chr21 will be loaded (19M:20M).
