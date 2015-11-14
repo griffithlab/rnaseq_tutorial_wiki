@@ -140,6 +140,9 @@ tar -xvf alignment_practical.tar
 
 Assignment: Align the reads using the skills you learned above. Try using Tophat or STAR aligners. When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---alignment)
 
-| [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|PostAlignment-Visualization]] |
-|:------------------------------------:|:--------------------------:|:--------------------------------------------:|
-| [[Adapter Trim|Adapter-Trim]]          | [[Alignment|Alignment]]    | [[Alignment Visualization|PostAlignment-Visualization]]         |
+| [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|IGV-Tutorial]] |
+|:---------------------------------:|:--------------------------:|:-----------------------------:|
+| [[Adapter Trim|Adapter-Trim]]     | [[Alignment|Alignment]]    | [[IGV|IGV-Tutorial]] |
+
+
+

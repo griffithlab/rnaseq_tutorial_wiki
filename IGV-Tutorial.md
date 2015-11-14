@@ -304,4 +304,6 @@ Now run the file from the `Tools` menu:
 #Contributors/acknowledgements
 Malachi Griffith, Sorana Morrissy, Jim Robinson, Ben Ainscough, Jason Walker, Obi Griffith
 
-
+| [[Previous Section|Alignment]] | [[This Section|IGV-Tutorial]] | [[Next Section|PostAlignment-Visualization]] |
+|:------------------------------:|:-----------------------------:|:--------------------------------------------:|
+| [[Alignment|Alignment]]        | [[IGV|IGV-Tutorial]] | [[Alignment Visualization|PostAlignment-Visualization]]         |

@@ -84,7 +84,7 @@ Run `samtools mpileup` on a region of interest
 
 	samtools mpileup -b bamfilelist.txt -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa -r 22:18905970-18905980
 	
-Each line consists of chromosome, 1-based coordinate, reference base, the number of reads covering the site, read bases and base qualities. At the read base column, a dot stands for a match to the reference base on the forward strand, a comma for a match on the reverse strand, `ACGTN' for a mismatch on the forward strand and `acgtn' for a mismatch on the reverse strand. A pattern `\+[0-9]+[ACGTNacgtn]+' indicates there is an insertion between this reference position and the next reference position. The length of the insertion is given by the integer in the pattern, followed by the inserted sequence. See samtools pileup/mpileup documentation for more explanation of the output:
+Each line consists of chromosome, 1-based coordinate, reference base, the number of reads covering the site, read bases and base qualities. At the read base column, a dot stands for a match to the reference base on the forward strand, a comma for a match on the reverse strand, `ACGTN` for a mismatch on the forward strand and `acgtn` for a mismatch on the reverse strand. A pattern `\+[0-9]+[ACGTNacgtn]+` indicates there is an insertion between this reference position and the next reference position. The length of the insertion is given by the integer in the pattern, followed by the inserted sequence. See samtools pileup/mpileup documentation for more explanation of the output:
 
 * http://samtools.sourceforge.net/pileup.shtml
 * http://samtools.sourceforge.net/mpileup.shtml
@@ -117,6 +117,8 @@ From this output you could parse the read counts for each base
 	cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", $data[5]); @Cdata=split(":", $data[6]); @Gdata=split(":", $data[7]); @Tdata=split(":", $data[8]); print "HBR Counts\t$data[0]\t$data[1]\tA: $Adata[1]\tC: $Cdata[1]\tT: $Tdata[1]\tG: $Gdata[1]\n";'
 
 
-| [[Previous Section|Alignment]] | [[This Section|PostAlignment-Visualization]]            | [[Next Section|PostAlignment-QC]] |
-|:------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------:|
-| [[Alignment|Alignment]]        | [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]]      |
+| [[Previous Section|IGV-Tutorial]] | [[This Section|PostAlignment-Visualization]]  | [[Next Section|PostAlignment-QC]] |
+|:---------------------------------:|:---------------------------------------------:|:---------------------------------:|
+| [[IGV|IGV-Tutorial]]              | [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]]      |
+
+
