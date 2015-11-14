@@ -181,7 +181,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 
 **Example 2a**
 * Group alignments by `read strand`
-* Center on the `A` within the homopolymer run (`chr21:19,518,470`), and Sort alignments by `base` on the forward strand reads
+* Center on the `A` within the homopolymer run (`chr21:19,518,470`), and `Sort alignments by` -> `base`
 
 ![Example 2a](Images/IGV/example2a.png)
 
@@ -217,9 +217,10 @@ Navigate to position `chr21:19,611,925-19,631,555`. Note that the range contains
 ## Heterozygous SNPs on different alleles
 
 Navigate to region `chr21:19,666,833-19,667,007`
-* Sort by base
 
 **Example 4**
+* Sort by base
+
 ![Example 4](Images/IGV/example4.png)
 
 **Note:**
