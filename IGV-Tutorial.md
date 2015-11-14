@@ -178,10 +178,10 @@ In this section we will be looking in detail at 8 positions in the genome, and d
 ## Homopolymer region with indel
 
 Navigate to position `chr21:19,518,412-19,518,497`
-* Group alignments by `read strand`
-* Center on the `A` within the homopolymer run (chr21:19,518,470), and Sort alignments by `base` on the forward strand reads
 
 **Example 2a**
+* Group alignments by `read strand`
+* Center on the `A` within the homopolymer run (`chr21:19,518,470`), and Sort alignments by `base` on the forward strand reads
 ![Example 2a](Images/IGV/example2a.png)
 
 * center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
