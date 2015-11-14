@@ -193,7 +193,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
 * i.e. the common variants included some cases that are actually common misalignments caused by repeats
 
-** Coverage by GC **
+**Coverage by GC**
 
 Navigate to position `chr21:19,611,925-19,631,555`  
 Note that the range contains areas where coverage drops to zero in a few places.
