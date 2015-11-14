@@ -55,6 +55,7 @@ Thought-provoking question goes here
 This tutorial was intended for **IGV v2.3**, which is available on the [IGV Download](http://www.broadinstitute.org/software/igv/download) page. It is *strongly* recommended that you use this version.
 
 ### Data Set for IGV
+We will be using publicly available Illumina sequence data from the HCC1143 cell line. The HCC1143 cell line was generated from a 52 year old caucasian woman with breast cancer. Additional information on this cell line can be found here: <a href="http://www.atcc.org/products/all/CRL-2321.aspx">HCC1143</a> (tumor, TNM stage IIA, grade 3, primary ductal carcinoma) and <a href="http://www.atcc.org/products/all/CRL-2362.aspx">HCC1143/BL</a> (matched normal EBV transformed lymphoblast cell line).
 
 * Sequence read alignments generated from a cell line HCC1143 that have been filtered to this region:
 * Chromosome 21: 19,000,000-20,000,000
@@ -115,7 +116,7 @@ Sometimes, it is really useful to save where you are, or to load regions of inte
 ![Bookmarks in IGV](Images/IGV/bookmarks.png)
 
 ## Loading Read Alignments
-We will be using the breast cancer cell line HCC1143 to visualize alignments. For speed, only a small portion of chr21 will be loaded (19M:20M). The HCC1143 cell line was generated from a 52 year old caucasian woman with breast cancer. Additional information on this cell line can be found here: <a href="http://www.atcc.org/products/all/CRL-2321.aspx">HCC1143</a> (tumor, TNM stage IIA, grade 3, primary ductal carcinoma) and <a href="http://www.atcc.org/products/all/CRL-2362.aspx">HCC1143/BL</a> (matched normal EBV transformed lymphoblast cell line).
+We will be using the breast cancer cell line HCC1143 to visualize alignments. For speed, only a small portion of chr21 will be loaded (19M:20M). 
 
 **HCC1143 Alignments to hg19:** 
 * [HCC1143.normal.21.19M-20M.bam](https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1143/HCC1143.normal.21.19M-20M.bam)
