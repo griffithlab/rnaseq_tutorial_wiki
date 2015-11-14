@@ -1,5 +1,5 @@
 ## Table of contents
-1. Introduction
+1. [Introduction](IGV-Tutorial#introduction)
   1. Description of the lab
   2. Requirements
   3. Compatibility
