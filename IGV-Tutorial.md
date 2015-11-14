@@ -219,12 +219,12 @@ Navigate to position `chr21:19,611,925-19,631,555`. Note that the range contains
 Navigate to region `chr21:19,666,833-19,667,007`
 
 **Example 4**
-* Sort by base
+* Sort by base (at position `chr21:19,666,901`)
 
 ![Example 4](Images/IGV/example4.png)
 
 **Note:**
-* Linkage between alleles is not the case for these two SNPs because reads covering the position of both SNPs only contain one or the other
+* There is no linkage between alleles for these two SNPs because reads covering both only contain one or the other
 
 ## Low mapping quality 
 
