@@ -28,6 +28,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
   <ol start="i">
     <li>[[Adapter Trim|Adapter-Trim]]</li>
     <li>[[Alignment|Alignment]]</li>
+    <li>[[IGV|IGV-Tutorial]]</li>
     <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
     <li>[[PostAlignment QC|PostAlignment-QC]]</li>
   </ol>
