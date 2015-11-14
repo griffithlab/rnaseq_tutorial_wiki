@@ -817,3 +817,12 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 * 2015-06-14 - Version 1.0, adapted from Unix and Perl for Biologists Primer
 * 2015-06-24 - Version 1.01: clarified that this material is assuming user name is 'ubuntu'and made other minor clarifications (such as what this material was first produced for).
 * 2015-11-13 - Version 1.02: further adapted for CSHL 2015 Advanced Sequencing Technologies & Applications course.
+
+
+| [[Previous Section|Syntax]] | [[This Section|Unix-Bootcamp]]  | [[Next Section|Intro-to-AWS-Cloud-Computing]]                       |
+|:---------------------------:|:-------------------------------:|:-------------------------------------------------------------------:|
+| [[Syntax|Syntax]]           | [[Unix Bootcamp|Unix-Bootcamp]] | [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]       |
+
+
+
+

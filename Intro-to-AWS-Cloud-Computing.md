@@ -383,6 +383,8 @@ This is a basic introduction to AWS cloud computing that assumes all configurati
 - Use of [vagrant](https://www.vagrantup.com/) to launch AWS instances
 - Use of [puppet](https://puppetlabs.com/puppet/what-is-puppet) to configure Linux systems
 
-| [[Previous Section|Syntax]] | [[This Section|Intro-to-AWS-Cloud-Computing]]               | [[Next Section|Logging-into-Amazon-Cloud]]        |
-|:---------------------------:|:--------------------------------------------------------:|:-----------------------------------------------------:|
-| [[Syntax|Syntax]]           | [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]  | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  |
+| [[Previous Section|Unix-Bootcamp]] | [[This Section|Intro-to-AWS-Cloud-Computing]]                 | [[Next Section|Logging-into-Amazon-Cloud]]               |
+|:----------------------------------:|:-------------------------------------------------------------:|:--------------------------------------------------------:|
+| [[Unix Bootcamp|Unix-Bootcamp]]    | [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]] | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  |
+
+
