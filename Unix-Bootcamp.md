@@ -448,7 +448,7 @@ ubuntu@:~/Learning_unix$ ls Temp/
 earth.txt  heaven.txt  rags  Temp2
 ```
 
-This step moves the Temp2 directory inside the Temp directory. Try creating a 'Temp3' directory inside 'Learning_unix' and then `cd` to `/tmp`. Can you move `Temp3` inside `Temp` without changing directory?
+This step moves the Temp2 directory inside the Temp directory. Try creating a 'Temp3' directory inside 'Learning_unix' and then `cd` to `/tmp`. Can you move `Temp3` inside `Temp2` without changing directory?
 
 
 ---
