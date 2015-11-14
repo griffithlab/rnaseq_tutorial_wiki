@@ -182,12 +182,13 @@ Navigate to position `chr21:19,518,412-19,518,497`
 **Example 2a**
 * Group alignments by `read strand`
 * Center on the `A` within the homopolymer run (`chr21:19,518,470`), and Sort alignments by `base` on the forward strand reads
-* center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
 
 ![Example 2a](Images/IGV/example2a.png)
 
 
 **Example 2b**
+* center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
+
 ![Example 2b](Images/IGV/example2b.png)
 
 **Notes:**
