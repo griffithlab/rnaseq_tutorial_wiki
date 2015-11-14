@@ -70,8 +70,8 @@ fastqc *.fastq.gz
 ```
 
 The resulting html reports can be viewed by navigating to:
-* http://cbw##.dyndns.info/rnaseq/data/
-* http://cbw##.dyndns.info/rnaseq/data/trimmed/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/trimmed/
 
 | [[Previous Section|PreAlignment-QC]] | [[This Section|Adapter Trim]] | [[Next Section|Alignment]] |
 |:------------------------------------:|:--------------------------:|:--------------------------------------------:|
