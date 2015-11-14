@@ -29,6 +29,10 @@
 
 Welcome to the lab for **Genome Visualization**! This lab will introduce you to the [Integrative Genomics Viewer](http://www.broadinstitute.org/igv/home), one of the most popular visualization tools for High Throughput Sequencing (HTS) data.
 
+Lecture files that accompany this tutorial:
+[IGV Lecture - Brief](LectureFiles/cshl/2015/IGV_Tutorial_Brief.pdf)
+[IGV Lecture - Long, from Broad Institute](LectureFiles/cshl/2015/IGV_Tutorial_Long_BroadInstitute.pdf)
+
 After this lab, you will be able to:
 * Visualize a variety of genomic data
 * Quickly navigate around the genome
