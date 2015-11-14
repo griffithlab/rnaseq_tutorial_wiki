@@ -229,7 +229,7 @@ Navigate to region `chr21:19,666,833-19,667,007`
 ## Low mapping quality 
 
 Navigate to region `chr21:19,800,320-19,818,162`
-* Load repeat track
+* Load repeat track (`File` -> `Load from server...`)
 
 **Load repeats**<br>
 ![Load repeats](Images/IGV/load_repeats.png)
@@ -238,8 +238,7 @@ Navigate to region `chr21:19,800,320-19,818,162`
 ![Example 5](Images/IGV/example5.png)
 
 **Notes:**
-* Mapping quality plunges in all reads (white instead of grey).  Once we load repeat elements, we see that
-* There are two LINE elements that cause this.
+* Mapping quality plunges in all reads (white instead of grey).  Once we load repeat elements, we see that there are two LINE elements that cause this.
 
 ## Homozygous deletion
 
