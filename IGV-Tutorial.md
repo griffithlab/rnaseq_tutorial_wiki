@@ -1,26 +1,26 @@
 ## Table of contents
 1. [Introduction](IGV-Tutorial#introduction)
-  1. Description of the lab
-  2. Requirements
-  3. Compatibility
-  4. Data Set for IGV
-2. Visualization Part 1: Getting familiar with IGV
-  1. Get familiar with the interface
-    1. Load a Genome and Data Tracks
-    2. Navigation
-  2. Region Lists
-  3. Loading Read Alignments
-  4. Visualizing read alignments
-3. Visualization Part 2: Inspecting SNPs, SNVs, and SVs
-  1. Neighbouring somatic SNV and germline SNP
-  2. Homopolymer repeat with indel
-  3. Coverage by GC
-  4. Heterozygous SNPs on different alleles
-  5. Low mapping quality
-  6. Homozygous deletion
-  7. Mis-alignment
-  8. Translocation
-4. Visualization Part 3: Automating Tasks in IGV
+  1. [Description of the lab](IGV-Tutorial#description-of-the-lab)
+  2. [Requirements](IGV-Tutorial#requirements)
+  3. [Compatibility](IGV-Tutorial#compatibility)
+  4. [Data Set for IGV](IGV-Tutorial#compatibility)
+2. [Visualization Part 1: Getting familiar with IGV](IGV-Tutorial#visualization-part-1-getting-familiar-with-igv)
+  1. [Get familiar with the interface](IGV-Tutorial#get-familiar-with-the-interface)
+    1. [Load a Genome and Data Tracks](IGV-Tutorial#load-a-genome-and-some-data-tracks)
+    2. [Navigation](IGV-Tutorial#navigation)
+  2. [Region Lists](IGV-Tutorial#region-lists)
+  3. [Loading Read Alignments](IGV-Tutorial#loading-read-alignments)
+  4. [Visualizing read alignments](IGV-Tutorial#visualizing-read-alignments)
+3. [Visualization Part 2: Inspecting SNPs, SNVs, and SVs](IGV-Tutorial#visualization-part-2-inspecting-snps-snvs-and-svs-)
+  1. [Neighbouring somatic SNV and germline SNP](IGV-Tutorial#neighbouring-somatic-snv-and-germline-snp)
+  2. [Homopolymer repeat with indel](IGV-Tutorial#homopolymer-repeat-with-indel)
+  3. [Coverage by GC](IGV-Tutorial#coverage-by-gc)
+  4. [Heterozygous SNPs on different alleles](IGV-Tutorial#heterozygous-snps-on-different-alleles)
+  5. [Low mapping quality](IGV-Tutorial#low-mapping-quality)
+  6. [Homozygous deletion](IGV-Tutorial#homozygous-deletion)
+  7. [Mis-alignment](IGV-Tutorial#mis-alignment)
+  8. [Translocation](IGV-Tutorial#translocation)
+4. [Visualization Part 3: Automating Tasks in IGV](IGV-Tutorial#visualization-part-3-automating-tasks-in-igv)
 
 
 ## Introduction 
@@ -193,7 +193,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
 * i.e. the common variants included some cases that are actually common misalignments caused by repeats
 
-**Coverage by GC**
+## Coverage by GC
 
 Navigate to position `chr21:19,611,925-19,631,555`  
 Note that the range contains areas where coverage drops to zero in a few places.
