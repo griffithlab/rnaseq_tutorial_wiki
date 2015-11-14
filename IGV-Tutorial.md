@@ -101,7 +101,7 @@ IGV displays the sequence of letters in a genome as a sequence of colours (e.g. 
 You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or *BRCA1* if you can not decide. 
 
 **Gene model**
-![Gene model](Images/IGV/genes.png)
+![Gene model](Images/IGV/gene_model.png)
 
 Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the strand on which the gene lies.
 
