@@ -193,7 +193,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
 * (i.e. the common variants included some cases that are actually common misalignments caused by repeats)
 
-** Coverage by GC
+** Coverage by GC **
 
 Navigate to position `chr21:19,611,925-19,631,555`  
 Note that the range contains areas where coverage drops to zero in a few places.
@@ -226,7 +226,7 @@ Navigate to region `chr21:19,666,833-19,667,007`
 Navigate to region `chr21:19,800,320-19,818,162`
 * load repeat track
 
-**Load repeats**
+**Load repeats**<br>
 ![Load repeats](Images/IGV/load_repeats.png)
 
 **Example 5**
@@ -259,48 +259,49 @@ Navigate to region `chr21:19,102,154-19,103,108`
 **Example 7**
 ![Example 7](Images/IGV/example7.png)
 
- '''Notes:'''
- * This is a position where AluY element causes mis-alignment.  
- * Misaligned reads have mismatches to the reference and 
- * Well-aligned reads have partners on other chromosomes where additional ALuY elements are encoded.
+**Notes:**
+* This is a position where AluY element causes mis-alignment.  
+* Misaligned reads have mismatches to the reference and 
+* Well-aligned reads have partners on other chromosomes where additional ALuY elements are encoded.
 
-== Translocation ==
+## Translocation
 
-Navigate to region "chr21:19,089,694-19,095,362"
+Navigate to region `chr21:19,089,694-19,095,362`
 
- # Expanded view
- # Group by Pair Orientation
- # Color by Pair Orientation
+* Expanded view
+* Group by Pair Orientation
+* Color by Pair Orientation
 
-[[Image:igv_example8.png|thumb|630px|center|Example8]]
+** Example 8 **
+![Example 8](Images/IGV/example8.png)
 
- '''Notes:'''
-  * many reads with mismatches to reference
-  * read pairs in RL pattern (instead of LR pattern)
-  * region is flanked by reads with poor mapping quality (white instead of grey)
-  * presence of reads with pairs on other chromosomes (coloured reads at the bottom when scrolling down)
+**Notes:**
+* Many reads with mismatches to reference
+* Read pairs in RL pattern (instead of LR pattern)
+* Region is flanked by reads with poor mapping quality (white instead of grey)
+* Presence of reads with pairs on other chromosomes (coloured reads at the bottom when scrolling down)
 
-= Visualization Part 3: Automating Tasks in IGV =
+# Visualization Part 3: Automating Tasks in IGV
 
-We can use the Tools menu to invoke running a batch script.  Batch scripts are described on the IGV website:
-# batch file requirements: https://www.broadinstitute.org/igv/batch
-# commands recognized in a batch script: https://www.broadinstitute.org/software/igv/PortCommands
-# We also need to provide sample attribute file as described here:   http://www.broadinstitute.org/software/igv/?q=SampleInformation
+We can use the Tools menu to invoke running a batch script. Batch scripts are described on the IGV website:
+* Batch file requirements: https://www.broadinstitute.org/igv/batch
+* Commands recognized in a batch script: https://www.broadinstitute.org/software/igv/PortCommands
+* We also need to provide sample attribute file as described here: http://www.broadinstitute.org/software/igv/?q=SampleInformation
 
 Download the batch script and the attribute file for our dataset:
-# batch script: [[Media: run_batch_IGV_snapshots.txt|run_batch_IGV_snapshots.txt]]
-# attribute file: [[Media: igv_HCC1143_attributes.txt|igv_HCC1143_attributes.txt]]
+* Batch script: [[Media: run_batch_IGV_snapshots.txt|run_batch_IGV_snapshots.txt]]
+* Attribute file: [[Media: igv_HCC1143_attributes.txt|igv_HCC1143_attributes.txt]]
 
-Now run the file from the Tools menu:
-[[Image:igv_run_batch_script.png|thumb|630px|center|Automation]]
+Now run the file from the `Tools` menu:
 
- '''Notes:'''
- * This script will navigate automatically to each location in the lab
- * A screenshot will be taken and saved to the screenshots directory specified
+**Automation**
+![Images/IGV/run_batch_script.png](Automation)
 
+**Notes:**
+* This script will navigate automatically to each location in the lab
+* A screenshot will be taken and saved to the screenshots directory specified
 
-Contributors/acknowledgements
-Jim Robinson, Sorana Morrissy, Obi Griffith, Malachi Griffith
-
+#Contributors/acknowledgements
+Malachi Griffith, Sorana Morrissy, Jim Robinson, Ben Ainscough, Jason Walker, Obi Griffith
 
 
