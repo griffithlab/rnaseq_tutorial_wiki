@@ -100,7 +100,7 @@ IGV displays the sequence of letters in a genome as a sequence of colours (e.g. 
 
 You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or *BRCA1* if you can not decide. 
 
-**Gene model**
+**Gene model**<br>
 ![Gene model](Images/IGV/gene_model.png)
 
 Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the strand on which the gene lies.
@@ -111,7 +111,7 @@ When loaded, tracks are stacked on top of each other. You can identify which tra
 
 Sometimes, it is really useful to save where you are, or to load regions of interest. For this purpose, there is a **Region Navigator** in IGV. To access it, click `Regions` > `Region Navigator`. While you browse around the genome, you can save some bookmarks by pressing the `Add` button at any time.
 
-**Bookmarks in IGV**
+**Bookmarks in IGV**<br>
 ![Bookmarks in IGV](Images/IGV/bookmarks.png)
 
 ## Loading Read Alignments
