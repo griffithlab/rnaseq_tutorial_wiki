@@ -80,7 +80,7 @@ We will also load additional tracks from **Server**:
 * dbSNP 1.3.1 or 1.3.7
 
 [[Image:igv_load.data.tracks.png|thumb|550px|center|Load hg19 genome and additional data tracks]]
-![Load hg19 genome and additional data tracks](Images/IGV/550px-Igv_load.data.tracks.png)
+![Load hg19 genome and additional data tracks](Images/IGV/load.data.tracks.png)
 
 === Navigation ===
 
