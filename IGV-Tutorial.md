@@ -273,11 +273,11 @@ Navigate to region `chr21:19,102,154-19,103,108`
 
 Navigate to region `chr21:19,089,694-19,095,362`
 
-* Expanded view
-* Group by Pair Orientation
-* Color by Pair Orientation
-
 ** Example 8 **
+* Expanded view
+* `Group alignments by` -> `pair orientation`
+* `Color alignments by` -> `pair orientation`
+
 ![Example 8](Images/IGV/example8.png)
 
 **Notes:**
