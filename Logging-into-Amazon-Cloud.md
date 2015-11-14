@@ -1,7 +1,7 @@
 #0-v. Logging into the Amazon cloud
 
 * This will ONLY occur once we are in the classroom as it costs to have these servers running. Instructions will be provided in class.
-* We have set up ~20 instances on the Amazon cloud - one for each student. In order to log in to your instance, you will need a security certificate. 
+* Each student will launch their own instance from a preconfigured AMI. In order to log in to your instance, you will need a security certificate. 
  * You will be provided with a key file called: "CSHL.pem". See the Course Wiki page.
 
 * We have set up DNS shortcuts to the Amazon nodes so that we do not have to remember long hostnames like `ec2-50-19-168-121.compute-1.amazonaws.com`. Instead, we will use the following hostnames: `cbw##.dyndns.info` where ## is your assigned student number (01 - 30).
@@ -15,7 +15,7 @@
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
 ```
-chmod 600 CBW.pem
+chmod 400 CBW.pem
 ```
 
 * To log in to the node, use the -i command line argument to specify your certificate:
