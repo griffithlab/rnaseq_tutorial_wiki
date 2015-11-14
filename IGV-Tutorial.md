@@ -213,18 +213,18 @@ Note that the range contains areas where coverage drops to zero in a few places.
 ## Heterozygous SNPs on different alleles
 
 Navigate to region `chr21:19,666,833-19,667,007`
-* sort by base
+* Sort by base
 
 **Example 4**
 ![Example 4](Images/IGV/example4.png)
 
 **Note:**
-* Linkage between alleles is obvious in this case because both are spanned by the same reads
+* Linkage between alleles is not the case for these two SNPs because reads covering the position of both SNPs only contain one or the other
 
 ## Low mapping quality 
 
 Navigate to region `chr21:19,800,320-19,818,162`
-* load repeat track
+* Load repeat track
 
 **Load repeats**<br>
 ![Load repeats](Images/IGV/load_repeats.png)
@@ -289,8 +289,8 @@ We can use the Tools menu to invoke running a batch script. Batch scripts are de
 * We also need to provide sample attribute file as described here: http://www.broadinstitute.org/software/igv/?q=SampleInformation
 
 Download the batch script and the attribute file for our dataset:
-* Batch script: [run_batch_IGV_snapshots.txt](ResourceFiles/run_batch_IGV_snapshots.txt)
-* Attribute file: [igv_HCC1143_attributes.txt](ResourceFiles/igv_HCC1143_attributes.txt)
+* Batch script: [run_batch_IGV_snapshots.txt](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/run_batch_IGV_snapshots.txt)
+* Attribute file: [igv_HCC1143_attributes.txt](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/igv_HCC1143_attributes.txt)
 
 Now run the file from the `Tools` menu:
 
