@@ -103,7 +103,7 @@ You can navigate to a gene of interest by typing it in the same box the genomic 
 **Gene model**<br>
 ![Gene model](Images/IGV/gene_model.png)
 
-Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the strand on which the gene lies.
+Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the direction/strand of transcription for the gene. When an exon box become narrower in height, this indicates a UTR.
 
 When loaded, tracks are stacked on top of each other. You can identify which track is which by consulting the label to the left of each track.
 
@@ -136,18 +136,18 @@ To start our exploration, right click on the track-name, and select the followin
 
 Experiment with the various settings by right clicking the read alignment track and toggling the options. Think about which would be best for specific tasks (e.g. quality control, SNP calling, CNV finding).
 
-**Read information**<br>
-![Read information](Images/IGV/sort_and_group.png)
+**Changing how read alignments are sorted, grouped, and colored**<br>
+![Changing how read alignments are sorted, grouped, and colored](Images/IGV/sort_and_group.png)
 
 You will see reads represented by grey or white bars stacked on top of each other, where they were aligned to the reference genome. The reads are pointed to indicate their orientation (i.e. the strand on which they are mapped). Mouse over any read and notice that a lot of information is available. To toggle read display from `hover` to `click`, select the yellow box and change the setting.
 
-**More read information**
-![More read information](Images/IGV/show_details_on_click.png)
+**Changing how read information is shown (i.e. on hover, click, never)**
+![Changing how read information is shown (i.e. on hover, click, never)](Images/IGV/show_details_on_click.png)
 
 Once you select a read, you will learn what many of these metrics mean, and how to use them to assess the quality of your datasets.  At each base that the read sequence **mismatches** the reference, the colour of the base represents the letter that exists in the read (using the same colour legend used for displaying the reference).
 
-**More read information**
-![More read information](Images/IGV/click_read.png)
+**Viewing read information for a single aligned read**
+![Viewing read information for a single aligned read](Images/IGV/click_read.png)
 
 # Visualization Part 2: Inspecting SNPs, SNVs, and SVs =
 
