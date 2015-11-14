@@ -199,14 +199,14 @@ Navigate to position `chr21:19,518,412-19,518,497`
 
 ## Coverage by GC
 
-Navigate to position `chr21:19,611,925-19,631,555`  
-Note that the range contains areas where coverage drops to zero in a few places.
+Navigate to position `chr21:19,611,925-19,631,555`. Note that the range contains areas where coverage drops to zero in a few places.
 
-* Use Collapsed view
+**Example 3**
+* Use `Collapsed` view
+* Use `Color alignments by` -> `insert size and pair orientation`
 * Load GC track 
 * See concordance of coverage with GC content
 
-**Example 3**
 ![Example 3](Images/IGV/example3.png)
 
 **Question:**
