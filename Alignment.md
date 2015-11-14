@@ -98,13 +98,13 @@ UHR
 
 	cd $RNA_HOME/alignments/tophat      
 	mkdir UHR_ERCC-Mix1_ALL
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/accepted_hits.bam INPUT=UHR_Rep1_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep2_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/accepted_hits.bam INPUT=UHR_Rep1_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep2_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
 HBR
 
 	cd $RNA_HOME/alignments/tophat
 	mkdir HBR_ERCC-Mix2_ALL
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/accepted_hits.bam INPUT=HBR_Rep1_ERCC-Mix2/accepted_hits.bam INPUT=HBR_Rep2_ERCC-Mix2/accepted_hits.bam INPUT=HBR_Rep3_ERCC-Mix2/accepted_hits.bam
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/accepted_hits.bam INPUT=HBR_Rep1_ERCC-Mix2/accepted_hits.bam INPUT=HBR_Rep2_ERCC-Mix2/accepted_hits.bam INPUT=HBR_Rep3_ERCC-Mix2/accepted_hits.bam
 
 Count the alignment (BAM) files to make sure all were created successfully (you should have 8 total)
 
@@ -117,10 +117,10 @@ Create comparable files for the STAR alignments by merging individual bam files 
 
 	cd $RNA_HOME/alignments/star
 	mkdir UHR_ERCC-Mix1_ALL
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam INPUT=UHR_Rep1/Aligned.out.sorted.bam INPUT=UHR_Rep2/Aligned.out.sorted.bam INPUT=UHR_Rep3/Aligned.out.sorted.bam
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam INPUT=UHR_Rep1/Aligned.out.sorted.bam INPUT=UHR_Rep2/Aligned.out.sorted.bam INPUT=UHR_Rep3/Aligned.out.sorted.bam
 
 	mkdir HBR_ERCC-Mix2_ALL
-	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.124/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam INPUT=HBR_Rep1/Aligned.out.sorted.bam INPUT=HBR_Rep2/Aligned.out.sorted.bam INPUT=HBR_Rep3/Aligned.out.sorted.bam
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam INPUT=HBR_Rep1/Aligned.out.sorted.bam INPUT=HBR_Rep2/Aligned.out.sorted.bam INPUT=HBR_Rep3/Aligned.out.sorted.bam
 
 ####END OPTIONAL ALTERNATIVE - Merge STAR bam files
 ---
