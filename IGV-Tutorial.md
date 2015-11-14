@@ -93,7 +93,7 @@ You should see listing of chromosomes in this reference genome. Choose ***1***, 
 Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking **Go**. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
 **Navigition using Location text field. Sequence track displayed as sequence of colours.**
-![Navigition using Location text field. Sequence track displayed as sequence of colours.](Images/IGV1.png)
+![Navigition using Location text field. Sequence track displayed as sequence of colours.](Images/IGV/1.png)
 
 
 IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
