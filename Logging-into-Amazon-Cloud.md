@@ -43,6 +43,6 @@ When you log in, you will notice that you have two directories: "bin" and "works
 * The "bin" directory contains the tools that you will need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
 * The "workspace" directory is where we will keep our temporary files and analysis results. 
 
-| [[Previous Section|Syntax]] | [[This Section|Logging-into-Amazon-Cloud]]               | [[Next Section|Environment]]        |
-|:---------------------------:|:--------------------------------------------------------:|:-----------------------------------------------------:|
-| [[Syntax|Syntax]]           | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  | [[Environment|Environment]]  |
+| [[Previous Section|Intro-to-AWS-Cloud-Computing]] | [[This Section|Logging-into-Amazon-Cloud]]               | [[Next Section|Unix-Bootcamp]]               |
+|:-------------------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------:|
+| [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]] | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  | [[Unix Bootcamp|Unix-Bootcamp]]  |

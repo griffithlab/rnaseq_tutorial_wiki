@@ -12,6 +12,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Syntax|Syntax]]</li>
     <li>[[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]</li>
     <li>[[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]</li>
+    <li>[[Unix Bootcamp|Unix-Bootcamp]]</li>
     <li>[[Environment|Environment]]</li>
     <li>[[Resources|Resources]]</li>
   </ol>
