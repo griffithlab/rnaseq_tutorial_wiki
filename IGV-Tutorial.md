@@ -1,26 +1,26 @@
 ## Table of contents
-1. Introduction
-  1. Description of the lab
-  2. Requirements
-  3. Compatibility
-  4. Data Set for IGV
-2. Visualization Part 1: Getting familiar with IGV
-  1. Get familiar with the interface
-    1. Load a Genome and Data Tracks
-    2. Navigation
-  2. Region Lists
-  3. Loading Read Alignments
-  4. Visualizing read alignments
-3. Visualization Part 2: Inspecting SNPs, SNVs, and SVs
-  1. Neighbouring somatic SNV and germline SNP
-  2. Homopolymer repeat with indel
-  3. Coverage by GC
-  4. Heterozygous SNPs on different alleles
-  5. Low mapping quality
-  6. Homozygous deletion
-  7. Mis-alignment
-  8. Translocation
-4. Visualization Part 3: Automating Tasks in IGV
+1. [Introduction](IGV-Tutorial#introduction)
+  1. [Description of the lab](IGV-Tutorial#description-of-the-lab)
+  2. [Requirements](IGV-Tutorial#requirements)
+  3. [Compatibility](IGV-Tutorial#compatibility)
+  4. [Data Set for IGV](IGV-Tutorial#compatibility)
+2. [Visualization Part 1: Getting familiar with IGV](IGV-Tutorial#visualization-part-1-getting-familiar-with-igv)
+  1. [Get familiar with the interface](IGV-Tutorial#get-familiar-with-the-interface)
+    1. [Load a Genome and Data Tracks](IGV-Tutorial#load-a-genome-and-some-data-tracks)
+    2. [Navigation](IGV-Tutorial#navigation)
+  2. [Region Lists](IGV-Tutorial#region-lists)
+  3. [Loading Read Alignments](IGV-Tutorial#loading-read-alignments)
+  4. [Visualizing read alignments](IGV-Tutorial#visualizing-read-alignments)
+3. [Visualization Part 2: Inspecting SNPs, SNVs, and SVs](IGV-Tutorial#visualization-part-2-inspecting-snps-snvs-and-svs-)
+  1. [Neighbouring somatic SNV and germline SNP](IGV-Tutorial#neighbouring-somatic-snv-and-germline-snp)
+  2. [Homopolymer repeat with indel](IGV-Tutorial#homopolymer-repeat-with-indel)
+  3. [Coverage by GC](IGV-Tutorial#coverage-by-gc)
+  4. [Heterozygous SNPs on different alleles](IGV-Tutorial#heterozygous-snps-on-different-alleles)
+  5. [Low mapping quality](IGV-Tutorial#low-mapping-quality)
+  6. [Homozygous deletion](IGV-Tutorial#homozygous-deletion)
+  7. [Mis-alignment](IGV-Tutorial#mis-alignment)
+  8. [Translocation](IGV-Tutorial#translocation)
+4. [Visualization Part 3: Automating Tasks in IGV](IGV-Tutorial#visualization-part-3-automating-tasks-in-igv)
 
 
 ## Introduction 
@@ -191,9 +191,9 @@ Navigate to position `chr21:19,518,412-19,518,497`
 * The alt allele is either a deletion or insertion of one or two `T`s
 * The remaining bases are mismatched, because the alignment is now out of sync
 * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
-* (i.e. the common variants included some cases that are actually common misalignments caused by repeats)
+* i.e. the common variants included some cases that are actually common misalignments caused by repeats
 
-** Coverage by GC
+## Coverage by GC
 
 Navigate to position `chr21:19,611,925-19,631,555`  
 Note that the range contains areas where coverage drops to zero in a few places.
@@ -213,20 +213,20 @@ Note that the range contains areas where coverage drops to zero in a few places.
 ## Heterozygous SNPs on different alleles
 
 Navigate to region `chr21:19,666,833-19,667,007`
-* sort by base
+* Sort by base
 
 **Example 4**
 ![Example 4](Images/IGV/example4.png)
 
 **Note:**
-* Linkage between alleles is obvious in this case because both are spanned by the same reads
+* Linkage between alleles is not the case for these two SNPs because reads covering the position of both SNPs only contain one or the other
 
 ## Low mapping quality 
 
 Navigate to region `chr21:19,800,320-19,818,162`
-* load repeat track
+* Load repeat track
 
-**Load repeats**
+**Load repeats**<br>
 ![Load repeats](Images/IGV/load_repeats.png)
 
 **Example 5**
@@ -259,48 +259,49 @@ Navigate to region `chr21:19,102,154-19,103,108`
 **Example 7**
 ![Example 7](Images/IGV/example7.png)
 
- '''Notes:'''
- * This is a position where AluY element causes mis-alignment.  
- * Misaligned reads have mismatches to the reference and 
- * Well-aligned reads have partners on other chromosomes where additional ALuY elements are encoded.
+**Notes:**
+* This is a position where AluY element causes mis-alignment.  
+* Misaligned reads have mismatches to the reference and 
+* Well-aligned reads have partners on other chromosomes where additional ALuY elements are encoded.
 
-== Translocation ==
+## Translocation
 
-Navigate to region "chr21:19,089,694-19,095,362"
+Navigate to region `chr21:19,089,694-19,095,362`
 
- # Expanded view
- # Group by Pair Orientation
- # Color by Pair Orientation
+* Expanded view
+* Group by Pair Orientation
+* Color by Pair Orientation
 
-[[Image:igv_example8.png|thumb|630px|center|Example8]]
+** Example 8 **
+![Example 8](Images/IGV/example8.png)
 
- '''Notes:'''
-  * many reads with mismatches to reference
-  * read pairs in RL pattern (instead of LR pattern)
-  * region is flanked by reads with poor mapping quality (white instead of grey)
-  * presence of reads with pairs on other chromosomes (coloured reads at the bottom when scrolling down)
+**Notes:**
+* Many reads with mismatches to reference
+* Read pairs in RL pattern (instead of LR pattern)
+* Region is flanked by reads with poor mapping quality (white instead of grey)
+* Presence of reads with pairs on other chromosomes (coloured reads at the bottom when scrolling down)
 
-= Visualization Part 3: Automating Tasks in IGV =
+# Visualization Part 3: Automating Tasks in IGV
 
-We can use the Tools menu to invoke running a batch script.  Batch scripts are described on the IGV website:
-# batch file requirements: https://www.broadinstitute.org/igv/batch
-# commands recognized in a batch script: https://www.broadinstitute.org/software/igv/PortCommands
-# We also need to provide sample attribute file as described here:   http://www.broadinstitute.org/software/igv/?q=SampleInformation
+We can use the Tools menu to invoke running a batch script. Batch scripts are described on the IGV website:
+* Batch file requirements: https://www.broadinstitute.org/igv/batch
+* Commands recognized in a batch script: https://www.broadinstitute.org/software/igv/PortCommands
+* We also need to provide sample attribute file as described here: http://www.broadinstitute.org/software/igv/?q=SampleInformation
 
 Download the batch script and the attribute file for our dataset:
-# batch script: [[Media: run_batch_IGV_snapshots.txt|run_batch_IGV_snapshots.txt]]
-# attribute file: [[Media: igv_HCC1143_attributes.txt|igv_HCC1143_attributes.txt]]
+* Batch script: [run_batch_IGV_snapshots.txt](https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Igv_HCC1143_attributes.txt)
+* Attribute file: [igv_HCC1143_attributes.txt](https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Run_batch_IGV_snapshots.txt)
 
-Now run the file from the Tools menu:
-[[Image:igv_run_batch_script.png|thumb|630px|center|Automation]]
+Now run the file from the `Tools` menu:
 
- '''Notes:'''
- * This script will navigate automatically to each location in the lab
- * A screenshot will be taken and saved to the screenshots directory specified
+**Automation**
+![Automation](Images/IGV/run_batch_script.png)
 
+**Notes:**
+* This script will navigate automatically to each location in the lab
+* A screenshot will be taken and saved to the screenshots directory specified
 
-Contributors/acknowledgements
-Jim Robinson, Sorana Morrissy, Obi Griffith, Malachi Griffith
-
+#Contributors/acknowledgements
+Malachi Griffith, Sorana Morrissy, Jim Robinson, Ben Ainscough, Jason Walker, Obi Griffith
 
 
