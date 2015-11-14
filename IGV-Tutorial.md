@@ -124,7 +124,7 @@ We will be using the breast cancer cell line HCC1143 to visualize alignments. Fo
 Copy the files to your local drive, and in IGV choose `File` > `Load from File...`, select the bam file, and click `OK`. Note that the bam and index files must be in the same directory for IGV to load these properly.
 
 **Load BAM track from File**
-![Load BAM track from File](Images/IGV/igv_load_bam.png)
+![Load BAM track from File](Images/IGV/load_bam.png)
 
 ## Visualizing read alignments
 
@@ -137,17 +137,17 @@ To start our exploration, right click on the track-name, and select the followin
 Experiment with the various settings by right clicking the read alignment track and toggling the options. Think about which would be best for specific tasks (e.g. quality control, SNP calling, CNV finding).
 
 **Read information**
-![Read information](Images/IGV/igv_sort_and_group.png)
+![Read information](Images/IGV/sort_and_group.png)
 
 You will see reads represented by grey or white bars stacked on top of each other, where they were aligned to the reference genome. The reads are pointed to indicate their orientation (i.e. the strand on which they are mapped). Mouse over any read and notice that a lot of information is available. To toggle read display from `hover` to `click`, select the yellow box and change the setting.
 
 **More read information**
-![More read information](Images/IGV/igv_show_details_on_click.png)
+![More read information](Images/IGV/show_details_on_click.png)
 
 Once you select a read, you will learn what many of these metrics mean, and how to use them to assess the quality of your datasets.  At each base that the read sequence **mismatches** the reference, the colour of the base represents the letter that exists in the read (using the same colour legend used for displaying the reference).
 
 **More read information**
-![More read information](igv_click_read.png)
+![More read information](click_read.png)
 
 = Visualization Part 2: Inspecting SNPs, SNVs, and SVs =
 
