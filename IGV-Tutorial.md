@@ -289,13 +289,13 @@ We can use the Tools menu to invoke running a batch script. Batch scripts are de
 * We also need to provide sample attribute file as described here: http://www.broadinstitute.org/software/igv/?q=SampleInformation
 
 Download the batch script and the attribute file for our dataset:
-* Batch script: [[Media: run_batch_IGV_snapshots.txt|run_batch_IGV_snapshots.txt]]
-* Attribute file: [[Media: igv_HCC1143_attributes.txt|igv_HCC1143_attributes.txt]]
+* Batch script: [run_batch_IGV_snapshots.txt](ResourceFiles/run_batch_IGV_snapshots.txt)
+* Attribute file: [igv_HCC1143_attributes.txt](ResourceFiles/igv_HCC1143_attributes.txt)
 
 Now run the file from the `Tools` menu:
 
 **Automation**
-![Images/IGV/run_batch_script.png](Automation)
+![Automation](Images/IGV/run_batch_script.png)
 
 **Notes:**
 * This script will navigate automatically to each location in the lab
