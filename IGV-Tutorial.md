@@ -245,15 +245,16 @@ Navigate to region `chr21:19,800,320-19,818,162`
 Navigate to region `chr21:19,324,469-19,331,468`
 
 **Example 6**
-* Sort reads by insert size
 * Turn on `View as Pairs` and `Expanded` view
+* Use `Color alignments by` -> `insert size and pair orientation`
+* Sort reads by insert size
 * Click on a red read pair to pull up information on alignments
 
 ![Example 6](Images/IGV/example6.png)
 
 **Notes:**
 * Typical insert size of read pair in the vicinity: 350bp
-* New insert size of red read pairs: 2,875bp
+* Insert size of red read pairs: 2,875bp
 * This corresponds to a homozygous deletion of 2.5kb
 
 ## Mis-alignment
