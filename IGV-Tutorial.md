@@ -179,75 +179,85 @@ Navigate to position `chr21:19,518,412-19,518,497`
 * Group alignments by `read strand`
 * Center on the second `T`, and Sort alignments by `base` on the forward strand reads
 
-**Example 2**
-![Example 2](Images/IGV/example2a.png)
+**Example 2a**
+![Example 2a](Images/IGV/example2a.png)
 
- # center on the one base deletion, and Sort alignments by “base” on the reverse strand reads
- 
-[[Image:igv_example2b.png|thumb|630px|center|Example2]]
+* center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
 
- '''Notes:'''
- * The alt allele is either a deletion or insertion of one or two "T"s
- * The remaining bases are mismatched, because the alignment is now out of sync
- * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
- * (i.e. the common variants included some cases that are actually common misalignments caused by repeats)
+**Example 2b**
+![Example 2b](Images/IGV/example2b.png)
 
-== Coverage by GC ==
+**Notes:**
+* The alt allele is either a deletion or insertion of one or two `T`s
+* The remaining bases are mismatched, because the alignment is now out of sync
+* The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
+* (i.e. the common variants included some cases that are actually common misalignments caused by repeats)
 
-Navigate to position "chr21:19,611,925-19,631,555"  
+** Coverage by GC
+
+Navigate to position `chr21:19,611,925-19,631,555`  
 Note that the range contains areas where coverage drops to zero in a few places.
 
- # use Collapsed view
- # load GC track 
-   # see concordance of coverage with GC content
+* Use Collapsed view
+* Load GC track 
+* See concordance of coverage with GC content
 
-[[Image:igv_example3.png|thumb|630px|center|Example3]]
+**Example 3**
+![Example 3](Images/IGV/example3.png)
 
- '''Question:'''
- * Why are there blue and red reads throughout the alignments?
+**Question:**
+```
+* Why are there blue and red reads throughout the alignments?
+```
 
-== Heterozygous SNPs on different alleles ==
+## Heterozygous SNPs on different alleles
 
-Navigate to region "chr21:19,666,833-19,667,007"
-  # sort by base
+Navigate to region `chr21:19,666,833-19,667,007`
+* sort by base
 
-[[Image:igv_example4.png|thumb|630px|center|Example4]]
+**Example 4**
+![Example 4](Images/IGV/example4.png)
 
- '''Note:'''
- * Linkage between alleles is obvious in this case because both are spanned by the same reads
+**Note:**
+* Linkage between alleles is obvious in this case because both are spanned by the same reads
 
-== Low mapping quality == 
+## Low mapping quality 
 
-Navigate to region "chr21:19,800,320-19,818,162"
-# load repeat track
+Navigate to region `chr21:19,800,320-19,818,162`
+* load repeat track
 
-[[Image:igv_load_repeats.png|thumb|330px|center|Load repeats]]
-[[Image:igv_example5.png|thumb|630px|center|Example5]]
+**Load repeats**
+![Load repeats](Images/IGV/load_repeats.png)
 
- '''Notes:'''
- * Mapping quality plunges in all reads (white instead of grey).  Once we load repeat elements, we see that
- *: there are two LINE elements that cause this.
+**Example 5**
+![Example 5](Images/IGV/example5.png)
 
-== Homozygous deletion ==
+**Notes:**
+* Mapping quality plunges in all reads (white instead of grey).  Once we load repeat elements, we see that
+* There are two LINE elements that cause this.
 
-Navigate to region "chr21:19,324,469-19,331,468"
+## Homozygous deletion
 
- # sort reads by insert size
- # turn on "View as Pairs" and "Expanded" view
- # click on a red read pair to pull up information on alignments
+Navigate to region `chr21:19,324,469-19,331,468`
 
-[[Image:igv_example6.png|thumb|630px|center|Example6]]
+* Sort reads by insert size
+* Turn on `View as Pairs` and `Expanded` view
+* Click on a red read pair to pull up information on alignments
 
- '''Notes:'''
- * Typical insert size of read pair in the vicinity: 350bp
- * New insert size of red read pairs: 2,875bp
- * This corresponds to a homozygous deletion of 2.5kb
+**Example 6**
+![Example 6](Images/IGV/example6.png)
 
-== Mis-alignment ==
+**Notes:**
+* Typical insert size of read pair in the vicinity: 350bp
+* New insert size of red read pairs: 2,875bp
+* This corresponds to a homozygous deletion of 2.5kb
 
-Navigate to region "chr21:19,102,154-19,103,108"
+## Mis-alignment
 
-[[Image:igv_example7.png|thumb|630px|center|Example7]]
+Navigate to region `chr21:19,102,154-19,103,108`
+
+**Example 7**
+![Example 7](Images/IGV/example7.png)
 
  '''Notes:'''
  * This is a position where AluY element causes mis-alignment.  
