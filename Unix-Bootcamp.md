@@ -13,12 +13,12 @@
 
 ---
 
-## Introduction [Introduction]
+## Introduction
 
 This 'bootcamp' is intended to provide the reader with a basic overview of essential Unix/Linux commands that will allow them to navigate a file system and move, copy, edit files. It will also introduce a brief overview of some 'power' commands in Unix. It was orginally developed as part of a [Bioinformatics Core](http://bioinformatics.ucdavis.edu) Workshop taught at UC Davis ([Using the Linux Command-Line for Analysis of High Throughput Sequence Data](http://training.bioinformatics.ucdavis.edu/docs/2015/06/june-2015-workshop/index.html)).
 
 
-## Why Unix? [Why Unix]
+## Why Unix?
 
 The [Unix operating system][Unix] has been around since 1969. Back then there was no such thing as a graphical user interface. You typed everything. It may seem archaic to use a keyboard to issue commands today, but it's much easier to automate keyboard tasks than mouse tasks. There are several variants of Unix (including [Linux][Linux]), though the differences do not matter much for most basic functions.
 
@@ -30,7 +30,7 @@ Increasingly, the raw output of biological research exists as _in silico_ data, 
 
 
 
-## Typeset Conventions [Typeset]
+## Typeset Conventions 
 
 Command-line examples that you are meant to type into a terminal window will be shown indented in a constant-width font, e.g. 
 
@@ -61,7 +61,7 @@ In the following documentation, we will also assume that the logged in user has 
 
 ---
 
-## 1. The Terminal [U1] ##
+## 1. The Terminal ##
 
 A *terminal* is the common name for the program that does two main things. It allows you to type input to the computer (i.e. run programs, move/view files etc.) and it allows you to see output from those programs. All Unix machines will have a terminal program available.
 
@@ -75,7 +75,7 @@ There will be many situations where it will be useful to have multiple terminals
 
 --- 
 
-## 2. Your first Unix command [U2] ##
+## 2. Your first Unix command ##
 
 It's important to note that you will always be *inside* a single directory when using the terminal. The default behavior is that when you open a new terminal you start in your own *home* directory (containing files and directories that only you can modify). To see what files and directories are in our home directory, we need to use the [ls][] command. This command lists the contents of a directory. If we run the `ls` command we should see something like:
 
@@ -108,7 +108,7 @@ CPAN  Net  XML
 
 ---
 
-## 3: The Unix tree [U3] ##
+## 3: The Unix tree ##
 
 Looking at directories from within a Unix terminal can often seem confusing. But bear in mind that these directories are exactly the same type of folders that you can see if you use any graphical file browser. From the *root* level (`/`) there are usually a dozen or so directories. You can treat the root directory like any other, e.g. you can list its contents:
 
@@ -124,7 +124,7 @@ You might notice some of these names appearing in different colors. Many Unix sy
 
 ---
 
-## 4: Finding out where you are [U4] ##
+## 4: Finding out where you are ##
 
 There may be many hundreds of directories on any Unix machine, so how do you know which one you are in? The command [pwd][] will Print the [Working Directory][] and that's pretty much all this command does:
 
@@ -144,7 +144,7 @@ As you learn Unix you will frequently type commands that don't seem to work. Mos
 ---
 
 
-## 5: Making new directories [U5] ##
+## 5: Making new directories ##
 
 If we want to make a new directory (e.g. to store some work related data), we can use the [mkdir][] command:
 
@@ -158,7 +158,7 @@ command_line_course  Learning_unix  linux_bootcamp
 
 ---
 
-## 6: Getting from 'A' to 'B' [U6] ##
+## 6: Getting from 'A' to 'B' ##
 
 We are in the home directory on the computer but we want to to work in the new `Learning_unix` directory. To change directories in Unix, we use the [cd][] command:
 
@@ -197,7 +197,7 @@ mkdir -p Outer_directory/Inner_directory
 ---
 
 
-## 7: The root directory [U7] ##
+## 7: The root directory ##
 
 Let's change directory to the root directory, and then into our home directory
 
@@ -229,7 +229,7 @@ Learn and understand the difference between these two commands.
 
 ---
 
-## 8: Navigating upwards in the Unix filesystem [U8] ##
+## 8: Navigating upwards in the Unix filesystem ##
 
 Frequently, you will find that you want to go 'upwards' one level in the directory hierarchy. Two dots `..` are used in Unix to refer to the _parent_ directory of wherever you are. Every directory has a parent except the root level of the computer. Let's go into the `Learning_unix` directory and then navigate up two levels:
 
@@ -262,7 +262,7 @@ They both achieve the same thing, but the 2nd example requires that you know abo
 
 ---
 
-## 10: Finding your way back home [U10] ##
+## 10: Finding your way back home ##
 
 Remember that the command prompt shows you the name of the directory that you are currently in, and that when you are in your home directory it shows you a tilde character (`~``) instead? This is because Unix uses the tilde character as a short-hand way of [specifying a home directory][home directory].
 
@@ -286,7 +286,7 @@ ubuntu@:/$ cd ~/Learning_unix
 
 ---
 
-##11: Making the `ls` command more useful [U11] ##
+##11: Making the `ls` command more useful ##
 
 The `..` operator that we saw earlier can also be used with the `ls` command, e.g. you can list directories that are 'above' you:
 
@@ -319,7 +319,7 @@ Note that the last example combine multiple options but only use one dash. This 
 
 ---
 
-## 12: Man pages [U12] ##
+## 12: Man pages ##
 
 If every Unix command has so many options, you might be wondering how you find out what they are and what they do. Well, thankfully every Unix command has an associated 'manual' that you can access by using the `man` command. E.g.
 
@@ -335,7 +335,7 @@ When you are using the man command, press `space` to scroll down a page, `b` to 
 
 
 
-## 13: Removing directories [U13] ##
+## 13: Removing directories ##
 
 We now have a few (empty) directories that we should remove. To do this use the [rmdir][] command, this will only remove empty directories so it is quite safe to use. If you want to know more about this command (or any Unix command), then remember that you can just look at its man page.
 
@@ -354,7 +354,7 @@ ubuntu@:~/Learning_unix$
 
 ---
 
-## 14: Using tab completion [U14] ##
+## 14: Using tab completion ##
 
 Saving keystrokes may not seem important, but the longer that you spend typing in a terminal window, the happier you will be if you can reduce the time you spend at the keyboard. Especially, as prolonged typing is not good for your body. So the best Unix tip to learn early on is that you can [tab complete][] the names of files and programs on most Unix systems. Type enough letters that uniquely identify the name of a file, directory or program and press tab...Unix will do the rest. E.g. if you type 'tou' and then press tab, Unix should autocomplete the word to 'touch' (this is a command which we will learn more about in a minute). In this case, tab completion will occur because there are no other Unix commands that start with 'tou'. If pressing tab doesn't do anything, then you have not have typed enough unique characters. In this case pressing tab _twice_ will show you all possible completions. This trick can save you a LOT of typing!
 
@@ -369,7 +369,7 @@ Another great time-saver is that Unix stores a list of all the commands that you
 
 ---
 
-## 15: Creating empty files with the touch command [U15] ##
+## 15: Creating empty files with the touch command ##
 
 The following sections will deal with Unix commands that help us to work with files, i.e. copy files to/from places, move files, rename files, remove files, and most importantly, look at files. First, we need to have some files to play with. The Unix command [touch][] will let us create a new, empty file. The touch command does other things too, but for now we just want a couple of files to work with.
 
@@ -385,7 +385,7 @@ earth.txt  heaven.txt
 
 ---
 
-## 16: Moving files [U16] ##
+## 16: Moving files ##
 
 Now, let's assume that we want to move these files to a new directory ('Temp'). We will do this using the Unix [mv][] (move) command. Remember to use tab completion:
 
@@ -416,7 +416,7 @@ The '?' character is also a wild-card but with a slightly different meaning. See
 
 ---
 
-## 17: Renaming files [U17] ##
+## 17: Renaming files ##
 
 In the earlier example, the destination for the `mv` command was a directory name (Temp). So we moved a file from its source location to a target location, but note that the target could have also been a (different) file name, rather than a directory. E.g. let's make a new file and move it whilst renaming it at the same time:
 
@@ -437,7 +437,7 @@ ubuntu@:~/Learning_unix$ mv Temp/riches Temp/rags
     
 ---
 
-## 18: Moving directories [U18] ##
+## 18: Moving directories ##
 
 It is important to understand that as long as you have specified a 'source' and a 'target' location when you are moving a file, then it doesn't matter what your *current* directory is. You can move or copy things within the same directory or between different directories regardless of whether you are in any of those directories. Moving directories is just like moving files:
 
@@ -456,7 +456,7 @@ This step moves the Temp2 directory inside the Temp directory. Try creating a 'T
 
 
     
-## 19: Removing files [U19] ##
+## 19: Removing files ##
 
 You've seen how to remove a directory with the `rmdir` command, but `rmdir` won't remove directories if they contain any files. So how can we remove the files we have created (inside `Learning_Unix/Temp`)? In order to do this, we will have to use the [rm][] (remove) command.
 
@@ -491,7 +491,7 @@ rmdir Temp
 
 ---
 
-## 20: Copying files [U20] ##
+## 20: Copying files ##
 
 Copying files with the [cp][] (copy) command is very similar to moving them. Remember to always specify a source and a target location. Let's create a new file and make a copy of it:
 
@@ -527,13 +527,13 @@ In this case, using the dot is somewhat pointless because `ls` will already list
 
 ---
 
-## 21: Copying directories [U21] ##
+## 21: Copying directories ##
 
 The `cp` command also allows us (with the use of a command-line option) to copy entire directories. Use `man cp` to see how the `-R` or `-r` options let you copy a directory *recursively*.
 
 ---
 
-## 22: Viewing files with less [U22] ##
+## 22: Viewing files with less ##
 
 So far we have covered listing the contents of directories and moving/copying/deleting either files and/or directories. Now we will quickly cover how you can look at files. The [less][less command] command lets you view (but not edit) text files. We will use the [echo][echo command] command to put some text in a file and then view it:
 
@@ -560,7 +560,7 @@ When you are using less, you can bring up a page of help commands by pressing `h
 
 ---
 
-## 23: Viewing files with cat [U23] ##
+## 23: Viewing files with cat ##
 
 Let's add another line to the file:
 
@@ -581,7 +581,7 @@ cat opening_lines.txt > file_copy.txt
 
 --- 
 
-## 24: Counting characters in a file [U24] ##
+## 24: Counting characters in a file ##
 
 ```bash
 ubuntu@:~/Learning_unix$ ls
@@ -604,7 +604,7 @@ The `ls -l` option shows us a long listing, which includes the size of the file 
 
 ---
 
-## 25: Editing small text files with nano [U25] ##
+## 25: Editing small text files with nano ##
 
 Nano is a lightweight editor installed on most Unix systems. There are many more powerful editors (such as 'emacs' and 'vi'), but these have steep learning curves. Nano is very simple. You can edit (or create) files by typing:
 
@@ -622,7 +622,7 @@ The bottom of the nano window shows you a list of simple commands which are all 
 
 ---
 
-## 26: The $PATH environment variable [U26] ##
+## 26: The $PATH environment variable ##
 
 One other use of the `echo` command is for displaying the contents of something known as *environment variables*. These contain user-specific or system-wide values that either reflect simple pieces of information (your username), or lists of useful locations on the file system. Some examples:
 
@@ -643,7 +643,7 @@ Knowing how to change your $PATH to include custom directories can be necessary 
 ---
 
 
-## 27: Matching lines in files with grep [U27] ##
+## 27: Matching lines in files with grep ##
 
 Use `nano` to add the following lines to `opening_lines.txt`:
 
@@ -730,7 +730,7 @@ When he was nearly thirteen, my brother Jem got his arm badly broken at the elbo
 
 ---
 
-## 28: Combining Unix commands with pipes [U28] ##
+## 28: Combining Unix commands with pipes ##
 
 One of the most poweful features of Unix is that you can send the output from one command or program to any other command (as long as the second commmand accepts input of some sort). We do this by using what is known as a [pipe][]. This is implemented using the '|' character (which is a character which always seems to be on different keys depending on the keyboard that you are using). Think of the pipe as simply connecting two Unix programs. Here's an example which introduces some new Unix commands:
 
@@ -813,7 +813,8 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 
 
 
-## Version history [Version history] #
+## Version history #
 
 2015-06-14 - Version 1.0, adapted from Unix and Perl for Biologists Primer
 2015-06-24 - Version 1.01: clarified that this material is assuming user name is 'ubuntu'and made other minor clarifications (such as what this material was first produced for).
+2015-11-13 - Version 1.02: further adapted for CSHL 2015 Advanced Sequencing Technologies & Applications course.
