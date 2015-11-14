@@ -136,7 +136,7 @@ To start our exploration, right click on the track-name, and select the followin
 
 Experiment with the various settings by right clicking the read alignment track and toggling the options. Think about which would be best for specific tasks (e.g. quality control, SNP calling, CNV finding).
 
-**Read information**
+**Read information**<br>
 ![Read information](Images/IGV/sort_and_group.png)
 
 You will see reads represented by grey or white bars stacked on top of each other, where they were aligned to the reference genome. The reads are pointed to indicate their orientation (i.e. the strand on which they are mapped). Mouse over any read and notice that a lot of information is available. To toggle read display from `hover` to `click`, select the yellow box and change the setting.
@@ -147,36 +147,40 @@ You will see reads represented by grey or white bars stacked on top of each othe
 Once you select a read, you will learn what many of these metrics mean, and how to use them to assess the quality of your datasets.  At each base that the read sequence **mismatches** the reference, the colour of the base represents the letter that exists in the read (using the same colour legend used for displaying the reference).
 
 **More read information**
-![More read information](click_read.png)
+![More read information](Images/IGV/click_read.png)
 
-= Visualization Part 2: Inspecting SNPs, SNVs, and SVs =
+# Visualization Part 2: Inspecting SNPs, SNVs, and SVs =
 
 In this section we will be looking in detail at 8 positions in the genome, and determining whether they represent real events or artifacts.
 
-== Neighbouring somatic SNV and germline SNP ==
+## Neighbouring somatic SNV and germline SNP
 
-Navigate to position "chr21:19,479,237-19,479,814"
-  # center on the SNV, sort by base (window "chr21:19,478,749-19,479,891" is centered on the SNV)
-  # Sort alignments by “base”
-  # Color alignments by “read strand”  
- 
-[[Image:igv_example1_color.png|thumb|630px|center|Example1. Good quality SNVs/SNPs]]
+* Navigate to position `chr21:19,479,237-19,479,814`
+* Center on the SNV, sort by base (window `chr21:19,478,749-19,479,891` is centered on the SNV)
+* Sort alignments by `base`
+* Color alignments by `read strand`
 
- '''Notes:'''
- * High base qualities in all reads except one (where the alt allele is the last base of the read) 
- * Good mapping quality of reads, no strand bias, allele frequency consistent with heterozygous mutation
+**Example1. Good quality SNVs/SNPs**
+![Example1. Good quality SNVs/SNPs](Images/IGV/example1_color.png)
 
- '''Question(s):'''
- * What does Shade base by quality do? How might this be helpful?
- * How does Color by "read strand" help?
+**Notes:**
+* High base qualities in all reads except one (where the alt allele is the last base of the read) 
+* Good mapping quality of reads, no strand bias, allele frequency consistent with heterozygous mutation
 
-== Homopolymer repeat with indel ==
+**Question(s):**
+```
+* What does *Shade base by quality* do? How might this be helpful?
+* How does Color by *read strand* help?
+```
 
-Navigate to position "chr21:19,518,412-19,518,497"
- # Group alignments by "read strand"
- # Center on the second "T", and Sort alignments by “base” on the forward strand reads
+## Homopolymer repeat with indel
 
-[[Image:igv_example2a.png|thumb|630px|center|Example2]]
+Navigate to position `chr21:19,518,412-19,518,497`
+* Group alignments by `read strand`
+* Center on the second `T`, and Sort alignments by `base` on the forward strand reads
+
+**Example 2**
+![Example 2](Images/IGV/example2a.png)
 
  # center on the one base deletion, and Sort alignments by “base” on the reverse strand reads
  
