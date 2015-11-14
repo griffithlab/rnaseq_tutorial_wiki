@@ -92,11 +92,11 @@ You should see listing of chromosomes in this reference genome. Choose ***1***, 
 
 Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking `Go`. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
-**Navigition using Location text field. Sequence displayed as sequence of colours**
-![Navigition using Location text field. Sequence displayed as sequence of colours.](Images/IGV/1.png)
+**Navigition using Location text field. Sequence displayed as thin coloured rectangles.**
+![Navigition using Location text field. Sequence displayed as thin coloured rectangles.](Images/IGV/1.png)
 
 
-IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
+IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green, C = blue, etc.). This makes repetitive sequences, like the ones found at the start of this region, easy to identify. Zoom in a bit more using the `+` button to see the individual bases of the reference genome sequence.
 
 You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or *BRCA1* if you can not decide. 
 
