@@ -1,2 +1,0 @@
-NAME
-HCC1143.normal.21.19M-20M.bam
