@@ -115,7 +115,7 @@ Sometimes, it is really useful to save where you are, or to load regions of inte
 ![Bookmarks in IGV](Images/IGV/bookmarks.png)
 
 ## Loading Read Alignments
-We will be using the breast cancer cell line HCC1143 to visualize alignments. For speed, only a small portion of chr21 will be loaded (19M:20M).
+We will be using the breast cancer cell line HCC1143 to visualize alignments. For speed, only a small portion of chr21 will be loaded (19M:20M). The HCC1143 cell line was generated from a 52 year old caucasian woman with breast cancer. Additional information on this cell line can be found here: <a href="http://www.atcc.org/products/all/CRL-2321.aspx">HCC1143</a> (tumor, TNM stage IIA, grade 3, primary ductal carcinoma) and <a href="http://www.atcc.org/products/all/CRL-2362.aspx">HCC1143/BL</a> (matched normal EBV transformed lymphoblast cell line).
 
 **HCC1143 Alignments to hg19:** 
 * [HCC1143.normal.21.19M-20M.bam](https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1143/HCC1143.normal.21.19M-20M.bam)
@@ -149,14 +149,15 @@ Once you select a read, you will learn what many of these metrics mean, and how 
 **Viewing read information for a single aligned read**
 ![Viewing read information for a single aligned read](Images/IGV/click_read.png)
 
-# Visualization Part 2: Inspecting SNPs, SNVs, and SVs =
+# Visualization Part 2: Inspecting SNPs, SNVs, and SVs
 
 In this section we will be looking in detail at 8 positions in the genome, and determining whether they represent real events or artifacts.
 
-## Neighbouring somatic SNV and germline SNP
+## Two neighbouring SNPs
 
-* Navigate to position `chr21:19,479,237-19,479,814`
-* Center on the SNV, sort by base (window `chr21:19,478,749-19,479,891` is centered on the SNV)
+* Navigate to region `chr21:19,479,237-19,479,814`
+* Note two heterozygous variants, one corresponds to a known dbSNP (`G/T` on the right) the other does not (`C/T` on the left)
+* Zoom in and center on the `C/T` SNV on the left, sort by base (window `chr21:19,479,321` is the SNV position)
 * Sort alignments by `base`
 * Color alignments by `read strand`
 
