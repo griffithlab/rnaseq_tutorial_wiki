@@ -80,12 +80,14 @@ We will also load additional tracks from **Server**:
 * dbSNP 1.3.1 or 1.3.7
 
 ![Load hg19 genome and additional data tracks](Images/IGV/load.data.tracks.png)
+*Load hg19 genome and additional data tracks*
 
 ### Navigation
 
 You should see listing of chromosomes in this reference genome. Choose ***1***, for chromosome 1.
 
 ![Chromosome chooser](Images/IGV/chromosomes.png)
+*Chromosome chooser*
 
 
 Navigate to '''chr1:10,000-11,000''' by entering this into the location field (in the top-left corner of the interface) and clicking '''Go'''. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
