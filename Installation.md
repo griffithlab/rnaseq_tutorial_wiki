@@ -12,13 +12,15 @@ Set up tool installation location:
 	
 ##[SAMtools](http://samtools.sourceforge.net/)
 
-	cd $RNA_HOME/tools/
-        wget https://github.com/samtools/samtools/releases/download/1.2/samtools-1.2.tar.bz2
-        bunzip2 samtools-1.2.tar.bz2 
-	tar -xvf samtools-1.2.tar
-	cd samtools-1.2
-	make
-	./samtools
+```
+cd $RNA_HOME/tools/
+wget https://github.com/samtools/samtools/releases/download/1.2/samtools-1.2.tar.bz2
+bunzip2 samtools-1.2.tar.bz2 
+tar -xvf samtools-1.2.tar
+cd samtools-1.2
+make
+./samtools
+```
 	
 ##[bam-readcount](https://github.com/genome/bam-readcount)
 
