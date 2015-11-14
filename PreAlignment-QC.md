@@ -15,7 +15,7 @@ fastqc *.fastq.gz
 ```
 
 Then, go to the following url in your browser:
-* http://cbw##.dyndns.info/rnaseq/data/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/
 * Note, you must replace cbw## with your own amazon instance number (e.g., "cbw01"))
 * Click on any of the *_fastqc.html files to view the FastQC report
 
