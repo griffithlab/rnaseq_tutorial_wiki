@@ -175,11 +175,11 @@ In this section we will be looking in detail at 8 positions in the genome, and d
 * How does Color by *read strand* help?
 ```
 
-## Homopolymer repeat with indel
+## Homopolymer region with indel
 
 Navigate to position `chr21:19,518,412-19,518,497`
 * Group alignments by `read strand`
-* Center on the second `T`, and Sort alignments by `base` on the forward strand reads
+* Center on the `A` within the homopolymer run (chr21:19,518,470), and Sort alignments by `base` on the forward strand reads
 
 **Example 2a**
 ![Example 2a](Images/IGV/example2a.png)
