@@ -1,14 +1,16 @@
+<---!
+Original Author Information
 Title:   Command-line Bootcamp
 Authors:  Keith Bradnam
 Date:    2015-06-14
 Address: Genome Center, UC Davis, Davis, CA, 95616  
- 
+---> 
 
 # Command-line Bootcamp
 
-### Keith Bradnam
-### UC Davis Genome Center
-### Version 1.01 --- 2015-06-24
+### Adapted by : Jason Walker (McDonnell Genome Institute)
+### Original author : Keith Bradnam (UC Davis Genome Center)
+### Version 1.02 --- 2015-11-13
 
 <br><br><br>
 
