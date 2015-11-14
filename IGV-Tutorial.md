@@ -79,20 +79,22 @@ We will also load additional tracks from **Server**:
 * GC Percentage
 * dbSNP 1.3.1 or 1.3.7
 
-*Load hg19 genome and additional data tracks*
+**Load hg19 genome and additional data tracks**
 ![Load hg19 genome and additional data tracks](Images/IGV/load.data.tracks.png)
 
 ### Navigation
 
 You should see listing of chromosomes in this reference genome. Choose ***1***, for chromosome 1.
 
-*Chromosome chooser*
+**Chromosome chooser**
 ![Chromosome chooser](Images/IGV/chromosomes.png)
 
 
-Navigate to '''chr1:10,000-11,000''' by entering this into the location field (in the top-left corner of the interface) and clicking '''Go'''. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
+Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking **Go**. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
-[[Image:igv-1.png|thumb|626px|center|Navigition using Location text field. Sequence track displayed as sequence of colours.]]
+**Navigition using Location text field. Sequence track displayed as sequence of colours.**
+![Navigition using Location text field. Sequence track displayed as sequence of colours.](Images/IGV1.png)
+
 
 IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
 
