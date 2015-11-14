@@ -187,7 +187,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 
 
 **Example 2b**
-* Center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
+* Center on the one base deletion (`chr21:19,518,452`), and `Sort alignments by` -> `base`
 
 ![Example 2b](Images/IGV/example2b.png)
 
