@@ -73,7 +73,7 @@ First, lets familiarize ourselves with it.
 
 By default, IGV loads Human hg19. If you work with another version of the human genome, or another organism altogether, you can change the genome by clicking the drop down menu in the upper-left. For this lab, we will be using Human hg19.  
 
-We will also load additional tracks from **Server**:
+We will also load additional tracks from **Server** using (`File` -> `Load from Server...`):
 
 * Ensembl genes (or your favourite source of gene annotations)
 * GC Percentage
