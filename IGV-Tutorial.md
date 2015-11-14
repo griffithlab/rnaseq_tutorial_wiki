@@ -187,7 +187,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 
 
 **Example 2b**
-* center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
+* Center on the one base deletion, and Sort alignments by `base` on the reverse strand reads
 
 ![Example 2b](Images/IGV/example2b.png)
 
@@ -195,7 +195,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 * The alt allele is either a deletion or insertion of one or two `T`s
 * The remaining bases are mismatched, because the alignment is now out of sync
 * The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
-* i.e. the common variants included some cases that are actually common misalignments caused by repeats
+* i.e. the common variants from dbSNP include some cases that are actually common misalignments caused by repeats
 
 ## Coverage by GC
 
