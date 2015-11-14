@@ -4,7 +4,6 @@
   2. Requirements
   3. Compatibility
   4. Data Set for IGV
-  5. Check the online wiki
 2. Visualization Part 1: Getting familiar with IGV
   1. Get familiar with the interface
     1. Load a Genome and Data Tracks
@@ -53,45 +52,41 @@ Thought-provoking question goes here
 
 ### Compatibility
 
-This tutorial was intended for **IGV v2.3**, which is available on the [http://www.broadinstitute.org/software/igv/download Download] page. It is *strongly* recommended that you use this version.
+This tutorial was intended for **IGV v2.3**, which is available on the [IGV Download](http://www.broadinstitute.org/software/igv/download) page. It is *strongly* recommended that you use this version.
 
-=== Data Set for IGV ===
+### Data Set for IGV
 
+* Sequence read alignments generated from a cell line HCC1143 that have been filtered to this region:
 * Chromosome 21: 19,000,000-20,000,000
-* [[Media:HCC1143.normal.21.19M-20M.bam|HCC1143.normal.21.19M-20M.bam]]
-* [[Media:HCC1143.normal.21.19M-20M.bam.bai|HCC1143.normal.21.19M-20M.bam.bai]]
+* [HCC1143.normal.21.19M-20M.bam](https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1143/HCC1143.normal.21.19M-20M.bam)
+* [HCC1143.normal.21.19M-20M.bam.bai](https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1143/HCC1143.normal.21.19M-20M.bam.bai)
 
-=== Check the online wiki ===
+# Visualization Part 1: Getting familiar with IGV
 
-Your instructors may update the lab with clarifications or more bonus sections.
-
-= Visualization Part 1: Getting familiar with IGV=
-
-We will be visualizing read alignments using the
-[http://www.broadinstitute.org/igv/home IGV], 
-a popular visualization tool for HTS data.
+We will be visualizing read alignments using [IGV](http://www.broadinstitute.org/igv/home), a popular visualization tool for HTS data.
 
 First, lets familiarize ourselves with it.
 
-== Get familiar with the interface ==
+## Get familiar with the interface
 
-=== Load a Genome and Data Tracks===
+### Load a Genome and some Data Tracks
 
-By default, IGV loads Human hg19. If you work with another version of the human genome, or another organism altogether, you can change the genome by clicking the drop down menu in the upper-left. For this lab, we'll be using Human hg19.  
+By default, IGV loads Human hg19. If you work with another version of the human genome, or another organism altogether, you can change the genome by clicking the drop down menu in the upper-left. For this lab, we will be using Human hg19.  
 
-We will also load additional tracks from '''Server''':
+We will also load additional tracks from **Server**:
 
 * Ensembl genes (or your favourite source of gene annotations)
 * GC Percentage
 * dbSNP 1.3.1 or 1.3.7
 
-[[Image:igv_load.data.tracks.png|thumb|550px|center|Load hg19 genome and additional data tracks]]
+![Load hg19 genome and additional data tracks](Images/IGV/load.data.tracks.png)
 
-=== Navigation ===
+### Navigation
 
-You should see listing of chromosomes in this reference genome. Choose '''1''', for chromosome 1.
+You should see listing of chromosomes in this reference genome. Choose ***1***, for chromosome 1.
 
-[[Image:igv-chromosomes.png|thumb|635px|center|Chromosome chooser]]
+![Chromosome chooser](Images/IGV/chromosomes.png)
+
 
 Navigate to '''chr1:10,000-11,000''' by entering this into the location field (in the top-left corner of the interface) and clicking '''Go'''. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
