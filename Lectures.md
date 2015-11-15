@@ -1,5 +1,20 @@
 # 5-ii. Lectures
 
+###CSHL Advanced Sequencing Technologies and Applications (November 10-22, 2015)
+
+**Presentations:**
+
+* [[Introduction to cloud computing (lecture/tutorial)|LectureFiles/cshl/2015/IntroductionToCloudComputing.pdf]]
+* [[Introduction to IGV Browser (tutorial)|LectureFiles/cshl/2015/IGV_Tutorial_Brief.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cshl/2015/RNASeq_Module1_Lecture.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cshl/2015/RNASeq_Module1_Tutorial.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cshl/2015/RNASeq_Module2_Lecture.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (tutorial)|LectureFiles/cshl/2015/RNASeq_Module2_Tutorial.pdf]]
+* [[Module 3 - Expression and differential expression (lecture)|LectureFiles/cshl/2015/RNASeq_Module3_Lecture.pdf]]
+* [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cshl/2015/RNASeq_Module3_Tutorial.pdf]]
+* [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cshl/2015/RNASeq_Module4_Lecture.pdf]]
+* [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2015/RNASeq_Module4_Tutorial.pdf]]
+
 ###CBW Informatics for RNA-seq analysis (June 8-9, 2015)
 
 **Presentations:**
