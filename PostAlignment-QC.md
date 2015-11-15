@@ -41,8 +41,8 @@ Run `samstat` on UHR/HBR BAMs
 	~/bin/samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
 View the `samstat` summary file in a web browser. Note, you must replace ## with your own amazon instance number (e.g., "01")):  
-* http://cbw##.dyndns.info/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html 
-* http://cbw##.dyndns.info/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html 
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html
 
 Details of the SAM/BAM format can be found here:  
 http://samtools.sourceforge.net/SAM1.pdf
@@ -95,7 +95,7 @@ Run RSeQC commands:
 
 Go through the generated PDFs by browsing through the following directory in a web browser:    
 
-* http://cbw##.dyndns.info/rnaseq/tools/RSeQC/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/tools/RSeQC/
 
 -------
 **Read Quality:**
