@@ -33,10 +33,10 @@ Create comparable files for the STAR alignments
 Start IGV on your laptop. Load the UHR_ERCC-Mix1_ALL & HBR_ERCC-Mix2_ALL BAM files (accepted_hits.bam) in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace '##' with your own amazon instance number (e.g., "##")).
 
 **UHR Tophat alignment**
-http://cbw##.dyndns.info/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam
+http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam
 
 **HBR Tophat alignment**
-http://cbw##.dyndns.info/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam
+http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam
 
 Go to an example gene locus on chr22:
 - e.g. *EIF3L*, *NDUFA6*, and *RBX1* have nice coverage
@@ -48,10 +48,10 @@ Go to an example gene locus on chr22:
 Now load the STAR alignments. How do the STAR and TopHat alignments compare?
 
 **UHR STAR alignment**
-http://cbw##.dyndns.info/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam
+http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/star/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam
 
 **HBR STAR alignment**
-http://cbw##.dyndns.info/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam
+http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam
 
 ####END OF OPTIONAL ALTERNATIVE - view STAR alignments in IGV
 ---
