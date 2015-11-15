@@ -53,6 +53,12 @@ Similarly you might combine technical replicates into a single alignment run (pe
 To combine multiple lanes, you would provide all the read1 files as a comma separated list, followed by a space, and then all read2 files as a comma separated list (where both lists have the same order):
 You can also use samtools merge to combine bam files after alignment. This is the approach we will take.
 
+###TopHat Alignment Summary
+TopHat generates a summary of the alignments in a text file next to the aligned BAM file.  The below command will print the summary for each alignment to the terminal.
+```
+cat */align_summary.txt
+```
+
 ---
 ###OPTIONAL ALTERNATIVE - STAR alignment
 Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see STAR manual: 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
