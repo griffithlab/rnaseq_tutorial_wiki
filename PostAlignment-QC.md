@@ -40,7 +40,7 @@ Run `samstat` on UHR/HBR BAMs
 	~/bin/samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
 	~/bin/samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
 	
-View the `samstat` summary file in a web browser. Note, you must replace ## with your own amazon instance number (e.g., "01")):  
+View the `samstat` summary file in a web browser. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP address:  
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html 
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html
 
