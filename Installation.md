@@ -202,7 +202,7 @@ When you are ready you can check your approach against the [Solutions](https://g
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
 	
 	export RNA_HOME=~/workspace/rnaseq
-	export PATH=$RNA_HOME/tools/samtools-1.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.4:$RNA_HOME/tools/tophat-2.0.13.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.4.0f1/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/R-3.1.0/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.124:$RNA_HOME/tools/samstat-1.5/src:/home/ubuntu/bin/bedtools2/bin:$PATH
+	export PATH=$RNA_HOME/tools/samtools-1.2:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.6:$RNA_HOME/tools/tophat-2.1.0.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.5.0a/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.2/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.140:$RNA_HOME/tools/samstat-1.5.1/src:/home/ubuntu/bin/bedtools2/bin:$PATH
 	echo $PATH
 	
 You can make these changes permanent by adding the above lines to your .bashrc file
