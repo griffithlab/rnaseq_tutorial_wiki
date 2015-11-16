@@ -7,7 +7,7 @@ Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, O
 \*To whom correspondence should be addressed: 
 E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
 
-All materials associated with this publication, including high resolution and original figure files, supplementary tables, etc. are available here: https://github.com/griffithlab/rnaseq_tutorial
+All materials associated with this publication, including high resolution and original figure files, supplementary tables, etc. are available here: https://github.com/griffithlab/rnaseq_tutorial (http://www.rnaseq.wiki)
 
 This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/figures]] and [[supplementary tables|https://github.com/griffithlab/rnaseq_tutorial/tree/master/manuscript/supplementary_tables]].
 
