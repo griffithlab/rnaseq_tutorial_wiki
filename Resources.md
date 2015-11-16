@@ -25,7 +25,7 @@
 
 #### 3. Text Editor (Vi/Vim) Tutorials
 - [An interactive Vim tutorial](http://www.openvim.com/)
-
+- [Vim Graphical Cheat Sheets](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 
 #### 4. R Tutorials
 - [An R command cheat sheet](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/R-short-refcard.pdf)
