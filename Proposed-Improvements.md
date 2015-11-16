@@ -51,6 +51,9 @@ We should add a section about batch effects.  Both detecting the presence of bat
 ### Improve Cloud exercise
 Have students actually spin up their own instances using IAM accounts (with one set up per student before the course). They would then be provided with their IAM user name, the appropriate AWS account #, and a default password. This account would have limited permissions to start EC2 instances but not much else.
 
+### Add documentation to detailed cloud tutorial to provide some better security practices
+For convenience the cloud instances have been set up with very permissive security. Some better practices should be documented. 
+
 ### Add a fusion detection section
 We previously had a fusion detection module but it was difficult to complete in time frames appropriate for a workshop.  Further optimization is required.  Another challenge is the lack of well engineered fusion detection software.  This publication [State-of-the-art fusion-finder algorithms sensitivity and specificity](http://www.ncbi.nlm.nih.gov/pubmed/23555082) does a decent job of summarizing the current options available.  Another caveat of this topic is that is mostly of interest to cancer researchers so it might only be included where there are sufficient students with this interest.
 
@@ -74,8 +77,8 @@ Gray lab breast cancer cell line dataset:
 ### Update the tutorial to take into account recent developments in RNA-seq analysis methods, best practices, and new tools
 - [HISAT](http://www.ncbi.nlm.nih.gov/pubmed/25751142)
 - [StringTie](http://www.nature.com/nbt/journal/v33/n3/full/nbt.3122.html )
-- [Ballbown](http://www.ncbi.nlm.nih.gov/pubmed/25748911)
-
+- [Ballgown](http://www.ncbi.nlm.nih.gov/pubmed/25748911)
+- [Kallisto](http://arxiv.org/abs/1505.02710)
 
 | [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
