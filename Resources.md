@@ -23,7 +23,11 @@
 - [A detailed Biostars thread describing resources for learning Unix](https://www.biostars.org/p/16315/)
 - [A codecademy tutorial to Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
 
-#### 3. R Tutorials
+#### 3. Text Editor (Vi/Vim) Tutorials
+- [An interactive Vim tutorial](http://www.openvim.com/)
+
+
+#### 4. R Tutorials
 - [An R command cheat sheet](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/R-short-refcard.pdf)
 - [The official R intro manual](http://cran.r-project.org/doc/manuals/r-release/R-intro.html)
 - [Rseek, a search engine for R related questions](http://rseek.org/)
@@ -32,16 +36,16 @@
 - [Swirl - Learn R, in R.](http://www.swirlstats.com/)
 - [Quick and Dirty Guide to R](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R_revised_080715.txt)
 
-#### 4. Supplementary Materials Relating to the Hands On Tutorials of this Course
+#### 5. Supplementary Materials Relating to the Hands On Tutorials of this Course
 - [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf)
 - [Description of the Human Brain Reference (HBR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf)
 - [Description of the Universal Human Reference (UHR) sample used to generate the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf)
 
-#### 5. Resources to help find RNA-seq Data Sets
+#### 6. Resources to help find RNA-seq Data Sets
 - [GEO: The Gene Expression Omnibus](http://www.ncbi.nlm.nih.gov/geo/)
 - [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://ocean.compbio.cs.cmu.edu/sharq/)
 
-#### 6. General Bioinformatics Resources
+#### 7. General Bioinformatics Resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
 - [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
@@ -49,7 +53,7 @@
 - [BioLinux - An Ubuntu Linux system with many Bioinformatics tools pre-installed](http://environmentalomics.org/bio-linux/)
 - [CloudBioLinux - A cloud ready version of BioLinux](http://cloudbiolinux.org/)
 
-#### 7. Getting More Help
+#### 8. Getting More Help
 - [Biostars - A forum for the bioinformatics community](http://www.biostars.org/)
 - [SEQanswers - A forum for the next generation sequencing community](http://seqanswers.com/)
 
