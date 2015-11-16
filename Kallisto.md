@@ -1,4 +1,7 @@
-#5-i Using Kallisto for reference free transcript expression abundance estimation from RNA-seq data
+#5-i Kallisto
+
+
+##Using Kallisto for reference free transcript expression abundance estimation from RNA-seq data
 
 For more information on Kallisto, refer to the <a href="https://pachterlab.github.io/kallisto/about.html">Kallisto project page</a> and <a href="https://pachterlab.github.io/kallisto/manual.html">Kallisto manual page</a>. 
 
