@@ -122,8 +122,8 @@ chmod +x Tutorial_Module4_ERCC_expression.R
 ./Tutorial_Module4_ERCC_expression.R ercc_read_counts.tsv
 ```
 
-To view the resulting figure, navigate to the below URL replacing ## with your class assigned number:
-* http://cbw##.dyndns.info/rnaseq/expression/tophat_counts/Tutorial_Module4_ERCC_expression.pdf
+To view the resulting figure, navigate to the below URL replacing __YOUR_IP_ADDRESS__ with your amazon instance IP address:
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/expression/tophat_counts/Tutorial_Module4_ERCC_expression.pdf
                  
 
 | [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |
