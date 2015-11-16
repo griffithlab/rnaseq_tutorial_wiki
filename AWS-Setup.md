@@ -174,11 +174,14 @@ Rather than handing out ip addresses for each student instance to each student y
 
 ###Host necessary files for the course
 
-Currently, all miscellaneous data files, annotations, etc are hosted on an ftp server at the Genome Institute. 
+Currently, all miscellaneous data files, annotations, etc are hosted on an ftp server at the Genome Institute. In the future more data files could be pre-loaded onto the EBS snapshot. 
 
 * Files copied to: /gscmnt/sata102/info/ftp-staging/pub/rnaseq/
 * Appear here: ftp://genome.wustl.edu/pub/rnaseq/
 
+###After course reminders
+* Delete the student IAM account created above otherwise students will continue to have EC2 privileges. 
+* Terminate all instances and clean up any unnecessary volumes, snapshots, etc. 
 
 | [[Proposed Improvements|Proposed-Improvements]]       | [[This Section|AWS-Setup]] | Next Section   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
