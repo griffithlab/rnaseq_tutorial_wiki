@@ -13,7 +13,7 @@
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
 ```
-chmod 400 CBW.pem
+chmod 400 CSHL.pem
 ```
 
 * To log in to the node, use the -i command line argument to specify your certificate:
