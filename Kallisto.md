@@ -34,6 +34,12 @@ cd $RNA_HOME/refs/hg19/genes/
 gtf_to_fasta genes_chr22_ERCC92.gtf ../fasta/chr22_ERCC92/chr22_ERCC92.fa chr22_ERCC92_transcripts.fa
 ```
 
+Note that this file has messy transcript names. Use the following hairball perl one-liner to tidy up the header line for each fasta sequence
+```
+cat chr22_ERCC92_transcripts.fa | perl -ne 'if ($_ =~/^\>\d+\s+\w+\s+(ERCC\S+)[\+\-]/){print ">$1\n"}elsif($_ =~ /\d+\s+(ENST\d+)/){print ">$1\n"}else{print $_}' > chr22_ERCC92_transcripts.clean.fa
+wc -l chr22_ERCC92_transcripts*.fa
+```
+
 ##Build a Kallisto transcriptome index
 Remember that Kallisto does not perform *alignment* or use a reference genome sequence. Instead it performs *pseudoalignment* to determine the *compatibility* of reads with targets (transcript sequences in this case). However, similar to alignment algorithms like Tophat or STAR, Kallisto requires an **index** to assess this compatibility efficiently and quickly.  
 
@@ -41,7 +47,7 @@ Remember that Kallisto does not perform *alignment* or use a reference genome se
 cd $RNA_HOME/refs/hg19/
 mkdir kallisto
 cd kallisto
-kallisto index --index=chr22_ERCC92_transcripts_kallisto_index ../genes/chr22_ERCC92_transcripts.fa
+kallisto index --index=chr22_ERCC92_transcripts_kallisto_index ../genes/chr22_ERCC92_transcripts.clean.fa
 ```
 
 ##Generate abundance estimates for all samples using Kallisto
