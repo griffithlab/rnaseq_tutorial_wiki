@@ -27,6 +27,7 @@
 - [An interactive Vim tutorial](http://www.openvim.com/)
 - [Vim Adventures - a graphical game to help learn Vim](http://vim-adventures.com/)
 - [Vim Graphical Cheat Sheets](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+- [Vi tutorial and advanced features](http://www.yolinux.com/TUTORIALS/LinuxTutorialAdvanced_vi.html)
 
 #### 4. R Tutorials
 - [An R command cheat sheet](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/R-short-refcard.pdf)
