@@ -17,8 +17,8 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 ###Start with existing community AMI
 
-1. Select Launch instance. Search Community AMIs for and select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-5189a661". Choose an instance type of "m3.2xlarge". Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
-2. Change permissions on downloaded key pair with `chmod 600 [instructor-key].pem`
+1. Select Launch instance. Search Community AMIs for and select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-5189a661". Choose an instance type of "m4.2xlarge". Increase root volume (e.g., 32GB) and add a second volume (e.g., 500gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
+2. Change permissions on downloaded key pair with `chmod 400 [instructor-key].pem`
 3. Login to instance with ubuntu user:
 
 `ssh -i [instructor-key].pem ubuntu@[public.ip.address]`
@@ -32,7 +32,7 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 * logout and log back in
 
 ###Set up additional storage for workspace
-We will need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance.
+We may need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance. NOTE: This may or may not be necessary depending on how you set up volumes and type of instance you choose. For example, if you setup an extra EBS volume (instead of relying on ephemeral storage) and mount this drive (for storing working data) and you create the appropriate fstab entries then create an AMI, new instances may just be ready to go. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh
 ```
 mkdir /workspace
 cd ~
