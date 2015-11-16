@@ -21,6 +21,7 @@
 - [A UNIX tutorial for beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 - [A UNIX and Perl primer for biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
 - [A detailed Biostars thread describing resources for learning Unix](https://www.biostars.org/p/16315/)
+- [A codecademy tutorial on ](https://www.codecademy.com/learn/learn-the-command-line)
 
 #### 3. R Tutorials
 - [An R command cheat sheet](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/R-short-refcard.pdf)
