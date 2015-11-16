@@ -38,6 +38,8 @@ For R and other applications it would be nice if X11 worked. Note the install in
 ### Create a trimming section 
 Create a wiki section and exercise that summarizes read trimming concepts. Start with some raw data, including aligned reads.  Align these reads without any trimming and assess alignment statistics using Picard, FastQC, etc.  Now take these same reads and perform both adaptor trimming and quality trimming.  Re-align the trimmed reads and assess the effect of trimming on alignment metrics.
 
+### Add a Vi/Vim tutorial and pre-requisites/resources to course
+
 ### Add RSeQC to tutorial
 Add installation and running of RSeQC 
 This could possible replace Samstat which never works very well
