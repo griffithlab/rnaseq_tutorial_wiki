@@ -32,7 +32,7 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 * logout and log back in
 
 ###Set up additional storage for workspace
-We may need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance. NOTE: This may or may not be necessary depending on how you set up volumes and type of instance you choose. For example, if you setup an extra EBS volume (instead of relying on ephemeral storage) and mount this drive (for storing working data) and you create the appropriate fstab entries then create an AMI, new instances may just be ready to go. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh
+We may need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance. NOTE: This may or may not be necessary depending on how you set up volumes and type of instance you choose. For example, if you setup an extra EBS volume (instead of relying on ephemeral storage) and mount this drive (for storing working data) and you create the appropriate fstab entries then create an AMI, new instances may just be ready to go. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/setup_mounts.sh
 ```
 mkdir /workspace
 cd ~
@@ -151,16 +151,18 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 From AWS Console select Services -> IAM. Go to Users, Create User, specify a user name, and Create. Download credentials to a safe location for later reference if needed. Select the new user and go to Security Credentials -> Manage Password -> 'Assign a Custom Password'. Go to Groups -> Create a New Group, specify a group name and Next. Attach a policy to the group. In this case we give all EC2 privileges but no other AWS privileges by specifying "AmazonEC2FullAccess". Hit Next, review and then Create Group. Select the Group -> Add Users to Group, select your new user to add it to the new group.
 
 ###Launch student instance
-1. Go to AWS console. Login.
+1. Go to AWS console. Login. Select EC2.
 2. Launch Instance, search for "cshl_seqtec_2015_v3" in Community AMIs and Select.
-3. Choose "m3.2xlarge" instance type.
-4. Select one instance to launch (e.g., one per student and instructor)
-5. Select "Protect against accidental termination"
-6. Choose existing security group call "SSH_HTTP_8081_IN_ALL_OUT". Review and Launch.
-7. Choose an existing key pair (either CSHL.pem)
-8. View instances and wait for them to finish initiating.
-9. Login to each node `ssh -i CSHL.pem ubuntu@[public.ip.address]`.
-10. Optional - set up DNS redirects (see below)
+3. Choose "m4.2xlarge" instance type.
+4. Select one instance to launch (e.g., one per student and instructor), and select "Protect against accidental termination"
+5. Make sure that you see two snapshots (e.g., the 32GB root volume and 500GB EBS volume you set up earlier)
+6. Create a tag with name=StudentName
+7. Choose existing security group call "SSH_HTTP_8081_IN_ALL_OUT". Review and Launch.
+8. Choose an existing key pair (either CSHL.pem)
+9. View instances and wait for them to finish initiating.
+10. Find your instance in console and select it, then hit connect to get your public.ip.address.
+11. Login to node `ssh -i CSHL.pem ubuntu@[public.ip.address]`.
+12. Optional - set up DNS redirects (see below)
 
 ###Set up a dynamic DNS service
 
