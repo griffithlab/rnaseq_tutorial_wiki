@@ -95,8 +95,8 @@ Since the paths above will download BAM files but Kallisto expects FASTQ files f
 
 Example BAM to FASTQ conversion commands (note that you need to specify the correct path for your Picard installation):
 ```
-java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C1TD1ACXX_8_ACAGTG.bam FASTQ=hcc1395_tumor_R1.fastq SECOND_END_FASTQ=hcc1395_tumor_R2.fastq
-java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq
+java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C1TD1ACXX_8_ACAGTG.bam FASTQ=hcc1395_tumor_R1.fastq SECOND_END_FASTQ=hcc1395_tumor_R2.fastq VALIDATION_STRINGENCY=LENIENT
+java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq VALIDATION_STRINGENCY=LENIENT
 ```
 
 Now repeat the concepts above to obtain abundance estimates for all genes. 
