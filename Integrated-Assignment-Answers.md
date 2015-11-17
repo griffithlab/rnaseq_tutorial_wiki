@@ -82,7 +82,7 @@ A) Mate inner distance is the approximate distance between the reads. You can ge
 2.) If you don’t have that information, then you can subset the FASTA file and run a quick alignment. Plot the fragment distribution from this subset and use those numbers for the full alignment
 3.) We were told that the average insert size for these samples is 150 bp and the reads are 36bp long. so --mate-inner-distance= 150-2x(36)=78=~80bp
 
-Refer to this diagram to figure out what the mate inner distance should be
+Refer to this diagram to figure out what the mate inner distance should be:
 
 ```
 PE reads                     R1--------->                <---------R2
@@ -91,9 +91,9 @@ insert                       ========================================
 inner mate distance                      ...............
 ```
 
-Q6) Considering that the read length in this exercise is 36bp, what should you set the --segment-length to (default is 25bp)?
+**Q6.)** Considering that the read length in this exercise is 36bp, what should you set the --segment-length to (default is 25bp)?
 
-A) If you keep the default value of 25 bases, Tophat will split each read into 2 segments of 25bp and 11bp lengths. It is preferred to split the read into segments of equal length. Therefore, assigning —segment-length a value of 18 for a 36bp read is recommended. When deciding on a number, try avoiding a split that will result in a very short segment. Short segments might not be uniquely mapped and this can affect your transcript assembly process.  
+**A6.)** If you keep the default value of 25 bases, Tophat will split each read into 2 segments of 25bp and 11bp lengths. It is preferred to split the read into segments of equal length. Therefore, assigning —segment-length a value of 18 for a 36bp read is recommended. When deciding on a number, try avoiding a split that will result in a very short segment. Short segments might not be uniquely mapped and this can affect your transcript assembly process.  
 
 ```
 cd $RNA_ASSIGNMENT/
@@ -114,9 +114,9 @@ tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=
 tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=carcinoma --rg-sample=carcinoma_C06 -o carcinoma_C06 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/carcinoma_C06_read1.fasta $RNA_DATA_DIR/carcinoma_C06_read2.fasta
 ```
 
-Q7) How would you obtain summary statistics for each aligned file?
+**Q7.)** How would you obtain summary statistics for each aligned file?
 
-A) There are many RNA-seq QC tools available that can provide you with detailed information about the quality of the aligned sample. However, for a simple summary of aligned reads counts you can use samtools flagstat: 
+**A7.)** There are many RNA-seq QC tools available that can provide you with detailed information about the quality of the aligned sample. However, for a simple summary of aligned reads counts you can use samtools flagstat: 
 
 ```
 samtools flagstat accepted_hits.bam
@@ -138,7 +138,7 @@ Goals:
 - Run Cufflinks to obtain expression values
 - Obtain expression values for the gene PCA3
     
-#setup the expression directory and run cuffinks on all samples
+## Setup the expression directory and run cuffinks on all samples
 
 ```
 cd $RNA_ASSIGNMENT
@@ -154,9 +154,9 @@ cufflinks -p 8 -o carcinoma_C03 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9
 cufflinks -p 8 -o carcinoma_C06 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --no-update-check $RNA_ASSIGNMENT/alignments/tophat/carcinoma_C06/accepted_hits.bam 
 ```
 
-Q8) How do you get the expression of the gene *PCA3* across the normal and carcinoma samples?
+**Q8.)** How do you get the expression of the gene *PCA3* across the normal and carcinoma samples?
 
-A) Cufflinks generates two expression files: gene level expression and isoform level expression. To look for the expression value of a specific gene, you can use the command ‘grep’ followed by the gene name and the path to the expression file
+**A8.)** Cufflinks generates two expression files: gene level expression and isoform level expression. To look for the expression value of a specific gene, you can use the command ‘grep’ followed by the gene name and the path to the expression file
 
 ```
 grep PCA3 ./*/genes.fpkm_tracking
@@ -168,7 +168,7 @@ Goals:
 - Perform differential analysis between tumor and normal samples
 - Check if PCA3 is differentially expressed
 
-#run the following commands
+## Run the following commands
 
 ```
 cd $RNA_ASSIGNMENT/expression;
@@ -180,25 +180,24 @@ mkdir de/reference_only
 cd $RNA_ASSIGNMENT/alignments/tophat
 ```
 
-#run cuffdiff to perform comparison
+# Run cuffdiff to perform comparison
 
 ```
 cuffdiff -p 8 -L Normal,Carcinoma -o $RNA_ASSIGNMENT/de/reference_only/ --no-update-check $RNA_ASSIGNMENT/expression/merged/merged.gtf normal_N02/accepted_hits.bam,normal_N03/accepted_hits.bam,normal_N06/accepted_hits.bam carcinoma_C02/accepted_hits.bam,carcinoma_C03/accepted_hits.bam,carcinoma_C06/accepted_hits.bam
 ```
 
-Q9) Are there any significant differentially expressed genes? What about the PCA3? 
+**Q9.)** Are there any significant differentially expressed genes? What about the PCA3? 
 
-A) Due to the small sample size, the *PCA3* signal is not significant at the adjusted p-value level. You can try re-running the above exercise on your own by using all of the samples in the original data set. Does including more samples change the results?
+**A9.)** Due to the small sample size, the *PCA3* signal is not significant at the adjusted p-value level. You can try re-running the above exercise on your own by using all of the samples in the original data set. Does including more samples change the results?
 
 
-Q10) What plots can you generate to help you visualize this gene expression profile
+**Q10.)** What plots can you generate to help you visualize this gene expression profile
 
-A) The CummerBund package provides a wide variety of plots that can be used to visualize a gene’s expression profile or genes that are differentially expressed. Some of these plots include heatmaps, boxplots, and volcano plots. Alternatively you can use custom plots using ggplot2 command or base R plotting commands such as those provided in the supplementary tutorials
+**A10.)** The CummerBund package provides a wide variety of plots that can be used to visualize a gene’s expression profile or genes that are differentially expressed. Some of these plots include heatmaps, boxplots, and volcano plots. Alternatively you can use custom plots using ggplot2 command or base R plotting commands such as those provided in the supplementary tutorials
 
 
 | [[Previous Section|Solutions]]       | [[This Section|Integrated-Assignment]] | [[Next Section|Proposed-Improvements]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
 | [[Practical Exercise Solutions|Solutions]] | [[Integrated Assignment|Integrated-Assignment]]    | [[Proposed Improvements|Proposed-Improvements]] |
-
 
 
