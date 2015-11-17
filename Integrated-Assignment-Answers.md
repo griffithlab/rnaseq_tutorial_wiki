@@ -1,18 +1,18 @@
 #6-iii. Integrated assignment answers
 
-**Background**: PCA3 gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This genes expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that tests the presence of PCA3 in urine. 
+**Background**: The *PCA3* gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that test the presence of *PCA3* in urine. 
 
-**Objectives**: In this assignment, we will be using a subset of the GSE22260 dataset, which consists of 30 RNA-seq tumour normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
+**Objectives**: In this assignment, we will be using a subset of the <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260">GSE22260 dataset</a>, which consists of 30 RNA-seq tumour/normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
 
 Things to keep in mind:
 
 - The libraries are polyA selected.
 - The libraries are prepared as paired end.
-- The samples are sequenced on Illuminas Genome Analyzer II.
+- The samples are sequenced on a Illumina Genome Analyzer II (this data is now quite old).
 - Each read is 36 bp long
 - The average insert size is 150 bp with standard deviation of 38bp.
 - We will only look at chromosome 9 in this exercise. 
-- Dataset is located here: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260
+- The dataset is located here: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260
 - 20 tumour and 10 normal samples are available
 - For this exercise we will pick 3 matched pairs (C02,C03,C06 for tumour and N02,N03,N06 for normal). We can do more if we have time.
 
@@ -23,32 +23,62 @@ Goals:
 - Familiarize yourself with reference and annotation file format
 - Familiarize yourself with sequence FASTQ format
 
-## set your working directory
+## Create a working directory `~/workspace/rnaseq/integrated_assignment/` to store this exercise. Then create a unix environment variable named `RNA_ASSIGNMENT` that stores this path for convenience in later commands.
+
 ```
 mkdir -p ~/workspace/rnaseq/integrated_assignment/
 export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment
 ```
 
-## copy the necessary reference and annotation files
+## Copy the necessary reference and annotation files to the integrated assignment directory
 Note: when initiating an environment variable, we do not need the $; however, everytime we call the variable, it needs to be preceeded by a $.
 
 ```
 echo $RNA_ASSIGNMENT
 cp -r ~/CourseData/RNA_data/integrated_assignment_files/* $RNA_ASSIGNMENT
 cd $RNA_ASSIGNMENT
+wget 
+wget 
+tar -zxvf 
+tar -zxvf 
 ```
 
-**Q1.)** How many directories are there under the “refs” directory? 
+**Q1.)** How many items are there under the “refs” directory (counting all files in all sub-directories)? 
 
-**A1.)**
+**A1.)** 
+
+The answer is 6. Review these files so that you are familiar with them.
+```
+cd $RNA_ASSIGNMENT/refs/
+tree
+find *
+find * | wc -l
+```
+
+What if this reference file was not provided for you? How would you obtain/create a reference genome fasta file for chromosome 9 only. How about the GTF transcripts file from Ensembl? How would you create one that contained only transcripts on chromosome 9?
 
 **Q2.)** How many exons does the gene PCA3 have?
 
 **A2.)**
 
+The answer is 4. Review the GTF file so that you are familiar with it. What downstream steps will we need this file for? What is it used for?
+```
+cd $RNA_ASSIGNMENT/refs/hg19/genes/
+grep -w "PCA3" genes_chr9.gtf 
+grep -w "PCA3" genes_chr9.gtf | wc -l
+
+```
+
 **Q3.)** How many cancer/normal samples do you see under the data directory?
 
 **A3.)**
+
+The answer is 12, 6 normal and 6 tumor.
+```
+cd $RNA_ASSIGNMENT/data/
+ls -l
+ls -1 | wc -l
+```
 
 NOTE: The fasta files you have copied above contain sequences for chr9 only. We have pre-processed those fasta files to obtain chr9 and also matched read1/read2 sequences for each of the samples. You do not need to redo this; However, we will explain below the process we went through to get them to this point.
 
@@ -56,6 +86,7 @@ NOTE: The fasta files you have copied above contain sequences for chr9 only. We 
 
 **A4.)** An easy way to figure out the number of reads is to make use of the command ‘wc’. This command counts the number of lines in a file. Keep in mind that one sequence can be represented by multiple lines. Therefore, you need to first grep the read tag and count those.
 
+The answer is that 'carcinoma_C06' has the most reads (288428/2 = 144214 reads).
 ```
 >HWUSI-EAS230-R:6:58:12:550#0/1
 TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
@@ -63,7 +94,9 @@ TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
 
 running this command only give you 2*readNumber
 ```
->wc -l YourFastaFile.fasta
+cd $RNA_ASSIGNMENT/data/
+wc -l YourFastaFile.fasta
+wc -l *
 ```
 
 running this command will give you the proper readNumber
