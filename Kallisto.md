@@ -81,3 +81,27 @@ mv transcript_tpms_all_samples.tsv2 transcript_tpms_all_samples.tsv
 rm -f header.tsv
 ```
 
+
+##Exercise: Do a performance test using a real large dataset
+Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 'normal' cell line here:
+Tumor https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam
+Normal https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C2DBEACXX_3.bam
+
+For more information on this data:
+https://github.com/genome/gms/wiki/HCC1395-WGS-Exome-RNA-Seq-Data
+
+Since the paths above will download BAM files but Kallisto expects FASTQ files for the read data. You will need to convert from BAM back to FASTQ. Try using Picard to do this.
+
+Example BAM to FASTQ conversion commands (note that you need to specify the correct path for your Picard installation):
+```
+java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/SamToFastq.jar INPUT=gerald_C1TD1ACXX_8_ACAGTG.bam FASTQ=hcc1395_tumor_R1.fastq SECOND_END_FASTQ=hcc1395_tumor_R2.fastq
+java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/SamToFastq.jar INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq
+```
+
+Now repeat the concepts above to obtain abundance estimates for all genes. Note:
+- You will have to get all transcripts instead of just those for a single chromosome
+- You will have to create a new index for this new set of transcript sequences
+- Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
+
+
+
