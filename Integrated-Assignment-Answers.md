@@ -38,19 +38,23 @@ cp -r ~/CourseData/RNA_data/integrated_assignment_files/* $RNA_ASSIGNMENT
 cd $RNA_ASSIGNMENT
 ```
 
-**Q1) How many directories are there under the “refs” directory?** 
+**Q1.)** How many directories are there under the “refs” directory? 
 
+**A1.)**
 
-**Q2) How many exons does the gene PCA3 have?**
+**Q2.)** How many exons does the gene PCA3 have?
 
+**A2.)**
 
-**Q3) How many cancer/normal samples do you see under the data directory?**
+**Q3.)** How many cancer/normal samples do you see under the data directory?
+
+**A3.)**
 
 NOTE: The fasta files you have copied above contain sequences for chr9 only. We have pre-processed those fasta files to obtain chr9 and also matched read1/read2 sequences for each of the samples. You do not need to redo this; However, we will explain below the process we went through to get them to this point.
 
-**Q4) What sample has the highest number of reads?**
+**Q4.)** What sample has the highest number of reads?
 
-A) An easy way to figure out the number of reads is to make use of the command ‘wc’. This command counts the number of lines in a file. Keep in mind that one sequence can be represented by multiple lines. Therefore, you need to first grep the read tag and count those.
+**A4.)** An easy way to figure out the number of reads is to make use of the command ‘wc’. This command counts the number of lines in a file. Keep in mind that one sequence can be represented by multiple lines. Therefore, you need to first grep the read tag and count those.
 
 ```
 >HWUSI-EAS230-R:6:58:12:550#0/1
@@ -74,13 +78,13 @@ Goals:
 - Perform alignments
 - Obtain alignment summary
 
-**Q5) What is the value of --mate-inner-dist? What calculation did you do to get that answer?**
+**Q5.)** What is the value of --mate-inner-dist? What calculation did you do to get that answer?
 
-A) Mate inner distance is the approximate distance between the reads. You can get this number by:
+**A5.)** Mate inner distance is the approximate distance between the reads. You can get this number by:
 
-1.) Using insert size estimates provided from the library preparation step. --mate-inner-distance= insert size-2x(ReadLength)
-2.) If you don’t have that information, then you can subset the FASTA file and run a quick alignment. Plot the fragment distribution from this subset and use those numbers for the full alignment
-3.) We were told that the average insert size for these samples is 150 bp and the reads are 36bp long. so --mate-inner-distance= 150-2x(36)=78=~80bp
+- Using insert size estimates provided from the library preparation step. --mate-inner-distance = insert size - (2 x ReadLength)
+- If you don’t have that information, then you can subset the FASTA file and run a quick alignment. Plot the fragment distribution from this subset and use those numbers for the full alignment
+- We were told that the average insert size for these samples is 150 bp and the reads are 36bp long. so --mate-inner-distance = 150 - (2 x 36) = 78 = ~80bp
 
 Refer to this diagram to figure out what the mate inner distance should be:
 
