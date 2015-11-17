@@ -84,7 +84,9 @@ rm -f header.tsv
 
 ##Exercise: Do a performance test using a real large dataset
 Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 'normal' cell line here:
+
 Tumor https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam
+
 Normal https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C2DBEACXX_3.bam
 
 For more information on this data:
