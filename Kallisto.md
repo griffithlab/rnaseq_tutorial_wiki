@@ -98,7 +98,9 @@ java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/SamToFastq.jar INPUT=gerald_
 java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/SamToFastq.jar INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq
 ```
 
-Now repeat the concepts above to obtain abundance estimates for all genes. Note:
+Now repeat the concepts above to obtain abundance estimates for all genes. 
+
+Note:
 - You will have to get all transcripts instead of just those for a single chromosome
 - You will have to create a new index for this new set of transcript sequences
 - Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
