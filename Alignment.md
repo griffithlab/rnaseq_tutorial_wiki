@@ -16,7 +16,7 @@ TopHat2 basic usage:
 Extra options specified below:
 
 * '-p 8' tells TopHat to use eight CPUs for bowtie alignments
-* '-r 60' tells TopHat the expected inner distance between the reads of a pair. [fragment size - (2*read length)].  260 - (2*100) = 60
+* '-r 60' tells TopHat the expected inner distance between the reads of a pair. [fragment size - (2*read length)].  260 - (2x100) = 60
 * '--library-type fr-firststrand' since the TruSeq strand-specific library was used to make these libraries
 * '-o' tells TopHat to write the output to a particular directory (one per sample)
 * '--rg-id' specifies a read group ID
