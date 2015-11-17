@@ -2,7 +2,7 @@
 
 **Background**: PCA3 gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This genes expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that tests the presence of PCA3 in urine. 
 
-Objectives: In this assignment, we will be using a subset of the GSE22260 dataset, which consists of 30 RNA-seq tumour normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
+**Objectives**: In this assignment, we will be using a subset of the GSE22260 dataset, which consists of 30 RNA-seq tumour normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
 
 Things to keep in mind:
 
@@ -24,8 +24,11 @@ Goals:
 - Familiarize yourself with sequence FASTQ format
 
 #set your working directory
-      mkdir -p ~/workspace/rnaseq/integrated_assignment/
-      export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment
+```
+mkdir -p ~/workspace/rnaseq/integrated_assignment/
+export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment
+```
+
 #copy the necessary reference and annotation files
 Note: when initiating an environment variable, we do not need the $; however, everytime we call the variable, it needs to be preceeded by a $.
 
