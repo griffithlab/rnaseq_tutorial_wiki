@@ -88,7 +88,7 @@ Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 
 Tumor (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam">download</a>)<br>
 Normal (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C2DBEACXX_3.bam">download</a>)
 
-For more information on this data:<br>
+For more information on this data refer to this page:<br>
 https://github.com/genome/gms/wiki/HCC1395-WGS-Exome-RNA-Seq-Data
 
 Since the paths above will download BAM files but Kallisto expects FASTQ files for the read data. You will need to convert from BAM back to FASTQ. Try using Picard to do this.
