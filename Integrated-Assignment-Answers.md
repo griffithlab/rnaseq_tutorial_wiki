@@ -23,11 +23,12 @@ Goals:
 - Familiarize yourself with reference and annotation file format
 - Familiarize yourself with sequence FASTQ format
 
-## Create a working directory `~/workspace/rnaseq/integrated_assignment/` to store this exercise. Then create a unix environment variable named `RNA_ASSIGNMENT` that stores this path for convenience in later commands.
+Create a working directory `~/workspace/rnaseq/integrated_assignment/` to store this exercise. Then create a unix environment variable named `RNA_ASSIGNMENT` that stores this path for convenience in later commands.
 
 ```
+cd $RNA_HOME
 mkdir -p ~/workspace/rnaseq/integrated_assignment/
-export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment
+export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment/
 ```
 
 ## Copy the necessary reference and annotation files to the integrated assignment directory
