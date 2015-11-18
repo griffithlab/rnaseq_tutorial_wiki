@@ -171,7 +171,7 @@ samtools flagstat accepted_hits.bam
 Goals:
 - Familiarize yourself with Cufflinks options
 - Run Cufflinks to obtain expression values
-- Obtain expression values for the gene PCA3
+- Obtain expression values for the gene *PCA3*
     
 **Setup the expression directory and run cuffinks on all samples**
 
