@@ -215,11 +215,11 @@ Goals:
 - Perform differential analysis between tumor and normal samples
 - Check if PCA3 is differentially expressed
 
-**Run the following commands**
+**Use cuffmerge to create a combined transcripts GTF from the six transcripts.gtf created by Cufflinks (one for each sample)**
 
 ```
-cd $RNA_ASSIGNMENT/expression;
-ls -l */transcripts.gtf > assembly_GTF_list.txt;
+cd $RNA_ASSIGNMENT/expression
+ls -1 */transcripts.gtf > assembly_GTF_list.txt;
 cuffmerge -p 8 -o merged -g $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf -s $RNA_ASSIGNMENT/refs/hg19/bwt/9/ assembly_GTF_list.txt
 cd $RNA_ASSIGNMENT/
 mkdir de
