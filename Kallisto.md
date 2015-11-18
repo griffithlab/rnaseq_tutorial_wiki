@@ -13,7 +13,6 @@ cd $RNA_HOME/
 cd tools/
 wget https://github.com/pachterlab/kallisto/releases/download/v0.42.4/kallisto_linux-v0.42.4.tar.gz
 tar -zxvf kallisto_linux-v0.42.4.tar.gz
-
 ```
 
 ##Add Kallisto to PATH environment variable
