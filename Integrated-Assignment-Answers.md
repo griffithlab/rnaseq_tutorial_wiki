@@ -229,12 +229,12 @@ cuffmerge -p 8 -o merged -g $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf -s $R
 cd $RNA_ASSIGNMENT/
 mkdir de
 mkdir de/reference_only
-cd $RNA_ASSIGNMENT/alignments/tophat
 ```
 
 **Run cuffdiff to perform comparisons between all tumor and normal samples (3 tumor versus 3 normal)**
 
 ```
+cd $RNA_ASSIGNMENT/alignments/tophat
 cuffdiff -p 8 -L Normal,Carcinoma -o $RNA_ASSIGNMENT/de/reference_only/ --no-update-check $RNA_ASSIGNMENT/expression/merged/merged.gtf normal_N02/accepted_hits.bam,normal_N03/accepted_hits.bam,normal_N06/accepted_hits.bam carcinoma_C02/accepted_hits.bam,carcinoma_C03/accepted_hits.bam,carcinoma_C06/accepted_hits.bam
 ```
 
