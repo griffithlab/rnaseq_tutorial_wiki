@@ -31,7 +31,7 @@ mkdir -p ~/workspace/rnaseq/integrated_assignment/
 export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment/
 ```
 
-## Copy the necessary reference and annotation files to the integrated assignment directory
+## Obtain reference and annotation files and place them in the integrated assignment directory
 Note: when initiating an environment variable, we do not need the $; however, everytime we call the variable, it needs to be preceeded by a $.
 
 ```
