@@ -55,11 +55,10 @@ find * | wc -l
 
 What if this reference file was not provided for you? How would you obtain/create a reference genome fasta file for chromosome 9 only. How about the GTF transcripts file from Ensembl? How would you create one that contained only transcripts on chromosome 9?
 
-**Q2.)** How many exons does the gene PCA3 have?
+**Q2.)** How many exons does the gene *PCA3* have?
 
-**A2.)**
+**A2.)** The answer is 4. Review the GTF file so that you are familiar with it. What downstream steps will we need this file for? What is it used for?
 
-The answer is 4. Review the GTF file so that you are familiar with it. What downstream steps will we need this file for? What is it used for?
 ```
 cd $RNA_ASSIGNMENT/refs/hg19/genes/
 grep -w "PCA3" genes_chr9.gtf 
