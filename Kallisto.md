@@ -113,6 +113,6 @@ Note:
 - You will have to get all transcripts instead of just those for a single chromosome
 - You will have to create a new index for this new set of transcript sequences
 - Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
-- In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples.
+- In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples. Each of these samples has ~150 million paired-end reads.
 
 
