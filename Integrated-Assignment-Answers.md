@@ -12,11 +12,11 @@ Things to keep in mind:
 - Each read is 36 bp long
 - The average insert size is 150 bp with standard deviation of 38bp.
 - We will only look at chromosome 9 in this exercise. 
-- The dataset is located here: http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260
+- The dataset is located here: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260">GSE22260</a>
 - 20 tumour and 10 normal samples are available
 - For this exercise we will pick 3 matched pairs (C02,C03,C06 for tumour and N02,N03,N06 for normal). We can do more if we have time.
 
-# PART 1 : Obtaining Data and References
+## PART 1 : Obtaining Data and References
 
 Goals:
 - Obtain the files necessary for data processing
