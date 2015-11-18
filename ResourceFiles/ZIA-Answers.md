@@ -1,8 +1,5 @@
 #6-iii. Integrated assignment answers
 
-**Preamble**: Note that the following integrated assignment asks you to download new RNA-seq data and apply the concepts you have learned up to this point. To complete this assignment you will need to review commands we performed in many of the earlier sections. Try to construct these commands on your own and get all the way to the end of the assignment.  If you get very stuck or would like to compare your solutions to those suggested by the instructors, refer to the answers page. The integrated assignment answers page is and expanded version of this page with all of the questions plus detailed code solutions to all problems. The answer page is available in the git repository for this wiki.
-
-
 **Background**: The *PCA3* gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that test the presence of *PCA3* in urine. 
 
 **Objectives**: In this assignment, we will be using a subset of the <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260">GSE22260 dataset</a>, which consists of 30 RNA-seq tumour/normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
