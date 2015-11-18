@@ -74,6 +74,7 @@ kallisto quant --index=$RNA_HOME/refs/hg19/kallisto/chr22_ERCC92_transcripts_kal
 Create a single TSV file that has the TPM abundance estimates for all six samples.
 
 ```
+cd $RNA_HOME/expression/kallisto
 paste */abundance.tsv | cut -f 1,2,5,10,15,20,25,30 > transcript_tpms_all_samples.tsv
 ls -1 */abundance.tsv | perl -ne 'chomp $_; if ($_ =~ /(\S+)\/abundance\.tsv/){print "\t$1"}' | perl -ne 'print "target_id\tlength$_\n"' > header.tsv
 cat header.tsv transcript_tpms_all_samples.tsv | grep -v "tpm" > transcript_tpms_all_samples.tsv2
@@ -91,6 +92,15 @@ Normal (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/
 For more information on this data refer to this page:<br>
 https://github.com/genome/gms/wiki/HCC1395-WGS-Exome-RNA-Seq-Data
 
+Download the data
+```
+cd $RNA_HOME/expression/data/
+mkdir hcc1395
+cd hcc1395
+wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam
+wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C2DBEACXX_3.bam
+```
+
 Since the paths above will download BAM files but Kallisto expects FASTQ files for the read data. You will need to convert from BAM back to FASTQ. Try using Picard to do this.
 
 Example BAM to FASTQ conversion commands (note that you need to specify the correct path for your Picard installation):
@@ -105,6 +115,6 @@ Note:
 - You will have to get all transcripts instead of just those for a single chromosome
 - You will have to create a new index for this new set of transcript sequences
 - Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
-
+- In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples.
 
 
