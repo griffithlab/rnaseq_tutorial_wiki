@@ -171,7 +171,7 @@ samtools flagstat normal_N02/accepted_hits.bam > normal_N02/accepted_hits.flagst
 samtools flagstat normal_N03/accepted_hits.bam > normal_N03/accepted_hits.flagstat.txt
 samtools flagstat normal_N06/accepted_hits.bam > normal_N06/accepted_hits.flagstat.txt
 
-cat */accepted_hits.flagstat.txt
+grep "mapped (" */accepted_hits.flagstat.txt
 ```
 
 ## PART 3: Expression Estimation
