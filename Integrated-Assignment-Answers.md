@@ -4,7 +4,7 @@
 
 **Objectives**: In this assignment, we will be using a subset of the <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260">GSE22260 dataset</a>, which consists of 30 RNA-seq tumour/normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
 
-Things to keep in mind:
+Experimental information and other things to keep in mind:
 
 - The libraries are polyA selected.
 - The libraries are prepared as paired end.
@@ -63,42 +63,36 @@ What if this reference file was not provided for you? How would you obtain/creat
 cd $RNA_ASSIGNMENT/refs/hg19/genes/
 grep -w "PCA3" genes_chr9.gtf 
 grep -w "PCA3" genes_chr9.gtf | wc -l
-
 ```
 
 **Q3.)** How many cancer/normal samples do you see under the data directory?
 
-**A3.)**
+**A3.)** The answer is 12. 6 normal and 6 tumor.
 
-The answer is 12, 6 normal and 6 tumor.
 ```
 cd $RNA_ASSIGNMENT/data/
 ls -l
 ls -1 | wc -l
 ```
 
-NOTE: The fasta files you have copied above contain sequences for chr9 only. We have pre-processed those fasta files to obtain chr9 and also matched read1/read2 sequences for each of the samples. You do not need to redo this; However, we will explain below the process we went through to get them to this point.
+NOTE: The fasta files you have copied above contain sequences for chr9 only. We have pre-processed those fasta files to obtain chr9 and also matched read1/read2 sequences for each of the samples. You do not need to redo this.
 
 **Q4.)** What sample has the highest number of reads?
 
-**A4.)** An easy way to figure out the number of reads is to make use of the command ‘wc’. This command counts the number of lines in a file. Keep in mind that one sequence can be represented by multiple lines. Therefore, you need to first grep the read tag and count those.
+**A4.)** The answer is that 'carcinoma_C06' has the most reads (288428/2 = 144214 reads).
 
-The answer is that 'carcinoma_C06' has the most reads (288428/2 = 144214 reads).
+An easy way to figure out the number of reads is to make use of the command ‘wc’. This command counts the number of lines in a file. Keep in mind that one sequence can be represented by multiple lines. Therefore, you need to first grep the read tag ">" and count those.
+
 ```
 >HWUSI-EAS230-R:6:58:12:550#0/1
 TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
 ```
 
-running this command only give you 2*readNumber
+Running this command only give you 2 x read number:
 ```
 cd $RNA_ASSIGNMENT/data/
 wc -l YourFastaFile.fasta
 wc -l *
-```
-
-running this command will give you the proper readNumber
-```
->grep ">" YourFastaFile.fasta | wc -l
 ```
 
 # PART 2: Data alignment
@@ -110,11 +104,13 @@ Goals:
 
 **Q5.)** What is the value of --mate-inner-dist? What calculation did you do to get that answer?
 
-**A5.)** Mate inner distance is the approximate distance between the reads. You can get this number by:
+**A5.)** Mate inner distance is the approximate distance between the reads (~80 bp).
+
+You can get this number by:
 
 - Using insert size estimates provided from the library preparation step. --mate-inner-distance = insert size - (2 x ReadLength)
 - If you don’t have that information, then you can subset the FASTA file and run a quick alignment. Plot the fragment distribution from this subset and use those numbers for the full alignment
-- We were told that the average insert size for these samples is 150 bp and the reads are 36bp long. so --mate-inner-distance = 150 - (2 x 36) = 78 = ~80bp
+- We were told that the average insert size for these samples is 150 bp and the reads are 36 bp long. so --mate-inner-distance = 150 - (2 x 36) = 78 = ~80 bp
 
 Refer to this diagram to figure out what the mate inner distance should be:
 
@@ -125,10 +121,12 @@ insert                       ========================================
 inner mate distance                      ...............
 ```
 
-**Q6.)** Considering that the read length in this exercise is 36bp, what should you set the --segment-length to (default is 25bp)?
+**Q6.)** Considering that the read length in this exercise is 36bp, what should you set the --segment-length to (default is 25bp)? 
+
 
 **A6.)** If you keep the default value of 25 bases, Tophat will split each read into 2 segments of 25bp and 11bp lengths. It is preferred to split the read into segments of equal length. Therefore, assigning —segment-length a value of 18 for a 36bp read is recommended. When deciding on a number, try avoiding a split that will result in a very short segment. Short segments might not be uniquely mapped and this can affect your transcript assembly process.  
 
+**Create a directory to store the transcriptome index that tophat2 will create the first time you run it**
 ```
 cd $RNA_ASSIGNMENT/
 export RNA_DATA_DIR=$RNA_ASSIGNMENT/data/
@@ -139,6 +137,7 @@ export TRANS_IDX_DIR=$RNA_ASSIGNMENT/alignments/tophat/trans_idx/
 echo $TRANS_IDX_DIR
 ```
 
+**Once you have a value for --mate-inner-dist and --transcriptome-index, create tophat2 alignment commands for all six samples and store the results in appropriately named output directories**
 ```
  tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N02 -o normal_N02 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N02_read1.fasta $RNA_DATA_DIR/normal_N02_read2.fasta
 tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=normal --rg-sample=normal_N03 -o normal_N03 -G $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_ASSIGNMENT/refs/hg19/bwt/9/9 $RNA_DATA_DIR/normal_N03_read1.fasta $RNA_DATA_DIR/normal_N03_read2.fasta
@@ -150,20 +149,11 @@ tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=
 
 **Q7.)** How would you obtain summary statistics for each aligned file?
 
-**A7.)** There are many RNA-seq QC tools available that can provide you with detailed information about the quality of the aligned sample. However, for a simple summary of aligned reads counts you can use samtools flagstat: 
+**A7.)** There are many RNA-seq QC tools available that can provide you with detailed information about the quality of the aligned sample (e.g. FastQC and RSeQC). However, for a simple summary of aligned reads counts you can use samtools flagstat. You can also look for the logs generated by TopHat. These logs provide a summary of the aligned reads.
 
 ```
 samtools flagstat accepted_hits.bam
 ```
-
-or
-
-```
-samstat accepted_hits.bam
-```
-
-Hint: You can also look for the logs generated by Tophat. These logs provide a summary of the aligned reads.
-
 
 # PART 3: Expression Estimation
 
