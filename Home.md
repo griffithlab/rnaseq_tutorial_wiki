@@ -47,6 +47,10 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
     <li>[[Differential Splicing|Differential-Splicing]]</li>
     <li>[[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
   </ol>
+  <li><strong>Module 5 - Reference free analysis</strong></li>
+  <ol start="i">  
+    <li>[[Use of Kallisto for Abundance Estimation|Kallisto]]</li>
+  </ol>
   <li><strong>Appendix</strong></li>
   <ol start="i">  
     <li>[[Abbreviations|Abbreviations]]</li>
