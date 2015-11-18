@@ -1,5 +1,8 @@
 #6-iii. Integrated assignment answers
 
+**Preamble**: Note that the following integrated assignment asks you to download new RNA-seq data and apply the concepts you have learned up to this point. To complete this assignment you will need to review commands we performed in many of the earlier sections. Try to construct these commands on your own and get all the way to the end of the assignment.  If you get very stuck or would like to compare your solutions to those suggested by the instructors, refer to the answers page. The integrated assignment answers page is and expanded version of this page with all of the questions plus detailed code solutions to all problems. The answer page is available in the git repository for this wiki.
+
+
 **Background**: The *PCA3* gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that test the presence of *PCA3* in urine. 
 
 **Objectives**: In this assignment, we will be using a subset of the <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22260">GSE22260 dataset</a>, which consists of 30 RNA-seq tumour/normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
@@ -242,10 +245,14 @@ cuffdiff -p 8 -L Normal,Carcinoma -o $RNA_ASSIGNMENT/de/reference_only/ --no-upd
 
 **A9.)** Due to the small sample size, the *PCA3* signal is not significant at the adjusted p-value level. You can try re-running the above exercise on your own by using all of the samples in the original data set. Does including more samples change the results?
 
+```
+cd $RNA_ASSIGNMENT/de/reference_only/
+grep PCA3 gene_exp.diff
+```
 
 **Q10.)** What plots can you generate to help you visualize this gene expression profile
 
-**A10.)** The CummerBund package provides a wide variety of plots that can be used to visualize a gene’s expression profile or genes that are differentially expressed. Some of these plots include heatmaps, boxplots, and volcano plots. Alternatively you can use custom plots using ggplot2 command or base R plotting commands such as those provided in the supplementary tutorials
+**A10.)** The CummerBund package provides a wide variety of plots that can be used to visualize a gene’s expression profile or genes that are differentially expressed. Some of these plots include heatmaps, boxplots, and volcano plots. Alternatively you can use custom plots using ggplot2 command or base R plotting commands such as those provided in the supplementary tutorials. Start with something very simple such as a scatter plot of tumor vs. normal FPKM values.
 
 
 | [[Previous Section|Solutions]]       | [[This Section|Integrated-Assignment]] | [[Next Section|Proposed-Improvements]]   |
