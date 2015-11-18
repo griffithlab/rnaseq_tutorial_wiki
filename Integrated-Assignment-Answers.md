@@ -36,7 +36,6 @@ Note: when initiating an environment variable, we do not need the $; however, ev
 
 ```
 echo $RNA_ASSIGNMENT
-cp -r ~/CourseData/RNA_data/integrated_assignment_files/* $RNA_ASSIGNMENT
 cd $RNA_ASSIGNMENT
 wget 
 wget 
