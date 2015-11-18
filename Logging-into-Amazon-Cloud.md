@@ -43,6 +43,14 @@ When you log in, you will notice that you have two directories: "bin" and "works
 * The "bin" directory contains the tools that you will need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
 * The "workspace" directory is where we will keep our temporary files and analysis results. 
 
+##Uploading your data to the AWS instance
+If you would like to upload your data to the AWS instance, use the example scp command below.  Be sure to replace the variables below with the local path to your data, __MY_DATA__, and the amazon instance IP, __YOUR_IP_ADDRESS__.
+
+```
+scp -i CSHL.pem __MY_DATA__ ubuntu@__YOUR_IP_ADDRESS__:/workspace/
+```
+
+
 | [[Previous Section|Intro-to-AWS-Cloud-Computing]] | [[This Section|Logging-into-Amazon-Cloud]]               | [[Next Section|Unix-Bootcamp]]               |
 |:-------------------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------:|
 | [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]] | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  | [[Unix Bootcamp|Unix-Bootcamp]]  |

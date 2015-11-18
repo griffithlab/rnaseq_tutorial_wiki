@@ -86,11 +86,6 @@ First package and compress all of the directories and files in the ‘rnaseq’ 
 
 	tar -xzvf rnaseq_tutorial.tar.gz
 
-##Uploading your data to the AWS instance
-If you would like to upload your data to the AWS instance, use the example scp command below.  Be sure to replace the variables below with the local path to your data, __MY_DATA__, and the amazon instance IP, __YOUR_IP_ADDRESS__.
-```
-scp -i CSHL.pem __MY_DATA__ ubuntu@__YOUR_IP_ADDRESS__:/workspace/
-```
 
 | [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|Abbreviations]]         |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-----------------------------------:|
