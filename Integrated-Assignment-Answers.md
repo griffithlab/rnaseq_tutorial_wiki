@@ -224,6 +224,8 @@ cuffmerge -p 8 -o merged -g $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9.gtf -s $R
 ```
 
 **Create a new directory to store the differential expression results**
+
+```
 cd $RNA_ASSIGNMENT/
 mkdir de
 mkdir de/reference_only
