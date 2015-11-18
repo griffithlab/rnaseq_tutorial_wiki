@@ -39,15 +39,13 @@ echo $RNA_ASSIGNMENT
 cd $RNA_ASSIGNMENT
 wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/misc/integrated_assignment_refs.tar.gz
 wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/misc/integrated_assignment_data.tar.gz 
-tar -zxvf 
-tar -zxvf 
+tar -zxvf integrated_assignment_refs.tar.gz
+tar -zxvf integrated_assignment_data.tar.gz 
 ```
 
 **Q1.)** How many items are there under the “refs” directory (counting all files in all sub-directories)? 
 
-**A1.)** 
-
-The answer is 6. Review these files so that you are familiar with them.
+**A1.)** The answer is 6. Review these files so that you are familiar with them.
 ```
 cd $RNA_ASSIGNMENT/refs/
 tree
