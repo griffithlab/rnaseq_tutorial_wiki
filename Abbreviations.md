@@ -20,6 +20,7 @@
 * RPM: Reads Per Million Fragments Mapped
 * RT-PCR: Reverse Transcription Polymerase Chain Reaction
 
-| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Abbreviations]] | [[Next Section|Lectures]]   |
-|:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Abbreviations|Abbreviations]]    | [[Lectures|Lectures]] |
+| [[Previous Section|Kallisto]]  | [[This Section|Abbreviations]]  | [[Next Section|Lectures]] |
+|:------------------------------:|:-------------------------------:|:-------------------------:|
+| [[Kallisto|Kallisto]]          | [[Abbreviations|Abbreviations]] | [[Lectures|Lectures]]     |
+
