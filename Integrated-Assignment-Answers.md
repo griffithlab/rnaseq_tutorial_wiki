@@ -95,7 +95,7 @@ wc -l YourFastaFile.fasta
 wc -l *
 ```
 
-# PART 2: Data alignment
+## PART 2: Data alignment
 
 Goals:
 - Familiarize yourself with Tophat/Bowtie alignment options
@@ -155,14 +155,14 @@ tophat2 -p 8 --mate-inner-dist 80 --mate-std-dev 38 --segment-length 18 --rg-id=
 samtools flagstat accepted_hits.bam
 ```
 
-# PART 3: Expression Estimation
+## PART 3: Expression Estimation
 
 Goals:
 - Familiarize yourself with Cufflinks options
 - Run Cufflinks to obtain expression values
 - Obtain expression values for the gene PCA3
     
-## Setup the expression directory and run cuffinks on all samples
+**Setup the expression directory and run cuffinks on all samples**
 
 ```
 cd $RNA_ASSIGNMENT
@@ -186,13 +186,13 @@ cufflinks -p 8 -o carcinoma_C06 --GTF $RNA_ASSIGNMENT/refs/hg19/genes/genes_chr9
 grep PCA3 ./*/genes.fpkm_tracking
 ```
 
-# PART 4: Differential Expression Analysis 
+## PART 4: Differential Expression Analysis 
 
 Goals:
 - Perform differential analysis between tumor and normal samples
 - Check if PCA3 is differentially expressed
 
-## Run the following commands
+**Run the following commands**
 
 ```
 cd $RNA_ASSIGNMENT/expression;
@@ -204,7 +204,7 @@ mkdir de/reference_only
 cd $RNA_ASSIGNMENT/alignments/tophat
 ```
 
-# Run cuffdiff to perform comparison
+**Run cuffdiff to perform comparisons**
 
 ```
 cuffdiff -p 8 -L Normal,Carcinoma -o $RNA_ASSIGNMENT/de/reference_only/ --no-update-check $RNA_ASSIGNMENT/expression/merged/merged.gtf normal_N02/accepted_hits.bam,normal_N03/accepted_hits.bam,normal_N06/accepted_hits.bam carcinoma_C02/accepted_hits.bam,carcinoma_C03/accepted_hits.bam,carcinoma_C06/accepted_hits.bam
