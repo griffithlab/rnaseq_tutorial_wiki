@@ -110,6 +110,7 @@ tar -zxvf sratoolkit.current-ubuntu64.tar.gz
 ~/bin/sratoolkit.2.5.4-1-ubuntu64/bin/fastq-dump -X 5 -Z SRR925811
 
 sudo cpanm HTML::Entities
+sudo cpanm LWP::Simple
 cd /home/ubuntu/
 wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
 tar -zxvf edirect.tar.gz
