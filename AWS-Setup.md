@@ -102,6 +102,14 @@ cd ../gkno_launcher
 ./gkno build
 ```
 
+#### Install NCBI SRA toolkit
+```
+cd /home/ubuntu/
+wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
+tar -zxvf sratoolkit.current-ubuntu64.tar.gz
+~/bin/sratoolkit.2.5.4-1-ubuntu64/bin/fastq-dump -X 5 -Z SRR925811
+```
+
 #### Download data files
 ```
 wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
