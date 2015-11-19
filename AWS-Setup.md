@@ -102,12 +102,16 @@ cd ../gkno_launcher
 ./gkno build
 ```
 
-#### Install NCBI SRA toolkit
+#### Install NCBI SRA toolkit and NCBI E-Utilities
 ```
 cd /home/ubuntu/
 wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
 tar -zxvf sratoolkit.current-ubuntu64.tar.gz
 ~/bin/sratoolkit.2.5.4-1-ubuntu64/bin/fastq-dump -X 5 -Z SRR925811
+
+cd /home/ubuntu/
+wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
+tar -zxvf edirect.tar.gz
 ```
 
 #### Download data files
