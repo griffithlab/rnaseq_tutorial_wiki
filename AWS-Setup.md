@@ -113,6 +113,7 @@ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu
 tar -zxvf sratoolkit.current-ubuntu64.tar.gz
 export PATH=/home/ubuntu/bin/sratoolkit.2.5.4-1-ubuntu64/bin:$PATH
 export PATH=/home/ubuntu/bin/edirect:$PATH
+#For testing
 fastq-dump -X 5 -Z SRR925811
 esearch -db sra -query PRJNA40075  | efetch --format runinfo | cut -d ',' -f 1 | grep SRR | head -5 | xargs fastq-dump -X 10 --split-files
 ```
