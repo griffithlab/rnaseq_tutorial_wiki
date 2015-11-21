@@ -8,7 +8,7 @@ Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all
   <li><strong>Module 0 - Introduction and Cloud Computing</strong></li>
   <ol start="i">
     <li>[[Authors|Authors]]</li>
-    <li>[[Citation|Citation]]</li>
+    <li>[[Citation and Supplementary Materials|Citation]]</li>
     <li>[[Syntax|Syntax]]</li>
     <li>[[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]</li>
     <li>[[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]</li>
