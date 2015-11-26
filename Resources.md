@@ -15,6 +15,7 @@
 - [ENCODE RNA-seq Standards](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ENCODE_RNA-seq_standards_v1.0.pdf)
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
 - [Proportionality: A Valid Alternative to Correlation for Relative Data](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361748/)
+- [NCBI Hackathons RNA Mapping Tutorial](https://github.com/NCBI-Hackathons/RNA_mapping/wiki)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
