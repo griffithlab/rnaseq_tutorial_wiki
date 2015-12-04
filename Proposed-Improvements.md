@@ -1,5 +1,9 @@
 # 5-v. Proposed improvements
 
+### More independent exercises, group exercises, and integrated assignments
+- Each module should have at least two exercises where the students are not copying/pasting anything.  One could be at 1/2 way point, and the other at the end of the module.  The one at the end could be a group exercise.
+- Each day should end with at least one hour of integrated assignment.
+
 ### Update the AMI to use bash instead of dash as default shell
 The STAR aligner currently throws errors when run on an ubuntu system because `/bin/sh` is linked to `/bin/dash` and not to `/bin/bash`.
 
@@ -44,14 +48,8 @@ Create a wiki section and exercise that summarizes read trimming concepts. Start
 Add installation and running of RSeQC 
 This could possible replace Samstat which never works very well
 
-### Add integrated assignment content to the wiki
-Get the integrated wiki from CBW and incorporate that here.
-
 ### Create a batch effect section
 We should add a section about batch effects.  Both detecting the presence of batch effects as well as correcting for them during analysis.
-
-### Improve Cloud exercise
-Have students actually spin up their own instances using IAM accounts (with one set up per student before the course). They would then be provided with their IAM user name, the appropriate AWS account #, and a default password. This account would have limited permissions to start EC2 instances but not much else.
 
 ### Add documentation to detailed cloud tutorial to provide some better security practices
 For convenience the cloud instances have been set up with very permissive security. Some better practices should be documented. 
@@ -64,6 +62,12 @@ In particular we should add use of `Picard CollectRnaSeqMetrics` (https://broadi
 
 ### Improve Expression/Differential expression lectures
 There a some nice slides/concepts that we could borrow from the BaseSpace Demo slides (see Obi's ~/Dropbox Teaching/CSHL/2015/Workshop-CSHL-RNA-Seq-Metagenomics.pdf).
+
+### Create a genome reference free analysis module.
+Can expand on the current Kallisto exercise.
+
+### Add more content on downstream analysis
+For example, pathway analysis of RNA-seq data, clustering, etc.
 
 ### Identify more interesting data sets to use for the alternative splicing module
 http://www.ncbi.nlm.nih.gov/gds/?term=rna-seq+splicing
@@ -83,7 +87,10 @@ Gray lab breast cancer cell line dataset:
 - [HISAT](http://www.ncbi.nlm.nih.gov/pubmed/25751142)
 - [StringTie](http://www.nature.com/nbt/journal/v33/n3/full/nbt.3122.html )
 - [Ballgown](http://www.ncbi.nlm.nih.gov/pubmed/25748911)
-- [Kallisto](http://arxiv.org/abs/1505.02710)
+- [Kallisto](http://arxiv.org/abs/1505.02710) and Sleuth
+
+Perhaps HISAT2 can be used instead of TopHat/STAR.  Using only a single aligner would save time for exploring more concepts downstream. Not sure of the value of using multiple alignments anyway. Time to shift focus a bit more towards the downstream stuff as alignment and QC become more routine.
+
 
 | [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
