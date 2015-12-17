@@ -84,10 +84,12 @@ Gray lab breast cancer cell line dataset:
 - https://github.com/genome/gms/wiki/Guide-to-Importing-and-Analyzing-External-Data (another guide on downloading and reformatting this data)
 
 ### Update the tutorial to take into account recent developments in RNA-seq analysis methods, best practices, and new tools
-- [HISAT](http://www.ncbi.nlm.nih.gov/pubmed/25751142)
+- [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
 - [StringTie](http://www.nature.com/nbt/journal/v33/n3/full/nbt.3122.html )
 - [Ballgown](http://www.ncbi.nlm.nih.gov/pubmed/25748911)
 - [Kallisto](http://arxiv.org/abs/1505.02710) and Sleuth
+- [Salmon](https://github.com/COMBINE-lab/salmon)
+- [featureCounts](http://bioinf.wehi.edu.au/featureCounts/) instead of HtSeq
 
 Perhaps HISAT2 can be used instead of TopHat/STAR.  Using only a single aligner would save time for exploring more concepts downstream. Not sure of the value of using multiple alignments anyway. Time to shift focus a bit more towards the downstream stuff as alignment and QC become more routine.
 
