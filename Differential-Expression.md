@@ -7,7 +7,7 @@ Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions. Refer to 
 	
 Cuffmerge basic usage:
 ```
- cuffmerge [options]* <assembly_GTF_list.txt>
+cuffmerge [options]* <assembly_GTF_list.txt>
 ```
 
 * "assembly_GTF_list.txt" is a text file "manifest" with a list (one per line) of GTF files that you would like to merge together into a single GTF file. 
@@ -54,13 +54,13 @@ Create necessary directories:
 
 Generate the cuffquant binary format files for cuffdiff
 
-         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep1_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam
-         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep2_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep2_ERCC-Mix1/accepted_hits.bam
-         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep3_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep1_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep1_ERCC-Mix1/accepted_hits.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep2_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep2_ERCC-Mix1/accepted_hits.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep3_ERCC-Mix1 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
-         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep1_ERCC-Mix2 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep1_ERCC-Mix2/accepted_hits.bam
-         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep2_ERCC-Mix2 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep2_ERCC-Mix2/accepted_hits.bam
-         cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3_ERCC-Mix2 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep3_ERCC-Mix2/accepted_hits.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep1_ERCC-Mix2 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep1_ERCC-Mix2/accepted_hits.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep2_ERCC-Mix2 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep2_ERCC-Mix2/accepted_hits.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3_ERCC-Mix2 $RNA_HOME/expression/tophat_cufflinks/ref_only/merged/merged.gtf HBR_Rep3_ERCC-Mix2/accepted_hits.bam
         
 Perform UHR vs. HBR comparison, using all replicates, for known (reference only mode) transcripts:
 
@@ -74,13 +74,13 @@ perform the cuffdiff step for STAR-alignment-based cuffmerge output:
 	mkdir -p de/star_cufflinks/ref_only
 	cd $RNA_HOME/alignments/star/
 
-        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep1 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/Aligned.out.sorted.bam
-        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep2 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep2/Aligned.out.sorted.bam
-        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep3/Aligned.out.sorted.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep1 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/Aligned.out.sorted.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep2 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep2/Aligned.out.sorted.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o UHR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep3/Aligned.out.sorted.bam
 
-        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep1 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep1/Aligned.out.sorted.bam
-        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep2 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep2/Aligned.out.sorted.bam
-        cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep3/Aligned.out.sorted.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep1 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep1/Aligned.out.sorted.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep2 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep2/Aligned.out.sorted.bam
+	cuffquant -p 8 --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check -o HBR_Rep3 $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf HBR_Rep3/Aligned.out.sorted.bam
         
 	cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/star_cufflinks/ref_only/ --library-type fr-firststrand --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/expression/star_cufflinks/ref_only/merged/merged.gtf UHR_Rep1/abundances.cxb,UHR_Rep2/abundances.cxb,UHR_Rep3/abundances.cxb HBR_Rep1/abundances.cxb,HBR_Rep2/abundances.cxb,HBR_Rep3/abundances.cxb
 
