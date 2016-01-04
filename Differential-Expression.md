@@ -31,7 +31,7 @@ Perform the merge step for STAR-alignment-based cufflinks output:
 
 	cd $RNA_HOME/expression/star_cufflinks/ref_only/
 	ls -1 *Rep*ERCC*/transcripts.gtf > assembly_GTF_list.txt
-	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/ assembly_GTF_list.txt
+	cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/ assembly_GTF_list.txt
 
 ####END OF OPTIONAL ALTERNATIVE - Merge Cufflinks GTFs for STAR
 ---	
