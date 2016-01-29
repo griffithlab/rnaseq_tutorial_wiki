@@ -23,7 +23,7 @@
 - [A UNIX and Perl primer for biologists](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
 - [A detailed Biostars thread describing resources for learning Unix](https://www.biostars.org/p/16315/)
 - [A codecademy tutorial to Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
-- [A command-line linux tutorial in your browser](rik.smith-unna.com/command_line_bootcamp/)
+- [A command-line linux tutorial in your browser](http://rik.smith-unna.com/command_line_bootcamp/)
 
 #### 3. Text Editor (Vi/Vim) Tutorials
 - [An interactive Vim tutorial](http://www.openvim.com/)
