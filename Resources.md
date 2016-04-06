@@ -38,7 +38,7 @@
 - [A detailed BioStars thread describing resources for learning R](https://www.biostars.org/p/539/)
 - [Data Camp - R Tutorials and Data Analysis Courses](https://www.datacamp.com/courses)
 - [Swirl - Learn R, in R.](http://www.swirlstats.com/)
-- [Quick and Dirty Guide to R](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R_revised_080715.txt)
+- [Quick and Dirty Guide to R](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R.txt)
 
 #### 5. Supplementary Materials Relating to the Hands On Tutorials of this Course
 - [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf)
