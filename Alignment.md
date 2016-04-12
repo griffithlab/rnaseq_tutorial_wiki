@@ -140,7 +140,7 @@ Perform some alignments on an additional pair of read data sets.
 cd $RNA_HOME
 mkdir -p practice/data
 cd $RNA_HOME/practice/data
-wget ftp://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
+wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
 tar -xvf alignment_practical.tar
 ```
 

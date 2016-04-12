@@ -109,7 +109,7 @@ Based on the above read counts, plot the linearity of the ERCC spike-in read cou
 
 ```
 cd $RNA_HOME/expression/tophat_counts
-wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
+wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
 cat ERCC_Controls_Analysis.txt
 
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.pl

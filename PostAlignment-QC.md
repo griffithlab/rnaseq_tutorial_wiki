@@ -34,7 +34,7 @@ Use `samtools flagstat` to get a basic summary of an alignment.  What percent of
 Run `samstat` on UHR/HBR BAMs
 
 	cd ~/bin
-	wget ftp://genome.wustl.edu/pub/rnaseq/tools/bin/samstat
+	wget http://genome.wustl.edu/pub/rnaseq/tools/bin/samstat
 	chmod +x samstat
 	cd $RNA_HOME/alignments/tophat/
 	~/bin/samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam

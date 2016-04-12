@@ -27,7 +27,7 @@ The test data has been pre-filtered for reads that appear to map to chromosome 2
 	
 Make a copy of the test data
 
-	wget ftp://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
+	wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
 	
 Unpack the test data.  You should see 6 sets of paired end fastq files.  One for each of our sample replicates above. We have 6 pairs (12 files) because in fastq format, read 1 and read 2 of a each read pair (fragment) are stored in separate files.
 
