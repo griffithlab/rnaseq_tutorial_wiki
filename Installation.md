@@ -2,7 +2,7 @@
 First, make sure your [[environment|Environment]] is set up correctly.
 
 #1-i. Installation
-Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
+Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, HISAT2, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
 	
 Set up tool installation location:
 
@@ -61,6 +61,14 @@ make
 	cd STAR-STAR_2.5.0a/source
 	make STAR
 	file STAR
+
+##[HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
+
+        cd $RNA_HOME/tools/
+        wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
+        unzip hisat2-2.0.4-Linux_x86_64.zip && rm hisat2-2.0.4-Linux_x86_64.zip
+        cd hisat2-2.0.4
+        ./hisat2
 	
 ##[Cufflinks2](http://cole-trapnell-lab.github.io/cufflinks/manual/)
 
