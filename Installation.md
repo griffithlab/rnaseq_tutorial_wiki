@@ -3,25 +3,25 @@ First, make sure your [[environment|Environment]] is set up correctly.
 
 #1-i. Installation
 Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, HISAT2, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
-	
+
 Set up tool installation location:
 
 	cd $RNA_HOME
 	mkdir tools
 	cd tools
-	
+
 ##[SAMtools](http://samtools.sourceforge.net/)
 
 ```
 cd $RNA_HOME/tools/
-wget https://github.com/samtools/samtools/releases/download/1.2/samtools-1.2.tar.bz2
-bunzip2 samtools-1.2.tar.bz2 
-tar -xvf samtools-1.2.tar
-cd samtools-1.2
+wget https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2
+bunzip2 samtools-1.3.1.tar.bz2
+tar -xvf samtools-1.3.1.tar
+cd samtools-1.3.1
 make
 ./samtools
 ```
-	
+
 ##[bam-readcount](https://github.com/genome/bam-readcount)
 
 	cd $RNA_HOME/tools/
@@ -31,45 +31,45 @@ make
 	cd $RNA_HOME/tools/
 	mkdir bam-readcount
 	cd bam-readcount
-	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.2
+	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.3.1
 	cmake $RNA_HOME/tools/git/bam-readcount
 	make
 	./bin/bam-readcount
-	
+
 ##[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 
 	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.6/bowtie2-2.2.6-linux-x86_64.zip
-	unzip bowtie2-2.2.6-linux-x86_64.zip
-	cd bowtie2-2.2.6
+	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.9/bowtie2-2.2.9-linux-x86_64.zip
+	unzip bowtie2-2.2.9-linux-x86_64.zip
+	cd bowtie2-2.2.9
 	./bowtie2
 	./bowtie2-build
-	
+
 ##[TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
 
 	cd $RNA_HOME/tools/
-	wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.0.Linux_x86_64.tar.gz
-	tar -zxvf tophat-2.1.0.Linux_x86_64.tar.gz
-	cd tophat-2.1.0.Linux_x86_64
+	wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.1.Linux_x86_64.tar.gz
+	tar -zxvf tophat-2.1.1.Linux_x86_64.tar.gz
+	cd tophat-2.1.1.Linux_x86_64
 	./tophat2
-	
+
 ##[STAR](https://code.google.com/p/rna-star/)
 
 	cd $RNA_HOME/tools/
-	wget https://github.com/alexdobin/STAR/archive/STAR_2.5.0a.tar.gz
-	tar -zxvf STAR_2.5.0a.tar.gz
-	cd STAR-STAR_2.5.0a/source
+	wget https://github.com/alexdobin/STAR/archive/2.5.1b.tar.gz
+	tar -zxvf 2.5.1b.tar.gz
+	cd STAR-2.5.1b/source
 	make STAR
 	file STAR
 
 ##[HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
 
-        cd $RNA_HOME/tools/
-        wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
-        unzip hisat2-2.0.4-Linux_x86_64.zip && rm hisat2-2.0.4-Linux_x86_64.zip
-        cd hisat2-2.0.4
-        ./hisat2
-	
+    cd $RNA_HOME/tools/
+    wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
+    unzip hisat2-2.0.4-Linux_x86_64.zip
+    cd hisat2-2.0.4
+    ./hisat2
+
 ##[Cufflinks2](http://cole-trapnell-lab.github.io/cufflinks/manual/)
 
 	cd $RNA_HOME/tools/
@@ -77,7 +77,7 @@ make
 	tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
 	cd cufflinks-2.2.1.Linux_x86_64
 	./cufflinks
-	
+
 ##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
 
 	cd $RNA_HOME/tools/
@@ -87,7 +87,7 @@ make
 	python setup.py install --user
 	chmod +x scripts/htseq-count
 	./scripts/htseq-count
-	
+
 
 ##[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 Note, the linux installation below will not work without X11 libraries (as on Amazon cloud)
@@ -96,8 +96,8 @@ For completeness, here is how it would be installed on a linux system with X11 l
 
 ```
 cd $RNA_HOME/tools/
-wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.4.zip
-unzip fastqc_v0.11.4.zip
+wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
+unzip fastqc_v0.11.5.zip
 cd FastQC/
 chmod 755 fastqc
 ./fastqc --help
@@ -106,14 +106,14 @@ chmod 755 fastqc
 ##[Picard](http://picard.sourceforge.net/command-line-overview.shtml)
 
 	cd $RNA_HOME/tools/
-	wget https://github.com/broadinstitute/picard/releases/download/1.140/picard-tools-1.140.zip -O picard-tools-1.140.zip
-	unzip picard-tools-1.140.zip
-	java -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar
-	
+	wget https://github.com/broadinstitute/picard/releases/download/2.2.4/picard-tools-2.2.4.zip -O picard-tools-2.2.4.zip
+	unzip picard-tools-2.2.4.zip
+	java -jar $RNA_HOME/tools/picard-tools-2.2.4/picard.jar
+
 ##[SAMStat](http://samstat.sourceforge.net/)
 
 ```
-export PATH=$RNA_HOME/tools/samtools-1.1:$PATH
+export PATH=$RNA_HOME/tools/samtools-1.3.1:$PATH
 cd $RNA_HOME/tools/
 wget http://downloads.sourceforge.net/project/samstat/samstat-1.5.1.tar.gz
 tar -xzvf samstat-1.5.1.tar.gz
@@ -124,14 +124,19 @@ make
 ```
 
 ##[Flexbar](http://sourceforge.net/projects/flexbar/)
-Version 2.5 is available but may not work on all systems. It requires ZLIB_1.2.3.3 and GLIBC_2.14.
 
 ```
 cd $RNA_HOME/tools/
-wget http://downloads.sourceforge.net/project/flexbar/2.4/flexbar_v2.4_linux64.tgz
-tar -xzvf flexbar_v2.4_linux64.tgz
-cd flexbar_v2.4_linux64
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.4_linux64:$LD_LIBRARY_PATH
+wget https://github.com/seqan/flexbar/releases/download/v2.4.0/flexbar_v2.4_linux64.tgz
+wget https://github.com/seqan/seqan/releases/download/seqan-v2.1.1/seqan-library-2.1.1.zip
+unzip seqan-library-2.1.1.zip
+tar -xzvf v2.7.0.tar.gz
+sudo apt-get install libtbb-dev 
+cd flexbar-2.7.0
+mv ../seqan-library/include ./
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-2.7.0:$LD_LIBRARY_PATH
+cmake .
+make
 ./flexbar
 ```
 
@@ -143,10 +148,10 @@ It is already installed on the Cloud, but for completeness, here is how it was d
 ```
 #cd $RNA_HOME/tools/
 #export R_LIBS=
-#wget https://cran.r-project.org/src/base/R-3/R-3.2.2.tar.gz
-#tar -zxvf R-3.2.2.tar.gz
-#cd R-3.2.2
-#./configure --prefix=$RNA_HOME/tools/R-3.2.2/ --with-x=no
+#wget https://cran.r-project.org/src/base/R-3/R-3.2.5.tar.gz
+#tar -zxvf R-3.2.5.tar.gz
+#cd R-3.2.5
+#./configure --prefix=$RNA_HOME/tools/R-3.2.5/ --with-x=no
 #make
 #make install
 #./bin/Rscript
@@ -179,7 +184,7 @@ launch R (enter `R` at linux command prompt) and type the following at an R comm
 #biocLite("cummeRbund")
 #biocLite("edgeR")
 #quit()
-```	
+```
 
 
 ---
@@ -191,8 +196,8 @@ Assignment: Install bedtools on your own. Make sure you install it in your tools
 cd $RNA_HOME/tools/
 ```
 
-* Hint: google "bedtools" to find the source code  
-* Hint: there is a README file that will give you hints on how to install  
+* Hint: google "bedtools" to find the source code
+* Hint: there is a README file that will give you hints on how to install
 * Hint: If your install has worked you should be able to run bedtools as follows:
 
 ```
@@ -202,15 +207,15 @@ $RNA_HOME/tools/bedtools2/bin/bedtools
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-1---software-installation)
 
 ---
-	
+
 ##Add locally installed tools to your PATH [OPTIONAL]
 
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
-	
+
 	export RNA_HOME=~/workspace/rnaseq
 	export PATH=$RNA_HOME/tools/samtools-1.2:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.6:$RNA_HOME/tools/tophat-2.1.0.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.5.0a/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.2/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.140:$RNA_HOME/tools/samstat-1.5.1/src:/home/ubuntu/bin/bedtools2/bin:$PATH
 	echo $PATH
-	
+
 You can make these changes permanent by adding the above lines to your .bashrc file
 use a text editor to open your bashrc file. For example:
 
@@ -228,7 +233,7 @@ vi ~/.bashrc
 6. Type "wq" to save and quit vi
 
 If you would like to learn more about how to use vi, try this tutorial/game: [VIM Adventures](http://vim-adventures.com/)
-	
+
 NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
 
 	#cd ~

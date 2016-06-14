@@ -39,6 +39,7 @@
 - [Data Camp - R Tutorials and Data Analysis Courses](https://www.datacamp.com/courses)
 - [Swirl - Learn R, in R.](http://www.swirlstats.com/)
 - [Quick and Dirty Guide to R](http://ww2.coastal.edu/kingw/statistics/R-tutorials/text/quick&dirty_R.txt)
+- [Basic R Introduction](http://tryr.codeschool.com/)
 
 #### 5. Supplementary Materials Relating to the Hands On Tutorials of this Course
 - [Description of the ERCC spike-in controls used in the tutorial data] (https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/ERCC.pdf)
@@ -51,7 +52,7 @@
 
 #### 7. General Bioinformatics Resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
-- [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/) 
+- [The Bioinformatics Links Directory](http://bioinformatics.ca/links_directory/)
 - [The periodic table of bioinformatics - A list of popular bioinformatics resources and tools](http://elements.eaglegenomics.com/)
 - [A list of Genome Analysis Platforms like Galaxy, BaseSpace, etc.](https://docs.google.com/spreadsheets/d/1o8iYwYUy0V7IECmu21Und3XALwQihioj23WGv-w0itk/pubhtml)
 - [BioLinux - An Ubuntu Linux system with many Bioinformatics tools pre-installed](http://environmentalomics.org/bio-linux/)
