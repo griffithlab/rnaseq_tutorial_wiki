@@ -127,16 +127,10 @@ make
 
 ```
 cd $RNA_HOME/tools/
-wget https://github.com/seqan/flexbar/releases/download/v2.4.0/flexbar_v2.4_linux64.tgz
-wget https://github.com/seqan/seqan/releases/download/seqan-v2.1.1/seqan-library-2.1.1.zip
-unzip seqan-library-2.1.1.zip
-tar -xzvf v2.7.0.tar.gz
-sudo apt-get install libtbb-dev 
-cd flexbar-2.7.0
-mv ../seqan-library/include ./
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-2.7.0:$LD_LIBRARY_PATH
-cmake .
-make
+wget http://downloads.sourceforge.net/project/flexbar/2.4/flexbar_v2.4_linux64.tgz
+tar -xzvf flexbar_v2.4_linux64.tgz
+cd flexbar_v2.4_linux64
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.4_linux64:$LD_LIBRARY_PATH
 ./flexbar
 ```
 
