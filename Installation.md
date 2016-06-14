@@ -185,14 +185,12 @@ launch R (enter `R` at linux command prompt) and type the following at an R comm
 ---
 ##Practical Exercise 1 - Software Installation
 
-Assignment: Install bedtools on your own.
-Make sure you install it in your tools folder.
+Assignment: Install bedtools on your own. Make sure you install it in your tools folder. Download, unpack, compile, and test the bedtools software.
 
 ```
 cd $RNA_HOME/tools/
 ```
 
-Now, download, unpack, compile, and test  
 * Hint: google "bedtools" to find the source code  
 * Hint: there is a README file that will give you hints on how to install  
 * Hint: If your install has worked you should be able to run bedtools as follows:
