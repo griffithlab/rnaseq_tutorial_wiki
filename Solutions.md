@@ -19,7 +19,17 @@ make
 ./bin/bedtools
 ```
 
-###Practical Exercise 2 - Alignment
+###Practical Exercise 2 - Data
+
+```
+cd $RNA_HOME
+mkdir -p practice/data
+cd $RNA_HOME/practice/data
+wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
+tar -xvf alignment_practical.tar
+```
+
+###Practical Exercise 3 - Alignment
 
 ```
 export RNA_HOME=~/workspace/rnaseq
