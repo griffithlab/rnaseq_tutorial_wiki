@@ -144,7 +144,7 @@ wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
 tar -xvf alignment_practical.tar
 ```
 
-Assignment: Align the reads using the skills you learned above. Try using Tophat or STAR aligners. When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---alignment)
+Assignment: Align the reads using the skills you learned above. Try using Tophat or STAR aligners. When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---alignment)
 
 | [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|IGV-Tutorial]] |
 |:---------------------------------:|:--------------------------:|:-----------------------------:|
