@@ -50,7 +50,7 @@ Decompress file on the fly with 'zcat', pipe into 'grep', search for the read na
 
 Assignment: Download an additional dataset and unpack it. This data will be used in future practical exercises. 
 
-* Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc)
+* Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc).
 * In this exercise you will download an archive of publicly available read data in FASTQ format from here:
 http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
 
