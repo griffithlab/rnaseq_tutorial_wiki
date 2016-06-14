@@ -131,7 +131,7 @@ Create comparable files for the STAR alignments by merging individual bam files 
 ####END OPTIONAL ALTERNATIVE - Merge STAR bam files
 ---
 	
-##PRACTICAL EXERCISE
+##PRACTICAL EXERCISE 2
 
 Perform some alignments on an additional pair of read data sets.
 * Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc)
