@@ -134,15 +134,7 @@ Create comparable files for the STAR alignments by merging individual bam files 
 ##PRACTICAL EXERCISE 3
 
 Perform some alignments on an additional pair of read data sets.
-* Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc)
-* In this exercise you will download an archive of publicly available read data in FASTQ format and unpack it
-```
-cd $RNA_HOME
-mkdir -p practice/data
-cd $RNA_HOME/practice/data
-wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
-tar -xvf alignment_practical.tar
-```
+* Hint: Do this analysis in the separate working directory called ‘practice’ that you created in Practical Exercise 2.
 
 Assignment: Align the reads using the skills you learned above. Try using Tophat or STAR aligners. When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---alignment)
 
