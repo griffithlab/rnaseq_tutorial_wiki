@@ -45,9 +45,8 @@ Decompress file on the fly with 'zcat', pipe into 'grep', search for the read na
 
 	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "^\@HWI" | wc -l
 
+---
 ##PRACTICAL EXERCISE 2
-
-
 
 Assignment: Download an additional dataset and unpack it. This data will be used in future practical exercises. 
 
@@ -57,8 +56,7 @@ http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---alignment)
 
-
-
+---
 
 
 | [[Previous Section|Indexing]] | [[This Section|RNAseq-Data]] | [[Next Section|PreAlignment-QC]]    |
