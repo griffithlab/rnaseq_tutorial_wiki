@@ -7,11 +7,11 @@ Before we can view our alignments in the IGV browser we need to index our BAM fi
 	export RNA_ALIGN_DIR=$RNA_HOME/alignments/tophat/
 	echo $RNA_ALIGN_DIR
 	cd $RNA_ALIGN_DIR
-	
+
 First lets display the samtools index commands to be run (i.e. 'echo' the command that will be executed by unix find). You could copy and paste these commands to run them, or repeat the find command without the 'echo' as below
 
 	find $RNA_ALIGN_DIR*/accepted_hits.bam -exec echo samtools index {} \;
-	        
+
 Now run the index commands
 
 	find $RNA_ALIGN_DIR*/accepted_hits.bam -exec samtools index {} \;
@@ -27,6 +27,17 @@ Create comparable files for the STAR alignments
 	find $STAR_ALIGN_DIR*/Aligned.out.sorted.bam -exec samtools index {} \;
 
 ####END OF OPTIONAL ALTERNATIVE - Index STAR BAM files
+---
+###OPTIONAL ALTERNATIVE - Index HISAT2 BAM files
+Create comparable files for the HISAT2 alignments
+
+	cd $RNA_HOME
+	export HISAT2_ALIGN_DIR=$RNA_HOME/alignments/hisat2/
+	echo $HISAT2_ALIGN_DIR
+	cd $HISAT2_ALIGN_DIR
+	find $HISAT2_ALIGN_DIR*/Aligned.out.sorted.bam -exec samtools index {} \;
+
+####END OF OPTIONAL ALTERNATIVE - Index HISAT2 BAM files
 ---
 
 ##Visualize alignments
@@ -55,52 +66,62 @@ http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/star/HBR_ERCC-Mix2_ALL/Al
 
 ####END OF OPTIONAL ALTERNATIVE - view STAR alignments in IGV
 ---
+###OPTIONAL ALTERNATIVE - view HISAT2 alignments in IGV
+
+**UHR HISAT2 alignment**
+http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam
+
+**HBR HISAT2 alignment**
+http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam
+
+####END OF OPTIONAL ALTERNATIVE - view STAR alignments in IGV
+---
 
 ### Exercise
-Try to find a variant position in the RNAseq data:  
-- HINT: *DDX17* is a highly expressed gene with several variants in its 3 prime UTR.  
-- Other highly expressed genes you might explore are: *NUP50*, *CYB5R3*, and *EIF3L* (all have at least one transcribed variant).  
-- Are these variants previously known (e.g., present in dbSNP)?    
+Try to find a variant position in the RNAseq data:
+- HINT: *DDX17* is a highly expressed gene with several variants in its 3 prime UTR.
+- Other highly expressed genes you might explore are: *NUP50*, *CYB5R3*, and *EIF3L* (all have at least one transcribed variant).
+- Are these variants previously known (e.g., present in dbSNP)?
 - How should we interpret the allele frequency of each variant?  Remember that we have rather unusual samples here in that they are actually pooled RNAs corresponding to multiple individuals (genotypes).
-- Take note of the genomic position of your variant. We will need this later.  
-	
+- Take note of the genomic position of your variant. We will need this later.
+
 ##BAM Read Counting
-Using one of the variant positions identified above, count the number of supporting reference and variant reads. 
+Using one of the variant positions identified above, count the number of supporting reference and variant reads.
 First, use `samtools mpileup` to visualize a region of alignment with a variant.
 
 	cd $RNA_HOME
 	mkdir bam_readcount
 	cd bam_readcount
-	
+
 Create list of bam files to process.
 
 	find $RNA_HOME/alignments/tophat/*_ALL/accepted_hits.bam > bamfilelist.txt
-	
+
 Create faidx indexed reference sequence file for use with mpileup
 
 	samtools faidx $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa
-	
+
 Run `samtools mpileup` on a region of interest
 
 	samtools mpileup -b bamfilelist.txt -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa -r 22:18905970-18905980
-	
+
 Each line consists of chromosome, 1-based coordinate, reference base, the number of reads covering the site, read bases and base qualities. At the read base column, a dot stands for a match to the reference base on the forward strand, a comma for a match on the reverse strand, `ACGTN` for a mismatch on the forward strand and `acgtn` for a mismatch on the reverse strand. A pattern `\+[0-9]+[ACGTNacgtn]+` indicates there is an insertion between this reference position and the next reference position. The length of the insertion is given by the integer in the pattern, followed by the inserted sequence. See samtools pileup/mpileup documentation for more explanation of the output:
 
 * http://samtools.sourceforge.net/pileup.shtml
 * http://samtools.sourceforge.net/mpileup.shtml
-	
-Now, use `bam-readcount` to count reference and variant bases at a specific position. 
-First, create a bed file with some positions of interest (we will create a file called snvs.bed using the echo command). 
+
+Now, use `bam-readcount` to count reference and variant bases at a specific position.
+First, create a bed file with some positions of interest (we will create a file called snvs.bed using the echo command).
 
 It will contain a single line specifying a variant position on chr22 e.g.:
 
 22	38879688	38879688
-	
+
 Create the bed file
 
 	echo "22 38879688 38879688"
 	echo "22 38879688 38879688" > snvs.bed
-	
+
 Run `bam-readcount` on this list for the tumor and normal merged bam files
 
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null
@@ -110,7 +131,7 @@ Now, run again, but ignore stderr and redirect stdout to a file:
 
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam 2>/dev/null 1>UHR_bam-readcounts.txt
 	bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam 2>/dev/null 1>HBR_bam-readcounts.txt
-	
+
 From this output you could parse the read counts for each base
 
 	cat UHR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", $data[5]); @Cdata=split(":", $data[6]); @Gdata=split(":", $data[7]); @Tdata=split(":", $data[8]); print "UHR Counts\t$data[0]\t$data[1]\tA: $Adata[1]\tC: $Cdata[1]\tT: $Tdata[1]\tG: $Gdata[1]\n";'
@@ -120,5 +141,3 @@ From this output you could parse the read counts for each base
 | [[Previous Section|IGV-Tutorial]] | [[This Section|PostAlignment-Visualization]]  | [[Next Section|PostAlignment-QC]] |
 |:---------------------------------:|:---------------------------------------------:|:---------------------------------:|
 | [[IGV|IGV-Tutorial]]              | [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]]      |
-
-
