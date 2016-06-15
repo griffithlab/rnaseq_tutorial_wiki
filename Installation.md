@@ -106,9 +106,9 @@ chmod 755 fastqc
 ##[Picard](http://picard.sourceforge.net/command-line-overview.shtml)
 
 	cd $RNA_HOME/tools/
-	wget https://github.com/broadinstitute/picard/releases/download/2.2.4/picard-tools-2.2.4.zip -O picard-tools-2.2.4.zip
-	unzip picard-tools-2.2.4.zip
-	java -jar $RNA_HOME/tools/picard-tools-2.2.4/picard.jar
+	wget https://github.com/broadinstitute/picard/releases/download/1.140/picard-tools-1.140.zip -O picard-tools-1.140.zip
+	unzip picard-tools-1.140.zip
+	java -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar
 
 ##[SAMStat](http://samstat.sourceforge.net/)
 
