@@ -11,7 +11,7 @@ Create a bowtie index for chr22 and the ERCC spike-in sequences and write it to 
 	bowtie2-build fasta/chr22_ERCC92/chr22_ERCC92.fa bwt/chr22_ERCC92/chr22_ERCC92
 	cp $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/*.fa $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/
 	ls bwt/chr22_ERCC92/
-	
+
 To create an index for all chromosomes instead of just chr22 you would do the following:
 ```
 #cd $RNA_HOME/refs/hg19/
@@ -30,7 +30,15 @@ Create index files for use with STAR
 
 ####END OF OPTIONAL ALTERNATIVE - STAR indexes
 ---
-	
+####OPTIONAL ALTERNATIVE - HISAT2 indexes
+
+	cd $RNA_HOME/refs/hg19/
+	mkdir -p hisat2/chr22_ERCC92
+	hisat2-build $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92
+
+####END OF OPTIONAL ALTERNATIVE - HISAT2 indexes
+---
+
 | [[Previous Section|Annotation]] | [[This Section|Indexing]]   | [[Next Section|RNAseq-Data]] |
 |:-------------------------------:|:---------------------------:|:----------------------------:|
 | [[Annotations|Annotation]]       | [[Indexing|Indexing]]       | [[Data|RNAseq-Data]]         |

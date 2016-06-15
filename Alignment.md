@@ -7,12 +7,12 @@ Refer to TopHat manual and tutorial for a more detailed explanation:
 
 * https://ccb.jhu.edu/software/tophat/manual.shtml
 * https://ccb.jhu.edu/software/tophat/tutorial.shtml
-	
+
 TopHat2 basic usage:
 ```
-#tophat2 [options] <bowtie_index> <lane1_reads1[,lane2_reads1,...]> <lane1_reads2[,lane2_reads2,...]> 
+#tophat2 [options] <bowtie_index> <lane1_reads1[,lane2_reads1,...]> <lane1_reads2[,lane2_reads2,...]>
 ```
-	
+
 Extra options specified below:
 
 * '-p 8' tells TopHat to use eight CPUs for bowtie alignments
@@ -23,23 +23,23 @@ Extra options specified below:
 * '--rg-sample' specified a read group sample ID. This together with rg-id will allow you to determine which reads came from which library in the merged bam later on
 * '-G <known transcripts file>' supplies a list of known transcript models.  These will be used to help TopHat measure known exon-exon connections (novel connections will still be predicted)
  * Note that the '-G' option for TopHat has a different meaning than the '-G' option of Cufflinks that we will use in step 9 later
-* '--transcriptome-index'  TopHat will align to both the transcriptome and genome and figure out the 'best' alignments for you.  
- * In order to perform alignments to the transcriptome, an index must be created as we did for the genome.  
- * This parameter tells TopHat where to store it and allows it to be reused in multiple TopHat runs. 
+* '--transcriptome-index'  TopHat will align to both the transcriptome and genome and figure out the 'best' alignments for you.
+ * In order to perform alignments to the transcriptome, an index must be created as we did for the genome.
+ * This parameter tells TopHat where to store it and allows it to be reused in multiple TopHat runs.
 
 ##TopHat alignment
-	
+
 	cd $RNA_HOME/
 	export RNA_DATA_DIR=$RNA_HOME/data/
 	echo $RNA_DATA_DIR
-	
+
 	mkdir -p alignments/tophat/trans_idx
 	cd alignments/tophat
 	export TRANS_IDX_DIR=$RNA_HOME/alignments/tophat/trans_idx/
 	echo $TRANS_IDX_DIR
-	
+
 In our tests, each sample took ~1-1.5 minutes to align
-	
+
 	tophat2 -p 8 -r 60 --library-type fr-firststrand --rg-id=UHR_Rep1 --rg-sample=UHR_Rep1_ERCC-Mix1 -o UHR_Rep1_ERCC-Mix1 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz
 	tophat2 -p 8 -r 60 --library-type fr-firststrand --rg-id=UHR_Rep2 --rg-sample=UHR_Rep2_ERCC-Mix1 -o UHR_Rep2_ERCC-Mix1 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz
 	tophat2 -p 8 -r 60 --library-type fr-firststrand --rg-id=UHR_Rep3 --rg-sample=UHR_Rep3_ERCC-Mix1 -o UHR_Rep3_ERCC-Mix1 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz
@@ -47,7 +47,7 @@ In our tests, each sample took ~1-1.5 minutes to align
 	tophat2 -p 8 -r 60 --library-type fr-firststrand --rg-id=HBR_Rep1 --rg-sample=HBR_Rep1_ERCC-Mix2 -o HBR_Rep1_ERCC-Mix2 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
 	tophat2 -p 8 -r 60 --library-type fr-firststrand --rg-id=HBR_Rep2 --rg-sample=HBR_Rep2_ERCC-Mix2 -o HBR_Rep2_ERCC-Mix2 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
 	tophat2 -p 8 -r 60 --library-type fr-firststrand --rg-id=HBR_Rep3 --rg-sample=HBR_Rep3_ERCC-Mix2 -o HBR_Rep3_ERCC-Mix2 -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/chr22_ERCC92 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
-	
+
 Note: in the above alignments, we are treating each library as an independent data set.  If you had multiple lanes of data for a single library, you would want to align them all together in one TopHat command
 Similarly you might combine technical replicates into a single alignment run (perhaps after examining them and removing outliers...)
 To combine multiple lanes, you would provide all the read1 files as a comma separated list, followed by a space, and then all read2 files as a comma separated list (where both lists have the same order):
@@ -62,7 +62,7 @@ cat */align_summary.txt
 ---
 ###OPTIONAL ALTERNATIVE - STAR alignment
 Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see STAR manual: 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
-	
+
 	cd $RNA_HOME/
 	mkdir -p alignments/star
 	cd alignments/star
@@ -84,25 +84,59 @@ Convert STAR sam files to bam files (required for cufflinks)
 	samtools view -b -S HBR_Rep1/Aligned.out.sam > HBR_Rep1/Aligned.out.bam
 	samtools view -b -S HBR_Rep2/Aligned.out.sam > HBR_Rep2/Aligned.out.bam
 	samtools view -b -S HBR_Rep3/Aligned.out.sam > HBR_Rep3/Aligned.out.bam
-	
+
 Now sort STAR bam files (also required for cufflinks)
 
-	samtools sort UHR_Rep1/Aligned.out.bam UHR_Rep1/Aligned.out.sorted
-	samtools sort UHR_Rep2/Aligned.out.bam UHR_Rep2/Aligned.out.sorted
-	samtools sort UHR_Rep3/Aligned.out.bam UHR_Rep3/Aligned.out.sorted
-	samtools sort HBR_Rep1/Aligned.out.bam HBR_Rep1/Aligned.out.sorted
-	samtools sort HBR_Rep2/Aligned.out.bam HBR_Rep2/Aligned.out.sorted
-	samtools sort HBR_Rep3/Aligned.out.bam HBR_Rep3/Aligned.out.sorted
+	samtools sort UHR_Rep1/Aligned.out.bam -o UHR_Rep1/Aligned.out.sorted.bam
+	samtools sort UHR_Rep2/Aligned.out.bam -o UHR_Rep2/Aligned.out.sorted.bam
+	samtools sort UHR_Rep3/Aligned.out.bam -o UHR_Rep3/Aligned.out.sorted.bam
+	samtools sort HBR_Rep1/Aligned.out.bam -o HBR_Rep1/Aligned.out.sorted.bam
+	samtools sort HBR_Rep2/Aligned.out.bam -o HBR_Rep2/Aligned.out.sorted.bam
+	samtools sort HBR_Rep3/Aligned.out.bam -o HBR_Rep3/Aligned.out.sorted.bam
 
 ####END OF OPTIONAL ALTERNATIVE - STAR alignment
 ---
+###Optional Alternative - HISAT2 alignment
+Perform alignments with HISAT2. HISAT2 uses a graph-based alignment and has succeeded HISAT and TOPHAT2.
+	cd $RNA_HOME/
+	mkdir -p alignments/hisat2
+	cd alignments/hisat2
+	mkdir UHR_Rep1 UHR_Rep2 UHR_Rep3 HBR_Rep1 HBR_Rep2 HBR_Rep3
 
-##Merge TopHat BAM files	
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep1/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep2/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep3/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep1/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep2/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep3/Aligned.out.sam
+
+Convert HISAT2 sam files to bam files (required for cufflinks)
+
+	samtools view -b -S UHR_Rep1/Aligned.out.sam > UHR_Rep1/Aligned.out.bam
+	samtools view -b -S UHR_Rep2/Aligned.out.sam > UHR_Rep2/Aligned.out.bam
+	samtools view -b -S UHR_Rep3/Aligned.out.sam > UHR_Rep3/Aligned.out.bam
+	samtools view -b -S HBR_Rep1/Aligned.out.sam > HBR_Rep1/Aligned.out.bam
+	samtools view -b -S HBR_Rep2/Aligned.out.sam > HBR_Rep2/Aligned.out.bam
+	samtools view -b -S HBR_Rep3/Aligned.out.sam > HBR_Rep3/Aligned.out.bam
+
+Now sort the HISAT2 bam files (also required for cufflinks)
+
+	samtools sort UHR_Rep1/Aligned.out.bam -o UHR_Rep1/Aligned.out.sorted.bam
+	samtools sort UHR_Rep2/Aligned.out.bam -o UHR_Rep2/Aligned.out.sorted.bam
+	samtools sort UHR_Rep3/Aligned.out.bam -o UHR_Rep3/Aligned.out.sorted.bam
+	samtools sort HBR_Rep1/Aligned.out.bam -o HBR_Rep1/Aligned.out.sorted.bam
+	samtools sort HBR_Rep2/Aligned.out.bam -o HBR_Rep2/Aligned.out.sorted.bam
+	samtools sort HBR_Rep3/Aligned.out.bam -o HBR_Rep3/Aligned.out.sorted.bam
+
+####END OF OPTIONAL ALTERNATIVE - HISAT2 alignment
+---
+
+##Merge TopHat BAM files
 Make one glorious BAM combining all UHR data and another for all HBR data. Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information.
-	
+
 UHR
 
-	cd $RNA_HOME/alignments/tophat      
+	cd $RNA_HOME/alignments/tophat
 	mkdir UHR_ERCC-Mix1_ALL
 	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/accepted_hits.bam INPUT=UHR_Rep1_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep2_ERCC-Mix1/accepted_hits.bam INPUT=UHR_Rep3_ERCC-Mix1/accepted_hits.bam
 
@@ -130,7 +164,19 @@ Create comparable files for the STAR alignments by merging individual bam files 
 
 ####END OPTIONAL ALTERNATIVE - Merge STAR bam files
 ---
-	
+###OPTIONAL ALTERNATIVE - merge HISAT2 bam files
+Create comparable files for the HISAT2 alignments by merging individual bam files generated by HISAT2
+
+	cd $RNA_HOME/alignments/hisat2
+	mkdir UHR_ERCC-Mix1_ALL
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=UHR_ERCC-Mix1_ALL/Aligned.out.sorted.bam INPUT=UHR_Rep1/Aligned.out.sorted.bam INPUT=UHR_Rep2/Aligned.out.sorted.bam INPUT=UHR_Rep3/Aligned.out.sorted.bam
+
+	mkdir HBR_ERCC-Mix2_ALL
+	java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar MergeSamFiles OUTPUT=HBR_ERCC-Mix2_ALL/Aligned.out.sorted.bam INPUT=HBR_Rep1/Aligned.out.sorted.bam INPUT=HBR_Rep2/Aligned.out.sorted.bam INPUT=HBR_Rep3/Aligned.out.sorted.bam
+
+####END OPTIONAL ALTERNATIVE - merge HISAT2 bam files
+---
+
 ##PRACTICAL EXERCISE 3
 
 Perform some alignments on an additional pair of read data sets.
@@ -141,6 +187,3 @@ Assignment: Align the reads using the skills you learned above. Try using Tophat
 | [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|IGV-Tutorial]] |
 |:---------------------------------:|:--------------------------:|:-----------------------------:|
 | [[Adapter Trim|Adapter-Trim]]     | [[Alignment|Alignment]]    | [[IGV|IGV-Tutorial]] |
-
-
-
