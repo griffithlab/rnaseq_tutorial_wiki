@@ -1,10 +1,8 @@
 # Command-line Bootcamp
 
-### Adapted by : Jason Walker
-#### McDonnell Genome Institute
-### Original author : Keith Bradnam 
-#### UC Davis Genome Center
-### Version 1.02 --- 2015-11-13
+**Adapted by : Jason Walker, McDonnell Genome Institute**
+**Original author : Keith Bradnam, UC Davis Genome Center**
+**Version 1.03 --- 2016-06-15**
 
 <br><br><br>
 
