@@ -1,5 +1,7 @@
 #0-v. Logging into the Amazon cloud
 
+* The CBW course instructions (including instructions for Windows systems) can be found [here](http://bioinformatics-ca.github.io/logging_into_the_Amazon_cloud/)
+
 * This will ONLY occur once we are in the classroom as it costs to have these servers running. Instructions will be provided in class.
 * Each student will launch their own instance from a preconfigured AMI. In order to log in to your instance, you will need a security certificate. 
  * You will be provided with a key file called: "CBWCG.pem". See the Course Wiki page.
