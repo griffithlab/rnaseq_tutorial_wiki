@@ -31,6 +31,7 @@ tar -xvf alignment_practical.tar
 
 ###Practical Exercise 3 - QC
 On you local machine, download this file: http://cbw**.dyndns.info/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
+
 Using FastQC, open this file and allow it to complete the QC analysis
 
 * How many total sequences are there? 455,217
