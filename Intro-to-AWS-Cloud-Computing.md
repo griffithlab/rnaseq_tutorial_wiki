@@ -24,7 +24,7 @@
    10. [[Step 10. Examining a new instance in the ec2 console|Intro-to-AWS-Cloud-Computing#step-10-examining-a-new-instance-in-the-ec2-console]]
    11. [[Step 11. Logging into an instance|Intro-to-AWS-Cloud-Computing#step-11-logging-into-an-instance]]
 7. [[Trouble-shooting and advanced topics|Intro-to-AWS-Cloud-Computing#trouble-shooting-and-advanced-topics]]
-   1. [[Can't login to EC2 instance - what might have gone wrong?|Intro-to-AWS-Cloud-Computing#i-can-not-log-into-my-ec2-instance-what-might-have-gone-wrong]]
+   1. [[Can not login to EC2 instance - what might have gone wrong?|Intro-to-AWS-Cloud-Computing#i-can-not-log-into-my-ec2-instance-what-might-have-gone-wrong]]
    2. [[How do storage volumes appear within a linux instance on amazon EC2?|Intro-to-AWS-Cloud-Computing#how-do-storage-volumes-appear-within-a-linux-instance-on-amazon-ec2]]
    3. [[Taking stock of compute resources within an ubuntu linux instance|Intro-to-AWS-Cloud-Computing#taking-stock-of-compute-resources-within-an-ubuntu-linux-instance]]
    4. [[Basic setup and administration of an ubuntu linux instance|Intro-to-AWS-Cloud-Computing#basic-setup-and-administration-of-an-ubuntu-linux-instance]]
@@ -35,7 +35,7 @@
    9. [[Further reading and preparing for more advanced AWS cloud computing concepts|Intro-to-AWS-Cloud-Computing#further-reading-and-preparing-for-more-advanced-aws-cloud-computing-concepts]]
 
 ###Preamble
-Cloud computing allows users to quickly access an arbitrary amount of compute resources from a distance without the need to buy or maintain hardware themselves. There are many cloud computing services. This tutorial describes the use of the Amazon Web Services ([AWS](http://aws.amazon.com/)) elastic compute ([EC2](http://aws.amazon.com/ec2/)) resource. However, the fundamental concepts covered here will generally apply to other cloud computing services such as [Google Cloud](https://cloud.google.com/), [Digital Ocean](https://www.digitalocean.com/), [etc.](http://cloud-computing.softwareinsider.com/), though with substantial differences in jargon used by each provider.
+Cloud computing allows users to quickly access an arbitrary amount of compute resources from a distance without the need to buy or maintain hardware themselves. There are many cloud computing services. This tutorial describes the use of the Amazon Web Services ([AWS](http://aws.amazon.com/)) elastic compute ([EC2](http://aws.amazon.com/ec2/)) resource. However, the fundamental concepts covered here will generally apply to other cloud computing services such as [Google Cloud](https://cloud.google.com/), [Digital Ocean](https://www.digitalocean.com/), [Microsoft Azure](https://azure.microsoft.com/), [etc.](http://cloud-computing.softwareinsider.com/), though with substantial differences in jargon used by each provider.
 
 ###Acknowledgements
 Creation of this tutorial on Amazon AWS EC2 was generously supported by [Amazon AWS Education grants](http://aws.amazon.com/grants/).
