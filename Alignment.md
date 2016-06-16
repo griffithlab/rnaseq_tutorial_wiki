@@ -61,7 +61,7 @@ cat */align_summary.txt
 
 ---
 ###OPTIONAL ALTERNATIVE - STAR alignment
-Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see STAR manual: 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
+Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see [STAR manual](https://rna-star.googlecode.com/files/STARmanual_2.3.0.1.pdf): 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
 
 	cd $RNA_HOME/
 	mkdir -p alignments/star
