@@ -11,20 +11,18 @@
 
 ## Introduction
 
-This 'bootcamp' is intended to provide the reader with a basic overview of essential Unix/Linux commands that will allow them to navigate a file system and move, copy, edit files. It will also introduce a brief overview of some 'power' commands in Unix. It was orginally developed as part of a [Bioinformatics Core](http://bioinformatics.ucdavis.edu) Workshop taught at UC Davis ([Using the Linux Command-Line for Analysis of High Throughput Sequence Data](http://training.bioinformatics.ucdavis.edu/docs/2015/06/june-2015-workshop/index.html)).
+This 'bootcamp' is intended to provide the reader with a basic overview of essential Unix/Linux commands that will allow them to navigate a file system and move, copy, and edit files. It will also introduce a brief overview of some 'power' commands in Unix. It was orginally developed as part of a [Bioinformatics Core](http://bioinformatics.ucdavis.edu) Workshop taught at UC Davis ([Using the Linux Command-Line for Analysis of High Throughput Sequence Data](http://training.bioinformatics.ucdavis.edu/docs/2015/06/june-2015-workshop/index.html)).
 
 
 ## Why Unix?
 
-The [Unix operating system][Unix] has been around since 1969. Back then there was no such thing as a graphical user interface. You typed everything. It may seem archaic to use a keyboard to issue commands today, but it's much easier to automate keyboard tasks than mouse tasks. There are several variants of Unix (including [Linux][Linux]), though the differences do not matter much for most basic functions.
+The [Unix operating system][Unix] has been around since 1969. Back then there was no such thing as a graphical user interface. You typed everything. It may seem archaic to use a keyboard to issue commands today, but it is much easier to automate keyboard tasks than mouse tasks. There are several variants of Unix (including [Linux][Linux] and [OSX][OSX]), though the differences do not matter much for most basic functions.
 
 [Unix]: http://en.wikipedia.org/wiki/Unix
 [Linux]: http://en.wikipedia.org/wiki/Linux
+[OSX]: https://en.wikipedia.org/wiki/OS_X
 
-Increasingly, the raw output of biological research exists as _in silico_ data, usually in the form of large text files. Unix is particularly suited to working with such files and has  several powerful (and flexible) commands that can process your data for you. The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things.
-
-
-
+Increasingly, the raw output of biological research exists as _in silico_ data, usually in the form of large text files. Unix is particularly suited to working with such files and has several powerful (and flexible) commands that can process your data for you. The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So, if you can learn just five Unix commands, you will be able to do a lot more than just five things.
 
 ## Typeset Conventions 
 
