@@ -33,7 +33,7 @@ Use `samtools flagstat` to get a basic summary of an alignment.  What percent of
 
 Run `samstat` on UHR/HBR BAMs
 
-	#mkdir ~/bin
+	mkdir ~/bin
 	cd ~/bin
 	wget http://genome.wustl.edu/pub/rnaseq/tools/bin/samstat
 	chmod +x samstat
