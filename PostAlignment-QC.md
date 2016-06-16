@@ -69,30 +69,30 @@ Copy RSeQC Data
 
 Set your working directory and copy the necessary files
 
-      cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/tools/
-      cd ~/workspace/rnaseq/tools/
+	cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/tools/
+	cd ~/workspace/rnaseq/tools/
 
 Unzip the RSeQC file:
 
-      unzip RSeQC.zip
-      cd RSeQC/
+	unzip RSeQC.zip
+	cd RSeQC/
 Note: You should now see the bam, index, and RefSeq bed files listed.  The bam file here is an pair-end non-strand specific example dataset from the RSeQC website.
 
 Run RSeQC commands:
 
-     bam_stat.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
-     clipping_profile.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial -s "PE"
-     geneBody_coverage.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     infer_experiment.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
-     inner_distance.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     junction_annotation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     junction_saturation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     read_distribution.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
-     read_duplication.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     read_GC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-     ls *.pdf
+	bam_stat.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
+	clipping_profile.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial -s "PE"
+	geneBody_coverage.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	infer_experiment.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
+	inner_distance.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	junction_annotation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	junction_saturation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	read_distribution.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
+	read_duplication.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	read_GC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+	ls *.pdf
 
 Go through the generated PDFs by browsing through the following directory in a web browser:
 
