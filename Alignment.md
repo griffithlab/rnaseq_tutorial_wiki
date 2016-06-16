@@ -55,6 +55,7 @@ You can also use samtools merge to combine bam files after alignment. This is th
 
 ###TopHat Alignment Summary
 TopHat generates a summary of the alignments in a text file next to the aligned BAM file.  The below command will print the summary for each alignment to the terminal.
+
 ```
 cat */align_summary.txt
 ```
@@ -98,6 +99,7 @@ Now sort STAR bam files (also required for cufflinks)
 ---
 ###Optional Alternative - HISAT2 alignment
 Perform alignments with HISAT2. HISAT2 uses a graph-based alignment and has succeeded HISAT and TOPHAT2.
+
 	cd $RNA_HOME/
 	mkdir -p alignments/hisat2
 	cd alignments/hisat2
