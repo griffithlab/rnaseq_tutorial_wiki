@@ -32,7 +32,7 @@ View 10 lines from approximately the middle of this file
 
 	head -n 425000 chr22_ERCC92.fa | tail
 	
-Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/  
+Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., http://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/.
 Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files (described in the next section).
 
 | [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
