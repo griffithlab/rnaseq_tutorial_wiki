@@ -1,7 +1,7 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 #2-ii. Alignment
-Use Bowtie2/Tophat2 to align all pairs of read files to the genome.  The output of this step will be a SAM/BAM files for each data set.
+Use Bowtie2/Tophat2 to align all pairs of read files to the genome.  The output of this step will be a SAM/BAM file for each data set.
 
 Refer to TopHat manual and tutorial for a more detailed explanation:
 
@@ -55,13 +55,14 @@ You can also use samtools merge to combine bam files after alignment. This is th
 
 ###TopHat Alignment Summary
 TopHat generates a summary of the alignments in a text file next to the aligned BAM file.  The below command will print the summary for each alignment to the terminal.
+
 ```
 cat */align_summary.txt
 ```
 
 ---
 ###OPTIONAL ALTERNATIVE - STAR alignment
-Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see STAR manual: 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
+Perform alignments with STAR. STAR alignment results can be used for Cufflinks analysis or other further RNA-seq analysis. Some further optional parameters might be needed though (see [STAR manual](https://rna-star.googlecode.com/files/STARmanual_2.3.0.1.pdf): 8.2.3: XS SAM strand attribute for Cufflinks/Cuffdiff).
 
 	cd $RNA_HOME/
 	mkdir -p alignments/star
@@ -98,17 +99,18 @@ Now sort STAR bam files (also required for cufflinks)
 ---
 ###Optional Alternative - HISAT2 alignment
 Perform alignments with HISAT2. HISAT2 uses a graph-based alignment and has succeeded HISAT and TOPHAT2.
+
 	cd $RNA_HOME/
 	mkdir -p alignments/hisat2
 	cd alignments/hisat2
 	mkdir UHR_Rep1 UHR_Rep2 UHR_Rep3 HBR_Rep1 HBR_Rep2 HBR_Rep3
 
-	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep1/Aligned.out.sam
-	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep2/Aligned.out.sam
-	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep3/Aligned.out.sam
-	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep1/Aligned.out.sam
-	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep2/Aligned.out.sam
-	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 -1 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep3/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 --known-splicesite-infile $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt --dta-cufflinks --rna-strandness RF -1 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep1/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 --known-splicesite-infile $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt --dta-cufflinks --rna-strandness RF -1 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep2/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 --known-splicesite-infile $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt --dta-cufflinks --rna-strandness RF -1 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep3/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 --known-splicesite-infile $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt --dta-cufflinks --rna-strandness RF -1 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep1/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 --known-splicesite-infile $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt --dta-cufflinks --rna-strandness RF -1 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep2/Aligned.out.sam
+	hisat2 -p 8 -x $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92 --known-splicesite-infile $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt --dta-cufflinks --rna-strandness RF -1 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./HBR_Rep3/Aligned.out.sam
 
 Convert HISAT2 sam files to bam files (required for cufflinks)
 
@@ -179,10 +181,13 @@ Create comparable files for the HISAT2 alignments by merging individual bam file
 
 ##PRACTICAL EXERCISE 3
 
-Perform some alignments on an additional pair of read data sets.
-* Hint: Do this analysis in the separate working directory called ‘practice’ that you created in Practical Exercise 2.
+Assignment: Perform some alignments on an additional pair of read data sets. Align the reads using the skills you learned above. Try using Tophat or STAR aligners. 
 
-Assignment: Align the reads using the skills you learned above. Try using Tophat or STAR aligners. When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---alignment)
+* Hint: Do this analysis on the additional data and in the separate working directory called ‘practice’ that you created in [Practical Exercise 2](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data#practical-exercise-2).
+
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---alignment)
+
+---
 
 | [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|IGV-Tutorial]] |
 |:---------------------------------:|:--------------------------:|:-----------------------------:|

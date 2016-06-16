@@ -127,7 +127,7 @@ make
 
 ```
 cd $RNA_HOME/tools/
-wget http://downloads.sourceforge.net/project/flexbar/2.4/flexbar_v2.4_linux64.tgz
+wget https://github.com/seqan/flexbar/releases/download/v2.4.0/flexbar_v2.4_linux64.tgz
 tar -xzvf flexbar_v2.4_linux64.tgz
 cd flexbar_v2.4_linux64
 export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.4_linux64:$LD_LIBRARY_PATH

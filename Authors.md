@@ -18,10 +18,11 @@ We are grateful to the following people for past and ongoing contributions to th
 - Fouad Yousif (Ontario Institute for Cancer Research) 
 - Zhibin Lu (Ontario Institute for Cancer Research)
 - Rodrigo Goya (British Columbia Cancer Agency)
-- Vincent Magrini (The Genome Institute, Washington University School of Medicine)
-- Sean McGrath (The Genome Institute, Washington University School of Medicine) 
-- Richard K Wilson (The Genome Institute, Washington University School of Medicine) 
-- Elaine R Mardis (The Genome Institute, Washington University School of Medicine)
+- Vincent Magrini (McDonnell Genome Institute, Washington University School of Medicine)
+- Sean McGrath (McDonnell Genome Institute, Washington University School of Medicine) 
+- Zachary Skidmore (McDonnell Genome Institute, Washington University School of Medicine)
+- Richard K Wilson (McDonnell Genome Institute, Washington University School of Medicine) 
+- Elaine R Mardis (McDonnell Genome Institute, Washington University School of Medicine)
 - All of the students that have taken our RNA-seq courses through [CBW](http://bioinformatics.ca/workshops/current) or [CSHL](http://meetings.cshl.edu/courses.html)
 
 | Previous Section        | [[This Section|Authors]]    | [[Next Section|Citation]] |

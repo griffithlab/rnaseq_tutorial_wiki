@@ -1,13 +1,9 @@
 # Command-line Bootcamp
 
-### Adapted by : Jason Walker
-#### McDonnell Genome Institute
-### Original author : Keith Bradnam 
-#### UC Davis Genome Center
-### Version 1.02 --- 2015-11-13
-
-<br><br><br>
-
+**Adapted by : Jason Walker, McDonnell Genome Institute**<br>
+**Original author : Keith Bradnam, UC Davis Genome Center**<br>
+**Version 1.03 --- 2016-06-15**<br>
+<br>
 
 ><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please send feedback, questions, money, or abuse to <krbradnam@ucdavis.edu> 
 
@@ -15,20 +11,18 @@
 
 ## Introduction
 
-This 'bootcamp' is intended to provide the reader with a basic overview of essential Unix/Linux commands that will allow them to navigate a file system and move, copy, edit files. It will also introduce a brief overview of some 'power' commands in Unix. It was orginally developed as part of a [Bioinformatics Core](http://bioinformatics.ucdavis.edu) Workshop taught at UC Davis ([Using the Linux Command-Line for Analysis of High Throughput Sequence Data](http://training.bioinformatics.ucdavis.edu/docs/2015/06/june-2015-workshop/index.html)).
+This 'bootcamp' is intended to provide the reader with a basic overview of essential Unix/Linux commands that will allow them to navigate a file system and move, copy, and edit files. It will also introduce a brief overview of some 'power' commands in Unix. It was orginally developed as part of a [Bioinformatics Core](http://bioinformatics.ucdavis.edu) Workshop taught at UC Davis ([Using the Linux Command-Line for Analysis of High Throughput Sequence Data](http://training.bioinformatics.ucdavis.edu/docs/2015/06/june-2015-workshop/index.html)).
 
 
 ## Why Unix?
 
-The [Unix operating system][Unix] has been around since 1969. Back then there was no such thing as a graphical user interface. You typed everything. It may seem archaic to use a keyboard to issue commands today, but it's much easier to automate keyboard tasks than mouse tasks. There are several variants of Unix (including [Linux][Linux]), though the differences do not matter much for most basic functions.
+The [Unix operating system][Unix] has been around since 1969. Back then there was no such thing as a graphical user interface. You typed everything. It may seem archaic to use a keyboard to issue commands today, but it is much easier to automate keyboard tasks than mouse tasks. There are several variants of Unix (including [Linux][Linux] and [OSX][OSX]), though the differences do not matter much for most basic functions.
 
 [Unix]: http://en.wikipedia.org/wiki/Unix
 [Linux]: http://en.wikipedia.org/wiki/Linux
+[OSX]: https://en.wikipedia.org/wiki/OS_X
 
-Increasingly, the raw output of biological research exists as _in silico_ data, usually in the form of large text files. Unix is particularly suited to working with such files and has  several powerful (and flexible) commands that can process your data for you. The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things.
-
-
-
+Increasingly, the raw output of biological research exists as _in silico_ data, usually in the form of large text files. Unix is particularly suited to working with such files and has several powerful (and flexible) commands that can process your data for you. The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So, if you can learn just five Unix commands, you will be able to do a lot more than just five things.
 
 ## Typeset Conventions 
 

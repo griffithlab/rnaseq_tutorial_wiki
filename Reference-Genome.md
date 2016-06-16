@@ -16,9 +16,9 @@ Make a copy of chr22 + ERCC fasta in your working directory. The complete data f
 
 This has been done for you and that data placed on an ftp server. It contains chr22 and ERCC transcript fasta files in both a single combined file and individual files. Download them now.
 
-     wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/chr22_ERCC92.tar.gz
-     tar -zxvf chr22_ERCC92.tar.gz
-     rm chr22_ERCC92.tar.gz
+	wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/chr22_ERCC92.tar.gz
+	tar -zxvf chr22_ERCC92.tar.gz
+	rm chr22_ERCC92.tar.gz
 	
 View the first 10 lines of this file
 
