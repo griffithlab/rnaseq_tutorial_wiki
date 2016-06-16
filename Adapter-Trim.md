@@ -76,7 +76,7 @@ The resulting html reports can be viewed by navigating to:
 
 ##PRACTICAL EXERCISE 4
 
-Assignment: Using the approach above, trim the reads for both normal and tumor samples that you downloaded for the previous practical exercise. 
+Assignment: Using the approach above, trim the reads for both normal and tumor samples that you downloaded for the previous practical exercise. Once you have trimmed the reads, compare a pre- and post- trimming FastQ file using the FastQC tool.
 
 * Hint: These files should have been downloaded to $RNA_HOME/practice/data/.
 

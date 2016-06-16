@@ -50,6 +50,10 @@ flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_mul
 
 ```
 
+Compare these files using FastQC: 
+* http://cbw##.dyndns.info/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
+* http://cbw##.dyndns.info/rnaseq/practice/data/trimmed/hcc1395_normal_1.fastq.gz
+
 ###Practical Exercise 5 - Alignment
 
 ```
