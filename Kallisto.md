@@ -3,10 +3,10 @@
 
 ##Using Kallisto for reference free transcript expression abundance estimation from RNA-seq data
 
-For more information on Kallisto, refer to the <a href="https://pachterlab.github.io/kallisto/about.html">Kallisto project page</a> and <a href="https://pachterlab.github.io/kallisto/manual.html">Kallisto manual page</a>. 
+For more information on Kallisto, refer to the <a href="https://pachterlab.github.io/kallisto/about.html">Kallisto project page</a> and <a href="https://pachterlab.github.io/kallisto/manual.html">Kallisto manual page</a>.
 
 ##Install Kallisto
-**TODO: after development is complete, this can be moved to the installation section** 
+**TODO: after development is complete, this can be moved to the installation section**
 
 ```
 cd $RNA_HOME/
@@ -22,11 +22,11 @@ kallisto
 ```
 
 ##Obtain transcript sequences in fasta format
-Note that we already have fasta sequences of reference genome sequence from earlier in the RNA-seq tutorial. Kallisto works directly on target cDNA/transcript sequences. We have transcript models for genes on chromosome 22. These transcript models were downloaded from Ensembl in GTF format. This GTF contains a description of the coordinates of exons that make up each transcript but it does not contain the transcript sequences themselves. So currently we do not have transcript sequences needed by Kallisto. There are many places we could obtain  transcript sequences. For example, we could download them directly in Fasta format from the <a href="http://www.ensembl.org/info/data/ftp/index.html">Ensembl FTP site</a>. 
+Note that we already have fasta sequences of reference genome sequence from earlier in the RNA-seq tutorial. Kallisto works directly on target cDNA/transcript sequences. We have transcript models for genes on chromosome 22. These transcript models were downloaded from Ensembl in GTF format. This GTF contains a description of the coordinates of exons that make up each transcript but it does not contain the transcript sequences themselves. So currently we do not have transcript sequences needed by Kallisto. There are many places we could obtain  transcript sequences. For example, we could download them directly in Fasta format from the <a href="http://www.ensembl.org/info/data/ftp/index.html">Ensembl FTP site</a>.
 
 However, to allow us to compare Kallisto results to expression results from Cufflinks, perhaps we should create a custom Fasta files that corresponds to the transcripts we used for the Cufflinks analysis. How can we obtain these transcript sequences in Fasta format?
 
-We could download the complete fasta transcript database for human and pull out only those for genes on chromosome 22. Or we could use a tool from `tophat` called `gtf_to_fasta` to generate a fasta sequence from our GTF file. This approach is convenient because it will also include the sequences for the ERCC spike in controls, allowing us to generate Kallisto abundance estimates for those features as well. 
+We could download the complete fasta transcript database for human and pull out only those for genes on chromosome 22. Or we could use a tool from `tophat` called `gtf_to_fasta` to generate a fasta sequence from our GTF file. This approach is convenient because it will also include the sequences for the ERCC spike in controls, allowing us to generate Kallisto abundance estimates for those features as well.
 
 ```
 cd $RNA_HOME/refs/hg19/genes/
@@ -40,7 +40,7 @@ wc -l chr22_ERCC92_transcripts*.fa
 ```
 
 ##Build a Kallisto transcriptome index
-Remember that Kallisto does not perform *alignment* or use a reference genome sequence. Instead it performs *pseudoalignment* to determine the *compatibility* of reads with targets (transcript sequences in this case). However, similar to alignment algorithms like Tophat or STAR, Kallisto requires an **index** to assess this compatibility efficiently and quickly.  
+Remember that Kallisto does not perform *alignment* or use a reference genome sequence. Instead it performs *pseudoalignment* to determine the *compatibility* of reads with targets (transcript sequences in this case). However, similar to alignment algorithms like Tophat or STAR, Kallisto requires an **index** to assess this compatibility efficiently and quickly.
 
 ```
 cd $RNA_HOME/refs/hg19/
@@ -92,6 +92,7 @@ https://github.com/genome/gms/wiki/HCC1395-WGS-Exome-RNA-Seq-Data
 
 Download the data
 ```
+mkdir $RNA_HOME/expression/data/
 cd $RNA_HOME/expression/data/
 mkdir hcc1395
 cd hcc1395
@@ -107,7 +108,7 @@ java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=
 java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq VALIDATION_STRINGENCY=LENIENT
 ```
 
-Now repeat the concepts above to obtain abundance estimates for all genes. 
+Now repeat the concepts above to obtain abundance estimates for all genes.
 
 Note:
 - You will have to get all transcripts instead of just those for a single chromosome
@@ -118,5 +119,3 @@ Note:
 | [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Abbreviations]]  |
 |:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
 | [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]       | [[Abbreviations|Abbreviations]] |
-
-
