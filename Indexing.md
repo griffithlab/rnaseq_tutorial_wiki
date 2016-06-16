@@ -31,10 +31,13 @@ Create index files for use with STAR
 ####END OF OPTIONAL ALTERNATIVE - STAR indexes
 ---
 ####OPTIONAL ALTERNATIVE - HISAT2 indexes
+Create reference and splice site index files for use with HISAT2
 
 	cd $RNA_HOME/refs/hg19/
 	mkdir -p hisat2/chr22_ERCC92
 	hisat2-build $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92
+
+	extract_splice_sites.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > splicesites.txt
 
 ####END OF OPTIONAL ALTERNATIVE - HISAT2 indexes
 ---
