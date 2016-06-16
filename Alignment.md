@@ -183,7 +183,7 @@ Create comparable files for the HISAT2 alignments by merging individual bam file
 
 Assignment: Perform some alignments on an additional pair of read data sets. Align the reads using the skills you learned above. Try using Tophat or STAR aligners. 
 
-* Hint: Do this analysis in the separate working directory called ‘practice’ that you created in Practical Exercise 2.
+* Hint: Do this analysis on the additional data and in the separate working directory called ‘practice’ that you created in [Practical Exercise 2](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data#practical-exercise-2).
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---alignment)
 
