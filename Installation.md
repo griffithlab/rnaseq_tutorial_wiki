@@ -90,9 +90,7 @@ make
 
 
 ##[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-Note, the linux installation below will not work without X11 libraries (as on Amazon cloud)
-For the course we will instead install on student laptops
-For completeness, here is how it would be installed on a linux system with X11 libraries
+In addition to installing on the cloud you should also install FastQC on your own laptop/desktop
 
 ```
 cd $RNA_HOME/tools/
