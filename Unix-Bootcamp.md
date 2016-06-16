@@ -1,11 +1,9 @@
 # Command-line Bootcamp
 
-**Adapted by : Jason Walker, McDonnell Genome Institute**
-**Original author : Keith Bradnam, UC Davis Genome Center**
-**Version 1.03 --- 2016-06-15**
-
-<br><br><br>
-
+**Adapted by : Jason Walker, McDonnell Genome Institute**<br>
+**Original author : Keith Bradnam, UC Davis Genome Center**<br>
+**Version 1.03 --- 2016-06-15**<br>
+<br>
 
 ><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please send feedback, questions, money, or abuse to <krbradnam@ucdavis.edu> 
 
