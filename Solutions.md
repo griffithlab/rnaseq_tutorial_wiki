@@ -29,7 +29,17 @@ wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
 tar -xvf alignment_practical.tar
 ```
 
-###Practical Exercise 3 - Alignment
+###Practical Exercise 3 - QC
+On you local machine, download this file: http://cbw**.dyndns.info/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
+Using FastQC, open this file and allow it to complete the QC analysis
+
+* How many total sequences are there? 455,217
+* What is the range (x - y) of read lengths observed? 25 - 100
+* What is the most common average sequence quality score? 38
+* What is the most common kmer that is observed? AACCATC
+
+
+###Practical Exercise 4 - Alignment
 
 ```
 export RNA_HOME=~/workspace/rnaseq

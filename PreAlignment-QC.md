@@ -19,6 +19,27 @@ Then, go to the following url in your browser:
 * Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (ex. 101.0.1.101))
 * Click on any of the *_fastqc.html files to view the FastQC report
 
+---
+##PRACTICAL EXERCISE 3
+
+Assignment: Run FASTQC on one of the additional fastq files you downloaded in the previous practical exercise. 
+
+* Hint: Remember that you stored this data in a separate working directory called ‘practice’.
+* Hint: Use the same approach as above to get a copy of the fastq file on your local machine by downloading it from your cloud instance.
+
+Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by examining the output.
+
+* How many total sequences are there?
+* What is the range (x - y) of read lengths observed?
+* What is the most common average sequence quality score?
+* What is the most common kmer that is observed?
+
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---qc)
+
+---
+
+
+
 | [[Previous Section|RNAseq-Data]] | [[This Section|PreAlignment-QC]]    | [[Next Section|Adapter-Trim]] |
 |:--------------------------------:|:-----------------------------------:|:--------------------------:|
 | [[Data|RNAseq-Data]]             | [[Data QC|PreAlignment-QC]]         | [[Adapter Trim|Adapter-Trim]]    |
