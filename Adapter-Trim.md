@@ -73,6 +73,22 @@ The resulting html reports can be viewed by navigating to:
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/trimmed/
 
+
+##PRACTICAL EXERCISE 4
+
+Assignment: Using the approach above, trim the reads for both normal and tumor samples that you downloaded for the previous practical exercise. 
+
+* Hint: These files should have been downloaded to $RNA_HOME/practice/data/.
+
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-4---trim)
+
+---
+
+
+
+
+
+
 | [[Previous Section|PreAlignment-QC]] | [[This Section|Adapter Trim]] | [[Next Section|Alignment]] |
 |:------------------------------------:|:--------------------------:|:--------------------------------------------:|
 | [[Data QC|PreAlignment-QC]]          | [[Adapter Trim|Adapter-Trim]]    | [[Alignment|Alignment]]         |
