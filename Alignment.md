@@ -1,7 +1,7 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 #2-ii. Alignment
-Use Bowtie2/Tophat2 to align all pairs of read files to the genome.  The output of this step will be a SAM/BAM files for each data set.
+Use Bowtie2/Tophat2 to align all pairs of read files to the genome.  The output of this step will be a SAM/BAM file for each data set.
 
 Refer to TopHat manual and tutorial for a more detailed explanation:
 
