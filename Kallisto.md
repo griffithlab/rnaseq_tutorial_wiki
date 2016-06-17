@@ -82,6 +82,20 @@ mv transcript_tpms_all_samples.tsv2 transcript_tpms_all_samples.tsv
 rm -f header.tsv
 ```
 
+##Create a custom transcriptome database to examine a specific set of genes
+For example, suppose we just want to quickly assess the presence of ribosomal RNA genes only. We can obtain these genes from an Ensembl GTF file. In the example below we will use our chromosome 22 GTF file for demonstration purposes. But in a 'real world' experiment you would you a GTF for all chromosomes. Once we have found GTF records for ribosomal RNA genes, we will create a fasta file that contains the sequences for these transcripts, and then index this sequence database for use with Kallisto.
+
+```
+cd $RNA_HOME/refs/hg19/genes
+grep rRNA genes_chr22_ERCC92.gtf > genes_chr22_ERCC92_rRNA.gtf 
+gtf_to_fasta genes_chr22_ERCC92_rRNA.gtf ../fasta/chr22_ERCC92/chr22_ERCC92.fa chr22_rRNA_transcripts.fa
+cat chr22_rRNA_transcripts.fa | perl -ne 'if ($_ =~/^\>\d+\s+\w+\s+(ERCC\S+)[\+\-]/){print ">$1\n"}elsif($_ =~ /\d+\s+(ENST\d+)/){print ">$1\n"}else{print $_}' > chr22_rRNA_transcripts.clean.fa
+cat chr22_rRNA_transcripts.clean.fa
+cd $RNA_HOME/refs/hg19/
+kallisto index --index=chr22_rRNA_transcripts_kallisto_index ../genes/chr22_rRNA_transcripts.clean.fa
+```
+
+We can now use this index with Kallisto to assess the abundance of rRNA genes in a set of samples.
 
 ##Exercise: Do a performance test using a real large dataset
 Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 'normal' cell line here:
