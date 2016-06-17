@@ -89,6 +89,15 @@ mv transcript_tpms_all_samples.tsv2 transcript_tpms_all_samples.tsv
 rm -f header.tsv
 ```
 
+##Compare transcript abundance estimates from Kallisto to isoform abundance estimates from Cufflinks
+How similar are the results we obtained from Kallisto to those from Cufflinks? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
+
+To do this comparison, we need to gather the expression estimates for each of our replicates from both approaches. The Kallisto results were neatly organized into a single file above. Next we need to obtain the transcript expression results from cufflinks (e.g. `$RNA_HOME/expression/tophat_cufflinks/ref_only/HBR_Rep1_ERCC-Mix2/isoforms.fpkm_tracking)`. 
+
+```
+Work in progress...
+```
+
 ##Create a custom transcriptome database to examine a specific set of genes
 For example, suppose we just want to quickly assess the presence of ribosomal RNA genes only. We can obtain these genes from an Ensembl GTF file. In the example below we will use our chromosome 22 GTF file for demonstration purposes. But in a 'real world' experiment you would you a GTF for all chromosomes. Once we have found GTF records for ribosomal RNA genes, we will create a fasta file that contains the sequences for these transcripts, and then index this sequence database for use with Kallisto.
 
