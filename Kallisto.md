@@ -92,8 +92,7 @@ https://github.com/genome/gms/wiki/HCC1395-WGS-Exome-RNA-Seq-Data
 
 Download the data
 ```
-mkdir $RNA_HOME/expression/data/
-cd $RNA_HOME/expression/data/
+cd $RNA_HOME/data/
 mkdir hcc1395
 cd hcc1395
 wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam
