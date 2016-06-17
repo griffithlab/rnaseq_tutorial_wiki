@@ -117,10 +117,12 @@ wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gera
 
 Since the paths above will download BAM files but Kallisto expects FASTQ files for the read data. You will need to convert from BAM back to FASTQ. Try using Picard to do this.
 
-Example BAM to FASTQ conversion commands (note that you need to specify the correct path for your Picard installation):
+Example BAM to FASTQ conversion commands (note that you need to specify the correct path for your Picard installation), followed by compressing the resulting FastQ files to save space:
 ```
 java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C1TD1ACXX_8_ACAGTG.bam FASTQ=hcc1395_tumor_R1.fastq SECOND_END_FASTQ=hcc1395_tumor_R2.fastq VALIDATION_STRINGENCY=LENIENT
+gzip hcc1395_tumor*.fastq
 java -Xmx2g -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar SamToFastq INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq VALIDATION_STRINGENCY=LENIENT
+gzip hcc1395_normal*.fastq
 ```
 
 Now repeat the concepts above to obtain abundance estimates for all genes.
