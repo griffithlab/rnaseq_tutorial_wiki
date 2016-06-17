@@ -39,6 +39,8 @@ cat chr22_ERCC92_transcripts.fa | perl -ne 'if ($_ =~/^\>\d+\s+\w+\s+(ERCC\S+)[\
 wc -l chr22_ERCC92_transcripts*.fa
 ```
 
+View the resulting 'clean' file using `less chr22_ERCC92_transcripts.clean.fa`. View the end of this file use `tail chr22_ERCC92_transcripts.clean.fa`. Note that we have one fasta record for each Ensembl transcript on chromosome 22 and we have an additional fasta record for each ERCC spike-in sequence.
+
 ##Build a Kallisto transcriptome index
 Remember that Kallisto does not perform *alignment* or use a reference genome sequence. Instead it performs *pseudoalignment* to determine the *compatibility* of reads with targets (transcript sequences in this case). However, similar to alignment algorithms like Tophat or STAR, Kallisto requires an **index** to assess this compatibility efficiently and quickly.
 
