@@ -32,7 +32,7 @@ E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
   </ol>
   <li><strong>Module 2 - RNA-seq Alignment and Visualization</strong></li>
   <ol start="i">
-    <li>[[Preprocessing|Preprocessing]]</li>
+    <li>[[Preprocessing|Adapter-Trim]]</li>
     <li>[[Alignment|Alignment]]</li>
     <li>[[IGV|IGV-Tutorial]]</li>
     <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
