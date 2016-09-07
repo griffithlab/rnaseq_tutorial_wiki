@@ -1,7 +1,7 @@
 #0-vii. Resources
 
 #### 1. Recommended Reading and RNA-seq Resources
-- [Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](http://www.nature.com/nprot/journal/v11/n9/full/nprot.2016.095.html)
+- [Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/TranscriptLevelExpression_Pertea_2016.pdf)
 - [RNA-seqlopedia](http://rnaseq.uoregon.edu/) (Includes a very comprehensive review of library construction concepts)
 - [List of RNA-Seq bioinformatics tools](https://en.wiki2.org/wiki/List_of_RNA-Seq_bioinformatics_tools)
 - [RNA Sequencing and Analysis - 2015 review](http://cshprotocols.cshlp.org/content/early/2015/04/11/pdb.top084970.abstract)
