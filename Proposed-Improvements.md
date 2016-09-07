@@ -93,6 +93,10 @@ Gray lab breast cancer cell line dataset:
 
 Perhaps HISAT2 can be used instead of TopHat/STAR.  Using only a single aligner would save time for exploring more concepts downstream. Not sure of the value of using multiple alignments anyway. Time to shift focus a bit more towards the downstream stuff as alignment and QC become more routine.
 
+Also, the new "Tuxedo" protocol paper is out demonstrating an equivalent HISAT2/StringTie/Ballgown workflow:
+[Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](http://www.nature.com/nprot/journal/v11/n9/full/nprot.2016.095.html)
+
+
 ### Update the alternative splicing module to provide an alternative analysis workflow to Cufflinks
 After use of TopHat2 or RNA-star (or hopefully HISAT2), [QoRTs]() (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq]() and [JunctionSeq](). 
 
