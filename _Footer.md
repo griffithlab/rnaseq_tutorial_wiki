@@ -1,3 +1,7 @@
+### Want to contribute to this Wiki?
+
+[Fork it and send a pull request.](https://github.com/griffithlab/rnaseq_tutorial_wiki.git)
+
 **[Table of Contents](https://github.com/griffithlab/rnaseq_tutorial/wiki)**<br>
 Module 0: [[Authors|Authors]] | [[Citation|Citation]] | [[Syntax|Syntax]] | [[Intro to AWS|Intro-to-AWS-Cloud-Computing]] | [[Log into AWS|Logging-into-Amazon-Cloud]] | [[Unix|Unix-Bootcamp]]  | [[Environment|Environment]] | [[Resources|Resources]]<br>
 Module 1: [[Installation|Installation]] | [[Reference Genomes|Reference-Genome]] | [[Annotations|Annotation]] | [[Indexing|Indexing]] | [[Data|RNAseq-Data]] | [[Data QC|PreAlignment-QC]]<br>
