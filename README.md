@@ -1,4 +1,4 @@
-#rnaseq_tutorial_wiki
+# rnaseq_tutorial_wiki
 The actual git repo with pull requests enabled, for the [rnaseq_tutorial wiki](https://github.com/griffithlab/rnaseq_tutorial/wiki)
 
 [![Build Status](https://travis-ci.org/griffithlab/rnaseq_tutorial_wiki.svg?branch=master)](https://travis-ci.org/griffithlab/rnaseq_tutorial_wiki)
