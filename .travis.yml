@@ -1,0 +1,15 @@
+script:
+- |
+  git config user.name jasonwalker80
+  git config user.email jason.walker@wustl.edu
+  git remote remove origin
+  git remote add origin https://$GITHUB_API_KEY@github.com/Tyriar/wiki-sync-example-wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/Tyriar/wiki-sync-example.wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: f4tZVq6SSuau1ilkjmXMIlBDFEbQiOhWUEeOM3ksKiUcL9fKjRV217TmSNLfti85w3J/5Pt9T0IE+QBq7aU5/Xnf/AdTSvXqihLvnCX78Qa3P2/gbRiVe+v1kW6+patezSOz41HE8jzWfSZWpZGLUpTZwrIoD9YygFpVkAi0YLG4HcsLb/avbos6cjswaXj6AtJoTZjm8161JHKKzqqShVCqtY8viojm8eI0v/iH7JmcYoJy2lS9oVrOIyEC/v9ySOjY5gWLRSD+1LACNm40jz9mySaVfjjG89M1mwJwuYVxh5LZNsgCc1UncOQ0CQI0MkpJDXqous6FtRUUYviqYjT9NyHIFjfLU38PsbFSMb5HZ0M70TbjGNAyOQK//kLpNxUqDY66j6Z16MCkLB3TZ8L5vjJV+E4Rl2UTu2ZDI1ETQ+kAg3H6LXanAq55s3VmL7daOJPZBWPXGTaEPAofKoJJoURqzuGDEFH5garGTcrjGPMThEVahKtuyAqNKHD/lwjKpuMc6wsQpwZiNbXzcfJvb1pD5l0nIk5/7RxsDQVBUrvLHQdsLA3F8VEhyDyLvkhbpePlzhUtb4GCqegppfs8gcWP+Y8R2Nj3W41R+DT4Nea9nSsngVrw186c19TLeeKHkWjSpUut7QGJ9lmfgJ2hlzRWNUpQHDPISKiOV5Q=
