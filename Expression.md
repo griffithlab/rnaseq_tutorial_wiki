@@ -13,8 +13,11 @@ In this module, we will run Cufflinks in 'reference only' mode. For simplicity a
  * http://cole-trapnell-lab.github.io/cufflinks/manual/
 
 Cufflinks basic usage:
-```
-#cufflinks [options] <hits.sam>
+
+```bash
+
+cufflinks [options] <hits.sam>
+
 ```
 
 Extra options specified below:
@@ -24,59 +27,32 @@ Extra options specified below:
 '--library-type fr-firststrand' Tells Cufflinks we are analyzing a strand-specific library protocol but is not required since TopHat provides the XS BAM tag.
 '-o' tells Cufflinks to write output to a particular directory (one per sample)
 
-	cd $RNA_HOME/
-	mkdir -p expression/tophat_cufflinks/ref_only/
-	cd expression/tophat_cufflinks/ref_only/
-	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam
-	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam
-	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam
+```bash
 
-	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam
-	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
-	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+cd $RNA_HOME/
+mkdir -p expression/cufflinks/ref_only/
+cd expression/cufflinks/ref_only/
 
----
-###OPTIONAL ALTERNATIVE - Cufflinks on STAR
-Run cufflinks on STAR alignments instead of TopHat alignments.  Note, the library type is now required since STAR does not produce the appropriate XS tags for strand-specific RNA-seq protocols:
+cufflinks -p 8 -o HBR_Rep1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep1.bam
+cufflinks -p 8 -o HBR_Rep2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep2.bam
+cufflinks -p 8 -o HBR_Rep3 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep3.bam
 
-	cd $RNA_HOME/
-	mkdir -p expression/star_cufflinks/ref_only/
-	cd expression/star_cufflinks/ref_only/
-	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep1/Aligned.out.sorted.bam
-	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/HBR_Rep3/Aligned.out.sorted.bam
+cufflinks -p 8 -o UHR_Rep1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep1.bam
+cufflinks -p 8 -o UHR_Rep2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep2.bam
+cufflinks -p 8 -o UHR_Rep3 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep3.bam
 
-	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep1/Aligned.out.sorted.bam
-	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/star/UHR_Rep3/Aligned.out.sorted.bam
-
-
-####END OF OPTIONAL ALTERNATIVE - Cufflinks on STAR
----
-###OPTIONAL ALTERNATIVE - Cufflinks on HISAT2
-Run cufflinks on HISAT2 alignments instead of TopHat alignments.
-
-	cd $RNA_HOME/
-	mkdir -p expression/hisat2_cufflinks/ref_only/
-	cd expression/hisat2_cufflinks/ref_only/
-	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep1/Aligned.out.sorted.bam
-	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep3/Aligned.out.sorted.bam
-
-	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep1/Aligned.out.sorted.bam
-	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep2/Aligned.out.sorted.bam
-	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --library-type fr-firststrand --GTF $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep3/Aligned.out.sorted.bam
-
-
-####END OF OPTIONAL ALTERNATIVE - Cufflinks on HISAT2
----
+```
 
 What does the raw output from Cufflinks look like?
 
-	cd $RNA_HOME/expression/tophat_cufflinks/ref_only/UHR_Rep1_ERCC-Mix1/
-	ls -l
-	head isoforms.fpkm_tracking
-	cut -f 1,4,7-13 isoforms.fpkm_tracking | less
+```bash
+
+cd $RNA_HOME/expression/cufflinks/ref_only/UHR_Rep1/
+ls -l
+head isoforms.fpkm_tracking
+cut -f 1,4,7-13 isoforms.fpkm_tracking | less
+
+```
 
 Press 'q' to exit the 'less' display
 
@@ -88,8 +64,11 @@ Refer to the HTSeq documentation for a more detailed explanation:
 * http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
 
 htseq-count basic usage:
-```
+
+```bash
+
 htseq-count [options] <sam_file> <gff_file>
+
 ```
 
 Extra options specified below:
@@ -101,42 +80,49 @@ Extra options specified below:
 * '--type' specifies the feature type (3rd column in GFF file) to be used. (default, suitable for RNA-Seq and Ensembl GTF files: exon)
 * '--idattr' The feature ID used to identity the counts in the output table. The default, suitable for RNA-SEq and Ensembl GTF files, is gene_id.
 
-We could use either the tophat, HISAT2, or STAR alignments. We have chosen to use tophat alignments here. Run htseq-count and calculate gene-level counts:
+Run htseq-count and calculate gene-level counts:
 
-```
+```bash
+
 cd $RNA_HOME/
-mkdir -p expression/tophat_counts
-cd expression/tophat_counts
-mkdir UHR_Rep1_ERCC-Mix1 UHR_Rep2_ERCC-Mix1 UHR_Rep3_ERCC-Mix1 HBR_Rep1_ERCC-Mix2 HBR_Rep2_ERCC-Mix2 HBR_Rep3_ERCC-Mix2
+mkdir -p expression/htseq_counts
+cd expression/htseq_counts
 
-htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv
-htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv
-htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/hisat2/UHR_Rep1.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep1_gene.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/hisat2/UHR_Rep2.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep2_gene.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/hisat2/UHR_Rep3.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > UHR_Rep3_gene.tsv
 
-htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv
-htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv
-htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/hisat2/HBR_Rep1.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep1_gene.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/hisat2/HBR_Rep2.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep2_gene.tsv
+htseq-count --format bam --order pos --mode intersection-strict --stranded reverse --minaqual 1 --type exon --idattr gene_id $RNA_HOME/alignments/hisat2/HBR_Rep3.bam $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > HBR_Rep3_gene.tsv
+
 ```
 
 Merge results files into a single matrix for use in edgeR:
 
-	join UHR_Rep1_ERCC-Mix1/gene_read_counts_table.tsv UHR_Rep2_ERCC-Mix1/gene_read_counts_table.tsv | join - UHR_Rep3_ERCC-Mix1/gene_read_counts_table.tsv | join - HBR_Rep1_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep2_ERCC-Mix2/gene_read_counts_table.tsv | join - HBR_Rep3_ERCC-Mix2/gene_read_counts_table.tsv > gene_read_counts_table_all.tsv
+```bash
+
+join UHR_Rep1_gene.tsv UHR_Rep2_gene.tsv | join - UHR_Rep3_gene.tsv | join - HBR_Rep1_gene.tsv | join - HBR_Rep2_gene.tsv | join - HBR_Rep3_gene.tsv > gene_read_counts_table_all.tsv
+
+```
 
 Based on the above read counts, plot the linearity of the ERCC spike-in read counts versus the known concentration of the ERCC spike-in Mix:
 
-```
-cd $RNA_HOME/expression/tophat_counts
+```bash
+
+cd $RNA_HOME/expression/htseq_counts
 wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC_Controls_Analysis.txt
 cat ERCC_Controls_Analysis.txt
 
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.pl
 chmod +x Tutorial_Module4_ERCC_expression.pl
 ./Tutorial_Module4_ERCC_expression.pl
-cat $RNA_HOME/expression/tophat_counts/ercc_read_counts.tsv
+cat $RNA_HOME/expression/htseq_counts/ercc_read_counts.tsv
 
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.R
 chmod +x Tutorial_Module4_ERCC_expression.R
 ./Tutorial_Module4_ERCC_expression.R ercc_read_counts.tsv
+
 ```
 
 To view the resulting figure, navigate to the below URL replacing __YOUR_IP_ADDRESS__ with your amazon instance IP address:
