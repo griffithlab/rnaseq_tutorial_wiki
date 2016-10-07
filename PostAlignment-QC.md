@@ -5,9 +5,13 @@
 
 Use `samtools view` to see the format of a SAM/BAM alignment file
 
-	cd $RNA_HOME/alignments/tophat/UHR_ERCC-Mix1_ALL
-	samtools view -H accepted_hits.bam
-	samtools view accepted_hits.bam | head
+```bash
+
+cd $RNA_HOME/alignments/hisat2
+samtools view -H UHR.bam
+samtools view UHR.bam | head
+
+```
 
 Try filtering the BAM file to require or exclude certain flags. This can be done with `samtools view -f -F` options
 
@@ -19,37 +23,36 @@ Try filtering the BAM file to require or exclude certain flags. This can be done
 
 Try requiring that alignments are 'paired' and 'mapped in a proper pair' (=3). Also filter out alignments that are 'unmapped', the 'mate is unmapped', and 'not primary alignment' (=268)
 
-	samtools view -f 3 -F 268 accepted_hits.bam | head
+```bash
+
+samtools view -f 3 -F 268 UHR.bam | head
+
+```
 
 Now require that the alignments be only for 'PCR or optical duplicate'. How many reads meet this criteria? Why?
 
-	samtools view -f 1024 accepted_hits.bam | head
+```bash
+
+samtools view -f 1024 UHR.bam | head
+
+```
 
 Use `samtools flagstat` to get a basic summary of an alignment.  What percent of reads are mapped? Is this realistic? Why?
 
-	cd $RNA_HOME/alignments/tophat/
-	samtools flagstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
-	samtools flagstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
+```bash
 
-Run `samstat` on UHR/HBR BAMs
+cd $RNA_HOME/alignments/hisat2/
+samtools flagstat UHR.bam
+samtools flagstat HBR.bam
 
-	mkdir ~/bin
-	cd ~/bin
-	wget http://genome.wustl.edu/pub/rnaseq/tools/bin/samstat
-	chmod +x samstat
-	cd $RNA_HOME/alignments/tophat/
-	~/bin/samstat UHR_ERCC-Mix1_ALL/accepted_hits.bam
-	~/bin/samstat HBR_ERCC-Mix2_ALL/accepted_hits.bam
-
-View the `samstat` summary file in a web browser. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP address:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/UHR_ERCC-Mix1_ALL/accepted_hits.bam.html
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/tophat/HBR_ERCC-Mix2_ALL/accepted_hits.bam.html
+``
 
 Details of the SAM/BAM format can be found here:
 http://samtools.sourceforge.net/SAM1.pdf
 
 ##Using FastQC
-You can use FastQC to perform basic QC of your accepted_hits.bam file (See [Pre-Alignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)). This will give you output very similar to when you ran FastQC on your fastq files.
+
+You can use FastQC to perform basic QC of your BAM file (See [Pre-Alignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)). This will give you output very similar to when you ran FastQC on your fastq files.
 
 
 ## RSeQC [optional]
@@ -69,30 +72,43 @@ Copy RSeQC Data
 
 Set your working directory and copy the necessary files
 
-	cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/tools/
-	cd ~/workspace/rnaseq/tools/
+```bash
+
+cp -r ~/CourseData/RNA_data/RSeQC/RSeQC.zip ~/workspace/rnaseq/tools/
+cd ~/workspace/rnaseq/tools/
+
+```
 
 Unzip the RSeQC file:
 
-	unzip RSeQC.zip
-	cd RSeQC/
+```bash
+
+unzip RSeQC.zip
+cd RSeQC/
+
+```
+
 Note: You should now see the bam, index, and RefSeq bed files listed.  The bam file here is an pair-end non-strand specific example dataset from the RSeQC website.
 
 Run RSeQC commands:
 
-	bam_stat.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
-	clipping_profile.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial -s "PE"
-	geneBody_coverage.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	infer_experiment.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
-	inner_distance.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	junction_annotation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	junction_saturation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	read_distribution.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
-	read_duplication.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	read_GC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
-	ls *.pdf
+```bash
+
+bam_stat.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
+clipping_profile.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial -s "PE"
+geneBody_coverage.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+infer_experiment.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
+inner_distance.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+junction_annotation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+junction_saturation.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+read_distribution.py -r hg19_RefSeq.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
+read_duplication.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+read_GC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+read_NVC.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+read_quality.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
+ls *.pdf
+
+```
 
 Go through the generated PDFs by browsing through the following directory in a web browser:
 
