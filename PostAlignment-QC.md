@@ -45,7 +45,7 @@ cd $RNA_HOME/alignments/hisat2/
 samtools flagstat UHR.bam
 samtools flagstat HBR.bam
 
-``
+```
 
 Details of the SAM/BAM format can be found here:
 http://samtools.sourceforge.net/SAM1.pdf
