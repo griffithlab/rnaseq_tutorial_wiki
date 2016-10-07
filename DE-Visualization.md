@@ -6,14 +6,17 @@ The output of cuffdiff can be directly loaded into the R/BioConductor package to
 
 Navigate to the correct directory and then launch R:
 
-	cd $RNA_HOME/de/tophat_cufflinks/ref_only/
-	R
-	
+```bash
+
+cd $RNA_HOME/de/cufflinks/ref_only/
+R
+
+```
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_CummeRbund.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part2_cummeRbund.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
 
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
 	
 ##SUPPLEMENTARY R ANALYSIS 
 
@@ -31,24 +34,33 @@ In this tutorial you will:
 
 Expression and differential expression files will be read into R. The R analysis will make use of the transcript-level expression and differential expression files from cuffdiff. Navigate to the correct directory and then launch R:
 
-	cd $RNA_HOME/de/tophat_cufflinks/ref_only/
-	R
+```bash
+
+cd $RNA_HOME/de/cufflinks/ref_only/
+R
+
+```
 
 A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
 
 The output file can be viewed in your browser at the following url. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 
 ##ERCC DE Analysis
+
 This section will demonstrate the DE between the ERCC spike-in:
 
-     cd $RNA_HOME/de/tophat_cufflinks/ref_only
-     wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_DE.R
-     chmod +x Tutorial_Module4_ERCC_DE.R
-     ./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/tophat_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/tophat_cufflinks/ref_only/gene_exp.diff
+```bash
+
+cd $RNA_HOME/de/cufflinks/ref_only
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_DE.R
+chmod +x Tutorial_Module4_ERCC_DE.R
+./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/htseq_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/cufflinks/ref_only/gene_exp.diff
+
+```
 
 View the results here:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/tophat_cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ##edgeR Analysis		
 
@@ -60,28 +72,42 @@ In this tutorial you will:
 
 First, create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
 
-	cd $RNA_HOME/refs/hg19/genes
-	perl -ne 'if ($_=~/gene_id\s\"(ENSG\S+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";} elsif ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' genes_chr22_ERCC92.gtf | sort | uniq > ENSG_ID2Name.txt
+```bash
+
+cd $RNA_HOME/refs/hg19/genes
+perl -ne 'if ($_=~/gene_id\s\"(ENSG\S+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";} elsif ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' genes_chr22_ERCC92.gtf | sort | uniq > ENSG_ID2Name.txt
+
+```
 
 Then, create a directory for results and launch R:
 
-	cd $RNA_HOME/
-	mkdir -p de/tophat_counts
-	cd de/tophat_counts
-	R
+```bash
+
+cd $RNA_HOME/
+mkdir -p de/htseq_counts
+cd de/htseq_counts
+R
+
+```
 	
 A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
 
 Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff:
 
-	cat $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt
-	cat $RNA_HOME/de/tophat_counts/DE_genes.txt
+```bash
+
+cat $RNA_HOME/de/cufflinks/ref_only/DE_genes.txt
+cat $RNA_HOME/de/htseq_counts/DE_genes.txt
 	
 Pull out the gene symbols
-```
+
+```bash
+
 cd $RNA_HOME/de/
-cut -f 1 $RNA_HOME/de/tophat_cufflinks/ref_only/DE_genes.txt > tophat_cufflinks_cuffdiff_DE_gene_symbols.txt
-cut -f 2 $RNA_HOME/de/tophat_counts/DE_genes.txt > tophat_counts_edgeR_DE_gene_symbols.txt
+
+cut -f 1 $RNA_HOME/de/cufflinks/ref_only/DE_genes.txt > cufflinks_cuffdiff_DE_gene_symbols.txt
+cut -f 2 $RNA_HOME/de/htseq_counts/DE_genes.txt > htseq_counts_edgeR_DE_gene_symbols.txt
+
 ```
 
 Visualize overlap with a venn diagram. This can be done with simple web tools like:
