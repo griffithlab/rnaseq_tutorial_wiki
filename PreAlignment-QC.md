@@ -9,9 +9,12 @@ Video Tutorial here:
 * http://www.youtube.com/watch?v=bz93ReOv87Y
 
 Try to run FastQC on your fastq files:
-```
+
+```bash
+
 cd $RNA_HOME/data
 fastqc *.fastq.gz
+
 ```
 
 Then, go to the following url in your browser:

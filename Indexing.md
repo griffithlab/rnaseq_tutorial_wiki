@@ -2,45 +2,34 @@
 
 #1-iv. Indexing
 
-###Create a bowtie2 index
+###Create a HISAT2 index
 
-Create a bowtie index for chr22 and the ERCC spike-in sequences and write it to a 'bwt' sub-directory:
+Create a HISAT2 index for chr22 and the ERCC spike-in sequences. HISAT2 can incoroprate the exons and splice sites into the index file for alignment.  First create a splice site file, then an exon file.  Finally make the aligner FM index.
 
-	cd $RNA_HOME/refs/hg19/
-	mkdir -p bwt/chr22_ERCC92
-	bowtie2-build fasta/chr22_ERCC92/chr22_ERCC92.fa bwt/chr22_ERCC92/chr22_ERCC92
-	cp $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/*.fa $RNA_HOME/refs/hg19/bwt/chr22_ERCC92/
-	ls bwt/chr22_ERCC92/
+TODO: How is the HISAT2 index uniqe from other next gen aligners?
+
+```bash
+
+cd $RNA_HOME/refs/hg19/
+mkdir -p hisat2/chr22_ERCC92
+hisat2_extract_splice_sites.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv
+hisat2_extract_exons.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv
+hisat2-build -p 8 --ss $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv --exon $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92
+
+```
 
 To create an index for all chromosomes instead of just chr22 you would do the following:
+
+NOTE: The below example does NOT take advantage of adding the splice sites and exons to the index. If desired, you would make those files using the full GTF and add them to the command using the appropriate options.
+
+```bash
+
+cd $RNA_HOME/refs/hg19/
+mkdir hisat2
+hisat2-build -p 8 fasta/hg19.fa hisat2/hg19
+
 ```
-#cd $RNA_HOME/refs/hg19/
-#mkdir bwt
-#bowtie2-build fasta/hg19.fa bwt/hg19
-#mv $RNA_HOME/refs/hg19/fasta/hg19.fa $RNA_HOME/refs/hg19/bwt/
-```
 
----
-###OPTIONAL ALTERNATIVE - STAR indexes
-Create index files for use with STAR
-
-	cd $RNA_HOME/refs/hg19/
-	mkdir -p star/chr22_ERCC92
-	STAR --runMode genomeGenerate --genomeDir $RNA_HOME/refs/hg19/star/chr22_ERCC92 --genomeFastaFiles $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa --runThreadN 8 --sjdbGTFfile $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --sjdbOverhang 100
-
-####END OF OPTIONAL ALTERNATIVE - STAR indexes
----
-####OPTIONAL ALTERNATIVE - HISAT2 indexes
-Create reference and splice site index files for use with HISAT2
-
-	cd $RNA_HOME/refs/hg19/
-	mkdir -p hisat2/chr22_ERCC92
-	hisat2-build $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92
-
-	extract_splice_sites.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.txt
-
-####END OF OPTIONAL ALTERNATIVE - HISAT2 indexes
----
 
 | [[Previous Section|Annotation]] | [[This Section|Indexing]]   | [[Next Section|RNAseq-Data]] |
 |:-------------------------------:|:---------------------------:|:----------------------------:|

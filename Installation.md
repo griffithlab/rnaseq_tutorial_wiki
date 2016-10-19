@@ -6,13 +6,18 @@ Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, sta
 
 Set up tool installation location:
 
-	cd $RNA_HOME
-	mkdir tools
-	cd tools
+```bash
+
+cd $RNA_HOME
+mkdir tools
+cd tools
+
+```
 
 ##[SAMtools](http://samtools.sourceforge.net/)
 
-```
+```bash
+
 cd $RNA_HOME/tools/
 wget https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2
 bunzip2 samtools-1.3.1.tar.bz2
@@ -20,162 +25,153 @@ tar -xvf samtools-1.3.1.tar
 cd samtools-1.3.1
 make
 ./samtools
+
 ```
 
 ##[bam-readcount](https://github.com/genome/bam-readcount)
 
-	cd $RNA_HOME/tools/
-	mkdir git
-	cd git
-	git clone --recursive git://github.com/genome/bam-readcount.git
-	cd $RNA_HOME/tools/
-	mkdir bam-readcount
-	cd bam-readcount
-	export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.3.1
-	cmake $RNA_HOME/tools/git/bam-readcount
-	make
-	./bin/bam-readcount
+```bash
 
-##[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+cd $RNA_HOME/tools/
+mkdir git
+cd git
+git clone --recursive git://github.com/genome/bam-readcount.git
+cd $RNA_HOME/tools/
+mkdir bam-readcount
+cd bam-readcount
+export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.3.1
+cmake $RNA_HOME/tools/git/bam-readcount
+make
+./bin/bam-readcount
 
-	cd $RNA_HOME/tools/
-	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.9/bowtie2-2.2.9-linux-x86_64.zip
-	unzip bowtie2-2.2.9-linux-x86_64.zip
-	cd bowtie2-2.2.9
-	./bowtie2
-	./bowtie2-build
-
-##[TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
-
-	cd $RNA_HOME/tools/
-	wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.1.Linux_x86_64.tar.gz
-	tar -zxvf tophat-2.1.1.Linux_x86_64.tar.gz
-	cd tophat-2.1.1.Linux_x86_64
-	./tophat2
-
-##[STAR](https://code.google.com/p/rna-star/)
-
-	cd $RNA_HOME/tools/
-	wget https://github.com/alexdobin/STAR/archive/2.5.1b.tar.gz
-	tar -zxvf 2.5.1b.tar.gz
-	cd STAR-2.5.1b/source
-	make STAR
-	file STAR
+```
 
 ##[HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
 
-    cd $RNA_HOME/tools/
-    wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
-    unzip hisat2-2.0.4-Linux_x86_64.zip
-    cd hisat2-2.0.4
-    ./hisat2
+```bash
+cd $RNA_HOME/tools/
+wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
+unzip hisat2-2.0.4-Linux_x86_64.zip
+cd hisat2-2.0.4
+./hisat2
+
+```
 
 ##[Cufflinks2](http://cole-trapnell-lab.github.io/cufflinks/manual/)
 
-	cd $RNA_HOME/tools/
-	wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
-	tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
-	cd cufflinks-2.2.1.Linux_x86_64
-	./cufflinks
+```bash
+
+cd $RNA_HOME/tools/
+wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
+tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
+cd cufflinks-2.2.1.Linux_x86_64
+./cufflinks
+
+```
 
 ##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
 
-	cd $RNA_HOME/tools/
-	wget --no-check-certificate https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
-	tar -zxvf HTSeq-0.6.1p1.tar.gz
-	cd HTSeq-0.6.1p1/
-	python setup.py install --user
-	chmod +x scripts/htseq-count
-	./scripts/htseq-count
+```bash
 
+cd $RNA_HOME/tools/
+wget --no-check-certificate https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
+tar -zxvf HTSeq-0.6.1p1.tar.gz
+cd HTSeq-0.6.1p1/
+python setup.py install --user
+chmod +x scripts/htseq-count
+./scripts/htseq-count
+
+```
 
 ##[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 In addition to installing on the cloud you should also install FastQC on your own laptop/desktop
 
-```
+```bash
+
 cd $RNA_HOME/tools/
 wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
 unzip fastqc_v0.11.5.zip
 cd FastQC/
 chmod 755 fastqc
 ./fastqc --help
+
 ```
 
 ##[Picard](http://picard.sourceforge.net/command-line-overview.shtml)
 
-	cd $RNA_HOME/tools/
-	wget https://github.com/broadinstitute/picard/releases/download/1.140/picard-tools-1.140.zip -O picard-tools-1.140.zip
-	unzip picard-tools-1.140.zip
-	java -jar $RNA_HOME/tools/picard-tools-1.140/picard.jar
+```bash
 
-##[SAMStat](http://samstat.sourceforge.net/)
-
-```
-export PATH=$RNA_HOME/tools/samtools-1.3.1:$PATH
 cd $RNA_HOME/tools/
-wget http://downloads.sourceforge.net/project/samstat/samstat-1.5.1.tar.gz
-tar -xzvf samstat-1.5.1.tar.gz
-cd samstat-1.5.1
-./configure
-make
-./src/samstat
-```
+wget https://github.com/broadinstitute/picard/releases/download/2.6.0/picard.jar -O picard.jar
+java -jar $RNA_HOME/tools/picard.jar
 
+```
+        
 ##[Flexbar](http://sourceforge.net/projects/flexbar/)
 
-```
+```bash
+
 cd $RNA_HOME/tools/
 wget https://github.com/seqan/flexbar/releases/download/v2.4.0/flexbar_v2.4_linux64.tgz
 tar -xzvf flexbar_v2.4_linux64.tgz
 cd flexbar_v2.4_linux64
 export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.4_linux64:$LD_LIBRARY_PATH
 ./flexbar
+
 ```
 
-
 ##[R](http://www.r-project.org/)
+
 This install takes a while so check if you have R installed already by typing `which R`.
 It is already installed on the Cloud, but for completeness, here is how it was done. Please skip all R installation!
 
-```
-#cd $RNA_HOME/tools/
-#export R_LIBS=
-#wget https://cran.r-project.org/src/base/R-3/R-3.2.5.tar.gz
-#tar -zxvf R-3.2.5.tar.gz
-#cd R-3.2.5
-#./configure --prefix=$RNA_HOME/tools/R-3.2.5/ --with-x=no
-#make
-#make install
-#./bin/Rscript
+```bash
+
+cd $RNA_HOME/tools/
+export R_LIBS=
+wget https://cran.r-project.org/src/base/R-3/R-3.2.5.tar.gz
+tar -zxvf R-3.2.5.tar.gz
+cd R-3.2.5
+./configure --prefix=$RNA_HOME/tools/R-3.2.5/ --with-x=no
+make
+make install
+./bin/Rscript
+
 ```
 
 Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
 
 ##R Libraries
+
 For this tutorial we require:
 - [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
 - [ggplot2](http://ggplot2.org/)
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
-```
-#install.packages("gplots")
-#install.packages("ggplot2")
-#quit()
+```R
+
+install.packages("gplots")
+install.packages("ggplot2")
+quit()
+
 ```
 
 ##[Bioconductor](http://www.bioconductor.org/)
+
 For this tutorial we require:
 - [cummeRbund](http://compbio.mit.edu/cummeRbund/)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
-```
-#source("http://bioconductor.org/biocLite.R")
-#biocLite("cummeRbund")
-#biocLite("edgeR")
-#quit()
+```R
+
+source("http://bioconductor.org/biocLite.R")
+biocLite("cummeRbund")
+biocLite("edgeR")
+quit()
+
 ```
 
 
@@ -184,16 +180,20 @@ launch R (enter `R` at linux command prompt) and type the following at an R comm
 
 Assignment: Install bedtools on your own. Make sure you install it in your tools folder. Download, unpack, compile, and test the bedtools software.
 
-```
+```bash 
+
 cd $RNA_HOME/tools/
+
 ```
 
 * Hint: google "bedtools" to find the source code
 * Hint: there is a README file that will give you hints on how to install
 * Hint: If your install has worked you should be able to run bedtools as follows:
 
-```
+```bash
+
 $RNA_HOME/tools/bedtools2/bin/bedtools
+
 ```
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-1---software-installation)
@@ -204,15 +204,21 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
 
-	export RNA_HOME=~/workspace/rnaseq
-	export PATH=$RNA_HOME/tools/samtools-1.2:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/bowtie2-2.2.6:$RNA_HOME/tools/tophat-2.1.0.Linux_x86_64:$RNA_HOME/tools/STAR-STAR_2.5.0a/source:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.2/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/picard-tools-1.140:$RNA_HOME/tools/samstat-1.5.1/src:/home/ubuntu/bin/bedtools2/bin:$PATH
-	echo $PATH
+```bash
+
+export RNA_HOME=~/workspace/rnaseq
+export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.2/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$PATH
+echo $PATH
+
+```
 
 You can make these changes permanent by adding the above lines to your .bashrc file
 use a text editor to open your bashrc file. For example:
 
-```
+```bash
+
 vi ~/.bashrc
+
 ```
 
 ###Vi instructions
@@ -228,16 +234,25 @@ If you would like to learn more about how to use vi, try this tutorial/game: [VI
 
 NOTE: If you are worried your .bashrc is messed up you can redownload as follows:
 
-	#cd ~
-	#wget -N https://github.com/griffithlab/rnaseq_tutorial/wiki/config/.bashrc
+```bash
+
+cd ~
+wget -N https://github.com/griffithlab/rnaseq_tutorial/wiki/config/.bashrc
+
+```
 
 ## Installing tools from official ubuntu packages [OPTIONAL]
+
 Some useful tools are available as official ubuntu packages.  These can be installed using the linux package management system `apt`.  Most bioinformatic tools (especially the latest versions) are not available as official packages.  Nevertheless, here is how you would update your `apt` library, upgrade existing packages, and install an Ubuntu tool called `tree`.
 
-	#sudo apt-get update
-	#sudo apt-get upgrade
-	#sudo apt-get install tree
-	tree
+```bash
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install tree
+tree
+
+```
 
 | [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
 |:------------------------------:|:-----------------------------:|:-------------------------------------:|

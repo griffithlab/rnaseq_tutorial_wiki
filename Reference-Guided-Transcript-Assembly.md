@@ -28,18 +28,22 @@ Extra options specified below
 * '-o' tells Cufflinks to write output to a particular directory (one per sample)
 
 First, create an output directory. 
-	
-	cd $RNA_HOME/expression/
-	mkdir -p tophat_cufflinks/ref_guided
-	cd tophat_cufflinks/ref_guided
-	
-	cufflinks -p 8 -o HBR_Rep1_ERCC-Mix2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep1_ERCC-Mix2/accepted_hits.bam
-	cufflinks -p 8 -o HBR_Rep2_ERCC-Mix2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep2_ERCC-Mix2/accepted_hits.bam
-	cufflinks -p 8 -o HBR_Rep3_ERCC-Mix2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/HBR_Rep3_ERCC-Mix2/accepted_hits.bam
 
-	cufflinks -p 8 -o UHR_Rep1_ERCC-Mix1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep1_ERCC-Mix1/accepted_hits.bam
-	cufflinks -p 8 -o UHR_Rep2_ERCC-Mix1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep2_ERCC-Mix1/accepted_hits.bam
-	cufflinks -p 8 -o UHR_Rep3_ERCC-Mix1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --frag-len-mean 262 --frag-len-std-dev 80 --no-update-check $RNA_HOME/alignments/tophat/UHR_Rep3_ERCC-Mix1/accepted_hits.bam
+```bash
+
+cd $RNA_HOME/expression/
+mkdir -p cufflinks/ref_guided
+cd cufflinks/ref_guided
+
+cufflinks -p 8 -o HBR_Rep1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep1.bam
+cufflinks -p 8 -o HBR_Rep2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep2.bam
+cufflinks -p 8 -o HBR_Rep3 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep3.bam
+
+cufflinks -p 8 -o UHR_Rep1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep1.bam
+cufflinks -p 8 -o UHR_Rep2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep2.bam
+cufflinks -p 8 -o UHR_Rep3 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep3.bam
+
+```
 
 | [[Previous Section|DE-Visualization]] | [[This Section|Reference-Guided-Transcript-Assembly]] | [[Next Section|de-novo-Transcript-Assembly]] |
 |:-------------------------------------:|:-----------------------------------------------------:|:--------------------------------------------:|

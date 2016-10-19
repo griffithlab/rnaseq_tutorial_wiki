@@ -6,23 +6,35 @@
 In this tutorial we will use annotations obtained from Illuminas iGenomes for chromosome 22 only. For time reasons, these are prepared for you and made available on or FTP site. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
 
 Copy the gene annotation files to the working directory. 
-	
-	cd $RNA_HOME/refs/hg19/
-	mkdir genes
-	cd genes
-	wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
-	gunzip genes_chr22_ERCC92.gtf.gz
+
+```bash
+
+cd $RNA_HOME/refs/hg19/
+mkdir genes
+cd genes
+wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
+gunzip genes_chr22_ERCC92.gtf.gz
+
+```
 
 Take a look at the contents of the gtf file. Press 'q' to exit the 'less' display.
 
-	less -p start_codon -S genes_chr22_ERCC92.gtf
-	
+```bash
+
+less -p start_codon -S genes_chr22_ERCC92.gtf
+
+```
+
 How many unique gene IDs are in the .gtf file?
 
 We can use a perl command-line command to find out:
 
-	perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22_ERCC92.gtf | sort | uniq | wc -l
-	
+```bash
+
+perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22_ERCC92.gtf | sort | uniq | wc -l
+
+```
+
 * Using perl -ne '' will execute the code between single quotes, on the .gtf file, line-by-line.
 * The $_ variable holds the contents of each line.
 * The 'if ($_ =~//)' is a pattern-matching command which will look for the pattern "gene_id" followed by a space followed by "ENSG" and one or more word characters (indicated by \w+) surrounded by double quotes.
@@ -33,7 +45,11 @@ We can use a perl command-line command to find out:
 
 Now view the structure of a single transcript in GTF format. Press 'q' to exit the 'less' display when you are done.
 
-	grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p "exon\s" -S
+```bash
+
+grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p "exon\s" -S
+
+```
 
 To learn more, see:
 * http://perldoc.perl.org/perlre.html#Regular-Expressions
@@ -75,10 +91,12 @@ http://cole-trapnell-lab.github.io/cufflinks//igenome_table/index.html
 
 Note, the Igenomes file is huge and contains many files (including archived versions) that you likely do not need. After download of the tar file, one space-saving solution is to perform only a selective unarchive. For example:
 
-```
-#cd /workspace/rnaseq/refs/hg19/
-#wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
-#tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
+```bash
+
+cd /workspace/rnaseq/refs/hg19/
+wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
+tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
+
 ```
 
 Then, the files you would need for the workflow presented in this tutorial would be:
@@ -89,10 +107,12 @@ Then, the files you would need for the workflow presented in this tutorial would
 * Bowtie2 index: Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.*
 	
 ####II. ENSEMBL FTP SITE  
+
 Based on Ensembl annotations only.  Available for many species.
 http://useast.ensembl.org/info/data/ftp/index.html
 	
 ####III. UCSC TABLE BROWSER  
+
 Based on UCSC annotations or several other possible annotation sources collected by UCSC. You might chose this option if you want to have a lot of flexibility in the annotations you obtain.  e.g. to grab only the transcripts from chromosome 22 as in the following example:
   * Open the following in your browser: http://genome.ucsc.edu/
   * Click 'Tables' at the top of the page.

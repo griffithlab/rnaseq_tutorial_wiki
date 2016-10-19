@@ -21,29 +21,49 @@ Each data set has a corresponding pair of FastQ files (read 1 and read 2 of pair
 The reads are paired-end 101-mers generated on an Illumina HiSeq instrument.
 The test data has been pre-filtered for reads that appear to map to chromosome 22.  Lets get that raw input data onto our cloud instance.
 
-	cd $RNA_HOME/
-	mkdir -p data
-	cd data
-	
+```bash
+
+cd $RNA_HOME/
+mkdir -p data
+cd data
+
+```
+
 Make a copy of the test data
 
-	wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
-	
+```bash
+
+wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
+
+```
+
 Unpack the test data.  You should see 6 sets of paired end fastq files.  One for each of our sample replicates above. We have 6 pairs (12 files) because in fastq format, read 1 and read 2 of a each read pair (fragment) are stored in separate files.
 
-	tar -xvf HBR_UHR_ERCC_ds_5pc.tar
-	ls
+```bash
+
+tar -xvf HBR_UHR_ERCC_ds_5pc.tar
+ls
+
+```
 
 Enter the data directory and view the first two read records of a file (in fastq format each read corresponds to 4 lines of data)
 
-	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
-	
+```bash
+
+zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | head -n 8
+
+```
+
 Identify the following components of each read: read name, read sequence, and quality string
 	
 How many reads are there in the first library?
 Decompress file on the fly with 'zcat', pipe into 'grep', search for the read name prefix and pipe into 'wc' to do a word count ('-l' gives lines)
 
-	zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "^\@HWI" | wc -l
+```bash
+
+zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "^\@HWI" | wc -l
+
+```
 
 ---
 ##PRACTICAL EXERCISE 2

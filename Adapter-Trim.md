@@ -9,8 +9,10 @@ Refer to the Flexbar project and manual for a more detailed explanation:
 * http://sourceforge.net/p/flexbar/wiki/Manual/
 
 Flexbar basic usage:
-```
-#flexbar -r reads [-t target] [-b barcodes] [-a adapters] [options]
+```bash
+
+flexbar -r reads [-t target] [-b barcodes] [-a adapters] [options]
+
 ```
 	
 Extra options specified below:
@@ -33,7 +35,8 @@ Extra options specified below:
 
 First, set up some directories for output
 
-```
+```bash
+
 cd $RNA_HOME/
 export RNA_DATA_DIR=$RNA_HOME/data
 echo $RNA_DATA_DIR
@@ -41,17 +44,22 @@ echo $RNA_DATA_DIR
 mkdir -p $RNA_DATA_DIR/trimmed
 export RNA_DATA_TRIM_DIR=$RNA_DATA_DIR/trimmed
 echo $RNA_DATA_TRIM_DIR
+
 ```
 
 Download necessary Illumina adaptor sequence files.
 
-```
+```bash
+
 cd $RNA_HOME/refs
 wget http://genome.wustl.edu/pub/rnaseq/trim/illumina_multiplex.fa
+
 ```
 
 Use flexbar to remove illumina adaptor sequences (if any) and trim first 13 bases of each read. In our tests, each sample took ~30 seconds to trim
-```
+
+```bash
+
 cd $RNA_HOME
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22
@@ -60,13 +68,16 @@ flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/re
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters $RNA_HOME/refs/illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads2 $RNA_DATA_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz --target $RNA_DATA_TRIM_DIR/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22	
+
 ```
 
 Optional exercise: Compare the FastQC reports for fastq files before and after trimming. All fastqc reports can be generated on the commandline.
 
-```
+```bash
+
 cd $RNA_HOME/data/trimmed/
 fastqc *.fastq.gz
+
 ```
 
 The resulting html reports can be viewed by navigating to:
