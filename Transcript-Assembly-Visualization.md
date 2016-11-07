@@ -63,8 +63,8 @@ Load the BAM files at the same time as the junctions.bed and merged.gtf files:
  * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/HBR.bam
 
 Go to the following regions:
-* 22:45730787-45736825
-* 22:45607463-45610990
+* 22:45,334,669-45,342,395
+* 22:45,210,970-45,214,832
 
 Do you see the evidence for any novel exons/transcript that are found in 'de_novo' or 'ref_guided' modes but NOT found in 'ref_only' mode?  Explore in IGV for other examples of novel or different transcript predictions from the different cufflinks modes. Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
 	
