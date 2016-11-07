@@ -69,7 +69,7 @@ Create faidx indexed reference sequence file for use with mpileup
 
 ```bash
 
-samtools faidx $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa
+samtools faidx $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa
 
 ```
 
@@ -77,7 +77,7 @@ Run `samtools mpileup` on a region of interest
 
 ```bash
 
-samtools mpileup -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa -r 22:18905970-18905980 $RNA_HOME/alignments/hisat2/UHR.bam $RNA_HOME/alignments/hisat2/HBR.bam 
+samtools mpileup -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa -r 22:18905970-18905980 $RNA_HOME/alignments/hisat2/UHR.bam $RNA_HOME/alignments/hisat2/HBR.bam 
 
 ```
 
@@ -106,8 +106,8 @@ Run `bam-readcount` on this list for the tumor and normal merged bam files
 
 ```bash
 
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/UHR.bam 2>/dev/null
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/HBR.bam 2>/dev/null
+bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/UHR.bam 2>/dev/null
+bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/HBR.bam 2>/dev/null
 
 ```
 
@@ -115,8 +115,8 @@ Now, run again, but ignore stderr and redirect stdout to a file:
 
 ```bash
 
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/UHR.bam 2>/dev/null 1>UHR_bam-readcounts.txt
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/HBR.bam 2>/dev/null 1>HBR_bam-readcounts.txt
+bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/UHR.bam 2>/dev/null 1>UHR_bam-readcounts.txt
+bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/HBR.bam 2>/dev/null 1>HBR_bam-readcounts.txt
 
 ```
 
