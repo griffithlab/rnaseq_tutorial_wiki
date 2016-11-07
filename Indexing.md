@@ -14,7 +14,7 @@ cd $RNA_HOME/refs/hg19/
 mkdir -p hisat2/chr22_ERCC92
 hisat2_extract_splice_sites.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv
 hisat2_extract_exons.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv
-hisat2-build -p 8 --ss $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv --exon $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/chr22_ERCC92
+hisat2-build -p 8 --ss $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv --exon $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92
 
 ```
 

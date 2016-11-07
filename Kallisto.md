@@ -30,7 +30,7 @@ We could download the complete fasta transcript database for human and pull out 
 
 ```
 cd $RNA_HOME/refs/hg19/genes/
-gtf_to_fasta genes_chr22_ERCC92.gtf ../fasta/chr22_ERCC92/chr22_ERCC92.fa chr22_ERCC92_transcripts.fa
+gtf_to_fasta genes_chr22_ERCC92.gtf ../fasta/chr22_ERCC92.fa chr22_ERCC92_transcripts.fa
 ```
 
 Use `less` to view the file `chr22_ERCC92_transcripts.fa`. Note that this file has messy transcript names. Use the following hairball perl one-liner to tidy up the header line for each fasta sequence
@@ -104,7 +104,7 @@ For example, suppose we just want to quickly assess the presence of ribosomal RN
 ```
 cd $RNA_HOME/refs/hg19/genes
 grep rRNA genes_chr22_ERCC92.gtf > genes_chr22_ERCC92_rRNA.gtf 
-gtf_to_fasta genes_chr22_ERCC92_rRNA.gtf ../fasta/chr22_ERCC92/chr22_ERCC92.fa chr22_rRNA_transcripts.fa
+gtf_to_fasta genes_chr22_ERCC92_rRNA.gtf ../fasta/chr22_ERCC92.fa chr22_rRNA_transcripts.fa
 cat chr22_rRNA_transcripts.fa | perl -ne 'if ($_ =~/^\>\d+\s+\w+\s+(ERCC\S+)[\+\-]/){print ">$1\n"}elsif($_ =~ /\d+\s+(ENST\d+)/){print ">$1\n"}else{print $_}' > chr22_rRNA_transcripts.clean.fa
 cat chr22_rRNA_transcripts.clean.fa
 cd $RNA_HOME/refs/hg19/
