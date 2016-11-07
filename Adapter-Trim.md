@@ -51,6 +51,7 @@ Download necessary Illumina adaptor sequence files.
 
 ```bash
 
+mkdir -p $RNA_HOME/refs
 cd $RNA_HOME/refs
 wget http://genome.wustl.edu/pub/rnaseq/trim/illumina_multiplex.fa
 
