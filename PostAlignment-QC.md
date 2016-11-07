@@ -7,7 +7,7 @@ Use `samtools view` to see the format of a SAM/BAM alignment file
 
 ```bash
 
-cd $RNA_HOME/alignments/hisat2
+cd $RNA_ALIGN_DIR
 samtools view -H UHR.bam
 samtools view UHR.bam | head
 
@@ -41,7 +41,7 @@ Use `samtools flagstat` to get a basic summary of an alignment.  What percent of
 
 ```bash
 
-cd $RNA_HOME/alignments/hisat2/
+cd $RNA_ALIGN_DIR
 samtools flagstat UHR.bam
 samtools flagstat HBR.bam
 
