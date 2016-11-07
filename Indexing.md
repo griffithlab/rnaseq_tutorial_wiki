@@ -10,11 +10,9 @@ TODO: How is the HISAT2 index uniqe from other next gen aligners?
 
 ```bash
 
-cd $RNA_HOME/refs/hg19/
-mkdir -p hisat2/chr22_ERCC92
-hisat2_extract_splice_sites.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv
-hisat2_extract_exons.py $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf > $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv
-hisat2-build -p 8 --ss $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/splicesites.tsv --exon $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92/exons.tsv $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/refs/hg19/hisat2/chr22_ERCC92
+hisat2_extract_splice_sites.py $REF_GTF > $REF_BASE/splicesites.tsv
+hisat2_extract_exons.py $REF_GTF > $REF_BASE/exons.tsv
+hisat2-build -p 8 --ss $REF_BASE/splicesites.tsv --exon $REF_BASE/exons.tsv $REF_FASTA $REF_BASE
 
 ```
 
