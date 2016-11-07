@@ -10,6 +10,9 @@ TODO: How is the HISAT2 index uniqe from other next gen aligners?
 
 ```bash
 
+cd $RNA_HOME
+mkdir -p $REF_BASE
+
 hisat2_extract_splice_sites.py $REF_GTF > $REF_BASE/splicesites.tsv
 hisat2_extract_exons.py $REF_GTF > $REF_BASE/exons.tsv
 hisat2-build -p 8 --ss $REF_BASE/splicesites.tsv --exon $REF_BASE/exons.tsv $REF_FASTA $REF_BASE
@@ -20,11 +23,12 @@ To create an index for all chromosomes instead of just chr22 you would do the fo
 
 NOTE: The below example does NOT take advantage of adding the splice sites and exons to the index. If desired, you would make those files using the full GTF and add them to the command using the appropriate options.
 
+WARNING: In order to index the entire human genome, HISAT2 requires 160GB of RAM. Your AWS instance size will run out of RAM.
+
 ```bash
 
-cd $RNA_HOME/refs/hg19/
-mkdir hisat2
-hisat2-build -p 8 fasta/hg19.fa hisat2/hg19
+cd /home/ubuntu/workspace/data/fasta/GRCh38
+hisat2-build -p 8 Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa Homo_sapiens.GRCh38.dna_sm.primary_assembly
 
 ```
 
