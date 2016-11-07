@@ -12,13 +12,13 @@ cd $RNA_HOME/expression/
 mkdir -p cufflinks/de_novo
 cd cufflinks/de_novo
 
-cufflinks -p 8 -o HBR_Rep1 --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep1.bam
-cufflinks -p 8 -o HBR_Rep2 --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep2.bam
-cufflinks -p 8 -o HBR_Rep3 --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep3.bam
+cufflinks -p 8 -o HBR_Rep1 --no-update-check $RNA_ALIGN_DIR/HBR_Rep1.bam
+cufflinks -p 8 -o HBR_Rep2 --no-update-check $RNA_ALIGN_DIR/HBR_Rep2.bam
+cufflinks -p 8 -o HBR_Rep3 --no-update-check $RNA_ALIGN_DIR/HBR_Rep3.bam
 
-cufflinks -p 8 -o UHR_Rep1 --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep1.bam
-cufflinks -p 8 -o UHR_Rep2 --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep2.bam
-cufflinks -p 8 -o UHR_Rep3 --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep3.bam
+cufflinks -p 8 -o UHR_Rep1 --no-update-check $RNA_ALIGN_DIR/UHR_Rep1.bam
+cufflinks -p 8 -o UHR_Rep2 --no-update-check $RNA_ALIGN_DIR/UHR_Rep2.bam
+cufflinks -p 8 -o UHR_Rep3 --no-update-check $RNA_ALIGN_DIR/UHR_Rep3.bam
 
 ```
 
