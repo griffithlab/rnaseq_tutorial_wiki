@@ -27,7 +27,7 @@ Merge all 6 cufflinks results so that they will have the same set of transcripts
 
 cd $RNA_HOME/expression/cufflinks/ref_only/
 ls -1 *Rep*/transcripts.gtf > assembly_GTF_list.txt
-cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa assembly_GTF_list.txt
+cuffmerge -p 8 -o merged -g $REF_GTF -s $REF_FASTA assembly_GTF_list.txt
 
 ```
 
@@ -58,13 +58,13 @@ Generate the cuffquant binary format files for cuffdiff
 
 ```bash
 
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep1 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_HOME/alignments/hisat2/UHR_Rep1.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep2 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_HOME/alignments/hisat2/UHR_Rep2.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep3 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_HOME/alignments/hisat2/UHR_Rep3.bam
+cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep1 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
+cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep2 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
+cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep3 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
 
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep1 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_HOME/alignments/hisat2/HBR_Rep1.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep2 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_HOME/alignments/hisat2/HBR_Rep2.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep3 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_HOME/alignments/hisat2/HBR_Rep3.bam
+cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep1 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
+cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep2 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
+cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep3 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
 
 ```
 
