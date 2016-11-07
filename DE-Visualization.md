@@ -70,22 +70,28 @@ In this tutorial you will:
  * edgeR is a bioconductor package designed specifically for differential expression of count-based RNA-seq data
  * This is an alternative to using cufflinks/cuffmerge/cuffdiff to find differentially expressed genes
 
-First, create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
-
-```bash
-
-cd $RNA_HOME/refs/hg19/genes
-perl -ne 'if ($_=~/gene_id\s\"(ENSG\S+)\"\;\sgene_name\s\"(\S+)\"\;/){print "$1\t$2\n";} elsif ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' genes_chr22_ERCC92.gtf | sort | uniq > ENSG_ID2Name.txt
-
-```
-
-Then, create a directory for results and launch R:
+First, create a directory for results:
 
 ```bash
 
 cd $RNA_HOME/
 mkdir -p de/htseq_counts
 cd de/htseq_counts
+
+```
+ 
+Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
+
+```bash
+
+perl -ne 'if ($_ =~ /gene_id\s\"(ENSG\S+)\"\;/) { $id = $1; $name = undef; if ($_ =~ /gene_name\s\"(\S+)"\;/) { $name = $1; }; }; if ($id && $name) {print "$id\t$name\n";} if ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' $REF_GTF | sort | uniq > ENSG_ID2Name.txt
+
+```
+
+Launch R:
+
+```bash
+
 R
 
 ```
@@ -98,15 +104,17 @@ Once you have run the edgeR tutorial, compare the sigDE genes to those saved ear
 
 cat $RNA_HOME/de/cufflinks/ref_only/DE_genes.txt
 cat $RNA_HOME/de/htseq_counts/DE_genes.txt
-	
+
+```
+
 Pull out the gene symbols
 
 ```bash
 
 cd $RNA_HOME/de/
 
-cut -f 1 $RNA_HOME/de/cufflinks/ref_only/DE_genes.txt > cufflinks_cuffdiff_DE_gene_symbols.txt
-cut -f 2 $RNA_HOME/de/htseq_counts/DE_genes.txt > htseq_counts_edgeR_DE_gene_symbols.txt
+cut -f 1 $RNA_HOME/de/cufflinks/ref_only/DE_genes.txt | sort  > cufflinks_cuffdiff_DE_gene_symbols.txt
+cut -f 2 $RNA_HOME/de/htseq_counts/DE_genes.txt | sort > htseq_counts_edgeR_DE_gene_symbols.txt
 
 ```
 
