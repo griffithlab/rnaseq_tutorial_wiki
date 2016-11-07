@@ -24,7 +24,7 @@ Perform UHR vs. HBR comparison, for known/novel (reference guided mode) transcri
 
 cd $RNA_HOME/
 mkdir -p de/cufflinks/ref_guided/
-cd $RNA_HOME/alignments/hisat2/
+cd $RNA_ALIGN_DIR
 
 cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/cufflinks/ref_guided/ --no-update-check $RNA_HOME/expression/cufflinks/ref_guided/merged/merged.gtf UHR_Rep1.bam,UHR_Rep2.bam,UHR_Rep3.bam HBR_Rep1.bam,HBR_Rep2.bam,HBR_Rep3.bam
 
@@ -36,7 +36,7 @@ Perform UHR vs. HBR comparison, for known/novel (de novo mode) transcripts:
 
 cd $RNA_HOME/
 mkdir -p de/cufflinks/de_novo/
-cd $RNA_HOME/alignments/hisat2/
+cd $RNA_ALIGN_DIR
 
 cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/cufflinks/de_novo/ --no-update-check $RNA_HOME/expression/cufflinks/de_novo/merged/merged.gtf UHR_Rep1.bam,UHR_Rep2.bam,UHR_Rep3.bam HBR_Rep1.bam,HBR_Rep2.bam,HBR_Rep3.bam
 
