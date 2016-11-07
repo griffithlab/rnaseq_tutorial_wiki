@@ -27,7 +27,7 @@ Merge all 6 cufflinks results so that they will have the same set of transcripts
 
 cd $RNA_HOME/expression/cufflinks/ref_only/
 ls -1 *Rep*/transcripts.gtf > assembly_GTF_list.txt
-cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa assembly_GTF_list.txt
+cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa assembly_GTF_list.txt
 
 ```
 
