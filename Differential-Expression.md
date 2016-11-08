@@ -44,7 +44,7 @@ results_genes = stattest(bg, feature="gene", covariate="type", getFC=TRUE, meas=
 write.table(results_transcripts,"UHR_vs_HBR_transcript_results.tsv",sep="\t")
 write.table(results_genes,"UHR_vs_HBR_gene_results.tsv",sep="\t")
 
-# Filter low-abundance genes
+# Filter low-abundance genes Here we remove all transcripts with a variance across samples less than one
 bg_filt = subset (bg,"rowVars(texpr(bg)) > 1", genomesubset=TRUE)
 results_transcripts = stattest(bg_filt, feature="transcript", covariate="type", getFC=TRUE, meas="FPKM")
 results_genes = stattest(bg_filt, feature="gene", covariate="type", getFC=TRUE, meas="FPKM")
@@ -108,7 +108,6 @@ grep -v feature UHR_vs_HBR_gene_results_sig.tsv | sort -rnk 4 | head -n 20
 ```
 
 Save all genes with P<0.05 to a new file.
-TODO: Map ENSG ID back to gene name/symbol
 
 ```bash
 
