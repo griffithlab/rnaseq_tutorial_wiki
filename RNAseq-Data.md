@@ -33,7 +33,7 @@ Make a copy of the test data
 
 ```bash
 
-wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
+cp /home/ubuntu/workspace/data/rnaseq-tutorial/HBR_UHR_ERCC_ds_5pc.tar .
 
 ```
 
