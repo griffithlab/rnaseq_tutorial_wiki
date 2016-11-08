@@ -6,15 +6,15 @@ Navigate to the correct directory and then launch R:
 
 ```bash
 
-cd $RNA_HOME/expression/stringtie/ref_only
+cd $RNA_HOME/de/ballgown/ref_only
 R
 
 ```
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part2_ballgown.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
 
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Part2_cummeRbund_output.pdf
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Part2_cummeRbund_output_extras.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part2_ballgown_output.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part2_ballgown_output_extras.pdf
 	
 ##SUPPLEMENTARY R ANALYSIS 
 
@@ -34,7 +34,7 @@ Expression and differential expression files will be read into R. The R analysis
 
 ```bash
 
-cd $RNA_HOME/de/cufflinks/ref_only/
+cd $RNA_HOME/de/ballgown/ref_only/
 R
 
 ```
@@ -42,7 +42,7 @@ R
 A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
 
 The output file can be viewed in your browser at the following url. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 
 ##ERCC DE Analysis
 
@@ -50,15 +50,15 @@ This section will demonstrate the DE between the ERCC spike-in:
 
 ```bash
 
-cd $RNA_HOME/de/cufflinks/ref_only
+cd $RNA_HOME/de/ballgown/ref_only
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_DE.R
 chmod +x Tutorial_Module4_ERCC_DE.R
-./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/htseq_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/cufflinks/ref_only/gene_exp.diff
+./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/htseq_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/ballgown/ref_only/UHR_vs_HBR_gene_results.tsv
 
 ```
 
 View the results here:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/cufflinks/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ##edgeR Analysis		
 
@@ -102,7 +102,7 @@ Once you have run the edgeR tutorial, compare the sigDE genes to those saved ear
 
 ```bash
 
-cat $RNA_HOME/expression/stringtie/ref_only/DE_genes.txt
+cat $RNA_HOME/de/ballgown/ref_only/DE_genes.txt
 cat $RNA_HOME/de/htseq_counts/DE_genes.txt
 
 ```

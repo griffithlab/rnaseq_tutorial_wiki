@@ -9,7 +9,7 @@ Change to ref-only directory:
 
 ```bash
 
-cd $RNA_HOME/expression/stringtie/ref_only/
+cd $RNA_HOME/de/ballgown/ref_only/
 
 ```
 
@@ -17,7 +17,7 @@ Perform UHR vs. HBR comparison, using all replicates, for known (reference only 
 
 ```bash
 
-printf "\"ids\",\"type\"\n\"UHR_Rep1\",\"UHR\"\n\"UHR_Rep2\",\"UHR\"\n\"UHR_Rep3\",\"UHR\"\n\"HBR_Rep1\",\"HBR\"\n\"HBR_Rep2\",\"HBR\"\n\"HBR_Rep3\",\"HBR\"\n" > UHR_vs_HBR.csv
+printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_only/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_only/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_only/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_only/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_only/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_only/HBR_Rep3\"\n" > UHR_vs_HBR.csv
 
 R
 
@@ -35,7 +35,7 @@ library(devtools)
 pheno_data = read.csv("UHR_vs_HBR.csv")
 
 # Load ballgown data structure
-bg = ballgown(samples=c("UHR_Rep1","UHR_Rep2","UHR_Rep3","HBR_Rep1","HBR_Rep2","HBR_Rep3"),pData=pheno_data)
+bg = ballgown(samples=as.vector(pheno_data$path),pData=pheno_data)
 
 # Perform DE with no filtering
 results_transcripts = stattest(bg, feature="transcript", covariate="type", getFC=TRUE, meas="FPKM")
