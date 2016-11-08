@@ -59,7 +59,7 @@ sig_genes = subset(results_genes,results_genes$pval<0.05)
 write.table(sig_transcripts,"UHR_vs_HBR_transcript_results_sig.tsv",sep="\t")
 write.table(sig_genes,"UHR_vs_HBR_gene_results_sig.tsv",sep="\t")
 
-quit()
+quit(save="no")
 
 ```
 
