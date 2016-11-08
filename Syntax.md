@@ -9,7 +9,7 @@ A fenced code block will look like this:
 sudo apt-get install tree
 cd ~
 # comment
-tree -I tools 
+tree -I workspace/tools 
 
 ```
 
