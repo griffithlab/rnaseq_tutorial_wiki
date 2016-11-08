@@ -1,47 +1,47 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
 #4-i. Reference Guided Transcript Assembly
-Note on de novo transcript discovery and differential expression using Cufflinks and Cuffdiff.
+Note on de novo transcript discovery and differential expression using Stringtie and Ballgown.
 
-In the previous module we ran Cufflinks in 'reference only' mode using the '-G/--GTF' Cufflinks option.
+In the previous module we ran Stringtie in 'reference only' mode using the '-G' and '-e' Stringtie options.
 	
-In this module we will run Cufflinks in two additional modes: (1) 'reference guided' mode and (2) 'de novo' mode. Cufflinks can predict the transcripts present in each library with or without help from knowledge of known transcripts. Cufflinks will then assign arbitrary transcript IDs to each transcript assembled from the data and estimate expression for those transcripts. One complication with this method is that in each library a different set of transcripts is likely to be predicted for each library. There may be a lot of similarities but the number of transcripts and their exact structure will differ in the output files for each library.  Before you can compare across libraries you therefore need to determine which transcripts correspond to each other across the libraries. Cufflinks provides 'cuffmerge' to combine predicted transcript GTF files from across different libraries.
+In this module we will run Stringtie in two additional modes: (1) 'reference guided' mode and (2) 'de novo' mode. Stringtie can predict the transcripts present in each library with or without help from knowledge of known transcripts. Stringtie will then assign arbitrary transcript IDs to each transcript assembled from the data and estimate expression for those transcripts. One complication with this method is that in each library a different set of transcripts is likely to be predicted for each library. There may be a lot of similarities but the number of transcripts and their exact structure will differ in the output files for each library.  Before you can compare across libraries you therefore need to determine which transcripts correspond to each other across the libraries. Stringtie provides a merge commad to combine predicted transcript GTF files from across different libraries.
 
-Once you have a merged GTF file you can run Cuffdiff with this instead of the known transcripts GTF file we used above.
+Once you have a merged GTF file you can run Stringtie with this instead of the known transcripts GTF file we used before. The merged GTF is used to recalculate expression estimates in prepartion for running Ballgown using the merged, novel transcripts.
 	
-To run Cufflinks in 'reference guided' mode: use the '-g/--GTF-guide' option
+To run Stringtie in 'reference guided' mode: use the '-G' option **WITHOUT** '-e'
 
-To run Cufflinks in 'de novo' mode do *not* specify either of the '-G/--GTF' OR '-g/--GTF-guide' options. 
+To run Stringtie in 'de novo' mode do **NOT** specify either of the '-G' OR '-e' options. 
 	
-Refer to the Cufflinks manual for a more detailed explanation:
-http://cole-trapnell-lab.github.io/cufflinks/manual/
-	
- Cufflinks basic usage:
- cufflinks [options] <hits.sam>
-	
-###Running Cufflinks in Reference Guided Mode
-Using the alignments we generated in the previous modules we will now run Cuffinks in reference guided mode using the '-g/--GTF-guide' option.
+Refer to the Stringtie manual for a more detailed explanation:
+https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual
+		
+###Running Stringtie in Reference Guided Mode
+Using the alignments we generated in the previous modules we will now run Stringtie in reference guided mode using the '-G' option **ONLY**.
 
 Extra options specified below
-* '-p 8' tells Cufflinks to use eight CPUs
-* '-g/--GTF-guide <known transcripts file>' Tells Cufflinks to consider known transcript annotations during the assembly process
-* '-o' tells Cufflinks to write output to a particular directory (one per sample)
 
-First, create an output directory. 
+*'-p 8' tells Stringtie to use eight CPUs
+*'-G <known transcripts file>' reference annotation to use for guiding the assembly process (GTF/GFF3)
+*'-l' name prefix for output transcripts (default: STRG)
+*'-o' output path/file name for the assembled transcripts GTF (default: stdout)
+
+
+First, create an output directory and then run stringtie in reference-guided mode. 
 
 ```bash
 
-cd $RNA_HOME/expression/
-mkdir -p cufflinks/ref_guided
-cd cufflinks/ref_guided
+cd $RNA_HOME/
+mkdir -p expression/stringtie/ref_guided/
+cd expression/stringtie/ref_guided/
 
-cufflinks -p 8 -o HBR_Rep1 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/HBR_Rep1.bam
-cufflinks -p 8 -o HBR_Rep2 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/HBR_Rep2.bam
-cufflinks -p 8 -o HBR_Rep3 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/HBR_Rep3.bam
+stringtie -p 8 -G $RNA_REF_GTF -l HBR_Rep1 -o HBR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -l HBR_Rep2 -o HBR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -l HBR_Rep3 -o HBR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
 
-cufflinks -p 8 -o UHR_Rep1 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/UHR_Rep1.bam
-cufflinks -p 8 -o UHR_Rep2 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/UHR_Rep2.bam
-cufflinks -p 8 -o UHR_Rep3 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/UHR_Rep3.bam
+stringtie -p 8 -G $RNA_REF_GTF -l UHR_Rep1 -o UHR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -l UHR_Rep2 -o UHR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -l UHR_Rep3 -o UHR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
 
 ```
 
