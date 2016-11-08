@@ -25,7 +25,7 @@ Extra options specified below:
 * '--rg LB:$LIBRARY_NAME' specified a read group library name. This together with rg-id will allow you to determine which reads came from which library in the merged bam later on
 * '--rg PL:ILLUMINA' specified a read group sequencing platform.
 * '--rg PU:$PLATFORM_UNIT' specified a read group sequencing platform unit.  Typically this consists of FLOWCELL-BARCODE.LANE
-* '--dta-cufflinks' Reports alignments tailored specifically for cufflinks
+* '--dta' Reports alignments tailored for transcript assemblers
 * '-x /path/to/hisat2/index' The HISAT2 index filename prefixe (minus the trailing .X.ht2)built earlier including splice sites and exons.
 * '-1 /path/to/read1.fastq.gz' The read 1 FASTQ file, optionally gzip(.gz) or bzip2(.bz2) compressed
 * '-2 /path/to/read2.fastq.gz' The read 2 FASTQ file, optionally gzip(.gz) or bzip2(.bz2) compressed
