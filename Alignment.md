@@ -3,7 +3,20 @@
 #2-ii. Alignment
 
 ###HISAT2 alignment
-Perform alignments with HISAT2 to the genome and transcriptome. HISAT2 uses a graph-based alignment and has succeeded HISAT and TOPHAT2. The output of this step will be a SAM/BAM file for each data set.
+
+Perform alignments with HISAT2 to the genome and transcriptome.
+
+First, begin by making the appropriate output directory for our alignment results.
+
+```bash
+
+echo $RNA_ALIGN_DIR
+mkdir -p $RNA_ALIGN_DIR
+cd $RNA_ALIGN_DIR
+
+```
+
+ HISAT2 uses a graph-based alignment and has succeeded HISAT and TOPHAT2. The output of this step will be a SAM/BAM file for each data set.
 
 Refer to HISAT2 manual for a more detailed explanation:
 
@@ -14,6 +27,7 @@ HISAT2 basic usage:
 ```bash
 
 hisat2 [options]* -x <ht2-idx> {-1 <m1> -2 <m2> | -U <r> | --sra-acc <SRA accession number>} [-S <sam>]
+
 ```
 
 Extra options specified below:
@@ -32,10 +46,6 @@ Extra options specified below:
 * '-S /path/to/output.sam' The output SAM format text file of alignments
 
 ```bash
-
-cd $RNA_HOME/
-mkdir -p $RNA_HOME/alignments/hisat2
-cd $RNA_HOME/alignments/hisat2
 
 hisat2 -p 8 --rg-id=UHR_Rep1 --rg SM:UHR --rg LB:UHR_Rep1_ERCC-Mix1 --rg PL:ILLUMINA --rg PU:CXX1234-ACTGAC.1 -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep1.sam
 hisat2 -p 8 --rg-id=UHR_Rep2 --rg SM:UHR --rg LB:UHR_Rep2_ERCC-Mix1 --rg PL:ILLUMINA --rg PU:CXX1234-TGACAC.1 -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz -2 $RNA_DATA_DIR/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz -S ./UHR_Rep2.sam

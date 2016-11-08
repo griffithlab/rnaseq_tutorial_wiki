@@ -36,6 +36,8 @@ export RNA_REF_INDEX=$RNA_REFS_DIR/chr22_with_ERCC92
 export RNA_REF_FASTA=$RNA_REF_INDEX.fa
 export RNA_REF_GTF=$RNA_REF_INDEX.gtf
 
+export RNA_ALIGN_DIR=$RNA_HOME/alignments
+
 ```
 
 
