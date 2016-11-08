@@ -1,44 +1,75 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#4-iv. Differential Splicing
+#4-iv. Differential (Expression) Splicing
 
-Use Cuffdiff to compare the UHR and HBR conditions.
+Use Ballgown and Stringtie to compare the UHR and HBR conditions against reference guided and de novo transcript assemblies.
 
-Refer to the Cufflinks manual for a more detailed explanation:
-http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html
+Refer to the Stringtie manual for a more detailed explanation:
+https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual
 
-Cuffdiff basic usage:
-```bash
-
-cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... sampleN_hits.sam]
-
-```
-
-* Supply replicate SAMs as comma separated lists for each condition: sample1_rep1.sam,sample1_rep2.sam,...sample1_repM.sam
-* '-p 8' tells cuffdiff to use eight CPUs
-* '-L' tells cuffdiff the labels to use for samples
+The Ballgown github page also has documentation for getting started with ballgown:
+https://github.com/alyssafrazee/ballgown
 	
-Perform UHR vs. HBR comparison, for known/novel (reference guided mode) transcripts:
+Calculate UHR and HBR expression estimates, for known/novel (reference guided mode) transcripts
+
+Run Stringtie using the reference guided, merged GTF and output tables for Ballgown
 
 ```bash
 
-cd $RNA_HOME/
-mkdir -p de/cufflinks/ref_guided/
-cd $RNA_ALIGN_DIR
+cd $RNA_HOME/expression/stringtie/ref_guided
 
-cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/cufflinks/ref_guided/ --no-update-check $RNA_HOME/expression/cufflinks/ref_guided/merged/merged.gtf UHR_Rep1.bam,UHR_Rep2.bam,UHR_Rep3.bam HBR_Rep1.bam,HBR_Rep2.bam,HBR_Rep3.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
+
+stringtie -p 8 -G merged.annotated.gtf -e -B -o UHR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o UHR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o UHR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
 
 ```
 
-Perform UHR vs. HBR comparison, for known/novel (de novo mode) transcripts:
+Run Ballgown using the reference guided, merged transcripts
 
 ```bash
 
-cd $RNA_HOME/
-mkdir -p de/cufflinks/de_novo/
-cd $RNA_ALIGN_DIR
+mkdir -p $RNA_HOME/de/ballgown/ref_guided/
+cd $RNA_HOME/de/ballgown/ref_guided/
 
-cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/cufflinks/de_novo/ --no-update-check $RNA_HOME/expression/cufflinks/de_novo/merged/merged.gtf UHR_Rep1.bam,UHR_Rep2.bam,UHR_Rep3.bam HBR_Rep1.bam,HBR_Rep2.bam,HBR_Rep3.bam
+printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided/HBR_Rep3\"\n" > UHR_vs_HBR.csv
+
+R
+
+```
+
+Calculate UHR and HBR expression estimates, for known/novel (de novo mode) transcripts:
+
+Run Stringtie using the de novo, merged GTF and output tables for Ballgown
+
+
+```bash
+
+cd $RNA_HOME/expression/stringtie/de_novo
+
+stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
+
+stringtie -p 8 -G merged.annotated.gtf -e -B -o UHR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o UHR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
+stringtie -p 8 -G merged.annotated.gtf -e -B -o UHR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
+
+```
+
+Run Ballgown using the de novo, merged transcripts
+
+```bash
+
+mkdir -p $RNA_HOME/de/ballgown/de_novo/
+cd $RNA_HOME/de/ballgown/de_novo/
+
+printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo/HBR_Rep3\"\n" > UHR_vs_HBR.csv
+
+R
 
 ```
 
