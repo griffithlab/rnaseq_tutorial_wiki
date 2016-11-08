@@ -35,13 +35,13 @@ cd $RNA_HOME/expression/
 mkdir -p cufflinks/ref_guided
 cd cufflinks/ref_guided
 
-cufflinks -p 8 -o HBR_Rep1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep1.bam
-cufflinks -p 8 -o HBR_Rep2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep2.bam
-cufflinks -p 8 -o HBR_Rep3 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/HBR_Rep3.bam
+cufflinks -p 8 -o HBR_Rep1 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/HBR_Rep1.bam
+cufflinks -p 8 -o HBR_Rep2 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/HBR_Rep2.bam
+cufflinks -p 8 -o HBR_Rep3 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/HBR_Rep3.bam
 
-cufflinks -p 8 -o UHR_Rep1 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep1.bam
-cufflinks -p 8 -o UHR_Rep2 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep2.bam
-cufflinks -p 8 -o UHR_Rep3 --GTF-guide $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --no-update-check $RNA_HOME/alignments/hisat2/UHR_Rep3.bam
+cufflinks -p 8 -o UHR_Rep1 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/UHR_Rep1.bam
+cufflinks -p 8 -o UHR_Rep2 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/UHR_Rep2.bam
+cufflinks -p 8 -o UHR_Rep3 --GTF-guide $REF_GTF --no-update-check $RNA_ALIGN_DIR/UHR_Rep3.bam
 
 ```
 

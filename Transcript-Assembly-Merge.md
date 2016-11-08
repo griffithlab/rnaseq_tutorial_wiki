@@ -28,7 +28,7 @@ For reference guided mode:
 cd $RNA_HOME/expression/cufflinks/ref_guided/
 ls -1 *Rep*/transcripts.gtf > assembly_GTF_list.txt
 cat assembly_GTF_list.txt
-cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa assembly_GTF_list.txt
+cuffmerge -p 8 -o merged -g $REF_GTF -s $REF_FASTA assembly_GTF_list.txt
 
 ```
 
@@ -39,7 +39,7 @@ For de novo mode:
 cd $RNA_HOME/expression/cufflinks/de_novo/
 ls -1 *Rep*/transcripts.gtf > assembly_GTF_list.txt
 cat assembly_GTF_list.txt
-cuffmerge -p 8 -o merged -g $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf -s $RNA_HOME/refs/hg19/fasta/chr22_ERCC92/chr22_ERCC92.fa assembly_GTF_list.txt
+cuffmerge -p 8 -o merged -g $REF_GTF -s $REF_FASTA assembly_GTF_list.txt
 
 ```
 

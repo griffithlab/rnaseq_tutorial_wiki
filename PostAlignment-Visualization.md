@@ -69,7 +69,7 @@ Create faidx indexed reference sequence file for use with mpileup
 
 ```bash
 
-samtools faidx $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa
+samtools faidx $REF_FASTA
 
 ```
 
@@ -77,7 +77,7 @@ Run `samtools mpileup` on a region of interest
 
 ```bash
 
-samtools mpileup -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa -r 22:18905970-18905980 $RNA_HOME/alignments/hisat2/UHR.bam $RNA_HOME/alignments/hisat2/HBR.bam 
+samtools mpileup -f $REF_FASTA -r 22:18918457-18918467 $RNA_ALIGN_DIR/UHR.bam $RNA_ALIGN_DIR/HBR.bam 
 
 ```
 
@@ -91,14 +91,14 @@ First, create a bed file with some positions of interest (we will create a file 
 
 It will contain a single line specifying a variant position on chr22 e.g.:
 
-22	38879688	38879688
+22	38483683	38483683
 
 Create the bed file
 
 ```bash
 
-echo "22 38879688 38879688"
-echo "22 38879688 38879688" > snvs.bed
+echo "22 38483683 38483683"
+echo "22 38483683 38483683" > snvs.bed
 
 ```
 
@@ -106,8 +106,8 @@ Run `bam-readcount` on this list for the tumor and normal merged bam files
 
 ```bash
 
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/UHR.bam 2>/dev/null
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/HBR.bam 2>/dev/null
+bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/UHR.bam 2>/dev/null
+bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/HBR.bam 2>/dev/null
 
 ```
 
@@ -115,8 +115,8 @@ Now, run again, but ignore stderr and redirect stdout to a file:
 
 ```bash
 
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/UHR.bam 2>/dev/null 1>UHR_bam-readcounts.txt
-bam-readcount -l snvs.bed -f $RNA_HOME/refs/hg19/fasta/chr22_ERCC92.fa $RNA_HOME/alignments/hisat2/HBR.bam 2>/dev/null 1>HBR_bam-readcounts.txt
+bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/UHR.bam 2>/dev/null 1>UHR_bam-readcounts.txt
+bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/HBR.bam 2>/dev/null 1>HBR_bam-readcounts.txt
 
 ```
 

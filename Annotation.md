@@ -3,17 +3,15 @@
 #1-iii. Annotations
 ###Obtain known gene/transcript annotations
 
-In this tutorial we will use annotations obtained from Illuminas iGenomes for chromosome 22 only. For time reasons, these are prepared for you and made available on or FTP site. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
+In this tutorial we will use annotations obtained from Ensembl (ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz) for chromosome 22 only. For time reasons, these are prepared for you and made available on your AWS instance. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
 
 Copy the gene annotation files to the working directory. 
 
 ```bash
 
-cd $RNA_HOME/refs/hg19/
-mkdir genes
-cd genes
-wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/genes_chr22_ERCC92.gtf.gz
-gunzip genes_chr22_ERCC92.gtf.gz
+cd $RNA_HOME
+export REF_GTF=/home/ubuntu/workspace/data/annotations/GRCh38/chr22_with_ERCC92.gtf
+echo $REF_GTF
 
 ```
 
@@ -21,7 +19,7 @@ Take a look at the contents of the gtf file. Press 'q' to exit the 'less' displa
 
 ```bash
 
-less -p start_codon -S genes_chr22_ERCC92.gtf
+less -p start_codon -S $REF_GTF
 
 ```
 
@@ -31,7 +29,7 @@ We can use a perl command-line command to find out:
 
 ```bash
 
-perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' genes_chr22_ERCC92.gtf | sort | uniq | wc -l
+perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' $REF_GTF | sort | uniq | wc -l
 
 ```
 
@@ -47,7 +45,7 @@ Now view the structure of a single transcript in GTF format. Press 'q' to exit t
 
 ```bash
 
-grep ENST00000342247 genes_chr22_ERCC92.gtf | less -p "exon\s" -S
+grep ENST00000342247 $REF_GTF | less -p "exon\s" -S
 
 ```
 
@@ -77,7 +75,7 @@ When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annot
 	
 ###Sources for obtaining gene annotation files formatted for TopHat/Cufflinks/Cuffdiff
 
-There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, UCSC, RefSeq, etc.  Three options and related instructions for obtaining the gene annotation files are provided below.
+There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, Illumina iGenomes, UCSC, RefSeq, etc.  Three options and related instructions for obtaining the gene annotation files are provided below.
 	
 ####I. ILLUMINA IGENOMES.  
 Formatted specifically for use with TopHat Cuffinks.  Based on UCSC, Refseq/NCBI, or Ensembl annotations.  Available for many species.  Bowtie indexed reference genome files are pre-computed for your convenience.  Download here:
