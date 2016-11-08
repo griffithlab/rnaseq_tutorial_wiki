@@ -26,6 +26,7 @@ Extra options specified below:
 '-p 8' tells Stringtie to use eight CPUs
 '-G <known transcripts file>' reference annotation to use for guiding the assembly process (GTF/GFF3) 
 '-e' only estimate the abundance of given reference transcripts (requires -G)
+'-B' enable output of Ballgown table files which will be created in the same directory as the output GTF (requires -G, -o recommended)
 '-o' output path/file name for the assembled transcripts GTF (default: stdout)
 
 ```bash
@@ -34,13 +35,13 @@ cd $RNA_HOME/
 mkdir -p expression/stringtie/ref_only/
 cd expression/stringtie/ref_only/
 
-stringtie -p 8 -G $RNA_REF_GTF -e -o HBR_Rep1.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
-stringtie -p 8 -G $RNA_REF_GTF -e -o HBR_Rep2.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
-stringtie -p 8 -G $RNA_REF_GTF -e -o HBR_Rep3.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HBR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HBR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HBR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
 
-stringtie -p 8 -G $RNA_REF_GTF -e -o UHR_Rep1.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
-stringtie -p 8 -G $RNA_REF_GTF -e -o UHR_Rep2.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
-stringtie -p 8 -G $RNA_REF_GTF -e -o UHR_Rep3.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o UHR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o UHR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o UHR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
 
 ```
 
@@ -48,9 +49,9 @@ What does the raw output from Stringtie look like?
 
 ```bash
 
-head UHR_Rep1.gtf
+head UHR_Rep1/transcripts.gtf
 
-awk '{if ($3=="transcript") print}' UHR_Rep1.gtf | cut -f 1,4,9 | less
+awk '{if ($3=="transcript") print}' UHR_Rep1/transcripts.gtf | cut -f 1,4,9 | less
 
 ```
 
