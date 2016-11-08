@@ -9,9 +9,9 @@ Copy the gene annotation files to the working directory.
 
 ```bash
 
-cd $RNA_HOME
-export REF_GTF=/home/ubuntu/workspace/data/annotations/GRCh38/chr22_with_ERCC92.gtf
-echo $REF_GTF
+echo $RNA_REFS_DIR
+cd $RNA_REFS_DIR
+cp /home/ubuntu/workspace/data/annotations/GRCh38/chr22_with_ERCC92.gtf .  
 
 ```
 
@@ -19,7 +19,7 @@ Take a look at the contents of the gtf file. Press 'q' to exit the 'less' displa
 
 ```bash
 
-less -p start_codon -S $REF_GTF
+less -p start_codon -S $RNA_REF_GTF
 
 ```
 
@@ -29,7 +29,7 @@ We can use a perl command-line command to find out:
 
 ```bash
 
-perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' $REF_GTF | sort | uniq | wc -l
+perl -ne 'if ($_ =~ /(gene_id\s\"ENSG\w+\")/){print "$1\n"}' $RNA_REF_GTF | sort | uniq | wc -l
 
 ```
 
@@ -45,7 +45,7 @@ Now view the structure of a single transcript in GTF format. Press 'q' to exit t
 
 ```bash
 
-grep ENST00000342247 $REF_GTF | less -p "exon\s" -S
+grep ENST00000342247 $RNA_REF_GTF | less -p "exon\s" -S
 
 ```
 
@@ -91,7 +91,7 @@ Note, the Igenomes file is huge and contains many files (including archived vers
 
 ```bash
 
-cd /workspace/rnaseq/refs/hg19/
+cd $RNA_REFS_DIR
 wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
 tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
 

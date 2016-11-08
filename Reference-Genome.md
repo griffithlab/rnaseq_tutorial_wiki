@@ -2,26 +2,26 @@
 
 #1-ii. Reference Genomes
 
-Obtain a reference genome from iGenomes. In this example analysis we will use the human GRCh38 version of the genome. Furthermore, we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
+Obtain a reference genome from Ensembl, iGenomes, NCBI or UCSC. In this example analysis we will use the human GRCh38 version of the genome from Ensembl. Furthermore, we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
 
 Create the necessary working directory
 
 ```bash
 
 cd $RNA_HOME
-export REF_BASE=/home/ubuntu/workspace/data/fasta/GRCh38/chr22_with_ERCC92
-export REF_FASTA=${REF_BASE}.fa
-echo $REF_FASTA
+mkdir -p $RNA_REFS_DIR
+echo $RNA_REFS_DIR
 
 ```
 
 The complete data from which these files were obtained can be found at: ftp://ftp.ensembl.org/pub/release-85/fasta/homo_sapiens/dna/. You could use wget to download the Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz file, then unzip/untar.
 
-This has been done for you and that data placed on your AWS instance. It contains chr22 and ERCC transcript fasta files in both a single combined file and individual files.
+This has been done for you and that data placed on your AWS instance. It contains chr22 and ERCC transcript fasta files in both a single combined file and individual files. Copy the files to the rnaseq working directory
 
 ```bash
 
-cd /home/ubuntu/workspace/data//fasta/GRCh38/
+cd $RNA_REFS_DIR
+cp /home/ubuntu/workspace/data/fasta/GRCh38/chr22_with_ERCC92.fa .
 ls 
 
 ```
@@ -30,7 +30,7 @@ View the first 10 lines of this file
 
 ```bash
 
-head $REF_FASTA
+head $RNA_REF_FASTA
 
 ```
 
@@ -38,7 +38,7 @@ How many lines and characters are in this file?
 
 ```bash
 
-wc $REF_FASTA
+wc $RNA_REF_FASTA
 
 ```
 
@@ -46,7 +46,7 @@ View 10 lines from approximately the middle of this file
 
 ```bash
 
-head -n 425000 $REF_FASTA | tail
+head -n 425000 $RNA_REF_FASTA | tail
 
 ```
 
