@@ -41,6 +41,8 @@ R
 
 ```
 
+Please see [[Differential Expression|Differential-Expression]] for details on running ballgown to determine a DE gene/transcript list.
+
 Calculate UHR and HBR expression estimates, for known/novel (de novo mode) transcripts:
 
 Run Stringtie using the de novo, merged GTF and output tables for Ballgown
@@ -72,6 +74,8 @@ printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/s
 R
 
 ```
+
+Please see [[Differential Expression|Differential-Expression]] for details on running ballgown to determine a DE gene/transcript list.
 
 | [[Previous Section|Transcript-Assembly-Merge]] | [[This Section|Differential-Splicing]]          | [[Next Section|Transcript-Assembly-Visualization]]        |
 |:----------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------------------------:|
