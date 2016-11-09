@@ -2,7 +2,7 @@
 First, make sure your [[environment|Environment]] is set up correctly.
 
 #1-i. Installation
-Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, HISAT2, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
+Tools needed for this analysis are: samtools, bam-readcount, HISAT2, stringtie, gffcompare, htseq-count, flexbar, R, ballgown, fastqc and picard-tools. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
 
 Set up tool installation location:
 
