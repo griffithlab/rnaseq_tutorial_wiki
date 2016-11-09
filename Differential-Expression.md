@@ -1,70 +1,15 @@
 ![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
 #3-ii. Differential Expression
-Use Cuffmerge and Cuffdiff to compare the tumor and normal conditions. Refer to the Cufflinks manual for a more detailed explanation:
-* http://cole-trapnell-lab.github.io/cufflinks/cuffmerge/index.html
-* http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html
+Use Ballgown to compare the tumor and normal conditions. Refer to the Ballgown manual for a more detailed explanation:
+* https://www.bioconductor.org/packages/release/bioc/html/ballgown.html
+`
 
-Cuffmerge basic usage:
-```bash
-
-cuffmerge [options]* <assembly_GTF_list.txt>
-
-```
-
-* "assembly_GTF_list.txt" is a text file "manifest" with a list (one per line) of GTF files that you would like to merge together into a single GTF file.
-
-Extra options specified below:
-
-* '-p 8' tells cuffmerge to use eight CPUs
-* '-o' tells cuffmerge to write output to a particular directory
-* '-g' tells cuffmerge where to find reference gene annotations. It will use these annotations to gracefully merge novel isoforms (for de novo runs) and known isoforms and maximize overall assembly quality.
-* '-s' tells cuffmerge where to find the reference genome files
-
-Merge all 6 cufflinks results so that they will have the same set of transcripts for comparison purposes
+Change to ref-only directory:
 
 ```bash
 
-cd $RNA_HOME/expression/cufflinks/ref_only/
-ls -1 *Rep*/transcripts.gtf > assembly_GTF_list.txt
-cuffmerge -p 8 -o merged -g $REF_GTF -s $REF_FASTA assembly_GTF_list.txt
-
-```
-
-Cuffdiff basic usage:
-
-```bash
-
-cuffdiff [options] <transcripts.gtf> <sample1_hits.sam> <sample2_hits.sam> [... sampleN_hits.sam]
-
-```
-
-* Supply replicate SAMs as comma separated lists for each condition:
- * Example: sample1_rep1.sam,sample1_rep2.sam,...sample1_repM.sam
-* '-p 8' tells cuffdiff to use eight CPUs
-* '-L' tells cuffdiff the labels to use for samples
-
-Create necessary directories:
-
-```bash
-
-cd $RNA_HOME/
-mkdir -p de/cufflinks/ref_only
-cd $RNA_HOME/de/cufflinks/ref_only/
-
-```
-
-Generate the cuffquant binary format files for cuffdiff
-
-```bash
-
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep1 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/UHR_Rep1.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep2 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/UHR_Rep2.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o UHR_Rep3 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/UHR_Rep3.bam
-
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep1 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep2 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
-cuffquant -p 8 --library-type fr-firststrand --no-update-check -o HBR_Rep3 $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf $RNA_ALIGN_DIR/HBR_Rep3.bam
+cd $RNA_HOME/de/ballgown/ref_only/
 
 ```
 
@@ -72,18 +17,59 @@ Perform UHR vs. HBR comparison, using all replicates, for known (reference only 
 
 ```bash
 
-cuffdiff -p 8 -L UHR,HBR -o $RNA_HOME/de/cufflinks/ref_only/ --library-type fr-firststrand --no-update-check $RNA_HOME/expression/cufflinks/ref_only/merged/merged.gtf UHR_Rep1/abundances.cxb,UHR_Rep2/abundances.cxb,UHR_Rep3/abundances.cxb HBR_Rep1/abundances.cxb,HBR_Rep2/abundances.cxb,HBR_Rep3/abundances.cxb
+printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_only/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_only/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_only/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_only/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_only/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_only/HBR_Rep3\"\n" > UHR_vs_HBR.csv
+
+R
 
 ```
 
-What does the raw output from Cuffdiff look like?
+```bash
+
+library(ballgown)
+library(RSkittleBrewer)
+library(genefilter)
+library(dplyr)
+library(devtools)
+
+# Load phenotype data
+pheno_data = read.csv("UHR_vs_HBR.csv")
+
+# Load ballgown data structure
+bg = ballgown(samples=as.vector(pheno_data$path),pData=pheno_data)
+
+# Perform DE with no filtering
+results_transcripts = stattest(bg, feature="transcript", covariate="type", getFC=TRUE, meas="FPKM")
+results_genes = stattest(bg, feature="gene", covariate="type", getFC=TRUE, meas="FPKM")
+
+write.table(results_transcripts,"UHR_vs_HBR_transcript_results.tsv",sep="\t")
+write.table(results_genes,"UHR_vs_HBR_gene_results.tsv",sep="\t")
+
+# Filter low-abundance genes Here we remove all transcripts with a variance across samples less than one
+bg_filt = subset (bg,"rowVars(texpr(bg)) > 1", genomesubset=TRUE)
+results_transcripts = stattest(bg_filt, feature="transcript", covariate="type", getFC=TRUE, meas="FPKM")
+results_genes = stattest(bg_filt, feature="gene", covariate="type", getFC=TRUE, meas="FPKM")
+
+write.table(results_transcripts,"UHR_vs_HBR_transcript_results_filtered.tsv",sep="\t")
+write.table(results_genes,"UHR_vs_HBR_gene_results_filtered.tsv",sep="\t")
+
+
+# Identify genes with p value < 0.05
+sig_transcripts = subset(results_transcripts,results_transcripts$pval<0.05)
+sig_genes = subset(results_genes,results_genes$pval<0.05)
+write.table(sig_transcripts,"UHR_vs_HBR_transcript_results_sig.tsv",sep="\t")
+write.table(sig_genes,"UHR_vs_HBR_gene_results_sig.tsv",sep="\t")
+
+quit(save="no")
+
+```
+
+
+What does the raw output from Ballgown look like?
 
 ```bash
 
-cd $RNA_HOME/de/cufflinks/ref_only
-ls -l
-head isoform_exp.diff
-grep -P "gene_id|OK" isoform_exp.diff | cut -f 2-6,8-10,12 | sort -k 9,9 | less -S
+head UHR_vs_HBR_gene_results.tsv
+
 
 ```
 
@@ -93,15 +79,15 @@ How many genes are there on this chromosome?
 
 ```bash
 
-grep -v gene_id gene_exp.diff | wc -l
+grep -v feature UHR_vs_HBR_gene_results.tsv | wc -l
 
 ```
 
-How many were detected above 0 in UHR or HBR (take the sum of expression values for both and check for greater than 0)?
+How many were detected above 0 in UHR or HBR?
 
 ```bash
 
-grep -v gene_id gene_exp.diff | perl -ne '@line=split("\t", $_); $sum=$line[7]+$line[8]; if ($sum > 0){print "$sum\n";}' | wc -l
+grep -v feature UHR_vs_HBR_gene_results_filtered.tsv | wc -l
 
 ```
 
@@ -109,7 +95,7 @@ How many differentially expressed genes were found on this chromosome (p-value <
 
 ```bash
 
-grep -v gene_id gene_exp.diff | cut -f 12 | perl -ne 'if ($_ < 0.05){print "$_"}' | wc -l
+grep -v feature UHR_vs_HBR_gene_results_sig.tsv | wc -l
 
 ```
 
@@ -117,7 +103,7 @@ Display the top 20 DE genes. Look at some of those genes in IGV - do they make s
 
 ```bash
 
-grep -P "OK|gene_id" gene_exp.diff | sort -k 12n,12n | head -n 20 | cut -f 3,5,6,8,9,10,12,13,14
+grep -v feature UHR_vs_HBR_gene_results_sig.tsv | sort -rnk 4 | head -n 20
 
 ```
 
@@ -125,7 +111,7 @@ Save all genes with P<0.05 to a new file.
 
 ```bash
 
-grep -P "OK|gene_id" gene_exp.diff | sort -k 12n,12n | cut -f 3,5,6,8,9,10,12,13,14 | perl -ne '@data=split("\t", $_); if ($data[6]<=0.05){print;}' > DE_genes.txt
+ grep -v feature UHR_vs_HBR_gene_results_sig.tsv | cut -f 3 | sed 's/\"//g' > DE_genes.txt
 
 ```
 

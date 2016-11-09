@@ -19,21 +19,14 @@ So to summarize we have:
  	
 Each data set has a corresponding pair of FastQ files (read 1 and read 2 of paired end reads).  
 The reads are paired-end 101-mers generated on an Illumina HiSeq instrument.
-The test data has been pre-filtered for reads that appear to map to chromosome 22.  Lets get that raw input data onto our cloud instance.
+The test data has been pre-filtered for reads that appear to map to chromosome 22.  Lets copy the raw input data to our tutorial working directory.
 
 ```bash
 
-cd $RNA_HOME/
-mkdir -p data
-cd data
-
-```
-
-Make a copy of the test data
-
-```bash
-
-wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/downsampled_5pc_chr22/HBR_UHR_ERCC_ds_5pc.tar
+echo $RNA_DATA_DIR
+mkdir -p $RNA_DATA_DIR
+cd $RNA_DATA_DIR 
+cp /home/ubuntu/workspace/data/rnaseq-tutorial/HBR_UHR_ERCC_ds_5pc.tar .
 
 ```
 

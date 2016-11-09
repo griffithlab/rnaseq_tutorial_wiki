@@ -5,8 +5,6 @@ Before we can view our alignments in the IGV browser we need to index our BAM fi
 
 ```bash
 
-cd $RNA_HOME
-export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2/
 echo $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR
 
@@ -69,7 +67,7 @@ Create faidx indexed reference sequence file for use with mpileup
 
 ```bash
 
-samtools faidx $REF_FASTA
+samtools faidx $RNA_REF_FASTA
 
 ```
 
@@ -77,7 +75,7 @@ Run `samtools mpileup` on a region of interest
 
 ```bash
 
-samtools mpileup -f $REF_FASTA -r 22:18918457-18918467 $RNA_ALIGN_DIR/UHR.bam $RNA_ALIGN_DIR/HBR.bam 
+samtools mpileup -f $RNA_REF_FASTA -r 22:18918457-18918467 $RNA_ALIGN_DIR/UHR.bam $RNA_ALIGN_DIR/HBR.bam 
 
 ```
 
@@ -106,8 +104,8 @@ Run `bam-readcount` on this list for the tumor and normal merged bam files
 
 ```bash
 
-bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/UHR.bam 2>/dev/null
-bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/HBR.bam 2>/dev/null
+bam-readcount -l snvs.bed -f $RNA_REF_FASTA $RNA_ALIGN_DIR/UHR.bam 2>/dev/null
+bam-readcount -l snvs.bed -f $RNA_REF_FASTA $RNA_ALIGN_DIR/HBR.bam 2>/dev/null
 
 ```
 
@@ -115,8 +113,8 @@ Now, run again, but ignore stderr and redirect stdout to a file:
 
 ```bash
 
-bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/UHR.bam 2>/dev/null 1>UHR_bam-readcounts.txt
-bam-readcount -l snvs.bed -f $REF_FASTA $RNA_ALIGN_DIR/HBR.bam 2>/dev/null 1>HBR_bam-readcounts.txt
+bam-readcount -l snvs.bed -f $RNA_REF_FASTA $RNA_ALIGN_DIR/UHR.bam 2>/dev/null 1>UHR_bam-readcounts.txt
+bam-readcount -l snvs.bed -f $RNA_REF_FASTA $RNA_ALIGN_DIR/HBR.bam 2>/dev/null 1>HBR_bam-readcounts.txt
 
 ```
 
