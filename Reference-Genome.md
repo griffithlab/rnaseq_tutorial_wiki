@@ -16,7 +16,7 @@ echo $RNA_REFS_DIR
 
 The complete data from which these files were obtained can be found at: ftp://ftp.ensembl.org/pub/release-85/fasta/homo_sapiens/dna/. You could use wget to download the Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz file, then unzip/untar.
 
-This has been done for you and that data placed on your AWS instance. It contains chr22 and ERCC transcript fasta files in both a single combined file and individual files. Copy the files to the rnaseq working directory
+This has been done for you and that data placed on your AWS instance. It contains chr22 and ERCC transcript fasta files in both a single combined file and individual files. Copy the file to the rnaseq working directory
 
 ```bash
 
