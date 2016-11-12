@@ -807,6 +807,10 @@ The second example first sends the output of `grep` to the Unix `sort` command. 
 
 ---
 
+# Shell scripting
+
+[Learnshell Tutorial](http://www.learnshell.org/en/Hello%2C_World%21)
+
 # Advanced file editing with VIM
 
 [Interactive Tutorial](http://www.openvim.com/)
