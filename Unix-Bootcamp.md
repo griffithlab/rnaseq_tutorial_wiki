@@ -1,8 +1,9 @@
 # Command-line Bootcamp
 
 **Adapted by : Jason Walker, McDonnell Genome Institute**<br>
+**Additional content by : Alex Wagner, McDonnell Genome Institute**<br>
 **Original author : Keith Bradnam, UC Davis Genome Center**<br>
-**Version 1.03 --- 2016-06-15**<br>
+**Version 1.04 --- 2016-11-11**<br>
 <br>
 
 ><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please send feedback, questions, money, or abuse to <krbradnam@ucdavis.edu> 
@@ -75,7 +76,7 @@ It's important to note that you will always be *inside* a single directory when 
 
 ```bash
 ubuntu@:~$ ls
-command_line_course  linux_bootcamp
+tools  workspace
 ubuntu@:~$
 ```
 
@@ -89,11 +90,11 @@ There are four things that you should note here:
 The `ls` command is used to list the contents of _any_ directory, not necessarily the one that you are currently in. Try the following:
 
 ```bash
-ubuntu@:~$ ls /data
-bioinfo.course.data  command_line_course  galaxy  lost+found  refs
+ubuntu@:~$ ls workspace/
+data  lost+found
 
 ubuntu@:~$ ls /etc/perl
-CPAN  Net  XML
+CPAN  Net
 ```
 
 
@@ -108,13 +109,12 @@ Looking at directories from within a Unix terminal can often seem confusing. But
 
 ```bash
 ubuntu@:~$ ls /
-bin   dev   initrd.img      lib64       mnt   root  software  tmp  vmlinuz
-boot  etc   initrd.img.old  lost+found  opt   run   srv       usr  vmlinuz.old
-data  home  lib             media       proc  sbin  sys       var
+bin   etc         initrd.img.old  lost+found  opt   run   srv  usr      vmlinuz.old
+boot  home        lib             media       proc  sbin  sys  var      workspace
+dev   initrd.img  lib64           mnt         root  snap  tmp  vmlinuz
 ```
 
 You might notice some of these names appearing in different colors. Many Unix systems will display files and directories differently by default. Other colors may be used for special types of files. When you log in to a computer you are working with your files in your home directory, and this is often  inside a directory called 'users' or 'home'.
-
 
 ---
 
@@ -143,22 +143,22 @@ As you learn Unix you will frequently type commands that don't seem to work. Mos
 If we want to make a new directory (e.g. to store some work related data), we can use the [mkdir][] command:
 
 ```bash
-ubuntu@:~$ mkdir Learning_unix
-ubuntu@:~$ ls
-command_line_course  Learning_unix  linux_bootcamp
+ubuntu@:~$ mkdir workspace/Learning_unix
+ubuntu@:~$ ls workspace
+data  Learning_unix  lost+found
 ```
 
 [mkdir]: http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs
 
 ---
 
-## 6: Getting from 'A' to 'B' ##
+## 6: Changing directories and command options ##
 
 We are in the home directory on the computer but we want to to work in the new `Learning_unix` directory. To change directories in Unix, we use the [cd][] command:
 
 ```bash
-cd Learning_unix
-ubuntu@:~/Learning_unix$
+cd workspace/Learning_unix
+ubuntu@:~/workspace/Learning_unix$
 ```
 
 Notice that — on this system — the command prompt has expanded to include our current directory. This doesn't happen by default on all Unix systems, but you should know that you can configure what information appears as part of the command prompt.
@@ -166,16 +166,16 @@ Notice that — on this system — the command prompt has expanded to include ou
 Let's make two new subdirectories and navigate into them:
 
 ```bash
-ubuntu@:~/Learning_unix$ mkdir Outer_directory
-ubuntu@:~/Learning_unix$ cd Outer_directory
-ubuntu@:~/Learning_unix/Outer_directory$
+ubuntu@:~/workspace/Learning_unix$ mkdir Outer_directory
+ubuntu@:~/workspace/Learning_unix$ cd Outer_directory
+ubuntu@:~/workspace/Learning_unix/Outer_directory$
 
-ubuntu@:~/Learning_unix/Outer_directory$ mkdir Inner_directory
-ubuntu@:~/Learning_unix/Outer_directory$ cd Inner_directory/
-ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ mkdir Inner_directory
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ cd Inner_directory/
+ubuntu@:~/workspace/Learning_unix/Outer_directory/Inner_directory$
 ```
 
-Now our command prompt is getting quite long, but it reveals that we are three levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the `mkdir` command in way to do this all in one step. 
+Now our command prompt is getting quite long, but it reveals that we are four levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the `mkdir` command in way to do this all in one step. 
 
 Like most Unix commands, `mkdir` supports *command-line options* which let you alter its behavior and functionality. Command-like options are — as the name suggests — optional arguments that are placed after the command name. They often take the form of single letters (following a dash). If we had used the `-p` option of the `mkdir` command we could have done this in one step. E.g.
 
@@ -185,11 +185,48 @@ mkdir -p Outer_directory/Inner_directory
 
 ***Note the spaces either side the `-p`!***
 
+Sometimes options are entire words, usually preceded by a double-dash. For example, using the `--parents` option:
+
+```bash
+mkdir --parents Outer_directory/Inner_directory
+```
+
+is identical to using the `-p` option.
+
 [cd]: http://en.wikipedia.org/wiki/Cd_(command)
 
 
 ---
 
+
+## 7: Getting help ##
+
+Many programs will provide information about the command being called by passing a `-h` or `--help` option.
+
+```bash
+ubuntu@:~$mkdir --help
+Usage: mkdir [OPTION]... DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -m, --mode=MODE   set file mode (as in chmod), not a=rwx - umask
+  -p, --parents     no error if existing, make parent directories as needed
+  -v, --verbose     print a message for each created directory
+  -Z                   set SELinux security context of each created directory
+                         to the default type
+      --context[=CTX]  like -Z, or if CTX is specified then set the SELinux
+                         or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/mkdir>
+or available locally via: info '(coreutils) mkdir invocation'
+```
+
+In addition, many commands will have `man` (manual) pages, which are often more detailed descriptions of the program and its usage.
+
+>Try it yourself! Type `man mkdir` and see what happens.
 
 ## 7: The root directory ##
 
