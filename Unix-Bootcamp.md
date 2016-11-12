@@ -239,7 +239,7 @@ When you are using the man command, press `space` to scroll down a page, `b` to 
 Let's change directory to the root directory, and then into our home directory
 
 ```bash
-ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$ cd /
+ubuntu@:~/workspace/Learning_unix/Outer_directory/Inner_directory$ cd /
 ubuntu@:/$ cd home
 ubuntu@:/home$ cd ubuntu
 ubuntu@:~$
@@ -329,8 +329,8 @@ ubuntu@:/$ cd ~/workspace/Learning_unix
 The `..` operator that we saw earlier can also be used with the `ls` command, e.g. you can list directories that are 'above' you:
 
 ```bash
-ubuntu@:~/Learning_unix$ cd ~/Learning_unix/Outer_directory/
-ubuntu@:~/Learning_unix/Outer_directory$ ls ../../
+ubuntu@:~/workspace/Learning_unix$ cd ~/Learning_unix/Outer_directory/
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ ls ../../
 command_line_course  Learning_unix  linux_bootcamp
 ```
 
@@ -544,20 +544,20 @@ rm: remove directory 'colors/'? y
 Copying files with the [cp][] (copy) command is very similar to moving them. Remember to always specify a source and a target location. Let's create a new file and make a copy of it:
 
 ```bash
-ubuntu@:~/Learning_unix$ touch file1
-ubuntu@:~/Learning_unix$ cp file1 file2
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ touch file1
+ubuntu@:~/workspace/Learning_unix$ cp file1 file2
+ubuntu@:~/workspace/Learning_unix$ ls
 file1  file2
 ```
 
 What if we wanted to copy files from a different directory to our current directory? Let's put a file in our home directory (specified by `~` remember) and copy it to the current directory (`Learning_unix`):
 
 ```bash
-ubuntu@:~/Learning_unix$ touch ~/file3
-ubuntu@:~/Learning_unix$ ls ~
-command_line_course  file3  Learning_unix  linux_bootcamp
-ubuntu@:~/Learning_unix$ cp ~/file3 .
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ touch ~/file3
+ubuntu@:~/workspace/Learning_unix$ ls ~
+file3  tools  workspace
+ubuntu@:~/workspace/Learning_unix$ cp ~/file3 .
+ubuntu@:~/workspace/Learning_unix$ ls
 file1  file2  file3
 ```
 
@@ -577,7 +577,13 @@ In this case, using the dot is somewhat pointless because `ls` will already list
 
 ## 21: Copying directories ##
 
-The `cp` command also allows us (with the use of a command-line option) to copy entire directories. Use `man cp` to see how the `-R` or `-r` options let you copy a directory *recursively*.
+The `cp` command also allows us (with the use of a command-line option) to copy entire directories. Use `cp --help` to see how the `-R` or `-r` options let you copy a directory *recursively*.
+
+>***EXERCISE***:<br>
+>Create a new directory called 'filing_cabinet' and move the files into it with `mv`. 
+>Make a second copy of this directory called 'trash_can'.
+>Were all of the files from 'filing_cabinet' also in 'trash_can'?
+>Remove both directories and their contents with a single command.
 
 ---
 
@@ -586,12 +592,12 @@ The `cp` command also allows us (with the use of a command-line option) to copy 
 So far we have covered listing the contents of directories and moving/copying/deleting either files and/or directories. Now we will quickly cover how you can look at files. The [less][less command] command lets you view (but not edit) text files. We will use the [echo][echo command] command to put some text in a file and then view it:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo "Call me Ishmael."
+ubuntu@:~/workspace/Learning_unix$ echo "Call me Ishmael."
 Call me Ishmael.
-ubuntu@:~/Learning_unix$ echo "Call me Ishmael." > opening_lines.txt
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ echo "Call me Ishmael." > opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ ls
 opening_lines.txt
-ubuntu@:~/Learning_unix$ less opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ less opening_lines.txt
 ```
 
 On its own, `echo` isn't a very exciting Unix command. It just echoes text back to the screen. But we can redirect that text into an output file by using the `>` symbol. This allows for something called file [redirection][].
@@ -613,8 +619,8 @@ When you are using less, you can bring up a page of help commands by pressing `h
 Let's add another line to the file:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo "The primroses were over." >> opening_lines.txt
-ubuntu@:~/Learning_unix$ cat opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ echo "The primroses were over." >> opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ cat opening_lines.txt
 Call me Ishmael.
 The primroses were over.
 ```
@@ -632,17 +638,17 @@ cat opening_lines.txt > file_copy.txt
 ## 24: Counting characters in a file ##
 
 ```bash
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ ls
 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ ls -l
+ubuntu@:~/workspace/Learning_unix$ ls -l
 total 4
 -rw-rw-r-- 1 ubuntu ubuntu 42 Jun 15 04:13 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ wc opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ wc opening_lines.txt
  2  7 42 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ wc -l opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ wc -l opening_lines.txt
 2 opening_lines.txt
 ```
 
@@ -675,12 +681,12 @@ The bottom of the nano window shows you a list of simple commands which are all 
 One other use of the `echo` command is for displaying the contents of something known as *environment variables*. These contain user-specific or system-wide values that either reflect simple pieces of information (your username), or lists of useful locations on the file system. Some examples:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo $USER
+ubuntu@:~/workspace/Learning_unix$ echo $USER
 ubuntu
-ubuntu@:~/Learning_unix$ echo $HOME
+ubuntu@:~/workspace/Learning_unix$ echo $HOME
 /home/ubuntu
-ubuntu@:~/Learning_unix$ echo $PATH
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+ubuntu@:~/workspace/Learning_unix$ echo $PATH
+/home/ubuntu/bin:/home/ubuntu/.local/bin:/home/ubuntu/tools/perl5/bin:/home/ubuntu/tools/bin:/home/ubuntu/workspace/data/anaconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/tools/bowtie-1.1.2:/home/ubuntu/tools/bowtie2-2.2.9:/home/ubuntu/tools/trinityrnaseq-2.2.0:/home/ubuntu/tools/hisat2-2.0.4:/home/ubuntu/tools/sambamba_v0.6.4:/home/ubuntu/tools/stringtie-1.3.0.Linux_x86_64:/home/ubuntu/tools/gffcompare-0.9.8.Linux_x86_64:/home/ubuntu/tools/RSEM-1.2.31:/home/ubuntu/tools/cufflinks-2.2.1.Linux_x86_64:/home/ubuntu/tools/bedtools2/bin:/home/ubuntu/tools/MUMmer3.23:/home/ubuntu/tools/allpathslg-52488/bin:/home/ubuntu/tools/bin/Sniffles/bin/sniffles-core-1.0.0:/home/ubuntu/tools/ensembl-tools-release-86/scripts/variant_effect_predictor:/home/ubuntu/tools/VAAST_2.2.0/bin:/home/ubuntu/tools/speedseq/bin:/home/ubuntu/tools/hall_misc
 ```
 
 The last one shows the content of the `$PATH` environment variable, which displays a — colon separated — list of directories that are expected to contain programs that you can run. This includes all of the Unix commands that you have seen so far. These are files that live in directories which are run like programs (e.g. `ls` is just a special type of file in the `/bin` directory).
@@ -783,10 +789,10 @@ When he was nearly thirteen, my brother Jem got his arm badly broken at the elbo
 One of the most poweful features of Unix is that you can send the output from one command or program to any other command (as long as the second commmand accepts input of some sort). We do this by using what is known as a [pipe][]. This is implemented using the '|' character (which is a character which always seems to be on different keys depending on the keyboard that you are using). Think of the pipe as simply connecting two Unix programs. Here's an example which introduces some new Unix commands:
 
 ```bash
-ubuntu@:~/Learning_unix$ grep was opening_lines.txt | wc -c
+ubuntu@:~/workspace/Learning_unix$ grep was opening_lines.txt | wc -c
 316
 
-ubuntu@:~/Learning_unix$
+ubuntu@:~/workspace/Learning_unix$
 grep was opening_lines.txt | sort | head -n 3 | wc -c
 130
 ```
@@ -844,7 +850,7 @@ cat file.txt | tr 'a-z' 'A-Z'
 [tr]: http://en.wikipedia.org/wiki/Tr_(Unix)
 
 
-+ Change all occurences of 'Chr1' to 'Chromosome 1' and write changed output to a new file (using [sed][] command):
++ Change all occurrences of 'Chr1' to 'Chromosome 1' and write changed output to a new file (using [sed][] command):
 
 ```bash
 cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
@@ -866,6 +872,7 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 * 2015-06-14 - Version 1.0, adapted from Unix and Perl for Biologists Primer
 * 2015-06-24 - Version 1.01: clarified that this material is assuming user name is 'ubuntu'and made other minor clarifications (such as what this material was first produced for).
 * 2015-11-13 - Version 1.02: further adapted for CSHL 2015 Advanced Sequencing Technologies & Applications course.
+* 2016-11-11 - Version 1.04: additional material for CSHL 2016 Advanced Sequencing Technologies & Applications course.
 
 
 | [[Previous Section|Logging-into-Amazon-Cloud]]          | [[This Section|Unix-Bootcamp]]  | [[Next Section|Environment]] |
