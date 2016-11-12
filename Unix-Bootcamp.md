@@ -1,4 +1,4 @@
-# Command-line Bootcamp
+# Unix Bootcamp Tutorial
 
 **Adapted by : Jason Walker, McDonnell Genome Institute**<br>
 **Additional adaptation by : Alex Wagner, McDonnell Genome Institute**<br>
