@@ -807,6 +807,11 @@ The second example first sends the output of `grep` to the Unix `sort` command. 
 
 ---
 
+# Advanced file editing with VIM
+
+[Interactive Tutorial](http://www.openvim.com/)
+
+---
 
 # Miscellaneous Unix power commands
 
@@ -858,11 +863,6 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 
 [sed]: http://en.wikipedia.org/wiki/Sed
 
-
-
-
-
-      
 ---
 
 
