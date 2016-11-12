@@ -811,11 +811,25 @@ The second example first sends the output of `grep` to the Unix `sort` command. 
 
 [Learnshell Tutorial](http://www.learnshell.org/en/Hello%2C_World%21)
 
+---
+
 # Advanced file editing with VIM
 
 [Interactive Tutorial](http://www.openvim.com/)
+[Cheat sheet](http://vim.rtorr.com/)
+[Another Cheat Sheet](http://vimsheet.com/)
 
 ---
+
+# Other useful commands
+
+`scp` for transferring files over SSH
+
+`wget` for downloading files from URL
+
+`watch` for monitoring
+
+`xargs` for complex inputs
 
 # Miscellaneous Unix power commands
 
