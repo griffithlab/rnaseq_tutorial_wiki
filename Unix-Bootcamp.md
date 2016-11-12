@@ -368,7 +368,7 @@ ubuntu@:~/workspace/Learning_unix$ ls
 ubuntu@:~/workspace/Learning_unix$
 ```
 
->***Exercise:***<br>
+>***EXERCISE:***<br>
 >Recreate the directories you just removed with a single command. Use the `--help` option if you need to!<br>
 >Now remove them again, but this time in a single command.
 
@@ -431,7 +431,7 @@ ubuntu@:~/workspace/Learning_unix$ ls colors/
 blue_fish.txt  red_fish.txt
 ```
 
->***Exercise:***<br>
+>***EXERCISE:***<br>
 >Make a new directory called 'counts', and move one_fish.txt and two_fish.txt into it. Can you move the two files with a single `mv` command? 
 
 For the `mv` command, we always have to specify a source file (or directory) that we want to move, and then specify a target location. If we had wanted to we could have moved both files in one go by typing any of the following commands:
