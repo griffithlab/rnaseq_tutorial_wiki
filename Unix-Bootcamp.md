@@ -1,8 +1,9 @@
-# Command-line Bootcamp
+# Unix Bootcamp Tutorial
 
 **Adapted by : Jason Walker, McDonnell Genome Institute**<br>
+**Additional adaptation by : Alex Wagner, McDonnell Genome Institute**<br>
 **Original author : Keith Bradnam, UC Davis Genome Center**<br>
-**Version 1.03 --- 2016-06-15**<br>
+**Version 1.04 --- 2016-11-11**<br>
 <br>
 
 ><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please send feedback, questions, money, or abuse to <krbradnam@ucdavis.edu> 
@@ -75,7 +76,7 @@ It's important to note that you will always be *inside* a single directory when 
 
 ```bash
 ubuntu@:~$ ls
-command_line_course  linux_bootcamp
+tools  workspace
 ubuntu@:~$
 ```
 
@@ -89,11 +90,11 @@ There are four things that you should note here:
 The `ls` command is used to list the contents of _any_ directory, not necessarily the one that you are currently in. Try the following:
 
 ```bash
-ubuntu@:~$ ls /data
-bioinfo.course.data  command_line_course  galaxy  lost+found  refs
+ubuntu@:~$ ls workspace/
+data  lost+found
 
 ubuntu@:~$ ls /etc/perl
-CPAN  Net  XML
+CPAN  Net
 ```
 
 
@@ -108,13 +109,12 @@ Looking at directories from within a Unix terminal can often seem confusing. But
 
 ```bash
 ubuntu@:~$ ls /
-bin   dev   initrd.img      lib64       mnt   root  software  tmp  vmlinuz
-boot  etc   initrd.img.old  lost+found  opt   run   srv       usr  vmlinuz.old
-data  home  lib             media       proc  sbin  sys       var
+bin   etc         initrd.img.old  lost+found  opt   run   srv  usr      vmlinuz.old
+boot  home        lib             media       proc  sbin  sys  var      workspace
+dev   initrd.img  lib64           mnt         root  snap  tmp  vmlinuz
 ```
 
 You might notice some of these names appearing in different colors. Many Unix systems will display files and directories differently by default. Other colors may be used for special types of files. When you log in to a computer you are working with your files in your home directory, and this is often  inside a directory called 'users' or 'home'.
-
 
 ---
 
@@ -143,22 +143,22 @@ As you learn Unix you will frequently type commands that don't seem to work. Mos
 If we want to make a new directory (e.g. to store some work related data), we can use the [mkdir][] command:
 
 ```bash
-ubuntu@:~$ mkdir Learning_unix
-ubuntu@:~$ ls
-command_line_course  Learning_unix  linux_bootcamp
+ubuntu@:~$ mkdir workspace/Learning_unix
+ubuntu@:~$ ls workspace
+data  Learning_unix  lost+found
 ```
 
 [mkdir]: http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs
 
 ---
 
-## 6: Getting from 'A' to 'B' ##
+## 6: Changing directories and command options ##
 
 We are in the home directory on the computer but we want to to work in the new `Learning_unix` directory. To change directories in Unix, we use the [cd][] command:
 
 ```bash
-cd Learning_unix
-ubuntu@:~/Learning_unix$
+cd workspace/Learning_unix
+ubuntu@:~/workspace/Learning_unix$
 ```
 
 Notice that — on this system — the command prompt has expanded to include our current directory. This doesn't happen by default on all Unix systems, but you should know that you can configure what information appears as part of the command prompt.
@@ -166,16 +166,16 @@ Notice that — on this system — the command prompt has expanded to include ou
 Let's make two new subdirectories and navigate into them:
 
 ```bash
-ubuntu@:~/Learning_unix$ mkdir Outer_directory
-ubuntu@:~/Learning_unix$ cd Outer_directory
-ubuntu@:~/Learning_unix/Outer_directory$
+ubuntu@:~/workspace/Learning_unix$ mkdir Outer_directory
+ubuntu@:~/workspace/Learning_unix$ cd Outer_directory
+ubuntu@:~/workspace/Learning_unix/Outer_directory$
 
-ubuntu@:~/Learning_unix/Outer_directory$ mkdir Inner_directory
-ubuntu@:~/Learning_unix/Outer_directory$ cd Inner_directory/
-ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ mkdir Inner_directory
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ cd Inner_directory/
+ubuntu@:~/workspace/Learning_unix/Outer_directory/Inner_directory$
 ```
 
-Now our command prompt is getting quite long, but it reveals that we are three levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the `mkdir` command in way to do this all in one step. 
+Now our command prompt is getting quite long, but it reveals that we are four levels beneath the home directory. We created the two directories in separate steps, but it is possible to use the `mkdir` command in way to do this all in one step. 
 
 Like most Unix commands, `mkdir` supports *command-line options* which let you alter its behavior and functionality. Command-like options are — as the name suggests — optional arguments that are placed after the command name. They often take the form of single letters (following a dash). If we had used the `-p` option of the `mkdir` command we could have done this in one step. E.g.
 
@@ -185,18 +185,61 @@ mkdir -p Outer_directory/Inner_directory
 
 ***Note the spaces either side the `-p`!***
 
+Sometimes options are entire words, usually preceded by a double-dash. For example, using the `--parents` option:
+
+```bash
+mkdir --parents Outer_directory/Inner_directory
+```
+
+is identical to using the `-p` option.
+
 [cd]: http://en.wikipedia.org/wiki/Cd_(command)
 
 
 ---
 
 
-## 7: The root directory ##
+## 7: Getting help ##
+
+Many programs will provide information about the command being called by passing a `-h` or `--help` option.
+
+```bash
+ubuntu@:~$mkdir --help
+Usage: mkdir [OPTION]... DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -m, --mode=MODE   set file mode (as in chmod), not a=rwx - umask
+  -p, --parents     no error if existing, make parent directories as needed
+  -v, --verbose     print a message for each created directory
+  -Z                   set SELinux security context of each created directory
+                         to the default type
+      --context[=CTX]  like -Z, or if CTX is specified then set the SELinux
+                         or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/mkdir>
+or available locally via: info '(coreutils) mkdir invocation'
+```
+
+In addition, many commands will have `man` (manual) pages, which are often more detailed descriptions of the program and its usage.
+
+```bash
+man ls 
+man cd
+man man # yes even the man command has a manual page
+```
+
+When you are using the man command, press `space` to scroll down a page, `b` to go back a page, or `q` to quit. You can also use the up and down arrows to scroll a line at a time. The man command is actually using another Unix program, a text viewer called `less`, which we'll come to later on.
+
+## 8: The root directory ##
 
 Let's change directory to the root directory, and then into our home directory
 
 ```bash
-ubuntu@:~/Learning_unix/Outer_directory/Inner_directory$ cd /
+ubuntu@:~/workspace/Learning_unix/Outer_directory/Inner_directory$ cd /
 ubuntu@:/$ cd home
 ubuntu@:/home$ cd ubuntu
 ubuntu@:~$
@@ -220,16 +263,16 @@ The second command says go to the `unbuntu` directory that is beneath the `home`
 
 Learn and understand the difference between these two commands.
 
-
 ---
 
-## 8: Navigating upwards in the Unix filesystem ##
+## 9: Climbing the tree ##
 
-Frequently, you will find that you want to go 'upwards' one level in the directory hierarchy. Two dots `..` are used in Unix to refer to the _parent_ directory of wherever you are. Every directory has a parent except the root level of the computer. Let's go into the `Learning_unix` directory and then navigate up two levels:
+Frequently, you will find that you want to go 'upwards' one level in the directory tree. Two dots `..` are used in Unix to refer to the _parent_ directory of wherever you are. Every directory has a parent except the root level of the computer. Let's go into the `Learning_unix` directory and then navigate up three levels:
 
 ```bash
-ubuntu@:~$ cd Learning_unix/
-ubuntu@:~/Learning_unix$ cd ..
+ubuntu@:~$ cd workspace/Learning_unix/
+ubuntu@:~/workspace/Learning_unix$ cd ..
+ubuntu@:~/workspace$ cd ..
 ubuntu@:~$ cd ..
 ubuntu@:/home$
 ```
@@ -242,11 +285,11 @@ cd ../..
 
 --- 
     
-## 9: Absolute and relative paths ##
+## 10: Absolute and relative paths ##
 
-Using `cd ..` allows us to change directory _relative_ to where we are now. You can also always change to a directory based on its _absolute_ location. E.g. if you are working in the `/home/ubuntu/Learning_unix` directory and you then want to change to the `/tmp` directory, then you could do either of the following:
+Using `cd ..` allows us to change directory _relative_ to where we are now. You can also always change to a directory based on its _absolute_ location. E.g. if you are working in the `/home/ubuntu/workspace/Learning_unix` directory and you then want to change to the `/tmp` directory, then you could do either of the following:
 
-    $ cd ../../../tmp
+    $ cd ../../../../tmp
 
 or...
 
@@ -256,7 +299,7 @@ They both achieve the same thing, but the 2nd example requires that you know abo
 
 ---
 
-## 10: Finding your way back home ##
+## 11: Finding your way back home ##
 
 Remember that the command prompt shows you the name of the directory that you are currently in, and that when you are in your home directory it shows you a tilde character (`~``) instead? This is because Unix uses the tilde character as a short-hand way of [specifying a home directory][home directory].
 
@@ -266,6 +309,7 @@ See what happens when you try the following commands (use the `pwd` command afte
 cd / 
 cd ~ 
 cd
+cd -
 ```
 
 Hopefully, you should find that `cd` and `cd ~` do the same thing, i.e. they take you back to your home directory (from wherever you were). You will frequently want to jump straight back to your home directory, and typing `cd` is a very quick way to get there.
@@ -274,30 +318,28 @@ You can also use the `~` as a quick way of navigating into subdirectories of you
 
 ```bash
 ubuntu@:~$ cd /
-ubuntu@:/$ cd ~/Learning_unix
+ubuntu@:/$ cd ~/workspace/Learning_unix
 ```
 [home directory]: http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs
 
 ---
 
-##11: Making the `ls` command more useful ##
+## 12: Making the `ls` command more useful ##
 
 The `..` operator that we saw earlier can also be used with the `ls` command, e.g. you can list directories that are 'above' you:
 
 ```bash
-ubuntu@:~/Learning_unix$ cd ~/Learning_unix/Outer_directory/
-ubuntu@:~/Learning_unix/Outer_directory$ ls ../../
+ubuntu@:~/workspace/Learning_unix$ cd ~/Learning_unix/Outer_directory/
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ ls ../../
 command_line_course  Learning_unix  linux_bootcamp
 ```
 
 Time to learn another useful command-line option. If you add the letter 'l' to the `ls` command it will give you a longer output compared to the default:
 
 ```bash
-ubuntu@:~/Learning_unix$ ls -l /home
-total 12
-drwxr-xr-x 8 galaxy galaxy 4096 Apr  2 22:47 galaxy
-drwxr-xr-x 3 root   root   4096 Mar 16 23:06 nate
-drwxr-xr-x 9 ubuntu ubuntu 4096 Jun 15 02:07 ubuntu
+ubuntu@:~/workspace/Learning_unix$ ls -l /home
+total 4
+drwxr-xr-x 12 ubuntu ubuntu 4096 Nov 12 01:45 ubuntu
 ```
 
 For each file or directory we now see more information (including file ownership and modification times). The 'd' at the start of each line indicates that these are directories. There are many, many different options for the `ls` command. Try out the following (against any directory of your choice) to see how the output changes.
@@ -309,38 +351,26 @@ ls -l -t -r
 ls -lh
 ```
 
-Note that the last example combine multiple options but only use one dash. This is a very common way of specifying multiple command-line options. You may be wondering what some of these options are doing. It's time to learn about Unix documentation....
+Note that the last example combine multiple options but only use one dash. This is a very common way of specifying multiple command-line options.
 
 ---
-
-## 12: Man pages ##
-
-If every Unix command has so many options, you might be wondering how you find out what they are and what they do. Well, thankfully every Unix command has an associated 'manual' that you can access by using the `man` command. E.g.
-
-```bash
-man ls 
-man cd
-man man # yes even the man command has a manual page
-```
-
-When you are using the man command, press `space` to scroll down a page, `b` to go back a page, or `q` to quit. You can also use the up and down arrows to scroll a line at a time. The man command is actually using another Unix program, a text viewer called `less`, which we'll come to later on.
-
----
-
-
 
 ## 13: Removing directories ##
 
 We now have a few (empty) directories that we should remove. To do this use the [rmdir][] command, this will only remove empty directories so it is quite safe to use. If you want to know more about this command (or any Unix command), then remember that you can just look at its man page.
 
 ```bash
-ubuntu@:~$ cd ~/Learning_unix/Outer_directory/
-ubuntu@:~/Learning_unix/Outer_directory$ rmdir Inner_directory/
-ubuntu@:~/Learning_unix/Outer_directory$ cd ..
-ubuntu@:~/Learning_unix$ rmdir Outer_directory/
-ubuntu@:~/Learning_unix$ ls
-ubuntu@:~/Learning_unix$
+ubuntu@:~$ cd ~/workspace/Learning_unix/Outer_directory/
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ rmdir Inner_directory/
+ubuntu@:~/workspace/Learning_unix/Outer_directory$ cd ..
+ubuntu@:~/workspace/Learning_unix$ rmdir Outer_directory/
+ubuntu@:~/workspace/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$
 ```
+
+>***EXERCISE:***<br>
+>Recreate the directories you just removed with a single command. Use the `--help` option if you need to!<br>
+>Now remove them again, but this time in a single command.
 
 *** Note, you have to be outside a directory before you can remove it with `rmdir` ***
 
@@ -368,11 +398,19 @@ Another great time-saver is that Unix stores a list of all the commands that you
 The following sections will deal with Unix commands that help us to work with files, i.e. copy files to/from places, move files, rename files, remove files, and most importantly, look at files. First, we need to have some files to play with. The Unix command [touch][] will let us create a new, empty file. The touch command does other things too, but for now we just want a couple of files to work with.
 
 ```bash
-ubuntu@:~$ cd Learning_unix/
-ubuntu@:~/Learning_unix$ touch heaven.txt
-ubuntu@:~/Learning_unix$ touch earth.txt
-ubuntu@:~/Learning_unix$ ls
-earth.txt  heaven.txt
+ubuntu@:~$ cd workspace/Learning_unix/
+ubuntu@:~/workspace/Learning_unix$ touch red_fish.txt
+ubuntu@:~/workspace/Learning_unix$ touch blue_fish.txt
+ubuntu@:~/workspace/Learning_unix$ ls
+red_fish.txt  blue_fish.txt
+```
+
+`touch` also accepts multiple files as arguments.
+
+```bash 
+ubuntu@:~/workspace/Learning_unix$ touch one_fish.txt two_fish.txt
+ubuntu@:~/workspace/Learning_unix$ ls
+blue_fish.txt  one_fish.txt  red_fish.txt  two_fish.txt
 ```
 
 [touch]: http://en.wikipedia.org/wiki/Command_line_completion
@@ -381,17 +419,20 @@ earth.txt  heaven.txt
 
 ## 16: Moving files ##
 
-Now, let's assume that we want to move these files to a new directory ('Temp'). We will do this using the Unix [mv][] (move) command. Remember to use tab completion:
+Now, let's assume that we want to move these files to a new directory ('colors'). We will do this using the Unix [mv][] (move) command. Remember to use tab completion:
 
 ```bash
-ubuntu@:~/Learning_unix$ mkdir Temp
-ubuntu@:~/Learning_unix$ mv heaven.txt Temp/
-ubuntu@:~/Learning_unix$ mv earth.txt Temp/
-ubuntu@:~/Learning_unix$ ls
-Temp
-ubuntu@:~/Learning_unix$ ls Temp/
-earth.txt  heaven.txt
+ubuntu@:~/workspace/Learning_unix$ mkdir colors
+ubuntu@:~/workspace/Learning_unix$ mv red_fish.txt colors/
+ubuntu@:~/workspace/Learning_unix$ mv blue_fish.txt colors/
+ubuntu@:~/workspace/Learning_unix$ ls
+colors  one_fish.txt  two_fish.txt
+ubuntu@:~/workspace/Learning_unix$ ls colors/
+blue_fish.txt  red_fish.txt
 ```
+
+>***EXERCISE:***<br>
+>Make a new directory called 'counts', and move one_fish.txt and two_fish.txt into it. Can you move the two files with a single `mv` command? 
 
 For the `mv` command, we always have to specify a source file (or directory) that we want to move, and then specify a target location. If we had wanted to we could have moved both files in one go by typing any of the following commands:
 
@@ -403,7 +444,7 @@ mv *ea* Temp/
 
 The asterisk `*` acts as a [wild-card character][], essentially meaning 'match anything'. The second example works because there are no other files or directories in the directory that end with the letters 't' (if there was, then they would be moved too). Likewise, the third example works because only those two files contain the letters 'ea' in their names. Using wild-card characters can save you a lot of typing.
 
-The '?' character is also a wild-card but with a slightly different meaning. See if you can work out what it does.
+The '?' character is also a wild-card but for only a single character.
 
 [mv]: http://en.wikipedia.org/wiki/Mv
 [wild-card character]: http://en.wikipedia.org/wiki/Wildcard_character
@@ -412,21 +453,21 @@ The '?' character is also a wild-card but with a slightly different meaning. See
 
 ## 17: Renaming files ##
 
-In the earlier example, the destination for the `mv` command was a directory name (Temp). So we moved a file from its source location to a target location, but note that the target could have also been a (different) file name, rather than a directory. E.g. let's make a new file and move it whilst renaming it at the same time:
+In the earlier example, the destination for the `mv` command was a directory name (colors). So we moved a file from its source location to a target location, but note that the target could have also been a (different) file name, rather than a directory. E.g. let's make a new file and move it whilst renaming it at the same time:
 
 ```bash
-ubuntu@:~/Learning_unix$ touch rags
-ubuntu@:~/Learning_unix$ ls
-rags  Temp
-ubuntu@:~/Learning_unix$ mv rags Temp/riches
-ubuntu@:~/Learning_unix$ ls Temp/
+ubuntu@:~/workspace/Learning_unix$ touch rags
+ubuntu@:~/workspace/Learning_unix$ ls
+colors  counts  rags
+ubuntu@:~/workspace/Learning_unix$ mv rags counts/riches
+ubuntu@:~/workspace/Learning_unix$ ls counts/
 earth.txt  heaven.txt  riches
 ```
 
 In this example we create a new file ('rags') and move it to a new location and in the process change the name (to 'riches'). So `mv` can rename a file as well as move it. The logical extension of this is using `mv` to rename a file without moving it (you have to use `mv` to do this as Unix does not have a separate 'rename' command):
 
 ```bash
-ubuntu@:~/Learning_unix$ mv Temp/riches Temp/rags
+ubuntu@:~/workspace/Learning_unix$ mv counts/riches counts/rags
 ```
     
 ---
@@ -436,14 +477,26 @@ ubuntu@:~/Learning_unix$ mv Temp/riches Temp/rags
 It is important to understand that as long as you have specified a 'source' and a 'target' location when you are moving a file, then it doesn't matter what your *current* directory is. You can move or copy things within the same directory or between different directories regardless of whether you are in any of those directories. Moving directories is just like moving files:
 
 ```bash
-ubuntu@:~/Learning_unix$ mkdir Temp2
-ubuntu@:~/Learning_unix$ mv Temp2 Temp
-ubuntu@:~/Learning_unix$ ls Temp/
-earth.txt  heaven.txt  rags  Temp2
+ubuntu@:~/workspace/Learning_unix$ mkdir fish
+ubuntu@:~/workspace/Learning_unix$ mv counts fish
+ubuntu@:~/workspace/Learning_unix$ ls -R .
+.:
+colors  fish
+
+./colors:
+blue_fish.txt  red_fish.txt
+
+./fish:
+counts
+
+./fish/counts:
+one_fish.txt  rags  two_fish.txt
 ```
 
-This step moves the Temp2 directory inside the Temp directory. Try creating a 'Temp3' directory inside 'Learning_unix' and then `cd` to `/tmp`. Can you move `Temp3` inside `Temp2` without changing directory?
+This step moves the counts directory inside the fish directory. 
 
+>***EXERCISE:***<br>
+>Try creating a 'net' directory inside 'Learning_unix' and then `cd` to your home directory. Can you move `fish` inside `net` without using `cd`?
 
 ---
 
@@ -460,24 +513,26 @@ Potentially, `rm` is a very dangerous command; if you delete something with `rm`
 Let me repeat that last part again. It is possible to delete EVERY file you have ever created with the `rm` command. Are you scared yet? You should be. Luckily there is a way of making `rm` a little bit safer. We can use it with the `-i` command-line option which will ask for confirmation before deleting anything (remember to use tab-completion):
 
 ```bash
-ubuntu@:~/Learning_unix$ cd Temp
-ubuntu@:~/Learning_unix/Temp$ ls
-earth.txt  heaven.txt  rags  Temp2
-ubuntu@:~/Learning_unix/Temp$ rm -i earth.txt heaven.txt rags
-rm: remove regular empty file ‘earth.txt’? y
-rm: remove regular empty file ‘heaven.txt’? y
-rm: remove regular empty file ‘rags’? y
-ubuntu@:~/Learning_unix/Temp$ ls
-Temp2
+ubuntu@:~/workspace/Learning_unix$ cd net/fish/counts
+ubuntu@:~/workspace/Learning_unix/net/fish/counts$ ls
+one_fish.txt  rags  two_fish.txt
+ubuntu@:~/workspace/Learning_unix/net/fish/counts$ rm -i one_fish.txt  rags  two_fish.txt
+rm: remove regular empty file 'one_fish.txt'? y
+rm: remove regular empty file 'rags'? y
+rm: remove regular empty file 'two_fish.txt'? y
+ubuntu@:~/workspace/Learning_unix/net/fish/counts$ ls
 ```
     
 We could have simplified this step by using a wild-card (e.g. `rm -i *.txt`) or we could have made things more complex by removing each file with a separate `rm` command. Let's finish cleaning up:
 
 ```bash
-rmdir Temp2/Temp3
-rmdir Temp2
-cd ..
-rmdir Temp
+ubuntu@:~/workspace/Learning_unix/net/fish/counts$ cd ~/workspace/Learning_unix/
+ubuntu@:~/workspace/Learning_unix$ rmdir -p net/fish/counts/
+ubuntu@:~/workspace/Learning_unix$ rm -ir colors/
+rm: descend into directory 'colors/'? y
+rm: remove regular empty file 'colors/red_fish.txt'? y
+rm: remove regular empty file 'colors/blue_fish.txt'? y
+rm: remove directory 'colors/'? y
 ```
 
 [rm]: http://en.wikipedia.org/wiki/Rm_(Unix)
@@ -489,20 +544,20 @@ rmdir Temp
 Copying files with the [cp][] (copy) command is very similar to moving them. Remember to always specify a source and a target location. Let's create a new file and make a copy of it:
 
 ```bash
-ubuntu@:~/Learning_unix$ touch file1
-ubuntu@:~/Learning_unix$ cp file1 file2
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ touch file1
+ubuntu@:~/workspace/Learning_unix$ cp file1 file2
+ubuntu@:~/workspace/Learning_unix$ ls
 file1  file2
 ```
 
 What if we wanted to copy files from a different directory to our current directory? Let's put a file in our home directory (specified by `~` remember) and copy it to the current directory (`Learning_unix`):
 
 ```bash
-ubuntu@:~/Learning_unix$ touch ~/file3
-ubuntu@:~/Learning_unix$ ls ~
-command_line_course  file3  Learning_unix  linux_bootcamp
-ubuntu@:~/Learning_unix$ cp ~/file3 .
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ touch ~/file3
+ubuntu@:~/workspace/Learning_unix$ ls ~
+file3  tools  workspace
+ubuntu@:~/workspace/Learning_unix$ cp ~/file3 .
+ubuntu@:~/workspace/Learning_unix$ ls
 file1  file2  file3
 ```
 
@@ -522,7 +577,13 @@ In this case, using the dot is somewhat pointless because `ls` will already list
 
 ## 21: Copying directories ##
 
-The `cp` command also allows us (with the use of a command-line option) to copy entire directories. Use `man cp` to see how the `-R` or `-r` options let you copy a directory *recursively*.
+The `cp` command also allows us (with the use of a command-line option) to copy entire directories. Use `cp --help` to see how the `-R` or `-r` options let you copy a directory *recursively*.
+
+>***EXERCISE***:<br>
+>Create a new directory called 'filing_cabinet' and move the files into it with `mv`. 
+>Make a second copy of this directory called 'trash_can'.
+>Were all of the files from 'filing_cabinet' also in 'trash_can'?
+>Remove both directories and their contents with a single command.
 
 ---
 
@@ -531,12 +592,12 @@ The `cp` command also allows us (with the use of a command-line option) to copy 
 So far we have covered listing the contents of directories and moving/copying/deleting either files and/or directories. Now we will quickly cover how you can look at files. The [less][less command] command lets you view (but not edit) text files. We will use the [echo][echo command] command to put some text in a file and then view it:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo "Call me Ishmael."
+ubuntu@:~/workspace/Learning_unix$ echo "Call me Ishmael."
 Call me Ishmael.
-ubuntu@:~/Learning_unix$ echo "Call me Ishmael." > opening_lines.txt
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ echo "Call me Ishmael." > opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ ls
 opening_lines.txt
-ubuntu@:~/Learning_unix$ less opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ less opening_lines.txt
 ```
 
 On its own, `echo` isn't a very exciting Unix command. It just echoes text back to the screen. But we can redirect that text into an output file by using the `>` symbol. This allows for something called file [redirection][].
@@ -558,8 +619,8 @@ When you are using less, you can bring up a page of help commands by pressing `h
 Let's add another line to the file:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo "The primroses were over." >> opening_lines.txt
-ubuntu@:~/Learning_unix$ cat opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ echo "The primroses were over." >> opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ cat opening_lines.txt
 Call me Ishmael.
 The primroses were over.
 ```
@@ -577,17 +638,17 @@ cat opening_lines.txt > file_copy.txt
 ## 24: Counting characters in a file ##
 
 ```bash
-ubuntu@:~/Learning_unix$ ls
+ubuntu@:~/workspace/Learning_unix$ ls
 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ ls -l
+ubuntu@:~/workspace/Learning_unix$ ls -l
 total 4
 -rw-rw-r-- 1 ubuntu ubuntu 42 Jun 15 04:13 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ wc opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ wc opening_lines.txt
  2  7 42 opening_lines.txt
 
-ubuntu@:~/Learning_unix$ wc -l opening_lines.txt
+ubuntu@:~/workspace/Learning_unix$ wc -l opening_lines.txt
 2 opening_lines.txt
 ```
 
@@ -620,12 +681,12 @@ The bottom of the nano window shows you a list of simple commands which are all 
 One other use of the `echo` command is for displaying the contents of something known as *environment variables*. These contain user-specific or system-wide values that either reflect simple pieces of information (your username), or lists of useful locations on the file system. Some examples:
 
 ```bash
-ubuntu@:~/Learning_unix$ echo $USER
+ubuntu@:~/workspace/Learning_unix$ echo $USER
 ubuntu
-ubuntu@:~/Learning_unix$ echo $HOME
+ubuntu@:~/workspace/Learning_unix$ echo $HOME
 /home/ubuntu
-ubuntu@:~/Learning_unix$ echo $PATH
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+ubuntu@:~/workspace/Learning_unix$ echo $PATH
+/home/ubuntu/bin:/home/ubuntu/.local/bin:/home/ubuntu/tools/perl5/bin:/home/ubuntu/tools/bin:/home/ubuntu/workspace/data/anaconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/tools/bowtie-1.1.2:/home/ubuntu/tools/bowtie2-2.2.9:/home/ubuntu/tools/trinityrnaseq-2.2.0:/home/ubuntu/tools/hisat2-2.0.4:/home/ubuntu/tools/sambamba_v0.6.4:/home/ubuntu/tools/stringtie-1.3.0.Linux_x86_64:/home/ubuntu/tools/gffcompare-0.9.8.Linux_x86_64:/home/ubuntu/tools/RSEM-1.2.31:/home/ubuntu/tools/cufflinks-2.2.1.Linux_x86_64:/home/ubuntu/tools/bedtools2/bin:/home/ubuntu/tools/MUMmer3.23:/home/ubuntu/tools/allpathslg-52488/bin:/home/ubuntu/tools/bin/Sniffles/bin/sniffles-core-1.0.0:/home/ubuntu/tools/ensembl-tools-release-86/scripts/variant_effect_predictor:/home/ubuntu/tools/VAAST_2.2.0/bin:/home/ubuntu/tools/speedseq/bin:/home/ubuntu/tools/hall_misc
 ```
 
 The last one shows the content of the `$PATH` environment variable, which displays a — colon separated — list of directories that are expected to contain programs that you can run. This includes all of the Unix commands that you have seen so far. These are files that live in directories which are run like programs (e.g. `ls` is just a special type of file in the `/bin` directory).
@@ -728,10 +789,10 @@ When he was nearly thirteen, my brother Jem got his arm badly broken at the elbo
 One of the most poweful features of Unix is that you can send the output from one command or program to any other command (as long as the second commmand accepts input of some sort). We do this by using what is known as a [pipe][]. This is implemented using the '|' character (which is a character which always seems to be on different keys depending on the keyboard that you are using). Think of the pipe as simply connecting two Unix programs. Here's an example which introduces some new Unix commands:
 
 ```bash
-ubuntu@:~/Learning_unix$ grep was opening_lines.txt | wc -c
+ubuntu@:~/workspace/Learning_unix$ grep was opening_lines.txt | wc -c
 316
 
-ubuntu@:~/Learning_unix$
+ubuntu@:~/workspace/Learning_unix$
 grep was opening_lines.txt | sort | head -n 3 | wc -c
 130
 ```
@@ -746,6 +807,35 @@ The second example first sends the output of `grep` to the Unix `sort` command. 
 
 ---
 
+# Shell scripting
+
+[Learnshell Tutorial](http://www.learnshell.org/en/Hello%2C_World%21)
+
+---
+
+# Advanced file editing with VIM
+
+[Interactive Tutorial](http://www.openvim.com/)
+[Cheat sheet](http://vim.rtorr.com/)
+[Another Cheat Sheet](http://vimsheet.com/)
+
+---
+
+# Other useful commands
+
+`scp` for transferring files over SSH
+
+`wget` for downloading files from URL
+
+`watch` for monitoring
+
+`xargs` for complex inputs
+
+`ps` for process status
+
+`top` for running processes
+
+`kill` for stopping processes
 
 # Miscellaneous Unix power commands
 
@@ -789,7 +879,7 @@ cat file.txt | tr 'a-z' 'A-Z'
 [tr]: http://en.wikipedia.org/wiki/Tr_(Unix)
 
 
-+ Change all occurences of 'Chr1' to 'Chromosome 1' and write changed output to a new file (using [sed][] command):
++ Change all occurrences of 'Chr1' to 'Chromosome 1' and write changed output to a new file (using [sed][] command):
 
 ```bash
 cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
@@ -797,11 +887,6 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 
 [sed]: http://en.wikipedia.org/wiki/Sed
 
-
-
-
-
-      
 ---
 
 
@@ -811,6 +896,7 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 * 2015-06-14 - Version 1.0, adapted from Unix and Perl for Biologists Primer
 * 2015-06-24 - Version 1.01: clarified that this material is assuming user name is 'ubuntu'and made other minor clarifications (such as what this material was first produced for).
 * 2015-11-13 - Version 1.02: further adapted for CSHL 2015 Advanced Sequencing Technologies & Applications course.
+* 2016-11-11 - Version 1.04: additional material for CSHL 2016 Advanced Sequencing Technologies & Applications course.
 
 
 | [[Previous Section|Logging-into-Amazon-Cloud]]          | [[This Section|Unix-Bootcamp]]  | [[Next Section|Environment]] |

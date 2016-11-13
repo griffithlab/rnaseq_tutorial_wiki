@@ -30,8 +30,8 @@
 Welcome to the lab for **Genome Visualization**! This lab will introduce you to the [Integrative Genomics Viewer]**(http://www.broadinstitute.org/igv/home)**, one of the most popular visualization tools for High Throughput Sequencing (HTS) data.
 
 Lecture files that accompany this tutorial:
-* [IGV Lecture - Brief](LectureFiles/cshl/2015/IGV_Tutorial_Brief.pdf)
-* [IGV Lecture - Long, from Broad Institute](LectureFiles/cshl/2015/IGV_Tutorial_Long_BroadInstitute.pdf)
+* [IGV Lecture - Brief](LectureFiles/cshl/2016/IGV_Tutorial_Brief.pdf)
+* [IGV Lecture - Long, from Broad Institute](LectureFiles/cshl/2016/IGV_Tutorial_Long_BroadInstitute.pdf)
 
 After this lab, you will be able to:
 * Visualize a variety of genomic data
@@ -198,7 +198,7 @@ Navigate to position `chr21:19,518,412-19,518,497`
 **Notes:**
 * The alt allele is either a deletion or insertion of one or two `T`s
 * The remaining bases are mismatched, because the alignment is now out of sync
-* The dpSNP entry at this location (rs74604068) is an A->T, and in all likelyhood an artifact 
+* The dpSNP entry at this location (rs74604068) is an A->T, and in all likelihood an artifact 
 * i.e. the common variants from dbSNP include some cases that are actually common misalignments caused by repeats
 
 ## Coverage by GC
@@ -298,8 +298,8 @@ We can use the Tools menu to invoke running a batch script. Batch scripts are de
 * We also need to provide sample attribute file as described here: http://www.broadinstitute.org/software/igv/?q=SampleInformation
 
 Download the batch script and the attribute file for our dataset:
-* Batch script: [run_batch_IGV_snapshots.txt](https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Igv_HCC1143_attributes.txt)
-* Attribute file: [igv_HCC1143_attributes.txt](https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Run_batch_IGV_snapshots.txt)
+* Batch script: [Run_batch_IGV_snapshots.txt](https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Run_batch_IGV_snapshots.txt)
+* Attribute file: [Igv_HCC1143_attributes.txt](https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Igv_HCC1143_attributes.txt)
 
 Now run the file from the `Tools` menu:
 
