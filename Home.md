@@ -8,7 +8,7 @@ Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, O
 \*To whom correspondence should be addressed: 
 E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
 
-Note: An archived version of this tutorial that closely matches the above publication can be found <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki"here</a>.
+Note: An archived version of this tutorial that closely matches the above publication can be found <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki">here</a>.
 
 #Table of Contents
 <ol start="0">
