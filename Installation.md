@@ -117,9 +117,9 @@ It is already installed on the Cloud, but for completeness, here is how it was d
 
 cd $RNA_HOME/tools/
 export R_LIBS=
-wget https://cran.r-project.org/src/base/R-3/R-3.2.5.tar.gz
-tar -zxvf R-3.2.5.tar.gz
-cd R-3.2.5
+wget https://cran.r-project.org/src/base/R-3/R-3.2.3.tar.gz
+tar -zxvf R-3.2.3.tar.gz
+cd R-3.2.3
 ./configure --prefix=$RNA_HOME/tools/R-3.2.5/ --with-x=no
 make
 make install
