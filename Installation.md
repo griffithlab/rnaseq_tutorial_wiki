@@ -57,18 +57,6 @@ cd hisat2-2.0.4
 
 ```
 
-##[Cufflinks2](http://cole-trapnell-lab.github.io/cufflinks/manual/)
-
-```bash
-
-cd $RNA_HOME/tools/
-wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
-tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
-cd cufflinks-2.2.1.Linux_x86_64
-./cufflinks
-
-```
-
 ##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
 
 ```bash
