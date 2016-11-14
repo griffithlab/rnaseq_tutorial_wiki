@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
+![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart2.png)
 
 #1-ii. Reference Genomes
 
@@ -9,8 +9,8 @@ Create the necessary working directory
 ```bash
 
 cd $RNA_HOME
-mkdir -p $RNA_REFS_DIR
 echo $RNA_REFS_DIR
+mkdir -p $RNA_REFS_DIR
 
 ```
 
@@ -30,7 +30,7 @@ View the first 10 lines of this file
 
 ```bash
 
-head $RNA_REF_FASTA
+head chr22_with_ERCC92.fa
 
 ```
 
@@ -38,7 +38,7 @@ How many lines and characters are in this file?
 
 ```bash
 
-wc $RNA_REF_FASTA
+wc chr22_with_ERCC92.fa
 
 ```
 
@@ -46,7 +46,7 @@ View 10 lines from approximately the middle of this file
 
 ```bash
 
-head -n 425000 $RNA_REF_FASTA | tail
+head -n 425000 chr22_with_ERCC92.fa | tail
 
 ```
 

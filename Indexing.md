@@ -1,12 +1,12 @@
-![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
+![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart2.png)
 
 #1-iv. Indexing
 
 ###Create a HISAT2 index
 
-Create a HISAT2 index for chr22 and the ERCC spike-in sequences. HISAT2 can incoroprate the exons and splice sites into the index file for alignment.  First create a splice site file, then an exon file.  Finally make the aligner FM index.
+Create a HISAT2 index for chr22 and the ERCC spike-in sequences. HISAT2 can incorporate exons and splice sites into the index file for alignment.  First create a splice site file, then an exon file.  Finally make the aligner FM index.
 
-TODO: How is the HISAT2 index uniqe from other next gen aligners?
+TODO: How is the HISAT2 index unique from other next gen aligners?
 
 ```bash
 
@@ -26,8 +26,8 @@ To create an index for all chromosomes instead of just chr22 you would do the fo
 
 ```bash
 
-cd /home/ubuntu/workspace/data/fasta/GRCh38
-hisat2-build -p 8 Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa Homo_sapiens.GRCh38.dna_sm.primary_assembly
+#cd /home/ubuntu/workspace/data/fasta/GRCh38
+#hisat2-build -p 8 Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa Homo_sapiens.GRCh38.dna_sm.primary_assembly
 
 ```
 

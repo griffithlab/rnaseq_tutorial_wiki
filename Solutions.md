@@ -12,8 +12,8 @@ To install bedtools:
 * Go to tools directory and download the archive, then unpack, and compile
 ```
 cd $RNA_HOME/tools/
-wget https://github.com/arq5x/bedtools2/releases/download/v2.25.0/bedtools-2.25.0.tar.gz
-tar -zxvf bedtools-2.25.0.tar.gz
+wget https://github.com/arq5x/bedtools2/releases/download/v2.26.0/bedtools-2.26.0.tar.gz
+tar -zxvf bedtools-2.26.0.tar.gz
 cd bedtools2/
 make
 ./bin/bedtools
@@ -30,9 +30,18 @@ tar -xvf alignment_practical.tar
 ```
 
 ###Practical Exercise 3 - QC
-On you local machine, download this file: http://cbw**.dyndns.info/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
 
-Using FastQC, open this file and allow it to complete the QC analysis
+```bash
+
+cd $RNA_HOME/practice/data
+fastqc *.fastq.gz
+
+```
+
+Then, go to the following url in your browser:
+* http://__YOUR_DNS_NAME__/workspace/rnaseq/practice/data/
+* Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance DNS (e.g., ec2-54-187-159-113.us-west-2.compute.amazonaws.com))
+* Click on any of the *_fastqc.html files to view the FastQC report
 
 * How many total sequences are there? 455,217
 * What is the range (x - y) of read lengths observed? 25 - 100
