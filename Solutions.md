@@ -12,8 +12,8 @@ To install bedtools:
 * Go to tools directory and download the archive, then unpack, and compile
 ```
 cd $RNA_HOME/tools/
-wget https://github.com/arq5x/bedtools2/releases/download/v2.25.0/bedtools-2.25.0.tar.gz
-tar -zxvf bedtools-2.25.0.tar.gz
+wget https://github.com/arq5x/bedtools2/releases/download/v2.26.0/bedtools-2.26.0.tar.gz
+tar -zxvf bedtools-2.26.0.tar.gz
 cd bedtools2/
 make
 ./bin/bedtools
