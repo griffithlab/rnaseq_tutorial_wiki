@@ -66,16 +66,15 @@ http://genome.ucsc.edu/FAQ/FAQformat#format4
 	
 ###The purpose of gene annotations (gtf file)
 
-When running the TopHat/Cufflinks/CuffDiff pipeline, known gene/transcript annotations are used for several purposes:
-* During the TopHat alignment step, annotations may be provided as a .gtf file using the '-G' option.  TopHat will align reads against the transcriptome first followed by the reference genome.
-* During the TopHat alignment step, a junctions database will be assembled from the transcripts in your .gtf file.  TopHat will align reads that do not map within an exon against this junctions database to identify spliced read alignments.  If an alignment still can not be found it will attempt to determine if the read corresponds to a novel exon-exon junction.
-* During the Cufflinks step, a .gtf file can be used to specify the transcript models to estimate expression estimates for using the '-G' option (not the same as the -G option for TopHat mentioned above).  This mode of Cufflinks will give you one expression estimate for each of the transcripts in your .gtf file giving you a 'microarray like' expression result.
-* During the Cufflinks step, a .gtf file can be used to 'guide' the assembly of novel transcripts (using the '-g' option).  Instead of assuming the known transcript models are correct, they are used as a guide and the resulting expression estimates will correspond to both known and novel/predicted transcripts.
-* During the Cuffdiff step, a .gtf file is used to determine the transcripts that will be examined for differential expression.  These may be known transcripts that you download from a public source or a .gtf of transcripts predicted by Cufflinks from the read data.
+When running the HISAT2/StringTie/Ballgown pipeline, known gene/transcript annotations are used for several purposes:
+* During the HISAT2 index creation step, annotations may be provided to create local indexes to represent transcripts as well as a global index for the entire reference genome. This allows for faster mapping and better mapping across exon boundaries and splice sites. If an alignment still can not be found it will attempt to determine if the read corresponds to a novel exon-exon junction. See the Indexing section and the HISAT2 publication for more details. 
+* During the StringTie step, a .gtf file can be used to specify the transcript models to estimate expression estimates for using the '-G' and '-e' option.  This mode of StringTie will give you one expression estimate for each of the transcripts in your .gtf file giving you a 'microarray like' expression result.
+* During the StringTie step, a .gtf file can be used to 'guide' the assembly of novel transcripts using the '-G' option **ONLY**.  Instead of assuming the known transcript models are correct, they are used as a guide and the resulting expression estimates will correspond to both known and novel/predicted transcripts.
+* During the StringTie and gffcompare steps, a .gtf file is used to determine the transcripts that will be examined for differential expression using Ballgown.  These may be known transcripts that you download from a public source or a .gtf of transcripts predicted by StringTie from the read data in an earlier step.
 	
-###Sources for obtaining gene annotation files formatted for TopHat/Cufflinks/Cuffdiff
+###Sources for obtaining gene annotation files formatted for HISAT2/StringTie/Ballgown
 
-There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, Illumina iGenomes, UCSC, RefSeq, etc.  Three options and related instructions for obtaining the gene annotation files are provided below.
+There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, 1000 Genomes, Illumina iGenomes, UCSC, RefSeq, etc.  Four options and related instructions for obtaining the gene annotation files are provided below.
 	
 ####I. ILLUMINA IGENOMES.  
 Formatted specifically for use with TopHat Cuffinks.  Based on UCSC, Refseq/NCBI, or Ensembl annotations.  Available for many species.  Bowtie indexed reference genome files are pre-computed for your convenience.  Download here:
@@ -97,7 +96,7 @@ tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --
 
 ```
 
-Then, the files you would need for the workflow presented in this tutorial would be:
+Then, the files you would need for the workflow presented in this original TopHat/Cufflinks/Cuffdiff version of this tutorial would be:
 
 * GTF file: Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
 * Reference genome (combined): Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta/genome.fa
@@ -140,12 +139,20 @@ How to get gene symbols and descriptions for all UCSC genes:
 	
 To get annotations for the whole genome, make sure 'genome' is selected beside 'region'.
 By default, the files downloaded above will be compressed.  To decompress, use 'gunzip filename' in linux.
-	
+
+####IV. HISAT2 Precomputed Genome Index
+
+HISAT2 has prebuilt reference genome index files for both DNA and RNA alignment. Various versions of the index files include SNPs and/or transcript splice sites. Versions of both the Ensembl and UCSC genomes for human build 38 are linked from the main HISAT2 page:
+https://ccb.jhu.edu/software/hisat2/index.shtml
+
+Or those same files are directly available from their FTP site:
+ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/
+
 Important note on chromosome naming conventions:  
-In order for your TopHat/Cufflinks analysis to work, the chromosome names in you .gtf file *must match* those in your reference genome (i.e. your reference genome fasta file).  If you get a Cufflinks result where all transcripts have an expression value of 0, you may have overlooked this.  Unfortunately, Ensembl, NCBI, and UCSC can not agree on how to name the chromosomes in many species, so this problem may come up often.  You can avoid this by getting a complete reference genome and gene annotation package from the Illumina iGenomes project mentioned above.
+In order for your RNA-seq analysis to work, the chromosome names in your .gtf file **must match** those in your reference genome (i.e. your reference genome fasta file).  If you get a StringTie result where all transcripts have an expression value of 0, you may have overlooked this.  Unfortunately, Ensembl, NCBI, and UCSC can not agree on how to name the chromosomes in many species, so this problem may come up often.  You can avoid this by getting a complete reference genome and gene annotation package from the Illumina iGenomes project mentioned above.
 	
 Important note on reference genome builds:  
-Your annotations must correspond to the same reference genome build as your reference genome fasta file.  e.g. both correspond to UCSC human build 'hg18', NCBI human build '37', etc..  Even if both your reference genome and annotations are from UCSC or Ensembl they could still correspond to different versions of that genome.  This would cause problems in any RNA-seq pipeline.
+Your annotations must correspond to the same reference genome build as your reference genome fasta file.  e.g. both correspond to UCSC human build 'hg38', NCBI human build 'GRCh38', etc..  Even if both your reference genome and annotations are from UCSC or Ensembl they could still correspond to different versions of that genome.  This would cause problems in any RNA-seq pipeline.
 	
 | [[Previous Section|Reference-Genome]]  | [[This Section|Annotation]] | [[Next Section|Indexing]] |
 |:--------------------------------------:|:---------------------------:|:-------------------------:|

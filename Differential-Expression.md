@@ -9,6 +9,7 @@ Change to ref-only directory:
 
 ```bash
 
+mkdir -p $RNA_HOME/de/ballgown/ref_only/
 cd $RNA_HOME/de/ballgown/ref_only/
 
 ```

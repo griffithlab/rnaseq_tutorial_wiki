@@ -2,7 +2,7 @@
 First, make sure your [[environment|Environment]] is set up correctly.
 
 #1-i. Installation
-Tools needed for this analysis are: samtools, bam-readcount, bowtie, tophat, star, HISAT2, cufflinks, htseq-count, R, cummeRbund, fastqc, picard-tools, and samstat. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
+Tools needed for this analysis are: samtools, bam-readcount, HISAT2, stringtie, gffcompare, htseq-count, flexbar, R, ballgown, fastqc and picard-tools. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
 
 Set up tool installation location:
 
@@ -57,15 +57,27 @@ cd hisat2-2.0.4
 
 ```
 
-##[Cufflinks2](http://cole-trapnell-lab.github.io/cufflinks/manual/)
+##[StringTie](https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual)
 
 ```bash
 
 cd $RNA_HOME/tools/
-wget http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz
-tar -zxvf cufflinks-2.2.1.Linux_x86_64.tar.gz
-cd cufflinks-2.2.1.Linux_x86_64
-./cufflinks
+wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.0.Linux_x86_64.tar.gz
+tar -xzvf stringtie-1.3.0.Linux_x86_64.tar.gz
+cd stringtie-1.3.0.Linux_x86_64
+./stringtie
+
+```
+
+##[gffcompare](http://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare)
+
+```bash
+
+cd $RNA_HOME/tools/
+wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.9.8.Linux_x86_64.tar.gz
+tar -xzvf gffcompare-0.9.8.Linux_x86_64.tar.gz
+cd gffcompare-0.9.8.Linux_x86_64
+./gffcompare
 
 ```
 
@@ -144,6 +156,8 @@ Note, if X11 libraries are not available you may need to use '--with-x=no' durin
 ##R Libraries
 
 For this tutorial we require:
+- [devtools](https://cran.r-project.org/web/packages/devtools/index.html)
+- [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html)
 - [gplots](http://cran.r-project.org/web/packages/gplots/index.html)
 - [ggplot2](http://ggplot2.org/)
 
@@ -151,16 +165,16 @@ launch R (enter `R` at linux command prompt) and type the following at an R comm
 
 ```R
 
-install.packages("gplots")
-install.packages("ggplot2")
-quit()
+install.packages(c("devtools","dplyr","gplots","ggplot2"),repos="http://cran.us.r-project.org")
+quit(save="no")
 
 ```
 
 ##[Bioconductor](http://www.bioconductor.org/)
 
 For this tutorial we require:
-- [cummeRbund](http://compbio.mit.edu/cummeRbund/)
+- [genefilter](http://bioconductor.org/packages/release/bioc/html/genefilter.html)
+- [ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
@@ -168,9 +182,8 @@ launch R (enter `R` at linux command prompt) and type the following at an R comm
 ```R
 
 source("http://bioconductor.org/biocLite.R")
-biocLite("cummeRbund")
-biocLite("edgeR")
-quit()
+biocLite(c("genefilter","ballgown","edgeR"))
+quit(save="no")
 
 ```
 
@@ -207,7 +220,19 @@ To use the locally installed version of each tool without having to specify comp
 ```bash
 
 export RNA_HOME=~/workspace/rnaseq
-export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/cufflinks-2.2.1.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.2/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$PATH
+
+export RNA_DATA_DIR=$RNA_HOME/data
+export RNA_DATA_TRIM_DIR=$RNA_DATA_DIR/trimmed
+
+export RNA_REFS_DIR=$RNA_HOME/refs
+export RNA_REF_INDEX=$RNA_REFS_DIR/chr22_with_ERCC92
+export RNA_REF_FASTA=$RNA_REF_INDEX.fa
+export RNA_REF_GTF=$RNA_REF_INDEX.gtf
+
+export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
+
+export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$PATH
+
 echo $PATH
 
 ```
