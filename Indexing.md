@@ -1,4 +1,3 @@
-![RNA-seq Flowchart - Module 2](Images/RNA-seq_Flowchart2.png)
 
 #1-iv. Indexing
 
