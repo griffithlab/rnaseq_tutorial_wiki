@@ -68,15 +68,14 @@ Compare these files using FastQC:
 
 ```
 export RNA_HOME=~/workspace/rnaseq
-export RNA_DATA_DIR=$RNA_HOME/practice/data
+export RNA_PRACTICE_DATA_DIR=$RNA_HOME/practice/data
 cd $RNA_HOME/practice/
 
-mkdir -p alignments/tophat/trans_idx
-export TRANS_IDX_DIR=$RNA_HOME/practice/alignments/tophat/trans_idx/
-cd alignments/tophat
+mkdir -p alignments/hisat2
+cd alignments/hisat2
 
-tophat2 -p 8 -r 60 --rg-id=HCC1395_normal --rg-sample=HCC1395_normal -o HCC1395_normal -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92 $RNA_DATA_DIR/hcc1395_normal_1.fastq.gz $RNA_DATA_DIR/hcc1395_normal_2.fastq.gz
-tophat2 -p 8 -r 60 --rg-id=HCC1395_tumor --rg-sample=HCC1395_tumor -o HCC1395_tumor -G $RNA_HOME/refs/hg19/genes/genes_chr22_ERCC92.gtf --transcriptome-index $TRANS_IDX_DIR/ENSG_Genes $RNA_HOME/refs/hg19/bwt/chr22_ERCC92 $RNA_DATA_DIR/hcc1395_tumor_1.fastq.gz $RNA_DATA_DIR/hcc1395_tumor_2.fastq.gz
+hisat2 -p 8 --rg-id=HCC1395_normal --rg SM:HCC1395_normal --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_2.fastq.gz -S ./HCC1395_normal.sam
+hisat2 -p 8 --rg-id=HCC1395_tumor --rg SM:HCC1395_tumor --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_2.fastq.gz -S ./HCC1395_tumor.sam
 
 ```
 

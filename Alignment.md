@@ -58,9 +58,7 @@ hisat2 -p 8 --rg-id=HBR_Rep3 --rg SM:HBR --rg LB:HBR_Rep3_ERCC-Mix2 --rg PL:ILLU
 ```
 
 
-Note: in the above alignments, we are treating each library as an independent data set.  If you had multiple lanes of data for a single library, you could align them all together in one HISAT2 command
-Similarly you might combine technical replicates into a single alignment run (perhaps after examining them and removing outliers...)
-To combine multiple lanes, you would provide all the read1 files as a comma separated list for the '-1' input argument, and then all read2 files as a comma separated list for the '-2' input argument, (where both lists have the same order) :
+Note: in the above alignments, we are treating each library as an independent data set.  If you had multiple lanes of data for a single library, you could align them all together in one HISAT2 command. Similarly you might combine technical replicates into a single alignment run (perhaps after examining them and removing outliers...). To combine multiple lanes, you would provide all the read1 files as a comma separated list for the '-1' input argument, and then all read2 files as a comma separated list for the '-2' input argument, (where both lists have the same order) :
 You can also use samtools merge to combine bam files after alignment. This is the approach we will take.
 
 ###HISAT2 Alignment Summary
@@ -69,7 +67,7 @@ HISAT2 generates a summary of the alignments printed to the terminal. Notice the
 
 ###SAM to BAM Conversion
 
-Convert HISAT2 sam files to bam files (required for cufflinks) and sort by aligned position
+Convert HISAT2 sam files to bam files and sort by aligned position
 
 ```bash
 
