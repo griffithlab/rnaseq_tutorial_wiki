@@ -68,7 +68,7 @@ Compare these files using FastQC:
 
 ```
 export RNA_HOME=~/workspace/rnaseq
-export RNA_DATA_DIR=$RNA_HOME/practice/data
+export RNA_PRACTICE_DATA_DIR=$RNA_HOME/practice/data
 cd $RNA_HOME/practice/
 
 mkdir -p alignments/tophat/trans_idx
