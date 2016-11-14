@@ -2,6 +2,7 @@
 
 #### 1. Recommended Reading and RNA-seq Resources
 - [Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/TranscriptLevelExpression_Pertea_2016.pdf)
+- Key tool papers: [HISAT](https://www.ncbi.nlm.nih.gov/pubmed/25751142), [StringTie](https://www.ncbi.nlm.nih.gov/pubmed/25690850), [BallGown](https://www.ncbi.nlm.nih.gov/pubmed/25748911), [HTSeq](https://www.ncbi.nlm.nih.gov/pubmed/25260700), [EdgeR](https://www.ncbi.nlm.nih.gov/pubmed/19910308).
 - [RNA-seqlopedia](http://rnaseq.uoregon.edu/) (Includes a very comprehensive review of library construction concepts)
 - [List of RNA-Seq bioinformatics tools](https://en.wiki2.org/wiki/List_of_RNA-Seq_bioinformatics_tools)
 - [RNA Sequencing and Analysis - 2015 review](http://cshprotocols.cshlp.org/content/early/2015/04/11/pdb.top084970.abstract)
@@ -17,6 +18,7 @@
 - [The RNA-seq blog - recent developments in RNA-seq technology and analysis](http://www.rna-seqblog.com/)
 - [Proportionality: A Valid Alternative to Correlation for Relative Data](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361748/)
 - [NCBI Hackathons RNA Mapping Tutorial](https://github.com/NCBI-Hackathons/RNA_mapping/wiki)
+- [RNA-seq analysis is easy as 1-2-3 with limma, Glimma and edgeR](https://www.ncbi.nlm.nih.gov/pubmed/27441086)
 
 #### 2. Unix/Linux Tutorials
 - [A UNIX command cheat sheet](http://www.rain.org/~mkummel/unix.html)
