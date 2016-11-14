@@ -66,7 +66,7 @@ cd bam_readcount
 Create faidx indexed reference sequence file for use with mpileup
 
 ```bash
-
+echo $RNA_REF_FASTA
 samtools faidx $RNA_REF_FASTA
 
 ```
