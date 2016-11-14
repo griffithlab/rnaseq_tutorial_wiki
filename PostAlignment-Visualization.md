@@ -28,12 +28,12 @@ find $RNA_ALIGN_DIR/*.bam -exec samtools index {} \;
 
 ##Visualize alignments
 
-Start IGV on your laptop. Load the UHR_ERCC-Mix1_ALL & HBR_ERCC-Mix2_ALL BAM files (accepted_hits.bam) in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace '##' with your own amazon instance number (e.g., "##")).
+Start IGV on your laptop. Load the UHR.bam & HBR.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace '##' with your own amazon instance number (e.g., "##")).
 
-**UHR Tophat alignment**
+**UHR hisat2 alignment**
 http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/UHR.bam
 
-**HBR Tophat alignment**
+**HBR hisat2 alignment**
 http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/HBR.bam
 
 Go to an example gene locus on chr22:
