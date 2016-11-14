@@ -30,7 +30,7 @@ tar -xvf alignment_practical.tar
 ```
 
 ###Practical Exercise 3 - QC
-On you local machine, download this file: http://cbw**.dyndns.info/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
+On your local machine, download this file: http://[YOUR_PUBLIC_DNS]/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
 
 Using FastQC, open this file and allow it to complete the QC analysis
 
