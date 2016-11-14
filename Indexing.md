@@ -25,8 +25,8 @@ To create an index for all chromosomes instead of just chr22 you would do the fo
 
 ```bash
 
-cd /home/ubuntu/workspace/data/fasta/GRCh38
-hisat2-build -p 8 Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa Homo_sapiens.GRCh38.dna_sm.primary_assembly
+#cd /home/ubuntu/workspace/data/fasta/GRCh38
+#hisat2-build -p 8 Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa Homo_sapiens.GRCh38.dna_sm.primary_assembly
 
 ```
 
