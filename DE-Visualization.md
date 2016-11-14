@@ -1,4 +1,4 @@
-![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+u![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
 #3-iii. Ballgown DE Visualization
  
@@ -79,12 +79,10 @@ cd de/htseq_counts
 ```
  
 Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
-TODO: This is no longer necessary since the stringtie/ballgown output uses ENSG gene_ids as well. The R script will need to be modified to no longer convert the IDs to names (or we need to write a conversion for stringtie/ballgown)
-
 
 ```bash
 
-perl -ne 'if ($_ =~ /gene_id\s\"(ENSG\S+)\"\;/) { $id = $1; $name = undef; if ($_ =~ /gene_name\s\"(\S+)"\;/) { $name = $1; }; }; if ($id && $name) {print "$id\t$name\n";} if ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' $REF_GTF | sort | uniq > ENSG_ID2Name.txt
+perl -ne 'if ($_ =~ /gene_id\s\"(ENSG\S+)\"\;/) { $id = $1; $name = undef; if ($_ =~ /gene_name\s\"(\S+)"\;/) { $name = $1; }; }; if ($id && $name) {print "$id\t$name\n";} if ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' $RNA_REF_GTF | sort | uniq > ENSG_ID2Name.txt
 
 ```
 
