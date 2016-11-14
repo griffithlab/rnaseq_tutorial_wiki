@@ -8,8 +8,8 @@ Create the necessary working directory
 ```bash
 
 cd $RNA_HOME
-mkdir -p $RNA_REFS_DIR
 echo $RNA_REFS_DIR
+mkdir -p $RNA_REFS_DIR
 
 ```
 
@@ -29,7 +29,7 @@ View the first 10 lines of this file
 
 ```bash
 
-head $RNA_REF_FASTA
+head chr22_with_ERCC92.fa
 
 ```
 
