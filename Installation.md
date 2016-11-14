@@ -262,7 +262,7 @@ NOTE: If you are worried your .bashrc is messed up you can redownload as follows
 ```bash
 
 cd ~
-wget -N https://github.com/griffithlab/rnaseq_tutorial/wiki/config/.bashrc
+wget -N https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/setup/.bashrc
 
 ```
 
