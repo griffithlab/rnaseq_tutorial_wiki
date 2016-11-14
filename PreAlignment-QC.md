@@ -18,8 +18,8 @@ fastqc *.fastq.gz
 ```
 
 Then, go to the following url in your browser:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/
-* Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (ex. 101.0.1.101))
+* http://__YOUR_DNS_NAME__/workspace/rnaseq/data/
+* Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance DNS (e.g., ec2-54-187-159-113.us-west-2.compute.amazonaws.com))
 * Click on any of the *_fastqc.html files to view the FastQC report
 
 ---
