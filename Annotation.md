@@ -17,7 +17,7 @@ cp /home/ubuntu/workspace/data/annotations/GRCh38/chr22_with_ERCC92.gtf .
 Take a look at the contents of the gtf file. Press 'q' to exit the 'less' display.
 
 ```bash
-
+echo $RNA_REF_GTF
 less -p start_codon -S $RNA_REF_GTF
 
 ```
