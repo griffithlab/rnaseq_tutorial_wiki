@@ -5,6 +5,7 @@
 - [Jason Walker<sup>1</sup>](http://genome.wustl.edu/people/individual/jason-walker/), [jwalker[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/jason-walker/)
 - [Ben Ainscough<sup>1</sup>](http://genome.wustl.edu/people/individual/Benjamin-Ainscough/), [bainscou[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/benjamin-ainscough/)
 - [Nicholas Spies<sup>1</sup>](http://genome.wustl.edu/people/individual/Nicholas-Spies/), [nspies[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/nicholas-spies/)
+- [Alex Wagner<sup>1</sup>](http://genome.wustl.edu/people/individual/alex-wagner/), [awagner[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/alex-wagner/), [@handlerwagner](https://twitter.com/handlerwagner)
 
 <sup>1</sup> The Genome Institute, Washington University School of Medicine<br>
 <sup>2</sup> The Department of Genetics, Washington University School of Medicine<br>

@@ -24,7 +24,7 @@ echo $RNA_HOME
 
 You can place the RNA_HOME variable in your .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.
 
-Additional environment varaibles used throughout this tutorial:
+Additional environment variables used throughout this tutorial:
 
 ```bash
 

@@ -124,10 +124,10 @@ java -jar $RNA_HOME/tools/picard.jar
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/seqan/flexbar/releases/download/v2.4.0/flexbar_v2.4_linux64.tgz
-tar -xzvf flexbar_v2.4_linux64.tgz
-cd flexbar_v2.4_linux64
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.4_linux64:$LD_LIBRARY_PATH
+wget https://github.com/seqan/flexbar/releases/download/v2.5.0/flexbar_v2.5_linux64.tgz
+tar -xzvf flexbar_v2.5_linux64.tgz
+cd flexbar_v2.5_linux64
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.5_linux64:$LD_LIBRARY_PATH
 ./flexbar
 
 ```
@@ -141,10 +141,10 @@ It is already installed on the Cloud, but for completeness, here is how it was d
 
 cd $RNA_HOME/tools/
 export R_LIBS=
-wget https://cran.r-project.org/src/base/R-3/R-3.2.5.tar.gz
-tar -zxvf R-3.2.5.tar.gz
-cd R-3.2.5
-./configure --prefix=$RNA_HOME/tools/R-3.2.5/ --with-x=no
+wget https://cran.r-project.org/src/base/R-3/R-3.2.3.tar.gz
+tar -zxvf R-3.2.3.tar.gz
+cd R-3.2.3
+./configure --prefix=$RNA_HOME/tools/R-3.2.3/ --with-x=no
 make
 make install
 ./bin/Rscript
