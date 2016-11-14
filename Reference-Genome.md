@@ -38,7 +38,7 @@ How many lines and characters are in this file?
 
 ```bash
 
-wc $RNA_REF_FASTA
+wc chr22_with_ERCC92.fa
 
 ```
 
@@ -46,7 +46,7 @@ View 10 lines from approximately the middle of this file
 
 ```bash
 
-head -n 425000 $RNA_REF_FASTA | tail
+head -n 425000 chr22_with_ERCC92.fa| tail
 
 ```
 
