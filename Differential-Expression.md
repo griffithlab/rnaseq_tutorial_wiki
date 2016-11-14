@@ -23,47 +23,7 @@ printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/s
 R
 
 ```
-
-```bash
-
-library(ballgown)
-library(RSkittleBrewer)
-library(genefilter)
-library(dplyr)
-library(devtools)
-
-# Load phenotype data
-pheno_data = read.csv("UHR_vs_HBR.csv")
-
-# Load ballgown data structure
-bg = ballgown(samples=as.vector(pheno_data$path),pData=pheno_data)
-
-# Perform DE with no filtering
-results_transcripts = stattest(bg, feature="transcript", covariate="type", getFC=TRUE, meas="FPKM")
-results_genes = stattest(bg, feature="gene", covariate="type", getFC=TRUE, meas="FPKM")
-
-write.table(results_transcripts,"UHR_vs_HBR_transcript_results.tsv",sep="\t")
-write.table(results_genes,"UHR_vs_HBR_gene_results.tsv",sep="\t")
-
-# Filter low-abundance genes Here we remove all transcripts with a variance across samples less than one
-bg_filt = subset (bg,"rowVars(texpr(bg)) > 1", genomesubset=TRUE)
-results_transcripts = stattest(bg_filt, feature="transcript", covariate="type", getFC=TRUE, meas="FPKM")
-results_genes = stattest(bg_filt, feature="gene", covariate="type", getFC=TRUE, meas="FPKM")
-
-write.table(results_transcripts,"UHR_vs_HBR_transcript_results_filtered.tsv",sep="\t")
-write.table(results_genes,"UHR_vs_HBR_gene_results_filtered.tsv",sep="\t")
-
-
-# Identify genes with p value < 0.05
-sig_transcripts = subset(results_transcripts,results_transcripts$pval<0.05)
-sig_genes = subset(results_genes,results_genes$pval<0.05)
-write.table(sig_transcripts,"UHR_vs_HBR_transcript_results_sig.tsv",sep="\t")
-write.table(sig_genes,"UHR_vs_HBR_gene_results_sig.tsv",sep="\t")
-
-quit(save="no")
-
-```
-
+A separate R tutorial file has been provided in the github repo for part 1 of the tutorial: [Tutorial_Module4_Part1_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part1_ballgown.R). Run the R commands detailed in the R script.
 
 What does the raw output from Ballgown look like?
 
@@ -84,7 +44,7 @@ grep -v feature UHR_vs_HBR_gene_results.tsv | wc -l
 
 ```
 
-How many were detected above 0 in UHR or HBR?
+How many passed filter in UHR or HBR?
 
 ```bash
 
