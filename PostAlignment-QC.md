@@ -85,16 +85,16 @@ Run the RSeQC commands on one of your hisat2 bam files:
 
 bam_stat.py -i ../HBR.bam
 clipping_profile.py -i ./HBR.bam -o tutorial -s "PE"
-geneBody_coverage.py -r hg38_RefSeq.bed -i ./HBR.bam -o tutorial
-infer_experiment.py -r hg38_RefSeq.bed -i ./HBR.bam
-inner_distance.py -r hg38_RefSeq.bed -i ./HBR.bam -o tutorial
-junction_annotation.py -r hg38_RefSeq.bed -i ./HBR.bam -o tutorial
-junction_saturation.py -r hg38_RefSeq.bed -i ./HBR.bam -o tutorial
-read_distribution.py -r hg38_RefSeq.bed -i ./HBR.bam
-read_duplication.py -i ./HBR.bam -o tutorial
-read_GC.py -i ./HBR.bam -o tutorial
-read_NVC.py -i ./HBR.bam -o tutorial
-read_quality.py -i ./HBR.bam -o tutorial
+geneBody_coverage.py -r hg38_RefSeq.bed -i ../HBR.bam -o tutorial
+infer_experiment.py -r hg38_RefSeq.bed -i ../HBR.bam
+inner_distance.py -r hg38_RefSeq.bed -i ../HBR.bam -o tutorial
+junction_annotation.py -r hg38_RefSeq.bed -i ../HBR.bam -o tutorial
+junction_saturation.py -r hg38_RefSeq.bed -i ../HBR.bam -o tutorial
+read_distribution.py -r hg38_RefSeq.bed -i ../HBR.bam
+read_duplication.py -i ../HBR.bam -o tutorial
+read_GC.py -i ../HBR.bam -o tutorial
+read_NVC.py -i ../HBR.bam -o tutorial
+read_quality.py -i ../HBR.bam -o tutorial
 ls *.pdf
 
 ```
