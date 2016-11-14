@@ -46,7 +46,7 @@ View 10 lines from approximately the middle of this file
 
 ```bash
 
-head -n 425000 chr22_with_ERCC92.fa| tail
+head -n 425000 chr22_with_ERCC92.fa | tail
 
 ```
 
