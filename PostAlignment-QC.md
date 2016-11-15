@@ -84,7 +84,7 @@ Run the RSeQC commands on one of your hisat2 bam files:
 ```bash
 
 bam_stat.py -i ../HBR.bam
-clipping_profile.py -i ./HBR.bam -o tutorial -s "PE"
+clipping_profile.py -i ../HBR.bam -o tutorial -s "PE"
 geneBody_coverage.py -r hg38_RefSeq.bed -i ../HBR.bam -o tutorial
 infer_experiment.py -r hg38_RefSeq.bed -i ../HBR.bam
 inner_distance.py -r hg38_RefSeq.bed -i ../HBR.bam -o tutorial
