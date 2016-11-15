@@ -98,7 +98,7 @@ Run RSeQC commands:
 
 Go through the generated PDFs by browsing through the following directory in a web browser:
 
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/RSeQC/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/RSeQC/
 
 -------
 **Read Quality:**
