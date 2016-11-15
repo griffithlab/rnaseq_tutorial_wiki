@@ -28,6 +28,8 @@ R
 ```
 A separate R tutorial file has been provided in the github repo for part 1 of the tutorial: [Tutorial_Module4_Part1_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part1_ballgown.R). Run the R commands detailed in the R script.
 
+Once you have completed the Ballgown analysis in R, exit the R session and continue with the steps below. 
+
 What does the raw output from Ballgown look like?
 
 ```bash
