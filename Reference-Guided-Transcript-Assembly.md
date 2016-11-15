@@ -19,13 +19,12 @@ https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual
 ###Running Stringtie in Reference Guided Mode
 Using the alignments we generated in the previous modules we will now run Stringtie in reference guided mode using the '-G' option **ONLY**.
 
-Extra options specified below
+Extra options specified below:
 
-*'-p 8' tells Stringtie to use eight CPUs
-*'-G <known transcripts file>' reference annotation to use for guiding the assembly process (GTF/GFF3)
-*'-l' name prefix for output transcripts (default: STRG)
-*'-o' output path/file name for the assembled transcripts GTF (default: stdout)
-
+* '-p 8' tells Stringtie to use eight CPUs
+* '-G <known transcripts file>' reference annotation to use for guiding the assembly process (GTF/GFF3)
+* '-l' name prefix for output transcripts (default: STRG)
+* '-o' output path/file name for the assembled transcripts GTF (default: stdout)
 
 First, create an output directory and then run stringtie in reference-guided mode. 
 
