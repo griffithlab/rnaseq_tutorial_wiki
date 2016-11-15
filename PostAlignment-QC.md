@@ -79,6 +79,7 @@ Unzip the RSeQC file:
 ```
 unzip RSeQC.zip
 cd RSeQC/
+gunzip hg19_UCSC_knownGene.bed.gz
 ```
 
 Note: You should now see the bam, index, and RefSeq bed files listed.  The bam file here is an pair-end non-strand specific example dataset from the RSeQC website.
