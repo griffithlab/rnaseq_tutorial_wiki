@@ -132,6 +132,19 @@ export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.5_linux64:$LD_LIBRARY_PATH
 
 ```
 
+##[Regtools](https://github.com/griffithlab/regtools#regtools)
+
+```bash
+
+    git clone https://github.com/griffithlab/regtools
+    cd regtools/
+    mkdir build
+    cd build/
+    cmake ..
+    make
+    
+```
+
 ##[R](http://www.r-project.org/)
 
 This install takes a while so check if you have R installed already by typing `which R`.
