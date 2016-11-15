@@ -142,6 +142,7 @@ export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.5_linux64:$LD_LIBRARY_PATH
     cd build/
     cmake ..
     make
+    ./regtools
     
 ```
 
