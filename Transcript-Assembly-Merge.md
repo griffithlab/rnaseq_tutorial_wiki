@@ -31,6 +31,8 @@ awk '{if($3=="transcript") print}' stringtie_merged.gtf | cut -f 1,4,9 | less
 
 ```
 
+Press 'q' to exit the less viewer
+
 Compare reference guided transcripts to known annotation:
 
 ```bash
@@ -48,6 +50,8 @@ What does the merged annotation look like after comparing it to known annotation
 awk '{if($3=="transcript") print}' merged.annotated.gtf | cut -f 1,4,9 | less
 
 ```
+
+Press 'q' to exit the less viewer
 
 
 For de novo mode:
