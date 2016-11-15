@@ -39,8 +39,6 @@ head UHR_vs_HBR_gene_results.tsv
 
 ```
 
-Press 'q' to exit the 'less' display
-
 How many genes are there on this chromosome?
 
 ```bash
