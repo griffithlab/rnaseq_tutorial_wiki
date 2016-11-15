@@ -1,4 +1,4 @@
-u![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
+![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
 #3-iii. Ballgown DE Visualization
  
