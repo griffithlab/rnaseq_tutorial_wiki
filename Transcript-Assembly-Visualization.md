@@ -14,6 +14,7 @@ head stringtie_merged.gtf
 ```
 	
 For details on the format of these files, refer to the following links:
+* https://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare
 * http://cole-trapnell-lab.github.io/cufflinks/cuffmerge/index.html
 * http://cole-trapnell-lab.github.io/cufflinks/cuffcompare/index.html#transfrag-class-codes
 	
@@ -31,7 +32,9 @@ How many genes have at least one *novel* transcript assembled?
 
 ```bash
 
-grep "j" merged.gtf | perl -ne 'if ($_ =~ /gene_name\s\"(\w+)\"/){print "$1\n"}' | sort | uniq | wc -l
+grep "j" merged.stringtie_merged.gtf.tmap
+
+grep "j" merged.stringtie_merged.gtf.tmap | cut -f 1 | sort | uniq | wc -l
 	
 ```
 
