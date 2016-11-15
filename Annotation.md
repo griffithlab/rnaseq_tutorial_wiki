@@ -74,41 +74,14 @@ When running the HISAT2/StringTie/Ballgown pipeline, known gene/transcript annot
 	
 ###Sources for obtaining gene annotation files formatted for HISAT2/StringTie/Ballgown
 
-There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, 1000 Genomes, Illumina iGenomes, UCSC, RefSeq, etc.  Four options and related instructions for obtaining the gene annotation files are provided below.
+There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, 1000 Genomes, UCSC, RefSeq, etc.  Four options and related instructions for obtaining the gene annotation files are provided below.
 	
-####I. ILLUMINA IGENOMES.  
-Formatted specifically for use with TopHat/Cuffinks.  Based on UCSC, Refseq/NCBI, or Ensembl annotations.  Available for many species.  Bowtie indexed reference genome files are pre-computed for your convenience.  Download here:
-http://cole-trapnell-lab.github.io/cufflinks//igenome_table/index.html
-
-  * Use wget (or similar) to download the Homo_sapiens_Ensembl_GRCh37.tar.gz file 
-  * This is found under Homo sapiens -> Ensembl -> GRCh37
-  * unzip/untar
-  * Individual chromosome fasta sequence files can be in Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/
-  * GTF file can be found in Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
-
-Note, the Igenomes file is huge and contains many files (including archived versions) that you likely do not need. After download of the tar file, one space-saving solution is to perform only a selective unarchive. For example:
-
-```bash
-
-cd $RNA_REFS_DIR
-wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
-tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
-
-```
-
-Then, the files you would need for the workflow presented in the <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki"original TopHat/Cufflinks/Cuffdiff version of this tutorial</a> would be:
-
-* GTF file: Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
-* Reference genome (combined): Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta/genome.fa
-* Reference genome (individual): Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes/*.fa
-* Bowtie2 index: Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.*
-	
-####II. ENSEMBL FTP SITE  
+####I. ENSEMBL FTP SITE  
 
 Based on Ensembl annotations only.  Available for many species.
 http://useast.ensembl.org/info/data/ftp/index.html
 	
-####III. UCSC TABLE BROWSER  
+####II. UCSC TABLE BROWSER  
 
 Based on UCSC annotations or several other possible annotation sources collected by UCSC. You might chose this option if you want to have a lot of flexibility in the annotations you obtain.  e.g. to grab only the transcripts from chromosome 22 as in the following example:
   * Open the following in your browser: http://genome.ucsc.edu/
@@ -140,7 +113,7 @@ How to get gene symbols and descriptions for all UCSC genes:
 To get annotations for the whole genome, make sure 'genome' is selected beside 'region'.
 By default, the files downloaded above will be compressed.  To decompress, use 'gunzip filename' in linux.
 
-####IV. HISAT2 Precomputed Genome Index
+####III. HISAT2 Precomputed Genome Index
 
 HISAT2 has prebuilt reference genome index files for both DNA and RNA alignment. Various versions of the index files include SNPs and/or transcript splice sites. Versions of both the Ensembl and UCSC genomes for human build 38 are linked from the main HISAT2 page:
 https://ccb.jhu.edu/software/hisat2/index.shtml
