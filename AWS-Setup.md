@@ -36,7 +36,7 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 * logout and log back in
 
 ###Set up additional storage for workspace
-We may need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can't really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance. NOTE: This may or may not be necessary depending on how you set up volumes and type of instance you choose. For example, if you setup an extra EBS volume (instead of relying on ephemeral storage) and mount this drive (for storing working data) and you create the appropriate fstab entries then create an AMI, new instances may just be ready to go. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/setup_mounts.sh
+We may need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can not really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance. NOTE: This may or may not be necessary depending on how you set up volumes and type of instance you choose. For example, if you setup an extra EBS volume (instead of relying on ephemeral storage) and mount this drive (for storing working data) and you create the appropriate fstab entries then create an AMI, new instances may just be ready to go. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/setup_mounts.sh
 ```
 mkdir /workspace
 cd ~
@@ -161,14 +161,14 @@ To create a snapshot of the extra workspace volume, navigate to volumes, right-c
 
 ###Save a public AMI
 
-Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. If desired you may choose at this time to include the workspace snapshot in the AMI to avoid having to explicitly attach it later at launching of AMI instances. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMI's. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
+Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. If desired you may choose at this time to include the workspace snapshot in the AMI to avoid having to explicitly attach it later at launching of AMI instances. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMIs. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
 ###Current Public AMIs:
 
 * cshl_seqtec_rnaseq_2014_v2 - ami-7ff4bf4f (US West - Oregon)
 * cshl_seqtec_rnaseq_2014_v2 - ami-eeae3b86 (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ami-9df1e7d8 (US West - N. California)
-* cshl_seqtec_2016_v4 - ami-9cb91bfc (US West - Oregon)
+* cshl_seqtec_2016_v5 - ami-20238140 (US West - Oregon)
 
 ###Create IAM account
 
@@ -176,10 +176,10 @@ From AWS Console select Services -> IAM. Go to Users, Create User, specify a use
 
 ###Launch student instance
 1. Go to AWS console. Login. Select EC2.
-2. Launch Instance, search for "cshl_seqtec_2015_v3" in Community AMIs and Select.
+2. Launch Instance, search for "cshl_seqtec_2016_v5" in Community AMIs and Select.
 3. Choose "m4.2xlarge" instance type.
 4. Select one instance to launch (e.g., one per student and instructor), and select "Protect against accidental termination"
-5. Make sure that you see two snapshots (e.g., the 32GB root volume and 500GB EBS volume you set up earlier)
+5. Make sure that you see two snapshots (e.g., the 32GB root volume and 80GB EBS volume you set up earlier)
 6. Create a tag with name=StudentName
 7. Choose existing security group call "SSH_HTTP_8081_IN_ALL_OUT". Review and Launch.
 8. Choose an existing key pair (either CSHL.pem)
@@ -194,7 +194,7 @@ Rather than handing out ip addresses for each student instance to each student y
 
 ###Host necessary files for the course
 
-Currently, all miscellaneous data files, annotations, etc are hosted on an ftp server at the Genome Institute. In the future more data files could be pre-loaded onto the EBS snapshot. 
+Currently, all miscellaneous data files, annotations, etc. are hosted on an ftp server at the Genome Institute. In the future more data files could be pre-loaded onto the EBS snapshot. 
 
 * Files copied to: /gscmnt/sata102/info/ftp-staging/pub/rnaseq/
 * Appear here: http://genome.wustl.edu/pub/rnaseq/
