@@ -8,7 +8,7 @@ View the merged GTF file from the 'de_novo' mode.  Remember this merged GTF file
 
 ```bash
 
-cd $RNA_HOME/expression/cufflinks/de_novo/merged/
+cd $RNA_HOME/expression/stringtie/de_novo/stringtie_merged.gtf
 head merged.gtf
 
 ```
@@ -17,26 +17,13 @@ For details on the format of these files, refer to the following links:
 * http://cole-trapnell-lab.github.io/cufflinks/cuffmerge/index.html
 * http://cole-trapnell-lab.github.io/cufflinks/cuffcompare/index.html#transfrag-class-codes
 	
-View the differential splicing, differential promoter usage and differential CDS results files. For each results file, we sort the results by the p-value and view the top 10 isoforms, ignoring entries classified as 'LOWDATA'.
+
+How many genes have at least one transcript assembled by StringTie in the 'de_novo' results?
 
 ```bash
 
-cd $RNA_HOME/de/cufflinks/de_novo/
-
-sort -k 12n splicing.diff | grep -v LOWDATA | head
-
-sort -k 12n promoters.diff | grep -v LOWDATA | head
-
-sort -k 12n cds.diff | grep -v LOWDATA | head
-
-```
-
-How many genes have at least one transcript assembled by Cufflinks in the 'de_novo' results?
-
-```bash
-
-cd $RNA_HOME/expression/cufflinks/de_novo/merged/
-cat merged.gtf | perl -ne 'if ($_ =~ /gene_name\s\"(\w+)\"/){print "$1\n"}' | sort | uniq | wc -l
+cd $RNA_HOME/expression/stringtie/de_novo/
+cat stringtie_merged.gtf | perl -ne 'if ($_ =~ /gene_name\s\"(\w+)\"/){print "$1\n"}' | sort | uniq | wc -l
 
 ```
 
