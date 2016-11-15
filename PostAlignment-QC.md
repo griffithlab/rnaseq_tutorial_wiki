@@ -80,6 +80,7 @@ Note: You should now see the bam, index, and RefSeq bed files listed.  The bam f
 
 Run RSeQC commands:
 
+```
 	bam_stat.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam
 	clipping_profile.py -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial -s "PE"
 	geneBody_coverage.py -r hg19_UCSC_knownGene.bed -i Pairend_nonStrandSpecific_36mer_Human_hg19.bam -o tutorial
