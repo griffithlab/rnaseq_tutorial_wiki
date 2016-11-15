@@ -118,7 +118,14 @@ cut -f 2 $RNA_HOME/de/htseq_counts/DE_genes.txt | sort > htseq_counts_edgeR_DE_g
 Visualize overlap with a venn diagram. This can be done with simple web tools like:
 * http://www.cmbi.ru.nl/cdd/biovenn/
 * http://bioinfogp.cnb.csic.es/tools/venny/
-	
+
+To get the two gene lists you could use `cat` to print out each list in your terminal and then copy/paste.
+
+Alternatively you could view both lists in a web browser as you have done with other files. These two files should be here:
+
+http://YOUR_IP_ADDRESS/workspace/rnaseq/de/ballgown_DE_gene_symbols.txt
+http://YOUR_IP_ADDRESS/workspace/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
+
 	
 | [[Previous Section|Differential-Expression]]        | [[This Section|DE-Visualization]]     | [[Next Section|Reference-Guided-Transcript-Assembly]] |
 |:---------------------------------------------------:|:------------------------------------:|:-------------------------------------------------------------------:|
