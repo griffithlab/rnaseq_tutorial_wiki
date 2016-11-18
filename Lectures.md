@@ -15,7 +15,7 @@
 * [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cshl/2016/RNASeq_Module3_Tutorial.pdf]]
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cshl/2016/RNASeq_Module4_Lecture.pdf]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2016/RNASeq_Module4_Tutorial.pdf]]
-
+* [[Introduction to Genome Analysis Platforms (lecture)|LectureFiles/cshl/2016/GenomeAnalysisPlatforms.pdf]]
 
 ### CBW Informatics for RNA-seq analysis (June 16-17, 2016)
 
