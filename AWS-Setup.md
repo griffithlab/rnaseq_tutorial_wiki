@@ -168,7 +168,7 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 * cshl_seqtec_rnaseq_2014_v2 - ami-7ff4bf4f (US West - Oregon)
 * cshl_seqtec_rnaseq_2014_v2 - ami-eeae3b86 (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ami-9df1e7d8 (US West - N. California)
-* cshl_seqtec_2016_v5 - ami-20238140 (US West - Oregon)
+* cshl_seqtec_2016_v7 - ami-1fa8067f (US West - Oregon)
 
 ###Create IAM account
 
