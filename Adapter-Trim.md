@@ -7,8 +7,8 @@
 Use Flexbar to trim sequence adapter from the read FASTQ files.  The output of this step will be trimmed FASTQ files for each data set.
 
 Refer to the Flexbar project and manual for a more detailed explanation:
-* http://sourceforge.net/projects/flexbar/
-* http://sourceforge.net/p/flexbar/wiki/Manual/
+* https://github.com/seqan/flexbar
+* https://github.com/seqan/flexbar/wiki
 
 Flexbar basic usage:
 ```bash
