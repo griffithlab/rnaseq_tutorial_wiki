@@ -135,15 +135,13 @@ export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.5_linux64:$LD_LIBRARY_PATH
 ##[Regtools](https://github.com/griffithlab/regtools#regtools)
 
 ```bash
-
-    git clone https://github.com/griffithlab/regtools
-    cd regtools/
-    mkdir build
-    cd build/
-    cmake ..
-    make
-    ./regtools
-    
+git clone https://github.com/griffithlab/regtools
+cd regtools/
+mkdir build
+cd build/
+cmake ..
+make
+./regtools
 ```
 
 ##[R](http://www.r-project.org/)
