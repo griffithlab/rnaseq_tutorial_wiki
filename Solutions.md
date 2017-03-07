@@ -8,7 +8,7 @@ To install bedtools:
  * software page: https://github.com/arq5x/bedtools2
  * documentation page: http://bedtools.readthedocs.org/en/latest/
  * Note: If you find the old bedtools page (https://code.google.com/p/bedtools/) it will point you to above
-* Go to Releases, find the latest version (e.g., bedtools-2.25.0.tar.gz), right-click and save url
+* Go to Releases, find the latest version (e.g., bedtools-2.26.0.tar.gz), right-click and save url
 * Go to tools directory and download the archive, then unpack, and compile
 ```
 cd $RNA_HOME/tools/
