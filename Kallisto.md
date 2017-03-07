@@ -29,7 +29,7 @@ kallisto
 ##Obtain transcript sequences in fasta format
 Note that we already have fasta sequences for the reference genome sequence from earlier in the RNA-seq tutorial. However, Kallisto works directly on target *cDNA/transcript* sequences. Remember also that we have transcript models for genes on chromosome 22. These transcript models were downloaded from Ensembl in GTF format. This GTF contains a description of the coordinates of exons that make up each transcript but it does not contain the transcript sequences themselves. So currently we do not have transcript sequences needed by Kallisto. There are many places we could obtain these transcript sequences. For example, we could download them directly in Fasta format from the <a href="http://www.ensembl.org/info/data/ftp/index.html">Ensembl FTP site</a>.
 
-To allow us to compare Kallisto results to expression results from Cufflinks, we will create a custom Fasta file that corresponds to the transcripts we used for the Cufflinks analysis. How can we obtain these transcript sequences in Fasta format?
+To allow us to compare Kallisto results to expression results from StringTie, we will create a custom Fasta file that corresponds to the transcripts we used for the StringTie analysis. How can we obtain these transcript sequences in Fasta format?
 
 We could download the complete fasta transcript database for human and pull out only those for genes on chromosome 22. Or we could use a tool from `tophat` called `gtf_to_fasta` to generate a fasta sequence from our GTF file. This approach is convenient because it will also include the sequences for the ERCC spike in controls, allowing us to generate Kallisto abundance estimates for those features as well.
 
@@ -74,7 +74,7 @@ kallisto index --index=chr22_ERCC92_transcripts_kallisto_index chr22_ERCC92_tran
 ```
 
 ##Generate abundance estimates for all samples using Kallisto
-As we did with `Cufflinks` and `HT-Seq` we will generate transcript abundances for each of our demonstration samples using `Kallisto`.
+As we did with `StringTie` and `HT-Seq` we will generate transcript abundances for each of our demonstration samples using `Kallisto`.
 
 ```bash
 
@@ -107,10 +107,10 @@ rm -f header.tsv
 
 ```
 
-##Compare transcript abundance estimates from Kallisto to isoform abundance estimates from Cufflinks
-How similar are the results we obtained from Kallisto to those from Cufflinks? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
+##Compare transcript abundance estimates from Kallisto to isoform abundance estimates from StringTie
+How similar are the results we obtained from Kallisto to those from StringTie? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
 
-To do this comparison, we need to gather the expression estimates for each of our replicates from both approaches. The Kallisto results were neatly organized into a single file above. Next we need to obtain the transcript expression results from cufflinks (e.g. `$RNA_HOME/expression/tophat_cufflinks/ref_only/HBR_Rep1_ERCC-Mix2/isoforms.fpkm_tracking)`. 
+To do this comparison, we need to gather the expression estimates for each of our replicates from both approaches. The Kallisto results were neatly organized into a single file above. Next we need to obtain the transcript expression results from StringTie (e.g. `$RNA_HOME/expression/stringtie/ref_only/HBR_Rep1_ERCC-Mix2/XXXXXXX)`. 
 
 ```bash
 
