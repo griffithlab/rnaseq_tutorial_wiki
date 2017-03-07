@@ -190,12 +190,11 @@ For this tutorial we require:
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
-```R
-
-source("http://bioconductor.org/biocLite.R")
-biocLite(c("genefilter","ballgown","edgeR"))
-quit(save="no")
-
+```
+#R
+#source("http://bioconductor.org/biocLite.R")
+#biocLite(c("genefilter","ballgown","edgeR"))
+#quit(save="no")
 ```
 
 
