@@ -107,8 +107,8 @@ rm -f header.tsv
 
 ```
 
-##Compare transcript abundance estimates from Kallisto to isoform abundance estimates from Cufflinks
-How similar are the results we obtained from Kallisto to those from Cufflinks? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
+##Compare transcript abundance estimates from Kallisto to isoform abundance estimates from StringTie
+How similar are the results we obtained from Kallisto to those from StringTie? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
 
 To do this comparison, we need to gather the expression estimates for each of our replicates from both approaches. The Kallisto results were neatly organized into a single file above. Next we need to obtain the transcript expression results from cufflinks (e.g. `$RNA_HOME/expression/tophat_cufflinks/ref_only/HBR_Rep1_ERCC-Mix2/isoforms.fpkm_tracking)`. 
 
