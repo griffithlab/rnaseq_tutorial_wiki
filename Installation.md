@@ -175,11 +175,10 @@ For this tutorial we require:
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
-```R
-
-install.packages(c("devtools","dplyr","gplots","ggplot2"),repos="http://cran.us.r-project.org")
-quit(save="no")
-
+```
+#R
+#install.packages(c("devtools","dplyr","gplots","ggplot2"),repos="http://cran.us.r-project.org")
+#quit(save="no")
 ```
 
 ##[Bioconductor](http://www.bioconductor.org/)
