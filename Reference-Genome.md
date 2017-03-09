@@ -21,7 +21,7 @@ This has been done for you and that data placed on your AWS instance. It contain
 ```bash
 
 cd $RNA_REFS_DIR
-cp /home/ubuntu/workspace/data/fasta/GRCh38/chr22_with_ERCC92.fa .
+cp $RNA_EXT_DATA_DIR/fasta/GRCh38/chr22_with_ERCC92.fa .
 ls 
 
 ```
