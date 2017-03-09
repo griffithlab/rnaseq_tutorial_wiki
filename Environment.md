@@ -27,6 +27,7 @@ You can place the RNA_HOME variable in your .bashrc and then logout and login ag
 Additional environment variables used throughout this tutorial:
 
 ```bash
+export RNA_EXT_DATA_DIR=/home/ubuntu/CourseData/RNA_data
 
 export RNA_DATA_DIR=$RNA_HOME/data
 export RNA_DATA_TRIM_DIR=$RNA_DATA_DIR/trimmed
