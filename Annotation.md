@@ -11,7 +11,7 @@ Copy the gene annotation files to the working directory.
 
 echo $RNA_REFS_DIR
 cd $RNA_REFS_DIR
-cp /home/ubuntu/workspace/data/annotations/GRCh38/chr22_with_ERCC92.gtf .  
+cp $RNA_EXT_DATA_DIR/annotations/GRCh38/chr22_with_ERCC92.gtf .  
 
 ```
 
