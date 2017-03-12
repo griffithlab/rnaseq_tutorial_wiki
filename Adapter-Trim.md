@@ -51,7 +51,7 @@ Download necessary Illumina adaptor sequence files.
 echo $RNA_REFS_DIR
 mkdir -p $RNA_REFS_DIR
 cd $RNA_REFS_DIR
-cp /home/ubuntu/workspace/data/rnaseq-tutorial/illumina_multiplex.fa .
+cp $RNA_EXT_DATA_DIR/rnaseq-tutorial/illumina_multiplex.fa .
 
 ```
 
