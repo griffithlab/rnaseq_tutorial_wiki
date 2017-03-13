@@ -7,8 +7,8 @@ Before we can view our alignments in the IGV browser we need to index our BAM fi
 
 echo $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR
-samtools index $RNA_HOME/alignments/hisat2/HBR.bam
-samtools index $RNA_HOME/alignments/hisat2/UHR.bam
+samtools index HBR.bam
+samtools index UHR.bam
 
 ```
 
