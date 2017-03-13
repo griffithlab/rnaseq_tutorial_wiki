@@ -103,7 +103,7 @@ ls -l *.bam
 
 ##PRACTICAL EXERCISE 5
 
-Assignment: Perform some alignments on an additional pair of read data sets. Align the reads using the skills you learned above. Try using the HISAT2 aligner. 
+Assignment: Perform some alignments on additional read data sets. Align the reads using the skills you learned above. Try using the HISAT2 aligner. Also practice converting SAM to BAM files, and merging BAM files. 
 
 * Hint: Do this analysis on the additional data and in the separate working directory called ‘practice’ that you created in [Practical Exercise 2](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data#practical-exercise-2).
 
