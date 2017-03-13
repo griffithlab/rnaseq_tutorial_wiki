@@ -31,12 +31,12 @@ ssh -Y -i CSHL.pem ubuntu@[your ip address]
 * To copy files from an instance, use scp in a similar fashion (in this case to copy a file called nice_alignments.bam):
 
 ```
-scp -i CSHL.pem ubuntu@[your ip address]:nice_alignments.bam .
+scp -i CSHL.pem ubuntu@[your dns name]:nice_alignments.bam .
 ```
 
 * Everything created in your workspace on the cloud is also available by a web server on your cloud instance.  Simply go to the following in your browser:
 
-http://[your ip address]/ or http://[your public dns name]
+http://[your ip address]/ or http://[your dns name]
 
 ##File system layout
 
@@ -49,7 +49,7 @@ When you log in, you will notice that you have two directories: "tools" and "wor
 If you would like to upload your data to the AWS instance, use the example scp command below.  Be sure to replace the variables below with the local path to your data, __MY_DATA__, and the amazon instance IP, __YOUR_IP_ADDRESS__.
 
 ```
-scp -i CSHL.pem __MY_DATA__ ubuntu@__YOUR_IP_ADDRESS__:/workspace/
+scp -i CSHL.pem __MY_DATA__ ubuntu@__YOUR_DNS_NAME__:/workspace/
 ```
 
 
