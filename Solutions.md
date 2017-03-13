@@ -77,6 +77,8 @@ fastqc *.fastq.gz
 
 ###Practical Exercise 5 - Alignment
 
+Perform alignments:
+
 ```
 export RNA_HOME=~/workspace/rnaseq
 export RNA_PRACTICE_DATA_DIR=$RNA_HOME/practice/data
@@ -95,6 +97,26 @@ hisat2 -p 8 --rg-id=HCC1395_tumor_rep3 --rg SM:HCC1395_tumor_rep3 --rg PL:ILLUMI
 
 ```
 
+Sort and convert SAM to BAM:
+```bash
+
+samtools sort -@ 8 -o HCC1395_normal_rep1.bam HCC1395_normal_rep1.sam
+samtools sort -@ 8 -o HCC1395_normal_rep2.bam HCC1395_normal_rep2.sam 
+samtools sort -@ 8 -o HCC1395_normal_rep3.bam HCC1395_normal_rep3.sam
+samtools sort -@ 8 -o HCC1395_tumor_rep1.bam HCC1395_tumor_rep1.sam
+samtools sort -@ 8 -o HCC1395_tumor_rep2.bam HCC1395_tumor_rep2.sam
+samtools sort -@ 8 -o HCC1395_tumor_rep3.bam HCC1395_tumor_rep3.sam
+
+```
+
+Merge HISAT2 BAM files
+
+```bash
+
+java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_normal.bam INPUT=HCC1395_normal_rep1.bam INPUT=HCC1395_normal_rep2.bam INPUT=HCC1395_normal_rep3.bam
+java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.bam INPUT=HCC1395_tumor_rep1.bam INPUT=HCC1395_tumor_rep2.bam INPUT=HCC1395_tumor_rep3.bam
+
+```
 
 | [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Integrated-Assignment]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
