@@ -118,6 +118,27 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 
 ```
 
+###Practical Exercise 6 - Visualize
+
+```
+cd $RNA_HOME/practice/alignments/hisat2
+samtools index HCC1395_normal.bam
+samtools index HCC1395_tumor.bam
+
+```
+
+Start IGV on your laptop. Load the HCC1395_normal.bam & HCC1395_tumor.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. 
+
+**HCC1395BL (normal) alignment**: 
+
+http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_normal.bam
+
+**HCC1395 tumor alignment**:
+
+http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
+
+
+
 | [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Integrated-Assignment]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
 | [[Lectures|Lectures]]         | [[Practical Exercise Solutions|Solutions]] |  [[Integrated Assignment|Integrated-Assignment]] |
