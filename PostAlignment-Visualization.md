@@ -1,28 +1,14 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 #2-iii. Alignment Visualization
-Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose.
+Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. First, let's just index the merged/combined bam files.
 
 ```bash
 
 echo $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR
-
-```
-
-First lets display the samtools index commands to be run (i.e. 'echo' the command that will be executed by unix find). You could copy and paste these commands to run them, or repeat the find command without the 'echo' as below
-
-```bash
-
-find $RNA_ALIGN_DIR/*.bam -exec echo samtools index {} \;
-
-```
-
-Now run the index commands
-
-```bash
-
-find $RNA_ALIGN_DIR/*.bam -exec samtools index {} \;
+samtools index $RNA_HOME/alignments/hisat2/HBR.bam
+samtools index $RNA_HOME/alignments/hisat2/UHR.bam
 
 ```
 
@@ -31,10 +17,10 @@ find $RNA_ALIGN_DIR/*.bam -exec samtools index {} \;
 Start IGV on your laptop. Load the UHR.bam & HBR.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace '##' with your own amazon instance number (e.g., "##")).
 
 **UHR hisat2 alignment**
-http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/UHR.bam
+http://__YOUR_DNS_NAME__/workspace/rnaseq/alignments/hisat2/UHR.bam
 
 **HBR hisat2 alignment**
-http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/HBR.bam
+http://__YOUR_DNS_NAME__/workspace/rnaseq/alignments/hisat2/HBR.bam
 
 Go to an example gene locus on chr22:
 - e.g. *EIF3L*, *NDUFA6*, and *RBX1* have nice coverage
