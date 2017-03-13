@@ -85,8 +85,8 @@ cd $RNA_HOME/practice/
 mkdir -p alignments/hisat2
 cd alignments/hisat2
 
-hisat2 -p 8 --rg-id=HCC1395_normal --rg SM:HCC1395_normal --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_2.fastq.gz -S ./HCC1395_normal.sam
-hisat2 -p 8 --rg-id=HCC1395_tumor --rg SM:HCC1395_tumor --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_2.fastq.gz -S ./HCC1395_tumor.sam
+hisat2 -p 8 --rg-id=HCC1395_normal_rep1 --rg SM:HCC1395_normal_rep1 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep1_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep1_r2.fastq.gz -S ./HCC1395_normal_rep1.sam
+hisat2 -p 8 --rg-id=HCC1395_tumor_rep1 --rg SM:HCC1395_tumor_rep1 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r2.fastq.gz -S ./HCC1395_tumor_rep1.sam
 
 ```
 
