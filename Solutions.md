@@ -25,7 +25,7 @@ make
 cd $RNA_HOME
 mkdir -p practice/data
 cd $RNA_HOME/practice/data
-wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
+wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 tar -xvf alignment_practical.tar
 ```
 
