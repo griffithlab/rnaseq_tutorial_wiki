@@ -26,7 +26,7 @@ cd $RNA_HOME
 mkdir -p practice/data
 cd $RNA_HOME/practice/data
 wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
-tar -xvf alignment_practical.tar
+tar -xvf practical.tar
 ```
 
 ###Practical Exercise 3 - QC
