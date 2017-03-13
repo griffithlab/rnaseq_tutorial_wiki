@@ -65,7 +65,7 @@ Assignment: Download an additional dataset and unpack it. This data will be used
 
 * Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc).
 * In this exercise you will download an archive of publicly available read data in FASTQ format from here:
-http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
+http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---data)
 
