@@ -1,4 +1,4 @@
-#0-iii. Syntax
+# 0-iii. Syntax
 
 In this tutorial, created using [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown), [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) are commands necessary to complete the tutorial. Some sections are marked as optional and can be skipped.
 
