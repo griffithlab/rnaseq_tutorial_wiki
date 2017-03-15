@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#2-iii. Alignment Visualization
+# 2-iii. Alignment Visualization
 Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. First, let's just index the merged/combined bam files.
 
 ```bash
@@ -12,7 +12,7 @@ samtools index UHR.bam
 
 ```
 
-##Visualize alignments
+## Visualize alignments
 
 Start IGV on your laptop. Load the UHR.bam & HBR.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'.
 
@@ -38,7 +38,7 @@ Try to find a variant position in the RNAseq data:
 - How should we interpret the allele frequency of each variant?  Remember that we have rather unusual samples here in that they are actually pooled RNAs corresponding to multiple individuals (genotypes).
 - Take note of the genomic position of your variant. We will need this later.
 
-##BAM Read Counting
+## BAM Read Counting
 
 Using one of the variant positions identified above, count the number of supporting reference and variant reads.
 First, use `samtools mpileup` to visualize a region of alignment with a variant.
@@ -115,7 +115,7 @@ cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", 
 
 ```
 
-##PRACTICAL EXERCISE 6
+## PRACTICAL EXERCISE 6
 
 Assignment: Index your bam files from [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5) and visualize in IGV. 
 
