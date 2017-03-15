@@ -2,7 +2,7 @@
 
 This page presents solutions to exercises/assignments from throughout the workshop
 
-###Practical Exercise 1 - Software installation
+### Practical Exercise 1 - Software installation
 To install bedtools:
 * Google "bedtools" and find 
  * software page: https://github.com/arq5x/bedtools2
@@ -19,7 +19,7 @@ make
 ./bin/bedtools
 ```
 
-###Practical Exercise 2 - Data
+### Practical Exercise 2 - Data
 
 ```
 cd $RNA_HOME
@@ -29,7 +29,7 @@ wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 tar -xvf practical.tar
 ```
 
-###Practical Exercise 3 - QC
+### Practical Exercise 3 - QC
 
 ```bash
 
@@ -49,7 +49,7 @@ Then, go to the following url in your browser:
 * What is the most common kmer that is observed? AACCATC
 
 
-###Practical Exercise 4 - Trim
+### Practical Exercise 4 - Trim
 
 ```
 cd $RNA_HOME/practice/data/
@@ -75,7 +75,7 @@ fastqc *.fastq.gz
 * http://YOUR_DNS_NAME/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
 * http://YOUR_DNS_NAME/rnaseq/practice/data/trimmed/hcc1395_normal_rep1_1_fastqc.html
 
-###Practical Exercise 5 - Alignment
+### Practical Exercise 5 - Alignment
 
 Perform alignments:
 
@@ -118,7 +118,7 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 
 ```
 
-###Practical Exercise 6 - Visualize
+### Practical Exercise 6 - Visualize
 
 ```
 cd $RNA_HOME/practice/alignments/hisat2
