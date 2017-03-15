@@ -1,4 +1,4 @@
-### Informatics for RNA-seq: A web resource for analysis on the cloud  
+# Informatics for RNA-seq: A web resource for analysis on the cloud  
 ===================
 
 Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents. A version of this tutorial was accompanied by a publication.  If you find the materials here or in that paper useful, please cite the following:
@@ -10,7 +10,7 @@ E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
 
 Note: An archived version of this tutorial exists <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki">here</a>. This version is maintained for consistency with the published materials (<a href="http://dx.doi.org/10.1371/journal.pcbi.1004393">Griffith et al. 2015. PLoS Comp Biol.</a>) and for past students wishing to review covered material. However, we strongly suggest that you continue with the current version of the tutorial below.
 
-# Table of Contents
+## Table of Contents
 <ol start="0">
   <li><strong>Module 0 - Introduction and Cloud Computing</strong></li>
   <ol start="i">
