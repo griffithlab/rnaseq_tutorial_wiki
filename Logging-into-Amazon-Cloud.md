@@ -10,7 +10,7 @@
 
 * On the cloud, we are going to use the default username: "ubuntu"
 
-##Logging in with ssh (Mac/Linux)
+## Logging in with ssh (Mac/Linux)
 
 * Make sure the permissions on your certificate are secure. Use chmod on your downloaded certificate:
 
