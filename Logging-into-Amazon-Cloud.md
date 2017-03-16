@@ -1,4 +1,4 @@
-#0-v. Logging into the Amazon cloud
+# 0-v. Logging into the Amazon cloud
 
 * Instructions for logging into the cloud (including instructions for Windows systems, if applicable) can be found on the Course Wiki page.
 
@@ -26,7 +26,7 @@ ssh -Y -i CSHL.pem ubuntu@[your ip address]
 
 `-i` selects a file from which the public key authentication is read.  `ubuntu` is the name of a user on the system you are logging into (a default user of the Ubuntu operating system). `[your ip address]` is the address of the linux system on Amazon that you are logging into. Instead of ip address you can also use a public dns name.   
 
-##Copying files to your computer
+## Copying files to your computer
 
 * To copy files from an instance, use scp in a similar fashion (in this case to copy a file called nice_alignments.bam):
 
@@ -38,14 +38,14 @@ scp -i CSHL.pem ubuntu@[your dns name]:nice_alignments.bam .
 
 http://[your ip address]/ or http://[your dns name]
 
-##File system layout
+## File system layout
 
 When you log in, you will notice that you have two directories: "tools" and "workspace".
 
 * The "tools" directory contains the tools that you will need to complete your lab assignments. Actually you are going to learn to install your own copies of all these tools but these are in place as a backup.
 * The "workspace" directory is where we will keep our temporary files and analysis results. 
 
-##Uploading your data to the AWS instance
+## Uploading your data to the AWS instance
 If you would like to upload your data to the AWS instance, use the example scp command below.  Be sure to replace the variables below with the local path to your data, __MY_DATA__, and the amazon instance IP, __YOUR_IP_ADDRESS__.
 
 ```
