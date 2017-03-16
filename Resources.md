@@ -1,4 +1,4 @@
-#0-vii. Resources
+# 0-vii. Resources
 
 #### 1. Recommended Reading and RNA-seq Resources
 - [Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/TranscriptLevelExpression_Pertea_2016.pdf)
