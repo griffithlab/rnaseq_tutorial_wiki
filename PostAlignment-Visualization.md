@@ -123,6 +123,7 @@ Assignment: Index your bam files from [Practical Exercise 5](https://github.com/
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-6---visualize)
 
+---
 
 | [[Previous Section|IGV-Tutorial]] | [[This Section|PostAlignment-Visualization]]  | [[Next Section|PostAlignment-QC]] |
 |:---------------------------------:|:---------------------------------------------:|:---------------------------------:|
