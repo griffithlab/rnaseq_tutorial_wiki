@@ -41,12 +41,12 @@ fastqc *.fastq.gz
 Then, go to the following url in your browser:
 * http://__YOUR_DNS_NAME__/rnaseq/practice/data/
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance DNS (e.g., ec2-54-187-159-113.us-west-2.compute.amazonaws.com))
-* Click on any of the *_fastqc.html files to view the FastQC report
+* Click on any of the *_fastqc.html files to view the FastQC report (e.g., hcc1395_normal_rep1_r1_fastqc.html)
 
-* How many total sequences are there? 455,217
-* What is the range (x - y) of read lengths observed? 25 - 100
-* What is the most common average sequence quality score? 38
-* What is the most common kmer that is observed? AACCATC
+* How many total sequences are there? 331,958
+* What is the range (x - y) of read lengths observed? 151
+* What is the most common average sequence quality score? 41
+* What is the most common kmer that is observed? GAATCGG
 
 
 ### Practical Exercise 4 - Trim
