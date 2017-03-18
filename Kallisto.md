@@ -1,11 +1,11 @@
-#5-i Kallisto
+# 5-i Kallisto
 
 
-##Using Kallisto for reference free transcript expression abundance estimation from RNA-seq data
+## Using Kallisto for reference free transcript expression abundance estimation from RNA-seq data
 
 For more information on Kallisto, refer to the <a href="https://pachterlab.github.io/kallisto/about.html">Kallisto project page</a> and <a href="https://pachterlab.github.io/kallisto/manual.html">Kallisto manual page</a>.
 
-##Install Kallisto
+## Install Kallisto
 **TODO: after development is complete, this can be moved to the installation section**
 
 ```bash
@@ -17,7 +17,7 @@ tar -zxvf kallisto_linux-v0.42.4.tar.gz
 
 ```
 
-##Add Kallisto to PATH environment variable
+## Add Kallisto to PATH environment variable
 
 ```bash
 
@@ -26,7 +26,7 @@ kallisto
 
 ```
 
-##Obtain transcript sequences in fasta format
+## Obtain transcript sequences in fasta format
 Note that we already have fasta sequences for the reference genome sequence from earlier in the RNA-seq tutorial. However, Kallisto works directly on target *cDNA/transcript* sequences. Remember also that we have transcript models for genes on chromosome 22. These transcript models were downloaded from Ensembl in GTF format. This GTF contains a description of the coordinates of exons that make up each transcript but it does not contain the transcript sequences themselves. So currently we do not have transcript sequences needed by Kallisto. There are many places we could obtain these transcript sequences. For example, we could download them directly in Fasta format from the <a href="http://www.ensembl.org/info/data/ftp/index.html">Ensembl FTP site</a>.
 
 To allow us to compare Kallisto results to expression results from StringTie, we will create a custom Fasta file that corresponds to the transcripts we used for the StringTie analysis. How can we obtain these transcript sequences in Fasta format?
@@ -61,7 +61,7 @@ cat chr22_ERCC92_transcripts.clean.fa | grep ">" | perl -ne '$_ =~ s/\>//; print
 
 ```
 
-##Build a Kallisto transcriptome index
+## Build a Kallisto transcriptome index
 Remember that Kallisto does not perform *alignment* or use a reference genome sequence. Instead it performs *pseudoalignment* to determine the *compatibility* of reads with targets (transcript sequences in this case). However, similar to alignment algorithms like Tophat or STAR, Kallisto requires an **index** to assess this compatibility efficiently and quickly.
 
 ```bash
@@ -73,7 +73,7 @@ kallisto index --index=chr22_ERCC92_transcripts_kallisto_index chr22_ERCC92_tran
 
 ```
 
-##Generate abundance estimates for all samples using Kallisto
+## Generate abundance estimates for all samples using Kallisto
 As we did with `StringTie` and `HT-Seq` we will generate transcript abundances for each of our demonstration samples using `Kallisto`.
 
 ```bash
@@ -107,7 +107,7 @@ rm -f header.tsv
 
 ```
 
-##Compare transcript abundance estimates from Kallisto to isoform abundance estimates from StringTie
+## Compare transcript abundance estimates from Kallisto to isoform abundance estimates from StringTie
 How similar are the results we obtained from Kallisto to those from StringTie? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
 
 To do this comparison, we need to gather the expression estimates for each of our replicates from both approaches. The Kallisto results were neatly organized into a single file above. Next we need to obtain the transcript expression results from StringTie (e.g. `$RNA_HOME/expression/stringtie/ref_only/HBR_Rep1_ERCC-Mix2/XXXXXXX)`. 
@@ -118,7 +118,7 @@ Work in progress...
 
 ```
 
-##Create a custom transcriptome database to examine a specific set of genes
+## Create a custom transcriptome database to examine a specific set of genes
 For example, suppose we just want to quickly assess the presence of ribosomal RNA genes only. We can obtain these genes from an Ensembl GTF file. In the example below we will use our chromosome 22 GTF file for demonstration purposes. But in a 'real world' experiment you would you a GTF for all chromosomes. Once we have found GTF records for ribosomal RNA genes, we will create a fasta file that contains the sequences for these transcripts, and then index this sequence database for use with Kallisto.
 
 ```bash
@@ -136,7 +136,7 @@ kallisto index --index=chr22_rRNA_transcripts_kallisto_index chr22_rRNA_transcri
 
 We can now use this index with Kallisto to assess the abundance of rRNA genes in a set of samples.
 
-##Exercise: Do a performance test using a real large dataset
+## Exercise: Do a performance test using a real large dataset
 Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 'normal' cell line here:
 
 Tumor (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam">download</a>)<br>
