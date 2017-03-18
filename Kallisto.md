@@ -107,8 +107,8 @@ gtf_to_fasta genes_chr22_ERCC92_rRNA.gtf $RNA_REF_FASTA chr22_rRNA_transcripts.f
 cat chr22_rRNA_transcripts.fa | perl -ne 'if ($_ =~/^\>\d+\s+\w+\s+(ERCC\S+)[\+\-]/){print ">$1\n"}elsif($_ =~ /\d+\s+(ENST\d+)/){print ">$1\n"}else{print $_}' > chr22_rRNA_transcripts.clean.fa
 cat chr22_rRNA_transcripts.clean.fa
 
-cd $RNA_HOME/refs
-kallisto index --index=chr22_rRNA_transcripts_kallisto_index chr22_rRNA_transcripts.clean.fa
+cd $RNA_HOME/refs/kallisto
+kallisto index --index=chr22_rRNA_transcripts_kallisto_index ../chr22_rRNA_transcripts.clean.fa
 
 ```
 
