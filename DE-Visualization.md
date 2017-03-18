@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
-#3-iii. Ballgown DE Visualization
+# 3-iii. Ballgown DE Visualization
  
 Navigate to the correct directory and then launch R:
 
@@ -15,7 +15,7 @@ A separate R tutorial file has been provided in the github repo for part 2 of th
 
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part2_ballgown_output.pdf
 	
-##SUPPLEMENTARY R ANALYSIS 
+## SUPPLEMENTARY R ANALYSIS 
 
 Occasionally you may wish to reformat and work with stringtie output in R manually. Therefore we provide an optional/advanced tutorial on how to format your results for R and perform "old school" (non-ballgown analysis) on your data.
 
@@ -43,7 +43,7 @@ A separate R file has been provided in the github repo for part 3 of the tutoria
 The output file can be viewed in your browser at the following url. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 
-##ERCC DE Analysis
+## ERCC DE Analysis
 
 This section will demonstrate the DE between the ERCC spike-in:
 
@@ -59,7 +59,7 @@ chmod +x Tutorial_Module4_ERCC_DE.R
 View the results here:
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
-##edgeR Analysis		
+## edgeR Analysis		
 
 In this tutorial you will:
 
