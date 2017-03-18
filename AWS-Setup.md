@@ -1,10 +1,10 @@
-#6-vi. Amazon AWS/AMI setup for use in workshop
+# 6-vi. Amazon AWS/AMI setup for use in workshop
 
 This tutorial explains how Amazon cloud instances were configured for the course.  This exercise is not to be completed by the students but is provided as a reference for future course developers that wish to conduct their hands on exercises on Amazon AWS.
 
 Before proceeding with below, first check to see if there are any [[Proposed Improvements|Proposed-Improvements]] to incorporate. 
 
-###Create AWS account
+### Create AWS account
 
 A helpful tutorial can be found here:
 https://github.com/genome/gms/wiki/Developers-guide-to-installing-the-GMS-on-an-AWS-instance
@@ -17,7 +17,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 5. Sign into AWS Management Console: http://aws.amazon.com/console/
 6. Go to EC2 services
 
-###Start with existing community AMI
+### Start with existing community AMI
 
 1. Select Launch instance. Search Community AMIs for and select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-5189a661". Choose an instance type of "m4.2xlarge". Increase root volume (e.g., 32GB) and add a second volume (e.g., 500gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
 2. Change permissions on downloaded key pair with `chmod 400 [instructor-key].pem`
@@ -25,7 +25,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 `ssh -i [instructor-key].pem ubuntu@[public.ip.address]`
 
-###Perform basic linux configuration 
+### Perform basic linux configuration 
 
 * To allow installation of bioinformatics tools some basic dependencies must be installed first.
 ```
@@ -35,14 +35,14 @@ sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git
 
 * logout and log back in
 
-###Set up additional storage for workspace
+### Set up additional storage for workspace
 We may need to run a setup script to mount a workspace folder on ephemeral (or EBS) storage. This can not really be done ahead of time in the saved AMI. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/preinstall.sh. This script has been provided in the home directory of the AMI. It just needs to be run at first launch of the student instance. Copy/download the preinstall.sh script to the ubuntu home directory and create the necessary dirs and links as below. But, do not run `bash preinstall.sh` until later when actually spinning up student/instructor instance. NOTE: This may or may not be necessary depending on how you set up volumes and type of instance you choose. For example, if you setup an extra EBS volume (instead of relying on ephemeral storage) and mount this drive (for storing working data) and you create the appropriate fstab entries then create an AMI, new instances may just be ready to go. See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/setup_mounts.sh
 ```
 mkdir /workspace
 cd ~
 ln -s /workspace workspace
 ```
-###Install any desired informatics tools
+### Install any desired informatics tools
 * See https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation for RNA-seq software
 * Note: R in particular is a slow install. 
 * All tools can be installed locally (e.g., /home/ubuntu/bin/) in a different location from where students will install tools in their exercises.
@@ -124,7 +124,7 @@ wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/H
 tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
 ```
 
-###Set up Apache web server
+### Set up Apache web server
 We will start an apache2 service and serve the contents of the students home directories for convenience. This allows easy download of files to their local hard drives, direct loading in IGV by url, etc. Note that when launching instances a security group will have to be selected/modified that allows http access via port 80.
 
 * Edit config to allow files to be served from outside /usr/share and /var/www
@@ -156,25 +156,25 @@ DocumentRoot /home/ubuntu
 sudo service apache2 restart
 ```
 
-###Save a snapshot of workspace volume
+### Save a snapshot of workspace volume
 To create a snapshot of the extra workspace volume, navigate to volumes, right-click, and choose Create Snapshot. Take note of the snapshot id for reference later (e.g., snap-154dc64c)
 
-###Save a public AMI
+### Save a public AMI
 
 Finally, save the instance as a new AMI by right clicking the instance and clicking on "Create Image". Enter an appropriate name and description and then save. If desired you may choose at this time to include the workspace snapshot in the AMI to avoid having to explicitly attach it later at launching of AMI instances. Change the permissions of the AMI to "public" if you would like it to be listed under the Community AMIs. Copy the AMI to any additional regions where you would like it to appear in Community AMI searches.
 
-###Current Public AMIs:
+### Current Public AMIs:
 
 * cshl_seqtec_rnaseq_2014_v2 - ami-7ff4bf4f (US West - Oregon)
 * cshl_seqtec_rnaseq_2014_v2 - ami-eeae3b86 (US East - N. Virginia)
 * cshl_seqtec_rnaseq_2014_v2 - ami-9df1e7d8 (US West - N. California)
 * cshl_seqtec_2016_v7 - ami-1fa8067f (US West - Oregon)
 
-###Create IAM account
+### Create IAM account
 
 From AWS Console select Services -> IAM. Go to Users, Create User, specify a user name, and Create. Download credentials to a safe location for later reference if needed. Select the new user and go to Security Credentials -> Manage Password -> 'Assign a Custom Password'. Go to Groups -> Create a New Group, specify a group name and Next. Attach a policy to the group. In this case we give all EC2 privileges but no other AWS privileges by specifying "AmazonEC2FullAccess". Hit Next, review and then Create Group. Select the Group -> Add Users to Group, select your new user to add it to the new group.
 
-###Launch student instance
+### Launch student instance
 1. Go to AWS console. Login. Select EC2.
 2. Launch Instance, search for "cshl_seqtec_2016_v5" in Community AMIs and Select.
 3. Choose "m4.2xlarge" instance type.
@@ -188,18 +188,18 @@ From AWS Console select Services -> IAM. Go to Users, Create User, specify a use
 11. Login to node `ssh -i CSHL.pem ubuntu@[public.ip.address]`.
 12. Optional - set up DNS redirects (see below)
 
-###Set up a dynamic DNS service
+### Set up a dynamic DNS service
 
 Rather than handing out ip addresses for each student instance to each student you can instead set up DNS records to redirect from a more human readable name to the IP address. After spinning up all student instances, use a service like http://dyn.com (or http://entrydns.net, http://dyn.com/, etc.) to create hostnames like rna01.dyndns.org, rna02.dyndns.org, etc that point to each public IP address of student instances.
 
-###Host necessary files for the course
+### Host necessary files for the course
 
 Currently, all miscellaneous data files, annotations, etc. are hosted on an ftp server at the Genome Institute. In the future more data files could be pre-loaded onto the EBS snapshot. 
 
 * Files copied to: /gscmnt/sata102/info/ftp-staging/pub/rnaseq/
 * Appear here: http://genome.wustl.edu/pub/rnaseq/
 
-###After course reminders
+### After course reminders
 * Delete the student IAM account created above otherwise students will continue to have EC2 privileges. 
 * Terminate all instances and clean up any unnecessary volumes, snapshots, etc. 
 
