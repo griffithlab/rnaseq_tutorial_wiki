@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#2-i. Adapter Trim
+# 2-i. Adapter Trim
 
 **[OPTIONAL]**
 
@@ -33,7 +33,7 @@ Extra options specified below:
 * '--pre-trim-right' trim a fixed number of bases at right read end. For example, to trim 5 bases at the right side of reads: --pre-trim-right 5
 * '--pre-trim-phred' trim based on phred quality value to deal with higher error rates towards the end of reads. For example, to trim the 3' end until quality offset value 30 or higher is reached, specify: --pre-trim-phred 30
 
-##Flexbar trim
+## Flexbar trim
 
 First, set up some directories for output
 
@@ -85,7 +85,7 @@ The resulting html reports can be viewed by navigating to:
 * http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/trimmed/
 
 
-##PRACTICAL EXERCISE 4
+## PRACTICAL EXERCISE 4
 
 Assignment: Using the approach above, trim the reads for both normal and tumor samples that you downloaded for the previous practical exercise. Once you have trimmed the reads, compare a pre- and post- trimming FastQ file using the FastQC tool.
 
@@ -94,9 +94,6 @@ Assignment: Using the approach above, trim the reads for both normal and tumor s
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-4---trim)
 
 ---
-
-
-
 
 
 
