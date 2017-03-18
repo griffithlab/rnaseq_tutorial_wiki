@@ -102,8 +102,8 @@ For example, suppose we just want to quickly assess the presence of ribosomal RN
 ```bash
 
 cd $RNA_HOME/refs
-grep rRNA $REF_GTF > genes_chr22_ERCC92_rRNA.gtf 
-gtf_to_fasta genes_chr22_ERCC92_rRNA.gtf $REF_FASTA chr22_rRNA_transcripts.fa
+grep rRNA $RNA_REF_GTF > genes_chr22_ERCC92_rRNA.gtf 
+gtf_to_fasta genes_chr22_ERCC92_rRNA.gtf $RNA_REF_FASTA chr22_rRNA_transcripts.fa
 cat chr22_rRNA_transcripts.fa | perl -ne 'if ($_ =~/^\>\d+\s+\w+\s+(ERCC\S+)[\+\-]/){print ">$1\n"}elsif($_ =~ /\d+\s+(ENST\d+)/){print ">$1\n"}else{print $_}' > chr22_rRNA_transcripts.clean.fa
 cat chr22_rRNA_transcripts.clean.fa
 
