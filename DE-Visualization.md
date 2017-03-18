@@ -41,7 +41,7 @@ R
 A separate R file has been provided in the github repo for part 3 of the tutorial: [Tutorial_Module4_Part3_Supplementary_R.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part3_Supplementary_R.R). Run the R commands detailed in the R script above. 
 
 The output file can be viewed in your browser at the following url. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 
 ## ERCC DE Analysis
 
@@ -57,7 +57,7 @@ chmod +x Tutorial_Module4_ERCC_DE.R
 ```
 
 View the results here:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ## edgeR Analysis		
 
@@ -123,8 +123,8 @@ To get the two gene lists you could use `cat` to print out each list in your ter
 
 Alternatively you could view both lists in a web browser as you have done with other files. These two files should be here:
 
-http://YOUR_IP_ADDRESS/workspace/rnaseq/de/ballgown_DE_gene_symbols.txt
-http://YOUR_IP_ADDRESS/workspace/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
+http://YOUR_IP_ADDRESS/rnaseq/de/ballgown_DE_gene_symbols.txt
+http://YOUR_IP_ADDRESS/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
 
 	
 | [[Previous Section|Differential-Expression]]        | [[This Section|DE-Visualization]]     | [[Next Section|Reference-Guided-Transcript-Assembly]] |
