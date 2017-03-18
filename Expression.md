@@ -62,7 +62,7 @@ Press 'q' to exit the 'less' display
 
 **[OPTIONAL]**
 
-Run htseq-count on alignments instead to produce raw counts instead of FPK/TPMM values for differential expression analysis
+Run htseq-count on alignments instead to produce raw counts instead of FPKM/TPM values for differential expression analysis
 
 Refer to the HTSeq documentation for a more detailed explanation:
 * http://www-huber.embl.de/users/anders/HTSeq/doc/count.html
