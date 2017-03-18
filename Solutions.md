@@ -19,6 +19,8 @@ make
 ./bin/bedtools
 ```
 
+---
+
 ### Practical Exercise 2 - Data
 
 ```
@@ -28,6 +30,8 @@ cd $RNA_HOME/practice/data
 wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 tar -xvf practical.tar
 ```
+
+---
 
 ### Practical Exercise 3 - QC
 
@@ -48,6 +52,7 @@ Then, go to the following url in your browser:
 * What is the most common average sequence quality score? 41
 * What is the most common kmer that is observed? GAATCGG
 
+---
 
 ### Practical Exercise 4 - Trim
 
@@ -74,6 +79,8 @@ fastqc *.fastq.gz
 
 * http://YOUR_DNS_NAME/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
 * http://YOUR_DNS_NAME/rnaseq/practice/data/trimmed/hcc1395_normal_rep1_1_fastqc.html
+
+---
 
 ### Practical Exercise 5 - Alignment
 
@@ -118,6 +125,8 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 
 ```
 
+---
+
 ### Practical Exercise 6 - Visualize
 
 ```
@@ -137,7 +146,7 @@ http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_normal.bam
 
 http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
 
-
+---
 
 | [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Integrated-Assignment]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
