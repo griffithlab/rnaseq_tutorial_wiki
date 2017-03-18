@@ -49,7 +49,7 @@ What does the raw output from Stringtie look like?
 
 ```bash
 
-head UHR_Rep1/transcripts.gtf
+less UHR_Rep1/transcripts.gtf
 
 awk '{if ($3=="transcript") print}' UHR_Rep1/transcripts.gtf | cut -f 1,4,9 | less
 
