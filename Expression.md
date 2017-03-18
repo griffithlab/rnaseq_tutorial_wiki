@@ -57,7 +57,7 @@ awk '{if ($3=="transcript") print}' UHR_Rep1/transcripts.gtf | cut -f 1,4,9 | le
 
 Press 'q' to exit the 'less' display
 
-## PRACTICAL EXERCISE 7 - Expression
+## PRACTICAL EXERCISE 7
 
 Assignment: Calculate expression for your alignments (bam files) from [Practical Exercise 6](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-6). 
 
