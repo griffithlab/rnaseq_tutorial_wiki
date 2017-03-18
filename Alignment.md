@@ -1,8 +1,8 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#2-ii. Alignment
+# 2-ii. Alignment
 
-###HISAT2 alignment
+### HISAT2 alignment
 
 Perform alignments with HISAT2 to the genome and transcriptome.
 
@@ -61,11 +61,11 @@ hisat2 -p 8 --rg-id=HBR_Rep3 --rg SM:HBR --rg LB:HBR_Rep3_ERCC-Mix2 --rg PL:ILLU
 Note: in the above alignments, we are treating each library as an independent data set.  If you had multiple lanes of data for a single library, you could align them all together in one HISAT2 command. Similarly you might combine technical replicates into a single alignment run (perhaps after examining them and removing outliers...). To combine multiple lanes, you would provide all the read1 files as a comma separated list for the '-1' input argument, and then all read2 files as a comma separated list for the '-2' input argument, (where both lists have the same order) :
 You can also use samtools merge to combine bam files after alignment. This is the approach we will take.
 
-###HISAT2 Alignment Summary
+### HISAT2 Alignment Summary
 
 HISAT2 generates a summary of the alignments printed to the terminal. Notice the number of total reads, reads aligned and various metrics regarding how the reads aligned to the reference.
 
-###SAM to BAM Conversion
+### SAM to BAM Conversion
 
 Convert HISAT2 sam files to bam files and sort by aligned position
 
@@ -80,7 +80,7 @@ samtools sort -@ 8 -o HBR_Rep3.bam HBR_Rep3.sam
 
 ```
 
-###Merge HISAT2 BAM files
+### Merge HISAT2 BAM files
 
 Make one glorious BAM combining all UHR data and another for all HBR data. Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information. NOTE: sambamba also retains header info.
 
@@ -101,7 +101,7 @@ ls -l *.bam
 
 ```
 
-##PRACTICAL EXERCISE 5
+## PRACTICAL EXERCISE 5
 
 Assignment: Perform some alignments on additional read data sets. Align the reads using the skills you learned above. Try using the HISAT2 aligner. Also practice converting SAM to BAM files, and merging BAM files. 
 
