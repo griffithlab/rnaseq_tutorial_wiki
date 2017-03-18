@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart2.png)
 
-#1-vi. Pre-Alignment QC
+# 1-vi. Pre-Alignment QC
 
 You can use FastQC to get a sense of your data quality before alignment:
 * http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
@@ -23,7 +23,7 @@ Then, go to the following url in your browser:
 * Click on any of the *_fastqc.html files to view the FastQC report
 
 ---
-##PRACTICAL EXERCISE 3
+## PRACTICAL EXERCISE 3
 
 Assignment: Run FASTQC on one of the additional fastq files you downloaded in the previous practical exercise. 
 
@@ -40,7 +40,6 @@ Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---qc)
 
 ---
-
 
 
 | [[Previous Section|RNAseq-Data]] | [[This Section|PreAlignment-QC]]    | [[Next Section|Adapter-Trim]] |
