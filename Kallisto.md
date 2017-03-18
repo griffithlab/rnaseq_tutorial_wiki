@@ -5,27 +5,6 @@
 
 For more information on Kallisto, refer to the <a href="https://pachterlab.github.io/kallisto/about.html">Kallisto project page</a> and <a href="https://pachterlab.github.io/kallisto/manual.html">Kallisto manual page</a>.
 
-## Install Kallisto
-**TODO: after development is complete, this can be moved to the installation section**
-
-```bash
-
-cd $RNA_HOME/
-cd tools/
-wget https://github.com/pachterlab/kallisto/releases/download/v0.42.4/kallisto_linux-v0.42.4.tar.gz
-tar -zxvf kallisto_linux-v0.42.4.tar.gz
-
-```
-
-## Add Kallisto to PATH environment variable
-
-```bash
-
-export PATH=/home/ubuntu/workspace/rnaseq/tools/kallisto_linux-v0.42.4/:$PATH
-kallisto
-
-```
-
 ## Obtain transcript sequences in fasta format
 Note that we already have fasta sequences for the reference genome sequence from earlier in the RNA-seq tutorial. However, Kallisto works directly on target *cDNA/transcript* sequences. Remember also that we have transcript models for genes on chromosome 22. These transcript models were downloaded from Ensembl in GTF format. This GTF contains a description of the coordinates of exons that make up each transcript but it does not contain the transcript sequences themselves. So currently we do not have transcript sequences needed by Kallisto. There are many places we could obtain these transcript sequences. For example, we could download them directly in Fasta format from the <a href="http://www.ensembl.org/info/data/ftp/index.html">Ensembl FTP site</a>.
 
