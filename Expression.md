@@ -59,7 +59,9 @@ Press 'q' to exit the 'less' display
 
 ## PRACTICAL EXERCISE 7
 
-Assignment: Calculate expression for your alignments (bam files) from [Practical Exercise 6](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-6). 
+Assignment: Use StringTie to Calculate transcript-level expression estimates for the alignments (bam files) you created in [Practical Exercise 6](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-6). 
+
+* Hint: You should have six commands for 3 replicates each of tumor and normal samples.
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-7---expression)
 
