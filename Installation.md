@@ -95,6 +95,17 @@ chmod +x scripts/htseq-count
 
 ```
 
+## [kallisto](https://pachterlab.github.io/kallisto/)
+
+```bash
+
+cd $RNA_HOME/
+cd tools/
+wget https://github.com/pachterlab/kallisto/releases/download/v0.43.0/kallisto_linux-v0.43.0.tar.gz
+tar -zxvf kallisto_linux-v0.43.0.tar.gz
+
+```
+
 ## [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 In addition to installing on the cloud you should also install FastQC on your own laptop/desktop
 
