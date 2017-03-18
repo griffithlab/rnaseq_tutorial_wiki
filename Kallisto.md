@@ -57,7 +57,6 @@ As we did with `StringTie` and `HT-Seq` we will generate transcript abundances f
 
 ```bash
 
-export RNA_DATA_DIR=$RNA_HOME/data/
 echo $RNA_DATA_DIR
 
 cd $RNA_HOME/expression/
