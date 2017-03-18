@@ -8,9 +8,9 @@ To use de novo mode do **NOT** specify either of the '-G' OR '-e' options.
 
 Extra options specified below
 
-*'-p 8' tells Stringtie to use eight CPUs
-*'-l' name prefix for output transcripts (default: STRG)
-*'-o' output path/file name for the assembled transcripts GTF (default: stdout)
+* '-p 8' tells Stringtie to use eight CPUs
+* '-l' name prefix for output transcripts (default: STRG)
+* '-o' output path/file name for the assembled transcripts GTF (default: stdout)
 
 
 ```bash
