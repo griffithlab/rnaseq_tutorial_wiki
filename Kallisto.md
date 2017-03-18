@@ -15,7 +15,7 @@ We could download the complete fasta transcript database for human and pull out 
 ```bash
 
 cd $RNA_HOME/refs
-gtf_to_fasta $REF_GTF $REF_FASTA chr22_ERCC92_transcripts.fa
+gtf_to_fasta $RNA_REF_GTF $RNA_REF_FASTA chr22_ERCC92_transcripts.fa
 
 ```
 
