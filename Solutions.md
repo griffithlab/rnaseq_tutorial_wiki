@@ -148,6 +148,26 @@ http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
 
 ---
 
+### Practical Exercise 7 - Expression
+
+```bash
+
+cd $RNA_HOME/practice/
+mkdir -p expression/stringtie/ref_only/
+cd expression/stringtie/ref_only/
+
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep1/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_tumor_rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep2/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_tumor_rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep3/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_tumor_rep3.bam
+
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep1/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep2/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep3/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep3.bam
+
+```
+
+---
+
 | [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Integrated-Assignment]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
 | [[Lectures|Lectures]]         | [[Practical Exercise Solutions|Solutions]] |  [[Integrated Assignment|Integrated-Assignment]] |
