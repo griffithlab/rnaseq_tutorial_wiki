@@ -49,7 +49,7 @@
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw/2016/RNASeq_Module4_Lecture.pdf]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw/2016/RNASeq_Module4_Tutorial.pdf]]
 
-###CSHL Advanced Sequencing Technologies and Applications (November 10-22, 2015)
+### CSHL Advanced Sequencing Technologies and Applications (November 10-22, 2015)
 
 **Presentations:**
 
@@ -64,7 +64,7 @@
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cshl/2015/RNASeq_Module4_Lecture.pdf]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2015/RNASeq_Module4_Tutorial.pdf]]
 
-###CBW Informatics for RNA-seq analysis (June 8-9, 2015)
+### CBW Informatics for RNA-seq analysis (June 8-9, 2015)
 
 **Presentations:**
 
@@ -86,7 +86,7 @@
 * [[Module 3 - Expression and Differential Expression (lecture)|http://bioinformatics.ca/rnaseq2015module4mp4]]
 * [[Module 4 - Isoform Discovery and Alternate Expression (lecture)|http://bioinformatics.ca/rnaseq2015module5mp4]]
 
-###CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (April 29-30, 2015)
+### CSHL-CBW-NYGC High-throughput Biology: From Sequence to Networks (April 29-30, 2015)
 
 **Presentations:**
 
@@ -99,7 +99,7 @@
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Lecture.pptx]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw-cshl-nygc/2015/RNASeq_Module4_Tutorial.pptx]]
 
-###CSHL Advanced Sequencing Technologies and Applications (November 11-23, 2014)
+### CSHL Advanced Sequencing Technologies and Applications (November 11-23, 2014)
 
 **Presentations:**
 
