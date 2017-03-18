@@ -1,7 +1,7 @@
 ![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart2.png)
 
-#1-iii. Annotations
-###Obtain known gene/transcript annotations
+# 1-iii. Annotations
+### Obtain known gene/transcript annotations
 
 In this tutorial we will use annotations obtained from Ensembl (ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz) for chromosome 22 only. For time reasons, these are prepared for you and made available on your AWS instance. But you should get familiar with sources of gene annotations for RNA-seq analysis. 
 
@@ -54,7 +54,7 @@ To learn more, see:
 * http://www.perl.com/pub/2004/08/09/commandline.html
 	
 	
-###Definitions:
+### Definitions:
 
 - Reference genome - The nucleotide sequence of the chromosomes of a species.  Genes are the functional units of a reference genome and gene annotations describe the structure of transcripts expressed from those gene loci.  
 
@@ -64,7 +64,7 @@ To learn more, see:
 http://genome.ucsc.edu/FAQ/FAQformat#format3
 http://genome.ucsc.edu/FAQ/FAQformat#format4
 	
-###The purpose of gene annotations (gtf file)
+### The purpose of gene annotations (gtf file)
 
 When running the HISAT2/StringTie/Ballgown pipeline, known gene/transcript annotations are used for several purposes:
 * During the HISAT2 index creation step, annotations may be provided to create local indexes to represent transcripts as well as a global index for the entire reference genome. This allows for faster mapping and better mapping across exon boundaries and splice sites. If an alignment still can not be found it will attempt to determine if the read corresponds to a novel exon-exon junction. See the Indexing section and the HISAT2 publication for more details. 
@@ -72,16 +72,16 @@ When running the HISAT2/StringTie/Ballgown pipeline, known gene/transcript annot
 * During the StringTie step, if the '-G' option is specified without the '-e' option the .gtf file is used only to 'guide' the assembly of transcripts. Instead of assuming only the known transcript models are correct, the resulting expression estimates will correspond to both known and novel/predicted transcripts.
 * During the StringTie and gffcompare steps, a .gtf file is used to determine the transcripts that will be examined for differential expression using Ballgown.  These may be known transcripts that you download from a public source or a .gtf of transcripts predicted by StringTie from the read data in an earlier step.
 	
-###Sources for obtaining gene annotation files formatted for HISAT2/StringTie/Ballgown
+### Sources for obtaining gene annotation files formatted for HISAT2/StringTie/Ballgown
 
 There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, 1000 Genomes, UCSC, RefSeq, etc.  Four options and related instructions for obtaining the gene annotation files are provided below.
 	
-####I. ENSEMBL FTP SITE  
+#### I. ENSEMBL FTP SITE  
 
 Based on Ensembl annotations only.  Available for many species.
 http://useast.ensembl.org/info/data/ftp/index.html
 	
-####II. UCSC TABLE BROWSER  
+#### II. UCSC TABLE BROWSER  
 
 Based on UCSC annotations or several other possible annotation sources collected by UCSC. You might chose this option if you want to have a lot of flexibility in the annotations you obtain.  e.g. to grab only the transcripts from chromosome 22 as in the following example:
   * Open the following in your browser: http://genome.ucsc.edu/
@@ -113,7 +113,7 @@ How to get gene symbols and descriptions for all UCSC genes:
 To get annotations for the whole genome, make sure 'genome' is selected beside 'region'.
 By default, the files downloaded above will be compressed.  To decompress, use 'gunzip filename' in linux.
 
-####III. HISAT2 Precomputed Genome Index
+#### III. HISAT2 Precomputed Genome Index
 
 HISAT2 has prebuilt reference genome index files for both DNA and RNA alignment. Various versions of the index files include SNPs and/or transcript splice sites. Versions of both the Ensembl and UCSC genomes for human build 38 are linked from the main HISAT2 page:
 https://ccb.jhu.edu/software/hisat2/index.shtml
