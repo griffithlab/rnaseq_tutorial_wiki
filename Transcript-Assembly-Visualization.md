@@ -8,7 +8,7 @@ View the merged GTF file from the 'de_novo' mode.  Remember this merged GTF file
 
 ```bash
 
-cd $RNA_HOME/expression/stringtie/de_novo/stringtie_merged.gtf
+cd $RNA_HOME/expression/stringtie/de_novo/
 head stringtie_merged.gtf
 
 ```
