@@ -6,17 +6,18 @@
 - [Ben Ainscough<sup>1</sup>](http://genome.wustl.edu/people/individual/Benjamin-Ainscough/), [bainscou[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/benjamin-ainscough/)
 - [Nicholas Spies<sup>1</sup>](http://genome.wustl.edu/people/individual/Nicholas-Spies/), [nspies[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/nicholas-spies/)
 - [Alex Wagner<sup>1</sup>](http://genome.wustl.edu/people/individual/alex-wagner/), [awagner[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/alex-wagner/), [@handlerwagner](https://twitter.com/handlerwagner)
+- [Fouad Yousif<sup>5</sup>](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif), [Fouad.Yousif[AT]oicr.on.ca](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif)
 
 <sup>1</sup> The Genome Institute, Washington University School of Medicine<br>
 <sup>2</sup> The Department of Genetics, Washington University School of Medicine<br>
 <sup>3</sup> The Department of Medicine, Washington University School of Medicine<br>
 <sup>4</sup> The Siteman Cancer Center, a National Cancer Institute Comprehensive Cancer Center, Barnes Jewish Hospital and Washington University School of Medicine<br>
+<sup>5</sup> Ontario Institute of Cancer Research<br>
 
 #### Further acknowledgements
 We are grateful to the following people for past and ongoing contributions to this work:
 - Francis Ouellette (Ontario Institute for Cancer Research)
 - Michelle Brazas (Ontario Institute for Cancer Research)
-- Fouad Yousif (Ontario Institute for Cancer Research) 
 - Zhibin Lu (Ontario Institute for Cancer Research)
 - Rodrigo Goya (British Columbia Cancer Agency)
 - Vincent Magrini (McDonnell Genome Institute, Washington University School of Medicine)
