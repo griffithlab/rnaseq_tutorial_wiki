@@ -95,6 +95,21 @@ chmod +x scripts/htseq-count
 
 ```
 
+## [TopHat](https://ccb.jhu.edu/software/tophat/index.shtml)
+
+Note, this tool is currently only installed for the gtf_to_fasta tool used in kallisto section
+
+```bash
+
+cd $RNA_HOME/
+cd tools/
+wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.1.Linux_x86_64.tar.gz
+tar -zxvf tophat-2.1.1.Linux_x86_64.tar.gz
+cd tophat-2.1.1.Linux_x86_64/
+./gtf_to_fasta
+
+```
+
 ## [kallisto](https://pachterlab.github.io/kallisto/)
 
 ```bash
@@ -252,7 +267,7 @@ export RNA_REF_GTF=$RNA_REF_INDEX.gtf
 
 export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
 
-export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:/home/ubuntu/workspace/rnaseq/tools/kallisto_linux-v0.43.0:$PATH
+export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:/home/ubuntu/workspace/rnaseq/tools/tophat-2.1.1.Linux_x86_64:/home/ubuntu/workspace/rnaseq/tools/kallisto_linux-v0.43.0:$PATH
 
 echo $PATH
 
