@@ -105,7 +105,7 @@ ls *.pdf
 
 Go through the generated PDFs by browsing through the following directory in a web browser:
 
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/RSeQC/
+* http://__YOUR_IP_ADDRESS__/rnaseq/RSeQC/
 
 -------
 **Read Quality:**
