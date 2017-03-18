@@ -115,7 +115,7 @@ Based on the above read counts, plot the linearity of the ERCC spike-in read cou
 ```bash
 
 cd $RNA_HOME/expression/htseq_counts
-cp /home/ubuntu/workspace/data/rnaseq-tutorial/ERCC_Controls_Analysis.txt .
+cp $RNA_EXT_DATA_DIR/rnaseq-tutorial/ERCC_Controls_Analysis.txt .
 cat ERCC_Controls_Analysis.txt
 
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.pl
@@ -130,7 +130,7 @@ chmod +x Tutorial_Module4_ERCC_expression.R
 ```
 
 To view the resulting figure, navigate to the below URL replacing __YOUR_IP_ADDRESS__ with your amazon instance IP address:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/expression/htseq_counts/Tutorial_Module4_ERCC_expression.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/expression/htseq_counts/Tutorial_Module4_ERCC_expression.pdf
 
 
 | [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |
