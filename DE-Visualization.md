@@ -13,7 +13,7 @@ R
 
 A separate R tutorial file has been provided in the github repo for part 2 of the tutorial: [Tutorial_Module4_Part2_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part2_ballgown.R). Run the R commands detailed in the R script. All results are directed to pdf file(s). The output pdf files can be viewed in your browser at the following urls. Note, you must replace __YOUR_IP_ADDRESS__ with your own amazon instance IP (e.g., 101.0.1.101)).
 
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Part2_ballgown_output.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Part2_ballgown_output.pdf
 	
 ## SUPPLEMENTARY R ANALYSIS 
 
