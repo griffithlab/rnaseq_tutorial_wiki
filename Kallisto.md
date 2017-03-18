@@ -48,7 +48,7 @@ Remember that Kallisto does not perform *alignment* or use a reference genome se
 cd $RNA_HOME/refs
 mkdir kallisto
 cd kallisto
-kallisto index --index=chr22_ERCC92_transcripts_kallisto_index chr22_ERCC92_transcripts.clean.fa
+kallisto index --index=chr22_ERCC92_transcripts_kallisto_index ../chr22_ERCC92_transcripts.clean.fa
 
 ```
 
