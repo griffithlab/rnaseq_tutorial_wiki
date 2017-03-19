@@ -52,6 +52,7 @@ unzip data.zip
 ```
 
 Answer all questions and follow all instructions below:
+
 **Q1.)** How many items are there under the “refs” directory ? 
 What if this reference file was not provided for you? How would you obtain/create a reference genome fasta file for chromosome 9 only. How about the GTF transcripts file from Ensembl? How would you create one that contained only transcripts on chromosome 9?
 
@@ -68,6 +69,7 @@ Remember that a read record looks like this:
 TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
 ```
 ##PART 2: Data alignment
+
 **Goals:**
 - Familiarize yourself with HISAT2 alignment options 
 - Perform alignments 
