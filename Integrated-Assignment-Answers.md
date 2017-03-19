@@ -28,7 +28,10 @@ Experimental information and other things to keep in mind:
 cd $RNA_HOME
 mkdir -p ~/workspace/rnaseq/integrated_assignment/
 export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment/
+```
 You will also need the following environment variables througout the assignment:
+
+```
 export RNA_DATA_DIR=$RNA_ASSIGNMENT/fasta
 export RNA_REFS_DIR=$RNA_ASSIGNMENT/refs
 export RNA_REF_INDEX=$RNA_REFS_DIR/Homo_sapiens.GRCh38.dna.chromosome.9
