@@ -49,7 +49,7 @@ When you log in, you will notice that you have two directories: "tools" and "wor
 If you would like to upload your data to the AWS instance, use the example scp command below.  Be sure to replace the variables below with the local path to your data, __MY_DATA__, and the amazon instance IP, __YOUR_IP_ADDRESS__.
 
 ```
-scp -i CBWNY.pem __MY_DATA__ ubuntu@__YOUR_DNS_NAME__:/workspace/
+scp -i CBWNY.pem __MY_DATA__ ubuntu@__YOUR_DNS_NAME__:/
 ```
 
 
