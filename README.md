@@ -9,3 +9,4 @@ The actual git repo with pull requests enabled, for the [rnaseq_tutorial wiki](h
 
 ## Setup
 This wiki was setup following [these instructions](http://www.growingwiththeweb.com/2016/07/enabling-pull-requests-on-github-wikis.html)
+
