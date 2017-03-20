@@ -6,7 +6,7 @@
 
 Create a HISAT2 index for chr22 and the ERCC spike-in sequences. HISAT2 can incorporate exons and splice sites into the index file for alignment.  First create a splice site file, then an exon file.  Finally make the aligner FM index.
 
-TODO: How is the HISAT2 index unique from other next gen aligners?
+To learn more about how the HISAT2 indexing strategy is distinct from other next gen aligners refer to the [HISAT publication](https://www.ncbi.nlm.nih.gov/pubmed/25751142).
 
 ```bash
 
