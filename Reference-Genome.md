@@ -58,7 +58,7 @@ cat chr22_with_ERCC92.fa | grep -v ">" | perl -ne 'chomp $_; $bases{$_}++ for sp
 ```
 
 
-Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., [USCS GRCh38 download](http://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/).
+Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., [UCSC GRCh38 download](http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/).
 
 Wherever you get them from, remember that the names of your reference sequences (chromosomes) must those matched in your annotation gtf files (described in the next section).
 
