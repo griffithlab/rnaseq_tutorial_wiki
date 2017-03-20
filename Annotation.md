@@ -56,25 +56,24 @@ To learn more, see:
 	
 ### Definitions:
 
-- Reference genome - The nucleotide sequence of the chromosomes of a species.  Genes are the functional units of a reference genome and gene annotations describe the structure of transcripts expressed from those gene loci.  
+- Reference genome - The nucleotide sequence of the chromosomes of a species. Genes are the functional units of a reference genome and gene annotations describe the structure of transcripts expressed from those gene loci.  
 
-- Gene annotations - Descriptions of gene/transcript models for a genome.  A transcript model consists of the *coordinates* of the exons of a transcript on a reference genome.  Additional information such as the strand the transcript is generated from, gene name, coding portion of the transcript, alternate transcript start sites, and other information may be provided.
+- Gene annotations - Descriptions of gene/transcript models for a genome. A transcript model consists of the *coordinates* of the exons of a transcript on a reference genome. Additional information such as the strand the transcript is generated from, gene name, coding portion of the transcript, alternate transcript start sites, and other information may be provided.
 
-- GTF (.gtf) file - A common file format referred to as Gene Transfer Format used to store gene and transcript annotation information.  You can learn more about this format here:
-http://genome.ucsc.edu/FAQ/FAQformat#format3
+- GTF (.gtf) file - A common file format referred to as Gene Transfer Format used to store gene and transcript annotation information. You can learn more about this format here:
 http://genome.ucsc.edu/FAQ/FAQformat#format4
 	
 ### The purpose of gene annotations (gtf file)
 
 When running the HISAT2/StringTie/Ballgown pipeline, known gene/transcript annotations are used for several purposes:
-* During the HISAT2 index creation step, annotations may be provided to create local indexes to represent transcripts as well as a global index for the entire reference genome. This allows for faster mapping and better mapping across exon boundaries and splice sites. If an alignment still can not be found it will attempt to determine if the read corresponds to a novel exon-exon junction. See the Indexing section and the HISAT2 publication for more details. 
-* During the StringTie step, a .gtf file can be used to specify transcript models to guide the assembly process and limit expression estimates to predefined transcripts using the '-G' and '-e' options together.  The '-e' option will give you one expression estimate for each of the transcripts in your .gtf file giving you a 'microarray like' expression result.
+* During the HISAT2 index creation step, annotations may be provided to create local indexes to represent transcripts as well as a global index for the entire reference genome. This allows for faster mapping and better mapping across exon boundaries and splice sites. If an alignment still can not be found it will attempt to determine if the read corresponds to a novel exon-exon junction. See the [Indexing section](Indexing) and the HISAT2 publication for more details. 
+* During the StringTie step, a .gtf file can be used to specify transcript models to guide the assembly process and limit expression estimates to predefined transcripts using the '-G' and '-e' options together. The '-e' option will give you one expression estimate for each of the transcripts in your .gtf file, giving you a 'microarray like' expression result.
 * During the StringTie step, if the '-G' option is specified without the '-e' option the .gtf file is used only to 'guide' the assembly of transcripts. Instead of assuming only the known transcript models are correct, the resulting expression estimates will correspond to both known and novel/predicted transcripts.
-* During the StringTie and gffcompare steps, a .gtf file is used to determine the transcripts that will be examined for differential expression using Ballgown.  These may be known transcripts that you download from a public source or a .gtf of transcripts predicted by StringTie from the read data in an earlier step.
+* During the StringTie and gffcompare steps, a .gtf file is used to determine the transcripts that will be examined for differential expression using Ballgown. These may be known transcripts that you download from a public source, or a .gtf of transcripts predicted by StringTie from the read data in an earlier step.
 	
 ### Sources for obtaining gene annotation files formatted for HISAT2/StringTie/Ballgown
 
-There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, 1000 Genomes, UCSC, RefSeq, etc.  Four options and related instructions for obtaining the gene annotation files are provided below.
+There are many possible sources of .gtf gene/transcript annotation files.  For example, from Ensembl, UCSC, RefSeq, etc. Several options and related instructions for obtaining the gene annotation files are provided below.
 	
 #### I. ENSEMBL FTP SITE  
 
@@ -85,9 +84,9 @@ http://useast.ensembl.org/info/data/ftp/index.html
 
 Based on UCSC annotations or several other possible annotation sources collected by UCSC. You might chose this option if you want to have a lot of flexibility in the annotations you obtain.  e.g. to grab only the transcripts from chromosome 22 as in the following example:
   * Open the following in your browser: http://genome.ucsc.edu/
-  * Click 'Tables' at the top of the page.
-  * Select 'Mammal', 'Human', and 'Feb. 2009 (GRCh37/hg19)' from the first row of drop down menus.
-  * Select 'Genes and Gene Prediction Tracks' and 'UCSC Genes' from the second row of drop down menus.
+  * Select 'Tools' and then 'Table Browser' at the top of the page.
+  * Select 'Mammal', 'Human', and 'Dec. 2013 (GRCh38/hg38)' from the first row of drop down menus.
+  * Select 'Genes and Gene Predictions' and 'GENCODE v24' from the second row of drop down menus.
     To limit your selection to only chromosome 22, select the 'position' option beside 'region', enter 'chr22' in the 'position' box.
   * Select 'GTF - gene transfer format' for output format and enter 'UCSC_Genes.gtf' for output file.
   * Hit the 'get output' button and save the file.  Make note of its location
@@ -107,7 +106,7 @@ How to get gene symbols and descriptions for all UCSC genes:
   * Change the output file to 'UCSC_Names.txt', and hit the 'get output' button.  
   * Make sure 'chrom' is selected near the top of the page.  
   * Under 'Linked Tables' make sure 'kgXref' is selected, and then hit 'Allow Selection From Checked Tables'.  This will link the table and give you access to its fields.  
-  * Under 'hg19.kgXref fields' select: 'kgID', 'geneSymbol', 'description'.  
+  * Under 'hg38.kgXref fields' select: 'kgID', 'geneSymbol', 'description'.  
   * Hit the 'get output' button and save the file.  
 	
 To get annotations for the whole genome, make sure 'genome' is selected beside 'region'.
