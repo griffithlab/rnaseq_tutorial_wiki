@@ -5,7 +5,7 @@ This tutorial is accompanied by a publication.  If you find the materials here o
 Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, Obi L. Griffith\*. 2015. [*Informatics for RNA-seq: A web resource for analysis on the cloud*.](http://dx.doi.org/10.1371/journal.pcbi.1004393) PLoS Comp Biol. 11(8):e1004393.
 
 \*To whom correspondence should be addressed: 
-E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
+E-mail: mgriffit[AT]wustl.edu, obigriffith[AT]wustl.edu
 
 All materials associated with this publication, including high resolution and original figure files, supplementary tables, etc. are available here: https://github.com/griffithlab/rnaseq_tutorial ([www.rnaseq.wiki](http://www.rnaseq.wiki))
 
