@@ -42,7 +42,7 @@ wc chr22_with_ERCC92.fa
 
 ```
 
-View 10 lines from approximately the middle of this file
+View 10 lines from approximately the middle of this file. What is the significance of the upper and lower case characters?
 
 ```bash
 
