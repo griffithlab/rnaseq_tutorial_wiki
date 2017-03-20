@@ -26,7 +26,7 @@ ls
 
 ```
 
-View the first 10 lines of this file
+View the first 10 lines of this file. Why does it look like this?
 
 ```bash
 
@@ -34,7 +34,7 @@ head chr22_with_ERCC92.fa
 
 ```
 
-How many lines and characters are in this file?
+How many lines and characters are in this file? How long is this chromosome (in bases and Mbp)?
 
 ```bash
 
@@ -49,6 +49,14 @@ View 10 lines from approximately the middle of this file
 head -n 425000 chr22_with_ERCC92.fa | tail
 
 ```
+
+What is the count of each base in this chromosome?
+
+```bash
+
+cat chr22_with_ERCC92.fa | grep -v ">" | perl -ne 'chomp $_; $bases{$_}++ for split //; if (eof){print "$_ $bases{$_}\n" for sort keys %bases}'
+```
+
 
 Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., http://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/.
 Wherever you get them from, the names of your reference sequences (chromosomes) must those matched in your annotation gtf files (described in the next section).
