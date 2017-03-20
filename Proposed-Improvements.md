@@ -98,7 +98,7 @@ Also, the new "Tuxedo" protocol paper is out demonstrating an equivalent HISAT2/
 
 
 ### Update the alternative splicing module to provide an alternative analysis workflow to Cufflinks
-After use of TopHat2 or RNA-star (or hopefully HISAT2), [QoRTs]() (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq]() and [JunctionSeq](). 
+Introduction to RegTools functionality. After use of TopHat2 or RNA-star (or hopefully HISAT2), [QoRTs](https://github.com/hartleys/QoRTs) (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html) and [JunctionSeq](https://bioconductor.org/packages/release/bioc/html/JunctionSeq.html). 
 
 | [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|

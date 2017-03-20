@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
-#3-ii. Differential Expression
+# 3-ii. Differential Expression
 Use Ballgown to compare the tumor and normal conditions. Refer to the Ballgown manual for a more detailed explanation:
 * https://www.bioconductor.org/packages/release/bioc/html/ballgown.html
 `

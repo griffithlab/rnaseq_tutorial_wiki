@@ -1,7 +1,7 @@
-###Note:
+### Note:
 First, make sure your [[environment|Environment]] is set up correctly.
 
-#1-i. Installation
+# 1-i. Installation
 Tools needed for this analysis are: samtools, bam-readcount, HISAT2, stringtie, gffcompare, htseq-count, flexbar, R, ballgown, fastqc and picard-tools. In the following installation example the installs are local and will work whether you have root (i.e. admin) access or not. However, if root is available some binaries can/will be copied to system-wide locations (e.g., /usr/bin/).
 
 Set up tool installation location:
@@ -14,7 +14,7 @@ cd tools
 
 ```
 
-##[SAMtools](http://samtools.sourceforge.net/)
+## [SAMtools](http://samtools.sourceforge.net/)
 
 ```bash
 
@@ -28,7 +28,7 @@ make
 
 ```
 
-##[bam-readcount](https://github.com/genome/bam-readcount)
+## [bam-readcount](https://github.com/genome/bam-readcount)
 
 ```bash
 
@@ -46,7 +46,7 @@ make
 
 ```
 
-##[HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
+## [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
 
 ```bash
 cd $RNA_HOME/tools/
@@ -57,7 +57,7 @@ cd hisat2-2.0.4
 
 ```
 
-##[StringTie](https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual)
+## [StringTie](https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual)
 
 ```bash
 
@@ -69,7 +69,7 @@ cd stringtie-1.3.0.Linux_x86_64
 
 ```
 
-##[gffcompare](http://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare)
+## [gffcompare](http://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare)
 
 ```bash
 
@@ -81,7 +81,7 @@ cd gffcompare-0.9.8.Linux_x86_64
 
 ```
 
-##[htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
+## [htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
 
 ```bash
 
@@ -95,7 +95,33 @@ chmod +x scripts/htseq-count
 
 ```
 
-##[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+## [TopHat](https://ccb.jhu.edu/software/tophat/index.shtml)
+
+Note, this tool is currently only installed for the gtf_to_fasta tool used in kallisto section
+
+```bash
+
+cd $RNA_HOME/
+cd tools/
+wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.1.Linux_x86_64.tar.gz
+tar -zxvf tophat-2.1.1.Linux_x86_64.tar.gz
+cd tophat-2.1.1.Linux_x86_64/
+./gtf_to_fasta
+
+```
+
+## [kallisto](https://pachterlab.github.io/kallisto/)
+
+```bash
+
+cd $RNA_HOME/
+cd tools/
+wget https://github.com/pachterlab/kallisto/releases/download/v0.43.0/kallisto_linux-v0.43.0.tar.gz
+tar -zxvf kallisto_linux-v0.43.0.tar.gz
+
+```
+
+## [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 In addition to installing on the cloud you should also install FastQC on your own laptop/desktop
 
 ```bash
@@ -109,7 +135,7 @@ chmod 755 fastqc
 
 ```
 
-##[Picard](http://picard.sourceforge.net/command-line-overview.shtml)
+## [Picard](http://picard.sourceforge.net/command-line-overview.shtml)
 
 ```bash
 
@@ -119,7 +145,7 @@ java -jar $RNA_HOME/tools/picard.jar
 
 ```
         
-##[Flexbar](http://sourceforge.net/projects/flexbar/)
+## [Flexbar](http://sourceforge.net/projects/flexbar/)
 
 ```bash
 
@@ -132,21 +158,19 @@ export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.5_linux64:$LD_LIBRARY_PATH
 
 ```
 
-##[Regtools](https://github.com/griffithlab/regtools#regtools)
+## [Regtools](https://github.com/griffithlab/regtools#regtools)
 
 ```bash
-
-    git clone https://github.com/griffithlab/regtools
-    cd regtools/
-    mkdir build
-    cd build/
-    cmake ..
-    make
-    ./regtools
-    
+git clone https://github.com/griffithlab/regtools
+cd regtools/
+mkdir build
+cd build/
+cmake ..
+make
+./regtools
 ```
 
-##[R](http://www.r-project.org/)
+## [R](http://www.r-project.org/)
 
 This install takes a while so check if you have R installed already by typing `which R`.
 It is already installed on the Cloud, but for completeness, here is how it was done. Please skip all R installation!
@@ -167,7 +191,7 @@ It is already installed on the Cloud, but for completeness, here is how it was d
 
 Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
 
-##R Libraries
+## R Libraries
 
 For this tutorial we require:
 - [devtools](https://cran.r-project.org/web/packages/devtools/index.html)
@@ -177,14 +201,13 @@ For this tutorial we require:
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
-```R
-
-install.packages(c("devtools","dplyr","gplots","ggplot2"),repos="http://cran.us.r-project.org")
-quit(save="no")
-
+```
+#R
+#install.packages(c("devtools","dplyr","gplots","ggplot2"),repos="http://cran.us.r-project.org")
+#quit(save="no")
 ```
 
-##[Bioconductor](http://www.bioconductor.org/)
+## [Bioconductor](http://www.bioconductor.org/)
 
 For this tutorial we require:
 - [genefilter](http://bioconductor.org/packages/release/bioc/html/genefilter.html)
@@ -193,17 +216,16 @@ For this tutorial we require:
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
-```R
-
-source("http://bioconductor.org/biocLite.R")
-biocLite(c("genefilter","ballgown","edgeR"))
-quit(save="no")
-
+```
+#R
+#source("http://bioconductor.org/biocLite.R")
+#biocLite(c("genefilter","ballgown","edgeR"))
+#quit(save="no")
 ```
 
 
 ---
-##Practical Exercise 1 - Software Installation
+## Practical Exercise 1 - Software Installation
 
 Assignment: Install bedtools on your own. Make sure you install it in your tools folder. Download, unpack, compile, and test the bedtools software.
 
@@ -227,7 +249,7 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 ---
 
-##Add locally installed tools to your PATH [OPTIONAL]
+## Add locally installed tools to your PATH [OPTIONAL]
 
 To use the locally installed version of each tool without having to specify complete paths, you could add the install directory of each tool to your '$PATH' variable
 
@@ -245,7 +267,7 @@ export RNA_REF_GTF=$RNA_REF_INDEX.gtf
 
 export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
 
-export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$PATH
+export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:/home/ubuntu/workspace/rnaseq/tools/tophat-2.1.1.Linux_x86_64:/home/ubuntu/workspace/rnaseq/tools/kallisto_linux-v0.43.0:$PATH
 
 echo $PATH
 
@@ -260,7 +282,7 @@ vi ~/.bashrc
 
 ```
 
-###Vi instructions
+### Vi instructions
 
 1. Using your cursor, navigate down to the "export PATH" commands at the end of the file.
 2. Delete the line starting with PATH using the vi command "dd".

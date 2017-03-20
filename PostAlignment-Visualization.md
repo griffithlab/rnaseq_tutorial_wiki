@@ -1,40 +1,28 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#2-iii. Alignment Visualization
-Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose.
+# 2-iii. Alignment Visualization
+Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. First, let's just index the merged/combined bam files.
 
 ```bash
 
 echo $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR
+samtools index HBR.bam
+samtools index UHR.bam
 
 ```
 
-First lets display the samtools index commands to be run (i.e. 'echo' the command that will be executed by unix find). You could copy and paste these commands to run them, or repeat the find command without the 'echo' as below
+## Visualize alignments
 
-```bash
+Start IGV on your laptop. Load the UHR.bam & HBR.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'.
 
-find $RNA_ALIGN_DIR/*.bam -exec echo samtools index {} \;
+**UHR hisat2 alignment**: 
 
-```
+http://__YOUR_DNS_NAME__/rnaseq/alignments/hisat2/UHR.bam
 
-Now run the index commands
+**HBR hisat2 alignment**:
 
-```bash
-
-find $RNA_ALIGN_DIR/*.bam -exec samtools index {} \;
-
-```
-
-##Visualize alignments
-
-Start IGV on your laptop. Load the UHR.bam & HBR.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. You may wish to customize the track names as you load them in to keep them straight. Do this by right-clicking on the alignment track and choosing 'Rename Track'. Note, you must replace '##' with your own amazon instance number (e.g., "##")).
-
-**UHR hisat2 alignment**
-http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/UHR.bam
-
-**HBR hisat2 alignment**
-http://__YOUR_IP_ADDRESS__/workspace/rnaseq/alignments/hisat2/HBR.bam
+http://__YOUR_DNS_NAME__/rnaseq/alignments/hisat2/HBR.bam
 
 Go to an example gene locus on chr22:
 - e.g. *EIF3L*, *NDUFA6*, and *RBX1* have nice coverage
@@ -50,7 +38,7 @@ Try to find a variant position in the RNAseq data:
 - How should we interpret the allele frequency of each variant?  Remember that we have rather unusual samples here in that they are actually pooled RNAs corresponding to multiple individuals (genotypes).
 - Take note of the genomic position of your variant. We will need this later.
 
-##BAM Read Counting
+## BAM Read Counting
 
 Using one of the variant positions identified above, count the number of supporting reference and variant reads.
 First, use `samtools mpileup` to visualize a region of alignment with a variant.
@@ -126,6 +114,16 @@ cat UHR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", 
 cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", $data[5]); @Cdata=split(":", $data[6]); @Gdata=split(":", $data[7]); @Tdata=split(":", $data[8]); print "HBR Counts\t$data[0]\t$data[1]\tA: $Adata[1]\tC: $Cdata[1]\tT: $Tdata[1]\tG: $Gdata[1]\n";'
 
 ```
+
+## PRACTICAL EXERCISE 6
+
+Assignment: Index your bam files from [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5) and visualize in IGV. 
+
+* Hint: As before, it may be simplest to just index and visualize the combined/merged bam files HCC1395_normal.bam and HCC1395_tumor.bam.
+
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-6---visualize)
+
+---
 
 | [[Previous Section|IGV-Tutorial]] | [[This Section|PostAlignment-Visualization]]  | [[Next Section|PostAlignment-QC]] |
 |:---------------------------------:|:---------------------------------------------:|:---------------------------------:|

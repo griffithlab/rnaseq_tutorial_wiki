@@ -1,4 +1,4 @@
-#0-vi. Environment
+# 0-vi. Environment
 This tutorial assumes use of a Linux computer with an 'x86_64' architecture.  The rest of the tutorial should be conducted in a linux Terminal session.  In other words you must already be logged into the Amazon EC2 instance as described in the previous section.
 
 Before proceeding you must define a global working directory by setting the environment variable: 'RNA_HOME'  
@@ -27,6 +27,7 @@ You can place the RNA_HOME variable in your .bashrc and then logout and login ag
 Additional environment variables used throughout this tutorial:
 
 ```bash
+export RNA_EXT_DATA_DIR=/home/ubuntu/CourseData/RNA_data
 
 export RNA_DATA_DIR=$RNA_HOME/data
 export RNA_DATA_TRIM_DIR=$RNA_DATA_DIR/trimmed

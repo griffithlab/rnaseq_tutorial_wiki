@@ -1,7 +1,7 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
-#2-iv. Post-Alignment QC
-##Use samtools, samstat, and FastQC to evaluate the alignments
+# 2-iv. Post-Alignment QC
+## Use samtools, samstat, and FastQC to evaluate the alignments
 
 Use `samtools view` to see the format of a SAM/BAM alignment file
 
@@ -50,7 +50,7 @@ samtools flagstat HBR.bam
 Details of the SAM/BAM format can be found here:
 http://samtools.sourceforge.net/SAM1.pdf
 
-##Using FastQC
+## Using FastQC
 
 You can use FastQC to perform basic QC of your BAM file (See [Pre-Alignment QC](https://github.com/griffithlab/rnaseq_tutorial/wiki/PreAlignment-QC)). This will give you output very similar to when you ran FastQC on your fastq files.
 
@@ -71,7 +71,7 @@ Set your working directory and copy the necessary files
 
 ```
 cd $RNA_HOME
-cp -r ~/workspace/data/rnaseq-tutorial/RSeQC.zip .
+cp -r $RNA_EXT_DATA_DIR/rnaseq-tutorial/RSeQC.zip .
 ```
 
 Unzip the RSeQC file:
@@ -105,7 +105,7 @@ ls *.pdf
 
 Go through the generated PDFs by browsing through the following directory in a web browser:
 
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/RSeQC/
+* http://__YOUR_IP_ADDRESS__/rnaseq/RSeQC/
 
 -------
 **Read Quality:**

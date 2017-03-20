@@ -1,14 +1,14 @@
-#5-iii. Practical exercise solutions
+# 5-iii. Practical exercise solutions
 
 This page presents solutions to exercises/assignments from throughout the workshop
 
-###Practical Exercise 1 - Software installation
+### Practical Exercise 1 - Software installation
 To install bedtools:
 * Google "bedtools" and find 
  * software page: https://github.com/arq5x/bedtools2
  * documentation page: http://bedtools.readthedocs.org/en/latest/
  * Note: If you find the old bedtools page (https://code.google.com/p/bedtools/) it will point you to above
-* Go to Releases, find the latest version (e.g., bedtools-2.25.0.tar.gz), right-click and save url
+* Go to Releases, find the latest version (e.g., bedtools-2.26.0.tar.gz), right-click and save url
 * Go to tools directory and download the archive, then unpack, and compile
 ```
 cd $RNA_HOME/tools/
@@ -19,17 +19,21 @@ make
 ./bin/bedtools
 ```
 
-###Practical Exercise 2 - Data
+---
+
+### Practical Exercise 2 - Data
 
 ```
 cd $RNA_HOME
 mkdir -p practice/data
 cd $RNA_HOME/practice/data
-wget http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
-tar -xvf alignment_practical.tar
+wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
+tar -xvf practical.tar
 ```
 
-###Practical Exercise 3 - QC
+---
+
+### Practical Exercise 3 - QC
 
 ```bash
 
@@ -39,32 +43,48 @@ fastqc *.fastq.gz
 ```
 
 Then, go to the following url in your browser:
-* http://__YOUR_DNS_NAME__/workspace/rnaseq/practice/data/
+* http://__YOUR_DNS_NAME__/rnaseq/practice/data/
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance DNS (e.g., ec2-54-187-159-113.us-west-2.compute.amazonaws.com))
-* Click on any of the *_fastqc.html files to view the FastQC report
+* Click on any of the *_fastqc.html files to view the FastQC report (e.g., hcc1395_normal_rep1_r1_fastqc.html)
 
-* How many total sequences are there? 455,217
-* What is the range (x - y) of read lengths observed? 25 - 100
-* What is the most common average sequence quality score? 38
-* What is the most common kmer that is observed? AACCATC
+* How many total sequences are there? 331,958
+* What is the range (x - y) of read lengths observed? 151
+* What is the most common average sequence quality score? 41
+* What is the most common kmer that is observed? GAATCGG
 
+---
 
-###Practical Exercise 4 - Trim
+### Practical Exercise 4 - Trim
 
 ```
 cd $RNA_HOME/practice/data/
 mkdir trimmed
 wget http://genome.wustl.edu/pub/rnaseq/trim/illumina_multiplex.fa
-flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_1.fastq.gz --reads2 hcc1395_normal_2.fastq.gz --target trimmed/hcc1395_normal
-flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_1.fastq.gz --reads2 hcc1395_tumor_2.fastq.gz --target trimmed/hcc1395_tumor
+flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_rep1_r1.fastq.gz --reads2 hcc1395_normal_rep1_r2.fastq.gz --target trimmed/hcc1395_normal_rep1
+flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_rep2_r1.fastq.gz --reads2 hcc1395_normal_rep2_r2.fastq.gz --target trimmed/hcc1395_normal_rep2
+flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_rep3_r1.fastq.gz --reads2 hcc1395_normal_rep3_r2.fastq.gz --target trimmed/hcc1395_normal_rep3
+
+flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep1_r1.fastq.gz --reads2 hcc1395_tumor_rep1_r2.fastq.gz --target trimmed/hcc1395_tumor_rep1
+flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep2_r1.fastq.gz --reads2 hcc1395_tumor_rep2_r2.fastq.gz --target trimmed/hcc1395_tumor_rep2
+flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --pre-trim-left 13 --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep3_r1.fastq.gz --reads2 hcc1395_tumor_rep3_r2.fastq.gz --target trimmed/hcc1395_tumor_rep3
 
 ```
 
 Compare these files using FastQC: 
-* http://cbw##.dyndns.info/rnaseq/practice/data/hcc1395_normal_1.fastq.gz
-* http://cbw##.dyndns.info/rnaseq/practice/data/trimmed/hcc1395_normal_1.fastq.gz
 
-###Practical Exercise 5 - Alignment
+```
+cd $RNA_HOME/practice/data/trimmed/
+fastqc *.fastq.gz
+```
+
+* http://YOUR_DNS_NAME/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
+* http://YOUR_DNS_NAME/rnaseq/practice/data/trimmed/hcc1395_normal_rep1_1_fastqc.html
+
+---
+
+### Practical Exercise 5 - Alignment
+
+Perform alignments:
 
 ```
 export RNA_HOME=~/workspace/rnaseq
@@ -74,11 +94,79 @@ cd $RNA_HOME/practice/
 mkdir -p alignments/hisat2
 cd alignments/hisat2
 
-hisat2 -p 8 --rg-id=HCC1395_normal --rg SM:HCC1395_normal --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_2.fastq.gz -S ./HCC1395_normal.sam
-hisat2 -p 8 --rg-id=HCC1395_tumor --rg SM:HCC1395_tumor --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_2.fastq.gz -S ./HCC1395_tumor.sam
+hisat2 -p 8 --rg-id=HCC1395_normal_rep1 --rg SM:HCC1395_normal_rep1 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep1_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep1_r2.fastq.gz -S ./HCC1395_normal_rep1.sam
+hisat2 -p 8 --rg-id=HCC1395_normal_rep2 --rg SM:HCC1395_normal_rep2 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep2_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep2_r2.fastq.gz -S ./HCC1395_normal_rep2.sam
+hisat2 -p 8 --rg-id=HCC1395_normal_rep3 --rg SM:HCC1395_normal_rep3 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep3_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_normal_rep3_r2.fastq.gz -S ./HCC1395_normal_rep3.sam
+
+hisat2 -p 8 --rg-id=HCC1395_tumor_rep1 --rg SM:HCC1395_tumor_rep1 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r2.fastq.gz -S ./HCC1395_tumor_rep1.sam
+hisat2 -p 8 --rg-id=HCC1395_tumor_rep2 --rg SM:HCC1395_tumor_rep2 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep2_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep2_r2.fastq.gz -S ./HCC1395_tumor_rep2.sam
+hisat2 -p 8 --rg-id=HCC1395_tumor_rep3 --rg SM:HCC1395_tumor_rep3 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep3_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep3_r2.fastq.gz -S ./HCC1395_tumor_rep3.sam
 
 ```
 
+Sort and convert SAM to BAM:
+```bash
+
+samtools sort -@ 8 -o HCC1395_normal_rep1.bam HCC1395_normal_rep1.sam
+samtools sort -@ 8 -o HCC1395_normal_rep2.bam HCC1395_normal_rep2.sam 
+samtools sort -@ 8 -o HCC1395_normal_rep3.bam HCC1395_normal_rep3.sam
+samtools sort -@ 8 -o HCC1395_tumor_rep1.bam HCC1395_tumor_rep1.sam
+samtools sort -@ 8 -o HCC1395_tumor_rep2.bam HCC1395_tumor_rep2.sam
+samtools sort -@ 8 -o HCC1395_tumor_rep3.bam HCC1395_tumor_rep3.sam
+
+```
+
+Merge HISAT2 BAM files
+
+```bash
+
+java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_normal.bam INPUT=HCC1395_normal_rep1.bam INPUT=HCC1395_normal_rep2.bam INPUT=HCC1395_normal_rep3.bam
+java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.bam INPUT=HCC1395_tumor_rep1.bam INPUT=HCC1395_tumor_rep2.bam INPUT=HCC1395_tumor_rep3.bam
+
+```
+
+---
+
+### Practical Exercise 6 - Visualize
+
+```
+cd $RNA_HOME/practice/alignments/hisat2
+samtools index HCC1395_normal.bam
+samtools index HCC1395_tumor.bam
+
+```
+
+Start IGV on your laptop. Load the HCC1395_normal.bam & HCC1395_tumor.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. 
+
+**HCC1395BL (normal) alignment**: 
+
+http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_normal.bam
+
+**HCC1395 tumor alignment**:
+
+http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
+
+---
+
+### Practical Exercise 7 - Expression
+
+```bash
+
+cd $RNA_HOME/practice/
+mkdir -p expression/stringtie/ref_only/
+cd expression/stringtie/ref_only/
+
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep1/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_tumor_rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep2/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_tumor_rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep3/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_tumor_rep3.bam
+
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep1/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep1.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep2/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep2.bam
+stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep3/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep3.bam
+
+```
+
+---
 
 | [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Integrated-Assignment]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|

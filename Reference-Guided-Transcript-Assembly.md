@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#4-i. Reference Guided Transcript Assembly
+# 4-i. Reference Guided Transcript Assembly
 Note on de novo transcript discovery and differential expression using Stringtie and Ballgown.
 
 In the previous module we ran Stringtie in 'reference only' mode using the '-G' and '-e' Stringtie options.
@@ -16,7 +16,7 @@ To run Stringtie in 'de novo' mode do **NOT** specify either of the '-G' OR '-e'
 Refer to the Stringtie manual for a more detailed explanation:
 https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual
 		
-###Running Stringtie in Reference Guided Mode
+### Running Stringtie in Reference Guided Mode
 Using the alignments we generated in the previous modules we will now run Stringtie in reference guided mode using the '-G' option **ONLY**.
 
 Extra options specified below:

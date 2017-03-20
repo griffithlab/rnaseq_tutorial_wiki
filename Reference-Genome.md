@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart2.png)
 
-#1-ii. Reference Genomes
+# 1-ii. Reference Genomes
 
 Obtain a reference genome from Ensembl, iGenomes, NCBI or UCSC. In this example analysis we will use the human GRCh38 version of the genome from Ensembl. Furthermore, we are actually going to perform the analysis using only a single chromosome (chr22) and the ERCC spike-in to make it run faster...
 
@@ -21,7 +21,7 @@ This has been done for you and that data placed on your AWS instance. It contain
 ```bash
 
 cd $RNA_REFS_DIR
-cp /home/ubuntu/workspace/data/fasta/GRCh38/chr22_with_ERCC92.fa .
+cp $RNA_EXT_DATA_DIR/fasta/GRCh38/chr22_with_ERCC92.fa .
 ls 
 
 ```

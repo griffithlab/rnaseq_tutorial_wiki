@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-#4-iii. Stringtie Merge
+# 4-iii. Stringtie Merge
 Use Stringtie to merge predicted transcripts from all libraries into a unified transcriptome. Refer to the Stringtie manual for a more detailed explanation:
 https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual	
 

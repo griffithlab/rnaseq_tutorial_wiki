@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 1](Images/RNA-seq_Flowchart2.png)
 
-#1-v. RNA-seq Data
+# 1-v. RNA-seq Data
 ## Obtain RNA-seq test data. 
  
 The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/UHR.pdf) and [Human Brain Reference (HBR)](https://github.com/griffithlab/rnaseq_tutorial/wiki/ResourceFiles/HBR.pdf).  The UHR is total RNA isolated from a diverse set of 10 cancer cell lines.  The HBR is total RNA isolated from the brains of 23 Caucasians, male and female, of varying age but mostly 60-80 years old.
@@ -26,7 +26,7 @@ The test data has been pre-filtered for reads that appear to map to chromosome 2
 echo $RNA_DATA_DIR
 mkdir -p $RNA_DATA_DIR
 cd $RNA_DATA_DIR 
-cp /home/ubuntu/workspace/data/rnaseq-tutorial/HBR_UHR_ERCC_ds_5pc.tar .
+cp $RNA_EXT_DATA_DIR/rnaseq-tutorial/HBR_UHR_ERCC_ds_5pc.tar .
 
 ```
 
@@ -59,13 +59,13 @@ zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "
 ```
 
 ---
-##PRACTICAL EXERCISE 2
+## PRACTICAL EXERCISE 2
 
 Assignment: Download an additional dataset and unpack it. This data will be used in future practical exercises. 
 
 * Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc).
 * In this exercise you will download an archive of publicly available read data in FASTQ format from here:
-http://genome.wustl.edu/pub/rnaseq/data/alignment_practical.tar
+http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---data)
 
