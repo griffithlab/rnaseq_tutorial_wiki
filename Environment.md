@@ -41,6 +41,11 @@ export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
 
 ```
 
+Since all the environment variables we set up for the RNA-seq workshop start with 'RNA' we can easily view them all by combined use of the `env` and `grep` commands as shown below. The `env` command shows all environment variables currently defined and the `grep` command identifies string matches.
+
+```bash
+env | grep RNA
+```
 
 | [[Previous Section|Unix-Bootcamp]]  | [[This Section|Environment]] | [[Next Section|Resources]] |
 |:-----------------------------------:|:----------------------------:|:--------------------------:|
