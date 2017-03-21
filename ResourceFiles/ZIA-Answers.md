@@ -1,4 +1,4 @@
-#6-iii. Integrated assignment answers
+# 6-iii. Integrated assignment answers
 
 **Background**: The *PCA3* gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA.  There are cancer assays available that test the presence of *PCA3* in urine. 
 
