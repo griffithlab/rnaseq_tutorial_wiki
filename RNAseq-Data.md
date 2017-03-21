@@ -67,6 +67,11 @@ Assignment: Download an additional dataset and unpack it. This data will be used
 * In this exercise you will download an archive of publicly available read data in FASTQ format from here:
 http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 
+**Questions**
+* How many data files were contained in the 'practical.tar' archive? What commonly used sequence data file format are they?
+* In the first read of the hcc1395, normal, replicate 1, read 1 file, what was the physical location of the read on the flow cell (i.e. lane, tile, x, y)? 
+* In the first read of this same file, how many 'T' bases are there?
+
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---data)
 
 ---

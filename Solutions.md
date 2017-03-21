@@ -29,7 +29,15 @@ mkdir -p practice/data
 cd $RNA_HOME/practice/data
 wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
 tar -xvf practical.tar
+ll -1 *.fastq.gz | wc -l
+zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 1
+zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 2 | tail -n 1 | perl -ne '$_ = s/T/X/g; print "\n\n$_\n\n"'
 ```
+
+**Answers**
+* How many data files were contained in the 'practical.tar' archive? What commonly used sequence data file format are they? There are 12 data files in the package. Each is a FASTQ file that has been compressed.
+* In the first read of the hcc1395, normal, replicate 1, read 1 file, what was the physical location of the read on the flow cell (i.e. lane, tile, x, y)? Lane = 4, tile = 1101, x = 10003, y = 44458. 
+* In the first read of this same file, how many 'T' bases are there? 32.
 
 ---
 
