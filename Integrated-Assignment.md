@@ -68,7 +68,7 @@ Remember that a read record looks like this:
 >HWUSI-EAS230-R:6:58:12:550#0/1
 TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
 ```
-##PART 2: Data alignment
+## PART 2: Data alignment
 
 **Goals:**
 - Familiarize yourself with HISAT2 alignment options 
