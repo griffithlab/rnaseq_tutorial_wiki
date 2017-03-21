@@ -5,6 +5,7 @@
 - Key tool papers: [HISAT](https://www.ncbi.nlm.nih.gov/pubmed/25751142), [StringTie](https://www.ncbi.nlm.nih.gov/pubmed/25690850), [BallGown](https://www.ncbi.nlm.nih.gov/pubmed/25748911), [HTSeq](https://www.ncbi.nlm.nih.gov/pubmed/25260700), [EdgeR](https://www.ncbi.nlm.nih.gov/pubmed/19910308).
 - [RNA-seqlopedia](http://rnaseq.uoregon.edu/) (Includes a very comprehensive review of library construction concepts)
 - [List of RNA-Seq bioinformatics tools](https://en.wiki2.org/wiki/List_of_RNA-Seq_bioinformatics_tools)
+- [A survey of best practices for RNA-seq data analysis - 2016](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4728800/)
 - [RNA Sequencing and Analysis - 2015 review](http://cshprotocols.cshlp.org/content/early/2015/04/11/pdb.top084970.abstract)
 - [Comparative analysis of RNA sequencing methods](http://www.nature.com/nmeth/journal/v10/n7/full/nmeth.2483.html)
 - [RNA-seq Data: Challenges in and Recommendations for Experimental Design and Analysis](http://onlinelibrary.wiley.com/doi/10.1002/0471142905.hg1113s83/full)
