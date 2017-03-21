@@ -91,6 +91,13 @@ Assignment: Using the approach above, trim the reads for both normal and tumor s
 
 * Hint: These files should have been downloaded to $RNA_HOME/practice/data/.
 
+Answer these questions by examining the FastQC reports:
+
+* After trimming, what is the range of read lengths observed for hcc1395 normal replicate 1, read 1?
+* Which sections of the FastQC report are most informative for observing the effect of trimming?
+* In the 'Per base sequence content section', what pattern do you see? What could explain this pattern?
+
+
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-4---trim)
 
 ---

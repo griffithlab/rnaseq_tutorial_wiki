@@ -80,6 +80,10 @@ fastqc *.fastq.gz
 * http://YOUR_DNS_NAME/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
 * http://YOUR_DNS_NAME/rnaseq/practice/data/trimmed/hcc1395_normal_rep1_1_fastqc.html
 
+* After trimming, what is the range of read lengths observed for hcc1395 normal replicate 1, read 1? 25-151
+* Which sections of the FastQC report are most informative for observing the effect of trimming? 'Basic Statistics', 'Sequence Length Distribution', and 'Adapter Content'
+* In the 'Per base sequence content section', what pattern do you see? What could explain this pattern? The first 9 base positions show a spiky pattern, suggesting biased representation of each base near the beginning of our reads/fragments. One possible explanation is that random hexamer priming for cDNA synthesis during library prep is happening in a non-random way. i.e. certain random hexamers are favored, therefore the creation of fragments (and ultimately reads) has a non-random pattern near the beginning. 
+
 ---
 
 ### Practical Exercise 5 - Alignment
