@@ -24,7 +24,7 @@ stringtie <aligned_reads.bam> [options]*
 Extra options specified below:
 
 * '-p 8' tells Stringtie to use eight CPUs
-* '-G <known transcripts file>' reference annotation to use for guiding the assembly process (GTF/GFF3) 
+* '-G \<known transcripts file\>' reference annotation to use for guiding the assembly process (GTF/GFF3) 
 * '-e' only estimate the abundance of given reference transcripts (requires -G)
 * '-B' enable output of Ballgown table files which will be created in the same directory as the output GTF (requires -G, -o recommended)
 * '-o' output path/file name for the assembled transcripts GTF (default: stdout)
