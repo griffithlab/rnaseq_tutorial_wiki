@@ -38,7 +38,7 @@ Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by
 * What is the most common average sequence quality score?
 * What is the most common kmer that is observed?
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---qc)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---data-qc)
 
 ---
 
