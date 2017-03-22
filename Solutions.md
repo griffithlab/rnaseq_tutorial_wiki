@@ -164,12 +164,15 @@ samtools index HCC1395_tumor.bam
 Start IGV on your laptop. Load the HCC1395_normal.bam & HCC1395_tumor.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. 
 
 **HCC1395BL (normal) alignment**: 
-
 http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_normal.bam
 
 **HCC1395 tumor alignment**:
-
 http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
+
+**Answers**
+* Load your merged normal and tumor BAM files into IGV. Navigate to this location on chromosome 22: 'chr22:38,466,394-38,508,115'. What do you see here? How would you describe the direction of transcription for the two genes? Does the reported strand for the reads aligned to each of these genes appear to make sense? How do you modify IGV settings to see the clearly? This region contains two genes, 'KDELR3' and 'DDX17'. With repect to direction of transcription, these genes are arranged in a tail-to-tail fashion (their transcription end points are coming together). KDELR3 is transcribed from the '+ve' or 'top' strand (left to right) and DDX17 is transcribed from the '-ve' or 'bottom' strand (right to left). Yes, the reads aligned appear to correspond to the expected strand of transcription. To view this pattern, do an option click within the alignment track and select 'Color alignments by' and 'first-of-pair strand' from the viewing options.  You can do this for both normal and tumor alignment tracks seperately.
+* How can we modify IGV to color reads by Read Group? How many read groups are there for each sample (tumor & normal)? What are your read group names for the tumor sample?
+* What are the options for visualizing splicing or alternative splicing patterns in IGV? Navigate to this location on chromosome 22: 'chr22:40,363,200-40,367,500'. What splicing event do you see?
 
 ---
 
