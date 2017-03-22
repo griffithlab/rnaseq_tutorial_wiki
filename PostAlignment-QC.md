@@ -70,7 +70,7 @@ Files needed:
 Set your working directory and copy the necessary files
 
 ```
-cd $RNA_HOME
+cd $RNA_HOME/tools/
 cp -r $RNA_EXT_DATA_DIR/rnaseq-tutorial/RSeQC.zip .
 ```
 
