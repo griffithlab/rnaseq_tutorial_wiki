@@ -19,6 +19,11 @@ make
 ./bin/bedtools
 ```
 
+**Answers**
+* What happens when you run bedtools without any options? The basic usage documentation is printed. 
+* Where can you find detailed documentation on how to use bedtools? http://bedtools.readthedocs.io/en/latest/
+* How many general categories of analysis can you perform with bedtools? What are they? There are 8. They are 'Genome arithmetic', 'Multi-way file comparisons', 'Paired-end manipulation', 'Format conversion', 'Fasta manipulation', 'BAM focused tools', 'Statistical relationships', and 'Miscellaneous tools'.
+
 ---
 
 ### Practical Exercise 2 - Data
