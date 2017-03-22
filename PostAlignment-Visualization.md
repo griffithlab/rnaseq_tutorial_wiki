@@ -1,7 +1,7 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 # 2-iii. Alignment Visualization
-Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. First, let's just index the merged/combined bam files.
+Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. First, we will just index the merged/combined bam files.
 
 ```bash
 
@@ -120,6 +120,12 @@ cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", 
 Assignment: Index your bam files from [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5) and visualize in IGV. 
 
 * Hint: As before, it may be simplest to just index and visualize the combined/merged bam files HCC1395_normal.bam and HCC1395_tumor.bam.
+* If this works, you should have two BAM files that can be loaded into IGV using the following URLs:
+  * http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_normal.bam
+  * http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
+
+**Questions**
+
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-6---visualize)
 
