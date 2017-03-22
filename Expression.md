@@ -45,11 +45,15 @@ stringtie -p 8 -G $RNA_REF_GTF -e -B -o UHR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/
 
 ```
 
-What does the raw output from Stringtie look like?
+What does the raw output from Stringtie look like? For details on the Stringtie output files refer to [Stringtie manual](http://ccb.jhu.edu/software/stringtie/index.shtml?t=manual) ([outputs section](http://ccb.jhu.edu/software/stringtie/index.shtml?t=manual#output))
 
 ```bash
 
 less UHR_Rep1/transcripts.gtf
+```
+
+Limit the view to transcript records and their expression values (FPKM and TPM values)
+```bash
 
 awk '{if ($3=="transcript") print}' UHR_Rep1/transcripts.gtf | cut -f 1,4,9 | less
 
