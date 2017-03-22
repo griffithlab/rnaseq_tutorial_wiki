@@ -144,6 +144,12 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 
 ```
 
+**Answers**
+* What is the difference between a .sam and .bam file? The '.sam' or SAM file is a plain text sequence alignment map file. The '.bam' or BAM file is a binary compressed version of this same information.
+* If you sorted the resulting BAM file as we did above, is the result sorted by read name? Or position? It is sorted by position.
+* Which columns of the BAM file can be viewed to determine the style of sorting? The first, third and fourth columns contain the read name, chromosome, and position. Try `samtools view HCC1395_normal.bam | head | cut -f 1,3,4` to confirm the sorting style.
+* What command can you use to view only the BAM header? Try `samtools view -H HCC1395_normal.bam`
+
 ---
 
 ### Practical Exercise 6 - Visualize

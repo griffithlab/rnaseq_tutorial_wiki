@@ -107,6 +107,12 @@ Assignment: Perform some alignments on additional read data sets. Align the read
 
 * Hint: Do this analysis on the additional data and in the separate working directory called ‘practice’ that you created in [Practical Exercise 2](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data#practical-exercise-2).
 
+**Questions**
+* What is the difference between a .sam and .bam file?
+* If you sorted the resulting BAM file as we did above, is the result sorted by read name? Or position?
+* Which columns of the BAM file can be viewed to determine the style of sorting?
+* What command can you use to view only the BAM header?
+
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-5---alignment)
 
 ---
