@@ -49,7 +49,7 @@ What does the raw output from Stringtie look like? For details on the Stringtie 
 
 ```bash
 
-less UHR_Rep1/transcripts.gtf
+less -S UHR_Rep1/transcripts.gtf
 ```
 
 Limit the view to transcript records and their expression values (FPKM and TPM values)
@@ -60,6 +60,16 @@ awk '{if ($3=="transcript") print}' UHR_Rep1/transcripts.gtf | cut -f 1,4,9 | le
 ```
 
 Press 'q' to exit the 'less' display
+
+Gene and transcript level expression values can also be viewed in these two files:
+
+```bash
+
+less -S UHR_Rep1/t_data.ctab
+
+less -S UHR_Rep1/gene_abundances.tsv
+
+```
 
 ## PRACTICAL EXERCISE 7
 
