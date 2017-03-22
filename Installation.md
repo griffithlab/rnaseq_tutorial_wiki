@@ -225,7 +225,7 @@ launch R (enter `R` at linux command prompt) and type the following at an R comm
 
 
 ---
-## Practical Exercise 1 - Software Installation
+## PRACTICAL EXERCISE 1 - Software Installation
 
 Assignment: Install bedtools on your own. Make sure you install it in your tools folder. Download, unpack, compile, and test the bedtools software.
 
