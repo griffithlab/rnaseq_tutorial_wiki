@@ -32,6 +32,7 @@ Assignment: Run FASTQC on one of the additional fastq files you downloaded in th
 
 Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by examining the output.
 
+**Questions**
 * How many total sequences are there?
 * What is the range (x - y) of read lengths observed?
 * What is the most common average sequence quality score?

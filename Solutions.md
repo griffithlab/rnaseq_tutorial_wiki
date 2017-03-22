@@ -46,7 +46,7 @@ zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 2 | tail -n 1 | perl -ne '$_ = s/
 
 ---
 
-### Practical Exercise 3 - QC
+### Practical Exercise 3 - Data QC
 
 ```bash
 
@@ -60,6 +60,7 @@ Then, go to the following url in your browser:
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance IP or DNS (e.g., cbw##.dyndns.info)
 * Click on any of the *_fastqc.html files to view the FastQC report (e.g., hcc1395_normal_rep1_r1_fastqc.html)
 
+**Answers**
 * How many total sequences are there? 331,958
 * What is the range (x - y) of read lengths observed? 151
 * What is the most common average sequence quality score? 41
