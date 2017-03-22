@@ -60,8 +60,10 @@ We previously had a fusion detection module but it was difficult to complete in 
 ### Improve alignment QC section
 In particular we should add use of `Picard CollectRnaSeqMetrics` (https://broadinstitute.github.io/picard/command-line-overview.html) and `RNA-SeQC` (http://www.broadinstitute.org/cancer/cga/rna-seqc).  It would also be good to include use of splicing metrics calculated from the TopHat junctions files.  A standalone version of the TGI tool that does this would need to be created for this purpose.
 
+Also use MultiQC to produce a combined report of the QC results: http://multiqc.info/
+
 ### Improve Expression/Differential expression lectures
-There a some nice slides/concepts that we could borrow from the BaseSpace Demo slides (see Obi's ~/Dropbox Teaching/CSHL/2015/Workshop-CSHL-RNA-Seq-Metagenomics.pdf).
+There a some nice slides/concepts that we could borrow from the BaseSpace Demo slides (see Obis ~/Dropbox Teaching/CSHL/2015/Workshop-CSHL-RNA-Seq-Metagenomics.pdf).
 
 ### Create a genome reference free analysis module.
 Can expand on the current Kallisto exercise.
