@@ -93,6 +93,7 @@ Assignment: Using the approach above, trim the reads for both normal and tumor s
 
 Answer these questions by examining the FastQC reports:
 
+**Questions**
 * After trimming, what is the range of read lengths observed for hcc1395 normal replicate 1, read 1?
 * Which sections of the FastQC report are most informative for observing the effect of trimming?
 * In the 'Per base sequence content section', what pattern do you see? What could explain this pattern?
