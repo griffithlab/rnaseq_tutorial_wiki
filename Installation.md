@@ -118,6 +118,8 @@ cd $RNA_HOME/
 cd tools/
 wget https://github.com/pachterlab/kallisto/releases/download/v0.43.0/kallisto_linux-v0.43.0.tar.gz
 tar -zxvf kallisto_linux-v0.43.0.tar.gz
+cd kallisto_linux-v0.43.0/
+./kallisto
 
 ```
 
