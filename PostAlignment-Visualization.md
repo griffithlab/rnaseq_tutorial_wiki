@@ -1,14 +1,13 @@
 ![RNA-seq Flowchart - Module 3](Images/RNA-seq_Flowchart3.png)
 
 # 2-iii. Alignment Visualization
-Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. First, we will just index the merged/combined bam files.
+Before we can view our alignments in the IGV browser we need to index our BAM files.  We will use samtools index for this purpose. For convenience later, index all bam files.
 
 ```bash
 
 echo $RNA_ALIGN_DIR
 cd $RNA_ALIGN_DIR
-samtools index HBR.bam
-samtools index UHR.bam
+samtools index *.bam
 
 ```
 
