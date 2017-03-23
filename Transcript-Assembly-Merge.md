@@ -54,14 +54,14 @@ awk '{if($3=="transcript") print}' merged.annotated.gtf | cut -f 1,4,9 | less
 Press 'q' to exit the less viewer
 
 
-For de novo mode:
+For de novo mode (again, we do not provide an Ensembl GTF):
 
 ```bash
 
 cd $RNA_HOME/expression/stringtie/de_novo/
 ls -1 *Rep*/transcripts.gtf > assembly_GTF_list.txt
 cat assembly_GTF_list.txt
-stringtie --merge -p 8 -o stringtie_merged.gtf -G $RNA_REF_GTF assembly_GTF_list.txt
+stringtie --merge -p 8 -o stringtie_merged.gtf assembly_GTF_list.txt
 
 ```
 
