@@ -66,7 +66,12 @@ Also use MultiQC to produce a combined report of the QC results: http://multiqc.
 There a some nice slides/concepts that we could borrow from the BaseSpace Demo slides (see Obis ~/Dropbox Teaching/CSHL/2015/Workshop-CSHL-RNA-Seq-Metagenomics.pdf).
 
 ### Create a genome reference free analysis module.
-Can expand on the current Kallisto exercise.
+- Expand on the current Kallisto exercise.
+- Add Sleuth for DE
+- Consider adding Salmon as an alternate to Kallisto?
+
+### Create a new gene fusion discovery module
+- Try Pizzly
 
 ### Add more content on downstream analysis
 For example, pathway analysis of RNA-seq data, clustering, etc.
@@ -98,9 +103,8 @@ Perhaps HISAT2 can be used instead of TopHat/STAR.  Using only a single aligner 
 Also, the new "Tuxedo" protocol paper is out demonstrating an equivalent HISAT2/StringTie/Ballgown workflow:
 [Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](http://www.nature.com/nprot/journal/v11/n9/full/nprot.2016.095.html)
 
-
-### Update the alternative splicing module to provide an alternative analysis workflow to Cufflinks
-Introduction to RegTools functionality. After use of TopHat2 or RNA-star (or hopefully HISAT2), [QoRTs](https://github.com/hartleys/QoRTs) (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html) and [JunctionSeq](https://bioconductor.org/packages/release/bioc/html/JunctionSeq.html). 
+### Update the alternative splicing module to provide an alternative analysis workflow to StringTie/Ballgown
+Introduction to RegTools functionality. After HISAT2 alignment, [QoRTs](https://github.com/hartleys/QoRTs) (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html) and [JunctionSeq](https://bioconductor.org/packages/release/bioc/html/JunctionSeq.html). 
 
 | [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
