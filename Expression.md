@@ -125,7 +125,7 @@ htseq-count --format bam --order pos --mode intersection-strict --stranded rever
 
 ```
 
-Merge results files into a single matrix for use in edgeR:
+Merge results files into a single matrix for use in edgeR. The following joins the results for each replicate together, adds a header, reformats the result as a tab delimited file, and shows you the first 10 lines of the resulting file :
 
 ```bash
 
