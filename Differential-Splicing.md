@@ -34,10 +34,10 @@ Run Ballgown using the reference guided, merged transcripts
 
 ```bash
 
-mkdir -p $RNA_HOME/de/ballgown/ref_guided/
-cd $RNA_HOME/de/ballgown/ref_guided/
+mkdir -p $RNA_HOME/de/ballgown/ref_guided_merged/
+cd $RNA_HOME/de/ballgown/ref_guided_merged/
 
-printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided/HBR_Rep3\"\n" > UHR_vs_HBR.csv
+printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided_merged/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided_merged/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/ref_guided_merged/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided_merged/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided_merged/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/ref_guided_merged/HBR_Rep3\"\n" > UHR_vs_HBR.csv
 
 ```
 
@@ -68,10 +68,10 @@ Run Ballgown using the de novo, merged transcripts
 
 ```bash
 
-mkdir -p $RNA_HOME/de/ballgown/de_novo/
-cd $RNA_HOME/de/ballgown/de_novo/
+mkdir -p $RNA_HOME/de/ballgown/de_novo_merged/
+cd $RNA_HOME/de/ballgown/de_novo_merged/
 
-printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo/HBR_Rep3\"\n" > UHR_vs_HBR.csv
+printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo_merged/UHR_Rep1\"\n\"UHR_Rep2\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo_merged/UHR_Rep2\"\n\"UHR_Rep3\",\"UHR\",\"$RNA_HOME/expression/stringtie/de_novo_merged/UHR_Rep3\"\n\"HBR_Rep1\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo_merged/HBR_Rep1\"\n\"HBR_Rep2\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo_merged/HBR_Rep2\"\n\"HBR_Rep3\",\"HBR\",\"$RNA_HOME/expression/stringtie/de_novo_merged/HBR_Rep3\"\n" > UHR_vs_HBR.csv
 
 ```
 
