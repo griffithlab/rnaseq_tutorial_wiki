@@ -52,7 +52,7 @@ unzip data.zip
 
 **Q1.)** How many items are there under the “refs” directory (counting all files in all sub-directories)? 
 
-**A1.)** The answer is 6. Review these files so that you are familiar with them.
+**A1.)** The answer is 12. Review these files so that you are familiar with them.
 
 ```
 cd $RNA_ASSIGNMENT/refs/
