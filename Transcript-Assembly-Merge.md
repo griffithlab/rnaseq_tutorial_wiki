@@ -65,7 +65,7 @@ stringtie --merge -p 8 -o stringtie_merged.gtf assembly_GTF_list.txt
 
 ```
 
-Compare de novo to known annotation:
+Compare the de novo merged transcritps to the known annotations:
 
 ```bash
 

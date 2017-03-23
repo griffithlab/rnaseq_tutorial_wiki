@@ -12,11 +12,13 @@ https://github.com/alyssafrazee/ballgown
 	
 Calculate UHR and HBR expression estimates, for known/novel (reference guided mode) transcripts
 
-Run Stringtie using the reference guided, merged GTF and output tables for Ballgown
+Re-run Stringtie using the reference guided merged GTF, and output tables for Ballgown. Store the results in a new directory so that we can still examine the results generated without the merged GTF.
 
 ```bash
 
-cd $RNA_HOME/expression/stringtie/ref_guided
+cd $RNA_HOME/expression/stringtie/
+mkdir ref_guided_merged
+cd ref_guided_merged
 
 stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
 stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
@@ -43,12 +45,14 @@ Please see [[Differential Expression|Differential-Expression]] for details on ru
 
 Calculate UHR and HBR expression estimates, for known/novel (de novo mode) transcripts:
 
-Run Stringtie using the de novo, merged GTF and output tables for Ballgown
-
+Re-run Stringtie using the de novo merged GTF, and output tables for Ballgown. Store the results in a new directory so that we can still examine the results generated without the merged GTF.
 
 ```bash
 
 cd $RNA_HOME/expression/stringtie/de_novo
+cd $RNA_HOME/expression/stringtie/
+mkdir de_novo_merged
+cd de_novo_merged
 
 stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep1/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep1.bam
 stringtie -p 8 -G merged.annotated.gtf -e -B -o HBR_Rep2/transcripts.gtf $RNA_ALIGN_DIR/HBR_Rep2.bam
