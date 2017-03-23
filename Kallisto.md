@@ -105,7 +105,7 @@ Work in progress...
 ```
 
 ## Create a custom transcriptome database to examine a specific set of genes
-For example, suppose we just want to quickly assess the presence of ribosomal RNA genes only. We can obtain these genes from an Ensembl GTF file. In the example below we will use our chromosome 22 GTF file for demonstration purposes. But in a 'real world' experiment you would you a GTF for all chromosomes. Once we have found GTF records for ribosomal RNA genes, we will create a fasta file that contains the sequences for these transcripts, and then index this sequence database for use with Kallisto.
+For example, suppose we just want to quickly assess the presence of ribosomal RNA genes only. We can obtain these genes from an Ensembl GTF file. In the example below we will use our chromosome 22 GTF file for demonstration purposes. But in a 'real world' experiment you would use a GTF for all chromosomes. Once we have found GTF records for ribosomal RNA genes, we will create a fasta file that contains the sequences for these transcripts, and then index this sequence database for use with Kallisto.
 
 ```bash
 
