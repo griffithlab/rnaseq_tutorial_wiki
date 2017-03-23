@@ -85,6 +85,14 @@ rm -f header.tsv
 
 ```
 
+Take a look at the final kallisto result file we created:
+
+```bash
+head transcript_tpms_all_samples.tsv
+tail transcript_tpms_all_samples.tsv
+
+```
+
 ## Compare transcript abundance estimates from Kallisto to isoform abundance estimates from StringTie
 How similar are the results we obtained from Kallisto to those from StringTie? We can compare the expression value for each Ensembl transcript from chromosome 22 as well as the ERCC spike in controls.
 
