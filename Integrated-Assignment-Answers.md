@@ -37,6 +37,7 @@ export RNA_REFS_DIR=$RNA_ASSIGNMENT/refs
 export RNA_REF_INDEX=$RNA_REFS_DIR/Homo_sapiens.GRCh38.dna.chromosome.9
 export RNA_REF_FASTA=$RNA_REF_INDEX.fa
 export RNA_REF_GTF=$RNA_REFS_DIR/Homo_sapiens.GRCh38.86.chr9.gtf
+export RNA_ALIGN_DIR="~/workspace/rnaseq/integrated_assignment/hisat2"
 ```
 
 Obtain reference, annotation and data files and place them in the integrated assignment directory
