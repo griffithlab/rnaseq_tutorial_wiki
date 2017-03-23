@@ -72,6 +72,14 @@ less -S UHR_Rep1/gene_abundances.tsv
 
 ```
 
+Create a tidy expression matrix files for the StringTie results. This will be done at both the gene and transcript level and also will take into account the various expression measures produced: coverage, FPKM, and TPM.
+```bash
+
+Work in progress
+
+```
+
+
 ## PRACTICAL EXERCISE 7
 
 Assignment: Use StringTie to Calculate transcript-level expression estimates for the alignments (bam files) you created in [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5). 
