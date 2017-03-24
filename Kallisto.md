@@ -111,6 +111,7 @@ chmod +x kallisto_gene_matrix.pl
 
 ```
 
+Now load files and summarize results from each approach in R
 ```bash
 
 Work in progress...
