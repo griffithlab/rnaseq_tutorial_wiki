@@ -106,6 +106,7 @@ First create the gene version of the Kallisto TPM matrix
 
 cd $RNA_HOME/expression/kallisto
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/kallisto_gene_matrix.pl
+chmod +x kallisto_gene_matrix.pl
 ./kallisto_gene_matrix.pl --gtf_file=$RNA_HOME/refs/chr22_with_ERCC92.gtf  --kallisto_transcript_matrix_in=transcript_tpms_all_samples.tsv --kallisto_transcript_matrix_out=gene_tpms_all_samples.tsv
 
 ```
