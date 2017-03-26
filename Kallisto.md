@@ -119,7 +119,7 @@ R
 
 ```
 
-A separate R file has been provided in the github repo for this part of the tutorial: Tutorial_Module5_Part1_comparisons.R. Run the R commands detailed in this script in your R session.
+A separate R file has been provided in the github repo for this part of the tutorial: [Tutorial_Module5_Part1_comparisons.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module5_Part1_comparisons.R). Run the R commands detailed in this script in your R session.
 
 The output file can be viewed in your browser at the following url. Note, you must replace YOUR_IP_ADDRESS with your own amazon instance IP (e.g., 101.0.1.101)).
 
