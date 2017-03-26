@@ -129,7 +129,7 @@ In addition to installing on the cloud you should also install FastQC on your ow
 ```bash
 
 cd $RNA_HOME/tools/
-wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip --no-check-certificate
 unzip fastqc_v0.11.5.zip
 cd FastQC/
 chmod 755 fastqc
