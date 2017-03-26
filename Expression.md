@@ -75,6 +75,10 @@ less -S UHR_Rep1/gene_abundances.tsv
 Create a tidy expression matrix files for the StringTie results. This will be done at both the gene and transcript level and also will take into account the various expression measures produced: coverage, FPKM, and TPM.
 ```bash
 
+cd $RNA_HOME/expression/stringtie/ref_only/
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/stringtie_expression_matrix.pl
+chmod +x stringtie_expression_matrix.pl
+
 Work in progress
 
 ```
@@ -90,8 +94,6 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 ---
 ### HTSEQ-COUNT
-
-**[OPTIONAL]**
 
 Run htseq-count on alignments instead to produce raw counts instead of FPKM/TPM values for differential expression analysis
 
@@ -145,6 +147,9 @@ rm -f gene_read_counts_table_all.tsv header.txt
 head gene_read_counts_table_all_final.tsv
 
 ```
+
+---
+### Comparison of ERCC spike-in observed and expected counts
 
 Based on the above read counts, plot the linearity of the ERCC spike-in read counts versus the known concentration of the ERCC spike-in Mix. In this step we will first download a file describing the expected concentrations and fold-change differences for the ERCC spike-in reagent. Next we will use a Perl script to organize the ERCC expected values and our observed counts for each ERCC sequence. Finally, we will use an R script to produce an x-y scatter plot that compares the expected and observed values.
 
