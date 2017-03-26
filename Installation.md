@@ -179,11 +179,8 @@ make
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://downloads.sourceforge.net/project/rseqc/RSeQC-2.6.4.tar.gz
-tar -zxvf RSeQC-2.6.4.tar.gz
-cd RSeQC-2.6.4/
-python setup.py install --root=$RNA_HOME/tools/RSeQC-2.6.4/
-./usr/local/bin/read_GC.py
+pip install RSeQC
+read_GC.py
 ```
 
 ## [R](http://www.r-project.org/)
