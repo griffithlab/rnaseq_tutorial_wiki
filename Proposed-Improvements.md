@@ -4,18 +4,6 @@
 - Each module should have at least two exercises where the students are not copying/pasting anything.  One could be at 1/2 way point, and the other at the end of the module.  The one at the end could be a group exercise.
 - Each day should end with at least one hour of integrated assignment.
 
-### Update the AMI to use bash instead of dash as default shell
-The STAR aligner currently throws errors when run on an ubuntu system because `/bin/sh` is linked to `/bin/dash` and not to `/bin/bash`.
-
-```
-ls -l /bin/sh
-sudo mv /bin/sh /bin/sh.orig
-sudo ln -s /bin/bash /bin/sh
-```
-
-### Install 'tree' command into the AMI
-Pre-install the `tree` command in the Amazon AMI so that it is ready for students to use
-
 ### Install 'pip' command into the AMI
 In order for htseq-count to use bam files directly it needs pysam. This can be installed with pip but that is not available by default.
 
@@ -42,11 +30,7 @@ For R and other applications it would be nice if X11 worked. Note the install in
 ### Create a trimming section 
 Create a wiki section and exercise that summarizes read trimming concepts. Start with some raw data, including aligned reads.  Align these reads without any trimming and assess alignment statistics using Picard, FastQC, etc.  Now take these same reads and perform both adaptor trimming and quality trimming.  Re-align the trimmed reads and assess the effect of trimming on alignment metrics.
 
-### Add a Vi/Vim tutorial and pre-requisites/resources to course
-
-### Add RSeQC to tutorial
-Add installation and running of RSeQC 
-This could possible replace Samstat which never works very well
+Note: we do have an okay trimming section now, but it should really be starting with raw reads, rather than those that had already been proven to align to chr 22. This makes it harder to see the value of trimming by comparing alignment pre/post trimming. Instead we should perhaps get chr22 matching reads by k-mer analysis (kallisto), then trim (adapter and/or quality), then align trimmed and untrimmed, and summarize the difference.
 
 ### Create a batch effect section
 We should add a section about batch effects.  Both detecting the presence of batch effects as well as correcting for them during analysis.
@@ -91,17 +75,8 @@ Gray lab breast cancer cell line dataset:
 - https://github.com/genome/gms/wiki/Guide-to-Importing-and-Analyzing-External-Data (another guide on downloading and reformatting this data)
 
 ### Update the tutorial to take into account recent developments in RNA-seq analysis methods, best practices, and new tools
-- [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
-- [StringTie](http://www.nature.com/nbt/journal/v33/n3/full/nbt.3122.html )
-- [Ballgown](http://www.ncbi.nlm.nih.gov/pubmed/25748911)
-- [Kallisto](http://arxiv.org/abs/1505.02710) and Sleuth
 - [Salmon](https://github.com/COMBINE-lab/salmon)
 - [featureCounts](http://bioinf.wehi.edu.au/featureCounts/) instead of HtSeq
-
-Perhaps HISAT2 can be used instead of TopHat/STAR.  Using only a single aligner would save time for exploring more concepts downstream. Not sure of the value of using multiple alignments anyway. Time to shift focus a bit more towards the downstream stuff as alignment and QC become more routine.
-
-Also, the new "Tuxedo" protocol paper is out demonstrating an equivalent HISAT2/StringTie/Ballgown workflow:
-[Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown](http://www.nature.com/nprot/journal/v11/n9/full/nprot.2016.095.html)
 
 ### Update the alternative splicing module to provide an alternative analysis workflow to StringTie/Ballgown
 Introduction to RegTools functionality. After HISAT2 alignment, [QoRTs](https://github.com/hartleys/QoRTs) (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html) and [JunctionSeq](https://bioconductor.org/packages/release/bioc/html/JunctionSeq.html). 
