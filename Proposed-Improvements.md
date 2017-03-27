@@ -1,5 +1,10 @@
 # 5-v. Proposed improvements
 
+### Update data sets on the MGI FTP site
+- Put the original UHR and HBR instrument data on the FTP site
+- Put the instrument data for the new hcc1395 data on the FTP site
+- MGI notes on this data will be here: https://confluence.gsc.wustl.edu/display/CI/Cancer+Informatics+Test+Data
+
 ### More independent exercises, group exercises, and integrated assignments
 - Each module should have at least two exercises where the students are not copying/pasting anything.  One could be at 1/2 way point, and the other at the end of the module.  The one at the end could be a group exercise.
 - Each day should end with at least one hour of integrated assignment.
