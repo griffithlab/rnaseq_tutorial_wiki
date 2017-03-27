@@ -75,7 +75,8 @@ Save all genes with P<0.05 to a new file.
 
 ```bash
 
- grep -v feature UHR_vs_HBR_gene_results_sig.tsv | cut -f 7 | sed 's/\"//g' > DE_genes.txt
+grep -v feature UHR_vs_HBR_gene_results_sig.tsv | cut -f 7 | sed 's/\"//g' > DE_genes.txt
+head DE_genes.txt
 
 ```
 
