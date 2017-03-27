@@ -1,3 +1,9 @@
+| [[Previous Section|Alignment]] | [[This Section|IGV-Tutorial]] | [[Next Section|PostAlignment-Visualization]] |
+|:------------------------------:|:-----------------------------:|:--------------------------------------------:|
+| [[Alignment|Alignment]]        | [[IGV|IGV-Tutorial]] | [[Alignment Visualization|PostAlignment-Visualization]]         |
+
+---
+
 ## Table of contents
 1. [Introduction](IGV-Tutorial#introduction)
   1. [Description of the lab](IGV-Tutorial#description-of-the-lab)
