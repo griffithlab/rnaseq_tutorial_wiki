@@ -76,6 +76,12 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 ---
 
+---
+NOTE: various data sets used over time for our RNA-seq workshops can be found here:
+https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/
+
+If you use these data, please cite our paper: [[Citation|Citation]]
+
 
 | [[Previous Section|Indexing]] | [[This Section|RNAseq-Data]] | [[Next Section|PreAlignment-QC]]    |
 |:-----------------------------:|:----------------------------:|:-----------------------------------:|
