@@ -73,7 +73,7 @@ Then, go to the following url in your browser:
 ```
 cd $RNA_HOME/practice/data/
 mkdir trimmed
-wget http://genome.wustl.edu/pub/rnaseq/trim/illumina_multiplex.fa
+wget http://genomedata.org/rnaseq-tutorial/illumina_multiplex.fa
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_rep1_r1.fastq.gz --reads2 hcc1395_normal_rep1_r2.fastq.gz --target trimmed/hcc1395_normal_rep1
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_rep2_r1.fastq.gz --reads2 hcc1395_normal_rep2_r2.fastq.gz --target trimmed/hcc1395_normal_rep2
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_normal_rep3_r1.fastq.gz --reads2 hcc1395_normal_rep3_r2.fastq.gz --target trimmed/hcc1395_normal_rep3
