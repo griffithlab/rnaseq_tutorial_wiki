@@ -65,7 +65,7 @@ Assignment: Download an additional dataset and unpack it. This data will be used
 
 * Hint: Do this in a separate working directory called ‘practice’ and create sub-directories for organization (data, alignments, etc).
 * In this exercise you will download an archive of publicly available read data in FASTQ format from here:
-http://genome.wustl.edu/pub/rnaseq/data/practical.tar
+http://genomedata.org/rnaseq-tutorial/practical.tar
 
 **Questions**
 * How many data files were contained in the 'practical.tar' archive? What commonly used sequence data file format are they?
