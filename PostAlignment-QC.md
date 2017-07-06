@@ -71,7 +71,7 @@ Set your working directory and copy the necessary files
 
 ```
 cd $RNA_HOME/data/
-cp -r $RNA_EXT_DATA_DIR/rnaseq-tutorial/RSeQC.zip .
+wget http://genomedata.org/rnaseq-tutorial/RSeQC.zip
 ```
 
 Unzip the RSeQC file:
