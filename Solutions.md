@@ -32,7 +32,7 @@ make
 cd $RNA_HOME
 mkdir -p practice/data
 cd $RNA_HOME/practice/data
-wget http://genome.wustl.edu/pub/rnaseq/data/practical.tar
+wget http://genomedata.org/rnaseq-tutorial/practical.tar
 tar -xvf practical.tar
 ll -1 *.fastq.gz | wc -l
 zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 1
