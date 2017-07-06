@@ -26,7 +26,7 @@ The test data has been pre-filtered for reads that appear to map to chromosome 2
 echo $RNA_DATA_DIR
 mkdir -p $RNA_DATA_DIR
 cd $RNA_DATA_DIR 
-cp $RNA_EXT_DATA_DIR/rnaseq-tutorial/HBR_UHR_ERCC_ds_5pc.tar .
+wget http://genomedata.org/rnaseq-tutorial/HBR_UHR_ERCC_ds_5pc.tar
 
 ```
 
