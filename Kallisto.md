@@ -209,6 +209,6 @@ tar -xzvf rnaseq_tutorial.tar.gz
 
 ```
 
-| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Abbreviations]]  |
+| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Saving-Your-Results]]  |
 |:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
-| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]       | [[Abbreviations|Abbreviations]] |
+| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]       | [[Saving Results|Saving-Your-Results]] |
