@@ -82,7 +82,7 @@ samtools sort -@ 8 -o HBR_Rep3.bam HBR_Rep3.sam
 
 ### Merge HISAT2 BAM files
 
-Make one glorious BAM combining all UHR data and another for all HBR data. Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information. NOTE: sambamba also retains header info.
+Make a single BAM file combining all UHR data and another for all HBR data. Note: This could be done in several ways such as 'samtools merge', 'bamtools merge', or using picard-tools (see below). We chose the third method because it did the best job at merging the bam header information. NOTE: sambamba also retains header info.
 
 ```bash
 

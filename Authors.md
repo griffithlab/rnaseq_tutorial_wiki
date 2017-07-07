@@ -1,12 +1,12 @@
 # 0-i. Authors
 
-- [Malachi Griffith<sup>1,2,4</sup>](http://genome.wustl.edu/people/individual/malachi-griffith/), [mgriffit[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/malachi-griffith/), [@malachigriffith](https://twitter.com/malachigriffith)
-- [Obi Griffith<sup>1,3,4</sup>](http://genome.wustl.edu/people/individual/obi-griffith/), [ogriffit[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/obi-griffith/), [@obigriffith](https://twitter.com/obigriffith)
-- [Jason Walker<sup>1</sup>](http://genome.wustl.edu/people/individual/jason-walker/), [jwalker[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/jason-walker/)
-- [Ben Ainscough<sup>1</sup>](http://genome.wustl.edu/people/individual/Benjamin-Ainscough/), [bainscou[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/benjamin-ainscough/)
-- [Nicholas Spies<sup>1</sup>](http://genome.wustl.edu/people/individual/Nicholas-Spies/), [nspies[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/nicholas-spies/)
-- [Alex Wagner<sup>1</sup>](http://genome.wustl.edu/people/individual/alex-wagner/), [awagner[AT]genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/alex-wagner/), [@handlerwagner](https://twitter.com/handlerwagner)
-- [Fouad Yousif<sup>5</sup>](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif), [Fouad.Yousif[AT]oicr.on.ca](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif)
+- [Malachi Griffith<sup>1,2,4</sup>](http://genome.wustl.edu/people/individual/malachi-griffith/), [mgriffit\@genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/malachi-griffith/), [@malachigriffith](https://twitter.com/malachigriffith)
+- [Obi Griffith<sup>1,3,4</sup>](http://genome.wustl.edu/people/individual/obi-griffith/), [ogriffit\@genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/obi-griffith/), [@obigriffith](https://twitter.com/obigriffith)
+- [Jason Walker<sup>1</sup>](http://genome.wustl.edu/people/individual/jason-walker/), [jwalker\@genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/jason-walker/)
+- [Alex Wagner<sup>1</sup>](http://genome.wustl.edu/people/individual/alex-wagner/), [awagner24\@wustl.edu](http://genome.wustl.edu/people/individual/contact/alex-wagner/), [@handlerwagner](https://twitter.com/handlerwagner)
+- [Ben Ainscough<sup>1</sup>](http://genome.wustl.edu/people/individual/Benjamin-Ainscough/), [bainscou\@genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/benjamin-ainscough/)
+- [Nicholas Spies<sup>1</sup>](http://genome.wustl.edu/people/individual/Nicholas-Spies/), [nspies\@genome.wustl.edu](http://genome.wustl.edu/people/individual/contact/nicholas-spies/)
+- [Fouad Yousif<sup>5</sup>](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif), [Fouad.Yousif\@oicr.on.ca](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif)
 
 <sup>1</sup> The Genome Institute, Washington University School of Medicine<br>
 <sup>2</sup> The Department of Genetics, Washington University School of Medicine<br>

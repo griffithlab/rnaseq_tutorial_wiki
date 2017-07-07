@@ -185,6 +185,7 @@ Note:
 - Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
 - In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples. Each of these samples has ~150 million paired-end reads.
 
-| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Abbreviations]]  |
+
+| [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Saving-Your-Results]]  |
 |:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
-| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]       | [[Abbreviations|Abbreviations]] |
+| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]       | [[Saving Results|Saving-Your-Results]] |
