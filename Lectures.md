@@ -1,5 +1,19 @@
 # 5-ii. Lectures
 
+### CBW Informatics for RNA-seq analysis (July 10-12, 2017)
+
+**Presentations:**
+* [[Introduction to cloud computing (lecture/tutorial)|LectureFiles/cbw-cshl/2017/IntroductionToCloudComputing.pdf]]
+* [[Introduction to IGV Browser (tutorial)|LectureFiles/cbw-cshl/2017/IGV_Tutorial_Brief.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw-cshl/2017/RNASeq_Module1_Lecture.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cbw-cshl/2017/RNASeq_Module1_Tutorial.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cbw-cshl/2017/RNASeq_Module2_Lecture.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (tutorial)|LectureFiles/cbw-cshl/2017/RNASeq_Module2_Tutorial.pdf]]
+* [[Module 3 - Expression and differential expression (lecture)|LectureFiles/cbw-cshl/2017/RNASeq_Module3_Lecture.pdf]]
+* [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cbw-cshl/2017/RNASeq_Module3_Tutorial.pdf]]
+* [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw-cshl/2017/RNASeq_Module4_Lecture.pdf]]
+* [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw-cshl/2017/RNASeq_Module4_Tutorial.pdf]]
+* [[Introduction to Genome Analysis Platforms (lecture)|LectureFiles/cbw-cshl/2017/GenomeAnalysisPlatforms.pdf]]
 
 ### CBW-CSHL High-Throughput Biology: From Sequence to Networks (March 20-26, 2017)
 
