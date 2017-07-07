@@ -185,6 +185,30 @@ Note:
 - Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
 - In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples. Each of these samples has ~150 million paired-end reads.
 
+
+## SAVING A COPY OF YOUR RESULTS TO TAKE HOME WITH YOU
+If you are performing this tutorial on a cloud instance, everything will be deleted when the instance is destroyed! To package and download everything used or created during the tutorials you can do the following from your cloud terminal session.
+
+First package and compress all of the directories and files in the ‘rnaseq’ directory
+
+```bash
+
+cd /home/ubuntu/workspace/
+tar -czvf rnaseq_tutorial.tar.gz rnaseq/
+
+```
+
+Now you can download this to your own computer from here:
+ * http://__YOUR_IP_ADDRESS__/rnaseq_tutorial.tar.gz
+	
+To unpack this archive at a terminal session on your own Linux or Mac computer you can do the following:
+
+```bash
+
+tar -xzvf rnaseq_tutorial.tar.gz
+
+```
+
 | [[Previous Section|Transcript-Assembly-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Abbreviations]]  |
 |:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
 | [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]       | [[Abbreviations|Abbreviations]] |
