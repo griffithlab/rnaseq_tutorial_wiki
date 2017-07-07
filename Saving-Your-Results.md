@@ -20,3 +20,7 @@ To unpack this archive at a terminal session on your own Linux or Mac computer y
 tar -xzvf rnaseq_tutorial.tar.gz
 
 ```
+
+| [[Previous Section|Kallisto]]       | [[This Section|Saving-Your-Results]]   | [[Next Section|Abbreviations]]  |
+|:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
+| [[Kallisto|Kallisto]] | [[Saving Results|Saving-Your-Results]]       | [[Abbreviations|Abbreviations]] |
