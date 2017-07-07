@@ -60,30 +60,6 @@ Go to the following regions:
 Do you see the evidence for any novel exons/transcript that are found in 'de_novo' or 'ref_guided' modes but NOT found in 'ref_only' mode?  Explore in IGV for other examples of novel or different transcript predictions from the different cufflinks modes. Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
 	
 NOTE: We have obviously just scratched the surface exploring these output files.
-	
-	
-## SAVING A COPY OF YOUR RESULTS TO TAKE HOME WITH YOU
-If you are performing this tutorial on a cloud instance, everything will be deleted when the instance is destroyed! To package and download everything used or created during the tutorials you can do the following from your cloud terminal session.
-
-First package and compress all of the directories and files in the ‘rnaseq’ directory
-
-```bash
-
-cd /home/ubuntu/workspace/
-tar -czvf rnaseq_tutorial.tar.gz rnaseq/
-
-```
-
-Now you can download this to your own computer from here:
- * http://__YOUR_IP_ADDRESS__/rnaseq_tutorial.tar.gz
-	
-To unpack this archive at a terminal session on your own Linux or Mac computer you can do the following:
-
-```bash
-
-tar -xzvf rnaseq_tutorial.tar.gz
-
-```
 
 | [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|Kallisto]] |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-------------------------:|
