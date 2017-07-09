@@ -26,6 +26,22 @@ make
 
 ---
 
+### Practical Exercise 3 - Reference Genomes
+
+```
+cd $RNA_HOME/refs
+cat chr22_with_ERCC92.fa | perl -ne 'if ($_ =~ /\>22/){$chr22=1}; if ($_ =~ /\>ERCC/){$chr22=0}; if ($chr22){print "$_";}' > chr22_only.fa
+cat chr22_only.fa | grep -v ">" | perl -ne 'chomp $_; $r+= $_ =~ tr/a/A/; $r += $_ =~ tr/c/C/; $r += $_ =~ tr/g/G/; $r += $_ =~ tr/t/T/; $l += length($_); if (eof){$p = sprintf("%.2f", ($r/$l)*100); print "\nrepeat bases = $r\ntotal bases = $l\npercent repeat bases = $p%\n\n"}'
+cat chr22_only.fa | grep -v ">" | perl -ne 'chomp $_; $s = uc($_); print $_;' | perl -ne '$c += $_ =~ s/GAATTC/XXXXXX/g; if (eof){print "\nEcoRI count = $c";}'
+
+```
+
+**Answers**
+* Of 50,818,468 total bases on chr 22, there are 21,522,339 that correspond to repetitive elements (42.35%).
+* The EcoRI RE sequence is 5'-GAATTC-'3. Since this is a palendrome, the reverse complement is the same and we only have to search for one sequence in our string. After accounting for end of line breaks and case sensitivity we find 3,935 occurences of this sequence.  
+
+---
+
 ### Practical Exercise 2 - Data
 
 ```
