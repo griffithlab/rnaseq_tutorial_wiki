@@ -52,7 +52,7 @@
 
 #### 6. Resources to help find RNA-seq Data Sets
 - [GEO: The Gene Expression Omnibus](http://www.ncbi.nlm.nih.gov/geo/)
-- [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://ocean.compbio.cs.cmu.edu/sharq/)
+- [SHARQ: Search public, human, RNA-seq experiments by cell, tissue type, and other features](http://www.cs.cmu.edu/~ckingsf/sharq/index.html)
 
 #### 7. General Bioinformatics Resources
 - [Web Based Interactive Resources To Learn Programming And/Or Bioinformatics](https://www.biostars.org/p/76171/)
