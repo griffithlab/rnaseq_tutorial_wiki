@@ -50,7 +50,7 @@ head -n 425000 chr22_with_ERCC92.fa | tail
 
 ```
 
-What is the count of each base in this chromosome?
+What is the count of each base in the entire reference genome file (skipping the header lines for each sequence)?
 
 ```bash
 
@@ -61,6 +61,18 @@ cat chr22_with_ERCC92.fa | grep -v ">" | perl -ne 'chomp $_; $bases{$_}++ for sp
 Note: Instead of the above, you might consider getting reference genomes and associated annotations from UCSC. e.g., [UCSC GRCh38 download](http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/).
 
 Wherever you get them from, remember that the names of your reference sequences (chromosomes) must those matched in your annotation gtf files (described in the next section).
+
+---
+## PRACTICAL EXERCISE N
+
+Assignment: Use a commandline scripting approach of your choice to further examine our chr22 reference genome file and answer the following questions.
+* Hint: Each question can be tackled using approaches similar to those above, using the file 'chr22_with_ERCC92.fa'.
+
+**Questions**
+* Produce a file with only the chr22 sequence.
+* How many bases on chromosome 22 correspond to repetitive elements? What is the percentage of the whole length?
+* How many occurences of the EcoRI restriction site are present in the chromosome 22 sequence?
+
 
 | [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
 |:---------------------------------:|:--------------------------------------:|:---------------------------:|
