@@ -91,13 +91,13 @@ head transcript_tpm_all_samples.tsv gene_tpm_all_samples.tsv
 
 Later we will use these files to perform various comparisons of expression estimation tools (e.g. stringtie, kallisto, raw counts) and metrics (e.g. FPKM vs TPM).
 
-## PRACTICAL EXERCISE 7
+## PRACTICAL EXERCISE 8
 
-Assignment: Use StringTie to Calculate transcript-level expression estimates for the alignments (bam files) you created in [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5). 
+Assignment: Use StringTie to Calculate transcript-level expression estimates for the alignments (bam files) you created in [Practical Exercise 6](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-6). 
 
 * Hint: You should have six commands for 3 replicates each of tumor and normal samples.
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-7---expression)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-8---expression)
 
 ---
 ### HTSEQ-COUNT

@@ -23,7 +23,7 @@ Then, go to the following url in your browser:
 * Click on any of the *_fastqc.html files to view the FastQC report
 
 ---
-## PRACTICAL EXERCISE 3
+## PRACTICAL EXERCISE 4
 
 Assignment: Run FASTQC on one of the additional fastq files you downloaded in the previous practical exercise. 
 

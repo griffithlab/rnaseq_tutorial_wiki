@@ -59,7 +59,7 @@ zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "
 ```
 
 ---
-## PRACTICAL EXERCISE 2
+## PRACTICAL EXERCISE 3
 
 Assignment: Download an additional dataset and unpack it. This data will be used in future practical exercises. 
 

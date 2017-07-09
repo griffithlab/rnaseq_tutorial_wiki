@@ -114,9 +114,9 @@ cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", 
 
 ```
 
-## PRACTICAL EXERCISE 6
+## PRACTICAL EXERCISE 7
 
-Assignment: Index your bam files from [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5) and visualize in IGV. 
+Assignment: Index your bam files from [Practical Exercise 6](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-6) and visualize in IGV. 
 
 * Hint: As before, it may be simplest to just index and visualize the combined/merged bam files HCC1395_normal.bam and HCC1395_tumor.bam.
 * If this works, you should have two BAM files that can be loaded into IGV from the following location on your cloud instance:

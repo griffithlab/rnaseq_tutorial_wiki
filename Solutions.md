@@ -26,7 +26,7 @@ make
 
 ---
 
-### Practical Exercise 3 - Reference Genomes
+### Practical Exercise 2 - Reference Genomes
 
 ```
 cd $RNA_HOME/refs
@@ -42,7 +42,7 @@ cat chr22_only.fa | grep -v ">" | perl -ne 'chomp $_; $s = uc($_); print $_;' | 
 
 ---
 
-### Practical Exercise 2 - Data
+### Practical Exercise 3 - Data
 
 ```
 cd $RNA_HOME
@@ -62,7 +62,7 @@ zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 2 | tail -n 1 | perl -ne '$_ = s/
 
 ---
 
-### Practical Exercise 3 - Data QC
+### Practical Exercise 4 - Data QC
 
 ```bash
 
@@ -84,7 +84,7 @@ Then, go to the following url in your browser:
 
 ---
 
-### Practical Exercise 4 - Trim
+### Practical Exercise 5 - Trim
 
 ```
 cd $RNA_HOME/practice/data/
@@ -117,7 +117,7 @@ fastqc *.fastq.gz
 
 ---
 
-### Practical Exercise 5 - Alignment
+### Practical Exercise 6 - Alignment
 
 Perform alignments:
 
@@ -168,7 +168,7 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 
 ---
 
-### Practical Exercise 6 - Visualize
+### Practical Exercise 7 - Visualize
 
 ```
 cd $RNA_HOME/practice/alignments/hisat2
@@ -192,7 +192,7 @@ http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
 
 ---
 
-### Practical Exercise 7 - Expression
+### Practical Exercise 8 - Expression
 
 ```bash
 

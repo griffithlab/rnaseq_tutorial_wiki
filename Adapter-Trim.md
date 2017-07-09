@@ -85,7 +85,7 @@ The resulting html reports can be viewed by navigating to:
 * http://__YOUR_IP_ADDRESS__/rnaseq/data/trimmed/
 
 
-## PRACTICAL EXERCISE 4
+## PRACTICAL EXERCISE 5
 
 Assignment: Using the approach above, trim the reads for both normal and tumor samples that you downloaded for the previous practical exercise. NOTE: try dropping the hard left trim option used above ('--pre-trim-left'). Once you have trimmed the reads, compare a pre- and post- trimming FastQ file using the FastQC tool.
 
