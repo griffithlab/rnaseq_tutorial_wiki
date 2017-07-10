@@ -171,9 +171,9 @@ Example BAM to FASTQ conversion commands (note that you need to specify the corr
 
 ```bash
 
-java -Xmx2g -jar /home/ubuntu/tools/picard.jar SamToFastq INPUT=gerald_C1TD1ACXX_8_ACAGTG.bam FASTQ=hcc1395_tumor_R1.fastq SECOND_END_FASTQ=hcc1395_tumor_R2.fastq VALIDATION_STRINGENCY=LENIENT
+java -Xmx2g -jar /home/ubuntu/workspace/rnaseq/tools/picard.jar SamToFastq INPUT=gerald_C1TD1ACXX_8_ACAGTG.bam FASTQ=hcc1395_tumor_R1.fastq SECOND_END_FASTQ=hcc1395_tumor_R2.fastq VALIDATION_STRINGENCY=LENIENT
 gzip hcc1395_tumor*.fastq
-java -Xmx2g -jar /home/ubuntu/tools/picard.jar SamToFastq INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq VALIDATION_STRINGENCY=LENIENT
+java -Xmx2g -jar /home/ubuntu/workspace/rnaseq/tools/picard.jar SamToFastq INPUT=gerald_C2DBEACXX_3.bam FASTQ=hcc1395_normal_R1.fastq SECOND_END_FASTQ=hcc1395_normal_R2.fastq VALIDATION_STRINGENCY=LENIENT
 gzip hcc1395_normal*.fastq
 
 ```
