@@ -36,8 +36,8 @@ cat chr22_only.fa | grep -v ">" | perl -ne 'chomp $_; $s = uc($_); print $_;' | 
 ```
 
 **Answers**
-* Of 50,818,468 total bases on chr 22, there are 21,522,339 that correspond to repetitive elements (42.35%).
-* The EcoRI RE sequence is 5'-GAATTC-'3. Since this is a palendrome, the reverse complement is the same and we only have to search for one sequence in our string. After accounting for end of line breaks and case sensitivity we find 3,935 occurences of this sequence.  
+* How many bases on chromosome 22 correspond to repetitive elements? What is the percentage of the whole length? Of 50,818,468 total bases on chr 22, there are 21,522,339 that correspond to repetitive elements (42.35%).
+* How many occurences of the EcoRI restriction site are present in the chromosome 22 sequence? The EcoRI restriction enzyme recognition sequence is 5'-GAATTC-'3. Since this is a palendrome, the reverse complement is the same and we only have to search for one sequence in our string. After accounting for end of line breaks and case sensitivity we find 3,935 occurences of this sequence.  
 
 ---
 
