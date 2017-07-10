@@ -67,7 +67,6 @@ zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 2 | tail -n 1 | perl -ne '$_ = s/
 
 cd $RNA_HOME/practice/data
 fastqc *.fastq.gz
-
 ```
 
 Then, go to the following url in your browser:
@@ -96,7 +95,6 @@ flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_mul
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep1_r1.fastq.gz --reads2 hcc1395_tumor_rep1_r2.fastq.gz --target trimmed/hcc1395_tumor_rep1
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep2_r1.fastq.gz --reads2 hcc1395_tumor_rep2_r2.fastq.gz --target trimmed/hcc1395_tumor_rep2
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep3_r1.fastq.gz --reads2 hcc1395_tumor_rep3_r2.fastq.gz --target trimmed/hcc1395_tumor_rep3
-
 ```
 
 Compare these files using FastQC: 
@@ -135,7 +133,6 @@ hisat2 -p 8 --rg-id=HCC1395_normal_rep3 --rg SM:HCC1395_normal_rep3 --rg PL:ILLU
 hisat2 -p 8 --rg-id=HCC1395_tumor_rep1 --rg SM:HCC1395_tumor_rep1 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r2.fastq.gz -S ./HCC1395_tumor_rep1.sam
 hisat2 -p 8 --rg-id=HCC1395_tumor_rep2 --rg SM:HCC1395_tumor_rep2 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep2_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep2_r2.fastq.gz -S ./HCC1395_tumor_rep2.sam
 hisat2 -p 8 --rg-id=HCC1395_tumor_rep3 --rg SM:HCC1395_tumor_rep3 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep3_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep3_r2.fastq.gz -S ./HCC1395_tumor_rep3.sam
-
 ```
 
 Sort and convert SAM to BAM:
@@ -147,7 +144,6 @@ samtools sort -@ 8 -o HCC1395_normal_rep3.bam HCC1395_normal_rep3.sam
 samtools sort -@ 8 -o HCC1395_tumor_rep1.bam HCC1395_tumor_rep1.sam
 samtools sort -@ 8 -o HCC1395_tumor_rep2.bam HCC1395_tumor_rep2.sam
 samtools sort -@ 8 -o HCC1395_tumor_rep3.bam HCC1395_tumor_rep3.sam
-
 ```
 
 Merge HISAT2 BAM files
@@ -173,7 +169,6 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 cd $RNA_HOME/practice/alignments/hisat2
 samtools index HCC1395_normal.bam
 samtools index HCC1395_tumor.bam
-
 ```
 
 Start IGV on your laptop. Load the HCC1395_normal.bam & HCC1395_tumor.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. 
@@ -206,7 +201,6 @@ stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep3/transcripts.gtf $RNA_
 stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep1/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep1.bam
 stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep2/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep2.bam
 stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep3/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep3.bam
-
 ```
 
 ---
