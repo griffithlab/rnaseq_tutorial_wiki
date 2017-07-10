@@ -99,7 +99,7 @@ Answer these questions by examining the FastQC reports:
 * In the 'Per base sequence content section', what pattern do you see? What could explain this pattern?
 
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-4---trim)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-5---trim)
 
 ---
 

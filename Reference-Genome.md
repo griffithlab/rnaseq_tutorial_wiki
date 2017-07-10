@@ -73,6 +73,8 @@ Assignment: Use a commandline scripting approach of your choice to further exami
 * How many bases on chromosome 22 correspond to repetitive elements? What is the percentage of the whole length?
 * How many occurences of the EcoRI restriction site are present in the chromosome 22 sequence?
 
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---reference-genomes)
+
 
 | [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
 |:---------------------------------:|:--------------------------------------:|:---------------------------:|
