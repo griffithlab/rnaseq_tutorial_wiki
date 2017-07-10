@@ -101,7 +101,7 @@ Compare these files using FastQC:
 
 ```
 cd $RNA_HOME/practice/data/trimmed/
-fastqc \*.fastq.gz
+fastqc *.fastq.gz
 ```
 
 * http://YOUR_DNS_NAME/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
