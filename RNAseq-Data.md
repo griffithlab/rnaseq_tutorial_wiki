@@ -59,7 +59,7 @@ zcat UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz | grep -P "
 ```
 
 ---
-## PRACTICAL EXERCISE 2
+## PRACTICAL EXERCISE 3
 
 Assignment: Download an additional dataset and unpack it. This data will be used in future practical exercises. 
 
@@ -72,7 +72,7 @@ http://genomedata.org/rnaseq-tutorial/practical.tar
 * In the first read of the hcc1395, normal, replicate 1, read 1 file, what was the physical location of the read on the flow cell (i.e. lane, tile, x, y)? 
 * In the first read of this same file, how many 'T' bases are there?
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---data)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---data)
 
 ---
 

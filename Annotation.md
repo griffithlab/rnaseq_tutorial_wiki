@@ -120,10 +120,12 @@ https://ccb.jhu.edu/software/hisat2/index.shtml
 Or those same files are directly available from their FTP site:
 ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/
 
-Important note on chromosome naming conventions:  
+### Important notes:
+
+**On chromosome naming conventions:**  
 In order for your RNA-seq analysis to work, the chromosome names in your .gtf file **must match** those in your reference genome (i.e. your reference genome fasta file).  If you get a StringTie result where all transcripts have an expression value of 0, you may have overlooked this. Unfortunately, Ensembl, NCBI, and UCSC can not agree on how to name the chromosomes in many species, so this problem may come up often.  You can avoid this by getting a complete reference genome and gene annotation package from the same source (e.g., Ensembl) to maintain consistency. 
 	
-Important note on reference genome builds:  
+**On reference genome builds:**  
 Your annotations must correspond to the same reference genome build as your reference genome fasta file.  e.g., both correspond to UCSC human build 'hg38', NCBI human build 'GRCh38', etc.  Even if both your reference genome and annotations are from UCSC or Ensembl they could still correspond to different versions of that genome.  This would cause problems in any RNA-seq pipeline.
 	
 | [[Previous Section|Reference-Genome]]  | [[This Section|Annotation]] | [[Next Section|Indexing]] |

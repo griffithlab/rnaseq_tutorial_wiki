@@ -26,7 +26,22 @@ make
 
 ---
 
-### Practical Exercise 2 - Data
+### Practical Exercise 2 - Reference Genomes
+
+```
+cd $RNA_HOME/refs
+cat chr22_with_ERCC92.fa | perl -ne 'if ($_ =~ /\>22/){$chr22=1}; if ($_ =~ /\>ERCC/){$chr22=0}; if ($chr22){print "$_";}' > chr22_only.fa
+cat chr22_only.fa | grep -v ">" | perl -ne 'chomp $_; $r+= $_ =~ tr/a/A/; $r += $_ =~ tr/c/C/; $r += $_ =~ tr/g/G/; $r += $_ =~ tr/t/T/; $l += length($_); if (eof){$p = sprintf("%.2f", ($r/$l)*100); print "\nrepeat bases = $r\ntotal bases = $l\npercent repeat bases = $p%\n\n"}'
+cat chr22_only.fa | grep -v ">" | perl -ne 'chomp $_; $s = uc($_); print $_;' | perl -ne '$c += $_ =~ s/GAATTC/XXXXXX/g; if (eof){print "\nEcoRI site (GAATTC) count = $c\n\n";}'
+```
+
+**Answers**
+* How many bases on chromosome 22 correspond to repetitive elements? What is the percentage of the whole length? Of 50,818,468 total bases on chr 22, there are 21,522,339 that correspond to repetitive elements (42.35%).
+* How many occurences of the EcoRI restriction site are present in the chromosome 22 sequence? The EcoRI restriction enzyme recognition sequence is 5'-GAATTC-'3. Since this is a palendrome, the reverse complement is the same and we only have to search for one sequence in our string. After accounting for end of line breaks and case sensitivity we find 3,935 occurences of this sequence.  
+
+---
+
+### Practical Exercise 3 - Data
 
 ```
 cd $RNA_HOME
@@ -46,19 +61,18 @@ zcat hcc1395_normal_rep1_r1.fastq.gz | head -n 2 | tail -n 1 | perl -ne '$_ = s/
 
 ---
 
-### Practical Exercise 3 - Data QC
+### Practical Exercise 4 - Data QC
 
 ```bash
 
 cd $RNA_HOME/practice/data
 fastqc *.fastq.gz
-
 ```
 
 Then, go to the following url in your browser:
 * http://__YOUR_DNS_NAME__/rnaseq/practice/data/
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance IP or DNS (e.g., cbw##.dyndns.info)
-* Click on any of the *_fastqc.html files to view the FastQC report (e.g., hcc1395_normal_rep1_r1_fastqc.html)
+* Click on any of the \*\_fastqc.html files to view the FastQC report (e.g., hcc1395\_normal\_rep1\_r1\_fastqc.html)
 
 **Answers**
 * How many total sequences are there? 331,958
@@ -68,7 +82,7 @@ Then, go to the following url in your browser:
 
 ---
 
-### Practical Exercise 4 - Trim
+### Practical Exercise 5 - Trim
 
 ```
 cd $RNA_HOME/practice/data/
@@ -81,7 +95,6 @@ flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_mul
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep1_r1.fastq.gz --reads2 hcc1395_tumor_rep1_r2.fastq.gz --target trimmed/hcc1395_tumor_rep1
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep2_r1.fastq.gz --reads2 hcc1395_tumor_rep2_r2.fastq.gz --target trimmed/hcc1395_tumor_rep2
 flexbar --adapter-min-overlap 7 --adapter-trim-end RIGHT --adapters illumina_multiplex.fa --max-uncalled 300 --min-read-length 25 --threads 8 --zip-output GZ --reads hcc1395_tumor_rep3_r1.fastq.gz --reads2 hcc1395_tumor_rep3_r2.fastq.gz --target trimmed/hcc1395_tumor_rep3
-
 ```
 
 Compare these files using FastQC: 
@@ -101,7 +114,7 @@ fastqc *.fastq.gz
 
 ---
 
-### Practical Exercise 5 - Alignment
+### Practical Exercise 6 - Alignment
 
 Perform alignments:
 
@@ -120,7 +133,6 @@ hisat2 -p 8 --rg-id=HCC1395_normal_rep3 --rg SM:HCC1395_normal_rep3 --rg PL:ILLU
 hisat2 -p 8 --rg-id=HCC1395_tumor_rep1 --rg SM:HCC1395_tumor_rep1 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep1_r2.fastq.gz -S ./HCC1395_tumor_rep1.sam
 hisat2 -p 8 --rg-id=HCC1395_tumor_rep2 --rg SM:HCC1395_tumor_rep2 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep2_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep2_r2.fastq.gz -S ./HCC1395_tumor_rep2.sam
 hisat2 -p 8 --rg-id=HCC1395_tumor_rep3 --rg SM:HCC1395_tumor_rep3 --rg PL:ILLUMINA -x $RNA_REF_INDEX --dta --rna-strandness RF -1 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep3_r1.fastq.gz -2 $RNA_PRACTICE_DATA_DIR/hcc1395_tumor_rep3_r2.fastq.gz -S ./HCC1395_tumor_rep3.sam
-
 ```
 
 Sort and convert SAM to BAM:
@@ -132,7 +144,6 @@ samtools sort -@ 8 -o HCC1395_normal_rep3.bam HCC1395_normal_rep3.sam
 samtools sort -@ 8 -o HCC1395_tumor_rep1.bam HCC1395_tumor_rep1.sam
 samtools sort -@ 8 -o HCC1395_tumor_rep2.bam HCC1395_tumor_rep2.sam
 samtools sort -@ 8 -o HCC1395_tumor_rep3.bam HCC1395_tumor_rep3.sam
-
 ```
 
 Merge HISAT2 BAM files
@@ -152,13 +163,12 @@ java -Xmx2g -jar $RNA_HOME/tools/picard.jar MergeSamFiles OUTPUT=HCC1395_tumor.b
 
 ---
 
-### Practical Exercise 6 - Visualize
+### Practical Exercise 7 - Visualize
 
 ```
 cd $RNA_HOME/practice/alignments/hisat2
 samtools index HCC1395_normal.bam
 samtools index HCC1395_tumor.bam
-
 ```
 
 Start IGV on your laptop. Load the HCC1395_normal.bam & HCC1395_tumor.bam files in IGV. You can load the necessary files in IGV directly from your web accessible amazon workspace (see below) using 'File' -> 'Load from URL'. 
@@ -176,7 +186,7 @@ http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/HCC1395_tumor.bam
 
 ---
 
-### Practical Exercise 7 - Expression
+### Practical Exercise 8 - Expression
 
 ```bash
 
@@ -191,7 +201,6 @@ stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_tumor_rep3/transcripts.gtf $RNA_
 stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep1/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep1.bam
 stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep2/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep2.bam
 stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep3/transcripts.gtf $RNA_HOME/practice/alignments/hisat2/HCC1395_normal_rep3.bam
-
 ```
 
 ---

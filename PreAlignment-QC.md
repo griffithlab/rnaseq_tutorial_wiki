@@ -20,10 +20,10 @@ fastqc *.fastq.gz
 Then, go to the following url in your browser:
 * http://__YOUR_DNS_NAME__/rnaseq/data/
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance DNS (e.g., ec2-54-187-159-113.us-west-2.compute.amazonaws.com))
-* Click on any of the *_fastqc.html files to view the FastQC report
+* Click on any of the \*\_fastqc.html files to view the FastQC report
 
 ---
-## PRACTICAL EXERCISE 3
+## PRACTICAL EXERCISE 4
 
 Assignment: Run FASTQC on one of the additional fastq files you downloaded in the previous practical exercise. 
 
@@ -38,7 +38,7 @@ Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by
 * What is the most common average sequence quality score?
 * What is the most common kmer that is observed?
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-3---data-qc)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-4---data-qc)
 
 ---
 

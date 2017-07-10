@@ -101,11 +101,11 @@ ls -l *.bam
 
 ```
 
-## PRACTICAL EXERCISE 5
+## PRACTICAL EXERCISE 6
 
 Assignment: Perform some alignments on additional read data sets. Align the reads using the skills you learned above. Try using the HISAT2 aligner. Also practice converting SAM to BAM files, and merging BAM files. 
 
-* Hint: Do this analysis on the additional data and in the separate working directory called ‘practice’ that you created in [Practical Exercise 2](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data#practical-exercise-2).
+* Hint: Do this analysis on the additional data and in the separate working directory called ‘practice’ that you created in [Practical Exercise 3](https://github.com/griffithlab/rnaseq_tutorial/wiki/RNAseq-Data#practical-exercise-3).
 
 **Questions**
 * What is the difference between a .sam and .bam file?
@@ -113,7 +113,7 @@ Assignment: Perform some alignments on additional read data sets. Align the read
 * Which columns of the BAM file can be viewed to determine the style of sorting?
 * What command can you use to view only the BAM header?
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-5---alignment)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-6---alignment)
 
 ---
 

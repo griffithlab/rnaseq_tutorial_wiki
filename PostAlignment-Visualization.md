@@ -114,9 +114,9 @@ cat HBR_bam-readcounts.txt | perl -ne '@data=split("\t", $_); @Adata=split(":", 
 
 ```
 
-## PRACTICAL EXERCISE 6
+## PRACTICAL EXERCISE 7
 
-Assignment: Index your bam files from [Practical Exercise 5](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-5) and visualize in IGV. 
+Assignment: Index your bam files from [Practical Exercise 6](https://github.com/griffithlab/rnaseq_tutorial/wiki/Alignment#practical-exercise-6) and visualize in IGV. 
 
 * Hint: As before, it may be simplest to just index and visualize the combined/merged bam files HCC1395_normal.bam and HCC1395_tumor.bam.
 * If this works, you should have two BAM files that can be loaded into IGV from the following location on your cloud instance:
@@ -127,7 +127,7 @@ Assignment: Index your bam files from [Practical Exercise 5](https://github.com/
 * How can we modify IGV to color reads by Read Group? How many read groups are there for each sample (tumor & normal)? What are your read group names for the tumor sample?
 * What are the options for visualizing splicing or alternative splicing patterns in IGV? Navigate to this location on chromosome 22: 'chr22:40,363,200-40,367,500'. What splicing event do you see?
 
-Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-6---visualize)
+Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-7---visualize)
 
 ---
 

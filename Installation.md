@@ -326,10 +326,10 @@ Some useful tools are available as official ubuntu packages.  These can be insta
 
 ```bash
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install tree
-tree
+#sudo apt-get update
+#sudo apt-get upgrade
+#sudo apt-get install tree
+#tree
 
 ```
 
