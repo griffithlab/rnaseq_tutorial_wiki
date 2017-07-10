@@ -152,7 +152,7 @@ Normal (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/
 For more information on this data refer to this page:<br>
 https://github.com/genome/gms/wiki/HCC1395-WGS-Exome-RNA-Seq-Data
 
-Download the data
+**Download the data**
 
 ```bash
 
@@ -164,6 +164,7 @@ wget https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gera
 
 ```
 
+**Convert BAM to FASTQ**
 Since the paths above will download BAM files but Kallisto expects FASTQ files for the read data. You will need to convert from BAM back to FASTQ. Try using Picard to do this.
 
 Example BAM to FASTQ conversion commands (note that you need to specify the correct path for your Picard installation), followed by compressing the resulting FastQ files to save space:
@@ -177,11 +178,16 @@ gzip hcc1395_normal*.fastq
 
 ```
 
+**Download full transcriptome reference**
+You will have to get all transcripts instead of just those for a single chromosome. You will also have to create a new index for this new set of transcript sequences.
+
+```
+wget ftp://ftp.ensembl.org/pub/release-89/fasta/homo_sapiens/cdna/...
+```
+
 Now repeat the concepts above to obtain abundance estimates for all genes.
 
 Note:
-- You will have to get all transcripts instead of just those for a single chromosome
-- You will have to create a new index for this new set of transcript sequences
 - Try using the `time` command in Unix to track how long the `kallisto index` and `kallisto quant` commands take
 - In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples. Each of these samples has ~150 million paired-end reads.
 
