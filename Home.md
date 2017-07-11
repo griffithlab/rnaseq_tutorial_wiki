@@ -44,6 +44,7 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
     <li>[[Expression|Expression]]</li>
     <li>[[Differential Expression|Differential-Expression]]</li>
     <li>[[DE Visualization|DE-Visualization]]</li>
+    <li>[[Kallisto for Reference Free Abundance Estimation|Kallisto]]</li>
   </ol>
   <li><strong>Module 4 - Isoform Discovery and Alternative Expression</strong></li>
   <ol start="i">  
@@ -52,10 +53,6 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
     <li>[[Transcript Assembly Merge|Transcript-Assembly-Merge]]</li>
     <li>[[Differential Splicing|Differential-Splicing]]</li>
     <li>[[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
-  </ol>
-  <li><strong>Module 5 - Reference free analysis</strong></li>
-  <ol start="i">  
-    <li>[[Use of Kallisto for Abundance Estimation|Kallisto]]</li>
   </ol>
   <li><strong>Appendix</strong></li>
   <ol start="i">  
