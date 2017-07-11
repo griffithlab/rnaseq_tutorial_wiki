@@ -37,6 +37,32 @@ grep "j" merged.stringtie_merged.gtf.tmap | cut -f 1 | sort | uniq | wc -l
 	
 ```
 
+## Using regtools to annotate splice junctions
+RegTools is a utility we created to help characterize individual exon splicing events and help to identify novel splice events and variants that have a direct influence on gene expression or splicing patterns. Refer to the [regtools manual](https://regtools.readthedocs.io/en/latest/) for more details.
+
+We will use basic functionality of regtools to extract a junction.bed file for each of our BAMs that summarizes all distinct exon-exon splicing events represented in the RNA-seq data. We will also use regtools to annotate these junctions relative to our reference transcriptome GTF file:
+
+```
+cd $RNA_HOME/alignments/hisat2
+
+regtools junctions extract HBR.bam > HBR.junctions.bed
+head HBR.junctions.bed
+regtools junctions annotate HBR.junctions.bed $RNA_REF_FASTA $RNA_REF_GTF > HBR.junctions.anno.bed
+head HBR.junctions.anno.bed
+
+regtools junctions extract UHR.bam > UHR.junctions.bed
+head UHR.junctions.bed
+regtools junctions annotate UHR.junctions.bed $RNA_REF_FASTA $RNA_REF_GTF > UHR.junctions.anno.bed
+head UHR.junctions.anno.bed
+```
+
+Now pull out any junctions from either sample that appear to involve novel exon skipping, acceptor site usage, or donor site usage (relative to the reference transcriptome GTF).  Require at three reads of support for each of the potentially novel junctions.
+```
+grep -P -w "NDA|A|D" HBR.junctions.anno.bed | perl -ne 'chomp; @l=split("\t",$_); if ($l[4] > 3){print "$_\n"}'
+grep -P -w "NDA|A|D" UHR.junctions.anno.bed | perl -ne 'chomp; @l=split("\t",$_); if ($l[4] > 3){print "$_\n"}'
+```
+
+
 ## Visualizing Results in the IGV Browser
 		
 ### merged.gtf files:
@@ -55,7 +81,10 @@ Load the BAM files at the same time as the junctions.bed and merged.gtf files:
  * http://__YOUR_IP_ADDRESS__/rnaseq/alignments/hisat2/HBR.bam
 
 Go to the following regions:
-* chr22:44,292,789-44,341,778
+* chr22:44,292,789-44,341,778 (novel 5' exon)
+* chr22:41,679,566-41,689,409 (alternative isoforms; create a Sashimi plot of this region)
+* chr22:50,083,265-50,086,732 (alternative isoforms; create a Sashimi plot of this region)
+* chr22:50,466,553-50,467,472 (novel cassette exon; create a Sashimi plot of this region)
 
 Do you see the evidence for any novel exons/transcript that are found in 'de_novo' or 'ref_guided' modes but NOT found in 'ref_only' mode?  Explore in IGV for other examples of novel or different transcript predictions from the different cufflinks modes. Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
 	
