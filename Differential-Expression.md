@@ -67,15 +67,15 @@ Display the top 20 DE genes. Look at some of those genes in IGV - do they make s
 
 ```bash
 
-grep -v feature UHR_vs_HBR_gene_results_sig.tsv | sort -rnk 4 | head -n 20 #Higher abundance in UHR
-grep -v feature UHR_vs_HBR_gene_results_sig.tsv | sort -nk 4 | head -n 20 #Higher abundance in HBR
+grep -v feature UHR_vs_HBR_gene_results_sig.tsv | sort -rnk 3 | head -n 20 #Higher abundance in UHR
+grep -v feature UHR_vs_HBR_gene_results_sig.tsv | sort -nk 3 | head -n 20 #Higher abundance in HBR
 ```
 
 Save all genes with P<0.05 to a new file.
 
 ```bash
 
-grep -v feature UHR_vs_HBR_gene_results_sig.tsv | cut -f 7 | sed 's/\"//g' > DE_genes.txt
+grep -v feature UHR_vs_HBR_gene_results_sig.tsv | cut -f 6 | sed 's/\"//g' > DE_genes.txt
 head DE_genes.txt
 
 ```
