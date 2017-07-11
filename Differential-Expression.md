@@ -1,6 +1,8 @@
 ![RNA-seq Flowchart - Module 4](Images/RNA-seq_Flowchart4.png)
 
 # 3-ii. Differential Expression
+
+## Ballgown DE Analyis
 Use Ballgown to compare the tumor and normal conditions. Refer to the Ballgown manual for a more detailed explanation:
 * https://www.bioconductor.org/packages/release/bioc/html/ballgown.html
 `
@@ -79,6 +81,101 @@ grep -v feature UHR_vs_HBR_gene_results_sig.tsv | cut -f 6 | sed 's/\"//g' > DE_
 head DE_genes.txt
 
 ```
+
+## ERCC DE Analysis
+
+This section will demonstrate the DE between the ERCC spike-in:
+
+```bash
+
+cd $RNA_HOME/de/ballgown/ref_only
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_DE.R
+chmod +x Tutorial_Module4_ERCC_DE.R
+./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/htseq_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/ballgown/ref_only/UHR_vs_HBR_gene_results.tsv
+
+```
+
+View the results here:
+* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
+
+## edgeR Analysis
+
+In this tutorial you will:
+
+* Make use of the raw counts you generate above using htseq-count
+ * edgeR is a bioconductor package designed specifically for differential expression of count-based RNA-seq data
+ * This is an alternative to using stringtie/ballgown to find differentially expressed genes
+
+First, create a directory for results:
+
+```bash
+
+cd $RNA_HOME/
+mkdir -p de/htseq_counts
+cd de/htseq_counts
+
+```
+
+Create a mapping file to go from ENSG IDs (which htseq-count output) to Symbols:
+
+```bash
+
+perl -ne 'if ($_ =~ /gene_id\s\"(ENSG\S+)\"\;/) { $id = $1; $name = undef; if ($_ =~ /gene_name\s\"(\S+)"\;/) { $name = $1; }; }; if ($id && $name) {print "$id\t$name\n";} if ($_=~/gene_id\s\"(ERCC\S+)\"/){print "$1\t$1\n";}' $RNA_REF_GTF | sort | uniq > ENSG_ID2Name.txt
+head ENSG_ID2Name.txt
+
+```
+
+Determine the number of unique Ensembl Gene IDs and symbols. What does this tell you?
+
+```bash
+
+cut -f 1 ENSG_ID2Name.txt | sort | uniq | wc
+cut -f 2 ENSG_ID2Name.txt | sort | uniq | wc
+cut -f 2 ENSG_ID2Name.txt | sort | uniq -c | sort -r | head
+
+```
+
+Launch R:
+
+```bash
+
+R
+
+```
+
+A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
+
+Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff:
+
+```bash
+
+cat $RNA_HOME/de/ballgown/ref_only/DE_genes.txt
+cat $RNA_HOME/de/htseq_counts/DE_genes.txt
+
+```
+
+Pull out the gene IDs
+
+```bash
+
+cd $RNA_HOME/de/
+
+cut -f 1 $RNA_HOME/de/ballgown/ref_only/DE_genes.txt | sort  > ballgown_DE_gene_symbols.txt
+cut -f 2 $RNA_HOME/de/htseq_counts/DE_genes.txt | sort > htseq_counts_edgeR_DE_gene_symbols.txt
+
+```
+
+Visualize overlap with a venn diagram. This can be done with simple web tools like:
+* http://www.cmbi.ru.nl/cdd/biovenn/
+* http://bioinfogp.cnb.csic.es/tools/venny/
+
+To get the two gene lists you could use `cat` to print out each list in your terminal and then copy/paste.
+
+Alternatively you could view both lists in a web browser as you have done with other files. These two files should be here:
+
+http://YOUR_IP_ADDRESS/rnaseq/de/ballgown_DE_gene_symbols.txt
+http://YOUR_IP_ADDRESS/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
+
 
 | [[Previous Section|Expression]] | [[This Section|Differential-Expression]]            | [[Next Section|DE-Visualization]] |
 |:-------------------------------:|:---------------------------------------------------:|:-----------------------------------------:|
