@@ -19,13 +19,12 @@ For details on the format of these files, refer to the following links:
 * http://cole-trapnell-lab.github.io/cufflinks/cuffcompare/index.html#transfrag-class-codes
 	
 
-**FIX:** How many genes have at least one transcript assembled by StringTie in the 'de_novo' results?
+How many genes have at least one transcript assembled by StringTie in the 'de_novo' results?
 
 ```bash
 
 cd $RNA_HOME/expression/stringtie/de_novo/
-cat stringtie_merged.gtf | perl -ne 'if ($_ =~ /gene_name\s\"(\w+)\"/){print "$1\n"}' | sort | uniq | wc -l
-
+cat stringtie_merged.gtf | perl -ne 'if ($_ =~ /gene_id\s+\"(\S+)\"\;/){print "$1\n"}' | sort | uniq | wc -l
 ```
 
 How many genes have at least one *novel* transcript assembled?
