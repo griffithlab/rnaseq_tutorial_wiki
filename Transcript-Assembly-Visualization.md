@@ -92,6 +92,6 @@ Do you see the evidence for any novel exons/transcript that are found in 'de_nov
 	
 NOTE: We have obviously just scratched the surface exploring these output files.
 
-| [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|Kallisto]] |
+| [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|Saving-Your-Results]] |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-------------------------:|
-| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Kallisto|Kallisto]]     |
+| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Saving Results|Saving-Your-Results]]     |
