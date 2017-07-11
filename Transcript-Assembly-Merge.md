@@ -70,7 +70,6 @@ Compare the de novo merged transcritps to the known annotations:
 ```bash
 
 gffcompare -r $RNA_REF_GTF -o merged stringtie_merged.gtf
-
 cat merged.stats
 
 ```
