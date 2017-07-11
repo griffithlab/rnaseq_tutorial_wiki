@@ -163,7 +163,7 @@ Based on the above read counts, plot the linearity of the ERCC spike-in read cou
 ```bash
 
 cd $RNA_HOME/expression/htseq_counts
-cp $RNA_EXT_DATA_DIR/rnaseq-tutorial/ERCC_Controls_Analysis.txt .
+wget http://genomedata.org/rnaseq-tutorial/ERCC_Controls_Analysis.txt
 cat ERCC_Controls_Analysis.txt
 
 wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.pl
