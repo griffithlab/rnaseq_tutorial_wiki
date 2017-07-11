@@ -146,6 +146,8 @@ We can now use this index with Kallisto to assess the abundance of rRNA genes in
 ## Exercise: Do a performance test using a real large dataset
 Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 'normal' cell line here:
 
+**NOTE: do not attempt this unless you have a lot of free space on your machine (at least 250 GB)**
+
 Tumor (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C1TD1ACXX_8_ACAGTG.bam">download</a>)<br>
 Normal (<a href="https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/hcc1395/gerald_C2DBEACXX_3.bam">download</a>)
 
