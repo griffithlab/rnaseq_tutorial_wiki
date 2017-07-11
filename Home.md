@@ -54,6 +54,14 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
     <li>[[Differential Splicing|Differential-Splicing]]</li>
     <li>[[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
   </ol>
+  <li><strong>Module 5 - Trinity Assembly And Analysis</strong></li>
+  <ol start="i">  
+    <li>[[Trinity Assembly And Analysis|Trinity-Assembly-And-Analysis]]</li>
+  </ol>
+  <li><strong>Module 6 - Trinotate Functional Annotation</strong></li>
+  <ol start="i">  
+    <li>[[Trinotate Functional Annotation|Trinotate-Functional-Annotation]]</li>
+  </ol>
   <li><strong>Appendix</strong></li>
   <ol start="i">  
     <li>[[Abbreviations|Abbreviations]]</li>
