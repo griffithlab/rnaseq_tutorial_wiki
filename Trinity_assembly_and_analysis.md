@@ -1,4 +1,4 @@
-# 6-i De novo RNA-Seq Assembly, Annotation, and Analysis Using Trinity and Trinotate
+# 6-i De novo RNA-Seq Assembly and Analysis Using Trinity
 
 The following details the steps involved in:
 
