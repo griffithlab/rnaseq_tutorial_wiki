@@ -9,4 +9,5 @@ Module 2: [[Adapter Trim|Adapter-Trim]] | [[Alignment|Alignment]] | [[IGV|IGV-Tu
 Module 3: [[Expression|Expression]] | [[Differential Expression|Differential-Expression]] | [[DE Visualization|DE-Visualization]] | [[Kallisto|Kallisto]]<br>
 Module 4: [[Ref Guided|Reference-Guided-Transcript-Assembly]] | [[De novo|de-novo-Transcript-Assembly]] | [[Merging|Transcript-Assembly-Merge]] | [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]<br>
 Module 5: [[Trinity|Trinity-Assembly-And-Analysis]]<br>
+Module 6: [[Trinotate|Trinotate-Functional-Annotation]]<br>
 Appendix: [[Saving Results|Saving-Your-Results]] | [[Abbreviations|Abbreviations]] | [[Lectures|Lectures]] | [[Practical Exercise Solutions|Solutions]] | [[Integrated Assignment|Integrated-Assignment]] | [[Proposed Improvements|Proposed-Improvements]] | [[AWS Setup|AWS-Setup]]<br>
