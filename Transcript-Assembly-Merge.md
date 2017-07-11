@@ -38,7 +38,6 @@ Compare reference guided transcripts to the known annotations. This allows us to
 ```bash
 
 gffcompare -r $RNA_REF_GTF -o merged stringtie_merged.gtf
-
 cat merged.stats
 
 ```
@@ -65,7 +64,7 @@ stringtie --merge -p 8 -o stringtie_merged.gtf assembly_GTF_list.txt
 
 ```
 
-Compare the de novo merged transcritps to the known annotations:
+Compare the de novo merged transcripts to the known annotations:
 
 ```bash
 
