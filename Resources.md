@@ -13,6 +13,7 @@
 - [RNA Bioinformatics (a 25 chapter book)](http://link.springer.com/book/10.1007%2F978-1-4939-2291-8)
 - [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/ExpressionAnalysis_Cufflinks_Trapnell_2012.pdf)
 - [Differential analysis of gene regulation at transcript resolution with RNA-seq](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/DifferentialExpressionAnalysis_CuffDiff2_Trapnell_2013.pdf)
+- [Measurement of mRNA abundance using RNA-seq data:RPKM measure is inconsistent among samples](https://www.ncbi.nlm.nih.gov/pubmed/22872506)
 - [Methods to study splicing from high-throughput RNA sequencing data](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/SplicingAnalysisMethods_2014.pdf)
 - [Integrative Genomics Viewer (IGV): high-performance genomics data visualization and exploration](https://github.com/griffithlab/rnaseq_tutorial/wiki/Reading/IGV_2012.pdf)
 - [A comprehensive assessment of RNA-seq accuracy, reproducibility and information content by the Sequencing Quality Control Consortium (SEQC)](http://www.nature.com/nbt/journal/v32/n9/full/nbt.2957.html)
