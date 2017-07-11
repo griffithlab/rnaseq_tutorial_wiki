@@ -79,8 +79,9 @@ Gray lab breast cancer cell line dataset:
 - https://www.biostars.org/p/111040/ (biostars tutorial on downloading data)
 - https://github.com/genome/gms/wiki/Guide-to-Importing-and-Analyzing-External-Data (another guide on downloading and reformatting this data)
 
-### Create a lecture that introduces k-mer based approaches
+### Create lecture materials that introduce k-mer based approaches
 - Intro to Kallisto, Sailfish, Salmon
+- Integrate Kallisto content into the expression lecture and expression modules of the tutorial. That is where it makes sense anyway. Drop module 5.
 
 ### Update the tutorial to take into account recent developments in RNA-seq analysis methods, best practices, and new tools
 - [Salmon](https://github.com/COMBINE-lab/salmon)
