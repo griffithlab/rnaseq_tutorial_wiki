@@ -2,7 +2,7 @@
 
 The following details the steps involved in:
 
-*	Generating a Trinity de novo RNA-Seq assembly
+*   Generating a Trinity de novo RNA-Seq assembly
 *   Evaluating the quality of the assembly
 *   Quantifying transcript expression levels
 *   Identifying differentially expressed (DE) transcripts
