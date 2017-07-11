@@ -84,7 +84,7 @@ head DE_genes.txt
 
 ## ERCC DE Analysis
 
-This section will demonstrate the DE between the ERCC spike-in:
+This section will compare the observed versus expected differential expression estimates for the ERCC spike-in RNAs:
 
 ```bash
 
@@ -102,7 +102,7 @@ View the results here:
 
 In this tutorial you will:
 
-* Make use of the raw counts you generate above using htseq-count
+* Make use of the raw counts you generated above using htseq-count
  * edgeR is a bioconductor package designed specifically for differential expression of count-based RNA-seq data
  * This is an alternative to using stringtie/ballgown to find differentially expressed genes
 
