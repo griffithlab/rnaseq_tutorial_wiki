@@ -31,8 +31,8 @@ How many genes have at least one *novel* transcript assembled?
 
 ```bash
 
+head merged.stringtie_merged.gtf.tmap
 grep "j" merged.stringtie_merged.gtf.tmap
-
 grep "j" merged.stringtie_merged.gtf.tmap | cut -f 1 | sort | uniq | wc -l
 	
 ```
