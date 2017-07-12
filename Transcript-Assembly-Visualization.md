@@ -37,7 +37,7 @@ grep "j" gffcompare.stringtie_merged.gtf.tmap | cut -f 1 | sort | uniq | wc -l
 	
 ```
 
-## Using regtools to annotate splice junctions
+## Using regtools to annotate all individual splice junctions
 RegTools is a utility we created to help characterize individual exon splicing events and help to identify novel splice events and variants that have a direct influence on gene expression or splicing patterns. Refer to the [regtools manual](https://regtools.readthedocs.io/en/latest/) for more details.
 
 We will use basic functionality of regtools to extract a junction.bed file for each of our BAMs that summarizes all distinct exon-exon splicing events represented in the RNA-seq data. We will also use regtools to annotate these junctions relative to our reference transcriptome GTF file:
