@@ -1,18 +1,20 @@
 # 0-i. Authors
 
-- [Malachi Griffith<sup>1,2,3,4</sup>](http://genome.wustl.edu/people/individual/malachi-griffith/), [mgriffit\@wustl.edu](http://genome.wustl.edu/people/individual/contact/malachi-griffith/), [@malachigriffith](https://twitter.com/malachigriffith)
-- [Obi Griffith<sup>1,2,3,4</sup>](http://genome.wustl.edu/people/individual/obi-griffith/), [obigriffith\@wustl.edu](http://genome.wustl.edu/people/individual/contact/obi-griffith/), [@obigriffith](https://twitter.com/obigriffith)
-- [Jason Walker<sup>1</sup>](http://genome.wustl.edu/people/individual/jason-walker/), [jason.walker\@wustl.edu](http://genome.wustl.edu/people/individual/contact/jason-walker/)
-- [Alex Wagner<sup>1</sup>](http://genome.wustl.edu/people/individual/alex-wagner/), [awagner24\@wustl.edu](http://genome.wustl.edu/people/individual/contact/alex-wagner/), [@handlerwagner](https://twitter.com/handlerwagner)
-- [Ben Ainscough<sup>1</sup>](http://genome.wustl.edu/people/individual/Benjamin-Ainscough/), [b.ainscough\@wustl.edu](http://genome.wustl.edu/people/individual/contact/benjamin-ainscough/)
-- [Nicholas Spies<sup>1</sup>](http://genome.wustl.edu/people/individual/Nicholas-Spies/), [nspies\@wustl.edu](http://genome.wustl.edu/people/individual/contact/nicholas-spies/)
-- [Fouad Yousif<sup>5</sup>](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif), [Fouad.Yousif\@oicr.on.ca](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif)
+- [Malachi Griffith](http://genome.wustl.edu/people/individual/malachi-griffith/)<sup>1,2,3,4</sup>, [mgriffit\@wustl.edu](http://genome.wustl.edu/people/individual/contact/malachi-griffith/), [@malachigriffith](https://twitter.com/malachigriffith)
+- [Obi Griffith](http://genome.wustl.edu/people/individual/obi-griffith/)<sup>1,2,3,4</sup>, [obigriffith\@wustl.edu](http://genome.wustl.edu/people/individual/contact/obi-griffith/), [@obigriffith](https://twitter.com/obigriffith)
+- [Brian Haas](https://personal.broadinstitute.org/bhaas/)<sup>5</sup>, [bhaas\@broadinstitute.org](https://personal.broadinstitute.org/bhaas/), [@brianjhaas](https://twitter.com/brianjhaas)
+- [Jason Walker](http://genome.wustl.edu/people/individual/jason-walker/)<sup>1</sup>, [jason.walker\@wustl.edu](http://genome.wustl.edu/people/individual/contact/jason-walker/)
+- [Alex Wagner](http://genome.wustl.edu/people/individual/alex-wagner/)<sup>1</sup>, [awagner24\@wustl.edu](http://genome.wustl.edu/people/individual/contact/alex-wagner/), [@handlerwagner](https://twitter.com/handlerwagner)
+- [Ben Ainscough](http://genome.wustl.edu/people/individual/Benjamin-Ainscough/)<sup>1</sup>, [b.ainscough\@wustl.edu](http://genome.wustl.edu/people/individual/contact/benjamin-ainscough/)
+- [Nicholas Spies](http://genome.wustl.edu/people/individual/Nicholas-Spies/)<sup>1</sup>, [nspies\@wustl.edu](http://genome.wustl.edu/people/individual/contact/nicholas-spies/)
+- [Fouad Yousif](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif)<sup>6</sup>, [Fouad.Yousif\@oicr.on.ca](https://bioinformatics.ca/person/cbw-core-faculty/fouad-yousif)
 
 <sup>1</sup> The Genome Institute, Washington University School of Medicine<br>
 <sup>2</sup> The Department of Genetics, Washington University School of Medicine<br>
 <sup>3</sup> The Department of Medicine, Washington University School of Medicine<br>
 <sup>4</sup> The Siteman Cancer Center, a National Cancer Institute Comprehensive Cancer Center, Barnes Jewish Hospital and Washington University School of Medicine<br>
-<sup>5</sup> The Ontario Institute for Cancer Research<br>
+<sup>5</sup> Broad Institute<br>
+<sup>6</sup> The Ontario Institute for Cancer Research<br>
 
 #### Further acknowledgements
 We are grateful to the following people for past and ongoing contributions to this work:

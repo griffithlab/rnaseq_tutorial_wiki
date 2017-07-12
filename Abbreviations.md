@@ -1,4 +1,4 @@
-# 5-i. Abbreviations
+# 7-ii. Abbreviations
 
 * AWS EC2: Amazon Web Services, Elastic Compute
 * BAM: Binary Sequence Alignment/Map

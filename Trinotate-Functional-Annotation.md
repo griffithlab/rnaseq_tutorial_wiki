@@ -1,4 +1,4 @@
-# 6-i Functional Annotation of Assembled Transcripts Using Trinotate
+# 6-i. Functional Annotation of Assembled Transcripts Using Trinotate
 
 Now we have a bunch of transcript sequences and have identified some subset of them that appear to be biologically interesting in that they're differentially expressed between our two conditions - but we don't really know what they are or what biological functions they might represent.  We can explore their potential functions by functionally annotating them using our Trinotate software and analysis protocol.  To learn more about Trinotate, you can visit the [Trinotate website](http://trinotate.github.io/).
 

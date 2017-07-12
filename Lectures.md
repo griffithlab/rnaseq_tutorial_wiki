@@ -1,4 +1,4 @@
-# 5-ii. Lectures
+# 7-iii. Lectures
 
 ### CBW Informatics for RNA-seq analysis (July 10-12, 2017)
 

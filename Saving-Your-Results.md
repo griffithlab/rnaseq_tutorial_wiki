@@ -1,4 +1,5 @@
-## SAVING A COPY OF YOUR RESULTS TO TAKE HOME WITH YOU
+## 7-i. Saving a Copy of Your Results to Take Home With You
+
 If you are performing this tutorial on a cloud instance, everything will be deleted when the instance is destroyed! To package and download everything used or created during the tutorials you can do the following from your cloud terminal session.
 
 First package and compress all of the directories and files in the ‘rnaseq’ directory

@@ -1,4 +1,4 @@
-# 6-vi. Amazon AWS/AMI setup for use in workshop
+# 7-vii. Amazon AWS/AMI setup for use in workshop
 
 This tutorial explains how Amazon cloud instances were configured for the course.  This exercise is not to be completed by the students but is provided as a reference for future course developers that wish to conduct their hands on exercises on Amazon AWS.
 

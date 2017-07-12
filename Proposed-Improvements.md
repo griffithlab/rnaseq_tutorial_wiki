@@ -1,4 +1,4 @@
-# 5-v. Proposed improvements
+# 7-vi. Proposed improvements
 
 ### Update data sets on the MGI FTP site
 - Put the original UHR and HBR instrument data on the FTP site
