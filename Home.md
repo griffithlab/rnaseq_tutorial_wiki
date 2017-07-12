@@ -25,26 +25,26 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
   <li><strong>Module 1 - Introduction to RNA sequencing</strong></li>
   <ol start="i">
     <li>[[Installation|Installation]]</li>
-    <li>[[Reference Genome|Reference-Genome]]</li>
-    <li>[[Annotation|Annotation]]</li>
+    <li>[[Reference Genomes|Reference-Genome]]</li>
+    <li>[[Annotations|Annotation]]</li>
     <li>[[Indexing|Indexing]]</li>
     <li>[[RNA-seq Data|RNAseq-Data]]</li>
     <li>[[PreAlignment QC|PreAlignment-QC]]</li>
   </ol>
   <li><strong>Module 2 - RNA-seq Alignment and Visualization</strong></li>
   <ol start="i">
-    <li>[[Preprocessing|Adapter-Trim]]</li>
+    <li>[[Adapter Trim|Adapter-Trim]]</li>
     <li>[[Alignment|Alignment]]</li>
     <li>[[IGV|IGV-Tutorial]]</li>
-    <li>[[PostAlignment Visualization|PostAlignment-Visualization]]</li>
-    <li>[[PostAlignment QC|PostAlignment-QC]]</li>
+    <li>[[Alignment Visualization|PostAlignment-Visualization]]</li>
+    <li>[[Alignment QC|PostAlignment-QC]]</li>
   </ol>
   <li><strong>Module 3 - Expression and Differential Expression</strong></li>
   <ol start="i">  
     <li>[[Expression|Expression]]</li>
     <li>[[Differential Expression|Differential-Expression]]</li>
     <li>[[DE Visualization|DE-Visualization]]</li>
-    <li>[[Kallisto for Reference Free Abundance Estimation|Kallisto]]</li>
+    <li>[[Kallisto for Reference-Free Abundance Estimation|Kallisto]]</li>
   </ol>
   <li><strong>Module 4 - Isoform Discovery and Alternative Expression</strong></li>
   <ol start="i">  
@@ -52,7 +52,7 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
     <li>[[de novo Transcript Assembly|de-novo-Transcript-Assembly]]</li>
     <li>[[Transcript Assembly Merge|Transcript-Assembly-Merge]]</li>
     <li>[[Differential Splicing|Differential-Splicing]]</li>
-    <li>[[Transcript Assembly Visualization|Transcript-Assembly-Visualization]]</li>
+    <li>[[Splicing Visualization|Transcript-Assembly-Visualization]]</li>
   </ol>
   <li><strong>Module 5 - Trinity Assembly And Analysis</strong></li>
   <ol start="i">  
@@ -64,6 +64,7 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
   </ol>
   <li><strong>Appendix</strong></li>
   <ol start="i">  
+    <li>[[Saving Results|Saving-Your-Results]]</li>
     <li>[[Abbreviations|Abbreviations]]</li>
     <li>[[Lectures|Lectures]]</li>
     <li>[[Practical Exercise Solutions|Solutions]]</li>
