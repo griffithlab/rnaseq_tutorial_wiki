@@ -62,7 +62,7 @@ grep -P -w "NDA|A|D" HBR.junctions.anno.bed | perl -ne 'chomp; @l=split("\t",$_)
 grep -P -w "NDA|A|D" UHR.junctions.anno.bed | perl -ne 'chomp; @l=split("\t",$_); if ($l[4] > 3){print "$_\n"}'
 ```
 
-##Organize illustrative GTF files to view
+## Organize illustrative GTF files to view
 Note that when using StringTie in the de novo mode we get a GTF file that is based only on information obtained by examining alignments of RNA-seq reads against the reference genome. For our relatively low coverage RNA-seq data we anticipate that some transcripts will not be completely assembled accurately, others may be missed all together. In the reference only and reference guided modes StringTie has access to the reference Ensembl GTF transcriptome. This increases the sensitivity. However, when a reference GTF is available, StringTie places all of the reference transcript information in the resulting GTF, even if no evidence is found in our RNA-seq data. We need to look at the expression value predictions for each transcript to know whether there was actually any evidence found for each known transcript.
 
 To make it easier to compare the output of the ref-only, ref-guided, and de novo results, we will now produce filtered versions of our merged GTF files where we remove transcripts unless there was some evidence for their expression.
