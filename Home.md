@@ -54,13 +54,13 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
     <li>[[Differential Splicing|Differential-Splicing]]</li>
     <li>[[Splicing Visualization|Transcript-Assembly-Visualization]]</li>
   </ol>
-  <li><strong>Module 5 - Trinity Assembly And Analysis</strong></li>
+  <li><strong>Module 5 - De novo transcript reconstruction</strong></li>
   <ol start="i">  
-    <li>[[Trinity Assembly And Analysis|Trinity-Assembly-And-Analysis]]</li>
+    <li>[[De novo RNA-Seq Assembly and Analysis Using Trinity|Trinity-Assembly-And-Analysis]]</li>
   </ol>
-  <li><strong>Module 6 - Trinotate Functional Annotation</strong></li>
+  <li><strong>Module 6 - Functional Annotation of Transcripts</strong></li>
   <ol start="i">  
-    <li>[[Trinotate Functional Annotation|Trinotate-Functional-Annotation]]</li>
+    <li>[[Functional Annotation of Assembled Transcripts Using Trinotate|Trinotate-Functional-Annotation]]</li>
   </ol>
   <li><strong>Appendix</strong></li>
   <ol start="i">  
