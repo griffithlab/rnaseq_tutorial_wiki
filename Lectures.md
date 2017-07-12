@@ -14,6 +14,8 @@
 * [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw/2017/RNASeq_Module4_Lecture.pdf]]
 * [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw/2017/RNASeq_Module4_Tutorial.pdf]]
 * [[Introduction to Genome Analysis Platforms (lecture)|LectureFiles/cbw/2017/GenomeAnalysisPlatforms.pdf]]
+* [[Module 5 - De novo RNA-Seq Assembly and Analysis Using Trinity (lecture)|LectureFiles/cbw/2017/RNASeq_Module5_Lecture.pdf]]
+* [[Module 6 - Functional Annotation of Assembled Transcripts Using Trinotate (lecture)|LectureFiles/cbw/2017/RNASeq_Module6_Lecture.pdf]]
 
 ### CBW-CSHL High-Throughput Biology: From Sequence to Networks (March 20-26, 2017)
 
