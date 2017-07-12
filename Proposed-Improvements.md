@@ -1,6 +1,7 @@
 # 7-vi. Proposed improvements
 
 ### Update data sets on the MGI FTP site
+- Use a larger data set that has not been so heavily downsampled
 - Put the original UHR and HBR instrument data on the FTP site
 - Put the instrument data for the new hcc1395 data on the FTP site
 - MGI notes on this data will be here: https://confluence.gsc.wustl.edu/display/CI/Cancer+Informatics+Test+Data
