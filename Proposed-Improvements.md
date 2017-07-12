@@ -41,6 +41,8 @@ Note: we do have an okay trimming section now, but it should really be starting 
 ### Create a batch effect section
 We should add a section about batch effects.  Both detecting the presence of batch effects as well as correcting for them during analysis.
 
+Use the Snyder lab mouse/human tissue expression data as an example?
+
 ### Add documentation to detailed cloud tutorial to provide some better security practices
 For convenience the cloud instances have been set up with very permissive security. Some better practices should be documented. 
 
