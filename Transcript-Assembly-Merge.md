@@ -37,8 +37,8 @@ Compare reference guided transcripts to the known annotations. This allows us to
 
 ```bash
 
-gffcompare -r $RNA_REF_GTF -o merged stringtie_merged.gtf
-cat merged.stats
+gffcompare -r $RNA_REF_GTF -o gffcompare stringtie_merged.gtf
+cat gffcompare.stats
 
 ```
 
@@ -46,7 +46,7 @@ What does the merged annotation look like after comparing it to known annotation
 
 ```bash
 
-awk '{if($3=="transcript") print}' merged.annotated.gtf | cut -f 1,4,9 | less
+awk '{if($3=="transcript") print}' gffcompare.annotated.gtf | cut -f 1,4,9 | less
 
 ```
 
@@ -68,8 +68,8 @@ Compare the de novo merged transcripts to the known annotations:
 
 ```bash
 
-gffcompare -r $RNA_REF_GTF -o merged stringtie_merged.gtf
-cat merged.stats
+gffcompare -r $RNA_REF_GTF -o gffcompare stringtie_merged.gtf
+cat gffcompare.stats
 
 ```
 
