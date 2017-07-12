@@ -27,7 +27,7 @@ cd $RNA_HOME/expression/stringtie/de_novo/
 cat stringtie_merged.gtf | perl -ne 'if ($_ =~ /gene_id\s+\"(\S+)\"\;/){print "$1\n"}' | sort | uniq | wc -l
 ```
 
-How many genes have at least one *novel* transcript assembled?
+How many genes have at least one potentially *novel* transcript assembled?
 
 ```bash
 
@@ -35,6 +35,12 @@ head gffcompare.stringtie_merged.gtf.tmap
 grep "j" gffcompare.stringtie_merged.gtf.tmap
 grep "j" gffcompare.stringtie_merged.gtf.tmap | cut -f 1 | sort | uniq | wc -l
 	
+```
+
+Display the transcripts that correspond to intergenic regions with the highest read support (candidate novel regions of transcription)
+```
+cd $RNA_HOME/expression/stringtie/de_novo
+grep -w "u" gffcompare.stringtie_merged.gtf.tmap | sort -n -k 10 | column -t
 ```
 
 ## Using regtools to annotate all individual splice junctions
@@ -113,6 +119,7 @@ Go to the following regions:
 * chr22:50,466,553-50,467,472 (novel cassette exon; create a Sashimi plot of this region)
 * chr22:39,313,011-39,314,398 (skipping of a known exon; create a Sashimi plot of this region)
 * chr22:46,362,928-46,364,315 (alternative acceptor sites; create a Sashimi plot of this region)
+* chr22:18,935,247-18,953,963 (novel transcribed region)
 
 Do you see the evidence for any novel exons/transcript that are found in 'de_novo' or 'ref_guided' modes but NOT found in 'ref_only' mode?  Explore in IGV for other examples of novel or different transcript predictions from the different cufflinks modes. Pay attention to how the predicted transcripts line up with known transcripts. Try loading the Ensembl transcripts track (File -> Load from Server).
 	
