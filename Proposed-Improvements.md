@@ -1,5 +1,10 @@
 # 7-vi. Proposed improvements
 
+### DE analysis improvements
+- incorporate ideas from this tutorial and make note of it in the resources: https://dockflow.org/workflow/rnaseq-gene/#content
+- New paper comparing many RNA-seq tools: https://www.nature.com/articles/s41467-017-00050-4.epdf
+- Great paper on number of replicates to use (incorporate into lecture): http://rnajournal.cshlp.org/content/22/6/839.long
+
 ### Update data sets on the MGI FTP site
 - Use a larger data set that has not been so heavily downsampled
 - Put the original UHR and HBR instrument data on the FTP site
