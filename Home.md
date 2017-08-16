@@ -9,6 +9,9 @@ E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
 
 Note: An archived version of this tutorial exists <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki">here</a>. This version is maintained for consistency with the published materials (<a href="http://dx.doi.org/10.1371/journal.pcbi.1004393">Griffith et al. 2015. PLoS Comp Biol.</a>) and for past students wishing to review covered material. However, we strongly suggest that you continue with the current version of the tutorial below.
 
+These materials were developed with the support of AWS Cloud Credits for Research.
+<a href="http://aws.amazon.com/what-is-cloud-computing"><img src="http://awsmedia.s3.amazonaws.com/AWS_Logo_PoweredBy_127px.png" alt="Powered by AWS Cloud Computing"></a>
+
 ## Table of Contents
 <ol start="0">
   <li><strong>Module 0 - Introduction and Cloud Computing</strong></li>
