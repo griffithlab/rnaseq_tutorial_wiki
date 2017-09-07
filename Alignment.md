@@ -33,7 +33,7 @@ HISAT2 basic usage:
 Extra options specified below:
 
 * '-p 8' tells HISAT2 to use eight CPUs for bowtie alignments.
-* '--rna-strandedness RF' specifies strandedness of RNAseq library. We will specify RF since the TruSeq strand-specific library was used to make these libraries. See <a href="https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md">here</a> for options.
+* '--rna-strandness RF' specifies strandness of RNAseq library. We will specify RF since the TruSeq strand-specific library was used to make these libraries. See <a href="https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_5.md">here</a> for options.
 * '--rg-id $ID' specifies a read group ID that is a unique identifier.
 * '--rg SM:$SAMPLE_NAME' specifies a read group sample name. This together with rg-id will allow you to determine which reads came from which sample in the merged bam later on.
 * '--rg LB:$LIBRARY_NAME' specifies a read group library name. This together with rg-id will allow you to determine which reads came from which library in the merged bam later on.
