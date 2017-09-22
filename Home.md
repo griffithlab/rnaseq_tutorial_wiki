@@ -9,8 +9,13 @@ E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
 
 Note: An archived version of this tutorial exists <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki">here</a>. This version is maintained for consistency with the published materials (<a href="http://dx.doi.org/10.1371/journal.pcbi.1004393">Griffith et al. 2015. PLoS Comp Biol.</a>) and for past students wishing to review covered material. However, we strongly suggest that you continue with the current version of the tutorial below.
 
-These materials were developed with the support of AWS Cloud Credits for Research.
-<a href="http://aws.amazon.com/what-is-cloud-computing"><img src="http://awsmedia.s3.amazonaws.com/AWS_Logo_PoweredBy_127px.png" alt="Powered by AWS Cloud Computing"></a>
+These materials have been developed with the support of AWS Cloud Credits for Research, the Canadian Bioinformatics Workshops, and Cold Spring Harbor Laboratory.
+
+<a href="http://aws.amazon.com/what-is-cloud-computing"><img src="Images/aws-powered-by.png" alt="Powered by AWS Cloud Computing"></a>
+
+<a href="https://bioinformatics.ca/"><img src="Images/bioinformatics_LOGO.jpg" alt="Canadian Bioinformatics Workshops"></a>
+
+<a href="https://bioinformatics.ca/"><img src="Images/Cold_Spring_Harbor_Laboratory_logo.png" alt="Cold Spring Harbor Laboratory"></a>
 
 ## Table of Contents
 <ol start="0">
