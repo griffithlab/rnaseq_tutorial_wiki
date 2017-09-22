@@ -8,6 +8,8 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
 
 These materials have been developed with the support of AWS Cloud Credits for Research, the Canadian Bioinformatics Workshops, and Cold Spring Harbor Laboratory.
 
+This workshop have been delivered many times and continues to evolve. To see a complete list of these workshops is available [here](Lectures).
+
 <table>
 <tr>
 <td><a href="http://aws.amazon.com/what-is-cloud-computing"><img src="Images/aws-powered-by.png" alt="Powered by AWS Cloud Computing"></a></td>
