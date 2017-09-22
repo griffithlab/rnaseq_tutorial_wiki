@@ -11,11 +11,13 @@ Note: An archived version of this tutorial exists <a href="https://github.com/gr
 
 These materials have been developed with the support of AWS Cloud Credits for Research, the Canadian Bioinformatics Workshops, and Cold Spring Harbor Laboratory.
 
-<a href="http://aws.amazon.com/what-is-cloud-computing"><img src="Images/aws-powered-by.png" alt="Powered by AWS Cloud Computing"></a>
-
-<a href="https://bioinformatics.ca/"><img src="Images/bioinformatics_LOGO.jpg" alt="Canadian Bioinformatics Workshops"></a>
-
-<a href="https://bioinformatics.ca/"><img src="Images/Cold_Spring_Harbor_Laboratory_logo.png" alt="Cold Spring Harbor Laboratory"></a>
+<table>
+<tr>
+<td><a href="http://aws.amazon.com/what-is-cloud-computing"><img src="Images/aws-powered-by.png" alt="Powered by AWS Cloud Computing"></a></td>
+<td><a href="https://bioinformatics.ca/"><img src="Images/bioinformatics_LOGO.jpg" alt="Canadian Bioinformatics Workshops"></a></td>
+<td><a href="http://www.cshl.edu/"><img src="Images/Cold_Spring_Harbor_Laboratory_logo.png" alt="Cold Spring Harbor Laboratory"></a></td>
+</tr>
+</table>
 
 ## Table of Contents
 <ol start="0">
