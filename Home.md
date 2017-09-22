@@ -2,12 +2,9 @@
 
 Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents. A version of this tutorial was accompanied by a publication.  If you find the materials here or in that paper useful, please cite the following:
 
-Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, Obi L. Griffith\*. 2015. [*Informatics for RNA-seq: A web resource for analysis on the cloud*.](http://dx.doi.org/10.1371/journal.pcbi.1004393) PLoS Comp Biol. 11(8):e1004393.
+Malachi Griffith\*, Jason R. Walker, Nicholas C. Spies, Benjamin J. Ainscough, Obi L. Griffith\*. 2015. [*Informatics for RNA-seq: A web resource for analysis on the cloud*.](http://dx.doi.org/10.1371/journal.pcbi.1004393) PLoS Comp Biol. 11(8):e1004393. \*To whom correspondence should be addressed: E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
 
-\*To whom correspondence should be addressed: 
-E-mail: mgriffit[AT]genome.wustl.edu, ogriffit[AT]genome.wustl.edu
-
-Note: An archived version of this tutorial exists <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki">here</a>. This version is maintained for consistency with the published materials (<a href="http://dx.doi.org/10.1371/journal.pcbi.1004393">Griffith et al. 2015. PLoS Comp Biol.</a>) and for past students wishing to review covered material. However, we strongly suggest that you continue with the current version of the tutorial below.
+Note: An archived version of this tutorial exists <a href="https://github.com/griffithlab/rnaseq_tutorial_v1/wiki">here</a>. That version is maintained for consistency with the published materials (<a href="http://dx.doi.org/10.1371/journal.pcbi.1004393">Griffith et al. 2015. PLoS Comp Biol.</a>) and for past students wishing to review covered material. However, we strongly suggest that you continue with the current version of the tutorial below.
 
 These materials have been developed with the support of AWS Cloud Credits for Research, the Canadian Bioinformatics Workshops, and Cold Spring Harbor Laboratory.
 
