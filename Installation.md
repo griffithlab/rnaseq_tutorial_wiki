@@ -226,6 +226,7 @@ For this tutorial we require:
 - [genefilter](http://bioconductor.org/packages/release/bioc/html/genefilter.html)
 - [ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+- [GenomicRanges](http://bioconductor.org/packages/release/bioc/html/GenomicRanges.html)
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
