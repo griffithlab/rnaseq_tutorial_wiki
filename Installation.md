@@ -191,8 +191,6 @@ sudo apt-get install r-base
 
 ```
 
-Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
-
 ## R Libraries
 
 For this tutorial we require:
