@@ -19,7 +19,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 ### Start with existing community AMI
 
-1. Select Launch instance. Search Community AMIs for and select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-5189a661". Choose an instance type of "m4.2xlarge". Increase root volume (e.g., 32GB) and add a second volume (e.g., 500gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
+1. Select Launch instance. Search Community AMIs for and select "ubuntu/images/hvm-ssd/ubuntu-zesty-17.04-amd64-server-20171011". Choose an instance type of "m4.2xlarge". Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
 2. Change permissions on downloaded key pair with `chmod 400 [instructor-key].pem`
 3. Login to instance with ubuntu user:
 
