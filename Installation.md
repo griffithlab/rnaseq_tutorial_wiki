@@ -185,24 +185,11 @@ read_GC.py
 
 ## [R](http://www.r-project.org/)
 
-This install takes a while so check if you have R installed already by typing `which R`.
-It is already installed on the Cloud, but for completeness, here is how it was done. Please skip all R installation!
-
 ```bash
 
-#cd $RNA_HOME/tools/
-#export R_LIBS=
-#wget https://cran.r-project.org/src/base/R-3/R-3.2.3.tar.gz
-#tar -zxvf R-3.2.3.tar.gz
-#cd R-3.2.3
-#./configure --prefix=$RNA_HOME/tools/R-3.2.3/ --with-x=no
-#make
-#make install
-#./bin/Rscript
+sudo apt-get install r-base
 
 ```
-
-Note, if X11 libraries are not available you may need to use '--with-x=no' during config, on a regular linux system you would not use this option:
 
 ## R Libraries
 
