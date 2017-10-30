@@ -185,11 +185,24 @@ read_GC.py
 
 ## [R](http://www.r-project.org/)
 
+This install takes a while so check if you have R installed already by typing `which R`. It is already installed on the Cloud, but for completeness, here is how it was done. Please skip all R installation!
+
 ```bash
 
-sudo apt-get install r-base
+sudo apt-get install r-base-dev
+export R_LIBS=
+cd $RNA_HOME/tools/
+wget https://stat.ethz.ch/R/daily/R-patched.tar.gz
+tar -xzvf R-patched.tar.gz
+cd R-patched
+./configure --prefix=$RNA_HOME/tools/R-patched/ --with-x=no
+make
+make install
+./bin/Rscript
 
 ```
+
+Note, if X11 libraries are not available you may need to use `--with-x=no` during config, on a regular linux system you would not use this option
 
 ## R Libraries
 
@@ -273,7 +286,7 @@ export RNA_REF_GTF=$RNA_REF_INDEX.gtf
 
 export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
 
-export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$RNA_HOME/tools/kallisto_linux-v0.43.0:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$PATH
+export PATH=$RNA_HOME/tools/R-patched/bin:$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$RNA_HOME/tools/kallisto_linux-v0.43.0:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$PATH:$HOME/.local/bin
 
 echo $PATH
 
