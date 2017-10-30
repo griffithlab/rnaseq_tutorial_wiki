@@ -189,16 +189,16 @@ This install takes a while so check if you have R installed already by typing `w
 
 ```bash
 
-sudo apt-get install r-base-dev
-export R_LIBS=
-cd $RNA_HOME/tools/
-wget https://stat.ethz.ch/R/daily/R-patched.tar.gz
-tar -xzvf R-patched.tar.gz
-cd R-patched
-./configure --prefix=$RNA_HOME/tools/R-patched/ --with-x=no
-make
-make install
-./bin/Rscript
+#sudo apt-get install r-base-dev
+#export R_LIBS=
+#cd $RNA_HOME/tools/
+#wget https://stat.ethz.ch/R/daily/R-patched.tar.gz
+#tar -xzvf R-patched.tar.gz
+#cd R-patched
+#./configure --prefix=$RNA_HOME/tools/R-patched/ --with-x=no
+#make
+#make install
+#./bin/Rscript
 
 ```
 
