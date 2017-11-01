@@ -31,7 +31,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev
+sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev gcc-4.7 g++-4.7
 ```
 
 * logout and log back in
@@ -56,17 +56,16 @@ export MANPAGER=less
 #### Install GEMINI
 ```
 mkdir /home/ubuntu/workspace/data
-cd /home/ubuntu/bin
 wget https://raw.github.com/arq5x/gemini/master/gemini/scripts/gemini_install.py
-sudo python gemini_install.py ~/bin/ ~/workspace/data/
+sudo python gemini_install.py $WORKSPACE/bin $WORKSPACE/data
 ```
 
 #### Install ALLPATHS-LG
 ```
-wget ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_code/allpathslg-52488.tar.gz
-tar -zxvf allpathslg-52488.tar.gz
+wget ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_code/LATEST_VERSION.tar.gz
+tar -xvzf LATEST_VERSION.tar.gz
 cd allpathslg-52488/
-./configure --prefix=/home/ubuntu/bin/allpathslg-52488/
+CC=gcc-4.7 CXX=g++-4.7 ./configure --prefix=/home/ubuntu/tools/allpathslg-52488/
 make
 make install
 ```
@@ -78,6 +77,17 @@ tar -zxvf MUMmer3.23.tar.gz
 cd MUMmer3.23
 make check
 make install
+```
+
+#### Install sniffles
+```
+wget https://github.com/fritzsedlazeck/Sniffles/archive/master.tar.gz -O Sniffles.tar.gz
+tar -xzvf Sniffles.tar.gz
+cd Sniffles-master/
+mkdir -p build/
+cd build/
+cmake ..
+make
 ```
 
 #### Install TABIX
@@ -93,13 +103,36 @@ make
 #### Install gkno
 ```
 git clone https://github.com/gkno/gkno_launcher.git
-wget http://www.carfab.com/apachesoftware//ant/binaries/apache-ant-1.9.6-bin.zip
-unzip apache-ant-1.9.6-bin.zip
-cd apache-ant-1.9.6
-ANT_HOME=~/bin/apache-ant-1.9.6
+wget http://ftp.ps.pl/pub/apache//ant/binaries/apache-ant-1.9.9-bin.tar.gz
+tar -xvzf apache-ant-1.9.9-bin.tar.gz
+cd apache-ant-1.9.9
+ANT_HOME=$TOOLS_HOME/apache-ant-1.9.9
 PATH=$PATH:${ANT_HOME}/bin
 cd ../gkno_launcher
 ./gkno build
+```
+
+#### Install salmon
+```
+wget https://github.com/COMBINE-lab/salmon/releases/download/v0.8.2/Salmon-0.8.2_linux_x86_64.tar.gz
+tar -xvzf Salmon-0.8.2_linux_x86_64.tar.gz
+```
+
+#### Install bedtools
+```
+git clone https://github.com/arq5x/bedtools2.git
+cd bedtools2
+make
+sudo make install
+```
+
+#### Install trinity
+```
+wget https://github.com/trinityrnaseq/trinityrnaseq/archive/Trinity-v2.5.1.tar.gz
+tar -xvzf Trinity-v2.5.1.tar.gz
+cd trinityrnaseq-Trinity-v2.5.1/
+make
+# breaks here
 ```
 
 #### Install NCBI SRA toolkit and NCBI E-Utilities
