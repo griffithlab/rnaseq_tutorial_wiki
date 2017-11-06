@@ -173,8 +173,33 @@ esearch -db sra -query PRJNA40075  | efetch --format runinfo | cut -d ',' -f 1 |
 
 #### Download data files
 ```
-wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
-tar --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2010*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2011*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2012*' --exclude='Homo_sapiens/Ensembl/GRCh37/Annotation/Archives/archive-2013*' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex' --exclude='Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences' -zxvf Homo_sapiens_Ensembl_GRCh37.tar.gz
+cd $WORKSPACE
+mkdir -p data/fasta/GRCh38
+cd data/fasta/GRCh38
+wget ftp://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz
+gunzip Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz
+wget ftp://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.chromosome.22.fa.gz
+gunzip Homo_sapiens.GRCh38.dna_sm.chromosome.22.fa.gz
+wget http://tools.thermofisher.com/downloads/ERCC92.fa
+mkdir ../GRCh37
+cd ../GRCh37
+wget ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna_sm.primary_assembly.fa.gz
+gunzip Homo_sapiens.GRCh37.75.dna_sm.primary_assembly.fa.gz
+wget ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna_sm.chromosome.22.fa.gz
+gunzip Homo_sapiens.GRCh37.75.dna_sm.chromosome.22.fa.gz
+cd ../..
+mkdir -p annotations/GRCh38
+cd annotations/GRCh38
+wget ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz
+gunzip Homo_sapiens.GRCh38.86.gtf.gz
+wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC92_fix.gtf
+awk ‘($1 == 22)’ > chr22.gtf
+cat chr22.gtf ERCC92_fix.gtf > chr22_with_ERCC92.gtf
+mkdir ../GRCH37
+cd ../GRCH37
+wget ftp://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz
+gunzip Homo_sapiens.GRCh37.75.gtf.gz
+
 ```
 
 ### Set up Apache web server
