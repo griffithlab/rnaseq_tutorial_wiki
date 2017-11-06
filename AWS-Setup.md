@@ -19,7 +19,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 ### Start with existing community AMI
 
-1. Select Launch instance. Search Community AMIs for and select "ubuntu/images/hvm-ssd/ubuntu-artful-17.10-amd64-server-20171026.1 - ami-3702cc4f". Choose an instance type of "m4.2xlarge". Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
+1. Select Launch instance. Search Community AMIs for and select `ubuntu/images/hvm-ssd/ubuntu-artful-17.10-amd64-server-20171026.1 - ami-3702cc4f`. Choose an instance type of `m4.2xlarge`. Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
 2. Change permissions on downloaded key pair with `chmod 400 [instructor-key].pem`
 3. Login to instance with ubuntu user:
 
@@ -31,7 +31,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev gcc-4.7 g++-4.7
+sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev gcc-4.8 g++-4.8
 ```
 
 * logout and log back in
@@ -65,7 +65,7 @@ sudo python gemini_install.py $WORKSPACE/bin $WORKSPACE/data
 wget ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_code/LATEST_VERSION.tar.gz
 tar -xvzf LATEST_VERSION.tar.gz
 cd allpathslg-52488/
-CC=gcc-4.7 CXX=g++-4.7 ./configure --prefix=/home/ubuntu/tools/allpathslg-52488/
+CC=gcc-4.8 CXX=g++-4.8 ./configure --prefix=/home/ubuntu/tools/allpathslg-52488/
 make
 make install
 ```
@@ -87,6 +87,26 @@ cd Sniffles-master/
 mkdir -p build/
 cd build/
 cmake ..
+make
+```
+
+#### Install NGM-LR
+```
+wget https://github.com/philres/ngmlr/releases/download/v0.2.6/ngmlr-0.2.6-beta-linux-x86_64.tar.gz
+tar -xvzf ngmlr-0.2.6-beta-linux-x86_64.tar.gz
+```
+
+#### Install BWA
+```
+git clone https://github.com/lh3/bwa.git
+cd bwa
+make
+```
+
+#### Install SURVIVOR
+```
+git clone https://github.com/fritzsedlazeck/SURVIVOR.git
+cd SURVIVOR/Debug
 make
 ```
 
