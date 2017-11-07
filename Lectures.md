@@ -55,6 +55,8 @@ Organized by [Cold Spring Harbor Laboratory (CSHL)](http://www.cshl.edu/) - [Cou
 ### CBW Informatics for RNA-seq analysis (June 16-17, 2016. Toronto, ON, Canada)
 Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca) - [Course Site](https://bioinformatics.ca/workshops/2016/informatics-rna-seq-analysis-2016)
 
+**Videos of lectures ([Youtube](https://www.youtube.com/watch?v=B69fkgEkCaE&list=PL3izGL6oi0S849u7OZbX85WTyBxVdcpqx))**
+
 **Presentations:**
 
 * [[Introduction to Cloud Computing (lecture/tutorial)|LectureFiles/cbw/2016/RNASeq_Module0_Lecture.pdf]]
