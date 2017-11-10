@@ -53,11 +53,17 @@ ln -s /workspace workspace
 export MANPAGER=less
 ```
 
+#### Install TABIX (GEMINI pre-req)
+```
+sudo apt-get install tabix
+```
+
 #### Install GEMINI
 ```
-mkdir /home/ubuntu/workspace/data
+mkdir -p $WORKSPACE/lib/gemini
+mkdir -p $HOME/bin
 wget https://raw.github.com/arq5x/gemini/master/gemini/scripts/gemini_install.py
-sudo python gemini_install.py $WORKSPACE/bin $WORKSPACE/data
+sudo python gemini_install.py $HOME $WORKSPACE/lib/gemini
 ```
 
 #### Install ALLPATHS-LG
@@ -110,27 +116,35 @@ cd SURVIVOR/Debug
 make
 ```
 
-#### Install TABIX
-```
-wget http://downloads.sourceforge.net/project/samtools/tabix/tabix-0.2.6.tar.bz2
-bunzip2 tabix-0.2.6.tar.bz2
-tar -xvf tabix-0.2.6.tar
-cd tabix-0.2.6
-make
-./tabix
-```
-
 #### Install gkno
 ```
-git clone https://github.com/gkno/gkno_launcher.git
 wget http://ftp.ps.pl/pub/apache//ant/binaries/apache-ant-1.9.9-bin.tar.gz
 tar -xvzf apache-ant-1.9.9-bin.tar.gz
 cd apache-ant-1.9.9
-ANT_HOME=$TOOLS_HOME/apache-ant-1.9.9
+ANT_HOME=$TOOLS/apache-ant-1.9.9
 PATH=$PATH:${ANT_HOME}/bin
-cd ../gkno_launcher
-./gkno build
+
+cd $TOOLS
+git clone https://github.com/gkno/gkno_launcher.git
+cd gkno_launcher/
+ln -s /usr/bin/gcc-4.8 gcc
+ln -s /usr/bin/g++-4.8 g++
+PATH=$TOOLS/gkno_launcher:$PATH
+C=gcc-4.8 CXX=g++-4.8 ./gkno build
+
+wget http://genomedata.org/seq-tec-workshop/gkno-precompiled-deps.tar.gz
+tar -xvzf gkno-precompiled-deps.tar.gz
+cp gkno-precompiled-deps/vt tools/vt
+cp -r gkno-precompiled-deps/bin tools/vcflib
+
+mkdir -p $DATA/gkno
+mv resources/ $DATA/gkno
+ln -s $DATA/gkno/resources
 ```
+
+open the file: `PATH_TO_GKNO_LAUNCHER/src/gkno/conf/user_settings.json`
+
+There is a list of compiled tools. Just add `vt`, and `vcflib` to this list, and gkno will think they are available.
 
 #### Install salmon
 ```
@@ -146,13 +160,24 @@ make
 sudo make install
 ```
 
-#### Install trinity
+#### Install trinity (with gmap, bowtie2, emacs)
 ```
+#prepreqs:
+sudo apt-get install gmap bowtie2 emacs25
+
+#data:
+cd $DATA
+wget http://genomedata.org/seq-tec-workshop/trinity.tar.gz
+tar -xvzf trinity.tar.gz
+
+#trinity:
 wget https://github.com/trinityrnaseq/trinityrnaseq/archive/Trinity-v2.5.1.tar.gz
 tar -xvzf Trinity-v2.5.1.tar.gz
-cd trinityrnaseq-Trinity-v2.5.1/
+cd trinityrnaseq-Trinity-v2.5.1/Chrysalis/
+rm Makefile
+wget http://genomedata.org/seq-tec-workshop/Makefile
+cd ..
 make
-# breaks here
 ```
 
 #### Install NCBI SRA toolkit and NCBI E-Utilities
@@ -251,7 +276,7 @@ From AWS Console select Services -> IAM. Go to Users, Create User, specify a use
 
 ### Launch student instance
 1. Go to AWS console. Login. Select EC2.
-2. Launch Instance, search for "cshl_seqtec_2016_v7" in Community AMIs and Select.
+2. Launch Instance, search for "cshl_seqtec_2017_v1" in Community AMIs and Select.
 3. Choose "m4.2xlarge" instance type.
 4. Select one instance to launch (e.g., one per student and instructor), and select "Protect against accidental termination"
 5. Make sure that you see two snapshots (e.g., the 32GB root volume and 80GB EBS volume you set up earlier)
@@ -260,7 +285,7 @@ From AWS Console select Services -> IAM. Go to Users, Create User, specify a use
 8. Choose an existing key pair (either CSHL.pem)
 9. View instances and wait for them to finish initiating.
 10. Find your instance in console and select it, then hit connect to get your public.ip.address.
-11. Login to node `ssh -i CSHL.pem ubuntu@[public.ip.address]`.
+11. Login to node `ssh -i cshl_2017.pem ubuntu@[public.ip.address]`.
 12. Optional - set up DNS redirects (see below)
 
 ### Set up a dynamic DNS service
