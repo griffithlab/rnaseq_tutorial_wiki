@@ -199,10 +199,10 @@ This install takes a while so check if you have R installed already by typing `w
 #make
 #make install
 #./bin/Rscript
-
 ```
 
-Note, if X11 libraries are not available you may need to use `--with-x=no` during config, on a regular linux system you would not use this option
+Note, if X11 libraries are not available you may need to use `--with-x=no` during config, on a regular linux system you would not use this option.
+Also, linking the R-patched `bin` directory into your `PATH` may cause weird things to happen, such as man pages or `git log` to not display. This can be circumvented by directly linking the `R*` executables (`R`, `RScript`, `RCmd`, etc.) into a `PATH` directory.
 
 ## R Libraries
 
