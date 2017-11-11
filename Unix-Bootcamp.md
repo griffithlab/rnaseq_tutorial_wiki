@@ -76,7 +76,7 @@ It's important to note that you will always be *inside* a single directory when 
 
 ```bash
 ubuntu@:~$ ls
-tools  workspace
+R  bin  tools  workspace
 ubuntu@:~$
 ```
 
@@ -91,7 +91,7 @@ The `ls` command is used to list the contents of _any_ directory, not necessaril
 
 ```bash
 ubuntu@:~$ ls workspace/
-data  lost+found
+data  lib  lost+found
 
 ubuntu@:~$ ls /etc/perl
 CPAN  Net
@@ -109,9 +109,8 @@ Looking at directories from within a Unix terminal can often seem confusing. But
 
 ```bash
 ubuntu@:~$ ls /
-bin   etc         initrd.img.old  lost+found  opt   run   srv  usr      vmlinuz.old
-boot  home        lib             media       proc  sbin  sys  var      workspace
-dev   initrd.img  lib64           mnt         root  snap  tmp  vmlinuz
+bin   dev  home        lib    lost+found  mnt  proc  run   snap  sys  usr  vmlinuz
+boot  etc  initrd.img  lib64  media       opt  root  sbin  srv   tmp  var  workspace
 ```
 
 You might notice some of these names appearing in different colors. Many Unix systems will display files and directories differently by default. Other colors may be used for special types of files. When you log in to a computer you are working with your files in your home directory, and this is often  inside a directory called 'users' or 'home'.
@@ -145,7 +144,7 @@ If we want to make a new directory (e.g. to store some work related data), we ca
 ```bash
 ubuntu@:~$ mkdir workspace/Learning_unix
 ubuntu@:~$ ls workspace
-data  Learning_unix  lost+found
+data  Learning_unix  lib  lost+found
 ```
 
 [mkdir]: http://en.wikipedia.org/wiki/Tilde#Directories_and_URLs
