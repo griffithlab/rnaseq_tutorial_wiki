@@ -68,10 +68,18 @@ sudo python gemini_install.py $HOME $WORKSPACE/lib/gemini
 
 #### Install ALLPATHS-LG
 ```
+# Install prerequisites
+sudo apt install graphviz libgmp3-dev
+cd $TOOLS
+wget https://github.com/broadinstitute/picard/releases/download/2.14.1/picard.jar
+
 wget ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_code/LATEST_VERSION.tar.gz
 tar -xvzf LATEST_VERSION.tar.gz
 cd allpathslg-52488/
-CC=gcc-4.8 CXX=g++-4.8 ./configure --prefix=/home/ubuntu/tools/allpathslg-52488/
+ln -s /usr/bin/gcc-4.8 gcc
+ln -s /usr/bin/g++-4.8 g++
+PATH=$PWD:$PATH
+./configure --prefix=$TOOLS/allpathslg-52488/
 make
 make install
 ```
