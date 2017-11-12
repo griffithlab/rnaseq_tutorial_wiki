@@ -231,11 +231,11 @@ To prepare for logging into our instance, lets create a directory on our own `lo
 mkdir ~/AWS-Tutorial
 mv ~/Downloads/AWS-Tutorial.pem ~/AWS-Tutorial
 cd ~/AWS-Tutorial
-chmod 600 AWS-Tutorial.pem 
+chmod 400 AWS-Tutorial.pem 
 ls
 ```
 
-The `chmod 600 AWS-Tutorial.pem` command changes the permissions of your key file so that only you can read it. This is an important security setting. If you attempt to log into your instance using a key file with inappropriate permissions, the login command may fail. So you should always perform this command on any new key file (or copy of such a file) before attempting to use it to log into an instance. 
+The `chmod 400 AWS-Tutorial.pem` command changes the permissions of your key file so that only you can read it. This is an important security setting. If you attempt to log into your instance using a key file with inappropriate permissions, the login command may fail. So you should always perform this command on any new key file (or copy of such a file) before attempting to use it to log into an instance. 
 
 ### Step 9. Reviewing launch status
 Once you have launched your instance, you will be presented with yet another review page. When you are ready, proceed to the next step by hitting the `View Instances` button.  
@@ -277,7 +277,7 @@ We are finally ready to log into our instance. To do this, open a terminal sessi
 
 ```bash
 cd ~/AWS-Tutorial
-chmod 600 AWS-Tutorial.pem
+chmod 400 AWS-Tutorial.pem
 ssh -i AWS-Tutorial.pem ubuntu@52.5.92.87
 ```
 
@@ -295,7 +295,7 @@ If you tried the above and it did not work there are several possible explanatio
 - First, check the `Instance State` of your instance in the EC2 console. Is it `running`? When you first start an instance it takes a few minutes to boot up. Similarly, if you reboot the instance for some reason, you will not be able to log into it until it comes back online. 
 - Second, are you in a terminal session in the directory where you stored your `.pem` key file? 
 - Third, is this the right key file? Each instance is associated with a single `Key Pair` and you must have the key file that was created when that `Key Pair` was created. If you delete a key file and later generate a new one, it will not work with instances that used an older `Key Pair` even if you name the file the same thing. 
-- Fourth, have you set the permissions for your `.pem` key file correctly. Do not forget to run `chmod 600 *.pem` on your key file. 
+- Fourth, have you set the permissions for your `.pem` key file correctly. Do not forget to run `chmod 400 *.pem` on your key file. 
 - Fifth, did you remember to include the `-i key_file_name.pem` in your SSH command? 
 - Sixth, did you remember to specify what user you want to log into the system as? You must include the `ubuntu@` (or other valid user name) before the IP address to log into an Ubuntu system by SSH. 
 - Seventh, did you specify the correct IP address for the instance you want to log into. The value after `ubuntu@` must match the `Public DNS` or `Public IP` value that is shown in the AWS EC2 Console.  Note that there are also `private` versions of these two values. Only the `Public` version will work from your local computer.
