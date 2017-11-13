@@ -70,9 +70,9 @@ fastqc *.fastq.gz
 ```
 
 Then, go to the following url in your browser:
-* http://__YOUR_DNS_NAME__/rnaseq/practice/data/
+* http://__YOUR_DNS_NAME__/workspace/rnaseq/practice/data/
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance IP or DNS (e.g., cbw##.dyndns.info)
-* Click on any of the \*\_fastqc.html files to view the FastQC report (e.g., hcc1395\_normal\_rep1\_r1\_fastqc.html)
+* Click on any of the `*_fastqc.html` files to view the FastQC report (e.g., `hcc1395_normal_rep1_r1_fastqc.html`)
 
 **Answers**
 * How many total sequences are there? 331,958
