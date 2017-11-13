@@ -32,6 +32,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev gcc-4.8 g++-4.8
+sudo timedatectl set-timezone America/New_York
 ```
 
 * logout and log back in
