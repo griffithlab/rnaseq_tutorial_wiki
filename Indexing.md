@@ -32,6 +32,6 @@ To create an index for all chromosomes instead of just chr22 you would do the fo
 ```
 
 
-| [[Previous Section\|Annotation]] | [[This Section\|Indexing]]   | [[Next Section\|RNAseq-Data]] |
+| [[Previous Section|Annotation]] | [[This Section|Indexing]]   | [[Next Section|RNAseq-Data]] |
 |:-------------------------------:|:---------------------------:|:----------------------------:|
-| [[Annotations\|Annotation]]       | [[Indexing\|Indexing]]       | [[Data\|RNAseq-Data]]         |
+| [[Annotations|Annotation]]       | [[Indexing|Indexing]]       | [[Data|RNAseq-Data]]         |

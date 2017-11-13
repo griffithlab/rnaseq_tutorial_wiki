@@ -53,6 +53,6 @@ scp -i CBWNY.pem __MY_DATA__ ubuntu@__YOUR_DNS_NAME__:/
 ```
 
 
-| [[Previous Section\|Intro-to-AWS-Cloud-Computing]] | [[This Section\|Logging-into-Amazon-Cloud]]               | [[Next Section\|Unix-Bootcamp]]               |
+| [[Previous Section|Intro-to-AWS-Cloud-Computing]] | [[This Section|Logging-into-Amazon-Cloud]]               | [[Next Section|Unix-Bootcamp]]               |
 |:-------------------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------:|
-| [[Intro to AWS Cloud Computing\|Intro-to-AWS-Cloud-Computing]] | [[Logging into Amazon Cloud\|Logging-into-Amazon-Cloud]]  | [[Unix Bootcamp\|Unix-Bootcamp]]  |
+| [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]] | [[Logging into Amazon Cloud|Logging-into-Amazon-Cloud]]  | [[Unix Bootcamp|Unix-Bootcamp]]  |

@@ -135,6 +135,6 @@ This module checks for saturation of junction discovery by resampling 5%, 10%, 1
 
 
 
-| [[Previous Section\|PostAlignment-Visualization]]        | [[This Section\|PostAlignment-QC]] | [[Next Section\|Expression]]      |
+| [[Previous Section|PostAlignment-Visualization]]        | [[This Section|PostAlignment-QC]] | [[Next Section|Expression]]      |
 |:-------------------------------------------------------:|:---------------------------------:|:---------------------------------------------:|
-| [[Alignment Visualization\|PostAlignment-Visualization]] | [[Alignment QC\|PostAlignment-QC]] | [[Expression\|Expression]] |
+| [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]] | [[Expression|Expression]] |

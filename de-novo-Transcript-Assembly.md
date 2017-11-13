@@ -29,6 +29,6 @@ stringtie -p 8 -l UHR_Rep3 -o UHR_Rep3/transcripts.gtf $RNA_ALIGN_DIR/UHR_Rep3.b
 
 ```
 
-| [[Previous Section\|Reference-Guided-Transcript-Assembly]] | [[This Section\|de-novo-Transcript-Assembly]] | [[Next Section\|Transcript-Assembly-Merge]]   |
+| [[Previous Section|Reference-Guided-Transcript-Assembly]] | [[This Section|de-novo-Transcript-Assembly]] | [[Next Section|Transcript-Assembly-Merge]]   |
 |:---------------------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|
-| [[Ref Guided\|Reference-Guided-Transcript-Assembly]]       | [[De novo\|de-novo-Transcript-Assembly]]      | [[Merging\|Transcript-Assembly-Merge]] |
+| [[Ref Guided|Reference-Guided-Transcript-Assembly]]       | [[De novo|de-novo-Transcript-Assembly]]      | [[Merging|Transcript-Assembly-Merge]] |

@@ -28,6 +28,6 @@ This includes all [[figures|https://github.com/griffithlab/rnaseq_tutorial/tree/
 - [[Supplementary Table 9 |https://github.com/griffithlab/rnaseq_tutorial/blob/master/manuscript/supplementary_tables/supplementary_table_9.md]] - RNA-seq workshops and online tutorials
 
 
-| [[Previous Section\|Authors]]  | [[This Section\|Citation]]   | [[Next Section\|Syntax]] |
+| [[Previous Section|Authors]]  | [[This Section|Citation]]   | [[Next Section|Syntax]] |
 |:-----------------------------:|:---------------------------:|:-----------------------:|
-| [[Authors\|Authors]]           | [[Citation\|Citation]]       | [[Syntax\|Syntax]]       |
+| [[Authors|Authors]]           | [[Citation|Citation]]       | [[Syntax|Syntax]]       |

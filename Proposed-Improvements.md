@@ -98,6 +98,6 @@ Gray lab breast cancer cell line dataset:
 ### Update the alternative splicing module to provide an alternative analysis workflow to StringTie/Ballgown
 Introduction to RegTools functionality. After HISAT2 alignment, [QoRTs](https://github.com/hartleys/QoRTs) (written in Scala) performs QC but also processes RNA-seq data to produce count files needed for splicing analysis by [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html) and [JunctionSeq](https://bioconductor.org/packages/release/bioc/html/JunctionSeq.html). 
 
-| [[Previous Section\|Integrated-Assignment]]       | [[This Section\|Proposed-Improvements]] | [[Next Section\|AWS-Setup]]   |
+| [[Previous Section|Integrated-Assignment]]       | [[This Section|Proposed-Improvements]] | [[Next Section|AWS-Setup]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Integrated Assignment\|Integrated-Assignment]] | [[Proposed Improvements\|Proposed-Improvements]]    | [[AWS Setup\|AWS-Setup]] |
+| [[Integrated Assignment|Integrated-Assignment]] | [[Proposed Improvements|Proposed-Improvements]]    | [[AWS Setup|AWS-Setup]] |

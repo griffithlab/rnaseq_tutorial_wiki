@@ -77,6 +77,6 @@ printf "\"ids\",\"type\",\"path\"\n\"UHR_Rep1\",\"UHR\",\"$RNA_HOME/expression/s
 
 Please see [[Differential Expression|Differential-Expression]] for details on running ballgown to determine a DE gene/transcript list.
 
-| [[Previous Section\|Transcript-Assembly-Merge]] | [[This Section\|Differential-Splicing]]          | [[Next Section\|Transcript-Assembly-Visualization]]        |
+| [[Previous Section|Transcript-Assembly-Merge]] | [[This Section|Differential-Splicing]]          | [[Next Section|Transcript-Assembly-Visualization]]        |
 |:----------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------------------------:|
-| [[Merging\|Transcript-Assembly-Merge]]          | [[Differential Splicing\|Differential-Splicing]] | [[Splicing Visualization\|Transcript-Assembly-Visualization]]  |
+| [[Merging|Transcript-Assembly-Merge]]          | [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]]  |

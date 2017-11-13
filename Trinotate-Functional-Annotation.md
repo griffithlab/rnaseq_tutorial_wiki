@@ -323,7 +323,7 @@ We will explore TrinotateWeb functionality together as a group.
 If you've gotten this far, hurray!!! Congratulations!!!  You've now experienced the full tour of Trinity and TrinotateWeb.  Visit our web documentation at <http://trinityrnaseq.github.io>, and join our Google group to become part of the ever-growing Trinity user community.
 
 
-| [[Previous Section\|Trinity-Assembly-And-Analysis]]      | [[This Section\|Trinotate-Functional-Annotation]]           | [[Next Section\|Saving-Your-Results]] |
+| [[Previous Section|Trinity-Assembly-And-Analysis]]      | [[This Section|Trinotate-Functional-Annotation]]           | [[Next Section|Saving-Your-Results]] |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-------------------------:|
-| [[Trinity\|Trinity-Assembly-And-Analysis]] | [[Trinotate\|Trinotate-Functional-Annotation]] | [[Saving Results\|Saving-Your-Results]]     |
+| [[Trinity|Trinity-Assembly-And-Analysis]] | [[Trinotate|Trinotate-Functional-Annotation]] | [[Saving Results|Saving-Your-Results]]     |
 

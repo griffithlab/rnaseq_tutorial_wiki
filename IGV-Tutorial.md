@@ -1,6 +1,6 @@
-| [[Previous Section\|Alignment]] | [[This Section\|IGV-Tutorial]] | [[Next Section\|PostAlignment-Visualization]] |
+| [[Previous Section|Alignment]] | [[This Section|IGV-Tutorial]] | [[Next Section|PostAlignment-Visualization]] |
 |:------------------------------:|:-----------------------------:|:--------------------------------------------:|
-| [[Alignment\|Alignment]]        | [[IGV\|IGV-Tutorial]] | [[Alignment Visualization\|PostAlignment-Visualization]]         |
+| [[Alignment|Alignment]]        | [[IGV|IGV-Tutorial]] | [[Alignment Visualization|PostAlignment-Visualization]]         |
 
 ---
 
@@ -321,6 +321,6 @@ Malachi Griffith, Sorana Morrissy, Jim Robinson, Ben Ainscough, Jason Walker, Ob
 
 ---
 
-| [[Previous Section\|Alignment]] | [[This Section\|IGV-Tutorial]] | [[Next Section\|PostAlignment-Visualization]] |
+| [[Previous Section|Alignment]] | [[This Section|IGV-Tutorial]] | [[Next Section|PostAlignment-Visualization]] |
 |:------------------------------:|:-----------------------------:|:--------------------------------------------:|
-| [[Alignment\|Alignment]]        | [[IGV\|IGV-Tutorial]] | [[Alignment Visualization\|PostAlignment-Visualization]]         |
+| [[Alignment|Alignment]]        | [[IGV|IGV-Tutorial]] | [[Alignment Visualization|PostAlignment-Visualization]]         |

@@ -83,6 +83,6 @@ https://xfer.genome.wustl.edu/gxfer1/project/gms/testdata/bams/
 If you use these data, please cite our paper: [[Citation|Citation]]
 
 
-| [[Previous Section\|Indexing]] | [[This Section\|RNAseq-Data]] | [[Next Section\|PreAlignment-QC]]    |
+| [[Previous Section|Indexing]] | [[This Section|RNAseq-Data]] | [[Next Section|PreAlignment-QC]]    |
 |:-----------------------------:|:----------------------------:|:-----------------------------------:|
-| [[Indexing\|Indexing]]         | [[Data\|RNAseq-Data]]         | [[Data QC\|PreAlignment-QC]]         |
+| [[Indexing|Indexing]]         | [[Data|RNAseq-Data]]         | [[Data QC|PreAlignment-QC]]         |

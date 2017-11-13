@@ -76,6 +76,6 @@ Assignment: Use a commandline scripting approach of your choice to further exami
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-2---reference-genomes)
 
 
-| [[Previous Section\|Installation]] | [[This Section\|Reference-Genome]]      | [[Next Section\|Annotation]] |
+| [[Previous Section|Installation]] | [[This Section|Reference-Genome]]      | [[Next Section|Annotation]] |
 |:---------------------------------:|:--------------------------------------:|:---------------------------:|
-| [[Installation\|Installation]]     | [[Reference Genomes\|Reference-Genome]] | [[Annotations\|Annotation]]   |
+| [[Installation|Installation]]     | [[Reference Genomes|Reference-Genome]] | [[Annotations|Annotation]]   |

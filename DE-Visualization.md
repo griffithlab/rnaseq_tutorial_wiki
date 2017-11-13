@@ -44,6 +44,6 @@ The output file can be viewed in your browser at the following url. Note, you mu
 * http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Part3_Supplementary_R_output.pdf
 
 
-| [[Previous Section\|Differential-Expression]]        | [[This Section\|DE-Visualization]]     | [[Next Section\|Kallisto]] |
+| [[Previous Section|Differential-Expression]]        | [[This Section|DE-Visualization]]     | [[Next Section|Kallisto]] |
 |:---------------------------------------------------:|:------------------------------------:|:-------------------------------------------------------------------:|
-| [[Differential Expression\|Differential-Expression]] | [[DE Visualization\|DE-Visualization]] | [[Kallisto\|Kallisto]]  |
+| [[Differential Expression|Differential-Expression]] | [[DE Visualization|DE-Visualization]] | [[Kallisto|Kallisto]]  |
