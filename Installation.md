@@ -32,19 +32,17 @@ make
 
 ```bash
 
-cd $RNA_HOME/tools/
-mkdir git
-cd git
-git clone --recursive git://github.com/genome/bam-readcount.git
-cd $RNA_HOME/tools/
-mkdir bam-readcount
-cd bam-readcount
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+cd $RNA_HOME/tools
 export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.3.1
-cmake $RNA_HOME/tools/git/bam-readcount
+git clone https://github.com/genome/bam-readcount.git
+cd bam-readcount
+cmake -Wno-dev $RNA_HOME/tools/bam-readcount
 make
 ./bin/bam-readcount
-
+source ~/.bashrc
 ```
+Note: The `PATH` and `source` lines are not necessary when installing this software fresh. However, because a version of samtools already exists on the image for this exercise and is in the `PATH`, the build fails unless you reset the `PATH` to the system default first.
 
 ## [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
 
@@ -286,7 +284,7 @@ export RNA_REF_GTF=$RNA_REF_INDEX.gtf
 
 export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
 
-export PATH=$RNA_HOME/tools/R-patched/bin:$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/R-3.2.5/bin:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$RNA_HOME/tools/kallisto_linux-v0.43.0:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$PATH:$HOME/.local/bin
+export PATH=$RNA_HOME/tools/R-patched/bin:$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.4_linux64:/home/ubuntu/bin/bedtools2/bin:$RNA_HOME/tools/kallisto_linux-v0.43.0:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$PATH:$HOME/.local/bin
 
 echo $PATH
 
