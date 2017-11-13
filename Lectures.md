@@ -1,5 +1,25 @@
 # 7-iii. Lectures
 
+### Recorded lectures
+[2016 CBW course lectures](https://www.youtube.com/playlist?list=PL3izGL6oi0S849u7OZbX85WTyBxVdcpqx) (YouTube)
+
+### CSHL Advanced Sequencing Technologies and Applications (November 7-18, 2017. Cold Spring Harbor, NY, USA)
+Organized by [Cold Spring Harbor Laboratory (CSHL)](http://www.cshl.edu/) - [Course Site](http://meetings.cshl.edu/courses.aspx?course=C-SEQTEC&year=17)
+
+**Presentations:**
+
+* [[Introduction to cloud computing (lecture/tutorial)|LectureFiles/cshl/2017/IntroductionToCloudComputing.pdf]]
+* [[Introduction to IGV Browser (tutorial)|LectureFiles/cshl/2017/IGV_Tutorial_Brief.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cshl/2017/RNASeq_Module1_Lecture.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cshl/2017/RNASeq_Module1_Tutorial.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cshl/2017/RNASeq_Module2_Lecture.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (tutorial)|LectureFiles/cshl/2017/RNASeq_Module2_Tutorial.pdf]]
+* [[Module 3 - Expression and differential expression (lecture)|LectureFiles/cshl/2017/RNASeq_Module3_Lecture.pdf]]
+* [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cshl/2017/RNASeq_Module3_Tutorial.pdf]]
+* [[Module 4 - Isoform discovery and alternative expression (lecture)|LectureFiles/cshl/2017/RNASeq_Module4_Lecture.pdf]]
+* [[Module 4 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2017/RNASeq_Module4_Tutorial.pdf]]
+* [[Introduction to Genome Analysis Platforms (lecture)|LectureFiles/cshl/2017/GenomeAnalysisPlatforms.pdf]]
+
 ### CBW Informatics for RNA-seq analysis (July 10-12, 2017. Toronto, ON, Canada)
 Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca) - [Course Site](https://bioinformatics.ca/workshops/2017/informatics-rna-seq-analysis-2017)
 
