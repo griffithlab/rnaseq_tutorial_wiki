@@ -117,6 +117,6 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 ---
 
-| [[Previous Section|Adapter-Trim]] | [[This Section|Alignment]] | [[Next Section|IGV-Tutorial]] |
+| [[Previous Section\|Adapter-Trim]] | [[This Section\|Alignment]] | [[Next Section\|IGV-Tutorial]] |
 |:---------------------------------:|:--------------------------:|:-----------------------------:|
-| [[Adapter Trim|Adapter-Trim]]     | [[Alignment|Alignment]]    | [[IGV|IGV-Tutorial]] |
+| [[Adapter Trim\|Adapter-Trim]]     | [[Alignment\|Alignment]]    | [[IGV\|IGV-Tutorial]] |

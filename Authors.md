@@ -31,6 +31,6 @@ We are grateful to the following people for past and ongoing contributions to th
 - All of the students that have taken our RNA-seq courses through [CBW](http://bioinformatics.ca/workshops/current) or [CSHL](http://meetings.cshl.edu/courses.html)
 
 
-| Previous Section        | [[This Section|Authors]]    | [[Next Section|Citation]] |
+| Previous Section        | [[This Section\|Authors]]    | [[Next Section\|Citation]] |
 |:---:|:---:|:---:|
-|                         | [[Authors|Authors]]         | [[Citation|Citation]]       |
+|                         | [[Authors\|Authors]]         | [[Citation\|Citation]]       |

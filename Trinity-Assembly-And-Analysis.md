@@ -814,9 +814,9 @@ You'll now notice that the edgeR_gene/ directory exists and is populated with si
 
 Let's move on and make use of those outputs later.  With your own data, however, you would normally run the same set of operations as you did above for the transcript-level DE analyses.
 
-| [[Previous Section|Transcript-Assembly-Visualization]]      | [[This Section|Trinity-Assembly-And-Analysis]]           | [[Next Section|Trinotate-Functional-Annotation]] |
+| [[Previous Section\|Transcript-Assembly-Visualization]]      | [[This Section\|Trinity-Assembly-And-Analysis]]           | [[Next Section\|Trinotate-Functional-Annotation]] |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-------------------------:|
-| [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Trinity|Trinity-Assembly-And-Analysis]] | [[Trinotate|Trinotate-Functional-Annotation]]     |
+| [[Splicing Visualization\|Transcript-Assembly-Visualization]] | [[Trinity\|Trinity-Assembly-And-Analysis]] | [[Trinotate\|Trinotate-Functional-Annotation]]     |
 
 
 

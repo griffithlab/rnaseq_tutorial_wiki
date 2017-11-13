@@ -898,9 +898,9 @@ cat file.txt | sed 's/Chr1/Chromosome 1/' > file2.txt
 * 2016-11-11 - Version 1.04: additional material for CSHL 2016 Advanced Sequencing Technologies & Applications course.
 
 
-| [[Previous Section|Logging-into-Amazon-Cloud]]          | [[This Section|Unix-Bootcamp]]  | [[Next Section|Environment]] |
+| [[Previous Section\|Logging-into-Amazon-Cloud]]          | [[This Section\|Unix-Bootcamp]]  | [[Next Section\|Environment]] |
 |:-------------------------------------------------------:|:-------------------------------:|:----------------------------:|
-| [[Logging-into-Amazon-Cloud|Logging-into-Amazon-Cloud]] | [[Unix Bootcamp|Unix-Bootcamp]] | [[Environment|Environment]]  |
+| [[Logging-into-Amazon-Cloud\|Logging-into-Amazon-Cloud]] | [[Unix Bootcamp\|Unix-Bootcamp]] | [[Environment\|Environment]]  |
 
 
 

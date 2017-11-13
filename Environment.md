@@ -47,6 +47,6 @@ Since all the environment variables we set up for the RNA-seq workshop start wit
 env | grep RNA
 ```
 
-| [[Previous Section|Unix-Bootcamp]]  | [[This Section|Environment]] | [[Next Section|Resources]] |
+| [[Previous Section\|Unix-Bootcamp]]  | [[This Section\|Environment]] | [[Next Section\|Resources]] |
 |:-----------------------------------:|:----------------------------:|:--------------------------:|
-| [[Unix Bootcamp|Unix-Bootcamp]]     | [[Environment|Environment]]  | [[Resources|Resources]]    |
+| [[Unix Bootcamp\|Unix-Bootcamp]]     | [[Environment\|Environment]]  | [[Resources\|Resources]]    |

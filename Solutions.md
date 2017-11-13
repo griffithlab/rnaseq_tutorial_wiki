@@ -205,7 +205,7 @@ stringtie -p 8 -G $RNA_REF_GTF -e -B -o HCC1395_normal_rep3/transcripts.gtf $RNA
 
 ---
 
-| [[Previous Section|Lectures]]  | [[This Section|Solutions]]         | [[Next Section|Integrated-Assignment]]          |
+| [[Previous Section\|Lectures]]  | [[This Section\|Solutions]]         | [[Next Section\|Integrated-Assignment]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
-| [[Lectures|Lectures]]         | [[Practical Exercise Solutions|Solutions]] |  [[Integrated Assignment|Integrated-Assignment]] |
+| [[Lectures\|Lectures]]         | [[Practical Exercise Solutions\|Solutions]] |  [[Integrated Assignment\|Integrated-Assignment]] |
 

@@ -332,6 +332,6 @@ Some useful tools are available as official ubuntu packages.  These can be insta
 
 ```
 
-| [[Previous Section|Resources]] | [[This Section|Installation]] | [[Next Section|Reference-Genome]]     |
+| [[Previous Section\|Resources]] | [[This Section\|Installation]] | [[Next Section\|Reference-Genome]]     |
 |:------------------------------:|:-----------------------------:|:-------------------------------------:|
-| [[Resources|Resources]]        | [[Installation|Installation]] | [[Reference Genomes|Reference-Genome]] |
+| [[Resources\|Resources]]        | [[Installation\|Installation]] | [[Reference Genomes\|Reference-Genome]] |

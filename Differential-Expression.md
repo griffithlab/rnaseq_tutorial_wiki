@@ -177,6 +177,6 @@ http://YOUR_IP_ADDRESS/rnaseq/de/ballgown_DE_gene_symbols.txt
 http://YOUR_IP_ADDRESS/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
 
 
-| [[Previous Section|Expression]] | [[This Section|Differential-Expression]]            | [[Next Section|DE-Visualization]] |
+| [[Previous Section\|Expression]] | [[This Section\|Differential-Expression]]            | [[Next Section\|DE-Visualization]] |
 |:-------------------------------:|:---------------------------------------------------:|:-----------------------------------------:|
-| [[Expression|Expression]]       | [[Differential Expression|Differential-Expression]] | [[DE Visualization|DE-Visualization]] |
+| [[Expression\|Expression]]       | [[Differential Expression\|Differential-Expression]] | [[DE Visualization\|DE-Visualization]] |

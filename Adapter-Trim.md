@@ -105,6 +105,6 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 
 
-| [[Previous Section|PreAlignment-QC]] | [[This Section|Adapter Trim]] | [[Next Section|Alignment]] |
+| [[Previous Section\|PreAlignment-QC]] | [[This Section\|Adapter Trim]] | [[Next Section\|Alignment]] |
 |:------------------------------------:|:--------------------------:|:--------------------------------------------:|
-| [[Data QC|PreAlignment-QC]]          | [[Adapter Trim|Adapter-Trim]]    | [[Alignment|Alignment]]         |
+| [[Data QC\|PreAlignment-QC]]          | [[Adapter Trim\|Adapter-Trim]]    | [[Alignment\|Alignment]]         |
