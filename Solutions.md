@@ -104,8 +104,8 @@ cd $RNA_HOME/practice/data/trimmed/
 fastqc *.fastq.gz
 ```
 
-* http://YOUR_DNS_NAME/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
-* http://YOUR_DNS_NAME/rnaseq/practice/data/trimmed/hcc1395_normal_rep1_1_fastqc.html
+* http://**YOUR_DNS_NAME**/workspace/rnaseq/practice/data/hcc1395_normal_rep1_r1_fastqc.html
+* http://**YOUR_DNS_NAME**/workspace/rnaseq/practice/data/trimmed/hcc1395_normal_rep1_1_fastqc.html
 
 **Answers**
 * After trimming, what is the range of read lengths observed for hcc1395 normal replicate 1, read 1? 25-151
