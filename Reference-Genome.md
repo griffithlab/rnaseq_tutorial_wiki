@@ -63,7 +63,7 @@ Note: Instead of the above, you might consider getting reference genomes and ass
 Wherever you get them from, remember that the names of your reference sequences (chromosomes) must those matched in your annotation gtf files (described in the next section).
 
 ---
-## PRACTICAL EXERCISE 2
+## PRACTICAL EXERCISE 2 (ADVANCED)
 
 Assignment: Use a commandline scripting approach of your choice to further examine our chr22 reference genome file and answer the following questions.
 * Hint: Each question can be tackled using approaches similar to those above, using the file 'chr22_with_ERCC92.fa' as a starting point.
