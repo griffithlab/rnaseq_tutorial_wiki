@@ -17,11 +17,11 @@ Start IGV on your laptop. Load the UHR.bam & HBR.bam files in IGV. You can load 
 
 **UHR hisat2 alignment**: 
 
-http://__YOUR_DNS_NAME__/rnaseq/alignments/hisat2/UHR.bam
+http://__YOUR_DNS_NAME__/workspace/rnaseq/alignments/hisat2/UHR.bam
 
 **HBR hisat2 alignment**:
 
-http://__YOUR_DNS_NAME__/rnaseq/alignments/hisat2/HBR.bam
+http://__YOUR_DNS_NAME__/workspace/rnaseq/alignments/hisat2/HBR.bam
 
 Go to an example gene locus on chr22:
 - e.g. *EIF3L*, *NDUFA6*, and *RBX1* have nice coverage
@@ -120,7 +120,7 @@ Assignment: Index your bam files from [Practical Exercise 6](https://github.com/
 
 * Hint: As before, it may be simplest to just index and visualize the combined/merged bam files HCC1395_normal.bam and HCC1395_tumor.bam.
 * If this works, you should have two BAM files that can be loaded into IGV from the following location on your cloud instance:
-  * http://__YOUR_DNS_NAME__/rnaseq/practice/alignments/hisat2/
+  * http://__YOUR_DNS_NAME__/workspace/rnaseq/practice/alignments/hisat2/
 
 **Questions**
 * Load your merged normal and tumor BAM files into IGV. Navigate to this location on chromosome 22: 'chr22:38,466,394-38,508,115'. What do you see here? How would you describe the direction of transcription for the two genes? Does the reported strand for the reads aligned to each of these genes appear to make sense? How do you modify IGV settings to see the strand clearly?
