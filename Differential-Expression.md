@@ -96,7 +96,7 @@ chmod +x Tutorial_Module4_ERCC_DE.R
 ```
 
 View the results here:
-* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ## edgeR Analysis
 
