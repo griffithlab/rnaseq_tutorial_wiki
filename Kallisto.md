@@ -201,6 +201,6 @@ Note:
 - In our tests, on an Amazon instance, using 6 threads, it took ~10 minutes to process each of the HCC1395 samples. Each of these samples has ~150 million paired-end reads.
 
 
-| [[Previous Section|DE-Visualization]]       | [[This Section|Kallisto]]   | [[Next Section|Reference-Guided-Transcript-Assembly]]  |
+| [[Previous Section\|DE-Visualization]]       | [[This Section\|Kallisto]]   | [[Next Section\|Reference-Guided-Transcript-Assembly]]  |
 |:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
-| [[DE Visualization|DE-Visualization]] | [[Kallisto|Kallisto]]       | [[Ref Guided|Reference-Guided-Transcript-Assembly]] |
+| [[DE Visualization\|DE-Visualization]] | [[Kallisto\|Kallisto]]       | [[Ref Guided\|Reference-Guided-Transcript-Assembly]] |

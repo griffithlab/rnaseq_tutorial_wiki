@@ -43,6 +43,6 @@ Solution: When you are ready you can check your approach against the [Solutions]
 ---
 
 
-| [[Previous Section|RNAseq-Data]] | [[This Section|PreAlignment-QC]]    | [[Next Section|Adapter-Trim]] |
+| [[Previous Section\|RNAseq-Data]] | [[This Section\|PreAlignment-QC]]    | [[Next Section\|Adapter-Trim]] |
 |:--------------------------------:|:-----------------------------------:|:--------------------------:|
-| [[Data|RNAseq-Data]]             | [[Data QC|PreAlignment-QC]]         | [[Adapter Trim|Adapter-Trim]]    |
+| [[Data\|RNAseq-Data]]             | [[Data QC\|PreAlignment-QC]]         | [[Adapter Trim\|Adapter-Trim]]    |

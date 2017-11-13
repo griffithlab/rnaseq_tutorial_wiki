@@ -44,6 +44,6 @@ stringtie -p 8 -G $RNA_REF_GTF -l UHR_Rep3 -o UHR_Rep3/transcripts.gtf $RNA_ALIG
 
 ```
 
-| [[Previous Section|Kallisto]] | [[This Section|Reference-Guided-Transcript-Assembly]] | [[Next Section|de-novo-Transcript-Assembly]] |
+| [[Previous Section\|Kallisto]] | [[This Section\|Reference-Guided-Transcript-Assembly]] | [[Next Section\|de-novo-Transcript-Assembly]] |
 |:-------------------------------------:|:-----------------------------------------------------:|:--------------------------------------------:|
-| [[Kallisto|Kallisto]] | [[Ref Guided|Reference-Guided-Transcript-Assembly]]   | [[De novo|de-novo-Transcript-Assembly]]      |
+| [[Kallisto\|Kallisto]] | [[Ref Guided\|Reference-Guided-Transcript-Assembly]]   | [[De novo\|de-novo-Transcript-Assembly]]      |

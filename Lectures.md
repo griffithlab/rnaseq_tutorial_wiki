@@ -152,6 +152,6 @@ Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca
 ### CBW Informatics on High Throughput Sequencing Data (June 11-12, 2012. Toronto, ON, Canada)
 Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca) - [Course Site](https://bioinformatics.ca/workshops/2012/informatics-high-throughput-sequencing-data)
 
-| [[Previous Section|Abbreviations]]       | [[This Section|Lectures]] | [[Next Section|Solutions]]   |
+| [[Previous Section\|Abbreviations]]       | [[This Section\|Lectures]] | [[Next Section\|Solutions]]   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Abbreviations|Abbreviations]] | [[Lectures|Lectures]]    | [[Assignment Solutions|Solutions]] |
+| [[Abbreviations\|Abbreviations]] | [[Lectures\|Lectures]]    | [[Assignment Solutions\|Solutions]] |

@@ -73,6 +73,6 @@ cat gffcompare.stats
 
 ```
 
-| [[Previous Section|de-novo-Transcript-Assembly]] | [[This Section|Transcript-Assembly-Merge]] | [[Next Section|Differential-Splicing]]    |
+| [[Previous Section\|de-novo-Transcript-Assembly]] | [[This Section\|Transcript-Assembly-Merge]] | [[Next Section\|Differential-Splicing]]    |
 |:------------------------------------------------:|:------------------------------------------:|:----------------------------------------------------:|
-| [[De novo|de-novo-Transcript-Assembly]]          | [[Merging|Transcript-Assembly-Merge]]      | [[Differential Splicing|Differential-Splicing]] |
+| [[De novo\|de-novo-Transcript-Assembly]]          | [[Merging\|Transcript-Assembly-Merge]]      | [[Differential Splicing\|Differential-Splicing]] |

@@ -311,6 +311,6 @@ Currently, all miscellaneous data files, annotations, etc. are hosted on an ftp 
 * Delete the student IAM account created above otherwise students will continue to have EC2 privileges. 
 * Terminate all instances and clean up any unnecessary volumes, snapshots, etc. 
 
-| [[Proposed Improvements|Proposed-Improvements]]       | [[This Section|AWS-Setup]] | Next Section   |
+| [[Proposed Improvements\|Proposed-Improvements]]       | [[This Section\|AWS-Setup]] | Next Section   |
 |:------------------------------------------------------------:|:--------------------------:|:-------------------------------------------:|
-| [[Proposed Improvements|Proposed-Improvements]] | [[AWS Setup|AWS-Setup]]    |  |
+| [[Proposed Improvements\|Proposed-Improvements]] | [[AWS Setup\|AWS-Setup]]    |  |

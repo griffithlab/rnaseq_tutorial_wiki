@@ -22,6 +22,6 @@ tar -xzvf rnaseq_tutorial.tar.gz
 
 ```
 
-| [[Previous Section|Trinotate-Functional-Annotation]]       | [[This Section|Saving-Your-Results]]   | [[Next Section|Abbreviations]]  |
+| [[Previous Section\|Trinotate-Functional-Annotation]]       | [[This Section\|Saving-Your-Results]]   | [[Next Section\|Abbreviations]]  |
 |:------------------------------------------------------------:|:---------------------------:|:------------------------------:|
-| [[Trinotate|Trinotate-Functional-Annotation]] | [[Saving Results|Saving-Your-Results]]       | [[Abbreviations|Abbreviations]] |
+| [[Trinotate\|Trinotate-Functional-Annotation]] | [[Saving Results\|Saving-Your-Results]]       | [[Abbreviations\|Abbreviations]] |

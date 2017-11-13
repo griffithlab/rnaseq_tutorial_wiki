@@ -181,6 +181,6 @@ To view the resulting figure, navigate to the below URL replacing __YOUR_IP_ADDR
 * http://__YOUR_IP_ADDRESS__/rnaseq/expression/htseq_counts/Tutorial_Module4_ERCC_expression.pdf
 
 
-| [[Previous Section|PostAlignment-QC]] | [[This Section|Expression]] | [[Next Section|Differential-Expression]] |
+| [[Previous Section\|PostAlignment-QC]] | [[This Section\|Expression]] | [[Next Section\|Differential-Expression]] |
 |:-------------------------------------:|:---------------------------:|:--------------------------------------------------------:|
-| [[Alignment QC|PostAlignment-QC]]     | [[Expression|Expression]]   | [[Differential Expression|Differential-Expression]] |
+| [[Alignment QC\|PostAlignment-QC]]     | [[Expression\|Expression]]   | [[Differential Expression\|Differential-Expression]] |

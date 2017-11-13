@@ -128,6 +128,6 @@ In order for your RNA-seq analysis to work, the chromosome names in your .gtf fi
 **On reference genome builds:**  
 Your annotations must correspond to the same reference genome build as your reference genome fasta file.  e.g., both correspond to UCSC human build 'hg38', NCBI human build 'GRCh38', etc.  Even if both your reference genome and annotations are from UCSC or Ensembl they could still correspond to different versions of that genome.  This would cause problems in any RNA-seq pipeline.
 	
-| [[Previous Section|Reference-Genome]]  | [[This Section|Annotation]] | [[Next Section|Indexing]] |
+| [[Previous Section\|Reference-Genome]]  | [[This Section\|Annotation]] | [[Next Section\|Indexing]] |
 |:--------------------------------------:|:---------------------------:|:-------------------------:|
-| [[Reference Genomes|Reference-Genome]] | [[Annotations|Annotation]]  | [[Indexing|Indexing]]     |
+| [[Reference Genomes\|Reference-Genome]] | [[Annotations\|Annotation]]  | [[Indexing\|Indexing]]     |

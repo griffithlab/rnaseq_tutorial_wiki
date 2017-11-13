@@ -15,8 +15,8 @@ tree -I workspace/tools
 
 All lines contained within the highlighted boxes will need to be executed at the command line. When copy/paste is used be sure to hit Return or Enter after pasting each command or set of commands. All lines starting with a '#' are comments and will not be interpretted by the shell.
 
-| [[Previous Section|Citation]] | [[This Section|Syntax]] | [[Next Section|Intro-to-AWS-Cloud-Computing]]                  |
+| [[Previous Section\|Citation]] | [[This Section\|Syntax]] | [[Next Section\|Intro-to-AWS-Cloud-Computing]]                  |
 |:-----------------------------:|:-----------------------:|:--------------------------------------------------------------:|
-| [[Citation|Citation]]         | [[Syntax|Syntax]]       | [[Intro to AWS Cloud Computing|Intro-to-AWS-Cloud-Computing]]  |
+| [[Citation\|Citation]]         | [[Syntax\|Syntax]]       | [[Intro to AWS Cloud Computing\|Intro-to-AWS-Cloud-Computing]]  |
 
 

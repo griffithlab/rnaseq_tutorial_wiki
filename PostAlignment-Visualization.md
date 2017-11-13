@@ -131,6 +131,6 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 ---
 
-| [[Previous Section|IGV-Tutorial]] | [[This Section|PostAlignment-Visualization]]  | [[Next Section|PostAlignment-QC]] |
+| [[Previous Section\|IGV-Tutorial]] | [[This Section\|PostAlignment-Visualization]]  | [[Next Section\|PostAlignment-QC]] |
 |:---------------------------------:|:---------------------------------------------:|:---------------------------------:|
-| [[IGV|IGV-Tutorial]]              | [[Alignment Visualization|PostAlignment-Visualization]] | [[Alignment QC|PostAlignment-QC]]      |
+| [[IGV\|IGV-Tutorial]]              | [[Alignment Visualization\|PostAlignment-Visualization]] | [[Alignment QC\|PostAlignment-QC]]      |
