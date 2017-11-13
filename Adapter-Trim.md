@@ -81,8 +81,8 @@ fastqc *.fastq.gz
 ```
 
 The resulting html reports can be viewed by navigating to:
-* http://__YOUR_IP_ADDRESS__/rnaseq/data/
-* http://__YOUR_IP_ADDRESS__/rnaseq/data/trimmed/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/
+* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/data/trimmed/
 
 
 ## PRACTICAL EXERCISE 5
