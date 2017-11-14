@@ -48,8 +48,9 @@ Note: when initiating an environment variable, we do not need the $; however, ev
 ```
 echo $RNA_ASSIGNMENT
 cd $RNA_ASSIGNMENT
-cp ~/CourseData/RNA_data/integrated_assignment/data.zip .
-unzip data.zip
+wget http://genomedata.org/rnaseq-tutorial/data.tar.gz
+tar -xvzf data.tar.gz
+rm data.tar.gz
 ```
 
 Answer all questions and follow all instructions below:
@@ -62,6 +63,7 @@ What if this reference file was not provided for you? How would you obtain/creat
 **Q3.)** How many cancer/normal samples do you see under the data directory?
 
 NOTE: The fasta files you have copied above contain sequences for chr9 only. We have pre-processed those fasta files to obtain chr9 and also matched read1/read2 sequences for each of the samples. You do not need to redo this.
+
 **Q4.)** What sample has the highest number of reads?
 Remember that a read record looks like this:
 
@@ -77,6 +79,7 @@ TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
 - Obtain alignment summary 
 
 **Q5.)** Create HISAT2 alignment commands for all of the six samples and run alignments
+
 **Q6.)** How would you obtain summary statistics for each aligned file?
 
 ## PART 3: Expression Estimation
@@ -100,4 +103,4 @@ First create a file that lists our 6 expression files, then view that file, then
 
 **Q8.)** Are there any significant differentially expressed genes? What about the PCA3? 
 
-**Q9.)** What plots can you generate to help you visualize this gene expression profile
+**Q9.)** What plots can you generate to help you visualize this gene expression profile?
