@@ -73,11 +73,15 @@ Note that when using StringTie in the de novo mode we get a GTF file that is bas
 
 To make it easier to compare the output of the ref-only, ref-guided, and de novo results, we will now produce filtered versions of our merged GTF files where we remove transcripts unless there was some evidence for their expression.
 ```
+cd $RNA_HOME/tools
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/stringtie_filter_gtf.pl
+chmod +x stringtie_filter_gtf.pl 
+
 cd $RNA_HOME/expression/stringtie/ref_only/
-$RNA_HOME/git/rnaseq_tutorial/scripts/stringtie_filter_gtf.pl --expression_metric=FPKM --result_dirs='HBR_Rep1,HBR_Rep2,HBR_Rep3,UHR_Rep1,UHR_Rep2,UHR_Rep3' --input_gtf_file='/home/ubuntu/workspace/rnaseq/refs/chr22_with_ERCC92.gtf' --filtered_gtf_file='/home/ubuntu/workspace/rnaseq/expression/stringtie/ref_only/chr22_with_ERCC92.filtered.gtf' --exp_cutoff=0 --min_sample_count=2
+$RNA_HOME/tools/stringtie_filter_gtf.pl --expression_metric=FPKM --result_dirs='HBR_Rep1,HBR_Rep2,HBR_Rep3,UHR_Rep1,UHR_Rep2,UHR_Rep3' --input_gtf_file='/home/ubuntu/workspace/rnaseq/refs/chr22_with_ERCC92.gtf' --filtered_gtf_file='/home/ubuntu/workspace/rnaseq/expression/stringtie/ref_only/chr22_with_ERCC92.filtered.gtf' --exp_cutoff=0 --min_sample_count=2
 
 cd $RNA_HOME/expression/stringtie/ref_guided_merged/
-$RNA_HOME/git/rnaseq_tutorial/scripts/stringtie_filter_gtf.pl --expression_metric=FPKM --result_dirs='HBR_Rep1,HBR_Rep2,HBR_Rep3,UHR_Rep1,UHR_Rep2,UHR_Rep3' --input_gtf_file='/home/ubuntu/workspace/rnaseq/expression/stringtie/ref_guided/stringtie_merged.gtf' --filtered_gtf_file='/home/ubuntu/workspace/rnaseq/expression/stringtie/ref_guided/stringtie_merged.filtered.gtf' --exp_cutoff=0 --min_sample_count=2
+$RNA_HOME/tools/stringtie_filter_gtf.pl --expression_metric=FPKM --result_dirs='HBR_Rep1,HBR_Rep2,HBR_Rep3,UHR_Rep1,UHR_Rep2,UHR_Rep3' --input_gtf_file='/home/ubuntu/workspace/rnaseq/expression/stringtie/ref_guided/stringtie_merged.gtf' --filtered_gtf_file='/home/ubuntu/workspace/rnaseq/expression/stringtie/ref_guided/stringtie_merged.filtered.gtf' --exp_cutoff=0 --min_sample_count=2
 
 ```
 
