@@ -307,13 +307,17 @@ Now that you are logged in, you can investigate how the storage options you choo
 It is not currently mounted. To view all devices the system knows about you can do something like this command: `ls /dev/` or `ls -1 /dev/ | grep xvd`. You should now see three devices: `xvda`, `xvdb`, and `xvdc`.  Lets format and mount the device `xvdc` to a new directory `data` as follows:
 
 ```bash
+lsblk
 cd /
 sudo mkdir data
-sudo mkfs /dev/xvdc
+sudo mkfs -t ext4 /dev/xvdc
 sudo mount /dev/xvdc /data
 sudo chown -R ubuntu:ubuntu /data
 df -h
+lsblk
 ```
+
+NOTE: Refer to AWS docs [about using EBS Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html) for more details.
 
 Now the same `df -h` command we performed above should show a new volume `/dev/xvdc` mounted at `/data` of size 493G. Note that in order to make this new mount persist when we reboot the machine we will have to add a mount line like this to the `/etc/fstab` file (e.g. by `sudo vim /etc/fstab`):
 ```
