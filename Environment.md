@@ -22,11 +22,14 @@ echo $RNA_HOME
 
 ```
 
-You can place the RNA_HOME variable in your .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.
+You can place the RNA_HOME variable (and other environment variables) in your .bashrc and then logout and login again to avoid having to worry about it. This has been done for you in the pre-configured amazon instance that you will be using.
 
-Additional environment variables used throughout this tutorial:
+Environment variables used throughout this tutorial:
 
 ```bash
+
+export RNA_HOME=~/workspace/rnaseq
+
 export RNA_EXT_DATA_DIR=/home/ubuntu/CourseData/RNA_data
 
 export RNA_DATA_DIR=$RNA_HOME/data

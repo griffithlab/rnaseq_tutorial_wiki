@@ -14,7 +14,7 @@ cd tools
 
 ```
 
-## [SAMtools](http://samtools.sourceforge.net/)
+## [SAMtools](http://www.htslib.org/)
 
 ```bash
 
@@ -32,25 +32,23 @@ make
 
 ```bash
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 cd $RNA_HOME/tools
-export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.3.1
+export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.6
 git clone https://github.com/genome/bam-readcount.git
 cd bam-readcount
 cmake -Wno-dev $RNA_HOME/tools/bam-readcount
 make
 ./bin/bam-readcount
-source ~/.bashrc
+
 ```
-Note: The `PATH` and `source` lines are not necessary when installing this software fresh. However, because a version of samtools already exists on the image for this exercise and is in the `PATH`, the build fails unless you reset the `PATH` to the system default first.
 
 ## [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml)
 
 ```bash
 cd $RNA_HOME/tools/
-wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
-unzip hisat2-2.0.4-Linux_x86_64.zip
-cd hisat2-2.0.4
+wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.1.0-Linux_x86_64.zip
+unzip hisat2-2.1.0-Linux_x86_64.zip
+cd hisat2-2.1.0
 ./hisat2
 
 ```
@@ -60,9 +58,9 @@ cd hisat2-2.0.4
 ```bash
 
 cd $RNA_HOME/tools/
-wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.0.Linux_x86_64.tar.gz
-tar -xzvf stringtie-1.3.0.Linux_x86_64.tar.gz
-cd stringtie-1.3.0.Linux_x86_64
+wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.4b.Linux_x86_64.tar.gz
+tar -xzvf stringtie-1.3.4b.Linux_x86_64.tar.gz
+cd stringtie-1.3.4b.Linux_x86_64
 ./stringtie
 
 ```
@@ -72,21 +70,21 @@ cd stringtie-1.3.0.Linux_x86_64
 ```bash
 
 cd $RNA_HOME/tools/
-wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.9.8.Linux_x86_64.tar.gz
-tar -xzvf gffcompare-0.9.8.Linux_x86_64.tar.gz
-cd gffcompare-0.9.8.Linux_x86_64
+wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.10.4.Linux_x86_64.tar.gz
+tar -xzvf gffcompare-0.10.4.Linux_x86_64.tar.gz
+cd gffcompare-0.10.4.Linux_x86_64
 ./gffcompare
 
 ```
 
-## [htseq-count](http://www-huber.embl.de/users/anders/HTSeq/doc/count.html)
+## [htseq-count](http://htseq.readthedocs.io/en/release_0.9.1/)
 
 ```bash
 
 cd $RNA_HOME/tools/
-wget --no-check-certificate https://pypi.python.org/packages/source/H/HTSeq/HTSeq-0.6.1p1.tar.gz
-tar -zxvf HTSeq-0.6.1p1.tar.gz
-cd HTSeq-0.6.1p1/
+wget https://github.com/simon-anders/htseq/archive/release_0.9.1.tar.gz
+tar -zxvf release_0.9.1.tar.gz
+cd htseq-release_0.9.1/
 python setup.py install --user
 chmod +x scripts/htseq-count
 ./scripts/htseq-count
@@ -99,8 +97,7 @@ Note, this tool is currently only installed for the gtf_to_fasta tool used in ka
 
 ```bash
 
-cd $RNA_HOME/
-cd tools/
+cd $RNA_HOME/tools/
 wget https://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.1.Linux_x86_64.tar.gz
 tar -zxvf tophat-2.1.1.Linux_x86_64.tar.gz
 cd tophat-2.1.1.Linux_x86_64/
@@ -112,11 +109,10 @@ cd tophat-2.1.1.Linux_x86_64/
 
 ```bash
 
-cd $RNA_HOME/
-cd tools/
-wget https://github.com/pachterlab/kallisto/releases/download/v0.43.0/kallisto_linux-v0.43.0.tar.gz
-tar -zxvf kallisto_linux-v0.43.0.tar.gz
-cd kallisto_linux-v0.43.0/
+cd $RNA_HOME/tools/
+wget https://github.com/pachterlab/kallisto/releases/download/v0.44.0/kallisto_linux-v0.44.0.tar.gz
+tar -zxvf kallisto_linux-v0.44.0.tar.gz
+cd kallisto_linux-v0.44.0/
 ./kallisto
 
 ```
@@ -127,33 +123,33 @@ In addition to installing on the cloud you should also install FastQC on your ow
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip --no-check-certificate
-unzip fastqc_v0.11.5.zip
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.7.zip --no-check-certificate
+unzip fastqc_v0.11.7.zip
 cd FastQC/
 chmod 755 fastqc
 ./fastqc --help
 
 ```
 
-## [Picard](http://picard.sourceforge.net/command-line-overview.shtml)
+## [Picard](https://broadinstitute.github.io/picard/)
 
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/broadinstitute/picard/releases/download/2.6.0/picard.jar -O picard.jar
+wget https://github.com/broadinstitute/picard/releases/download/2.17.9/picard.jar -O picard.jar
 java -jar $RNA_HOME/tools/picard.jar
 
 ```
         
-## [Flexbar](http://sourceforge.net/projects/flexbar/)
+## [Flexbar](https://github.com/seqan/flexbar)
 
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/seqan/flexbar/releases/download/v2.5.0/flexbar_v2.5_linux64.tgz
-tar -xzvf flexbar_v2.5_linux64.tgz
-cd flexbar_v2.5_linux64
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar_v2.5_linux64:$LD_LIBRARY_PATH
+wget https://github.com/seqan/flexbar/releases/download/v3.0.0/flexbar-3.0.0-linux.tar.gz
+tar -xzvf flexbar-3.0.0-linux.tar.gz
+cd flexbar-3.0.0-linux/
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.0.0-linux:$LD_LIBRARY_PATH
 ./flexbar
 
 ```
@@ -272,19 +268,9 @@ To use the locally installed version of each tool without having to specify comp
 
 ```bash
 
-export RNA_HOME=~/workspace/rnaseq
+export PATH=$RNA_HOME/tools/samtools-1.6:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.1.0:$RNA_HOME/tools/stringtie-1.3.4b.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.10.4.Linux_x86_64:$RNA_HOME/tools/htseq-release_0.9.1/scripts:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$RNA_HOME/tools/kallisto_linux-v0.44.0:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar-3.0.0-linux:$RNA_HOME/tools/regtools/build:/home/ubuntu/bin/bedtools2/bin:$PATH
 
-export RNA_DATA_DIR=$RNA_HOME/data
-export RNA_DATA_TRIM_DIR=$RNA_DATA_DIR/trimmed
-
-export RNA_REFS_DIR=$RNA_HOME/refs
-export RNA_REF_INDEX=$RNA_REFS_DIR/chr22_with_ERCC92
-export RNA_REF_FASTA=$RNA_REF_INDEX.fa
-export RNA_REF_GTF=$RNA_REF_INDEX.gtf
-
-export RNA_ALIGN_DIR=$RNA_HOME/alignments/hisat2
-
-export PATH=$RNA_HOME/tools/samtools-1.3.1:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.0.4:$RNA_HOME/tools/stringtie-1.3.0.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.9.8.Linux_x86_64:$RNA_HOME/tools/HTSeq-0.6.1p1/scripts:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar_v2.5_linux64:/home/ubuntu/bin/bedtools2/bin:$RNA_HOME/tools/kallisto_linux-v0.43.0:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$PATH
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.0.0-linux:$LD_LIBRARY_PATH
 
 echo $PATH
 
