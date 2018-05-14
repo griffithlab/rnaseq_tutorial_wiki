@@ -277,7 +277,7 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ### Current Public AMIs:
 
-* cshl_seqtec_2016_v7 - ami-1fa8067f (US West - Oregon)
+* cshl_seqtec_2017_v2 - ami-ebf32593 (US West - Oregon)
 
 ### Create IAM account
 
