@@ -3,6 +3,11 @@
 ### Recorded lectures
 [2016 CBW course lectures](https://www.youtube.com/playlist?list=PL3izGL6oi0S849u7OZbX85WTyBxVdcpqx) (YouTube)
 
+### CBW Informatics for RNA-seq analysis (May 28-30, 2018. Toronto, ON, Canada)
+Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca) - [Course Site](https://bioinformatics.ca/workshops/2018-informatics-for-RNA-seq-analysis/)
+
+Coming soon
+
 ### CSHL Advanced Sequencing Technologies and Applications (November 7-18, 2017. Cold Spring Harbor, NY, USA)
 Organized by [Cold Spring Harbor Laboratory (CSHL)](http://www.cshl.edu/) - [Course Site](http://meetings.cshl.edu/courses.aspx?course=C-SEQTEC&year=17)
 
