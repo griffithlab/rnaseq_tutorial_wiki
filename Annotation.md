@@ -11,7 +11,7 @@ Copy the gene annotation files to the working directory.
 
 echo $RNA_REFS_DIR
 cd $RNA_REFS_DIR
-wget http://genomedata.org/annotations/GRCh38/chr22_with_ERCC92.gtf
+wget http://genomedata.org/rnaseq-tutorial/annotations/GRCh38/chr22_with_ERCC92.gtf
 
 ```
 

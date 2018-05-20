@@ -21,7 +21,7 @@ This has been done for you and that data placed on your AWS instance. It contain
 ```bash
 
 cd $RNA_REFS_DIR
-wget http://genomedata.org/fasta/GRCh38/chr22_with_ERCC92.fa
+wget http://genomedata.org/rnaseq-tutorial/fasta/GRCh38/chr22_with_ERCC92.fa
 ls 
 
 ```
