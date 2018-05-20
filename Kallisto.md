@@ -181,12 +181,11 @@ gzip hcc1395_normal*.fastq
 You will have to get all transcripts instead of just those for a single chromosome. You will also have to create a new index for this new set of transcript sequences.
 
 ```
-wget ftp://ftp.ensembl.org/pub/release-89/fasta/homo_sapiens/cdna/...
+wget ftp://ftp.ensembl.org/pub/release-89/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
 ```
 
 Now repeat the concepts above to obtain abundance estimates for all genes.
 ```
-gunzip Homo_sapiens.GRCh38.cdna.all.fa.gz
 
 kallisto index --index=Homo_sapiens.GRCh38.cdna.all_index Homo_sapiens.GRCh38.cdna.all.fa.gz
 
