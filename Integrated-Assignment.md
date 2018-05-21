@@ -104,3 +104,8 @@ First create a file that lists our 6 expression files, then view that file, then
 **Q8.)** Are there any significant differentially expressed genes? What about the PCA3? 
 
 **Q9.)** What plots can you generate to help you visualize this gene expression profile?
+
+| [[Previous Section\|Solutions]]  | [[This Section\|Integrated-Assignment]]         | [[Next Section\|Proposed-Improvements]]          |
+|:-------------------------------:|:----------------------------------:|:---------------------:|
+| [[Practical Exercise Solutions\|Solutions]]         | [[Integrated Assignment\|Integrated-Assignment]] |  [[Proposed Improvements\|Proposed-Improvements]] |
+
