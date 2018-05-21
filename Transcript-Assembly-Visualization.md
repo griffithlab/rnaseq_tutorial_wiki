@@ -129,6 +129,6 @@ Do you see the evidence for any novel exons/transcript that are found in 'de_nov
 	
 NOTE: We have obviously just scratched the surface exploring these output files.
 
-| [[Previous Section|Differential-Splicing]]      | [[This Section|Transcript-Assembly-Visualization]]           | [[Next Section|Trinity-Assembly-And-Analysis]] |
+| [[Previous Sectioni\|Differential-Splicing]]      | [[This Section\|Transcript-Assembly-Visualization]]           | [[Next Section\|Trinity-Assembly-And-Analysis]] |
 |:-----------------------------------------------:|:------------------------------------------------------------:|:-------------------------:|
-| [[Differential Splicing|Differential-Splicing]] | [[Splicing Visualization|Transcript-Assembly-Visualization]] | [[Trinity|Trinity-Assembly-And-Analysis]]     |
+| [[Differential Splicing\|Differential-Splicing]] | [[Splicing Visualization\|Transcript-Assembly-Visualization]] | [[Trinity\|Trinity-Assembly-And-Analysis]]     |
