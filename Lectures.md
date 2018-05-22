@@ -6,7 +6,22 @@
 ### CBW Informatics for RNA-seq analysis (May 28-30, 2018. Toronto, ON, Canada)
 Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca) - [Course Site](https://bioinformatics.ca/workshops/2018-informatics-for-RNA-seq-analysis/)
 
-Coming soon
+**Presentations:**
+* [[Intructor Introduction (lecture)|LectureFiles/cbw/2018/RNASeq_Instructor-Introduction.pdf]]
+* [[Module 0 - Introduction to cloud computing (lecture/tutorial)|LectureFiles/cbw/2018/RNASeq_Module0_Lecture.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cbw/2018/RNASeq_Module1_Lecture.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cbw/2018/RNASeq_Module1_Tutorial.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cbw/2018/RNASeq_Module2_Lecture.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (tutorial)|LectureFiles/cbw/2018/RNASeq_Module2_Tutorial.pdf]]
+* [[Module 3 - Expression and differential expression (lecture)|LectureFiles/cbw/2018/RNASeq_Module3_Lecture.pdf]]
+* [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cbw/2018/RNASeq_Module3_Tutorial.pdf]]
+* [[Module 4 - Alignment free expression estimation (lecture)|LectureFiles/cbw/2018/RNASeq_Module4_Lecture.pdf]]
+* [[Module 4 - Alignment free expression estimation (tutorial)|LectureFiles/cbw/2018/RNASeq_Module4_Tutorial.pdf]]
+* [[Module 5 - Isoform discovery and alternative expression (lecture)|LectureFiles/cbw/2018/RNASeq_Module5_Lecture.pdf]]
+* [[Module 5 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cbw/2018/RNASeq_Module5_Tutorial.pdf]]
+* [[Module 6 - De novo RNA-Seq assembly and analysis using trinity (lecture)|LectureFiles/cbw/2018/RNASeq_Module6_Lecture.pdf]]
+* [[Module 7 - Functional annotation of assembled transcripts using trinotate (lecture)|LectureFiles/cbw/2018/RNASeq_Module7_Lecture.pdf]]
+* [[Introduction to IGV Browser (tutorial)|LectureFiles/cbw/2018/IGV_Tutorial_Brief.pdf]]
 
 ### CSHL Advanced Sequencing Technologies and Applications (November 7-18, 2017. Cold Spring Harbor, NY, USA)
 Organized by [Cold Spring Harbor Laboratory (CSHL)](http://www.cshl.edu/) - [Course Site](http://meetings.cshl.edu/courses.aspx?course=C-SEQTEC&year=17)
