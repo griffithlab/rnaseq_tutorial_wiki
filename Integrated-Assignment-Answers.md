@@ -1,19 +1,19 @@
 6-iii. Integrated assignment answers
 
-**Background:** The PCA3 gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA. There are cancer assays available that test the presence of PCA3 in urine. 
+**Background:** The use of cell lines are often implemented in order to study condition such as cancer. However, a robust genomic profile of these cell lines is needed to determine which genes are differentially expressed before studying them in other manners. 
 
-**Objectives:** In this assignment, we will be using a subset of the GSE22260 dataset, which consists of 30 RNA-seq tumour/normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
+**Objectives:** In this assignment, we will be using a subset of the GSE114360 dataset, which consists of 6 RNA-seq tumour/normal sequences on the SGC-7901 gastric cancer cell line, to assess the oncogenic gene SOX4. 
 Experimental information and other things to keep in mind:
 
-- The libraries are polyA selected. 
+- The libraries are polyA selected.
 - The libraries are prepared as paired end. 
-- The samples are sequenced on a Illumina Genome Analyzer II (this data is now quite old). 
-- Each read is 36 bp long 
-- The average insert size is 150 bp with standard deviation of 38bp. 
-- We will only look at chromosome 9 in this exercise. 
-- The dataset is located here: GSE22260 
-- 20 tumour and 10 normal samples are available 
-- For this exercise we will pick 3 matched pairs (C02,C03,C06 for tumour and N02,N03,N06 for normal). We can do more if we have time. 
+- The samples are sequenced on a Illumina 2500. 
+- Each read is 150 bp long 
+- [Unknown] The average insert size is 150 bp with standard deviation of 38bp. 
+- We will only look at chromosome 6 in this exercise. 
+- The dataset is located here: [GSE114360](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA471072)
+- 3 tumour and 3 normal samples are available 
+- For this exercise we will be using all a subset of the reads (first 4000000 reads from each pair) that map to chromosome 6. 
 
 ##PART 1 : Obtaining Data and References
 
