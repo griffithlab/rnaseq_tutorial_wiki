@@ -60,9 +60,9 @@ ln -s ~/CourseData/RNA_data/Integrative_Assignment/raw_reads/top_1mil/ raw_reads
 ln -s ~/CourseData/RNA_data/Integrative_Assignment/adapter
 ```
 
-**Q1.)** How many items are there under the “reference” directory (counting all files in all sub-directories)? 
+**Q1.)** How many items are there under the “reference” directory (counting all files in all sub-directories)? What if this reference file was not provided for you - how would you obtain/create a reference genome fasta file. How about the GTF transcripts file from Ensembl?
 
-**A1.)** The answer is 19. Review these files so that you are familiar with them.
+**A1.)** The answer is 19. Review these files so that you are familiar with them. If the reference fasta or gtf was not provided, you could obtain them from the Ensembl website under their downloads > databases.
 
 ```
 cd $RNA_ASSIGNMENT/reference/
@@ -70,8 +70,6 @@ tree
 find *
 find * | wc -l
 ```
-
-What if this reference file was not provided for you? How would you obtain/create a reference genome fasta file. How about the GTF transcripts file from Ensembl? How would you create one that contained only transcripts from a specific chromosome?
 
 **Q2.)** How many exons does the gene SOX4 have? How about the longest isoform of PCA3?
 
@@ -205,6 +203,7 @@ grep "mapped (" *.flagstat.txt
 ```
 
 **Q8.)** Approximatly how much space is saved by converting the sam to a bam format?
+
 **A8.)** We get about a 5.5x compression by using the bam format instead of the sam format. This can be seen by adding the `-lh` option when listing the files in the aligntments directory.
 ```
 ls -lh $RNA_ALIGN_DIR/
