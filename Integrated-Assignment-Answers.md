@@ -1,4 +1,4 @@
-6-iii. Integrated assignment answers
+# Integrated Assignment answers
 
 **Background:** The use of cell lines are often implemented in order to study different experimental conditions. One such kind of study is the effects of shRNA on expression profiles, to determine whether these effects target specific genes. Experimental models for these include using control shRNA to account for any expression changes that may occur from just the introduction of these molecules. 
 
