@@ -73,7 +73,7 @@ find * | wc -l
 
 **Q2.)** How many exons does the gene SOX4 have? How about the longest isoform of PCA3?
 
-**A2.)** SOX4 only has 1 exon, which the longest isoform of PCA3 has 6 exons. Review the GTF file so that you are familiar with it. What downstream steps will we need this file for? What is it used for?
+**A2.)** SOX4 only has 1 exon, while the longest isoform of PCA3 has 7 exons. Review the GTF file so that you are familiar with it. What downstream steps will we need this gtf file for?
 
 ```
 cd $RNA_ASSIGNMENT/reference/gtf
@@ -221,7 +221,7 @@ java -Xmx2g -jar /usr/local/picard/picard.jar MergeSamFiles OUTPUT=control.bam I
 Try viewing genes such as TP53 to get a sense of how the data is aligned. To do this:
 - Load up IGV
 - Change the reference genome to "Human hg38" in the top-left category
-- Click on File > Load from URL, and in the File URL enter: "http://main.oicrcbw.ca/rnaseq/integrated_assignment/hisat2/transfected.bam". Repeat this step and enter "http://main.oicrcbw.ca/rnaseq/integrated_assignment/hisat2/control.bam" to load the other bam.
+- Click on File > Load from URL, and in the File URL enter: "http://##.oicrcbw.ca/rnaseq/integrated_assignment/hisat2/transfected.bam". Repeat this step and enter "http://##.oicrcbw.ca/rnaseq/integrated_assignment/hisat2/control.bam" to load the other bam.
 - Right-click on the alignments track in the middle, and Group alignments by "Library"
 - Jump to TP53 by typing it into the search bar above
 
