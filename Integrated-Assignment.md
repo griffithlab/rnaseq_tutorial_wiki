@@ -64,38 +64,11 @@ ln -s ~/CourseData/RNA_data/Integrative_Assignment/raw_reads/top_1mil/ raw_reads
 ln -s ~/CourseData/RNA_data/Integrative_Assignment/adapter
 ```
 
-**Q1.)** How many items are there under the “reference” directory (counting all files in all sub-directories)? 
-
-**A1.)** The answer is 19. Review these files so that you are familiar with them.
-
-```
-cd $RNA_ASSIGNMENT/reference/
-tree
-find *
-find * | wc -l
-```
-
-What if this reference file was not provided for you? How would you obtain/create a reference genome fasta file. How about the GTF transcripts file from Ensembl? How would you create one that contained only transcripts from a specific chromosome?
+**Q1.)** How many items are there under the “reference” directory (counting all files in all sub-directories)? What if this reference file was not provided for you - how would you obtain/create a reference genome fasta file. How about the GTF transcripts file from Ensembl?
 
 **Q2.)** How many exons does the gene SOX4 have? How about the longest isoform of PCA3?
 
-**A2.)** SOX4 only has 1 exon, which the longest isoform of PCA3 has 6 exons. Review the GTF file so that you are familiar with it. What downstream steps will we need this file for? What is it used for?
-
-```
-cd $RNA_ASSIGNMENT/reference/gtf
-grep -w "SOX4" Homo_sapiens.GRCh38.86.chr9.gtf
-grep -w "PCA3" Homo_sapiens.GRCh38.86.chr9.gtf | grep "exon_number"
-```
-
 **Q3.)** How many samples do you see under the data directory?
-
-**A3.)** The answer is 6. The samples are paired per file, and are named based on their accession number.
-
-```
-cd $RNA_ASSIGNMENT/raw_reads/
-ls -l
-ls -1 | wc -l
-```
 
 NOTE: The fastq files you have copied above contain only the first 1000000 reads. Keep this in mind when you are combing through the results of the differential expression analysis.
 
