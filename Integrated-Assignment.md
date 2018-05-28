@@ -1,24 +1,33 @@
 
-# 7-v. Integrated assignment
+# Integrated assignment
 
-**Preamble:** Note that the following integrated assignment asks you to download new RNA-seq data and apply the concepts you have learned up to this point. To complete this assignment you will need to review commands we performed in many of the earlier sections. Try to construct these commands on your own and get all the way to the end of the assignment. If you get very stuck or would like to compare your solutions to those suggested by the instructors, refer to the answers page. The integrated assignment answers page is an expanded version of this page with all of the questions plus detailed code solutions to all problems. The answer page is available in the git repository for this wiki. It is slightly hidden to reduce temptation to look at it without trying on your own. Ask an instructor if you have trouble finding it.
-Background: The PCA3 gene plays a role in Prostate Cancer detection due to its localized expression in prostate tissues and its over-expression in tumour tissues. This gene expression profile makes it a useful marker that can complement the most frequently used biomarker for prostate cancer, PSA. There are cancer assays available that test the presence of PCA3 in urine. 
+**Preamble:** Note that the following integrated assignment asks you to work on new RNA-seq data and apply the concepts you have learned up to this point. To complete this assignment you will need to review commands we performed in many of the earlier sections. Try to construct these commands on your own and get all the way to the end of the assignment. If you get very stuck or would like to compare your solutions to those suggested by the instructors, refer to the answers page. The integrated assignment answers page is an expanded version of this page with all of the questions plus detailed code solutions to all problems. The answer page is available in the git repository for this wiki. It is slightly hidden to reduce temptation to look at it without trying on your own. Ask an instructor if you have trouble finding it.
 
-**Objectives:** In this assignment, we will be using a subset of the GSE22260 dataset, which consists of 30 RNA-seq tumour/normal pairs, to assess the prostate cancer specific expression of the PCA3 gene. 
+**Background:** The use of cell lines are often implemented in order to study different experimental conditions. One such kind of study is the effects of shRNA on expression profiles, to determine whether these effects target specific genes. Experimental models for these include using control shRNA to account for any expression changes that may occur from just the introduction of these molecules. 
+
+**Objectives:** In this assignment, we will be using a subset of the GSE114360 dataset, which consists of 6 RNA sequence files on the SGC-7901 gastric cancer cell line, (3 transfected with tcons_00001221 shRNA, and 3 control shRNA), and determine the number of differentially expressed genes.
+
 Experimental information and other things to keep in mind:
-- The libraries are polyA selected. 
-- The libraries are prepared as paired end. 
-- The samples are sequenced on a Illumina Genome Analyzer II (this data is now quite old). 
-- Each read is 36 bp long 
-- The average insert size is 150 bp with standard deviation of 38bp. 
-- We will only look at chromosome 9 in this exercise. 
-- The dataset is located here: GSE22260 
-- 20 tumour and 10 normal samples are available 
-- For this exercise we will pick 3 matched pairs (C02,C03,C06 for tumour and N02,N03,N06 for normal). We can do more if we have time. 
 
-## PART 1 : Obtaining Data and References
+- The libraries are prepared as paired end. 
+- The samples are sequenced on a Illumina 4000. 
+- Each read is 150 bp long 
+- The dataset is located here: [GSE114360](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA471072)
+- 3 samples transfected with target shRNA and 3 samples with control shRNA
+- Libraries were prepared using standard Illumina protocols
+- For this exercise we will be using all a subset of the reads (first 1000000 reads from each pair). 
+- The files are named based on their SRR id's, and obey the following key:
+  - SRR7155055 = transfected sample 1
+  - SRR7155056 = transfected sample 2
+  - SRR7155057 = transfected sample 3
+  - SRR7155058 = control sample 1
+  - SRR7155059 = control sample 2
+  - SRR7155060 = control sample 3
+
+## PART 0 : Obtaining Data and References
 
 **Goals:**
+
 - Obtain the files necessary for data processing 
 - Familiarize yourself with reference and annotation file format 
 - Familiarize yourself with sequence FASTQ format 
@@ -26,84 +35,114 @@ Experimental information and other things to keep in mind:
 Create a working directory ~/workspace/rnaseq/integrated_assignment/ to store this exercise. Then create a unix environment variable named RNA_ASSIGNMENT that stores this path for convenience in later commands.
 
 ```
+export RNA_HOME=~/workspace/rnaseq
 cd $RNA_HOME
 mkdir -p ~/workspace/rnaseq/integrated_assignment/
 export RNA_ASSIGNMENT=~/workspace/rnaseq/integrated_assignment/
 ```
-
 You will also need the following environment variables througout the assignment:
 
 ```
-export RNA_DATA_DIR=$RNA_ASSIGNMENT/fasta
-export RNA_REFS_DIR=$RNA_ASSIGNMENT/refs
-export RNA_REF_INDEX=$RNA_REFS_DIR/Homo_sapiens.GRCh38.dna.chromosome.9
-export RNA_REF_FASTA=$RNA_REF_INDEX.fa
-export RNA_REF_GTF=$RNA_REFS_DIR/Homo_sapiens.GRCh38.86.chr9.gtf
+export RNA_DATA_DIR=$RNA_ASSIGNMENT/raw_reads
+export RNA_REFS_DIR=$RNA_ASSIGNMENT/reference
+export RNA_ILL_ADAPT=$RNA_ASSIGNMENT/adapter
+export RNA_REF_INDEX=$RNA_REFS_DIR/Homo_sapiens.GRCh38
+export RNA_REF_FASTA=$RNA_REF_INDEX.dna.primary_assembly.fa
+export RNA_REF_GTF=$RNA_REFS_DIR/Homo_sapiens.GRCh38.92.gtf
 export RNA_ALIGN_DIR=$RNA_ASSIGNMENT/hisat2
 ```
 
-Obtain reference, annotation and data files and place them in the integrated assignment directory
+Obtain reference, annotation, adapter and data files and place them in the integrated assignment directory
 Note: when initiating an environment variable, we do not need the $; however, everytime we call the variable, it needs to be preceeded by a $.
 
 ```
 echo $RNA_ASSIGNMENT
 cd $RNA_ASSIGNMENT
-wget http://genomedata.org/rnaseq-tutorial/data.tar.gz
-tar -xvzf data.tar.gz
-rm data.tar.gz
+ln -s ~/CourseData/RNA_data/Integrative_Assignment/reference/
+ln -s ~/CourseData/RNA_data/Integrative_Assignment/raw_reads/top_1mil/ raw_reads
+ln -s ~/CourseData/RNA_data/Integrative_Assignment/adapter
 ```
 
-Answer all questions and follow all instructions below:
+**Q1.)** How many items are there under the “reference” directory (counting all files in all sub-directories)? What if this reference file was not provided for you - how would you obtain/create a reference genome fasta file. How about the GTF transcripts file from Ensembl?
 
-**Q1.)** How many items are there under the “refs” directory ? 
-What if this reference file was not provided for you? How would you obtain/create a reference genome fasta file for chromosome 9 only. How about the GTF transcripts file from Ensembl? How would you create one that contained only transcripts on chromosome 9?
+**Q2.)** How many exons does the gene SOX4 have? How about the longest isoform of PCA3?
 
-**Q2.)** How many exons does the gene PCA3 have?
+**Q3.)** How many samples do you see under the data directory?
 
-**Q3.)** How many cancer/normal samples do you see under the data directory?
+NOTE: The fastq files you have copied above contain only the first 1000000 reads. Keep this in mind when you are combing through the results of the differential expression analysis.
 
-NOTE: The fasta files you have copied above contain sequences for chr9 only. We have pre-processed those fasta files to obtain chr9 and also matched read1/read2 sequences for each of the samples. You do not need to redo this.
+## Part 1 : Data preprocessing
 
-**Q4.)** What sample has the highest number of reads?
-Remember that a read record looks like this:
+**Goals:**
 
-```
->HWUSI-EAS230-R:6:58:12:550#0/1
-TTTGTTTGTTTGCTTCTGTTTCCCCCCAATGACTGA
-```
+- Run quality check before and after cleaning up your data
+- Familiarize yourself with the options for Fastqc to be able to redirect your output
+- Perform adapter trimming on your data
+- Familiarize yourself with the output metrics from adapter trimming
+
+**Q4.)** What metrics, if any, have the samples failed? Are the errors related?
+
+**Q5.)** What average percentage of reads remain after adapter trimming? Why do reads get tossed out?
+
+**Q6.)** What sample has the largest number of reads after trimming?
+
 ## PART 2: Data alignment
 
 **Goals:**
 - Familiarize yourself with HISAT2 alignment options 
 - Perform alignments 
-- Obtain alignment summary 
+- Obtain alignment summary
+- Convert your alignment into compressed bam format
 
-**Q5.)** Create HISAT2 alignment commands for all of the six samples and run alignments
+*A useful option to add to the end of your commands is `2>`, which redirects the stdout from any command into a specific file. This can be used to redirect your stdout into a summary file, and can be used as follows: `My_alignment_script 2> alignment_metrics.txt`. The advantage of this is being able to view the alignment metrics later on.*
 
-**Q6.)** How would you obtain summary statistics for each aligned file?
+**Q7.)** How would you obtain summary statistics for each aligned file?
+
+**Q8.)** Approximatly how much space is saved by converting the sam to a bam format?
+
+In order to make visualization easier, we're going to merge each of our bams into one using the following commands. Make sure to index these bams afterwards to be able to view them on IGV.
+```
+#merge the bams for visulization purposes
+cd $RNA_ALIGN_DIR
+java -Xmx2g -jar ~/CourseData/RNA_data/Integrative_Assignment/picard.jar MergeSamFiles OUTPUT=transfected.bam INPUT=SRR7155055.bam INPUT=SRR7155056.bam INPUT=SRR7155057.bam
+java -Xmx2g -jar /usr/local/picard/picard.jar MergeSamFiles OUTPUT=control.bam INPUT=SRR7155058.bam INPUT=SRR7155059.bam INPUT=SRR7155060.bam
+```
+
+Try viewing genes such as TP53 to get a sense of how the data is aligned. To do this:
+- Load up IGV
+- Change the reference genome to "Human hg38" in the top-left category
+- Click on File > Load from URL, and in the File URL enter: "http://main.oicrcbw.ca/rnaseq/integrated_assignment/hisat2/transfected.bam". Repeat this step and enter "http://main.oicrcbw.ca/rnaseq/integrated_assignment/hisat2/control.bam" to load the other bam.
+- Right-click on the alignments track in the middle, and Group alignments by "Library"
+- Jump to TP53 by typing it into the search bar above
+
+**Q9.)** What portion of the gene do the reads seem to be piling up on? What would be different if we were viewing whole-genome sequencing data?
+
+**Q10.)** What are the lines connecting the reads trying to convey?
+
 
 ## PART 3: Expression Estimation
 
 **Goals:**
+
 - Familiarize yourself with Stringtie options 
 - Run Stringtie to obtain expression values 
-- Obtain expression values for the gene PCA3 
+- Obtain expression values for the gene SOX4 
 - Create an expression results directory, run Stringtie on all samples, and store the results in appropriately named subdirectories in this results dir
 
-**Q7.)** How do you get the expression of the gene PCA3 across the normal and carcinoma samples?
+**Q11.)** How do you get the expression of the gene SOX4 across the transfect and control samples?
 
 ## PART 4: Differential Expression Analysis
 
 **Goals:**
-- Perform differential analysis between tumor and normal samples 
-- Check if PCA3 is differentially expressed 
-- Perform carcinoma vs. normal comparison, using all samples, for known (reference only mode) transcripts. - 
 
-First create a file that lists our 6 expression files, then view that file, then start an R session. Adapt the  R tutorial file has been provided in the github repo for part 1 of the tutorial: Tutorial_Module4_Part1_ballgown.R. Modify it to fit the goals of this assignment then run it. 
+- Perform differential analysis between the transfected and control samples 
+- Check if is differentially expressed 
 
-**Q8.)** Are there any significant differentially expressed genes? What about the PCA3? 
+First create a file that lists our 6 expression files, then view that file, then start an R session. Adapt the R tutorial file has been provided in the github repo for part 1 of the tutorial: Tutorial_Module4_Part1_ballgown.R. Modify it to fit the goals of this assignment then run it. 
 
-**Q9.)** What plots can you generate to help you visualize this gene expression profile?
+**Q12.)** Are there any significant differentially expressed genes? How many in total do you see? If we expected SOX4 to be differentially expressed, why don't we see it in this case? 
+
+**Q13.)** What plots can you generate to help you visualize this gene expression profile?
 
 | [[Previous Section\|Solutions]]  | [[This Section\|Integrated-Assignment]]         | [[Next Section\|Proposed-Improvements]]          |
 |:-------------------------------:|:----------------------------------:|:---------------------:|
