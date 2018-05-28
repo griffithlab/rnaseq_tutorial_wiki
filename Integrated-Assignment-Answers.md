@@ -14,12 +14,12 @@ Experimental information and other things to keep in mind:
 - Libraries were prepared using standard Illumina protocols
 - For this exercise we will be using all a subset of the reads (first 1000000 reads from each pair). 
 - The files are named based on their SRR id's, and obey the following key:
--- SRR7155055 = transfected sample 1
--- SRR7155056 = transfected sample 2
--- SRR7155057 = transfected sample 3
--- SRR7155058 = control sample 1
--- SRR7155059 = control sample 2
--- SRR7155060 = control sample 3
+  - SRR7155055 = transfected sample 1
+  - SRR7155056 = transfected sample 2
+  - SRR7155057 = transfected sample 3
+  - SRR7155058 = control sample 1
+  - SRR7155059 = control sample 2
+  - SRR7155060 = control sample 3
 
 ##PART 0 : Obtaining Data and References
 
@@ -281,7 +281,7 @@ cat Transfect_vs_Control.csv
 R
 ```
 
-*Adapt the  R tutorial file has been provided in the github repo for part 1 of the tutorial: Tutorial_Module4_Part1_ballgown.R. Modify it to fit the goals of this assignment then run it. 
+*Adapt the  R tutorial file that has been provided in the github repo for part 1 of the tutorial: [Tutorial_Module4_Part1_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part1_ballgown.R). Modify it to fit the goals of this assignment then run it. 
 
 **Q8.)** Are there any significant differentially expressed genes? How many in total do you see? If we expected SOX4 to be differentially expressed, why don't we see it in this case? 
 
