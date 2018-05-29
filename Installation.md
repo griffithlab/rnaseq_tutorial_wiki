@@ -131,6 +131,13 @@ chmod 755 fastqc
 
 ```
 
+## [MultiQC](http://multiqc.info/)
+
+```bash
+pip install multiqc
+multiqc --help
+```
+
 ## [Picard](https://broadinstitute.github.io/picard/)
 
 ```bash
