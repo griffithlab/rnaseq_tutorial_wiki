@@ -81,7 +81,7 @@ Then, go to the following url in your browser:
 * How many total sequences are there? 331,958
 * What is the range (x - y) of read lengths observed? 151
 * What is the most common average sequence quality score? 41
-* What is the most common kmer that is observed? GAATCGG
+* What does the Adaptor Content warning tell us? There is some evidence of Illumina Universal Adapter at the 3' ends of reads. This suggests that adapter trimming might be advisable for this data.
 
 ---
 

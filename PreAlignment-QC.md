@@ -22,13 +22,17 @@ Then, go to the following url in your browser:
 * Note, you must replace __YOUR_DNS_NAME__ with your own amazon instance DNS (e.g., ec2-54-187-159-113.us-west-2.compute.amazonaws.com))
 * Click on any of the `*_fastqc.html` files to view the FastQC report
 
+### Exercise
+
+Investigate the source/explanation for over-represented sequences:
+- HINT: Try BLASTing them.
+
 ---
 ## PRACTICAL EXERCISE 4
 
 Assignment: Run FASTQC on one of the additional fastq files you downloaded in the previous practical exercise. 
 
 * Hint: Remember that you stored this data in a separate working directory called ‘practice’.
-* Hint: Use the same approach as above to get a copy of the fastq file on your local machine by downloading it from your cloud instance.
 
 Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by examining the output.
 
@@ -36,7 +40,7 @@ Run FASTQC on the file 'hcc1395_normal_1.fastq.gz' and answer these questions by
 * How many total sequences are there?
 * What is the range (x - y) of read lengths observed?
 * What is the most common average sequence quality score?
-* What is the most common kmer that is observed?
+* What does the Adaptor Content warning tell us?
 
 Solution: When you are ready you can check your approach against the [Solutions](https://github.com/griffithlab/rnaseq_tutorial/wiki/Solutions#practical-exercise-4---data-qc)
 
