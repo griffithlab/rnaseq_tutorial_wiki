@@ -196,10 +196,12 @@ head(sleuth_significant, 20)
 
 #plot an example DE transcript result
 p1 = plot_bootstrap(so, "ENST00000328933", units = "est_counts", color_by = "condition")
+p2 = plot_pca(so, color_by = 'condition')
 
 #Print out the plots created above and store in a single PDF file
 pdf(file="SleuthResults.pdf")
 print(p1)
+print(p2)
 dev.off()
 
 
