@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-# 4-iv. Differential (Expression) Splicing
+# 5-iv. Differential (Expression) Splicing
 
 Use Ballgown and Stringtie to compare the UHR and HBR conditions against reference guided and de novo transcript assemblies.
 

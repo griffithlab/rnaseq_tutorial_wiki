@@ -1,4 +1,4 @@
-# 3-iv. Kallisto for Reference-Free Abundance Estimation
+# 4. Alignment Free Expression Estimation (Kallisto)
 
 For more information on Kallisto, refer to the <a href="https://pachterlab.github.io/kallisto/about.html">Kallisto project page</a> and <a href="https://pachterlab.github.io/kallisto/manual.html">Kallisto manual page</a>.
 

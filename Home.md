@@ -53,9 +53,12 @@ This workshop have been delivered many times and continues to evolve. To see a c
     <li>[[Expression|Expression]]</li>
     <li>[[Differential Expression|Differential-Expression]]</li>
     <li>[[DE Visualization|DE-Visualization]]</li>
+  </ol>
+  <li><strong>Module 4 - Alignment Free Expression Estimation</strong></li>
+  <ol start="i">  
     <li>[[Kallisto for Reference-Free Abundance Estimation|Kallisto]]</li>
   </ol>
-  <li><strong>Module 4 - Isoform Discovery and Alternative Expression</strong></li>
+  <li><strong>Module 5 - Isoform Discovery and Alternative Expression</strong></li>
   <ol start="i">  
     <li>[[Reference Guided Transcript Assembly|Reference-Guided-Transcript-Assembly]]</li>
     <li>[[de novo Transcript Assembly|de-novo-Transcript-Assembly]]</li>
@@ -63,11 +66,11 @@ This workshop have been delivered many times and continues to evolve. To see a c
     <li>[[Differential Splicing|Differential-Splicing]]</li>
     <li>[[Splicing Visualization|Transcript-Assembly-Visualization]]</li>
   </ol>
-  <li><strong>Module 5 - De novo transcript reconstruction</strong></li>
+  <li><strong>Module 6 - De novo transcript reconstruction</strong></li>
   <ol start="i">  
     <li>[[De novo RNA-Seq Assembly and Analysis Using Trinity|Trinity-Assembly-And-Analysis]]</li>
   </ol>
-  <li><strong>Module 6 - Functional Annotation of Transcripts</strong></li>
+  <li><strong>Module 7 - Functional Annotation of Transcripts</strong></li>
   <ol start="i">  
     <li>[[Functional Annotation of Assembled Transcripts Using Trinotate|Trinotate-Functional-Annotation]]</li>
   </ol>

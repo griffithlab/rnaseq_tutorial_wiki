@@ -1,6 +1,6 @@
 ![RNA-seq Flowchart - Module 5](Images/RNA-seq_Flowchart5.png)
 
-# 4-ii. Stringtie De Novo Mode
+# 5-ii. Stringtie De Novo Mode
 
 Note, to discover novel transcripts with Stringtie 
 Using the alignments we generated in the previous modules we will now run Stringtie in de novo mode
