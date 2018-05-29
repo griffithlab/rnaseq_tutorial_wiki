@@ -140,6 +140,19 @@ kallisto index --index=chr22_rRNA_transcripts_kallisto_index ../chr22_rRNA_trans
 
 We can now use this index with Kallisto to assess the abundance of rRNA genes in a set of samples.
 
+## IN PROGRESS - Perform DE analysis of Kallisto expression estimates using Sleuth
+We will now use Sleuth perform a differential expression analysis on the full chr22 data set produced above. Sleuth is a companion tool that starts with the output of Kallisto, performs DE analysis, and helps you visualize the results.  It is analagous to Ballgown that we used to perform DE and visualization of the StringTie results in earlier steps. 
+
+Sleuth is an R package so the following steps will occur in an `R` session.
+
+```
+library("sleuth")
+
+
+
+```
+
+
 ## Exercise: Do a performance test using a real large dataset
 Obtain an entire lane of RNA-seq data for a breast cancer cell line and matched 'normal' cell line here:
 
