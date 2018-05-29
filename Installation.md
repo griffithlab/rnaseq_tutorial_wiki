@@ -221,18 +221,28 @@ For this tutorial we require:
 - [ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 - [GenomicRanges](http://bioconductor.org/packages/release/bioc/html/GenomicRanges.html)
+- [sleuth](https://pachterlab.github.io/sleuth/download)
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
 ```
 #R
 #source("http://bioconductor.org/biocLite.R")
-#biocLite(c("genefilter","ballgown","edgeR"))
+#biocLite(c("genefilter","ballgown","edgeR","rhdf5"))
+#quit(save="no")
+```
+
+## [Sleuth](https://pachterlab.github.io/sleuth/download)
+```
+#R
+#install.packages("devtools")
+#devtools::install_github("pachterlab/sleuth")
 #quit(save="no")
 ```
 
 
 ---
+
 ## PRACTICAL EXERCISE 1 - Software Installation
 
 Assignment: Install bedtools on your own. Make sure you install it in your tools folder. Download, unpack, compile, and test the bedtools software.
