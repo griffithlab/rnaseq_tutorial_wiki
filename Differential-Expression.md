@@ -96,7 +96,7 @@ chmod +x Tutorial_Module4_ERCC_DE.R
 ```
 
 View the results here:
-* http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
 
 ## edgeR Analysis
 
@@ -173,8 +173,8 @@ To get the two gene lists you could use `cat` to print out each list in your ter
 
 Alternatively you could view both lists in a web browser as you have done with other files. These two files should be here:
 
-http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/ballgown_DE_gene_symbols.txt
-http://__YOUR_IP_ADDRESS__/workspace/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
+http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown_DE_gene_symbols.txt
+http://__YOUR_IP_ADDRESS__/rnaseq/de/htseq_counts_edgeR_DE_gene_symbols.txt
 
 
 | [[Previous Section\|Expression]] | [[This Section\|Differential-Expression]]            | [[Next Section\|DE-Visualization]] |
