@@ -163,10 +163,12 @@ Sleuth is an R package so the following steps will occur in an `R` session. The 
 
 ```
 #load sleuth library
-library("sleuth")
+suppressMessages({
+  library("sleuth")
+})
 
 #set input and output dirs
-datapath = "/home/ubuntu/workspace/rnaseq/de/slueth/input"
+datapath = "/home/ubuntu/workspace/rnaseq/de/sleuth/input"
 resultdir = '/home/ubuntu/workspace/rnaseq/de/sleuth/results'
 setwd(resultdir)
 
