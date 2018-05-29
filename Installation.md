@@ -221,14 +221,15 @@ For this tutorial we require:
 - [ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html)
 - [edgeR](http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 - [GenomicRanges](http://bioconductor.org/packages/release/bioc/html/GenomicRanges.html)
-- [sleuth](https://pachterlab.github.io/sleuth/download)
+- [rhdf5](https://www.bioconductor.org/packages/release/bioc/html/rhdf5.html)
+- [biomaRt](https://bioconductor.org/packages/release/bioc/html/biomaRt.html)
 
 launch R (enter `R` at linux command prompt) and type the following at an R command prompt. If prompted, type "a" to update all old packages. NOTE: This has been pre-installed for you, so these commands can be skipped.
 
 ```
 #R
 #source("http://bioconductor.org/biocLite.R")
-#biocLite(c("genefilter","ballgown","edgeR","rhdf5"))
+#biocLite(c("genefilter","ballgown","edgeR","GenomicRanges","rhdf5","biomaRt"))
 #quit(save="no")
 ```
 
