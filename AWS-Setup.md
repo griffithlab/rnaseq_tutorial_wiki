@@ -285,7 +285,7 @@ From AWS Console select Services -> IAM. Go to Users, Create User, specify a use
 
 ### Launch student instance
 1. Go to AWS console. Login. Select EC2.
-2. Launch Instance, search for "cshl_seqtec_2017_v1" in Community AMIs and Select.
+2. Launch Instance, search for "cshl_seqtec_2017_v2" in Community AMIs and Select.
 3. Choose "m4.2xlarge" instance type.
 4. Select one instance to launch (e.g., one per student and instructor), and select "Protect against accidental termination"
 5. Make sure that you see two snapshots (e.g., the 32GB root volume and 80GB EBS volume you set up earlier)
