@@ -28,7 +28,7 @@ cat UHR_vs_HBR.csv
 R
 
 ```
-A separate R tutorial file has been provided in the github repo for part 1 of the tutorial: [Tutorial_Module4_Part1_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part1_ballgown.R). Run the R commands detailed in the R script.
+A separate R tutorial file has been provided in the github repo for part 1 of the tutorial: [Tutorial_Part1_ballgown.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Part1_ballgown.R). Run the R commands detailed in the R script.
 
 Once you have completed the Ballgown analysis in R, exit the R session and continue with the steps below. 
 
@@ -89,14 +89,14 @@ This section will compare the observed versus expected differential expression e
 ```bash
 
 cd $RNA_HOME/de/ballgown/ref_only
-wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_DE.R
-chmod +x Tutorial_Module4_ERCC_DE.R
-./Tutorial_Module4_ERCC_DE.R $RNA_HOME/expression/htseq_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/ballgown/ref_only/UHR_vs_HBR_gene_results.tsv
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_ERCC_DE.R
+chmod +x Tutorial_ERCC_DE.R
+./Tutorial_ERCC_DE.R $RNA_HOME/expression/htseq_counts/ERCC_Controls_Analysis.txt $RNA_HOME/de/ballgown/ref_only/UHR_vs_HBR_gene_results.tsv
 
 ```
 
 View the results here:
-* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_Module4_ERCC_DE.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/de/ballgown/ref_only/Tutorial_ERCC_DE.pdf
 
 ## edgeR Analysis
 
@@ -143,7 +143,7 @@ R
 
 ```
 
-A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_Module4_Part4_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module4_Part4_edgeR.R). Run the R commands in this file.
+A separate R tutorial file has been provided in the github repo for part 4 of the tutorial: [Tutorial_edgeR.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_edgeR.R). Run the R commands in this file.
 
 Once you have run the edgeR tutorial, compare the sigDE genes to those saved earlier from cuffdiff:
 

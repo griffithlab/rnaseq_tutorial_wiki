@@ -138,7 +138,7 @@ Try viewing genes such as TP53 to get a sense of how the data is aligned. To do 
 - Perform differential analysis between the transfected and control samples 
 - Check if is differentially expressed 
 
-First create a file that lists our 6 expression files, then view that file, then start an R session. Adapt the R tutorial file has been provided in the github repo for part 1 of the tutorial: Tutorial_Module4_Part1_ballgown.R. Modify it to fit the goals of this assignment then run it. 
+First create a file that lists our 6 expression files, then view that file, then start an R session. Adapt the R tutorial file has been provided in the github repo for part 1 of the tutorial: Tutorial_Part1_ballgown.R. Modify it to fit the goals of this assignment then run it. 
 
 **Q12.)** Are there any significant differentially expressed genes? How many in total do you see? If we expected SOX4 to be differentially expressed, why don't we see it in this case? 
 

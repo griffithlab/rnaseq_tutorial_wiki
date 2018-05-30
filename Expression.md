@@ -166,19 +166,19 @@ cd $RNA_HOME/expression/htseq_counts
 wget http://genomedata.org/rnaseq-tutorial/ERCC_Controls_Analysis.txt
 cat ERCC_Controls_Analysis.txt
 
-wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.pl
-chmod +x Tutorial_Module4_ERCC_expression.pl
-./Tutorial_Module4_ERCC_expression.pl
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_ERCC_expression.pl
+chmod +x Tutorial_ERCC_expression.pl
+./Tutorial_ERCC_expression.pl
 cat $RNA_HOME/expression/htseq_counts/ercc_read_counts.tsv
 
-wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_Module4_ERCC_expression.R
-chmod +x Tutorial_Module4_ERCC_expression.R
-./Tutorial_Module4_ERCC_expression.R ercc_read_counts.tsv
+wget https://raw.githubusercontent.com/griffithlab/rnaseq_tutorial/master/scripts/Tutorial_ERCC_expression.R
+chmod +x Tutorial_ERCC_expression.R
+./Tutorial_ERCC_expression.R ercc_read_counts.tsv
 
 ```
 
 To view the resulting figure, navigate to the below URL replacing __YOUR_IP_ADDRESS__ with your amazon instance IP address:
-* http://__YOUR_IP_ADDRESS__/rnaseq/expression/htseq_counts/Tutorial_Module4_ERCC_expression.pdf
+* http://__YOUR_IP_ADDRESS__/rnaseq/expression/htseq_counts/Tutorial_ERCC_expression.pdf
 
 
 | [[Previous Section\|PostAlignment-QC]] | [[This Section\|Expression]] | [[Next Section\|Differential-Expression]] |

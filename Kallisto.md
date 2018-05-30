@@ -116,11 +116,11 @@ R
 
 ```
 
-A separate R file has been provided in the github repo for this part of the tutorial: [Tutorial_Module5_Part1_comparisons.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_Module5_Part1_comparisons.R). Run the R commands detailed in this script in your R session.
+A separate R file has been provided in the github repo for this part of the tutorial: [Tutorial_comparisons.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_comparisons.R). Run the R commands detailed in this script in your R session.
 
 The output file can be viewed in your browser at the following url. Note, you must replace YOUR_IP_ADDRESS with your own amazon instance IP (e.g., 101.0.1.101)).
 
-http://__YOUR_IP_ADDRESS__/rnaseq/expression/Tutorial_Module5_Part1_comparisons.pdf
+http://__YOUR_IP_ADDRESS__/rnaseq/expression/Tutorial_comparisons.pdf
 
 ## Create a custom transcriptome database to examine a specific set of genes
 For example, suppose we just want to quickly assess the presence of ribosomal RNA genes only. We can obtain these genes from an Ensembl GTF file. In the example below we will use our chromosome 22 GTF file for demonstration purposes. But in a 'real world' experiment you would use a GTF for all chromosomes. Once we have found GTF records for ribosomal RNA genes, we will create a fasta file that contains the sequences for these transcripts, and then index this sequence database for use with Kallisto.
@@ -160,6 +160,8 @@ kallisto quant -b 100 --index=$RNA_HOME/refs/kallisto/chr22_ERCC92_transcripts_k
 ```
 
 Sleuth is an R package so the following steps will occur in an `R` session. The following section is an adaptation of the [sleuth getting started tutorial](https://pachterlab.github.io/sleuth_walkthroughs/trapnell/analysis.html).
+
+A separate R tutorial file has been provided in the github repo for this part of the tutorial: [Tutorial_KallistoSleuth.R](https://github.com/griffithlab/rnaseq_tutorial/blob/master/scripts/Tutorial_KallistoSleuth.R). Run the R commands in this file.
 
 ```
 #load sleuth library
