@@ -173,15 +173,16 @@ cd build/
 cmake ..
 make
 ./regtools
+
 ```
 
 ## [RSeQC](http://rseqc.sourceforge.net/)
 
 ```bash
 
-cd $RNA_HOME/tools/
 pip install RSeQC
 read_GC.py
+
 ```
 
 ## [R](http://www.r-project.org/)

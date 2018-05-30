@@ -46,6 +46,17 @@ Solution: When you are ready you can check your approach against the [Solutions]
 
 ---
 
+Run MultiQC on your fastqc reports to generate a single summary report across all samples/replicates.
+
+```bash
+
+cd $RNA_HOME/data
+multiqc .
+
+```
+
+
+---
 
 | [[Previous Section\|RNAseq-Data]] | [[This Section\|PreAlignment-QC]]    | [[Next Section\|Adapter-Trim]] |
 |:--------------------------------:|:-----------------------------------:|:--------------------------:|
