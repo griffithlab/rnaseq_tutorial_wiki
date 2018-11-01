@@ -19,7 +19,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 ### Start with existing community AMI
 
-1. [Launch a fresh Ubuntu Image](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-0f47ef92b4218ec09). Choose an instance type of `m4.2xlarge`. Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
+1. [Launch a fresh Ubuntu Image](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-0f47ef92b4218ec09). Choose an instance type of `m5.2xlarge`. Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
 2. Change permissions on downloaded key pair with `chmod 400 [instructor-key].pem`
 3. Login to instance with ubuntu user:
 
