@@ -33,7 +33,7 @@ make
 ```bash
 
 cd $RNA_HOME/tools
-export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.6
+export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.9
 git clone https://github.com/genome/bam-readcount.git
 cd bam-readcount
 cmake -Wno-dev $RNA_HOME/tools/bam-readcount
