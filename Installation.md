@@ -19,10 +19,10 @@ cd tools
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/samtools/samtools/releases/download/1.6/samtools-1.6.tar.bz2
-bunzip2 samtools-1.6.tar.bz2
-tar -xvf samtools-1.6.tar
-cd samtools-1.6
+wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
+bunzip2 samtools-1.9.tar.bz2
+tar -xvf samtools-1.9.tar
+cd samtools-1.9
 make
 ./samtools
 
