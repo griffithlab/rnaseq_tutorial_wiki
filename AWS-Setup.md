@@ -266,7 +266,7 @@ cd annotations/GRCh38
 wget ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz
 gunzip Homo_sapiens.GRCh38.86.gtf.gz
 wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC92_fix.gtf
-awk ‘($1 == 22)’ > chr22.gtf
+cat Homo_sapiens.GRCh38.86.gtf | awk '($1 == 22)' > chr22.gtf
 cat chr22.gtf ERCC92_fix.gtf > chr22_with_ERCC92.gtf
 mkdir ../GRCH37
 cd ../GRCH37
