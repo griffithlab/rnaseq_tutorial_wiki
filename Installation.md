@@ -287,9 +287,9 @@ To use the locally installed version of each tool without having to specify comp
 
 ```bash
 
-export PATH=$RNA_HOME/tools/samtools-1.6:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.1.0:$RNA_HOME/tools/stringtie-1.3.4b.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.10.4.Linux_x86_64:$RNA_HOME/tools/htseq-release_0.9.1/scripts:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$RNA_HOME/tools/kallisto_linux-v0.44.0:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar-3.0.0-linux:$RNA_HOME/tools/regtools/build:/home/ubuntu/bin/bedtools2/bin:$PATH
+PATH=$RNA_HOME/tools/samtools-1.9:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.1.0:$RNA_HOME/tools/stringtie-1.3.4d.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.10.6.Linux_x86_64:$RNA_HOME/tools/htseq-release_0.11.0/scripts:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$RNA_HOME/tools/kallisto_linux-v0.44.0:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar-3.4.0-linux:$RNA_HOME/tools/regtools/build:/home/ubuntu/bin/bedtools2/bin:$PATH
 
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.0.0-linux:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.4.0-linux:$LD_LIBRARY_PATH
 
 echo $PATH
 
