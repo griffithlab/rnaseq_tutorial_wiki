@@ -168,6 +168,65 @@ cd ..
 make
 ```
 
+#### Install mosdepth
+```
+# prereq -- htslib
+wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar.bz2
+tar -xvjf htslib-1.9.tar.bz2
+cd htslib-1.9/
+./configure --prefix=$HOME
+make && make install
+export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
+
+# mosdepth
+wget https://github.com/brentp/mosdepth/releases/download/v0.2.3/mosdepth
+chmod +x mosdepth
+```
+
+#### Install freebayes
+```
+git clone --recursive git://github.com/ekg/freebayes.git
+cd freebayes/
+make && sudo make install
+```
+
+#### Install samblaster
+```
+git clone git://github.com/GregoryFaust/samblaster.git
+cd samblaster
+make
+cp samblaster $HOME/bin/.
+```
+
+#### Install funseq
+```
+## prereqs
+# VAT
+wget http://vat.gersteinlab.org/data/vat-2.0.1_64bit.zip
+unzip vat-2.0.1_64bit.zip
+# TODO: INSTRUCTION FOR DOWNLOAD OF THE .vatrc FILE FROM genomedata.org
+cp vat/* $HOME/bin
+
+# TFMpvalue-sc2py
+wget http://bioinfo.lifl.fr/tfm-pvalue/TFM-Pvalue.tar.gz
+tar -xvzf TFM-Pvalue.tar.gz
+# TODO: INSTRUCTION FOR DOWNLOAD OF THE PATCHED Makefile AND TFMpvalue.cpp FILES FROM genomedata.org
+make
+cp TFMpvalue-sc2pv $HOME/bin
+
+# bigWigAverageOverBed
+cd $HOME/bin
+wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bigWigAverageOverBed
+chmod +x bigWigAverageOverBed
+
+## funseq2
+cd $HOME
+git clone https://github.com/khuranalab/FunSeq2_DC
+cd $HOME/bin
+ln -s $HOME/FunSeq2_DC/funseq2.sh funseq2
+```
+
+
 #### Install NCBI SRA toolkit and NCBI E-Utilities
 ```
 sudo cpanm HTML::Entities
