@@ -169,6 +169,15 @@ make
 sudo make install
 ```
 
+#### Install bcftools
+```
+wget https://github.com/samtools/bcftools/releases/download/1.9/bcftools-1.9.tar.bz2
+tar -xvjf bcftools-1.9.tar.bz2
+cd bcftools-1.9/
+./configure --prefix=$HOME
+make install
+```
+
 #### Install trinity (with gmap, bowtie2, emacs)
 ```
 #prepreqs:
