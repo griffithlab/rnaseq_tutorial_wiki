@@ -231,12 +231,13 @@ ln -s $HOME/FunSeq2_DC/funseq2.sh funseq2
 ```
 sudo cpanm HTML::Entities
 sudo cpanm LWP::Simple
+sudo cpanm XML::Simple
 cd /home/ubuntu/bin/
 wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
 tar -zxvf edirect.tar.gz
 wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
 tar -zxvf sratoolkit.current-ubuntu64.tar.gz
-export PATH=/home/ubuntu/bin/sratoolkit.2.5.4-1-ubuntu64/bin:$PATH
+export PATH=/home/ubuntu/bin/sratoolkit.2.9.2-ubuntu64/bin:$PATH
 export PATH=/home/ubuntu/bin/edirect:$PATH
 #For testing
 fastq-dump -X 5 -Z SRR925811
