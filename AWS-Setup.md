@@ -205,12 +205,17 @@ cp samblaster $HOME/bin/.
 wget http://vat.gersteinlab.org/data/vat-2.0.1_64bit.zip
 unzip vat-2.0.1_64bit.zip
 # TODO: INSTRUCTION FOR DOWNLOAD OF THE .vatrc FILE FROM genomedata.org
+wget http://genomedata.org/seq-tec-workshop/funseq/.vatrc
 cp vat/* $HOME/bin
 
 # TFMpvalue-sc2py
-wget http://bioinfo.lifl.fr/tfm-pvalue/TFM-Pvalue.tar.gz
+# originally from http://bioinfo.lifl.fr/tfm-pvalue/TFM-Pvalue.tar.gz, mirrored to genomedata due to patched install
+wget http://genomedata.org/seq-tec-workshop/funseq/TFM-Pvalue.tar.gz
 tar -xvzf TFM-Pvalue.tar.gz
+cd TFM-Pvalue/
 # TODO: INSTRUCTION FOR DOWNLOAD OF THE PATCHED Makefile AND TFMpvalue.cpp FILES FROM genomedata.org
+wget http://genomedata.org/seq-tec-workshop/funseq/Makefile -O Makefile
+wget http://genomedata.org/seq-tec-workshop/funseq/TFMpvalue.cpp -O TFMpvalue.cpp
 make
 cp TFMpvalue-sc2pv $HOME/bin
 
@@ -265,8 +270,8 @@ mkdir -p annotations/GRCh38
 cd annotations/GRCh38
 wget ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz
 gunzip Homo_sapiens.GRCh38.86.gtf.gz
-wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC92_fix.gtf
 cat Homo_sapiens.GRCh38.86.gtf | awk '($1 == 22)' > chr22.gtf
+wget http://genomedata.org/seq-tec-workshop/ERCC92_fix.gtf
 cat chr22.gtf ERCC92_fix.gtf > chr22_with_ERCC92.gtf
 mkdir ../GRCH37
 cd ../GRCH37
