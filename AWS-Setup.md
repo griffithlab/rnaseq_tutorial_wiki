@@ -125,36 +125,6 @@ cd SURVIVOR/Debug
 make
 ```
 
-#### Install gkno
-```
-wget http://ftp.ps.pl/pub/apache//ant/binaries/apache-ant-1.9.9-bin.tar.gz
-tar -xvzf apache-ant-1.9.9-bin.tar.gz
-cd apache-ant-1.9.9
-ANT_HOME=$TOOLS/apache-ant-1.9.9
-PATH=$PATH:${ANT_HOME}/bin
-
-cd $TOOLS
-git clone https://github.com/gkno/gkno_launcher.git
-cd gkno_launcher/
-ln -s /usr/bin/gcc-4.8 gcc
-ln -s /usr/bin/g++-4.8 g++
-PATH=$TOOLS/gkno_launcher:$PATH
-C=gcc-4.8 CXX=g++-4.8 ./gkno build
-
-wget http://genomedata.org/seq-tec-workshop/gkno-precompiled-deps.tar.gz
-tar -xvzf gkno-precompiled-deps.tar.gz
-cp gkno-precompiled-deps/vt tools/vt
-cp -r gkno-precompiled-deps/bin tools/vcflib
-
-mkdir -p $DATA/gkno
-mv resources/ $DATA/gkno
-ln -s $DATA/gkno/resources
-```
-
-open the file: `PATH_TO_GKNO_LAUNCHER/src/gkno/conf/user_settings.json`
-
-There is a list of compiled tools. Just add `vt`, and `vcflib` to this list, and gkno will think they are available.
-
 #### Install salmon
 ```
 wget https://github.com/COMBINE-lab/salmon/releases/download/v0.11.3/salmon-0.11.3-linux_x86_64.tar.gz
