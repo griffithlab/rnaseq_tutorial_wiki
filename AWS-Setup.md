@@ -158,7 +158,7 @@ There is a list of compiled tools. Just add `vt`, and `vcflib` to this list, and
 #### Install salmon
 ```
 wget https://github.com/COMBINE-lab/salmon/releases/download/v0.11.3/salmon-0.11.3-linux_x86_64.tar.gz
-tar -xvzf Salmon-0.11.3_linux_x86_64.tar.gz
+tar -xvzf salmon-0.11.3-linux_x86_64.tar.gz
 ```
 
 #### Install bedtools
