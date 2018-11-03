@@ -201,6 +201,9 @@ cp samblaster $HOME/bin/.
 #### Install funseq
 ```
 ## prereqs
+# Parallel::ForkManager
+sudo cpanm Parallel::ForkManager
+
 # VAT
 wget http://vat.gersteinlab.org/data/vat-2.0.1_64bit.zip
 unzip vat-2.0.1_64bit.zip
