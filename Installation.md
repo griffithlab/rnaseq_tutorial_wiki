@@ -19,10 +19,10 @@ cd tools
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/samtools/samtools/releases/download/1.6/samtools-1.6.tar.bz2
-bunzip2 samtools-1.6.tar.bz2
-tar -xvf samtools-1.6.tar
-cd samtools-1.6
+wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
+bunzip2 samtools-1.9.tar.bz2
+tar -xvf samtools-1.9.tar
+cd samtools-1.9
 make
 ./samtools
 
@@ -33,7 +33,7 @@ make
 ```bash
 
 cd $RNA_HOME/tools
-export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.6
+export SAMTOOLS_ROOT=$RNA_HOME/tools/samtools-1.9
 git clone https://github.com/genome/bam-readcount.git
 cd bam-readcount
 cmake -Wno-dev $RNA_HOME/tools/bam-readcount
@@ -58,9 +58,9 @@ cd hisat2-2.1.0
 ```bash
 
 cd $RNA_HOME/tools/
-wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.4b.Linux_x86_64.tar.gz
-tar -xzvf stringtie-1.3.4b.Linux_x86_64.tar.gz
-cd stringtie-1.3.4b.Linux_x86_64
+wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.4d.Linux_x86_64.tar.gz
+tar -xzvf stringtie-1.3.4d.Linux_x86_64.tar.gz
+cd stringtie-1.3.4d.Linux_x86_64
 ./stringtie
 
 ```
@@ -70,21 +70,21 @@ cd stringtie-1.3.4b.Linux_x86_64
 ```bash
 
 cd $RNA_HOME/tools/
-wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.10.4.Linux_x86_64.tar.gz
-tar -xzvf gffcompare-0.10.4.Linux_x86_64.tar.gz
-cd gffcompare-0.10.4.Linux_x86_64
+wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.10.6.Linux_x86_64.tar.gz
+tar -xzvf gffcompare-0.10.6.Linux_x86_64.tar.gz
+cd gffcompare-0.10.6.Linux_x86_64
 ./gffcompare
 
 ```
 
-## [htseq-count](http://htseq.readthedocs.io/en/release_0.9.1/)
+## [htseq-count](http://htseq.readthedocs.io/en/release_0.10.0/)
 
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/simon-anders/htseq/archive/release_0.9.1.tar.gz
-tar -zxvf release_0.9.1.tar.gz
-cd htseq-release_0.9.1/
+wget https://github.com/simon-anders/htseq/archive/release_0.11.0.tar.gz
+tar -zxvf release_0.11.0.tar.gz
+cd htseq-release_0.11.0/
 python setup.py install --user
 chmod +x scripts/htseq-count
 ./scripts/htseq-count
@@ -123,8 +123,8 @@ In addition to installing on the cloud you should also install FastQC on your ow
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.7.zip --no-check-certificate
-unzip fastqc_v0.11.7.zip
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.8.zip --no-check-certificate
+unzip fastqc_v0.11.8.zip
 cd FastQC/
 chmod 755 fastqc
 ./fastqc --help
@@ -134,7 +134,7 @@ chmod 755 fastqc
 ## [MultiQC](http://multiqc.info/)
 
 ```bash
-pip install multiqc
+pip3 install multiqc
 multiqc --help
 ```
 
@@ -143,7 +143,7 @@ multiqc --help
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/broadinstitute/picard/releases/download/2.17.9/picard.jar -O picard.jar
+wget https://github.com/broadinstitute/picard/releases/download/2.18.15/picard.jar -O picard.jar
 java -jar $RNA_HOME/tools/picard.jar
 
 ```
@@ -153,10 +153,10 @@ java -jar $RNA_HOME/tools/picard.jar
 ```bash
 
 cd $RNA_HOME/tools/
-wget https://github.com/seqan/flexbar/releases/download/v3.0.0/flexbar-3.0.0-linux.tar.gz
-tar -xzvf flexbar-3.0.0-linux.tar.gz
-cd flexbar-3.0.0-linux/
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.0.0-linux:$LD_LIBRARY_PATH
+wget https://github.com/seqan/flexbar/releases/download/v3.4.0/flexbar-3.4.0-linux.tar.gz
+tar -xzvf flexbar-3.4.0-linux.tar.gz
+cd flexbar-3.4.0-linux/
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.4.0-linux:$LD_LIBRARY_PATH
 ./flexbar
 
 ```
@@ -287,9 +287,9 @@ To use the locally installed version of each tool without having to specify comp
 
 ```bash
 
-export PATH=$RNA_HOME/tools/samtools-1.6:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.1.0:$RNA_HOME/tools/stringtie-1.3.4b.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.10.4.Linux_x86_64:$RNA_HOME/tools/htseq-release_0.9.1/scripts:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$RNA_HOME/tools/kallisto_linux-v0.44.0:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar-3.0.0-linux:$RNA_HOME/tools/regtools/build:/home/ubuntu/bin/bedtools2/bin:$PATH
+PATH=$RNA_HOME/tools/samtools-1.9:$RNA_HOME/tools/bam-readcount/bin:$RNA_HOME/tools/hisat2-2.1.0:$RNA_HOME/tools/stringtie-1.3.4d.Linux_x86_64:$RNA_HOME/tools/gffcompare-0.10.6.Linux_x86_64:$RNA_HOME/tools/htseq-release_0.11.0/scripts:$RNA_HOME/tools/tophat-2.1.1.Linux_x86_64:$RNA_HOME/tools/kallisto_linux-v0.44.0:$RNA_HOME/tools/FastQC:$RNA_HOME/tools/flexbar-3.4.0-linux:$RNA_HOME/tools/regtools/build:/home/ubuntu/bin/bedtools2/bin:$PATH
 
-export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.0.0-linux:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$RNA_HOME/tools/flexbar-3.4.0-linux:$LD_LIBRARY_PATH
 
 echo $PATH
 
