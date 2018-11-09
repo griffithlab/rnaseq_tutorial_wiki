@@ -19,7 +19,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 
 ### Start with existing community AMI
 
-1. Select Launch instance. Search Community AMIs for and select `ubuntu/images/hvm-ssd/ubuntu-artful-17.10-amd64-server-20171026.1 - ami-3702cc4f`. Choose an instance type of `m4.2xlarge`. Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
+1. [Launch a fresh Ubuntu Image](https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-0f47ef92b4218ec09). Choose an instance type of `m5.2xlarge`. Increase root volume (e.g., 32GB) and add a second volume (e.g., 250gb). Review and Launch. If necessary, create a new key pair, name and save somewhere safe. Select 'View Instances'. Take note of public IP address of newly launched instance.
 2. Change permissions on downloaded key pair with `chmod 400 [instructor-key].pem`
 3. Login to instance with ubuntu user:
 
@@ -31,7 +31,7 @@ Note: Any AWS account needs to be linked to an actual person and credit card acc
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev gcc-4.8 g++-4.8
+sudo apt-get -y install make gcc zlib1g-dev libncurses5-dev libncursesw5-dev git cmake build-essential unzip python-dev python-numpy python3-dev python3-pip gfortran libreadline-dev default-jdk libx11-dev libxt-dev xorg-dev libxml2-dev libcurl4-openssl-dev apache2 python-pip csh ruby-full gnuplot cpanminus r-base libssl-dev gcc-4.8 g++-4.8
 sudo timedatectl set-timezone America/New_York
 ```
 
@@ -125,40 +125,10 @@ cd SURVIVOR/Debug
 make
 ```
 
-#### Install gkno
-```
-wget http://ftp.ps.pl/pub/apache//ant/binaries/apache-ant-1.9.9-bin.tar.gz
-tar -xvzf apache-ant-1.9.9-bin.tar.gz
-cd apache-ant-1.9.9
-ANT_HOME=$TOOLS/apache-ant-1.9.9
-PATH=$PATH:${ANT_HOME}/bin
-
-cd $TOOLS
-git clone https://github.com/gkno/gkno_launcher.git
-cd gkno_launcher/
-ln -s /usr/bin/gcc-4.8 gcc
-ln -s /usr/bin/g++-4.8 g++
-PATH=$TOOLS/gkno_launcher:$PATH
-C=gcc-4.8 CXX=g++-4.8 ./gkno build
-
-wget http://genomedata.org/seq-tec-workshop/gkno-precompiled-deps.tar.gz
-tar -xvzf gkno-precompiled-deps.tar.gz
-cp gkno-precompiled-deps/vt tools/vt
-cp -r gkno-precompiled-deps/bin tools/vcflib
-
-mkdir -p $DATA/gkno
-mv resources/ $DATA/gkno
-ln -s $DATA/gkno/resources
-```
-
-open the file: `PATH_TO_GKNO_LAUNCHER/src/gkno/conf/user_settings.json`
-
-There is a list of compiled tools. Just add `vt`, and `vcflib` to this list, and gkno will think they are available.
-
 #### Install salmon
 ```
-wget https://github.com/COMBINE-lab/salmon/releases/download/v0.8.2/Salmon-0.8.2_linux_x86_64.tar.gz
-tar -xvzf Salmon-0.8.2_linux_x86_64.tar.gz
+wget https://github.com/COMBINE-lab/salmon/releases/download/v0.11.3/salmon-0.11.3-linux_x86_64.tar.gz
+tar -xvzf salmon-0.11.3-linux_x86_64.tar.gz
 ```
 
 #### Install bedtools
@@ -167,6 +137,15 @@ git clone https://github.com/arq5x/bedtools2.git
 cd bedtools2
 make
 sudo make install
+```
+
+#### Install bcftools
+```
+wget https://github.com/samtools/bcftools/releases/download/1.9/bcftools-1.9.tar.bz2
+tar -xvjf bcftools-1.9.tar.bz2
+cd bcftools-1.9/
+./configure --prefix=$HOME
+make install
 ```
 
 #### Install trinity (with gmap, bowtie2, emacs)
@@ -189,16 +168,84 @@ cd ..
 make
 ```
 
+#### Install mosdepth
+```
+# prereq -- htslib
+wget https://github.com/samtools/htslib/releases/download/1.9/htslib-1.9.tar.bz2
+tar -xvjf htslib-1.9.tar.bz2
+cd htslib-1.9/
+./configure --prefix=$HOME
+make && make install
+export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
+
+# mosdepth
+wget https://github.com/brentp/mosdepth/releases/download/v0.2.3/mosdepth
+chmod +x mosdepth
+```
+
+#### Install freebayes
+```
+git clone --recursive git://github.com/ekg/freebayes.git
+cd freebayes/
+make && sudo make install
+```
+
+#### Install samblaster
+```
+git clone git://github.com/GregoryFaust/samblaster.git
+cd samblaster
+make
+cp samblaster $HOME/bin/.
+```
+
+#### Install funseq
+```
+## prereqs
+# Parallel::ForkManager
+sudo cpanm Parallel::ForkManager
+
+# VAT
+wget http://vat.gersteinlab.org/data/vat-2.0.1_64bit.zip
+unzip vat-2.0.1_64bit.zip
+# TODO: INSTRUCTION FOR DOWNLOAD OF THE .vatrc FILE FROM genomedata.org
+wget http://genomedata.org/seq-tec-workshop/funseq/.vatrc
+cp vat/* $HOME/bin
+
+# TFMpvalue-sc2py
+# originally from http://bioinfo.lifl.fr/tfm-pvalue/TFM-Pvalue.tar.gz, mirrored to genomedata due to patched install
+wget http://genomedata.org/seq-tec-workshop/funseq/TFM-Pvalue.tar.gz
+tar -xvzf TFM-Pvalue.tar.gz
+cd TFM-Pvalue/
+# TODO: INSTRUCTION FOR DOWNLOAD OF THE PATCHED Makefile AND TFMpvalue.cpp FILES FROM genomedata.org
+wget http://genomedata.org/seq-tec-workshop/funseq/Makefile -O Makefile
+wget http://genomedata.org/seq-tec-workshop/funseq/TFMpvalue.cpp -O TFMpvalue.cpp
+make
+cp TFMpvalue-sc2pv $HOME/bin
+
+# bigWigAverageOverBed
+cd $HOME/bin
+wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bigWigAverageOverBed
+chmod +x bigWigAverageOverBed
+
+## funseq2
+cd $HOME
+git clone https://github.com/khuranalab/FunSeq2_DC
+cd $HOME/bin
+ln -s $HOME/FunSeq2_DC/funseq2.sh funseq2
+```
+
+
 #### Install NCBI SRA toolkit and NCBI E-Utilities
 ```
 sudo cpanm HTML::Entities
 sudo cpanm LWP::Simple
+sudo cpanm XML::Simple
 cd /home/ubuntu/bin/
 wget ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
 tar -zxvf edirect.tar.gz
 wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
 tar -zxvf sratoolkit.current-ubuntu64.tar.gz
-export PATH=/home/ubuntu/bin/sratoolkit.2.5.4-1-ubuntu64/bin:$PATH
+export PATH=/home/ubuntu/bin/sratoolkit.2.9.2-ubuntu64/bin:$PATH
 export PATH=/home/ubuntu/bin/edirect:$PATH
 #For testing
 fastq-dump -X 5 -Z SRR925811
@@ -226,8 +273,8 @@ mkdir -p annotations/GRCh38
 cd annotations/GRCh38
 wget ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz
 gunzip Homo_sapiens.GRCh38.86.gtf.gz
-wget http://genome.wustl.edu/pub/rnaseq/data/brain_vs_uhr_w_ercc/ERCC/ERCC92_fix.gtf
-awk ‘($1 == 22)’ > chr22.gtf
+cat Homo_sapiens.GRCh38.86.gtf | awk '($1 == 22)' > chr22.gtf
+wget http://genomedata.org/seq-tec-workshop/ERCC92_fix.gtf
 cat chr22.gtf ERCC92_fix.gtf > chr22_with_ERCC92.gtf
 mkdir ../GRCH37
 cd ../GRCH37
