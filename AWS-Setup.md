@@ -45,8 +45,12 @@ ln -s /workspace workspace
 ```
 ### Install any desired informatics tools
 * See https://github.com/griffithlab/rnaseq_tutorial/wiki/Installation for RNA-seq software
-* Note: R in particular is a slow install. 
-* All tools can be installed locally (e.g., /home/ubuntu/bin/) in a different location from where students will install tools in their exercises.
+* Note: R in particular is a slow install.
+* **NOTE:**
+```diff
+- All tools should be installed locally (e.g., /home/ubuntu/bin/) in a different
+- location from where students will install tools in their exercises.
+```
 * Paths to pre-installed tools can be added to the .bashrc file. It may also be convenient to add `export RNA_HOME=~/workspace/rnaseq` to the .bashrc file. 
  * See https://github.com/griffithlab/rnaseq_tutorial/blob/master/setup/.bashrc.
 *Note: In some installations of R there is an executable called pager that clashes with the system pager. This causes man to fail. Check with a `man ls` and if the problem exists, add the following to .bashrc:
