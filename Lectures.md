@@ -7,7 +7,7 @@
 Organized by [Cold Spring Harbor Laboratory (CSHL)](http://www.cshl.edu/) - [Course Site](https://meetings.cshl.edu/courses.aspx?course=C-SEQTEC&year=18)
 
 **Presentations:**
-* [[Intructor Introduction (lecture)|LectureFiles/cshl/2018/RNASeq_Module0_Introductions.pdf]]
+* [[Instructor Introduction (lecture)|LectureFiles/cshl/2018/RNASeq_Module0_Introductions.pdf]]
 * [[Module 0 - Introduction to cloud computing (lecture/tutorial)|LectureFiles/cshl/2018/IntroductionToCloudComputing.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cshl/2018/RNASeq_Module1_Lecture.pdf]]
 * [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cshl/2018/RNASeq_Module1_Tutorial.pdf]]
