@@ -3,6 +3,26 @@
 ### Recorded lectures
 [2016 CBW course lectures](https://www.youtube.com/playlist?list=PL3izGL6oi0S849u7OZbX85WTyBxVdcpqx) (YouTube)
 
+### CSHL Advanced Sequencing Technologies and Applications (November 6-18, 2018. Cold Spring Harbor, NY, USA)
+Organized by [Cold Spring Harbor Laboratory (CSHL)](http://www.cshl.edu/) - [Course Site](https://meetings.cshl.edu/courses.aspx?course=C-SEQTEC&year=18)
+
+**Presentations:**
+* [[Intructor Introduction (lecture)|LectureFiles/cshl/2018/RNASeq_Module0_Introductions.pdf]]
+* [[Module 0 - Introduction to cloud computing (lecture/tutorial)|LectureFiles/cshl/2018/IntroductionToCloudComputing.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (lecture)|LectureFiles/cshl/2018/RNASeq_Module1_Lecture.pdf]]
+* [[Module 1 - Introduction to RNA sequencing (tutorial)|LectureFiles/cshl/2018/RNASeq_Module1_Tutorial.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (lecture)|LectureFiles/cshl/2018/RNASeq_Module2_Lecture.pdf]]
+* [[Module 2 - RNA-seq alignment and visualization (tutorial)|LectureFiles/cshl/2018/RNASeq_Module2_Tutorial.pdf]]
+* [[Module 3 - Expression and differential expression (lecture)|LectureFiles/cshl/2018/RNASeq_Module3_Lecture.pdf]]
+* [[Module 3 - Expression and differential expression (tutorial)|LectureFiles/cshl/2018/RNASeq_Module3_Tutorial.pdf]]
+* [[Module 4 - Alignment free expression estimation (lecture)|LectureFiles/cshl/2018/RNASeq_Module4_Lecture.pdf]]
+* [[Module 4 - Alignment free expression estimation (tutorial)|LectureFiles/cshl/2018/RNASeq_Module4_Tutorial.pdf]]
+* [[Module 5 - Isoform discovery and alternative expression (lecture)|LectureFiles/cshl/2018/RNASeq_Module5_Lecture.pdf]]
+* [[Module 5 - Isoform discovery and alternative expression (tutorial)|LectureFiles/cshl/2018/RNASeq_Module5_Tutorial.pdf]]
+* [[Module 6/7 - Transcriptome Assembly (lecture)|LectureFiles/cshl/2018/RNASeq_Module6_7_Lecture.pdf]]
+* [[Introduction to IGV Browser (tutorial)|LectureFiles/cshl/2018/IGV_Tutorial_Brief.pdf]]
+* [[Genome Analysis Platforms (lecture)|LectureFiles/cshl/2018/GenomeAnalysisPlatforms.pdf]]
+
 ### CBW Informatics for RNA-seq analysis (May 28-30, 2018. Toronto, ON, Canada)
 Organized by [Canadian Bioinformatics Workshops (CBW)](https://bioinformatics.ca) - [Course Site](https://bioinformatics.ca/workshops/2018-informatics-for-RNA-seq-analysis/)
 
