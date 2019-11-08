@@ -328,7 +328,7 @@ Finally, save the instance as a new AMI by right clicking the instance and click
 
 ### Current Public AMIs:
 
-* cshl_seqtec_2017_v2 - ami-ebf32593 (US West - Oregon)
+* cshl-seqtech-2018v2 - ami-0ee7d04a5b96e28c6 (US West - Oregon)
 
 ### Create IAM account
 
@@ -336,16 +336,16 @@ From AWS Console select Services -> IAM. Go to Users, Create User, specify a use
 
 ### Launch student instance
 1. Go to AWS console. Login. Select EC2.
-2. Launch Instance, search for "cshl_seqtec_2017_v2" in Community AMIs and Select.
+2. Launch Instance, search for "cshl-seqtech-2018v2" in Community AMIs and Select.
 3. Choose "m4.2xlarge" instance type.
 4. Select one instance to launch (e.g., one per student and instructor), and select "Protect against accidental termination"
 5. Make sure that you see two snapshots (e.g., the 32GB root volume and 80GB EBS volume you set up earlier)
 6. Create a tag with name=StudentName
 7. Choose existing security group call "SSH_HTTP_8081_IN_ALL_OUT". Review and Launch.
-8. Choose an existing key pair (either CSHL.pem)
+8. Choose an existing key pair (CSHL.pem)
 9. View instances and wait for them to finish initiating.
 10. Find your instance in console and select it, then hit connect to get your public.ip.address.
-11. Login to node `ssh -i cshl_2017.pem ubuntu@[public.ip.address]`.
+11. Login to node `ssh -i CSHL.pem ubuntu@[public.ip.address]`.
 12. Optional - set up DNS redirects (see below)
 
 ### Set up a dynamic DNS service
