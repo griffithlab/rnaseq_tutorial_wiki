@@ -1,6 +1,9 @@
 # Informatics for RNA-seq: A web resource for analysis on the cloud  
 
-**NOTICE: This resource has been moved to <a href=https://rnabio.org/>rnabio.org</a>**. The version here will be maintained for legacy use, but all future development and maintenance will occur only at <a href=https://rnabio.org/>rnabio.org</a>.
+
+**NOTICE: This resource has been moved to <a href=https://rnabio.org/>rnabio.org</a>**. The version here will be maintained for legacy use only. All future development and maintenance will occur only at <a href=https://rnabio.org/>rnabio.org</a>. Please proceed to <a href=https://rnabio.org/>rnabio.org</a> for the current version of this course.
+---
+
 
 Welcome to the RNA-seq Tutorial.  Use this page to navigate your way through all exercises. Each page has a link at the bottom to bring you back to this table of contents. A version of this tutorial was accompanied by a publication.  If you find the materials here or in that paper useful, please cite the following:
 
